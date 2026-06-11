@@ -4,3 +4,6 @@
 # build intermediates (regenerable)
 build/_immuno_slidetext.json
 build/_immuno_content.json
+build/_path_slidetext.json
+build/_path_content.json
+build/_path_questions.json
