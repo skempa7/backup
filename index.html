@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remediation Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  :root{
+    --bg:#1f1f1e; --bg-soft:#242423; --surface:#262626; --surface-2:#30302f;
+    --border:#393938; --text:#f4f3f0; --text-soft:#c2c0ba; --muted:#908e88;
+    --primary:#d97757; --primary-hover:#e2906f; --primary-soft:#261f1b;
+    --shadow:0 10px 30px rgba(0,0,0,.55), 0 4px 14px rgba(0,0,0,.5);
+    --radius:16px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg); color:var(--text); min-height:100vh;
+  }
+  .lhead{
+    display:flex; align-items:center; gap:11px; padding:18px 26px;
+    border-bottom:1px solid var(--border); position:sticky; top:0; background:var(--bg); z-index:10;
+  }
+  .lbrand{ display:flex; align-items:center; gap:10px; }
+  .lbrand .mark{ color:var(--primary); }
+  .lbrand .name{ font-size:1.05rem; font-weight:700; letter-spacing:-.01em; }
+  .lwrap{ max-width:860px; margin:0 auto; padding:46px 22px 60px; }
+  .lh1{ font-size:2rem; font-weight:700; letter-spacing:-.02em; margin-bottom:6px; }
+  .lsub{ color:var(--muted); font-size:.96rem; margin-bottom:30px; line-height:1.5; }
+  .lgrid{ display:grid; gap:14px; }
+  .card{
+    display:flex; align-items:center; gap:18px; text-align:left; width:100%;
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px 22px; cursor:pointer; color:inherit; font:inherit;
+    transition:border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+  }
+  .card:hover{ border-color:var(--primary); transform:translateY(-2px); box-shadow:var(--shadow); }
+  .card .emoji{ font-size:2rem; flex:none; width:46px; height:46px; display:grid; place-items:center;
+    background:var(--surface-2); border-radius:13px; }
+  .card .body{ flex:1; min-width:0; }
+  .card .title{ font-size:1.18rem; font-weight:700; letter-spacing:-.01em; }
+  .card .desc{ color:var(--muted); font-size:.86rem; margin-top:3px; }
+  .card .meta{ display:flex; align-items:center; gap:10px; margin-top:7px; flex-wrap:wrap; }
+  .pill{ font-size:.72rem; font-weight:700; padding:3px 9px; border-radius:999px;
+    background:var(--surface-2); color:var(--text-soft); }
+  .pill.go{ background:var(--primary-soft); color:var(--primary-hover); }
+  .pill.prog{ background:rgba(199,154,109,.16); color:var(--primary-hover); }
+  .card .arrow{ margin-left:auto; color:var(--primary); font-size:1.5rem; flex:none; }
+  .lback{
+    background:transparent; border:none; color:var(--muted); cursor:pointer;
+    font:inherit; font-size:.9rem; font-weight:600; padding:0; margin-bottom:18px;
+  }
+  .lback:hover{ color:var(--text); }
+  .empty{ color:var(--muted); font-size:.9rem; padding:30px 4px; }
+  .lfoot{ max-width:860px; margin:0 auto; padding:0 22px 50px; color:var(--muted); font-size:.8rem; line-height:1.6; }
+  .lfoot code{ background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:.92em; }
+  @media (max-width:560px){ .lh1{ font-size:1.6rem; } .lwrap{ padding:32px 16px 50px; } }
+</style>
+</head>
+<body>
+  <header class="lhead">
+    <span class="mark"><svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+      <path d="M8 5 C8 12, 24 12, 24 19 C24 26, 10 25, 10 28" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="8" cy="5" r="3" fill="currentColor"/></svg></span>
+    <span class="name">Remediation Hub</span>
+  </header>
+
+  <main class="lwrap">
+    <section id="view-classes">
+      <h1 class="lh1">Remediation exams</h1>
+      <p class="lsub">Three cumulative exams — every lecture in each course. Pick a class, then its exam. Progress saves automatically in this browser.</p>
+      <div class="lgrid" id="class-grid"></div>
+    </section>
+
+    <section id="view-exams" hidden>
+      <button class="lback" onclick="showClasses()">← All classes</button>
+      <h1 class="lh1" id="exam-class-name"></h1>
+      <p class="lsub" id="exam-class-sub"></p>
+      <div class="lgrid" id="exam-grid"></div>
+    </section>
+  </main>
+
+  <footer class="lfoot">
+    <strong>How this is built:</strong> each class is one cumulative exam holding all of its lectures, under <code>quizzes/</code>. The shared engine and styling under <code>shared/</code> give every exam Learn, Practice, Master, Fast Mode, audio, notes, and slides automatically. Questions are filled in lecture-by-lecture in each exam's <code>content.js</code>.
+  </footer>
+
+<script>
+// =============================================================
+// CATALOG — the single source of truth for this hub.
+//   subj = the exam's QUIZ_CONFIG.id (used to show saved progress)
+//   path = the exam's index.html
+// =============================================================
+const CATALOG = [
+  {
+    id: "immuno",
+    name: "Immunology",
+    emoji: "🦠",
+    sub: "NSU KPCOM · COM 5850 · Cumulative Remediation",
+    exams: [
+      { name: "Cumulative Exam", emoji: "🦠", subj: "immuno_remediation",
+        desc: "24 lectures · Learn, Practice & Master",
+        path: "quizzes/immunology/index.html" }
+    ]
+  },
+  {
+    id: "path",
+    name: "Pathology",
+    emoji: "🔬",
+    sub: "NSU KPCOM · Cumulative Remediation",
+    exams: [
+      { name: "Cumulative Exam", emoji: "🔬", subj: "path_remediation",
+        desc: "22 lectures · Learn, Practice & Master",
+        path: "quizzes/pathology/index.html" }
+    ]
+  },
+  {
+    id: "pharm",
+    name: "Pharmacology",
+    emoji: "💊",
+    sub: "NSU KPCOM · Cumulative Remediation",
+    exams: [
+      { name: "Cumulative Exam", emoji: "💊", subj: "pharm_remediation",
+        desc: "30 lectures · Learn, Practice & Master",
+        path: "quizzes/pharmacology/index.html" }
+    ]
+  }
+];
+
+function progressLabel(subj){
+  if(!subj) return "";
+  try{
+    const xp = parseInt(localStorage.getItem(subj + "_xp_v1") || "0", 10);
+    if(xp > 0) return `▸ in progress · ${xp} XP`;
+  }catch(e){}
+  return "";
+}
+function el(html){ const t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstChild; }
+
+function renderClasses(){
+  const grid = document.getElementById("class-grid");
+  grid.innerHTML = "";
+  if(!CATALOG.length){ grid.innerHTML = '<div class="empty">No classes yet.</div>'; return; }
+  CATALOG.forEach(c => {
+    const examWord = c.exams.length === 1 ? "exam" : "exams";
+    const card = el(`<button class="card">
+      <span class="emoji">${c.emoji||"📚"}</span>
+      <span class="body">
+        <span class="title">${c.name}</span>
+        <span class="desc">${c.sub||""}</span>
+        <span class="meta"><span class="pill">${c.exams.length} ${examWord}</span></span>
+      </span>
+      <span class="arrow">→</span>
+    </button>`);
+    card.onclick = () => openClass(c.id);
+    grid.appendChild(card);
+  });
+}
+function openClass(id){
+  const c = CATALOG.find(x => x.id === id); if(!c) return;
+  document.getElementById("exam-class-name").textContent = c.name;
+  document.getElementById("exam-class-sub").textContent = c.sub || "";
+  const grid = document.getElementById("exam-grid");
+  grid.innerHTML = "";
+  if(!c.exams.length){ grid.innerHTML = '<div class="empty">No exams in this class yet.</div>'; }
+  c.exams.forEach(ex => {
+    const prog = progressLabel(ex.subj);
+    const card = el(`<a class="card" href="${ex.path}">
+      <span class="emoji">${ex.emoji||"📝"}</span>
+      <span class="body">
+        <span class="title">${ex.name}</span>
+        <span class="desc">${ex.desc||""}</span>
+        <span class="meta">${prog?`<span class="pill prog">${prog}</span>`:`<span class="pill go">Start →</span>`}</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>`);
+    grid.appendChild(card);
+  });
+  document.getElementById("view-classes").hidden = true;
+  document.getElementById("view-exams").hidden = false;
+  location.hash = "#" + id;
+  window.scrollTo(0, 0);
+}
+function showClasses(){
+  document.getElementById("view-exams").hidden = true;
+  document.getElementById("view-classes").hidden = false;
+  history.replaceState(null, "", location.pathname);
+  window.scrollTo(0, 0);
+}
+renderClasses();
+// deep-link: #classId opens that class directly
+const h = location.hash.replace("#", "");
+if(h && CATALOG.some(c => c.id === h)) openClass(h);
+</script>
+</body>
+</html>
