@@ -1,2 +1,6 @@
 .DS_Store
 *.log
+
+# build intermediates (regenerable)
+build/_immuno_slidetext.json
+build/_immuno_content.json
