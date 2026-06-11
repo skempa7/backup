@@ -50,10 +50,10 @@ lecture-by-lecture from the course materials and replace the placeholders.
 
 ## Putting it online (GitHub Pages)
 
-1. Create a new **public** repo (e.g. `remediation`).
+1. Repo: **`skempa7/backup`** (public).
 2. Push this folder to it.
 3. Repo **Settings → Pages → Source: `main` / `(root)` → Save**.
-4. Live ~1 min later at `https://YOUR-USERNAME.github.io/remediation/`.
+4. Live ~1 min later at `https://skempa7.github.io/backup/`.
 
 After that, edit `content.js` on GitHub and the live site updates within a
 minute. Progress saves per-device in the browser.
