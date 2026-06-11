@@ -5,6 +5,7 @@ import json, os, re, collections, html, glob
 REPO="/Users/sebastiankempa/remediation-quiz-app"; B=f"{REPO}/build"
 OUT=f"{REPO}/quizzes/pharmacology/content.js"
 VDIR="/tmp/pharm_verify_out"; UDIR="/tmp/pharm_verify"
+CTDIR="/tmp/pharm_ct_out"; CTUDIR="/tmp/pharm_ct"   # ClawTest practice-exam bank
 NLEC=30
 TITLES={1:"Introduction / History / Terminology / Routes of Administration",2:"Dose-Response Relationships & Receptor Theory I",3:"Dose-Response Relationships & Receptor Theory II",4:"Kinetics of Drug Absorption & Elimination; Metabolism & Distribution I",5:"Kinetics of Drug Absorption & Elimination; Metabolism & Distribution II",6:"Bioavailability & Bioequivalence / Dosage Adjustments / Regimens",7:"Recent Advances in Pharmacological Approaches",8:"Introduction to Autonomic Pharmacology I",9:"Introduction to Autonomic Pharmacology II",10:"Cholinergic Agonists I",11:"Cholinergic Agonists II",12:"Cholinergic Antagonists I",13:"Cholinergic Antagonists II",14:"Adrenergic Agonists I",15:"Adrenergic Agonists II",16:"Adrenergic Antagonists I",17:"Adrenergic Antagonists II",18:"Principles of Anti-infective Therapy",19:"Cell Wall Synthesis Inhibitors I",20:"Cell Wall Synthesis Inhibitors II",21:"Tetracyclines / Macrolides / Aminoglycosides I",22:"Tetracyclines / Macrolides / Aminoglycosides II",23:"Cell Wall Synthesis Inhibitors III",24:"Antifungals",25:"Anthelminthics / Antiprotozoals",26:"Chloramphenicol / Clindamycin / Linezolid / Streptogramins / Lipopeptides",27:"Antifolate Agents",28:"Fluoroquinolones / Urinary Tract Antibiotics",29:"Antivirals",30:"Antimycobacterial Agents"}
 
@@ -22,6 +23,17 @@ def load_qs(L):
                 if qs: return qs,(d==VDIR)
             except Exception: pass
     return [],False
+
+def load_ct(L):
+    for d in (CTDIR,CTUDIR):
+        p=f"{d}/lec_{L}.json"
+        if os.path.exists(p):
+            try:
+                qs=json.load(open(p)).get("questions",[])
+                if qs: return qs
+            except Exception: pass
+    return []
+def norm(s): return re.sub(r'[^a-z0-9]','',str(s).lower())[:120]
 
 CALLOUT_LABEL={"key":"Key","pearl":"Clinical pearl","trap":"Trap","confusion":"Confusion","cue":"Cue"}
 def lo_answer_html(lo):
@@ -62,6 +74,17 @@ for L in range(1,NLEC+1):
         if arr:
             stmt=stmts.get(lo_id) or f"Learning Objective {L}.{lo_id}"
             lo_entries.append([lo_id,stmt,arr])
+    # merge ClawTest practice-exam bank as a trailing pseudo-LO, deduped vs Preclaude stems
+    seen={norm(q["stem"]) for q in qs}
+    ct_arr=[]
+    for q in load_ct(L):
+        opts=q["choices"]; ci=int(q["correct"])
+        if not (isinstance(opts,list) and len(opts) in (4,5) and 0<=ci<len(opts)): continue
+        if norm(q["stem"]) in seen: continue
+        seen.add(norm(q["stem"]))
+        ct_arr.append([q["stem"],opts,ci,q.get("explanation",""),"basic"]); real_q+=1
+    if ct_arr:
+        lo_entries.append([90,"Practice Exam — ClaudeTest",ct_arr])
     if not lo_entries:
         lo_entries=[[1,"Overview",[["Questions for this lecture are being added.",["Got it","OK","Understood","Continue"],0,"Placeholder.","basic"]]]]
     QUIZ.append([L,title,lo_entries])

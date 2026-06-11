@@ -9223,6 +9223,116 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 58-year-old man requires a drug with rapid onset for an acute MI. Which route of administration produces the FASTEST systemic effect?",
+      [
+       "Sublingual",
+       "Oral (PO)",
+       "Rectal",
+       "Subcutaneous (SC)",
+       "Intravenous (IV)"
+      ],
+      4,
+      "IV delivers the entire dose directly into the bloodstream — no absorption step, no first-pass metabolism, bioavailability = 100% by definition. Onset is essentially one circulation time (~30 sec). Sublingual is fast (1-3 min) and useful outpatient — but IV is faster. Oral is slowest due to gastric emptying + absorption + first-pass. A — wrong because sublingual nitroglycerin is fast and bypasses first-pass, but IV is faster — onset in one circulation time. B — wrong because oral has the SLOWEST onset of the listed routes due to gastric emptying, absorption, and first-pass. C — wrong because rectal absorption is variable and only partially bypasses first-pass. D — wrong because SC absorption depends on local blood flow and tissue diffusion — slower than IV. [LO 1.3 — Routes of Administration]",
+      "basic"
+     ],
+     [
+      "Which of the following BEST captures the distinction between pharmacokinetics and pharmacodynamics?",
+      [
+       "Pharmacokinetics is drug-receptor binding; pharmacodynamics is drug metabolism",
+       "Pharmacokinetics measures Emax; pharmacodynamics measures half-life",
+       "Pharmacokinetics applies only to oral drugs; pharmacodynamics to all routes",
+       "Pharmacokinetics is what the body does to the drug",
+       "Pharmacokinetics is the study of side effects; pharmacodynamics is therapeutic effects"
+      ],
+      3,
+      "This is the foundational distinction. PK covers ADME — what the body does to the drug as it moves through it. PD covers receptor binding, dose-response, efficacy, potency — what the drug does once it arrives at the target. Every lecture in this course sits on one side of this line or the other. A — wrong because this reverses the definitions — receptor binding is PD, metabolism is PK. B — wrong because Emax is a PD parameter; half-life is a PK parameter. Reverse is correct. C — wrong because both apply regardless of route; route only affects absorption (one of the four PK pillars). E — wrong because side effects vs therapeutic effects is unrelated to the PK/PD distinction. [LO 1.1 — Pharmacology Terminology]",
+      "basic"
+     ],
+     [
+      "A drug given IM peaks at 45 min; the same drug given orally peaks at 90 min. Both produce equal eventual plasma AUC. Which BEST explains this?",
+      [
+       "The oral formulation has lower bioavailability than IM",
+       "The oral formulation undergoes enterohepatic recirculation",
+       "IM injection bypasses first-pass metabolism and has higher F",
+       "Both formulations have equivalent bioavailability; absorption is slower from the gut",
+       "IM has lower bioavailability because of muscle protein binding"
+      ],
+      3,
+      "Equal AUC means equal total exposure — equal bioavailability. Different Tmax just means different absorption rates. Tmax tells you about absorption RATE; AUC tells you about EXTENT. Equal extent + different rate = different Tmax, same F. A — wrong because if oral had lower F, AUC would be lower — but the stem states equal AUC. B — wrong because enterohepatic recirculation creates a second peak, not just a delayed first peak. C — wrong because if IM had higher F, AUC would be higher for IM. Equal AUC rules this out. E — wrong because muscle protein binding doesn't reduce bioavailability — bound drug is still bioavailable. [LO 1.3 — Route Effects on PK]",
+      "basic"
+     ],
+     [
+      "Which route involves the MOST significant first-pass metabolism?",
+      [
+       "Oral",
+       "Inhalational",
+       "Sublingual",
+       "Intravenous",
+       "Transdermal"
+      ],
+      0,
+      "Drugs absorbed from the gut enter the portal vein and pass through the liver before reaching systemic circulation. For high-extraction drugs (nitroglycerin, lidocaine, propranolol, morphine, verapamil), 60-95% of the dose can be lost on first pass. The other routes fully bypass or have minimal first-pass. B — wrong because inhalational drug enters pulmonary venous return directly — bypasses portal. C — wrong because sublingual drains to SVC — bypasses portal. Why SL nitroglycerin works. D — wrong because IV delivers drug directly into systemic circulation — by definition F = 100%, no first-pass. E — wrong because transdermal drains to systemic cutaneous capillaries — bypasses portal. [LO 1.3 — First-Pass Metabolism]",
+      "basic"
+     ],
+     [
+      "Which BEST describes a 'prodrug'?",
+      [
+       "A drug not requiring metabolic conversion",
+       "An inactive parent compound activated by metabolism",
+       "A drug given before the primary therapeutic agent",
+       "A drug combined with another to boost absorption",
+       "A drug formulated for slow-release delivery"
+      ],
+      1,
+      "A prodrug is given in inactive form and converted to the active species by metabolism — usually hepatic. Examples: enalapril → enalaprilat, codeine → morphine (CYP2D6), clopidogrel → active thiol (CYP2C19). Clinical relevance: any condition or drug interaction that blocks the activating enzyme reduces therapeutic effect. A — wrong because this is the OPPOSITE of a prodrug — a drug needing no activation is just an active drug. C — wrong because this describes pretreatment, not prodrug. D — wrong because this describes a PK enhancer (e.g., probenecid extending penicillin half-life). E — wrong because this describes a sustained-release formulation, not a prodrug. [LO 1.1 — Drug Terminology]",
+      "basic"
+     ],
+     [
+      "Which route MOST appropriately bypasses first-pass AND is self-administered by an outpatient with chronic angina?",
+      [
+       "Intravenous bolus",
+       "Sublingual",
+       "Rectal suppository",
+       "Intramuscular injection",
+       "Oral controlled-release"
+      ],
+      1,
+      "Sublingual nitroglycerin is the textbook outpatient angina rescue. SL drainage to SVC bypasses the portal system. Onset 1-3 min — fast enough to abort an angina episode. Easy to teach and patient-administered. A — wrong because IV is not outpatient-administered for an angina attack. C — wrong because rectal is partially first-pass (upper rectum drains to portal) and inconvenient. D — wrong because IM is not self-administered for acute angina. E — wrong because oral CR doesn't bypass first-pass — and CR is by design slow-onset, wrong for acute relief. [LO 1.3 — Sublingual Route]",
+      "basic"
+     ],
+     [
+      "The term 'enteral' refers to drug administration that:",
+      [
+       "Uses the gastrointestinal tract",
+       "Bypasses the gastrointestinal tract",
+       "Is given only intravenously",
+       "Requires nebulization",
+       "Is restricted to topical use"
+      ],
+      0,
+      "Enteral = via the GI tract. Oral, sublingual, buccal, and rectal are enteral routes. Parenteral = NOT via the GI tract — includes IV, IM, SC, intradermal, intrathecal, transdermal, inhalational. Greek root 'enteron' means 'intestine.' B — wrong because this is parenteral, not enteral. C — wrong because IV is parenteral, not enteral. D — wrong because nebulization is inhalational — parenteral by definition. E — wrong because topical routes can be enteral (rectal) or parenteral (transdermal); the term doesn't restrict to topical. [LO 1.1 — Enteral vs Parenteral]",
+      "basic"
+     ],
+     [
+      "An 'idiosyncratic' drug reaction is BEST described as:",
+      [
+       "A dose-dependent extension of the drug's pharmacological effect",
+       "An expected adverse effect listed on the FDA package insert",
+       "A reaction occurring only on first exposure to the drug",
+       "An unpredictable, genetically determined reaction unrelated to dose",
+       "A reaction caused by drug-drug interaction"
+      ],
+      3,
+      "Idiosyncratic reactions are unpredictable, not dose-related, typically genetic or immunologic — e.g., G6PD hemolysis from primaquine or sulfas, malignant hyperthermia from succinylcholine in RYR1-mutation carriers, severe cutaneous reactions to allopurinol in HLA-B*5801 carriers. Distinct from Type A (predictable, dose-related) reactions like β-blocker bradycardia. A — wrong because this is a Type A reaction (predictable, dose-related) — opposite of idiosyncratic. B — wrong because expected adverse effects from the package insert are usually Type A; idiosyncratic ones are rare and often genetic. C — wrong because idiosyncratic reactions can occur on any exposure — not first-dose-specific. E — wrong because drug-drug interactions are a separate category from idiosyncratic reactions. [LO 1.4 — Adverse Drug Reactions]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -9513,6 +9623,207 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Drug A and Drug B both lower BP with the same maximal effect, but Drug A requires 5 mg while Drug B requires 50 mg. Which is MOST accurate?",
+      [
+       "Drug A is more potent than Drug B",
+       "Drug B has greater efficacy than Drug A",
+       "Drug A has greater efficacy than Drug B",
+       "Drug B has a higher affinity than Drug A",
+       "Drug A must be a partial agonist"
+      ],
+      0,
+      "Same maximal effect = same efficacy (Emax). Achieving that max at a lower dose = greater potency. Potency and efficacy are independent axes — potency on the x-axis, efficacy on the y-axis. Parmar tests this directly. A more potent drug requires less mass; whether it's the 'better' drug depends on side effects, cost, kinetics — not potency alone. B — wrong because equal Emax means equal efficacy. C — wrong because equal maximal effect means equal efficacy — neither has 'more.' D — wrong because higher affinity (lower Kd) would mean MORE potent. If A needs less mass, A has higher affinity. E — wrong because partial agonists have LOWER Emax than full agonists. Same Emax rules out partial agonism. [LO 2.2 — Potency vs Efficacy]",
+      "basic"
+     ],
+     [
+      "On a log dose-response curve, the addition of Drug X to an agonist shifts the agonist's curve right but does not change Emax. Increasing agonist concentration overcomes Drug X. Drug X is BEST described as a:",
+      [
+       "Full agonist",
+       "Partial agonist",
+       "Non-competitive antagonist",
+       "Competitive antagonist",
+       "Inverse agonist"
+      ],
+      3,
+      "Two-feature signature of competitive antagonism: (1) parallel rightward shift, and (2) preserved Emax — the antagonist competes for the same site, so more agonist can outcompete it. Non-competitive antagonism LOWERS Emax and is not surmountable. A — wrong because a full agonist shifts the curve UP, not right. B — wrong because a partial agonist by itself shifts up to a lower plateau; when added to a full agonist it pulls Emax down — not preserved. C — wrong because non-competitive LOWERS Emax and cannot be overcome by more agonist — opposite of what's described. E — wrong because inverse agonists lower constitutive activity, not the same as shifting a curve right. [LO 2.3 — Competitive vs Non-Competitive Antagonism]",
+      "basic"
+     ],
+     [
+      "The therapeutic index (TI) of a drug is calculated as:",
+      [
+       "ED50 / LD50",
+       "Kd / Bmax",
+       "Emax / EC50",
+       "LD50 / ED50",
+       "Cmax / Cmin"
+      ],
+      3,
+      "TI = LD50 / ED50 — the dose killing 50% over the dose curing 50%. Higher TI = safer. Penicillin has very high TI; digoxin, lithium, warfarin, aminoglycosides have low TI and require monitoring. Mnemonic: Lethal Dose on top (you don't want to get there). A — wrong because INVERTED — putting effective dose on top gives a number <1 for any usable drug. B — wrong because Kd and Bmax are binding-curve parameters, not used in TI. C — wrong because Emax / EC50 is not a standard ratio — conflates efficacy with potency. E — wrong because Cmax/Cmin is a dosing-interval parameter (peak/trough), not a safety index. [LO 2.2 — Therapeutic Index]",
+      "basic"
+     ],
+     [
+      "A new drug has a steep dose-response curve (Hill coefficient ~3). Compared to a drug with a flatter curve, this drug will MOST likely have:",
+      [
+       "A larger effect change per dose increment",
+       "Less precise dose titration to avoid toxicity",
+       "A smaller effect change per dose increment",
+       "A wider therapeutic index window",
+       "Lower bioavailability than other agents"
+      ],
+      0,
+      "Steepness of the dose-response curve reflects how rapidly response transitions threshold to maximum. A steep curve means small dose changes produce large effect changes — more 'all-or-nothing.' Clinically harder to titrate safely. Flatter curves give more dose-titration headroom. B — wrong because OPPOSITE — steeper curves require MORE precise titration. C — wrong because this describes a FLAT curve, not steep. D — wrong because steepness doesn't directly determine TI — TI is LD50/ED50. E — wrong because bioavailability is PK, unrelated to PD curve steepness. [LO 2.4 — Curve Steepness]",
+      "basic"
+     ],
+     [
+      "Affinity of a drug for its receptor is BEST quantified by:",
+      [
+       "Emax",
+       "ED50 (in vivo)",
+       "Kd",
+       "Bmax",
+       "Hill coefficient"
+      ],
+      2,
+      "Affinity is the strength of drug-receptor binding, measured by Kd — the drug concentration at which 50% of receptors are occupied at equilibrium. LOW Kd = HIGH affinity. Affinity is a property of the drug-receptor pair, independent of body composition. A — wrong because Emax is efficacy — the maximal effect, not binding strength. B — wrong because ED50 is potency combining affinity AND receptor number — affinity contributes but isn't measured directly. D — wrong because Bmax is maximal receptor density, not affinity. E — wrong because Hill coefficient describes cooperative binding / curve steepness, not affinity. [LO 2.2 — Affinity]",
+      "basic"
+     ],
+     [
+      "A partial agonist given to a patient already receiving a full agonist will produce which effect?",
+      [
+       "Increase the full agonist's net effect at the receptor",
+       "Have no effect because partial agonists are functionally silent",
+       "Block all receptor activity completely and irreversibly",
+       "Decrease the full agonist's effect toward a lower ceiling",
+       "Cause inverse-agonist-like reduction below baseline tone"
+      ],
+      3,
+      "A partial agonist binds the receptor but generates only a fraction of the maximal response. Given alongside a full agonist, it competes for the same site — receptors occupied by partial agonist produce smaller signal. Net effect: output pulled DOWN toward the partial agonist's ceiling. Buprenorphine is a classic example — it can precipitate withdrawal in patients on full-agonist opioids. A — wrong because partial agonists REDUCE the full agonist's effect when both are present. B — wrong because partial agonists do produce some receptor activation — they're not silent. C — wrong because partial agonists don't fully block; they produce partial signal. E — wrong because inverse agonism reduces constitutive activity at receptors with intrinsic tone — different mechanism. [LO 2.3 — Partial Agonism]",
+      "basic"
+     ],
+     [
+      "Two drugs have identical Emax but Drug A has EC50 = 1 µM and Drug B has EC50 = 100 µM. Which is MOST accurate?",
+      [
+       "Drug B is 100 times more efficacious than Drug A",
+       "Drug A is 100 times more efficacious than Drug B",
+       "Drug A is 100 times more potent than Drug B",
+       "Drug B has 100 times the affinity of Drug A",
+       "Drug A is necessarily safer than Drug B"
+      ],
+      2,
+      "EC50 quantifies potency. Lower EC50 = less drug needed to reach half-effect, so Drug A is 100× more potent. Equal Emax means equal efficacy. The 100× potency difference does NOT make Drug A 'better' — better is set by TI, kinetics, side effects, cost. A — wrong because efficacy is Emax — equal Emax means equal efficacy. B — wrong because same error opposite direction. D — wrong because lower EC50 = higher affinity. Drug A (lower EC50) has higher affinity. E — wrong because potency does not predict safety; therapeutic index does. [LO 2.2 — EC50 Interpretation]",
+      "basic"
+     ],
+     [
+      "Why does pharmacology plot drug responses against the LOG of dose rather than linear dose?",
+      [
+       "Log scale reduces overall measurement error and noise",
+       "Linear plots produce mathematically equivalent and readable curves",
+       "Log scale is mandated by FDA regulatory guidelines",
+       "Log scale is reserved for use with highly potent drugs",
+       "Log scale converts hyperbolic binding into a readable sigmoid"
+      ],
+      4,
+      "Receptor occupancy follows the Law of Mass Action — equal log-fold concentration changes produce equal occupancy changes. On a linear axis the response curve crowds into the low-dose region and saturates abruptly. The log transformation stretches the testable middle into a near-linear band that's easy to compare across drugs and read EC50 off of. A — wrong because log scale is a math transformation; doesn't change measurement error properties. B — wrong because mathematically related but NOT equally readable — linear plots are illegible across typical dose ranges. C — wrong because no FDA guideline mandates this — it's a practical convention. D — wrong because all dose-response work uses log scale, not just potent drugs. [LO 2.1 — Log Dose-Response]",
+      "basic"
+     ],
+     [
+      "A drug has a high 'spare receptor' fraction. Compared to a drug with no spare receptors, this drug will MOST likely:",
+      [
+       "Reach Emax only at 100% receptor occupancy",
+       "Produce no measurable response at any dose",
+       "Reach Emax at less than 100% receptor occupancy",
+       "Show reduced affinity for its receptor",
+       "Have lower efficacy at high doses"
+      ],
+      2,
+      "Spare receptors are receptors in excess of those needed to produce Emax. When spare receptors exist, the drug hits Emax with partial occupancy — the dose-response curve sits LEFT of the binding curve. β-adrenergic receptors in cardiac tissue have substantial spare pools. A — wrong because this is what happens WITHOUT spare receptors. B — wrong because spare receptors don't eliminate response; they amplify per-receptor efficacy. D — wrong because spare receptors don't change affinity. E — wrong because spare receptors don't lower efficacy. [LO 2.5 — Spare Receptors]",
+      "basic"
+     ],
+     [
+      "Drug A and Drug B both fully activate the β1-adrenergic receptor and produce identical inotropy at saturating doses. Drug A acts at 0.1 µM; Drug B at 10 µM. Which property differs?",
+      [
+       "Intrinsic activity",
+       "Efficacy",
+       "Potency",
+       "Receptor subtype selectivity",
+       "Maximum response"
+      ],
+      2,
+      "Both drugs fully activate the receptor (same intrinsic activity) and produce identical max response (same efficacy). Difference is concentration required — A needs 100× less. That's potency. A — wrong because intrinsic activity is fraction of max response per occupied receptor — both produce identical max so intrinsic activity is the same. B — wrong because efficacy = max response. Identical = same. D — wrong because stem specifies both act at β1. E — wrong because explicitly stated as identical at saturating doses. [LO 2.2 — Potency]",
+      "basic"
+     ],
+     [
+      "A drug binds a receptor at a site distinct from the agonist site, decreasing the agonist's apparent affinity and lowering Emax. This drug is BEST classified as a:",
+      [
+       "Competitive orthosteric-site antagonist",
+       "Inverse agonist with negative efficacy",
+       "Partial agonist with low intrinsic activity",
+       "Allosteric non-competitive antagonist",
+       "Full agonist with reduced ceiling effect"
+      ],
+      3,
+      "Binding at a separate (allosteric) site and lowering Emax is the signature of non-competitive antagonism — max output is reduced no matter how much agonist is added. Competitive antagonists bind the SAME site, produce rightward shift, preserve Emax. A — wrong because competitive antagonism preserves Emax — opposite of what's described. B — wrong because inverse agonists reduce constitutive activity — different mechanism. C — wrong because partial agonists bind the orthosteric site, not allosteric. E — wrong because a full agonist by definition produces full Emax. [LO 2.3 — Non-Competitive Antagonism]",
+      "basic"
+     ],
+     [
+      "The relationship between drug effect and receptor occupancy is BEST described by which fundamental rule?",
+      [
+       "The first-order pharmacokinetic clearance principle",
+       "The Law of Mass Action equilibrium",
+       "The Henderson-Hasselbalch buffer dissociation equation",
+       "The Michaelis-Menten enzyme saturation curve",
+       "The Beer-Lambert spectrophotometric absorbance law"
+      ],
+      1,
+      "The Law of Mass Action governs reversible drug-receptor binding: drug + receptor ⇌ complex, with Kd setting the equilibrium. This is the same law governing any reversible bimolecular reaction. It explains why log-dose curves come out sigmoidal: equal log-fold dose changes produce equal occupancy changes near 50% saturation. A — wrong because first-order kinetics describes elimination time course (PK), not binding equilibrium. C — wrong because Henderson-Hasselbalch describes pH-pKa for ionizable drugs (absorption), not binding. D — wrong because Michaelis-Menten describes enzyme kinetics — formally similar math but applied to enzymes. E — wrong because Beer-Lambert governs light absorption, not pharmacology. [LO 2.1 — Mass Action]",
+      "basic"
+     ],
+     [
+      "Which statement about warfarin's therapeutic index is CORRECT?",
+      [
+       "Warfarin has a high TI and rarely needs monitoring",
+       "Warfarin's TI is irrelevant because it has no measurable LD50",
+       "Warfarin has a low TI and requires careful INR monitoring",
+       "Warfarin's TI is determined by GI absorption, not pharmacodynamics",
+       "Warfarin has the same TI as aspirin"
+      ],
+      2,
+      "Warfarin's therapeutic and toxic doses overlap heavily — too little, clots form; too much, the patient bleeds. INR monitoring (target 2-3 for most indications) is mandatory. Low-TI drugs that recur on exams: warfarin, digoxin, lithium, theophylline, aminoglycosides, phenytoin. A — wrong because warfarin is the textbook low-TI drug — opposite. B — wrong because warfarin has well-defined toxic effects (bleeding); TI is clinically used for it. D — wrong because TI is a PD/safety concept, not absorption. E — wrong because aspirin has much higher TI than warfarin. [LO 2.2 — TI in Practice]",
+      "basic"
+     ],
+     [
+      "Two drugs target the same receptor. Drug A: Kd = 10 nM. Drug B: Kd = 1 µM. Which is MOST accurate?",
+      [
+       "Drug B has higher affinity than Drug A",
+       "Affinity cannot be compared without knowing Emax",
+       "Both drugs have identical affinity",
+       "Drug A has higher affinity than Drug B",
+       "Drug B occupies more receptors per unit drug concentration"
+      ],
+      3,
+      "Affinity is inverse of Kd. 10 nM vs 1 µM = 100-fold difference. Drug A binds 100× more tightly: at 10 nM, A has 50% occupancy while B has only ~1%. A — wrong because lower Kd is HIGHER affinity. B — wrong because affinity is fully described by Kd; Emax is a separate axis. C — wrong because the Kd values differ — affinities differ. E — wrong because lower Kd means MORE receptors occupied per unit drug — Drug A occupies more. [LO 2.2 — Affinity from Kd]",
+      "basic"
+     ],
+     [
+      "A quantal dose-response curve is steep, with ED50 closely flanked by ED1 and ED99. This suggests:",
+      [
+       "Wide population variability in drug response",
+       "The drug is metabolized via CYP3A4",
+       "Low population variability in drug response",
+       "The drug has a long half-life",
+       "The drug has poor bioavailability"
+      ],
+      2,
+      "Quantal curves plot cumulative fraction of subjects showing an effect against dose. STEEP = most people respond at similar doses → low population variability. FLAT = wide variability. Steepness in quantal curves reflects population homogeneity, not drug potency. A — wrong because wide variability → FLAT curve. B — wrong because metabolism doesn't dictate quantal curve shape. D — wrong because half-life is PK, not quantal response. E — wrong because bioavailability affects absolute dose, not curve shape. [LO 2.6 — Quantal Dose-Response]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -9800,6 +10111,181 @@ const QUIZ = [
       ],
       1,
       "The stated options for adaptation phenomena are to space out the dosing interval, or use a drug from a different class. These respect the receptor changes rather than just escalating dose. (A) Indefinite dose doubling risks toxicity and is not the taught strategy. (C) Adding an irreversible antagonist does not address tolerance. (D) Receptor conversion is not a real clinical option. (E) Permanent cessation of all therapy is not the management described.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A patient using oxymetazoline nasal spray daily for 10 days reports decreased efficacy and worsening congestion. The MOST likely mechanism is:",
+      [
+       "Hepatic enzyme induction increasing drug clearance",
+       "Receptor downregulation at nasal mucosal α1 sites",
+       "Development of IgE-mediated allergic hypersensitivity",
+       "Loss of drug potency from package degradation",
+       "Concurrent viral upper respiratory tract infection"
+      ],
+      1,
+      "Chronic α1-agonist exposure on nasal mucosa downregulates the receptor pool — rapid loss of effect (tachyphylaxis). When the patient stops oxymetazoline, the now-sparse receptors are overwhelmed by endogenous norepinephrine, and rhinitis medicamentosa follows for 3-7 days. Counsel ≤3-5 days of use; bridge with saline + intranasal corticosteroid. A — wrong because enzyme induction is PK — relevant for oral CYP substrates, not topical nasal sprays. C — wrong because IgE hypersensitivity produces immediate symptoms (urticaria, itching), not gradual loss of effect. D — wrong because package degradation is rare and not the standard explanation. E — wrong because viral URI could worsen congestion but doesn't explain reduced drug response. [LO 3.2 — Tachyphylaxis]",
+      "basic"
+     ],
+     [
+      "A patient on chronic propranolol abruptly stops after 6 months and presents 2 days later with angina, tachycardia, and elevated BP. The MOST likely mechanism is:",
+      [
+       "Acute β-blocker withdrawal precipitating ischemia via tachyphylaxis",
+       "Renal failure increasing β-agonist levels",
+       "Hepatic enzyme induction reducing endogenous catecholamine metabolism",
+       "Acute coronary plaque rupture unrelated to the medication",
+       "Upregulation of β-receptors during chronic blockade"
+      ],
+      4,
+      "Chronic antagonist exposure (β-blocker) → compensatory receptor upregulation. When the blocker is abruptly withdrawn, the amplified β-receptor pool responds violently to ambient catecholamines — rebound tachycardia, HTN, angina, MI. Always taper β-blockers over 1-2 weeks. Same principle: clonidine withdrawal (rebound HTN). A — wrong because tachyphylaxis is loss of effect from chronic AGONIST, not withdrawal of antagonist. B — wrong because renal function doesn't raise endogenous catecholamine levels clinically. C — wrong because enzyme induction doesn't explain the abrupt-withdrawal rebound pattern. D — wrong because plaque rupture is possible but timing/clinical pattern point to β-receptor supersensitivity. [LO 3.3 — Receptor Upregulation]",
+      "basic"
+     ],
+     [
+      "Which BEST distinguishes desensitization from downregulation at a G protein-coupled receptor?",
+      [
+       "Desensitization is slow over days; downregulation occurs in minutes",
+       "Downregulation is reversible; desensitization is permanently established",
+       "Desensitization affects ligand binding; downregulation affects signaling only",
+       "Desensitization is fast via phosphorylation; downregulation is slow receptor loss",
+       "Both are functionally identical regulatory processes"
+      ],
+      3,
+      "Desensitization is FAST post-translational silencing — GRK phosphorylation, arrestin binding, uncoupling from G protein. Minutes to hours. Downregulation is SLOWER reduction of receptor number on the membrane — internalization, lysosomal degradation. Hours to days. Both contribute to tolerance but are distinct events on different timescales. A — wrong because REVERSES the timescales. B — wrong because both are typically reversible. C — wrong because both affect signaling — desensitization primarily uncouples; downregulation reduces pool. E — wrong because distinct molecular mechanisms. [LO 3.2 — Desensitization vs Downregulation]",
+      "basic"
+     ],
+     [
+      "M2 muscarinic receptors at the cardiac SA node, when activated, produce which effect via which G protein?",
+      [
+       "Increased heart rate via Gs activation of adenylyl cyclase",
+       "Increased contractility via Gs and increased cAMP",
+       "Bronchodilation via Gq-mediated calcium release",
+       "Vasoconstriction via Gq-mediated calcium release",
+       "Decreased heart rate via Gi inhibition of adenylyl cyclase"
+      ],
+      4,
+      "M2 at the SA node couples to Gi, inhibiting adenylyl cyclase and lowering cAMP. M2 also increases K+ conductance, hyperpolarizing the cell. Together: slower SA firing, lower HR. This is how vagal stimulation produces bradycardia and why atropine (M2 blocker) increases HR. M2 = cardiac; M3 = smooth muscle. A — wrong because increased HR via Gs is the SYMPATHETIC β1 response — opposite arm and G protein. B — wrong because increased contractility via Gs is β1 — sympathetic, not muscarinic. C — wrong because bronchodilation is β2 (Gs), not M2. M3 in bronchial smooth muscle does the OPPOSITE. D — wrong because vasoconstriction is α1 (Gq). [LO 3.1 — Receptor-G Protein Coupling]",
+      "basic"
+     ],
+     [
+      "Drugs that block constitutive activity at a receptor with intrinsic baseline tone are BEST classified as:",
+      [
+       "Inverse agonists",
+       "Competitive antagonists",
+       "Partial agonists",
+       "Allosteric modulators",
+       "Full agonists with low intrinsic activity"
+      ],
+      0,
+      "Some receptors have constitutive activity — they generate signal even without ligand. An inverse agonist binds and pushes the receptor BELOW its baseline activity. A competitive antagonist would only block agonist effect without affecting constitutive tone. Some β-blockers (carvedilol, propranolol) show inverse-agonist behavior at β-receptors. B — wrong because competitive antagonists block agonist binding but don't reduce baseline tone. C — wrong because partial agonists raise activity (just to a lower ceiling), not lower it below baseline. D — wrong because allosteric modulators alter agonist response via a separate site; not the same as suppressing baseline. E — wrong because full agonists raise activity to max. [LO 3.4 — Inverse Agonism]",
+      "basic"
+     ],
+     [
+      "Insulin receptor and HER2/EGFR receptors belong to which receptor superfamily?",
+      [
+       "G protein-coupled receptors",
+       "Receptor tyrosine kinases",
+       "Ligand-gated ion channels",
+       "Nuclear hormone receptors",
+       "Cytokine receptors with JAK/STAT signaling"
+      ],
+      1,
+      "RTKs autophosphorylate on tyrosine residues when ligand binds, then recruit downstream adaptors (Grb2-SOS-Ras-MAPK; PI3K-Akt). Insulin receptor, EGFR/HER2, VEGFR, FGFR are all RTKs. Trastuzumab targets HER2; imatinib targets BCR-ABL kinase. RTKs are distinct from GPCRs and require dimerization for activation. A — wrong because GPCRs (β-receptors, α-receptors, muscarinics) use heterotrimeric G proteins — different mechanism. C — wrong because ligand-gated ion channels (nAChR, GABA-A) gate ion flow directly — different family. D — wrong because nuclear receptors (steroid, thyroid hormone) bind ligand intracellularly and act as transcription factors. E — wrong because cytokine receptors (interferon, EPO, GH) use JAK kinases — RELATED to RTKs but distinct (no intrinsic kinase domain). [LO 3.1 — Receptor Superfamilies]",
+      "basic"
+     ],
+     [
+      "Cortisol crosses the cell membrane, binds an intracellular receptor, and the complex translocates to the nucleus to alter gene transcription. This is the mechanism of which receptor family?",
+      [
+       "GPCR coupled through Gs",
+       "Receptor tyrosine kinase family",
+       "Ligand-gated ion channel family",
+       "Nuclear hormone receptor family",
+       "JAK/STAT cytokine receptor family"
+      ],
+      3,
+      "Lipophilic ligands (steroids, thyroid hormone, vitamin D, retinoic acid) cross the membrane and bind intracellular receptors. The complex enters the nucleus, binds hormone response elements in DNA, and modulates gene transcription. Onset is SLOW (hours) because it depends on new protein synthesis — fundamentally different timescale from ion-channel or GPCR signaling (seconds). A — wrong because GPCRs are at the cell surface; ligand doesn't enter the cell. B — wrong because RTKs are surface receptors; ligand binds extracellular domain. C — wrong because ligand-gated ion channels are surface receptors, fast signaling. E — wrong because JAK/STAT receptors are at the cell surface. [LO 3.1 — Nuclear Receptors]",
+      "basic"
+     ],
+     [
+      "Which receptor family generates the FASTEST physiological response after ligand binding?",
+      [
+       "Nuclear hormone receptors",
+       "GPCRs",
+       "Receptor tyrosine kinases",
+       "JAK/STAT cytokine receptors",
+       "Ligand-gated ion channels"
+      ],
+      4,
+      "Ligand-gated ion channels gate ion flux in MILLISECONDS — nicotinic ACh, GABA-A, glutamate NMDA/AMPA. Speed comes from cutting out every intermediate: ligand binds, channel opens, ions flow, voltage changes. GPCRs take seconds (G protein activation + effector). RTKs and JAK/STAT take minutes (phosphorylation cascades). Nuclear receptors take hours (transcription). A — wrong because nuclear receptors are the SLOWEST — hours to days. B — wrong because GPCRs are fast (seconds) but slower than channels. C — wrong because RTKs take minutes (kinase cascades + transcription effects). D — wrong because JAK/STAT takes minutes. [LO 3.1 — Signaling Timescales]",
+      "basic"
+     ],
+     [
+      "Tolerance to opioid analgesia develops over weeks of chronic dosing. The mechanism is BEST described as:",
+      [
+       "Pure pharmacokinetic — induction of CYP3A4 increases morphine clearance",
+       "Purely behavioral — learned conditioning",
+       "Combined pharmacodynamic and behavioral",
+       "Acute tachyphylaxis from receptor uncoupling within minutes",
+       "Reduced bioavailability from chronic constipation"
+      ],
+      2,
+      "Opioid tolerance is multifactorial. Pharmacodynamic tolerance: chronic μ-receptor activation drives desensitization (GRK/arrestin uncoupling) and downregulation (internalization). Pharmacokinetic tolerance contributes minimally — opioid metabolism doesn't substantially up. Behavioral tolerance (learned environmental compensation) also contributes. Net effect: escalating doses needed for the same analgesic response. A — wrong because PK alone is insufficient — PD desensitization dominates. B — wrong because behavioral contributes but isn't the primary mechanism. D — wrong because tachyphylaxis is the rapid (minutes-hours) version; opioid tolerance develops over weeks and involves slower receptor-level changes. E — wrong because constipation doesn't reduce bioavailability of subsequent opioid doses. [LO 3.2 — Opioid Tolerance]",
+      "basic"
+     ],
+     [
+      "M3 muscarinic receptors on bronchial smooth muscle, when activated, produce which effect via which G protein?",
+      [
+       "Bronchodilation via Gs and cAMP",
+       "No effect — bronchial smooth muscle has no muscarinic receptors",
+       "Bronchoconstriction via Gq and IP3/DAG/calcium",
+       "Bronchodilation via Gi inhibition of cAMP",
+       "Mucus secretion only, no airway effect"
+      ],
+      2,
+      "M3 on bronchial smooth muscle couples to Gq → activates phospholipase C → IP3 + DAG → calcium release from SR → smooth muscle contraction = bronchoconstriction. This is why anticholinergics (ipratropium, tiotropium) are bronchodilators in COPD — they block M3. M3 is also on bladder detrusor (contraction → urination) and exocrine glands (secretion). A — wrong because bronchodilation via Gs/cAMP is β2 receptors — sympathetic arm. SABA and LABA work here. B — wrong because M3 is abundant on bronchial smooth muscle. D — wrong because Gi/cAMP doesn't bronchodilate. E — wrong because M3 does both — contraction and glandular secretion. [LO 3.1 — M3 Function]",
+      "basic"
+     ],
+     [
+      "A drug binds an α1-adrenergic receptor and activates Gq, leading to IP3-mediated calcium release. This describes the mechanism for:",
+      [
+       "Bronchial smooth muscle dilation",
+       "Increased cardiac contractility",
+       "Vascular smooth-muscle contraction",
+       "Bronchial smooth muscle constriction",
+       "Adipocyte lipolysis activation"
+      ],
+      2,
+      "α1 on vascular smooth muscle couples to Gq → PLC → IP3 → calcium release → smooth muscle contraction → vasoconstriction. This is why phenylephrine (pure α1 agonist) raises BP and why prazosin (α1 blocker) lowers it. α1 is also on pupillary dilator (mydriasis), bladder sphincter (urinary retention), and prostate (BPH target for tamsulosin). A — wrong because bronchodilation is β2 via Gs/cAMP. B — wrong because increased contractility is β1 via Gs/cAMP. D — wrong because bronchoconstriction is M3 via Gq — same G protein as α1 but different receptor. E — wrong because lipolysis is β3 via Gs. [LO 3.1 — α1 Mechanism]",
+      "basic"
+     ],
+     [
+      "A new analgesic is described as an opioid that produces partial activation of the μ-receptor and full antagonism at the κ-receptor. Compared to morphine (a full μ-agonist), this drug would MOST likely:",
+      [
+       "Produce a higher analgesic ceiling than morphine alone",
+       "Cause severe respiratory depression at any dose given",
+       "Have no analgesic effect because it is a partial agonist",
+       "Have effects identical to standard morphine dosing",
+       "Produce a lower ceiling and precipitate withdrawal acutely"
+      ],
+      4,
+      "This describes buprenorphine. As a partial μ-agonist, its analgesic ceiling is lower than full agonists like morphine. In an opioid-tolerant patient already on a full agonist, buprenorphine can DISPLACE the full agonist from μ-receptors and substitute partial agonism — net signal drops, precipitating withdrawal. This is why buprenorphine induction in opioid use disorder requires patients to be in mild withdrawal at the time of first dose. A — wrong because OPPOSITE — partial agonists have lower ceilings. B — wrong because the partial-agonist nature actually means a CEILING on respiratory depression — safer in overdose than full agonists. C — wrong because partial agonists still produce analgesic effect (just less than full agonists). D — wrong because the partial-agonist + κ-antagonist profile makes it pharmacologically distinct from morphine. [LO 3.3 — Partial μ-Agonism]",
+      "basic"
+     ],
+     [
+      "Which of the following is the MOST appropriate counseling point for a patient prescribed oxymetazoline nasal spray for acute congestion?",
+      [
+       "Use as often as needed for symptom relief, indefinitely",
+       "Combine with daily oral pseudoephedrine for maximal benefit",
+       "Limit to ≤3-5 consecutive days to avoid rhinitis medicamentosa",
+       "Use only at bedtime to minimize systemic absorption",
+       "Switch immediately to a topical antihistamine like azelastine"
+      ],
+      2,
+      "Oxymetazoline α1-agonism downregulates nasal mucosal receptors within days. After 3-5 days of use, patients develop rebound congestion when they stop — rhinitis medicamentosa. The counseling rule: short courses only, then off. For chronic allergic rhinitis, intranasal corticosteroids and saline are the maintenance therapy, not topical decongestants. A — wrong because indefinite use guarantees tachyphylaxis and rebound congestion. B — wrong because combining decongestants doesn't prevent tachyphylaxis and increases systemic side effects. D — wrong because topical α1-agonists are minimally absorbed regardless of timing. E — wrong because switching abruptly doesn't help; the issue is duration of α1-agonist exposure, not class. [LO 3.2 — Rhinitis Medicamentosa]",
       "basic"
      ]
     ]
@@ -10117,6 +10603,233 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Which of the four ADME pillars describes a drug entering the systemic circulation from the site of administration?",
+      [
+       "Elimination",
+       "Distribution",
+       "Metabolism",
+       "Excretion",
+       "Absorption"
+      ],
+      4,
+      "ADME = Absorption, Distribution, Metabolism, Excretion. Absorption is the entry step — drug crossing membranes from the administration site (gut, muscle, skin) into blood. Distribution is its spread through body compartments after entering blood. Metabolism is biotransformation (usually hepatic). Excretion is removal from the body (usually renal). The whole sequence governs the plasma-time profile. A — wrong because elimination is the combination of metabolism + excretion — the overall clearance step. B — wrong because distribution is the step AFTER absorption — movement into tissues from blood. C — wrong because metabolism is biotransformation, typically hepatic. D — wrong because excretion is removal from the body, typically renal. [LO 4.1 — ADME Framework]",
+      "basic"
+     ],
+     [
+      "A drug with pKa 4.5 is administered to a patient with gastric pH 2. The drug is a weak acid. According to the Henderson-Hasselbalch principle, the drug in the stomach is MOSTLY:",
+      [
+       "Non-ionized and well absorbed",
+       "Ionized and poorly absorbed",
+       "Ionized and well absorbed",
+       "Non-ionized and poorly absorbed",
+       "Completely metabolized before absorption"
+      ],
+      0,
+      "Weak acids in acidic environment exist mostly in the non-ionized (protonated, neutral) form because there are excess H+ to keep them protonated. Non-ionized = lipid-soluble = membrane-permeable = well absorbed. Aspirin (weak acid, pKa ~3.5) is absorbed in the stomach for this reason. Weak bases (e.g., amphetamine) are MORE ionized in stomach acid, less absorbed there, more absorbed in alkaline small intestine. B — wrong because weak acids in acidic environment are MOSTLY non-ionized. C — wrong because ionized drugs can't cross lipid membranes — poorly absorbed. D — wrong because non-ionized drugs are well absorbed, not poorly absorbed. E — wrong because the stomach doesn't fully metabolize most drugs — first-pass happens in the liver. [LO 4.2 — Drug Ionization & Absorption]",
+      "basic"
+     ],
+     [
+      "Phase I drug metabolism reactions are BEST described as:",
+      [
+       "Conjugation adding glucuronate or sulfate for excretion",
+       "Oxidation, reduction, and hydrolysis via CYP enzymes",
+       "Active transport of drug into bile canaliculi",
+       "Renal glomerular filtration and tubular secretion",
+       "Receptor-mediated uptake into hepatocytes from sinusoids"
+      ],
+      1,
+      "Phase I metabolism = oxidation, reduction, hydrolysis — usually performed by CYP450 enzymes in the smooth ER of hepatocytes. The output is typically a more polar metabolite that may be active, inactive, or sometimes more toxic. Phase II = conjugation (glucuronidation, sulfation, acetylation, methylation, glutathione conjugation) — adds polar groups to make the drug excretable. A — wrong because this describes Phase II conjugation reactions. C — wrong because biliary excretion is the elimination step, not metabolism. D — wrong because renal excretion is elimination, not metabolism. E — wrong because uptake into hepatocytes is a transport step, not a metabolic reaction. [LO 4.3 — Phase I vs Phase II]",
+      "basic"
+     ],
+     [
+      "Codeine is a prodrug converted to morphine by CYP2D6. A patient described as a CYP2D6 'poor metabolizer' will MOST likely experience:",
+      [
+       "Increased analgesia from codeine due to slowed clearance",
+       "Decreased analgesia from codeine due to reduced conversion to morphine",
+       "Increased risk of respiratory depression due to morphine accumulation",
+       "No change in codeine effect",
+       "Severe hepatotoxicity from accumulated codeine"
+      ],
+      1,
+      "Codeine is essentially inactive — its analgesic effect requires CYP2D6 conversion to morphine. Poor metabolizers (PM, ~7% of Caucasians) convert little codeine to morphine and get poor analgesia. The OPPOSITE pattern — ultra-rapid metabolizers (UM) — overconvert codeine to morphine and can experience respiratory depression. FDA black box warning: codeine in nursing mothers who are UMs has caused infant deaths. A — wrong because codeine itself has minimal activity — slowed conversion DECREASES, not increases, effect. C — wrong because this is the ultra-rapid metabolizer pattern, opposite of poor metabolizer. D — wrong because PM status MEANS reduced response — significant change. E — wrong because codeine itself isn't hepatotoxic. [LO 4.3 — CYP2D6 Polymorphism]",
+      "basic"
+     ],
+     [
+      "A patient on warfarin is started on rifampin. After 2 weeks the INR drops from 2.5 to 1.1 despite stable warfarin dosing. The MOST likely mechanism is:",
+      [
+       "Rifampin displaces warfarin from plasma proteins",
+       "Rifampin inhibits CYP2C9, increasing warfarin clearance",
+       "Rifampin induces CYP2C9 and CYP3A4, increasing warfarin clearance",
+       "Rifampin enhances vitamin K absorption",
+       "Rifampin chelates warfarin in the gut"
+      ],
+      2,
+      "Rifampin is one of the most potent CYP inducers in clinical practice (CYP3A4, 2C9, 2C19, plus P-gp). It induces transcription of CYP genes over 1-2 weeks, increasing the hepatocyte's enzymatic capacity. Warfarin is metabolized largely by CYP2C9 — induction speeds clearance, drops plasma levels, and drops INR. The fix is to increase warfarin dose, with frequent INR monitoring. When rifampin stops, the induction unwinds over weeks and warfarin levels rebound — risk of bleeding. A — wrong because rifampin doesn't significantly displace warfarin from albumin. B — wrong because rifampin INDUCES, not inhibits, CYPs. D — wrong because rifampin doesn't affect vitamin K absorption. E — wrong because rifampin doesn't chelate warfarin. [LO 4.3 — CYP Induction Interactions]",
+      "basic"
+     ],
+     [
+      "Which of the following is a potent CYP3A4 INHIBITOR that raises plasma levels of co-administered substrates?",
+      [
+       "Rifampin",
+       "Phenytoin",
+       "Clarithromycin",
+       "Carbamazepine",
+       "St. John's wort"
+      ],
+      2,
+      "Macrolide antibiotics (clarithromycin, erythromycin) are potent CYP3A4 inhibitors. Co-administration with statins (especially simvastatin, lovastatin), warfarin, or many other 3A4 substrates causes accumulation. Classic exam pattern: patient on simvastatin + new clarithromycin → rhabdomyolysis from statin accumulation. Azithromycin is the macrolide that does NOT inhibit CYP3A4 — preferred when CYP3A4 substrates are involved. A — wrong because rifampin is the textbook CYP INDUCER, opposite of inhibitor. B — wrong because phenytoin INDUCES CYP3A4. D — wrong because carbamazepine INDUCES CYP3A4. E — wrong because St. John's wort INDUCES CYP3A4 — reduces OCP, warfarin, antiretroviral levels. [LO 4.3 — CYP Inhibitors vs Inducers]",
+      "basic"
+     ],
+     [
+      "Grapefruit juice raises the plasma levels of which class of drugs by which mechanism?",
+      [
+       "Statins and calcium channel blockers",
+       "Statins via inhibition of HMG-CoA reductase",
+       "Aminoglycosides via competition for renal tubular secretion",
+       "Warfarin via displacement from albumin",
+       "Beta-blockers via inhibition of CYP2D6"
+      ],
+      0,
+      "Grapefruit juice contains furanocoumarins (bergamottin) that inhibit INTESTINAL CYP3A4, reducing first-pass metabolism of CYP3A4 substrates. Bioavailability of simvastatin, lovastatin, atorvastatin (mildly), felodipine, nifedipine, cyclosporine, and others rises substantially — sometimes 2-5×. Practical counseling: separate grapefruit from these drugs, or pick alternatives (pravastatin, rosuvastatin are not 3A4 substrates). B — wrong because grapefruit doesn't inhibit HMG-CoA reductase — that IS the statin mechanism. C — wrong because not the grapefruit mechanism — renal tubular secretion isn't affected. D — wrong because grapefruit doesn't displace warfarin from albumin (though there are pharmacodynamic interactions). E — wrong because grapefruit doesn't significantly affect CYP2D6. [LO 4.3 — Grapefruit & CYP3A4]",
+      "basic"
+     ],
+     [
+      "Acetaminophen overdose causes hepatotoxicity. The mechanism involves:",
+      [
+       "Direct binding of acetaminophen to hepatocyte mitochondria",
+       "Hyperammonemia from accumulated unmetabolized acetaminophen",
+       "Massive CYP3A4 induction by acetaminophen itself",
+       "Acetaminophen-mediated displacement of bilirubin from albumin",
+       "Saturation of glucuronidation/sulfation pathways"
+      ],
+      4,
+      "At therapeutic doses, acetaminophen is conjugated (glucuronidation + sulfation) and the small fraction going through CYP2E1 generates NAPQI, which glutathione neutralizes. In overdose, conjugation pathways saturate, more drug shunts to CYP2E1, NAPQI production overwhelms glutathione, and the reactive intermediate alkylates hepatocyte proteins → centrilobular necrosis. Antidote: N-acetylcysteine (NAC) replenishes glutathione substrate. Chronic alcohol use induces CYP2E1, lowering the toxic threshold. A — wrong because the toxicity is NAPQI-mediated, not direct binding by acetaminophen. B — wrong because hyperammonemia isn't the acetaminophen toxicity pattern. C — wrong because acetaminophen itself doesn't induce CYP3A4 significantly. D — wrong because no clinically significant bilirubin displacement. [LO 4.3 — Acetaminophen Metabolism]",
+      "basic"
+     ],
+     [
+      "A drug with a volume of distribution (Vd) of 0.25 L/kg is MOST likely:",
+      [
+       "Distributed primarily in adipose tissue",
+       "A lipophilic drug with extensive tissue binding",
+       "Distributed evenly throughout total body water (~0.6 L/kg)",
+       "Confined largely to plasma",
+       "Sequestered exclusively in liver and kidney"
+      ],
+      3,
+      "Vd is a virtual volume — Vd = Dose / C0. Small Vd (~0.1-0.3 L/kg) means the drug stays largely in plasma — usually because it's highly protein-bound or too large/polar to cross capillaries (warfarin, heparin). Vd ~0.4-0.6 L/kg = total body water. Vd >>1 L/kg means extensive tissue binding (digoxin Vd ~7 L/kg; amiodarone ~60 L/kg). Lipophilic drugs sequester in fat and have huge Vd. A — wrong because adipose-distributed drugs have HUGE Vd (>>1 L/kg). B — wrong because extensive tissue binding produces large Vd, opposite of 0.25. C — wrong because total body water Vd is ~0.6 L/kg, not 0.25. E — wrong because single-organ sequestration would still produce a clinically significant Vd that doesn't necessarily fit 0.25 — but plasma confinement does. [LO 4.4 — Volume of Distribution]",
+      "basic"
+     ],
+     [
+      "Digoxin has a volume of distribution of approximately 7 L/kg. This MOST likely reflects:",
+      [
+       "Confinement of digoxin to the plasma compartment",
+       "Distribution limited to interstitial fluid",
+       "Extensive binding to peripheral tissues",
+       "Sequestration in adipose tissue",
+       "Restriction to the central nervous system"
+      ],
+      2,
+      "Digoxin's Vd ~7 L/kg vastly exceeds total body water (~0.6 L/kg) — the apparent volume is large because most digoxin is bound to skeletal-muscle Na/K-ATPase. Plasma concentration is much lower than would be predicted by total dose. Clinical relevance: hemodialysis doesn't help digoxin overdose (only plasma drug is accessible); the antidote is digoxin-Fab fragments, which bind the entire body pool. A — wrong because plasma confinement gives Vd ~0.1-0.2 L/kg. B — wrong because interstitial fluid is ~0.15 L/kg. D — wrong because digoxin isn't predominantly lipophilic. E — wrong because digoxin doesn't cross the BBB well — but CNS distribution alone wouldn't explain the large Vd. [LO 4.4 — High Vd Examples]",
+      "basic"
+     ],
+     [
+      "A drug is 99% bound to plasma albumin. A second drug given simultaneously displaces the first from albumin, increasing the free fraction from 1% to 2%. The PRIMARY clinical consequence is:",
+      [
+       "Doubling of free drug with transient effect or toxicity",
+       "No significant change because total drug levels are unchanged",
+       "Reduced renal clearance of the displaced drug",
+       "Reduced volume of distribution and longer half-life",
+       "Reduced affinity of the drug for its target receptor"
+      ],
+      0,
+      "Free drug is the pharmacologically active fraction — bound drug is sequestered. Doubling the free fraction can temporarily double effect (and toxicity risk) for narrow-TI drugs. However, for most drugs, free fraction is rapidly redistributed and re-equilibrated as both total drug and clearance adjust — so the clinically meaningful displacement interactions are usually those at narrow-TI drugs (warfarin + sulfonamides, phenytoin + valproate). Modern view: most 'displacement' interactions also involve concurrent CYP effects. B — wrong because total drug is unchanged, but FREE drug doubles — that IS the clinical consequence. C — wrong because displacement actually INCREASES clearance (more free drug available for elimination), but the transient bump in effect dominates clinically. D — wrong because Vd may slightly increase, not decrease. E — wrong because receptor affinity isn't changed by plasma protein binding. [LO 4.4 — Protein Binding Displacement]",
+      "basic"
+     ],
+     [
+      "Which of the following BEST describes 'first-pass metabolism'?",
+      [
+       "The first metabolic step a drug undergoes in the body",
+       "Pre-systemic hepatic metabolism of an orally absorbed drug",
+       "Renal metabolism on first passage through the kidney",
+       "Metabolism by intestinal CYP enzymes during absorption",
+       "Initial Phase I oxidation before Phase II conjugation"
+      ],
+      1,
+      "Orally absorbed drug enters the portal vein and passes through the liver before reaching the systemic circulation. The liver can extract and metabolize a substantial fraction on this first pass. For high-extraction drugs (propranolol, lidocaine, morphine, nitroglycerin, verapamil) the orally bioavailable fraction is 5-40% of the dose. Routes that bypass first-pass: IV, SL, transdermal, inhalational, intranasal, rectal (partially). A — wrong because this is too loose — first-pass refers specifically to pre-systemic hepatic metabolism. C — wrong because the kidney doesn't have a 'first-pass' equivalent. D — wrong because intestinal CYP3A4 contributes but the term 'first-pass' typically refers to hepatic. E — wrong because Phase I and Phase II metabolism happen at any time, not specifically on first pass. [LO 4.3 — First-Pass]",
+      "basic"
+     ],
+     [
+      "Active drug transport across membranes differs from passive diffusion in that active transport:",
+      [
+       "Active transport functions without any energy input",
+       "Active transport cannot move drug against a gradient",
+       "Active transport handles absorption of most lipophilic drugs",
+       "Active transport is unaffected by structural drug similarity",
+       "Active transport is saturable and moves against gradients"
+      ],
+      4,
+      "Active transport uses ATP (directly or via secondary gradients) and can move drug against a concentration gradient. It's mediated by specific transporters (P-glycoprotein, OAT, OCT, MRP, BCRP) with defined substrate affinity. Saturable kinetics: at high drug concentrations, transporters are maxed out and additional dose doesn't transport faster. Two drugs sharing a transporter compete (probenecid + penicillin tubular secretion). Most lipophilic drugs are absorbed by passive diffusion, not active transport. A — wrong because active transport REQUIRES energy. B — wrong because OPPOSITE — active transport CAN move against a gradient. C — wrong because most lipophilic drugs use passive diffusion. D — wrong because structural similarity → substrate competition. Active transport IS substrate-specific. [LO 4.2 — Active vs Passive Transport]",
+      "basic"
+     ],
+     [
+      "P-glycoprotein (P-gp) is a drug efflux transporter that:",
+      [
+       "Promotes drug absorption from the gut",
+       "Conjugates drugs with glucuronic acid",
+       "Pumps drugs OUT of cells",
+       "Catalyzes oxidation of CYP3A4 substrates",
+       "Increases penetration of drugs into the CNS"
+      ],
+      2,
+      "P-gp (encoded by MDR1/ABCB1) is an ATP-dependent efflux pump on the apical membrane of intestinal enterocytes, hepatocytes, renal tubular cells, and BBB endothelium. It pumps substrate drugs OUT, reducing intracellular accumulation. In the gut, P-gp reduces oral bioavailability. At the BBB, P-gp keeps drugs out of the CNS. Substrate overlap with CYP3A4 is high. P-gp inhibitors (verapamil, quinidine, ritonavir) RAISE substrate levels; inducers (rifampin, St. John's wort) lower them. Digoxin is a classic P-gp substrate. A — wrong because OPPOSITE — P-gp pumps drug back OUT of enterocytes, REDUCING absorption. B — wrong because glucuronidation is UDP-glucuronosyltransferase (UGT), not P-gp. D — wrong because CYP3A4 oxidation is by the CYP enzyme, not P-gp (though they're often co-localized). E — wrong because OPPOSITE — P-gp at the BBB EXCLUDES drugs from the CNS. [LO 4.2 — P-glycoprotein]",
+      "basic"
+     ],
+     [
+      "An obese patient has a Vd for a highly lipophilic drug that is markedly larger than a lean patient's Vd for the same drug. The MOST direct consequence is:",
+      [
+       "Larger loading dose needed for the same target",
+       "Faster clearance of the drug from circulation",
+       "Smaller loading dose needed for the same target",
+       "No change in loading or maintenance dose requirements",
+       "Reduced volume of distribution overall in this patient"
+      ],
+      0,
+      "Loading dose = Vd × target plasma concentration. A larger Vd means you need MORE drug to achieve the same target plasma concentration, because the drug distributes into a bigger virtual volume (the patient's adipose-loaded tissue compartment). Maintenance dose is governed by clearance, not Vd, so it doesn't necessarily change with body composition for the same drug. B — wrong because Vd is independent of clearance — bigger Vd doesn't speed clearance. C — wrong because OPPOSITE — bigger Vd requires bigger loading dose to hit the same plasma level. D — wrong because Vd directly enters the loading dose calculation; changes matter. E — wrong because stem stated Vd is LARGER in the obese patient. [LO 4.4 — Vd & Loading Dose]",
+      "basic"
+     ],
+     [
+      "Which of the following correctly describes Phase II metabolism?",
+      [
+       "Conjugation reactions adding polar groups for excretion",
+       "Reduction reactions occurring within mitochondria",
+       "Oxidation reactions catalyzed by hepatic CYP enzymes",
+       "Hydrolysis of ester and amide chemical bonds",
+       "Receptor-mediated endocytosis into hepatocytes"
+      ],
+      0,
+      "Phase II reactions conjugate drug or Phase I metabolite with a polar group, increasing water solubility for renal or biliary excretion. UDP-glucuronosyltransferases (UGT) attach glucuronic acid — the dominant Phase II reaction. Other transferases handle sulfation (SULT), acetylation (NAT), glutathione (GST), and methylation (TPMT, COMT). Most Phase II products are inactive — but some, like morphine-6-glucuronide, are active. B — wrong because reduction reactions are Phase I. C — wrong because oxidation by CYP is Phase I. D — wrong because hydrolysis is Phase I. E — wrong because endocytosis is a transport step, not a metabolic reaction. [LO 4.3 — Phase II]",
+      "basic"
+     ],
+     [
+      "A patient with severe acetaminophen overdose presents 8 hours after ingestion. The MOST appropriate antidote and its mechanism is:",
+      [
+       "N-acetylcysteine — replenishes hepatocyte glutathione, neutralizing NAPQI",
+       "Naloxone — opioid antagonist",
+       "Flumazenil — benzodiazepine antagonist",
+       "Sodium bicarbonate — corrects acidosis",
+       "Activated charcoal — at this time point, charcoal is the primary therapy"
+      ],
+      0,
+      "NAC is the acetaminophen antidote. Mechanism: provides cysteine substrate for de novo glutathione synthesis, allowing hepatocytes to keep neutralizing NAPQI (the toxic CYP2E1 metabolite). Most effective within 8 hours of ingestion but still useful up to 24 hours. Available IV (Acetadote) or PO. Activated charcoal is only useful in the first ~4 hours after ingestion. The Rumack-Matthew nomogram guides treatment based on 4-hour post-ingestion plasma acetaminophen level. B — wrong because naloxone is for opioid overdose — wrong toxidrome. C — wrong because flumazenil is for benzodiazepine reversal. D — wrong because bicarbonate doesn't address the underlying NAPQI toxicity. E — wrong because charcoal at 8 hours is too late. [Integration: Lec 4 — Acetaminophen Toxicity]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -10431,6 +11144,259 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A drug with a half-life of 12 hours will reach approximately 97% of steady-state plasma concentration in:",
+      [
+       "12 hours (1 half-life)",
+       "60 hours (5 half-lives)",
+       "24 hours (2 half-lives)",
+       "120 hours (10 half-lives)",
+       "Steady state is never reached for any drug"
+      ],
+      1,
+      "Steady state requires ~5 half-lives regardless of dosing interval. After 1 half-life you're at 50%, 2 at 75%, 3 at 87.5%, 4 at 94%, 5 at ~97%. The rule: count half-lives, NOT doses. Five doses ≠ steady state; five half-lives = steady state. For a 12-hour half-life drug, that's 60 hours, or roughly 2.5 days. Loading doses circumvent this lag by hitting target levels immediately. A — wrong because one half-life = 50% of steady state. C — wrong because two half-lives = 75%. D — wrong because 10 half-lives is overkill — steady state is functionally achieved at 5. E — wrong because all drugs at fixed dose rate reach steady state. [LO 5.1 — Steady State]",
+      "basic"
+     ],
+     [
+      "A drug exhibits first-order elimination kinetics. This means:",
+      [
+       "A constant amount of drug is eliminated per unit time",
+       "The half-life increases in direct proportion with dose",
+       "Elimination requires complete saturation of the metabolic enzyme",
+       "A constant fraction of drug is eliminated per unit time",
+       "Elimination depends solely on plasma protein binding"
+      ],
+      3,
+      "First-order kinetics: a constant FRACTION of drug eliminated per unit time. Plasma concentration declines exponentially. Half-life is constant — doesn't depend on dose. Most drugs at therapeutic doses follow first-order kinetics. Zero-order kinetics (constant AMOUNT eliminated per unit time) emerges when an elimination pathway is saturated — ethanol (always), phenytoin (at high therapeutic doses), aspirin (high doses), heparin (mid-range). Zero-order means small dose increases produce big plasma-level increases. A — wrong because this describes zero-order kinetics. B — wrong because half-life is INDEPENDENT of dose in first-order — that's a defining feature. C — wrong because saturation is the zero-order condition. E — wrong because first-order is about the kinetics of elimination, not solely about protein binding. [LO 5.2 — First-Order Kinetics]",
+      "basic"
+     ],
+     [
+      "Phenytoin follows zero-order kinetics at typical therapeutic doses. The clinical consequence is:",
+      [
+       "Doubling the dose doubles the plasma concentration predictably",
+       "Small dose increases can produce disproportionately large plasma-level increases and toxicity",
+       "Half-life decreases as dose increases",
+       "Phenytoin can be dosed once daily without level monitoring",
+       "Phenytoin has a high therapeutic index and rarely needs monitoring"
+      ],
+      1,
+      "Zero-order kinetics (Michaelis-Menten saturation): elimination is capped at Vmax. As plasma concentration rises above Km, fractional elimination drops; small dose increases at this point produce large plasma jumps because clearance is already maxed. Phenytoin classically transitions from first-order to zero-order within the therapeutic range — making dose titration in 25-50 mg increments at steady state mandatory. Plasma-level monitoring (target 10-20 mg/L) is standard. A — wrong because this describes first-order — exactly what zero-order is NOT. C — wrong because OPPOSITE — half-life can INCREASE as dose increases in zero-order, because the elimination process is saturated. D — wrong because phenytoin REQUIRES level monitoring because of zero-order kinetics + narrow TI. E — wrong because phenytoin has a NARROW TI — opposite of high. [LO 5.2 — Zero-Order Examples]",
+      "basic"
+     ],
+     [
+      "Total drug clearance is calculated as:",
+      [
+       "Vd × ke (where ke is the elimination rate constant)",
+       "Vd / half-life",
+       "Dose / Cmax",
+       "Sum of clearance from all elimination pathways",
+       "All of the above except Cmax-based formulas"
+      ],
+      3,
+      "Total clearance = sum of all elimination pathways: CL_total = CL_hepatic + CL_renal + CL_other. Each pathway operates independently. If renal function declines, CL_total decreases by the renal component; hepatic clearance is unchanged. This additive principle is why renal-only-cleared drugs (aminoglycosides) need dose adjustment in CKD, while hepatically-cleared drugs (most macrolides) don't. The Vd × ke formula is mathematically equivalent for first-order kinetics — both correct. A — wrong because Vd × ke gives total clearance for first-order kinetics — but C is more clinically meaningful framing. Both are correct, but C is the conceptual answer. B — wrong because Vd / half-life is not the clearance formula; CL = 0.693 × Vd / t½. C — wrong because Dose / Cmax is not a clearance formula. E — wrong because this hedges incorrectly — pathway-sum is the conceptual answer. [LO 5.3 — Clearance]",
+      "basic"
+     ],
+     [
+      "A patient with creatinine clearance of 30 mL/min is started on gentamicin. Compared to a patient with normal renal function, the MOST appropriate dosing adjustment is:",
+      [
+       "Reduce both loading and maintenance doses proportionally",
+       "Keep loading dose unchanged; reduce maintenance dose",
+       "Reduce loading dose only; keep maintenance unchanged",
+       "No dose adjustment is needed because Vd is unchanged",
+       "Switch to a non-aminoglycoside antibiotic immediately"
+      ],
+      1,
+      "Loading dose = Vd × target plasma concentration. Vd is unchanged in CKD, so loading dose stays the same. Maintenance dose = clearance × target plasma concentration / fraction-absorbed. Clearance drops in CKD for renally cleared drugs, so maintenance must be reduced OR the interval extended. Aminoglycosides are renally cleared and commonly dosed by CrCl — extended-interval dosing (e.g., once-daily 5-7 mg/kg) is standard practice with trough monitoring. A — wrong because loading dose is Vd-driven, and Vd doesn't change in CKD. C — wrong because this is backwards — Vd unchanged means loading dose unchanged. D — wrong because Vd unchanged does NOT mean no adjustment — clearance changes, so maintenance changes. E — wrong because gentamicin is not absolutely contraindicated in CKD — it requires dose adjustment + level monitoring. [LO 5.3 — Renal Dose Adjustment]",
+      "basic"
+     ],
+     [
+      "A drug is highly protein-bound (99%) and primarily eliminated by glomerular filtration. Compared to a less-bound drug, its renal clearance will be:",
+      [
+       "Lower because only the free fraction is filtered",
+       "Higher because protein binding speeds glomerular filtration",
+       "Unchanged because total drug content is what matters",
+       "Lower only if tubular reabsorption is also active",
+       "Higher because tubular secretion is enhanced indirectly"
+      ],
+      0,
+      "Glomerular filtration excludes albumin (and bound drug). Only the free (unbound) drug fraction is filtered. A 99%-bound drug has only 1% available for filtration — slow renal clearance. Warfarin, sulfonamides, NSAIDs, and many highly bound drugs have low renal clearance for this reason. Tubular secretion is a separate mechanism that CAN handle protein-bound drug (the binding equilibrium is dynamic), so highly bound drugs that are tubular secretion substrates (e.g., penicillins) ARE rapidly excreted. B — wrong because OPPOSITE — protein binding SLOWS filtration because bound drug isn't filtered. C — wrong because free fraction is what crosses the glomerulus. D — wrong because tubular reabsorption returns drug to circulation — relevant but not the primary issue. E — wrong because protein binding doesn't enhance tubular secretion specifically. [LO 5.3 — Renal Filtration & Binding]",
+      "basic"
+     ],
+     [
+      "Tubular reabsorption of an acidic drug (e.g., aspirin, phenobarbital) can be MINIMIZED to enhance its renal excretion by:",
+      [
+       "Alkalinizing the urine with sodium bicarbonate",
+       "Acidifying the urine with ammonium chloride",
+       "Restricting fluid intake to concentrate the urine",
+       "Increasing dietary protein to lower urine pH",
+       "Administering a non-selective β-blocker"
+      ],
+      0,
+      "Weak acids in alkaline urine become more ionized (deprotonated). Ionized drug can't cross the tubular epithelium back into blood → reabsorption is blocked → more drug stays in tubular fluid and is excreted. Sodium bicarbonate is the standard urinary alkalinizer used to enhance excretion of salicylate (aspirin) and phenobarbital overdoses. The reverse principle applies to weak bases (amphetamine, PCP overdose): acidifying urine traps them ionized — though urinary acidification is no longer routinely recommended due to risk of myoglobinuric renal injury. B — wrong because acidifying urine would protonate acids → non-ionized → reabsorbed → opposite of goal. C — wrong because concentrating urine doesn't change ionization. D — wrong because dietary protein doesn't substantially alter urine pH. E — wrong because β-blockers don't affect urinary pH. [LO 5.3 — Urinary Alkalinization]",
+      "basic"
+     ],
+     [
+      "Probenecid increases the plasma half-life of penicillin by:",
+      [
+       "Inhibiting CYP3A4-mediated penicillin metabolism",
+       "Competing with penicillin for active tubular secretion",
+       "Increasing penicillin's volume of distribution",
+       "Enhancing penicillin's protein binding",
+       "Inhibiting penicillin absorption from the gut"
+      ],
+      1,
+      "Probenecid and penicillin share the OAT (organic anion transporter) at the proximal tubule for active secretion. Probenecid competes at this transporter, blocking penicillin secretion → slower elimination → longer half-life → higher and more sustained plasma levels. Historically used to extend penicillin dosing for syphilis and gonorrhea. The same mechanism extends some other OAT-substrate drugs' half-lives. A — wrong because penicillin is minimally CYP-metabolized. C — wrong because probenecid doesn't change Vd. D — wrong because probenecid doesn't enhance protein binding. E — wrong because probenecid doesn't affect penicillin absorption. [LO 5.3 — Probenecid Mechanism]",
+      "basic"
+     ],
+     [
+      "Enterohepatic recirculation contributes to a drug's long apparent half-life by:",
+      [
+       "Enhancing overall renal clearance pathways",
+       "Inducing hepatic CYP metabolic enzymes",
+       "Recycling drug through bile and gut reabsorption",
+       "Increasing plasma protein binding fraction",
+       "Activating efflux transporters in the proximal tubule"
+      ],
+      2,
+      "Some drugs (and Phase II conjugates) are excreted into bile, deposited into the gut, then reabsorbed (often after gut bacteria deconjugate the glucuronide). The recycled drug re-enters circulation, prolonging effective half-life. OCP estrogens use this loop — broad-spectrum antibiotics that kill gut bacteria break the loop, drop estrogen levels, and can cause contraceptive failure. Cholestyramine and activated charcoal interrupt enterohepatic recirculation and are used in some overdoses. A — wrong because no direct effect on renal clearance. B — wrong because different mechanism (CYP induction is separate). D — wrong because enterohepatic recirculation doesn't change protein binding. E — wrong because tubular efflux is a renal mechanism, not enterohepatic. [LO 5.3 — Enterohepatic Recirculation]",
+      "basic"
+     ],
+     [
+      "A drug with a small volume of distribution and predominant renal excretion will be MOST efficiently cleared from the body in overdose by:",
+      [
+       "Forced diuresis with normal saline",
+       "Plasmapheresis",
+       "Activated charcoal",
+       "Hemodialysis",
+       "Whole-bowel irrigation"
+      ],
+      3,
+      "Hemodialysis works best for drugs with: small Vd (drug is in plasma, accessible to the dialysis circuit), low protein binding, low molecular weight, and predominantly renal clearance. Examples: lithium, salicylates, methanol, ethylene glycol, theophylline. Drugs with large Vd (digoxin, amiodarone, TCAs) are sequestered in tissue and inaccessible to dialysis. Highly protein-bound drugs (warfarin, phenytoin) are also poorly dialyzed. A — wrong because forced diuresis is rarely used now — risk of fluid overload, electrolyte derangement. B — wrong because plasmapheresis is reserved for highly protein-bound or large-Vd drugs not amenable to dialysis. C — wrong because activated charcoal works for ingested drugs still in the gut, not those already absorbed. E — wrong because whole-bowel irrigation is for sustained-release or massive ingestion. [LO 5.4 — Hemodialysis]",
+      "basic"
+     ],
+     [
+      "A patient taking a combined oral contraceptive (OCP) is started on rifampin. The MOST appropriate counseling is:",
+      [
+       "Continue OCP — no interaction with rifampin",
+       "Stop OCP entirely — rifampin is an absolute contraindication to hormonal contraception",
+       "Switch to a higher-dose estrogen OCP",
+       "Use the OCP every other day",
+       "Use an additional non-hormonal contraceptive method while on rifampin"
+      ],
+      4,
+      "Rifampin is the textbook potent CYP3A4 inducer. It drops ethinyl estradiol plasma levels enough to risk contraceptive failure. Standard counseling: use a non-hormonal backup (condoms) for the duration of rifampin therapy AND for ~28 days afterward (CYP induction takes ~2-3 weeks to wash out after rifampin stops). Same warning for: phenytoin, carbamazepine, phenobarbital, St. John's wort, modafinil. NOT every antibiotic affects OCPs — that's a common misconception. Most short-course antibiotics don't meaningfully reduce OCP efficacy. A — wrong because this is the classic OCP-failure pattern. B — wrong because OCP isn't absolutely contraindicated — additional contraception is the standard recommendation. C — wrong because higher-dose estrogen is sometimes attempted but adds risk; backup is preferred. D — wrong because alternate-day dosing doesn't fix the issue and could worsen breakthrough bleeding. [LO 5.5 — Rifampin + OCP]",
+      "basic"
+     ],
+     [
+      "After how many half-lives is approximately 94% of a drug eliminated following a single IV dose?",
+      [
+       "4",
+       "3",
+       "2",
+       "5",
+       "7"
+      ],
+      0,
+      "Exponential decay: after each half-life, half of remaining drug is gone. After 1 t½: 50% gone, 50% remaining. After 2: 75% / 25%. After 3: 87.5% / 12.5%. After 4: 93.75% / 6.25% (~94% gone). After 5: 96.875% / ~3% — the standard 'effectively cleared' threshold. The mirror image is the steady-state buildup curve: 50%, 75%, 87.5%, 94%, 97% — same math, same rule of thumb. B — wrong because 3 half-lives = 87.5% gone. C — wrong because 2 half-lives = 75% gone. D — wrong because 5 half-lives = ~97% gone. E — wrong because 7 half-lives is overkill. [LO 5.1 — Half-Life Math]",
+      "basic"
+     ],
+     [
+      "Loading dose is BEST calculated as:",
+      [
+       "Maintenance dose multiplied by half-life",
+       "Cmax divided by volume of distribution",
+       "Total clearance multiplied by half-life",
+       "Volume of distribution × target concentration",
+       "Maintenance dose divided by two"
+      ],
+      3,
+      "Loading dose = Vd × target plasma concentration / F. The goal: fill the apparent volume of distribution at the target level immediately, bypassing the 5-half-life lag to steady state. Vd matters; clearance doesn't enter the loading dose calculation (clearance enters the maintenance dose). For a renal-failure patient, loading dose stays the same (Vd unchanged) but maintenance changes (clearance reduced). A — wrong because maintenance × half-life isn't a standard formula. B — wrong because Cmax/Vd doesn't yield loading dose. C — wrong because this isn't the loading dose formula. E — wrong because maintenance/2 has no pharmacokinetic basis. [LO 5.1 — Loading Dose Formula]",
+      "basic"
+     ],
+     [
+      "Maintenance dose is BEST calculated as:",
+      [
+       "Vd × target plasma concentration alone",
+       "Half-life × volume of distribution alone",
+       "Clearance × target × dosing interval / F",
+       "Cmax × dosing interval at steady state",
+       "Loading dose divided by five half-lives"
+      ],
+      2,
+      "Maintenance dose = clearance × target plasma concentration × τ / F (where τ is dosing interval, F is bioavailability). The goal: replace exactly what the body eliminates per dosing interval. Clearance drives this — if clearance drops (e.g., renal failure), the maintenance dose must drop too. This is the OPPOSITE of loading dose, which is Vd-driven. A — wrong because Vd × target is the loading dose, not maintenance. B — wrong because doesn't yield maintenance dose. D — wrong because doesn't yield maintenance dose. E — wrong because loading dose / 5 has no pharmacokinetic basis. [LO 5.1 — Maintenance Dose Formula]",
+      "basic"
+     ],
+     [
+      "A 65-year-old man with stable atrial fibrillation on chronic warfarin (INR 2.4) is started on amiodarone for rhythm control. Two weeks later his INR is 4.8. The MOST likely mechanism is:",
+      [
+       "Amiodarone displaces warfarin from albumin",
+       "Amiodarone inhibits CYP2C9, reducing warfarin clearance",
+       "Amiodarone induces CYP2C9, accelerating warfarin clearance",
+       "Amiodarone enhances vitamin K absorption",
+       "Amiodarone causes thrombocytopenia"
+      ],
+      1,
+      "Amiodarone is one of the most potent CYP2C9 inhibitors in clinical use — and also inhibits CYP3A4, CYP1A2, P-gp. Adding amiodarone to a stable warfarin patient typically requires a 25-50% reduction in warfarin dose. INR should be monitored more frequently in the first 1-2 months after the change. The interaction integrates Lec 4 (CYP system), Lec 5 (clearance), and Lec 6 (TDM/monitoring). A — wrong because albumin displacement is a minor mechanism; CYP2C9 inhibition dominates. C — wrong because amiodarone INHIBITS, not induces. D — wrong because amiodarone doesn't affect vitamin K absorption. E — wrong because amiodarone can cause thyroid dysfunction and pulmonary toxicity but not thrombocytopenia as a typical mechanism for INR rise. [Integration: Lec 4-6 — CYP, Clearance, Monitoring]",
+      "basic"
+     ],
+     [
+      "A patient on chronic warfarin for AF is given a 5-day course of rifampin for confirmed brucellosis. The MOST appropriate management is:",
+      [
+       "Continue warfarin at the same dose, no INR monitoring needed",
+       "Anticipate a drop in INR over 1-2 weeks due to CYP induction",
+       "Stop warfarin until rifampin is completed",
+       "Switch to a direct oral anticoagulant (DOAC) — DOACs are unaffected by rifampin",
+       "Add high-dose vitamin K"
+      ],
+      1,
+      "Rifampin is the textbook potent CYP inducer (CYP3A4, 2C9, others) — it induces transcription over ~1-2 weeks, increasing the metabolic capacity of the liver. Warfarin clearance rises; INR drops. Manage by anticipating the drop, raising warfarin dose, and monitoring INR every 3-5 days. When rifampin ends, the induction unwinds over weeks and warfarin levels rebound — risk of bleeding if dose isn't reduced again. A — wrong because this fails — INR will drop significantly. C — wrong because stopping warfarin entirely raises stroke risk in AF. D — wrong because DOACs are also subject to rifampin induction (CYP3A4/P-gp) — apixaban, rivaroxaban levels drop substantially; rifampin is a CONTRAINDICATION to many DOACs. E — wrong because vitamin K would worsen the INR drop, not help. [Integration: Lec 4-6 — Induction]",
+      "basic"
+     ],
+     [
+      "Drug X has Vd = 0.1 L/kg, is 99% protein-bound, and is renally excreted by glomerular filtration of free drug only. Hemodialysis in overdose will MOST likely:",
+      [
+       "Be highly effective because the drug is in plasma",
+       "Be ineffective because the drug is highly protein-bound",
+       "Be effective only for the bound fraction",
+       "Increase Vd",
+       "Reduce protein binding"
+      ],
+      1,
+      "Hemodialysis works on free drug only. A 99%-protein-bound drug presents only 1% as free — each dialysis pass clears very little. Albumin doesn't cross the dialysis membrane. Highly protein-bound drugs that don't dialyze well: warfarin, phenytoin, valproate. This integrates Lec 4 (protein binding) and Lec 5 (Vd + clearance). A — wrong because small Vd (drug is in plasma) is favorable for dialysis, BUT protein binding overrides — the drug isn't free. C — wrong because bound drug cannot cross the dialysis membrane. D — wrong because dialysis doesn't change Vd. E — wrong because dialysis doesn't reduce protein binding. [Integration: Lec 4-5 — Protein Binding + Dialysis]",
+      "basic"
+     ],
+     [
+      "Which clinical scenario MOST clearly illustrates the difference between volume of distribution and clearance?",
+      [
+       "Digoxin overdose in a patient with normal renal function",
+       "Penicillin overdose in a patient with renal failure",
+       "Statin therapy in a patient with high cholesterol",
+       "Warfarin therapy in a patient with prosthetic valves",
+       "Insulin therapy in type 1 diabetes"
+      ],
+      0,
+      "Digoxin's Vd ~7 L/kg means most drug is bound to skeletal-muscle Na/K-ATPase, NOT in plasma. Hemodialysis only removes plasma drug — for a high-Vd drug, the plasma represents a tiny fraction of total body load. Clearance can be normal (renal function preserved), but the dialysis-accessible pool is small. Antidote: digoxin-Fab fragments bind drug in BOTH plasma and tissue, dragging tissue drug into the plasma as the equilibrium shifts. The scenario shows Vd and clearance are independent. B — wrong because penicillin overdose is rare due to high TI; doesn't illustrate the Vd/clearance distinction. C — wrong because statin therapy doesn't typically illustrate this distinction. D — wrong because warfarin therapy involves protein binding more than Vd/clearance contrast. E — wrong because insulin therapy doesn't illustrate Vd vs clearance. [Integration: Lec 4-5 — Vd vs Clearance]",
+      "basic"
+     ],
+     [
+      "A patient on chronic phenytoin develops gingival hyperplasia, ataxia, and nystagmus. Plasma phenytoin returns at 25 mg/L (target 10-20). The patient says they haven't changed dose. The MOST likely PK explanation is:",
+      [
+       "Renal failure accelerating phenytoin clearance",
+       "Acute increase in Vd",
+       "Loss of phenytoin's protein binding",
+       "Rifampin-mediated CYP induction",
+       "Phenytoin's zero-order kinetics within the therapeutic range"
+      ],
+      4,
+      "Phenytoin transitions from first-order to zero-order kinetics within the therapeutic range due to saturation of CYP2C9. At zero-order, clearance is capped at Vmax — additional dose accumulates rather than being cleared. Small dose increases (or shifts in protein binding, or new CYP inhibitors) can produce big plasma-level jumps. Toxicity signs: nystagmus (mild, 20-30 mg/L), ataxia (30-40), confusion (>40). Gingival hyperplasia is a chronic side effect independent of acute levels. A — wrong because phenytoin is hepatically metabolized; renal failure isn't the primary clearance route. B — wrong because Vd doesn't change acutely. C — wrong because loss of binding raises free fraction, but the dominant mechanism is zero-order saturation. D — wrong because rifampin would DECREASE phenytoin levels, opposite direction. [Integration: Lec 5 — Zero-Order Kinetics]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -10721,6 +11687,220 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Bioavailability (F) of an oral drug is calculated as:",
+      [
+       "AUC oral / AUC oral × 100%",
+       "Vd oral / Vd IV",
+       "Cmax oral / Cmax IV",
+       "Half-life oral / half-life IV",
+       "AUC oral / AUC IV"
+      ],
+      4,
+      "F is the fraction of administered dose that reaches systemic circulation in unchanged form. F = AUC_oral / AUC_IV, adjusted for dose if they differ. IV by definition has F = 1.0 (100%). Drugs with extensive first-pass have F = 5-40% orally (propranolol, nitroglycerin, lidocaine, morphine, verapamil). Drugs with minimal first-pass approach F = 100% orally (levothyroxine, alprazolam). A — wrong because AUC oral / AUC oral = 1, not meaningful. B — wrong because Vd isn't a bioavailability measure. C — wrong because Cmax doesn't measure total exposure. D — wrong because half-life isn't a bioavailability measure. [LO 6.1 — Bioavailability]",
+      "basic"
+     ],
+     [
+      "A drug has oral bioavailability F = 0.40. To deliver the same systemic exposure as a 50 mg IV dose, the required oral dose is:",
+      [
+       "20 mg",
+       "125 mg",
+       "100 mg",
+       "50 mg",
+       "200 mg"
+      ],
+      1,
+      "Dose_oral × F = Dose_IV × 1.0 (assuming IV F = 1). Dose_oral = 50 / 0.40 = 125 mg. This is the standard dose-conversion calculation when transitioning a patient from IV to PO — for example, IV morphine 10 mg ≈ PO morphine 30 mg (PO morphine F ~33%), which is why opioid switches are dose-adjusted carefully. A — wrong because 20 mg is too low — 50 × 0.40, but that gives you LESS exposure orally, not equivalent. C — wrong because 100 mg gives 100 × 0.40 = 40 mg — close but short of 50. D — wrong because 50 mg orally gives only 50 × 0.40 = 20 mg systemic exposure — not equivalent. E — wrong because 200 mg is too high — 200 × 0.40 = 80 mg, overshooting target. [LO 6.1 — Dose Conversion]",
+      "basic"
+     ],
+     [
+      "Bioequivalence between a brand-name drug and a generic requires that:",
+      [
+       "The generic AUC and Cmax fall within FDA acceptance bounds",
+       "The generic must contain the identical excipient ingredients",
+       "The generic must be manufactured by the same company",
+       "The generic must cost less than the brand-name version",
+       "The generic must have lower bioavailability than the brand"
+      ],
+      0,
+      "FDA bioequivalence standard: 90% confidence interval of the geometric mean ratio (test/reference) for AUC and Cmax falls within 80-125%. This is the regulatory definition. For narrow-therapeutic-index drugs (warfarin, levothyroxine, digoxin, lithium, phenytoin) the bar is sometimes tightened, and switching among generic versions is clinically discouraged. B — wrong because excipients can differ — only the active ingredient must match. C — wrong because any manufacturer can market a generic post-patent. D — wrong because cost isn't part of the FDA bioequivalence definition. E — wrong because lower bioavailability is exactly what the 80-125% rule rules out. [LO 6.2 — Bioequivalence]",
+      "basic"
+     ],
+     [
+      "A drug's bioavailability is REDUCED when administered with food primarily because:",
+      [
+       "Food universally enhances drug absorption",
+       "Food increases renal clearance",
+       "Food activates intestinal CYP enzymes",
+       "Food increases drug protein binding",
+       "Food can delay gastric emptying"
+      ],
+      4,
+      "Multiple mechanisms reduce bioavailability when taken with food: delayed gastric emptying (slows absorption rate, sometimes reduces extent for drugs with limited absorption window), altered gastric pH (affects ionization), chelation (tetracyclines + dairy calcium, fluoroquinolones + multivitamins), and slowed transit. Some drugs INCREASE F with food (lipophilic drugs benefit from bile-stimulated absorption — atovaquone, griseofulvin). Counseling: take fluoroquinolones and tetracyclines on empty stomach OR ≥2 hours separated from calcium/iron/magnesium. A — wrong because food doesn't universally enhance — many drugs are reduced. B — wrong because food doesn't increase renal clearance. C — wrong because food doesn't activate CYP enzymes (induction takes weeks). D — wrong because food doesn't significantly change protein binding. [LO 6.3 — Food-Drug Interactions]",
+      "basic"
+     ],
+     [
+      "A patient on chronic tetracycline therapy reports reduced effect. They take it 'with breakfast — usually with cereal and milk.' The MOST likely explanation is:",
+      [
+       "Tetracycline is unstable in stomach acid",
+       "Cereal fiber binds and irreversibly inactivates tetracycline",
+       "Milk calcium chelates tetracycline in the gut",
+       "Breakfast timing accelerates renal clearance",
+       "Coffee blocks tetracycline absorption"
+      ],
+      2,
+      "Tetracyclines (and fluoroquinolones) chelate divalent and trivalent cations — Ca2+, Mg2+, Fe2+, Al3+, Zn2+. The chelate complex isn't absorbed. Milk, calcium-fortified juices, antacids (Mg/Al/Ca), iron supplements, multivitamins, and sucralfate all reduce tetracycline bioavailability dramatically. Counsel: take tetracycline on empty stomach OR separate from cations by ≥2 hours. A — wrong because tetracyclines are relatively acid-stable. B — wrong because fiber doesn't irreversibly inactivate tetracycline; the issue is chelation by calcium. D — wrong because renal clearance isn't materially affected by meal timing. E — wrong because coffee doesn't significantly chelate tetracycline. [LO 6.3 — Chelation]",
+      "basic"
+     ],
+     [
+      "Sustained-release (SR) and extended-release (ER) oral formulations are designed to:",
+      [
+       "Increase bioavailability above 100%",
+       "Increase Cmax to enhance peak effect",
+       "Bypass first-pass metabolism",
+       "Eliminate the need for steady-state monitoring",
+       "Smooth out plasma drug-concentration peaks and troughs over time"
+      ],
+      4,
+      "SR/ER formulations slow drug release from the dosage form, prolonging absorption and producing a flatter, longer plasma concentration profile. Benefits: less-frequent dosing (improves adherence), reduced peak-related side effects, more consistent therapeutic levels. Trade-offs: cost, dose-dumping risk if crushed or chewed (release-controlling matrix is destroyed → toxic peak), reduced 'pulse' effect if onset matters. A — wrong because F can never exceed 100%. B — wrong because ER LOWERS Cmax, not raises it — that's a primary benefit. C — wrong because ER does not bypass first-pass — the drug still passes through the liver. D — wrong because steady state is still ~5 half-lives regardless of formulation. [LO 6.4 — Extended-Release]",
+      "basic"
+     ],
+     [
+      "A patient takes a sustained-release calcium channel blocker tablet by chewing it. The MOST likely consequence is:",
+      [
+       "Reduced absorption due to gastric acid destruction",
+       "No effect — chewing doesn't alter release",
+       "Dose-dumping with rapid release of the full dose",
+       "Improved bioavailability",
+       "Slower onset of action"
+      ],
+      2,
+      "Chewing or crushing SR/ER tablets destroys the release-controlling matrix, releasing the full daily dose at once. For a calcium channel blocker, this can produce severe hypotension, reflex tachycardia, and (with verapamil/diltiazem) heart block. Patient counseling rule: never crush, chew, or split SR/ER tablets unless specifically labeled. Same warning applies to oxycodone ER (OxyContin), morphine ER, metoprolol succinate ER, methylphenidate ER, and many others. A — wrong because the issue isn't acid destruction; it's loss of the controlled-release barrier. B — wrong because chewing absolutely alters the release pattern. D — wrong because F may rise slightly but the dose-dumping toxicity dominates clinically. E — wrong because OPPOSITE — onset is much FASTER due to immediate release. [LO 6.4 — Dose-Dumping]",
+      "basic"
+     ],
+     [
+      "The bioavailability of a drug given by sublingual route is HIGH compared to oral because:",
+      [
+       "Sublingual mucosa expresses more CYP3A4 than the gut",
+       "Sublingual drugs are absorbed via lymphatic uptake exclusively",
+       "Sublingual absorption uses active transport with no saturation",
+       "Sublingual drugs are protected from gastric acid",
+       "Sublingual venous drainage enters the superior vena cava directly"
+      ],
+      4,
+      "SL venous drainage flows to the SVC and right heart directly — bypassing the portal vein and the liver's first-pass screening. For high-extraction drugs like nitroglycerin, SL bioavailability is dramatically higher than oral. Same logic applies to buccal, transdermal, intranasal, and inhalational routes. PO is the route most subject to first-pass. A — wrong because SL mucosa has LESS CYP3A4 than gut — and CYP isn't the main first-pass site (the liver is). B — wrong because SL absorption is primarily venous, not lymphatic. C — wrong because absorption is mainly passive diffusion. D — wrong because acid protection is true but secondary — first-pass bypass is the dominant reason. [LO 6.1 — Sublingual Route]",
+      "basic"
+     ],
+     [
+      "A drug has F = 0.05 orally and 1.0 by IV. The drug is MOST likely:",
+      [
+       "Poorly absorbed from the gut",
+       "Both A and B are possible",
+       "Subject to extensive first-pass metabolism",
+       "Highly protein-bound",
+       "Has very long half-life"
+      ],
+      1,
+      "Low oral F can arise from (a) poor absorption (drug doesn't cross the gut wall efficiently), (b) extensive first-pass metabolism (drug crosses the gut wall but is destroyed by the liver before reaching circulation), or (c) both. The F value alone doesn't distinguish. Aminoglycosides have F ~0 from poor absorption (polar, charged). Nitroglycerin has F <10% from massive first-pass. Both extremes have similar oral F. A — wrong because true but incomplete — first-pass is also possible. C — wrong because true but incomplete — poor absorption is also possible. D — wrong because protein binding doesn't reduce F (bound drug is still bioavailable). E — wrong because half-life is independent of F. [LO 6.1 — Causes of Low F]",
+      "basic"
+     ],
+     [
+      "Therapeutic drug monitoring (TDM) is MOST clinically valuable for which class of drugs?",
+      [
+       "Drugs with a wide therapeutic index, predictable PK, and no toxic effects",
+       "All antibiotics regardless of class",
+       "Drugs given for less than 5 days",
+       "Drugs with a narrow therapeutic index",
+       "Drugs available only by IV route"
+      ],
+      3,
+      "TDM is indispensable for narrow-TI + variable-PK + dose-related-toxicity drugs: aminoglycosides (vancomycin, gentamicin — trough levels), digoxin, lithium, phenytoin, theophylline, cyclosporine, tacrolimus, valproate. For high-TI drugs (penicillins, most cephalosporins, acetaminophen at therapeutic doses), TDM adds no value. Drug levels are interpreted with timing (peak vs trough, dosing interval, sampling time post-dose). A — wrong because wide TI + predictable PK = no reason for monitoring. B — wrong because most antibiotics don't require routine TDM. C — wrong because duration alone doesn't drive TDM need. E — wrong because route doesn't drive TDM need. [LO 6.5 — TDM]",
+      "basic"
+     ],
+     [
+      "A patient on digoxin develops diarrhea and visual halos. Plasma digoxin level returns at 3.2 ng/mL (target 0.5-2.0). The MOST appropriate immediate action is:",
+      [
+       "Increase the digoxin dose to overcome the resistance",
+       "Switch immediately to oral amiodarone therapy",
+       "Add a second antiarrhythmic to suppress the symptoms",
+       "Initiate hemodialysis to remove the excess digoxin",
+       "Hold digoxin and check potassium and renal function"
+      ],
+      4,
+      "Digoxin toxicity = GI symptoms (nausea, diarrhea), visual disturbance (yellow halos, blurred), confusion, arrhythmias (especially ventricular ectopy, AV block). Management: hold digoxin, correct potassium (hypokalemia potentiates digoxin toxicity by increasing digoxin binding to Na/K-ATPase), check renal function (renal impairment slows digoxin clearance, raises levels), monitor ECG. Digoxin-Fab fragments (DigiFab) for severe toxicity — bind digoxin in plasma and tissue, then renally excreted. HEMODIALYSIS DOESN'T WORK for digoxin because Vd is huge (~7 L/kg) — drug is sequestered in tissue. A — wrong because increasing dose worsens toxicity. B — wrong because amiodarone INCREASES digoxin levels — opposite direction. C — wrong because adding antiarrhythmics in toxicity is dangerous. D — wrong because hemodialysis is ineffective for digoxin (huge Vd). [LO 6.5 — Digoxin Toxicity]",
+      "basic"
+     ],
+     [
+      "Vancomycin trough levels should be drawn:",
+      [
+       "1 hour after the first dose",
+       "Whenever the patient feels unwell",
+       "Mid-interval between doses",
+       "30 minutes before the next scheduled dose",
+       "Only when culture results are available"
+      ],
+      3,
+      "Vancomycin trough = lowest concentration in the dosing interval. Drawn 30 minutes before the next scheduled dose, typically at or near steady state (after ~3-4 doses for a 12h interval with normal renal function). Target trough: 10-15 mg/L for non-severe infections; 15-20 mg/L for severe MRSA pneumonia, endocarditis, meningitis. Newer guidance favors AUC/MIC monitoring over trough alone for serious infections. A — wrong because 1 hour post-dose is post-distribution peak, not trough. B — wrong because TDM timing should be standardized, not symptom-triggered. C — wrong because mid-interval gives an intermediate value, not the safety-relevant trough. E — wrong because trough timing is independent of culture availability. [LO 6.5 — Vancomycin Monitoring]",
+      "basic"
+     ],
+     [
+      "Bioequivalence between two formulations is determined by:",
+      [
+       "By comparing therapeutic outcomes in randomized clinical trials",
+       "By comparing AUC and Cmax in healthy volunteers",
+       "By comparing physical appearance of the tablets",
+       "By comparing the listed manufacturing locations",
+       "By comparing patient satisfaction and adherence scores"
+      ],
+      1,
+      "Bioequivalence is established by PHARMACOKINETIC comparison — AUC (total exposure) and Cmax (peak exposure) measured in healthy volunteers in a crossover design. If the 90% CI of the test/reference geometric mean ratio falls within 80-125% for both AUC and Cmax, the products are deemed bioequivalent. This is a regulatory PK standard, not a clinical outcomes trial. A — wrong because clinical-outcome trials are for new drug approval, not generic bioequivalence. C — wrong because appearance doesn't enter the determination. D — wrong because location doesn't enter the determination. E — wrong because patient satisfaction doesn't enter the determination. [LO 6.2 — Bioequivalence Testing]",
+      "basic"
+     ],
+     [
+      "An IV-to-oral switch for a drug with F = 0.5 means the oral dose should be approximately:",
+      [
+       "Half the IV dose",
+       "Twice the IV dose",
+       "Equal to the IV dose",
+       "Four times the IV dose",
+       "Quarter of the IV dose"
+      ],
+      1,
+      "Dose_oral × F = Dose_IV × 1.0. Dose_oral = Dose_IV / F = Dose_IV / 0.5 = 2 × Dose_IV. To deliver the same systemic exposure (AUC) orally as a given IV dose, you need to give MORE drug orally to compensate for the fraction that doesn't reach circulation. This conversion is standard for IV-to-PO transitions in hospital pharmacy. A — wrong because this halves what you should give — undertreating. C — wrong because equal dose gives only half the systemic exposure. D — wrong because 4× overshoots. E — wrong because even worse undertreatment. [LO 6.1 — IV-to-PO Conversion]",
+      "basic"
+     ],
+     [
+      "An elderly patient on chronic warfarin starts a new course of trimethoprim-sulfamethoxazole (TMP-SMX). The MOST likely interaction is:",
+      [
+       "TMP-SMX has no clinically significant interaction with warfarin",
+       "TMP-SMX displaces warfarin from albumin binding sites",
+       "TMP-SMX induces warfarin metabolism and lowers INR",
+       "TMP-SMX accelerates renal excretion of warfarin",
+       "TMP-SMX inhibits CYP2C9 and raises warfarin levels"
+      ],
+      4,
+      "Sulfamethoxazole inhibits CYP2C9 (the primary enzyme for S-warfarin metabolism) AND displaces warfarin from albumin — a double mechanism that elevates free warfarin and raises INR within days. INR should be checked within 3-5 days of starting TMP-SMX, with warfarin dose adjustment. This is one of the most clinically important warfarin DDIs and a recurring exam question. A — wrong because TMP-SMX absolutely interacts with warfarin. B — wrong because displacement happens but the dominant effect is CYP2C9 inhibition — and displacement RAISES free warfarin, not decreases. C — wrong because TMP-SMX inhibits, not induces. D — wrong because warfarin isn't significantly renally cleared. [LO 6.5 — Warfarin Interactions]",
+      "basic"
+     ],
+     [
+      "Therapeutic monitoring for lithium is BEST guided by:",
+      [
+       "Random plasma levels drawn at any time",
+       "Urinary lithium concentration in a 24-hour collection",
+       "Peak levels drawn 1 hour after the dose",
+       "Daily symptom-based dose adjustment without monitoring",
+       "Trough levels drawn 12 hours after the last dose"
+      ],
+      4,
+      "Lithium is the textbook narrow-TI drug — therapeutic window 0.6-1.2 mEq/L for maintenance; >1.5 = toxicity; >2.0 = severe toxicity (tremor, confusion, ataxia, seizures, renal injury). Standard practice: 12-hour post-dose trough, drawn at steady state (5-7 days after dose change). Renal impairment, dehydration, NSAIDs, ACE inhibitors, thiazides all raise lithium levels. Lithium is renally cleared and effectively dialyzed in severe overdose. A — wrong because random levels are difficult to interpret without timing relative to dose. B — wrong because urinary levels aren't the standard. C — wrong because peak levels overshoot and don't reflect trough safety. D — wrong because symptom-only management misses dangerous level elevation. [LO 6.5 — Lithium Monitoring]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -11002,6 +12182,116 @@ const QUIZ = [
       ],
       3,
       "Durable single-dose benefit is the upside; high price and unknown long-term durability are the downsides. (A) CAR-T is high-cost and complex to manufacture. (B) mAbs are expensive and can provoke immune reactions - the opposite of this claim. (C) Delivery is a stated major challenge for both ASO and siRNA. (E) Germline editing raises explicit ethical concerns; edits are not always somatic.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Monoclonal antibodies are MOST commonly given by which route, and why?",
+      [
+       "IV or subcutaneous, because they are large proteins",
+       "Oral, because antibodies are stable in gastric acid",
+       "Sublingual, to bypass hepatic first-pass metabolism",
+       "Inhalational, for direct respiratory tract deposition",
+       "Topical, for transdermal delivery across the skin"
+      ],
+      0,
+      "mAbs are large proteins (~150 kDa) — they're denatured by gastric acid and digested by gut proteases, so oral administration is impossible. Standard routes are IV (rituximab, infliximab, bevacizumab) or SC (adalimumab, omalizumab, dupilumab). mAbs have long half-lives (weeks) due to FcRn-mediated recycling, allowing infrequent dosing. B — wrong because mAbs are NOT acid-stable — gastric acid destroys them. C — wrong because molecules this large don't cross SL mucosa. D — wrong because inhalation is used for some agents but not standard for systemic mAb delivery. E — wrong because topical doesn't deliver systemic exposure for proteins.",
+      "basic"
+     ],
+     [
+      "CAR-T cell therapy works by:",
+      [
+       "Delivering cytotoxic chemotherapy directly to tumor cells",
+       "Blocking PD-1 and PD-L1 checkpoint signaling pathways",
+       "Engineering patient T cells to recognize tumor antigens",
+       "Delivering targeted radioactive isotopes to tumor sites",
+       "Inducing apoptosis via direct Bcl-2 inhibition"
+      ],
+      2,
+      "Chimeric Antigen Receptor T-cell therapy: harvest patient T cells, genetically engineer them ex vivo to express a CAR targeting a tumor antigen (CD19 for B-cell malignancies), expand the population, and reinfuse. Approved for relapsed/refractory ALL, large B-cell lymphoma, multiple myeloma (BCMA-targeted). Major adverse effects: cytokine release syndrome (CRS — fever, hypotension, treated with tocilizumab) and neurotoxicity (ICANS). A — wrong because this is ADC (antibody-drug conjugate) therapy, not CAR-T. B — wrong because this is checkpoint inhibitor therapy (nivolumab, pembrolizumab). D — wrong because this is radioimmunoconjugate therapy. E — wrong because this is venetoclax-class therapy, not CAR-T.",
+      "basic"
+     ],
+     [
+      "mRNA vaccines (e.g., the COVID-19 mRNA vaccines) work by:",
+      [
+       "Delivering live attenuated virus to the patient's tissues",
+       "Activating dendritic cells directly with a TLR agonist",
+       "Delivering pre-formed antibodies against the target virus",
+       "Delivering modified mRNA encoding a viral surface antigen",
+       "Delivering CRISPR machinery to edit the patient's genome"
+      ],
+      3,
+      "mRNA vaccines deliver lipid nanoparticle-encapsulated mRNA encoding a viral antigen (SARS-CoV-2 spike protein). The mRNA enters muscle cells at the injection site; ribosomes translate it; the encoded antigen is presented to the immune system; T and B cell responses develop. The mRNA is degraded within days. No live virus, no DNA integration, no genome editing. The platform is rapid to design and manufacture — a major advantage in pandemic response. A — wrong because this describes live attenuated vaccines (MMR, varicella). B — wrong because while there is some adjuvant effect from the lipid nanoparticle, the mechanism is mRNA-driven antigen expression. C — wrong because this describes passive immunization (immunoglobulin). E — wrong because mRNA does NOT integrate into DNA or edit the genome.",
+      "basic"
+     ],
+     [
+      "Antisense oligonucleotide (ASO) therapy targets disease at which level?",
+      [
+       "mRNA — by binding complementary sequences and either blocking translation or triggering RNase H-mediated cleavage",
+       "DNA — by gene editing",
+       "Protein — by binding the active site of a target enzyme",
+       "Receptor — by acting as a partial agonist",
+       "Antigen — by direct neutralization"
+      ],
+      0,
+      "ASOs are short synthetic oligonucleotides complementary to a target mRNA. Binding the mRNA either blocks ribosomal translation OR triggers RNase H to cleave the mRNA — either way, the target protein isn't made. Examples: nusinersen (spinal muscular atrophy, targets SMN2 splicing), mipomersen (hyperlipidemia, targets apoB100), eteplirsen (Duchenne muscular dystrophy, exon skipping). Distinct from siRNA (uses the RISC machinery) and from CRISPR (DNA-level editing). B — wrong because this is CRISPR-Cas9 / gene therapy territory. C — wrong because this is small-molecule enzyme inhibition. D — wrong because this is GPCR pharmacology. E — wrong because this is antibody / passive immunization.",
+      "basic"
+     ],
+     [
+      "Bispecific antibodies (BsAbs) differ from conventional mAbs by:",
+      [
+       "Being administered orally",
+       "Being smaller than 10 kDa",
+       "Lacking any antigen specificity",
+       "Having two different antigen-binding sites",
+       "Working only at the protein level, not at cell-surface receptors"
+      ],
+      3,
+      "BsAbs engage two different epitopes simultaneously. The flagship class — BiTEs (bispecific T-cell engagers) like blinatumomab — bind a tumor antigen (CD19) on one arm and CD3 on T cells with the other, physically tethering a T cell to the tumor cell and triggering T-cell-mediated cytotoxicity. Other BsAbs target two tumor antigens simultaneously, or bridge growth factor receptors. Toxicity profile resembles CAR-T (CRS-like), but BsAbs are off-the-shelf rather than patient-specific. A — wrong because BsAbs are parenteral like all mAbs. B — wrong because BsAbs are still large proteins (~150 kDa or thereabouts depending on format). C — wrong because BsAbs have TWO antigen specificities, not none. E — wrong because BsAbs can target cell-surface receptors.",
+      "basic"
+     ],
+     [
+      "Gene therapy using a viral vector to deliver a functional copy of a gene to a patient with a single-gene disorder is BEST exemplified by:",
+      [
+       "Insulin replacement therapy for type 1 diabetes",
+       "Atorvastatin for primary hyperlipidemia management",
+       "Rituximab monoclonal antibody for B-cell lymphoma",
+       "Aspirin combination therapy for migraine prophylaxis",
+       "Onasemnogene abeparvovec for spinal muscular atrophy"
+      ],
+      4,
+      "Zolgensma is the textbook gene therapy: AAV9 viral vector delivers a functional SMN1 cDNA copy to motor neurons in infants with spinal muscular atrophy type 1. Single IV infusion. The functional SMN protein restores motor neuron survival. Other examples: voretigene neparvovec (Luxturna) for RPE65-mediated retinal dystrophy; betibeglogene autotemcel for β-thalassemia. Cost is enormous ($2+ million per dose). Distinct from CAR-T (which is cell therapy, not viral gene replacement in the patient's own cells). A — wrong because insulin is protein replacement, not gene therapy. B — wrong because atorvastatin is a small molecule. C — wrong because rituximab is an mAb, not gene therapy. D — wrong because aspirin is a small molecule.",
+      "basic"
+     ],
+     [
+      "CRISPR-Cas9 differs from antisense oligonucleotide therapy by:",
+      [
+       "CRISPR-Cas9 edits the DNA directly using a guide RNA",
+       "Both target mRNA",
+       "Both target DNA",
+       "CRISPR is given orally; ASOs are IV-only",
+       "CRISPR uses small molecules to silence genes"
+      ],
+      0,
+      "CRISPR-Cas9: guide RNA directs Cas9 to a specific DNA sequence, creating a double-strand break that triggers DNA repair — either knock-out (NHEJ) or precision edit (HDR). The change is PERMANENT in the edited cells. ASOs bind mRNA, blocking translation or recruiting RNase H — the effect is reversible and requires repeated dosing. Casgevy (exa-cel) is the first FDA-approved CRISPR therapy, for sickle cell disease and β-thalassemia. B — wrong because ASOs target mRNA; CRISPR targets DNA — they're at different levels. C — wrong because ASOs do NOT target DNA. D — wrong because neither is orally administered. E — wrong because CRISPR uses guide RNA + a nuclease, not small molecules.",
+      "basic"
+     ],
+     [
+      "An advantage of mRNA vaccines compared to traditional inactivated-virus vaccines is:",
+      [
+       "mRNA vaccines can be designed and manufactured rapidly once the antigen sequence is known",
+       "mRNA vaccines provoke no immune response",
+       "mRNA vaccines provide lifelong immunity from a single dose",
+       "mRNA vaccines require no cold-chain storage",
+       "mRNA vaccines integrate into the host genome"
+      ],
+      0,
+      "mRNA platform advantages: (a) speed — once the antigen sequence is known, mRNA can be synthesized in days; (b) flexibility — variants can be updated by changing only the sequence, keeping manufacturing infrastructure; (c) no live virus, no risk of vaccine-associated disease. Disadvantages: cold-chain requirements (Pfizer-BioNTech needs -70°C), short shelf life, mRNA degradation, lipid nanoparticle complexity. B — wrong because mRNA vaccines DO provoke immune response — that's how they work. C — wrong because mRNA vaccines don't necessarily give lifelong immunity (need boosters as with most vaccines). D — wrong because OPPOSITE — mRNA vaccines have demanding cold-chain requirements. E — wrong because mRNA vaccines do NOT integrate into the host genome.",
       "basic"
      ]
     ]
@@ -11295,6 +12585,142 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Which of the following neurotransmitter–receptor pairings correctly describes the SYNAPSE at every autonomic ganglion (both sympathetic and parasympathetic)?",
+      [
+       "Norepinephrine on α1 receptors",
+       "Acetylcholine on neuronal nicotinic receptors",
+       "Acetylcholine on muscarinic M2 receptors",
+       "Epinephrine on β1 receptors",
+       "Acetylcholine on NM receptors"
+      ],
+      1,
+      "All preganglionic autonomic fibers — sympathetic AND parasympathetic — release ACh onto NN (neuronal nicotinic) receptors at the ganglion. This is the universal first synapse. The postganglionic neurotransmitter is what differs: ACh on muscarinic for parasympathetic, NE on α/β for sympathetic. Ganglionic blockers (hexamethonium, historical; trimethaphan) hit NN and knock out BOTH arms — used historically for hypertensive emergency. A — wrong because NE on α1 is the SYMPATHETIC POSTGANGLIONIC synapse at most target organs, not the ganglion. C — wrong because ACh on M2 is the parasympathetic postganglionic synapse in the heart, not the ganglion. D — wrong because epinephrine is released by the adrenal medulla into blood, not at autonomic ganglia. E — wrong because NM nicotinic receptors are at the somatic neuromuscular junction, not autonomic ganglia. [LO 8.1 — ANS Neurotransmitters]",
+      "basic"
+     ],
+     [
+      "Sweat glands receive innervation from the sympathetic nervous system but release which neurotransmitter at the postganglionic synapse?",
+      [
+       "Norepinephrine onto α1 receptors",
+       "Norepinephrine onto β2 receptors",
+       "Acetylcholine onto muscarinic receptors",
+       "Acetylcholine onto NM nicotinic receptors",
+       "Epinephrine onto β1 receptors"
+      ],
+      2,
+      "Sweat glands are the famous autonomic anomaly: anatomically sympathetic (T1-L3 thoracolumbar outflow) but neurochemically cholinergic — ACh on muscarinic receptors. Clinical relevance: anticholinergic toxidrome includes anhidrosis ('dry as a bone') because muscarinic blockade kills sweating despite the sympathetic origin. The only sympathetic postganglionic synapse that uses ACh. A — wrong because NE on α1 is the standard sympathetic postganglionic — but NOT at sweat glands. B — wrong because β2 doesn't drive sweat secretion. D — wrong because NM is somatic skeletal NMJ, not sweat glands. E — wrong because epinephrine is adrenal medullary into blood, not at sweat gland synapses. [LO 8.1 — Sweat Gland Exception]",
+      "basic"
+     ],
+     [
+      "The adrenal medulla is functionally a modified sympathetic ganglion. Preganglionic stimulation releases ACh onto NN receptors on chromaffin cells, which then release into the bloodstream:",
+      [
+       "About 80% epinephrine and 20% norepinephrine",
+       "100% epinephrine into the bloodstream",
+       "100% norepinephrine into the bloodstream",
+       "Acetylcholine onto downstream muscarinic receptors",
+       "Dopamine alone with minimal catecholamine release"
+      ],
+      0,
+      "The adrenal medulla is special — its 'postganglionic' fibers are the chromaffin cells themselves, which dump catecholamines directly into the systemic circulation. The mix is roughly 80% epinephrine, 20% NE, varying with stress. This is why systemic epinephrine effects (β2 bronchodilation, β1 inotropy, α1 vasoconstriction at high doses) appear in the fight-or-flight response — the adrenal medulla supplies the epi component that postganglionic sympathetic nerves cannot. B — wrong because not pure epi — there's a meaningful NE component. C — wrong because predominantly NE is found at sympathetic postganglionic NERVE TERMINALS, not adrenal medulla. D — wrong because ACh is the preganglionic transmitter to the medulla, not the secretion. E — wrong because trace dopamine is secreted but it's not the dominant catecholamine. [LO 8.1 — Adrenal Medulla]",
+      "basic"
+     ],
+     [
+      "Which of the following matches receptor → G-protein → second-messenger pathway CORRECTLY?",
+      [
+       "α1 → Gi → ↓ cAMP",
+       "α2 → Gi → ↓ cAMP",
+       "M2 → Gs → ↑ cAMP",
+       "β2 → Gq → IP3/DAG",
+       "β1 → Gq → IP3/DAG"
+      ],
+      1,
+      "α2 couples to Gi → inhibits adenylyl cyclase → ↓ cAMP. Presynaptically, α2 produces feedback inhibition of NE release; pancreatic islets, α2 inhibits insulin. The Gs club (↑ cAMP): β1, β2, D1, H2, V2. The Gi club (↓ cAMP): α2, M2, D2, μ-opioid. The Gq club (IP3/DAG/Ca2+): α1, M1, M3, H1, V1. Memorize these three rosters — every autonomic exam question references one of them. A — wrong because α1 is Gq, not Gi. α1 → IP3/DAG → Ca2+. C — wrong because M2 is Gi, not Gs. M2 → ↓ cAMP, ↑ K+ → bradycardia. D — wrong because β2 is Gs, not Gq. β2 → ↑ cAMP. E — wrong because β1 is Gs, not Gq. β1 → ↑ cAMP → inotropy + chronotropy. [LO 8.2 — GPCR Pathways]",
+      "basic"
+     ],
+     [
+      "A drug that selectively activates β1 receptors will produce which combination of effects?",
+      [
+       "Increased heart rate, increased contractility",
+       "Bronchodilation and vasodilation",
+       "Pupillary constriction and bradycardia",
+       "Vasoconstriction and pupillary dilation",
+       "Bronchoconstriction and bradycardia"
+      ],
+      0,
+      "β1 receptors are concentrated in cardiac myocytes (↑ rate via SA node, ↑ contractility via Ca2+ handling, ↑ conduction velocity at AV node) and juxtaglomerular cells (↑ renin → angiotensin II → BP support). Selective β1 agonists (dobutamine, low-dose epi) are inotropes. Selective β1 blockers (metoprolol, atenolol, bisoprolol) are 'cardioselective' β-blockers — preferred in asthma/COPD because they spare β2 bronchial receptors. B — wrong because bronchodilation is β2; vasodilation is β2 (and partly NO-mediated). C — wrong because pupillary constriction is M3; bradycardia is M2 — both parasympathetic. D — wrong because vasoconstriction is α1; mydriasis is α1. E — wrong because bronchoconstriction is M3; bradycardia is M2 — both muscarinic. [LO 8.2 — β1 Receptor Effects]",
+      "basic"
+     ],
+     [
+      "Activation of α1 receptors on the iris pupillary dilator muscle produces:",
+      [
+       "Miosis via smooth muscle relaxation",
+       "Decreased aqueous humor production",
+       "Accommodation for near vision",
+       "Mydriasis via smooth muscle contraction",
+       "Increased tear secretion"
+      ],
+      3,
+      "The pupillary DILATOR muscle is α1-innervated (sympathetic). α1 contraction pulls the iris radially → pupil widens → mydriasis. The pupillary SPHINCTER is M3-innervated (parasympathetic) — M3 contraction tightens the iris ring → miosis. The two muscles oppose each other. Phenylephrine (α1 agonist eyedrops) = mydriasis for fundoscopy. Pilocarpine (M3 agonist) = miosis for acute angle-closure glaucoma. A — wrong because miosis is M3 sphincter contraction, not α1. B — wrong because aqueous humor production is β-mediated on ciliary epithelium. C — wrong because accommodation is M3 on ciliary muscle, not α1 on dilator. E — wrong because tear secretion is M3 on lacrimal gland, not α1. [LO 8.2 — Eye Receptors]",
+      "basic"
+     ],
+     [
+      "A drug at the kidney's juxtaglomerular apparatus stimulates renin release via which receptor and G protein?",
+      [
+       "α1 / Gq",
+       "α2 / Gi",
+       "M3 / Gq",
+       "β1 / Gs",
+       "D1 / Gs"
+      ],
+      3,
+      "β1 receptors on JG cells stimulate renin release via Gs/cAMP. This is one of the mechanisms by which β-blockers lower BP — they suppress renin release, reducing angiotensin II generation. Clinically: β-blockers are particularly effective antihypertensives in high-renin states (younger patients, white patients) and less so in low-renin states (elderly, black patients — where calcium channel blockers and thiazides are preferred first-line). A — wrong because α1 mediates vasoconstriction of the afferent arteriole, distinct from renin secretion. B — wrong because α2 is presynaptic feedback inhibition, not JG renin signaling. C — wrong because M3 is muscarinic — not on JG cells. E — wrong because D1 is on renal vasculature (fenoldopam target), not JG renin secretion specifically. [LO 8.2 — Renin & β1]",
+      "basic"
+     ],
+     [
+      "α2 presynaptic receptors on sympathetic nerve terminals serve which function?",
+      [
+       "Direct excitation of postsynaptic α1 receptors",
+       "Feedback inhibition of further NE release",
+       "Increased NE synthesis at the nerve terminal",
+       "Active transport of NE back into vesicles",
+       "Activation of MAO to degrade synaptic NE"
+      ],
+      1,
+      "α2 on sympathetic nerve terminals (autoreceptors) is the brake — when NE in the synapse rises, it stimulates these α2 receptors, which couple to Gi, inhibit adenylyl cyclase, lower cAMP, and suppress further NE release. This negative feedback caps sympathetic output. Centrally, α2 agonists (clonidine, dexmedetomidine, methyldopa) act on brainstem α2 to lower CNS sympathetic outflow — the central mechanism for clonidine's antihypertensive effect. A — wrong because α2 is INHIBITORY at the presynaptic terminal, not excitatory. C — wrong because α2 doesn't affect synthesis. D — wrong because vesicular transport is via VMAT, not α2. E — wrong because MAO degrades NE intraneuronally, but α2 doesn't activate it. [LO 8.2 — α2 Presynaptic]",
+      "basic"
+     ],
+     [
+      "Norepinephrine is INACTIVATED in the synaptic cleft primarily by:",
+      [
+       "Reuptake into the presynaptic neuron via NET",
+       "Hydrolysis by synaptic acetylcholinesterase",
+       "Diffusion away from the synapse",
+       "Endocytosis into the postsynaptic membrane",
+       "Conversion to epinephrine by PNMT"
+      ],
+      0,
+      "NE inactivation is dominated by reuptake into the presynaptic terminal via NET (norepinephrine transporter). Inside the terminal, MAO breaks down free NE; the rest is re-packaged into vesicles by VMAT for re-release. COMT (catechol-O-methyltransferase) acts on extraneuronal NE that escapes reuptake. Drugs that block NET (TCAs, cocaine, atomoxetine, duloxetine, SNRIs) leave more NE in the synapse — exactly the cocaine mechanism behind sympathomimetic toxicity. B — wrong because AChE acts on acetylcholine, not NE. C — wrong because diffusion plays a minor role; reuptake dominates. D — wrong because no significant postsynaptic endocytosis of NE. E — wrong because PNMT (in adrenal medulla) converts NE → epi for synthesis, not inactivation at the synapse. [LO 8.3 — NE Inactivation]",
+      "basic"
+     ],
+     [
+      "Acetylcholine is INACTIVATED in the synaptic cleft by:",
+      [
+       "Hydrolysis by acetylcholinesterase into choline and acetate",
+       "Reuptake into the presynaptic neuron",
+       "Endocytosis into the postsynaptic membrane",
+       "MAO-mediated oxidation",
+       "Diffusion only — no enzymatic breakdown"
+      ],
+      0,
+      "AChE in the synaptic cleft hydrolyzes ACh to choline + acetate within milliseconds. Choline is then taken back up into the presynaptic terminal via ChT (choline transporter) for re-synthesis. AChE inhibitors (physostigmine, neostigmine, pyridostigmine, donepezil) block this enzyme, raising synaptic ACh — used clinically for myasthenia gravis, Alzheimer's, postop reversal of NM blockade, and as antidote to anticholinergic toxicity. Organophosphates IRREVERSIBLY inhibit AChE — pralidoxime regenerates the enzyme if given before 'aging' sets in. B — wrong because ACh is NOT taken up intact — choline is taken back up after AChE hydrolysis. C — wrong because no significant postsynaptic endocytosis. D — wrong because MAO acts on monoamines (NE, DA, 5-HT), not ACh. E — wrong because AChE is the dominant inactivator; diffusion is minor. [LO 8.3 — ACh Inactivation]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -11582,6 +13008,142 @@ const QUIZ = [
       ],
       2,
       "β1 blockade slows the heart and lowers blood pressure (the antihypertensive effect). (A) β1 blockade targets the heart; bronchodilation is a β2 airway effect. (B) Blocking β1 lowers, not raises, rate and pressure. (D) Pupillary dilation is an α1 effect, not a β1-blocker effect. (E) Blocking β tone would reduce, not increase, glycogenolysis.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 24-year-old receives an IV bolus of phenylephrine. Heart rate drops from 80 to 50 bpm. Which reflex BEST explains this paradox?",
+      [
+       "Direct β1 blockade by phenylephrine",
+       "Baroreflex — phenylephrine raises BP",
+       "Direct M2 activation on the SA node by phenylephrine",
+       "Renal failure causing electrolyte imbalance",
+       "Carotid massage during the infusion"
+      ],
+      1,
+      "Phenylephrine is a pure α1 agonist — vasoconstriction → ↑ BP. The carotid sinus and aortic arch baroreceptors fire on stretch; CN IX and X carry the signal to the NTS in the brainstem; NTS output decreases sympathetic outflow AND increases vagal output → HR falls. This is the reflex bradycardia of α1 agonists. Atropine pretreatment (M2 blocker) breaks the vagal limb and prevents the reflex bradycardia. The mirror image: hydralazine causes vasodilation → reflex tachycardia. A — wrong because phenylephrine doesn't block β1. C — wrong because phenylephrine doesn't bind muscarinic receptors at therapeutic doses. D — wrong because stem doesn't suggest renal failure. E — wrong because stem doesn't mention carotid massage. [LO 9.2 — Baroreflex]",
+      "basic"
+     ],
+     [
+      "Hydralazine causes direct vasodilation. The expected reflex on heart rate is:",
+      [
+       "Reflex bradycardia",
+       "AV block",
+       "No change in heart rate",
+       "Direct β1 blockade-induced bradycardia",
+       "Reflex tachycardia"
+      ],
+      4,
+      "Hydralazine relaxes arteriolar smooth muscle directly (cGMP-mediated). BP drops, baroreceptor firing falls, NTS withdraws vagal tone and increases sympathetic outflow → HR rises, contractility rises. This reflex tachycardia is why hydralazine is usually combined with a β-blocker (or with a long-acting nitrate in HF — BiDil for African American patients with HFrEF). Reflex tachycardia is dangerous in patients with coronary disease — increased myocardial O2 demand. A — wrong because phenylephrine, not hydralazine, causes reflex bradycardia. B — wrong because hydralazine doesn't cause AV block as a primary mechanism. C — wrong because the reflex is robust — HR does change. D — wrong because hydralazine isn't a β-blocker. [LO 9.2 — Reflex Tachycardia]",
+      "basic"
+     ],
+     [
+      "The 'DUMBELS' mnemonic for cholinergic (parasympathetic) overdrive includes which of the following?",
+      [
+       "Dry mouth, Urinary retention, Mydriasis, Bronchodilation, Erythema, Loss of tears, Sedation",
+       "Drowsiness, Urination, Mydriasis, Bronchospasm, Excitation, Lacrimation, Salivation",
+       "Dilation of pupils, Urination, Mydriasis, Bradycardia, Erythema, Lethargy, Sweating",
+       "Diarrhea, Urination, Miosis, Bronchospasm/Bradycardia, Emesis, Lacrimation, Salivation/Sweating",
+       "Diarrhea, Urinary urgency, Mydriasis, Bradycardia, Emesis, Loss of consciousness, Stupor"
+      ],
+      3,
+      "DUMBELS = Diarrhea, Urination, Miosis, Bronchospasm + Bradycardia, Emesis, Lacrimation, Salivation/Sweating. The toxidrome of organophosphate poisoning or muscarinic agonist overdose. The mirror image is the anticholinergic toxidrome (hot/dry/red/blind/mad/full). Each DUMBELS feature maps to a muscarinic receptor activation: M3 on smooth muscle (GI cramps, bronchi, bladder), M3 on pupillary sphincter (miosis), M3 on exocrine glands (tears, saliva), M2 on SA node (bradycardia). Treatment of OP poisoning: atropine + pralidoxime (the latter regenerates AChE before aging). A — wrong because this is the ANTICHOLINERGIC toxidrome — the mirror image. B — wrong because Drowsiness and mydriasis don't fit cholinergic toxidrome. C — wrong because mydriasis is anticholinergic; miosis is cholinergic. E — wrong because mydriasis and stupor are anticholinergic features. [LO 9.1 — DUMBELS]",
+      "basic"
+     ],
+     [
+      "An IV bolus of pure epinephrine at low dose primarily activates β receptors. At HIGH dose, the dominant effect shifts to:",
+      [
+       "β2-mediated peripheral bronchodilation",
+       "α1-mediated vasoconstriction with marked BP rise",
+       "Pure muscarinic receptor blockade",
+       "Reflex bradycardia from baroreflex activation",
+       "Reduced cardiac contractility from β1 desensitization"
+      ],
+      1,
+      "Epinephrine activates α1, α2, β1, β2. At LOW doses (e.g., 1-10 ng/kg/min), β2 vasodilation predominates in skeletal muscle vasculature; β1 inotropy/chronotropy is prominent — net BP rise is modest. At HIGH doses (e.g., resuscitation 1 mg IV push for cardiac arrest, or anaphylaxis 0.3 mg IM), α1 vasoconstriction overwhelms β2 vasodilation → marked rise in BP. This is the classic 'epinephrine reversal' phenomenon when α-blockade is on board — only β2 vasodilation remains, and epinephrine paradoxically drops BP. A — wrong because β2 effects are LOW-dose-dominant, not high-dose. C — wrong because epinephrine has no significant muscarinic action. D — wrong because high-dose epi raises HR, not slows it. E — wrong because epinephrine increases contractility at all doses (β1). [LO 9.3 — Epinephrine Dose-Dependence]",
+      "basic"
+     ],
+     [
+      "An organ with DUAL innervation — both sympathetic and parasympathetic — that demonstrates this principle most cleanly on exams is:",
+      [
+       "The kidney",
+       "The skin (cutaneous vessels)",
+       "The adrenal medulla",
+       "The heart",
+       "The arrector pili muscles"
+      ],
+      3,
+      "Heart rate is the textbook dual-innervation organ: SNS (β1 → ↑) vs PNS (M2 → ↓), with the heart's actual rate at any moment reflecting the balance. The eye is also dual-innervated (α1 dilator + M3 sphincter on pupil; M3 + β on ciliary body). Most other organs have one dominant arm (e.g., vasculature is sympathetically dominant; sweat glands have only sympathetic-cholinergic innervation; adrenal medulla is hormonal, not 'dual-innervated' in the classic sense). A — wrong because kidney has primarily sympathetic + α1/β1 vascular innervation; parasympathetic input is minimal. B — wrong because cutaneous vessels are sympathetically dominant. C — wrong because adrenal medulla is a modified ganglion, not classic dual innervation. E — wrong because arrector pili are sympathetic only (cholinergic, like sweat — actually sympathetic noradrenergic for piloerection). [LO 9.1 — Dual Innervation]",
+      "basic"
+     ],
+     [
+      "Which of the following correctly pairs a sympathetic activity with its receptor and an example clinical scenario?",
+      [
+       "Pupillary constriction → α1 → mydriatic eyedrop",
+       "Decreased contractility → β1 → dobutamine for heart failure",
+       "Bronchodilation → β2 → albuterol for asthma",
+       "Vasodilation in skeletal muscle → α1 → exercise",
+       "Glycogenolysis → α2 → diabetic emergency"
+      ],
+      2,
+      "β2 on bronchial smooth muscle → cAMP → relaxation → bronchodilation. Albuterol is a short-acting β2 agonist (SABA), salmeterol/formoterol are long-acting (LABA). The mainstays of asthma and COPD bronchodilation. Tachyphylaxis to β2 agonists is a known issue with chronic monotherapy — combine with ICS for asthma; tiotropium for COPD. A — wrong because α1 produces MYDRIASIS, not miosis. The 'mydriatic' eyedrop is correct directionally, but α1 is dilation, not constriction. B — wrong because β1 INCREASES contractility, not decreases — dobutamine is an inotrope. D — wrong because vasodilation in skeletal muscle is β2 + NO-mediated, not α1 (which constricts). E — wrong because glycogenolysis is β2 (and some α1), not α2. [LO 9.1 — Sympathetic Pairings]",
+      "basic"
+     ],
+     [
+      "A patient on long-term β2-agonist (albuterol) inhaler reports reduced relief from acute episodes. The MOST likely mechanism is:",
+      [
+       "Hepatic enzyme induction increasing albuterol clearance",
+       "Decreased adenylyl cyclase coupling at α1 receptors",
+       "Conversion of β2 receptors to β1 subtype",
+       "Bronchial mucosal hypertrophy reducing drug deposition",
+       "β2 receptor downregulation and desensitization from chronic agonist exposure"
+      ],
+      4,
+      "Chronic β2 agonist exposure leads to receptor desensitization (GRK phosphorylation + arrestin binding, fast) and downregulation (receptor internalization, slower). Net effect: reduced bronchodilator response. This is part of why SABAs alone aren't recommended as monotherapy for asthma — the SMART/MART approach combines SABA with ICS (formoterol + budesonide). Inhaled corticosteroids upregulate β2 receptor expression, partially restoring response. A — wrong because albuterol is short-acting but enzyme induction isn't the dominant tolerance mechanism. B — wrong because α1 isn't the relevant receptor here. C — wrong because β2 doesn't convert to β1 — they're distinct gene products. D — wrong because mucosal hypertrophy isn't a primary cause of β2 tolerance. [LO 9.4 — β2 Tachyphylaxis]",
+      "basic"
+     ],
+     [
+      "A drug causes mydriasis, tachycardia, bronchodilation, and decreased GI motility. The MOST likely receptor profile is:",
+      [
+       "Pure α1 activation",
+       "Pure β1 activation",
+       "Muscarinic antagonist",
+       "Muscarinic agonist",
+       "Pure α2 activation"
+      ],
+      2,
+      "Blocking muscarinic receptors removes parasympathetic tone everywhere it normally restrains things: pupillary sphincter blocked → mydriasis; M2 in SA node blocked → tachycardia (unopposed sympathetic); M3 in bronchi blocked → bronchodilation; M3 in gut blocked → decreased motility. Plus M3 in sweat glands blocked → anhidrosis (hot, dry skin); bladder detrusor blocked → urinary retention. This is the muscarinic-antagonist profile (atropine, scopolamine, ipratropium, TCAs, first-gen antihistamines). A — wrong because α1 mydriasis fits, but α1 doesn't directly cause tachycardia (it triggers REFLEX bradycardia from BP rise), bronchodilation (β2 does), or decreased GI motility (M3 blockade does). B — wrong because β1 gives tachycardia, but mydriasis and bronchodilation aren't β1. D — wrong because MUSCARINIC AGONIST gives the OPPOSITE — miosis, bradycardia, bronchoconstriction, increased GI motility. E — wrong because α2 mostly decreases BP centrally — doesn't fit. [LO 9.1 — Anticholinergic Profile]",
+      "basic"
+     ],
+     [
+      "Atropine pretreatment before phenylephrine administration would MOST likely:",
+      [
+       "Block the rise in blood pressure produced by phenylephrine",
+       "Block α1 receptors directly",
+       "Cause profound hypotension via β-blockade",
+       "Have no effect on the response",
+       "Prevent the reflex bradycardia"
+      ],
+      4,
+      "Phenylephrine raises BP via α1 vasoconstriction; baroreflex tries to compensate with vagal (M2) bradycardia. Atropine blocks M2 — the vagal arm is broken, so the heart rate doesn't drop. Net: BP still rises (α1 intact), but no reflex slowing. This is a classic teaching scenario for understanding the baroreflex loop. Atropine doesn't block α1 (it's a muscarinic antagonist) and doesn't affect the BP rise itself. A — wrong because atropine doesn't block α1, so the BP rise from phenylephrine is preserved. B — wrong because atropine is M3/M2 antagonist, NOT an α1 blocker. C — wrong because atropine isn't a β-blocker. D — wrong because atropine prominently affects the response by removing reflex bradycardia. [LO 9.2 — Baroreflex Pharmacology]",
+      "basic"
+     ],
+     [
+      "A patient in septic shock with low SVR is started on norepinephrine. The primary therapeutic mechanism is:",
+      [
+       "β2 bronchodilation supporting oxygen delivery",
+       "α1 vasoconstriction restoring systemic vascular resistance",
+       "M3-mediated increased venous return to the heart",
+       "α2-mediated central sympatholysis reducing tachycardia",
+       "Direct inotropic support via β2 receptor stimulation"
+      ],
+      1,
+      "Norepinephrine is the first-line vasopressor for septic shock. Its α1 activity drives vasoconstriction → ↑ SVR → ↑ MAP. NE also has β1 activity (some inotropic support) but minimal β2 (less peripheral vasodilation than epi). Preferred over dopamine in septic shock — clearer mortality benefit, less arrhythmogenic. Phenylephrine (pure α1) is reserved for special situations (e.g., aortic stenosis where reflex tachycardia is harmful). A — wrong because NE has minimal β2 activity at therapeutic vasopressor doses. C — wrong because venous return isn't muscarinic-mediated. D — wrong because α2 central sympatholysis is the OPPOSITE of what's needed in shock. E — wrong because β2 isn't a significant inotrope. [LO 9.3 — NE in Shock]",
       "basic"
      ]
     ]
@@ -11887,6 +13449,194 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 65-year-old presents to the ED with acute angle-closure glaucoma. Eye pressure is 52 mmHg. Which topical agent is MOST appropriate for emergency miosis to pull the iris away from the angle?",
+      [
+       "Phenylephrine",
+       "Tropicamide",
+       "Pilocarpine",
+       "Atropine",
+       "Cyclopentolate"
+      ],
+      2,
+      "Pilocarpine is a direct-acting M3 muscarinic agonist. Topically, it contracts the pupillary sphincter → miosis → opens the iridocorneal angle → drains trapped aqueous humor → IOP falls. First-line emergency therapy combined with IV mannitol, topical β-blocker (timolol), and topical α2 agonist (brimonidine), pending laser iridotomy. Also used for chronic xerostomia in Sjögren and post-radiation patients. A — wrong because phenylephrine is α1 → mydriasis. Worsens angle closure. B — wrong because tropicamide is muscarinic ANTAGONIST → mydriasis. Causes the problem. D — wrong because atropine is M antagonist → mydriasis. Causes angle closure. E — wrong because cyclopentolate is M antagonist → mydriasis.",
+      "basic"
+     ],
+     [
+      "A patient with postoperative urinary retention has a non-obstructive bladder on imaging. Which agent is MOST appropriate to stimulate detrusor contraction?",
+      [
+       "Atropine",
+       "Phenylephrine",
+       "Bethanechol",
+       "Propranolol",
+       "Tamsulosin"
+      ],
+      2,
+      "Bethanechol is a direct-acting M3 agonist with selective action on bladder detrusor and GI smooth muscle. It promotes detrusor contraction → bladder emptying. Resistant to AChE hydrolysis (synthetic ester). Used for non-obstructive postop urinary retention and neurogenic bladder. Critical exclusion: confirm no mechanical obstruction (BPH, stricture) — forcing contraction against obstruction risks rupture. A — wrong because atropine BLOCKS muscarinic — opposite direction. B — wrong because phenylephrine contracts the bladder SPHINCTER (α1), worsening retention. D — wrong because propranolol doesn't drive detrusor contraction. E — wrong because tamsulosin relaxes α1 sphincter — useful in BPH retention, but doesn't drive detrusor contraction.",
+      "basic"
+     ],
+     [
+      "Which direct-acting cholinergic agonist is used as a PROVOCATIVE diagnostic test for airway hyperreactivity (asthma)?",
+      [
+       "Bethanechol",
+       "Pilocarpine",
+       "Methacholine",
+       "Carbachol",
+       "Acetylcholine"
+      ],
+      2,
+      "Methacholine challenge test: nebulized methacholine in escalating doses; patients with asthma develop bronchoconstriction at low doses (FEV1 drops ≥20% at PC20). Used when spirometry is normal but asthma is clinically suspected. Methacholine is muscarinic-selective, AChE-resistant, and short-acting — safe enough for pulmonary lab use with albuterol rescue ready. A — wrong because bethanechol is bladder/GI-selective. B — wrong because pilocarpine is for glaucoma + xerostomia. D — wrong because carbachol is for surgical miosis (mostly intraocular). E — wrong because ACh itself is too short-acting (degraded in seconds) for clinical use.",
+      "basic"
+     ],
+     [
+      "Carbachol differs from acetylcholine in that carbachol:",
+      [
+       "Selective for nicotinic receptors only at high doses",
+       "Resistant to AChE hydrolysis with mixed M and N activity",
+       "Active solely on the central nervous system targets",
+       "Has no muscarinic activity at clinical doses",
+       "Is rapidly hydrolyzed by plasma cholinesterases within seconds"
+      ],
+      1,
+      "Carbachol is AChE-resistant (carbamate ester instead of acetate), and activates both muscarinic AND nicotinic receptors. Topical use: intraocular miosis during cataract surgery; treatment of open-angle glaucoma when pilocarpine fails. Its dual-receptor activity makes it less selective than bethanechol (M-selective) or pilocarpine (M-selective). A — wrong because carbachol hits both M and N. C — wrong because carbachol is mostly peripheral. D — wrong because carbachol has prominent muscarinic activity. E — wrong because carbachol is AChE-resistant — long-acting, not rapidly hydrolyzed.",
+      "basic"
+     ],
+     [
+      "Pilocarpine is used to treat which non-ophthalmologic condition?",
+      [
+       "Acute bronchospasm in asthma exacerbation",
+       "Acute angle-closure glaucoma in the ED only",
+       "Postoperative non-obstructive urinary retention",
+       "Xerostomia in Sjögren or post-radiation patients",
+       "Atrial fibrillation rate control in chronic disease"
+      ],
+      3,
+      "Oral pilocarpine (Salagen) treats xerostomia by stimulating M3 receptors on salivary gland acinar cells — drives saliva production. Indications: Sjögren syndrome, post-radiation xerostomia in head/neck cancer patients, anticholinergic-medication-induced dry mouth. Side effects predictable from muscarinic activation: sweating, flushing, GI cramping, urinary urgency. Cevimeline is a similar M3-selective agent for the same indication. A — wrong because pilocarpine WORSENS bronchospasm (M3 bronchoconstriction). B — wrong because pilocarpine has systemic use. C — wrong because bethanechol is the urinary retention agent. E — wrong because pilocarpine isn't used for AF.",
+      "basic"
+     ],
+     [
+      "Bethanechol-induced GI side effects (cramping, diarrhea) reflect its action at which receptor on intestinal smooth muscle?",
+      [
+       "β1",
+       "α1",
+       "Histamine H2",
+       "Nicotinic NM",
+       "M3"
+      ],
+      4,
+      "M3 on intestinal smooth muscle → Gq → IP3 → Ca2+ → contraction → peristalsis, cramping, defecation. M3 is the smooth-muscle muscarinic. Bethanechol's bladder action (also M3) and GI action share the same mechanism — that's why GI cramping and diarrhea are predictable side effects. A — wrong because β1 is cardiac. B — wrong because α1 is vascular smooth muscle, GI sphincters. C — wrong because H2 is gastric parietal cells (acid secretion), not motility. D — wrong because NM is at the somatic NMJ, not GI.",
+      "basic"
+     ],
+     [
+      "Direct-acting cholinergic agonists work by:",
+      [
+       "Binding directly to muscarinic or nicotinic receptors",
+       "Inhibiting acetylcholinesterase at cholinergic synapses",
+       "Releasing endogenous acetylcholine from nerve terminals",
+       "Inhibiting choline reuptake at presynaptic membranes",
+       "Activating G proteins downstream of muscarinic receptors"
+      ],
+      0,
+      "Direct-acting cholinergic agonists (bethanechol, pilocarpine, methacholine, carbachol, cevimeline) bind cholinergic receptors directly — no ACh required. INDIRECT-acting agents (AChE inhibitors — physostigmine, neostigmine, pyridostigmine, donepezil, organophosphates) raise endogenous ACh by blocking its breakdown. The downstream effects overlap, but mechanism differs in clinically important ways (e.g., AChE inhibitors hit BOTH M and N). B — wrong because this is INDIRECT-acting (AChE inhibitors). C — wrong because no major class of cholinergic drugs releases endogenous ACh from terminals. D — wrong because not a major drug-class mechanism. E — wrong because G proteins are downstream — receptors are the drug target.",
+      "basic"
+     ],
+     [
+      "Which of the following is a direct-acting cholinergic agonist?",
+      [
+       "Physostigmine",
+       "Neostigmine",
+       "Pyridostigmine",
+       "Bethanechol",
+       "Donepezil"
+      ],
+      3,
+      "Bethanechol is the only direct-acting agonist in this list — synthetic choline ester binding M3. The others are all AChE inhibitors (indirect-acting): physostigmine (anticholinergic toxicity antidote, BBB-crossing), neostigmine (myasthenia, NM blockade reversal), pyridostigmine (myasthenia maintenance, no BBB), donepezil (Alzheimer's). A — wrong because physostigmine is AChE inhibitor. B — wrong because neostigmine is AChE inhibitor. C — wrong because pyridostigmine is AChE inhibitor. E — wrong because donepezil is AChE inhibitor.",
+      "basic"
+     ],
+     [
+      "A patient given IV bethanechol develops abdominal cramping, profuse salivation, sweating, and miosis. The MOST appropriate antidote is:",
+      [
+       "Pralidoxime",
+       "Naloxone",
+       "Physostigmine",
+       "Atropine",
+       "Flumazenil"
+      ],
+      3,
+      "Bethanechol overdose = excess muscarinic stimulation. Atropine is the competitive M antagonist that reverses the toxidrome — salivation, lacrimation, miosis, GI cramping, bronchospasm, bradycardia. Same atropine is the antidote for OP poisoning (with pralidoxime added). For bethanechol specifically (direct M-acting), pralidoxime adds nothing — it regenerates AChE, irrelevant here. A — wrong because pralidoxime regenerates AChE — useful for OP poisoning but bethanechol doesn't inhibit AChE. B — wrong because naloxone is for opioid overdose. C — wrong because physostigmine WORSENS cholinergic excess by raising ACh further. E — wrong because flumazenil is for benzodiazepine reversal.",
+      "basic"
+     ],
+     [
+      "A patient with closed-angle glaucoma is given pilocarpine eyedrops. The mechanism by which pilocarpine LOWERS intraocular pressure is:",
+      [
+       "Decreased aqueous humor production by ciliary epithelium",
+       "Contraction of the ciliary muscle",
+       "Direct vasoconstriction of the central retinal artery",
+       "Mydriasis releasing iris pressure on the angle",
+       "α1-mediated vasoconstriction"
+      ],
+      1,
+      "Pilocarpine activates M3 on the ciliary muscle → contraction → mechanical pull on the scleral spur → trabecular meshwork opens → improved aqueous outflow. Independently, M3 contracts the pupillary sphincter → miosis → iris pulled away from the iridocorneal angle. Both effects lower IOP. β-blocker eyedrops (timolol) work by REDUCING aqueous production — different mechanism. A — wrong because this is the timolol/β-blocker mechanism — aqueous production reduction. C — wrong because pilocarpine doesn't affect retinal artery directly. D — wrong because pilocarpine causes MIOSIS, not mydriasis. E — wrong because pilocarpine isn't α1-acting.",
+      "basic"
+     ],
+     [
+      "Side effects of pilocarpine when given orally for xerostomia include all of the following EXCEPT:",
+      [
+       "Sweating",
+       "Urinary retention",
+       "GI cramping",
+       "Flushing",
+       "Urinary urgency"
+      ],
+      1,
+      "Oral pilocarpine produces predictable muscarinic side effects matching DUMBELS: diarrhea/cramping, urination urgency (not retention), miosis/blurred vision, bronchospasm (rare), emesis, lacrimation, salivation, sweating, flushing. Urinary RETENTION is the OPPOSITE — that's the ANTICHOLINERGIC pattern. Pilocarpine drives detrusor contraction → urgency, not retention. A — wrong because sweating is M3 on sweat glands — predicted side effect. C — wrong because GI cramping is M3 smooth muscle — predicted. D — wrong because flushing is M3-mediated vasodilation — predicted. E — wrong because urinary urgency is M3 detrusor contraction — predicted, not absent.",
+      "basic"
+     ],
+     [
+      "Bethanechol is contraindicated in patients with which condition?",
+      [
+       "Postoperative urinary retention without mechanical obstruction",
+       "Neurogenic bladder with detrusor underactivity",
+       "Sjögren syndrome xerostomia requiring saliva stimulation",
+       "Acute angle-closure glaucoma needing urgent miosis",
+       "Mechanical bowel obstruction or BPH outlet obstruction"
+      ],
+      4,
+      "Forcing smooth-muscle contraction against a mechanical obstruction risks rupture or severe pain. Always rule out mechanical obstruction (BPH, stricture, ileus, fecal impaction) before giving bethanechol. Other contraindications: active asthma (M3 bronchoconstriction), peptic ulcer disease, recent GI surgery (anastomotic stress), hyperthyroidism (atrial fibrillation precipitation). A — wrong because this is the INDICATION, not contraindication. B — wrong because neurogenic bladder may be a bethanechol indication. C — wrong because Sjögren xerostomia is pilocarpine, not bethanechol. D — wrong because acute angle-closure is an INDICATION for pilocarpine.",
+      "basic"
+     ],
+     [
+      "A patient with severe Sjögren syndrome has tried artificial saliva without adequate relief. The next-line oral pharmacotherapy is:",
+      [
+       "Atropine ophthalmic drops",
+       "Scopolamine transdermal patch",
+       "Tiotropium inhalation powder",
+       "Glycopyrrolate by IV route",
+       "Pilocarpine or cevimeline orally"
+      ],
+      4,
+      "Oral pilocarpine and cevimeline are M3 agonists that stimulate residual salivary gland tissue. Both FDA-approved for Sjögren xerostomia. Cevimeline has slightly better M3 selectivity (less M2 cardiac effect). Start low and titrate up; counsel about predictable muscarinic side effects. A — wrong because atropine BLOCKS muscarinic — would WORSEN xerostomia. B — wrong because scopolamine is anticholinergic. C — wrong because tiotropium is anticholinergic for COPD. D — wrong because glycopyrrolate is anticholinergic.",
+      "basic"
+     ],
+     [
+      "A 6-year-old with mild persistent asthma needs both a controller and a rescue inhaler. The rescue inhaler should be:",
+      [
+       "Methacholine — short-acting bronchodilator",
+       "Carbachol nebulized",
+       "Tiotropium — long-acting muscarinic antagonist (LAMA)",
+       "Pilocarpine inhaler",
+       "Albuterol — short-acting β2 agonist"
+      ],
+      4,
+      "Bronchodilation in asthma rescue is via β2 agonism, not by manipulating cholinergic tone. Albuterol (SABA) is first-line rescue. Methacholine is a PROVOCATIVE muscarinic agonist — it CAUSES bronchospasm and would worsen asthma. The cholinergic side of bronchospasm management is via M3 ANTAGONISTS (ipratropium SAMA, tiotropium LAMA), not agonists. A — wrong because methacholine causes bronchospasm — opposite. B — wrong because carbachol would cause bronchospasm. C — wrong because tiotropium is LAMA for maintenance, not rescue. D — wrong because pilocarpine would cause bronchoconstriction.",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -12189,6 +13939,194 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A patient with TCA-related anticholinergic toxicity has confusion, dilated pupils, dry skin, urinary retention, and tachycardia. After sodium bicarbonate for the cardiotoxicity, the next consideration for the central anticholinergic features is:",
+      [
+       "Pyridostigmine",
+       "Neostigmine",
+       "Physostigmine",
+       "Edrophonium",
+       "Donepezil"
+      ],
+      2,
+      "Physostigmine is the tertiary-amine AChE inhibitor that crosses the BBB and reverses BOTH central and peripheral muscarinic blockade. Textbook antidote for anticholinergic toxicity (jimson weed, scopolamine, atropine, first-gen antihistamines). For TCA overdose specifically, physostigmine has been associated with asystole — sodium bicarbonate first (for Na+-channel blockade and QRS widening); physostigmine cautious and only for refractory central toxicity. Quaternary amines (neostigmine, pyridostigmine) don't cross BBB. A — wrong because pyridostigmine doesn't cross BBB. B — wrong because neostigmine doesn't cross BBB. D — wrong because edrophonium is diagnostic (Tensilon), not therapeutic. E — wrong because donepezil is for Alzheimer's, not acute toxicity. [LO 11.1 — Physostigmine]",
+      "basic"
+     ],
+     [
+      "Pyridostigmine differs from physostigmine in that pyridostigmine:",
+      [
+       "Is a quaternary amine",
+       "Crosses the BBB and treats Alzheimer's",
+       "Is irreversible like organophosphates",
+       "Has no effect on autonomic ganglia",
+       "Is selective for nicotinic receptors only"
+      ],
+      0,
+      "Pyridostigmine = quaternary amine = charged = does NOT cross BBB. Long-acting AChE inhibitor used for chronic myasthenia gravis maintenance, raising synaptic ACh at the NM junction to compensate for autoantibody-reduced receptor density. Onset 30-60 min, duration 3-6 hours, oral dosing. Side effects: predictable muscarinic excess (SLUDGE/DUMBELS). Also prophylaxis against organophosphate nerve agents (military) — reversible occupation 'protects' AChE from irreversible OP binding. B — wrong because pyridostigmine is quaternary — doesn't cross BBB. Donepezil/rivastigmine/galantamine are the BBB-crossing Alzheimer's drugs. C — wrong because pyridostigmine is reversible. D — wrong because AChE inhibition affects autonomic ganglia too. E — wrong because AChE inhibition raises ACh at all cholinergic synapses — M and N effects. [LO 11.1 — Pyridostigmine]",
+      "basic"
+     ],
+     [
+      "Neostigmine + glycopyrrolate is given at the end of surgery to reverse non-depolarizing NM blockade. The role of glycopyrrolate is to:",
+      [
+       "Enhance neostigmine's neuromuscular junction effect",
+       "Prevent malignant hyperthermia in susceptible patients",
+       "Sedate the patient during anesthetic emergence",
+       "Provide additional analgesia after surgical procedures",
+       "Block muscarinic side effects of the AChE inhibitor"
+      ],
+      4,
+      "Neostigmine raises ACh at ALL cholinergic synapses — including the NM junction (what we want, to reverse paralysis) AND muscarinic synapses (bradycardia, salivation, GI cramping, bronchospasm). Glycopyrrolate is an M antagonist that DOESN'T cross the BBB (quaternary), blocking peripheral muscarinic side effects of neostigmine without sedating the patient. Kinetics matched. Atropine is the alternative — works centrally too. A — wrong because glycopyrrolate BLOCKS muscarinic — doesn't enhance NM reversal. B — wrong because dantrolene is for malignant hyperthermia. C — wrong because glycopyrrolate doesn't sedate (quaternary). D — wrong because no analgesic effect. [LO 11.1 — Neostigmine Reversal]",
+      "basic"
+     ],
+     [
+      "A patient with myasthenia gravis on stable pyridostigmine develops worsening weakness. Two possibilities: 'myasthenic crisis' (under-treatment) and 'cholinergic crisis' (over-treatment). The bedside differentiation is:",
+      [
+       "Sodium bicarbonate trial",
+       "Methacholine challenge",
+       "Edrophonium",
+       "Atropine challenge",
+       "Vagal maneuver"
+      ],
+      2,
+      "Edrophonium is a very short-acting AChE inhibitor (onset seconds, duration ~10 min). Small IV dose: in myasthenic crisis (too little ACh at NMJ), strength improves transiently → diagnostic for under-treatment. In cholinergic crisis (pyridostigmine overdose), more ACh worsens weakness. Largely replaced by autoantibody testing now, but still tested. A — wrong because no role for bicarbonate. B — wrong because methacholine causes bronchospasm — wrong test. D — wrong because atropine challenge isn't a myasthenia test. E — wrong because vagal maneuvers are for SVT. [LO 11.2 — Edrophonium]",
+      "basic"
+     ],
+     [
+      "Donepezil, rivastigmine, and galantamine are used in Alzheimer disease because they:",
+      [
+       "Reverse the underlying amyloid plaque pathology",
+       "Prevent further cortical neuronal loss and death",
+       "Cross the BBB and act primarily on NMJ receptors",
+       "Raise synaptic ACh in cortical and limbic circuits",
+       "Act as direct M1 muscarinic receptor agonists"
+      ],
+      3,
+      "Alzheimer involves substantial loss of basal forebrain cholinergic neurons projecting to cortex/hippocampus. AChE inhibitors (tertiary, BBB-crossing) raise synaptic ACh in remaining synapses → modest cognitive symptom relief. Do NOT modify disease progression. Side effects: muscarinic excess (nausea, diarrhea, vivid dreams, bradycardia — caution with conduction disease). Memantine (NMDA antagonist) is the other Alzheimer drug. A — wrong because AChE inhibitors don't reverse amyloid — aducanumab/lecanemab (anti-amyloid mAbs) do. B — wrong because no disease-modifying effect. C — wrong because centrally acting, not at NMJ. E — wrong because INDIRECT-acting, not direct M1 agonists. [LO 11.1 — Alzheimer AChE Inhibitors]",
+      "basic"
+     ],
+     [
+      "Organophosphate nerve agents (sarin, VX, parathion) inhibit AChE IRREVERSIBLY by:",
+      [
+       "Reversible competitive binding to the active site",
+       "Covalent phosphorylation of the active-site serine",
+       "Allosteric receptor blockade",
+       "Direct AChE protein degradation",
+       "Blockade of ACh release at the presynaptic terminal"
+      ],
+      1,
+      "OPs phosphorylate the active-site serine of AChE covalently. Initial bond is potentially reversible — pralidoxime (2-PAM) can pull the phosphate off and regenerate the enzyme. Over hours, 'aging' occurs (loss of an alkyl group from the phosphate), converting to permanent bond. After aging, only de novo enzyme synthesis restores function — takes weeks. Pralidoxime must be given EARLY. Aging time: sarin minutes-hours, VX hours, parathion ~30 min. A — wrong because IRREVERSIBLE after aging. C — wrong because OPs hit the active site, not allosteric. D — wrong because no protein degradation. E — wrong because OPs don't affect ACh release. [LO 11.2 — Organophosphate Mechanism]",
+      "basic"
+     ],
+     [
+      "A 45-year-old farmer presents with miosis, salivation, lacrimation, urination, diarrhea, and muscle fasciculations after pesticide exposure. The MOST appropriate initial pharmacotherapy is:",
+      [
+       "Atropine high-dose monotherapy",
+       "Atropine plus pralidoxime together",
+       "Pralidoxime monotherapy alone",
+       "Physostigmine high-dose IV bolus",
+       "Pilocarpine ophthalmic application"
+      ],
+      1,
+      "OP poisoning = cholinergic crisis (SLUDGE/DUMBELS + fasciculations from NM nicotinic over-stimulation). Treatment: (1) ATROPINE high doses titrated to drying of secretions (can take grams) blocks MUSCARINIC features. (2) PRALIDOXIME regenerates AChE before aging — must give early. Atropine ALONE doesn't address nicotinic features (fasciculations, respiratory muscle weakness). Pralidoxime ALONE doesn't help the drowning-in-secretions patient. Both together + decontamination + supportive care. A — wrong because atropine alone misses nicotinic features. C — wrong because pralidoxime alone is too slow for the crisis. D — wrong because physostigmine WORSENS cholinergic crisis. E — wrong because pilocarpine WORSENS — muscarinic agonist. [LO 11.2 — OP Antidote]",
+      "basic"
+     ],
+     [
+      "Sugammadex reverses neuromuscular blockade by:",
+      [
+       "Encapsulating rocuronium molecules in a 1:1 complex",
+       "Inhibiting AChE to raise synaptic ACh",
+       "Direct muscarinic blockade",
+       "Blocking calcium release at the NM junction",
+       "Stimulating new ACh release"
+      ],
+      0,
+      "Sugammadex is a γ-cyclodextrin that encapsulates rocuronium (and vecuronium) molecules 1:1, removing free drug from plasma and the NM junction. Reverses NM blockade within minutes, even at deep block — much faster than neostigmine. No muscarinic effects (doesn't act via AChE inhibition), so no glycopyrrolate co-administration needed. Doesn't work on succinylcholine or benzylisoquinoline blockers (cisatracurium). Rare anaphylaxis. B — wrong because this is the neostigmine mechanism, not sugammadex. C — wrong because no muscarinic activity. D — wrong because no Ca2+ blockade. E — wrong because no ACh release stimulation. [LO 11.3 — Sugammadex]",
+      "basic"
+     ],
+     [
+      "Echothiophate, a long-acting IRREVERSIBLE AChE inhibitor, was used topically for which condition (largely historical due to systemic side effects)?",
+      [
+       "Chronic open-angle glaucoma maintenance",
+       "Acute angle-closure glaucoma in ED",
+       "Anticholinergic toxicity overdose reversal",
+       "Myasthenia gravis daily maintenance",
+       "Alzheimer disease symptomatic treatment"
+      ],
+      0,
+      "Echothiophate is an organophosphate-class irreversible AChE inhibitor used as eyedrops for chronic open-angle glaucoma — long action allowed once-daily dosing. Largely phased out due to systemic side effects (eyedrops drain into nasolacrimal duct, get absorbed), cataract formation, and association with prolonged succinylcholine paralysis (echothiophate inhibits plasma cholinesterase). B — wrong because acute closed-angle is pilocarpine + IV mannitol + β-blocker. C — wrong because anticholinergic overdose is physostigmine. D — wrong because myasthenia is pyridostigmine. E — wrong because Alzheimer is donepezil/rivastigmine/galantamine. [LO 11.1 — Echothiophate]",
+      "basic"
+     ],
+     [
+      "A patient with myasthenia takes pyridostigmine 60 mg every 4 hours. He presents with worsening weakness, profuse salivation, abdominal cramps, and diarrhea. The MOST likely diagnosis is:",
+      [
+       "Myasthenic crisis from chronic under-treatment",
+       "Cholinergic crisis from pyridostigmine overdose",
+       "Acute ischemic stroke with motor weakness",
+       "Acute myocardial infarction with vagal symptoms",
+       "Generalized tetanus from open wound infection"
+      ],
+      1,
+      "Weakness PLUS muscarinic excess (salivation, cramping, diarrhea — DUMBELS-like) points to cholinergic crisis from pyridostigmine OVERDOSE. Excess ACh at NMJ paradoxically depolarizes and weakens muscle — like chronic low-dose succinylcholine. Hold pyridostigmine. Atropine for muscarinic features. Edrophonium test can confirm (worsens cholinergic crisis). Distinguishing myasthenic (under-treatment, weakness alone) from cholinergic (over-treatment, weakness + muscarinic excess) is exam classic. A — wrong because myasthenic crisis has WEAKNESS alone, no muscarinic excess. More pyridostigmine here worsens cholinergic crisis. C — wrong because no focal deficits. D — wrong because no chest pain. E — wrong because tetanus is spasm/rigidity, not weakness + DUMBELS. [LO 11.2 — Cholinergic Crisis]",
+      "basic"
+     ],
+     [
+      "Reversible AChE inhibitors bind the enzyme via:",
+      [
+       "A transient bond to the serine residue",
+       "Covalent phosphorylation",
+       "Allosteric occupation of a distant site",
+       "Direct denaturation of the enzyme",
+       "Antibody-mediated neutralization"
+      ],
+      0,
+      "Reversible AChE inhibitors (physostigmine, neostigmine, pyridostigmine, edrophonium, donepezil) form transient bonds with the serine residue at the active site. Bond turnover restores enzyme activity within hours (carbamates: physostigmine/neostigmine/pyridostigmine) or after dissociation (edrophonium: minutes). IRREVERSIBLE (organophosphates) covalently phosphorylate the serine, with aging converting to permanent. B — wrong because covalent phosphorylation is IRREVERSIBLE OP. C — wrong because no allosteric inhibition. D — wrong because no denaturation. E — wrong because no antibody mechanism. [LO 11.1 — Reversible vs Irreversible]",
+      "basic"
+     ],
+     [
+      "Edrophonium has very short duration of action (~10 min). Its primary clinical use is:",
+      [
+       "Chronic myasthenia maintenance",
+       "Anticholinergic toxicity reversal",
+       "Diagnostic Tensilon test",
+       "Alzheimer disease treatment",
+       "Postoperative NM blockade reversal"
+      ],
+      2,
+      "Edrophonium binds AChE via non-covalent electrostatic interaction — very short duration (~5-10 min). Perfect for diagnostic testing because if the test is wrong (or patient in cholinergic crisis), the drug wears off quickly. Largely replaced by autoantibody and electrophysiology testing now. A — wrong because too short-acting for chronic maintenance. B — wrong because physostigmine for anticholinergic toxicity. D — wrong because donepezil/rivastigmine for Alzheimer. E — wrong because neostigmine for postop reversal. [LO 11.2 — Edrophonium]",
+      "basic"
+     ],
+     [
+      "A 70-year-old with Alzheimer on donepezil reports new bradycardia (HR 42) and syncope. The MOST appropriate management is:",
+      [
+       "Discontinue donepezil and consider alternative therapy",
+       "Increase donepezil dose for better cognitive effect",
+       "Add a β-blocker to counteract the bradycardia",
+       "Start atropine prophylaxis for chronic protection",
+       "Reassure the patient that this is unrelated"
+      ],
+      0,
+      "AChE inhibitors raise ACh at M2 on SA/AV nodes → bradycardia, prolonged PR, AV block, syncope. Patients with pre-existing conduction disease (sick sinus, AV block) are most vulnerable. Standard care: discontinue the AChE inhibitor; if cognition matters more, consider switching to memantine (NMDA antagonist, no cholinergic effect) or accepting symptom severity. Atropine prophylaxis isn't standard. β-blocker worsens. B — wrong because increasing dose worsens bradycardia. C — wrong because β-blocker worsens bradycardia. D — wrong because chronic atropine isn't standard. E — wrong because donepezil DOES cause bradycardia — known significant side effect. [LO 11.2 — Donepezil ADEs]",
+      "basic"
+     ],
+     [
+      "The pralidoxime mechanism in organophosphate poisoning is:",
+      [
+       "Direct muscarinic blockade",
+       "Regeneration of phosphorylated AChE",
+       "Activation of latent ACh stores",
+       "Stimulation of new AChE enzyme synthesis",
+       "Direct antagonism of the OP molecule at its binding site"
+      ],
+      1,
+      "Pralidoxime (2-PAM) has a strong nucleophilic oxime group that attacks the phosphorus atom bound to AChE serine. Given BEFORE aging, pralidoxime pulls the phosphate off, regenerating active enzyme. Timing critical — sarin ages in minutes-hours, parathion ~30 min, VX hours. After aging, only new enzyme synthesis restores function. Pralidoxime is given with atropine — atropine handles muscarinic symptoms while pralidoxime regenerates the enzyme. A — wrong because muscarinic blockade is ATROPINE. C — wrong because no effect on ACh stores. D — wrong because pralidoxime regenerates EXISTING enzyme, doesn't make new. E — wrong because pralidoxime removes OP from AChE, doesn't antagonize at OP's binding site. [LO 11.2 — Pralidoxime]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -12482,6 +14420,220 @@ const QUIZ = [
       ],
       1,
       "Correct (B). Concomitant oral potassium chloride is the named major interaction - reduced GI motility raises local KCl mucosal injury risk. (A) inhaled corticosteroids are routinely co-used without a major-interaction flag. (C) beta-2 agonists are commonly combined with antimuscarinics in COPD. (D) no major interaction with acetaminophen is described. (E) no interaction with vitamin D is described.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 4-year-old presents with hot, dry, flushed skin; dilated pupils; urinary retention; and is delirious after eating berries from a Jimson weed plant. The MOST appropriate antidote is:",
+      [
+       "Pralidoxime",
+       "Naloxone",
+       "Physostigmine",
+       "Flumazenil",
+       "Atropine"
+      ],
+      2,
+      "Jimson weed (Datura stramonium) contains atropine, scopolamine, and hyoscyamine — classical muscarinic antagonists. The presentation is textbook anticholinergic toxidrome: hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter, full as a flask. Physostigmine is a tertiary-amine reversible AChE inhibitor that crosses the BBB, reversing central AND peripheral muscarinic blockade. Antidote of choice. A — wrong because pralidoxime regenerates AChE bound by ORGANOPHOSPHATES — opposite problem (cholinergic crisis). B — wrong because naloxone is opioid antagonist — wrong toxidrome. D — wrong because flumazenil reverses benzodiazepines — wrong toxidrome. E — wrong because atropine IS the toxin here — more would worsen the toxidrome. [LO 12.2 — Anticholinergic Toxidrome]",
+      "basic"
+     ],
+     [
+      "Atropine is used in symptomatic bradycardia. Its mechanism is:",
+      [
+       "Direct β1 receptor agonism on the SA node",
+       "Blockade of M2 receptors at the SA node",
+       "Calcium channel activation in pacemaker cells",
+       "Direct positive inotropic effect on the myocardium",
+       "α1-mediated vasoconstriction with reflex tachycardia"
+      ],
+      1,
+      "M2 on SA node couples to Gi → lower cAMP + opened GIRK K+ channels → slower pacemaker depolarization. Atropine blocks M2, removing this parasympathetic brake, allowing the SA node's intrinsic rate to emerge. Standard dose: 0.5 mg IV, may repeat to 3 mg total. WARNING: in second-degree type II and third-degree AV block, atropine can paradoxically worsen by speeding atrial rate without improving infranodal conduction. A — wrong because atropine has no β-agonist activity. C — wrong because no calcium channel activation. D — wrong because no direct inotropy. E — wrong because no α1 effect. [LO 12.1 — Atropine Mechanism]",
+      "basic"
+     ],
+     [
+      "Ipratropium and tiotropium are inhaled M3 antagonists used for:",
+      [
+       "Asthma rescue inhaler",
+       "COPD bronchodilation",
+       "Acute angle-closure glaucoma",
+       "Treatment of motion sickness",
+       "Bradycardia treatment"
+      ],
+      1,
+      "Ipratropium (short-acting muscarinic antagonist, SAMA) and tiotropium (long-acting, LAMA) are inhaled quaternary anticholinergics. M3 blockade → bronchodilation. Tiotropium is the GOLD foundation maintenance for moderate-severe COPD; ipratropium is rescue/adjunct. Quaternary structure = minimal systemic absorption = minimal systemic anticholinergic side effects. Mild local: dry mouth, urinary retention (in BPH patients), narrow-angle glaucoma caution. A — wrong because asthma rescue is SABA (albuterol); tiotropium is approved as adjunct in asthma not rescue. C — wrong because glaucoma is pilocarpine — opposite direction. D — wrong because scopolamine is for motion sickness. E — wrong because atropine is for bradycardia (systemic). [LO 12.1 — Inhaled Anticholinergics]",
+      "basic"
+     ],
+     [
+      "Scopolamine transdermal patch is FDA-approved for:",
+      [
+       "COPD bronchodilation",
+       "Urinary urgency",
+       "Treatment of glaucoma",
+       "Motion sickness prophylaxis",
+       "Postoperative pain control"
+      ],
+      3,
+      "Scopolamine is a tertiary-amine muscarinic antagonist that crosses the BBB. Transdermal patch (apply behind ear, lasts ~3 days) prevents motion sickness by blocking M receptors in the vestibular nuclei and vomiting center. Side effects: dry mouth, drowsiness, blurred vision, urinary retention. Caution in elderly (delirium risk). Also used for anticholinergic premedication and end-of-life secretion control. A — wrong because inhaled tiotropium/ipratropium for COPD. B — wrong because oxybutynin/tolterodine for urinary urgency. C — wrong because scopolamine WORSENS glaucoma (mydriatic). E — wrong because no analgesic effect. [LO 12.1 — Scopolamine]",
+      "basic"
+     ],
+     [
+      "Oxybutynin is used in elderly patients with caution because:",
+      [
+       "It causes profound hypotension",
+       "It causes profound bradycardia",
+       "It interacts with warfarin",
+       "It causes hyperkalemia",
+       "As a tertiary-amine anticholinergic it crosses the BBB and adds to anticholinergic burden"
+      ],
+      4,
+      "Oxybutynin (M3 antagonist for overactive bladder) is tertiary, crosses BBB, contributes to anticholinergic burden in elderly → confusion, delirium, falls, accelerated cognitive decline. Listed on the Beers Criteria as potentially inappropriate in elderly. Quaternary alternatives (trospium) or M3-selective agents (solifenacin, darifenacin) have better cognitive safety profiles. Mirabegron (β3 agonist) is a non-anticholinergic alternative for overactive bladder. A — wrong because oxybutynin doesn't cause significant hypotension. B — wrong because anticholinergics cause TACHYcardia, not bradycardia. C — wrong because no significant warfarin interaction. D — wrong because no significant hyperkalemia effect. [LO 12.2 — Anticholinergic Burden]",
+      "basic"
+     ],
+     [
+      "Atropine treatment of bradycardia is CONTRAINDICATED or used with extreme caution in:",
+      [
+       "Sinus bradycardia with stable blood pressure",
+       "Bradycardia from drug overdose",
+       "Second-degree type II or third-degree AV block",
+       "Postoperative bradycardia from vagal stimulation",
+       "Inferior MI with vagally-mediated bradycardia"
+      ],
+      2,
+      "Atropine works by blocking M2 at the SA node — useful when the block is at SA/AV nodal level (intact infranodal conduction). In second-degree type II or third-degree AV block, the block is INFRANODAL (in His-Purkinje). Atropine speeds the SA rate but the infranodal block doesn't improve — paradoxically, increased atrial rate can worsen AV conduction ratio and drop ventricular rate. These cases need transcutaneous pacing → transvenous pacing, not atropine. A — wrong because this is the typical atropine indication. B — wrong because atropine can be used in drug-induced vagal bradycardia. D — wrong because vagal postop bradycardia is the classic atropine indication. E — wrong because inferior MI vagal bradycardia responds well to atropine — it's NOT the contraindicated scenario. [LO 12.2 — Atropine AV Block]",
+      "basic"
+     ],
+     [
+      "The mnemonic for anticholinergic toxidrome — 'hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter, full as a flask' — maps to which receptor mechanism?",
+      [
+       "α1 adrenergic receptor blockade",
+       "β2 adrenergic receptor stimulation",
+       "Nicotinic NN ganglionic blockade",
+       "Muscarinic blockade at multiple organs",
+       "5-HT2A serotonin receptor blockade"
+      ],
+      3,
+      "Each feature maps to muscarinic blockade: hot (anhidrosis from M3 block on sweat glands → hyperthermia), dry (no salivation, lacrimation, sweating — M3 on glands), red (cutaneous vasodilation as compensatory thermoregulation), blind (mydriasis from pupillary sphincter M3 block + cycloplegia from ciliary M3 block), mad (central anticholinergic syndrome — confusion, hallucinations, agitation; M block in CNS), full (urinary retention from M3 block on detrusor + ileus from M3 block on gut smooth muscle). Plus tachycardia (M2 block on SA node). A — wrong because α1 blockade gives the OPPOSITE — vasodilation, hypotension, miosis. B — wrong because β2 doesn't produce this toxidrome. C — wrong because NN blockade is a ganglion blocker — different pattern. E — wrong because 5-HT2A isn't the muscarinic syndrome. [LO 12.2 — Anticholinergic Mnemonic]",
+      "basic"
+     ],
+     [
+      "Which class of drugs is the LEADING cause of accidental anticholinergic toxicity in elderly patients?",
+      [
+       "Opioid analgesics like oxycodone",
+       "HMG-CoA reductase statin agents",
+       "Cardiac β-blockers like metoprolol",
+       "ACE inhibitors like lisinopril",
+       "First-generation H1 antihistamines"
+      ],
+      4,
+      "First-generation H1 antihistamines have strong anticholinergic activity at therapeutic doses — diphenhydramine (Benadryl, Tylenol PM, Unisom), hydroxyzine (Vistaril, Atarax), chlorpheniramine. These are ubiquitous OTC ingredients and a common source of intentional or accidental anticholinergic overdose. Other significant contributors: TCAs (amitriptyline, nortriptyline), low-potency antipsychotics (chlorpromazine), atypicals (olanzapine, clozapine), antiparkinsonian anticholinergics (benztropine, trihexyphenidyl), urinary antispasmodics (oxybutynin), antiemetics (promethazine). A — wrong because opioids cause CNS depression + miosis, not anticholinergic. B — wrong because statins don't have anticholinergic activity. C — wrong because β-blockers don't have significant anticholinergic activity. D — wrong because ACE inhibitors don't have anticholinergic activity. [LO 12.2 — Anticholinergic Burden]",
+      "basic"
+     ],
+     [
+      "Tropicamide eyedrops produce mydriasis for ophthalmologic exam by:",
+      [
+       "α1 stimulation of pupillary dilator",
+       "Direct M3 agonism",
+       "β2 agonism in the iris",
+       "M3 blockade of pupillary sphincter",
+       "Pilocarpine-like contraction"
+      ],
+      3,
+      "Tropicamide is a short-acting M3 antagonist (~4-6 hours of mydriasis) — preferred for routine fundoscopy because the patient's vision recovers within a day. Atropine eyedrops produce mydriasis lasting 7-14 days — too long for routine diagnostic use. Cyclopentolate is intermediate. Phenylephrine (α1 agonist) is also used for mydriasis — often combined with a short-acting muscarinic blocker for maximum effect. A — wrong because phenylephrine is the α1 mydriatic. B — wrong because M3 agonism causes MIOSIS, opposite. C — wrong because no β2 effect on iris. E — wrong because pilocarpine causes miosis. [LO 12.1 — Tropicamide]",
+      "basic"
+     ],
+     [
+      "A patient with COPD is started on tiotropium. The patient also has BPH. The MOST important counseling point is:",
+      [
+       "Tiotropium is contraindicated with BPH",
+       "Tiotropium will treat both COPD and BPH simultaneously",
+       "Stop all other BPH medications",
+       "Switch immediately to oral medications",
+       "Monitor for worsening urinary symptoms"
+      ],
+      4,
+      "Tiotropium is a quaternary inhaled anticholinergic — minimal systemic absorption keeps systemic anticholinergic effects low. BUT enough drug can be swallowed (after inhalation deposition in the upper airway) to produce mild systemic effects. In BPH (already restricted outflow), M3 blockade on detrusor can worsen retention. Counsel patients to report worsening urinary symptoms; usually well tolerated but monitor. Same caution applies to narrow-angle glaucoma patients (anticholinergic mydriasis can precipitate angle closure). A — wrong because not absolutely contraindicated. B — wrong because tiotropium is not a BPH treatment. C — wrong because BPH meds shouldn't be stopped. D — wrong because inhaled is appropriate for COPD. [LO 12.2 — Tiotropium Cautions]",
+      "basic"
+     ],
+     [
+      "Atropine is the antidote for organophosphate poisoning because it:",
+      [
+       "Regenerates AChE",
+       "Acts as a partial cholinergic agonist",
+       "Removes the OP from cholinergic synapses",
+       "Stimulates new AChE synthesis",
+       "Competitively blocks muscarinic receptors, blunting the muscarinic symptoms"
+      ],
+      4,
+      "In OP poisoning, AChE is irreversibly inhibited → ACh accumulates → muscarinic and nicotinic overstimulation. Atropine blocks the MUSCARINIC features (DUMBELS — salivation, lacrimation, bronchospasm, bradycardia, miosis). Doses are LARGE (titrate to drying secretions, can take grams). Atropine does NOT touch the nicotinic features (fasciculations, muscle weakness, respiratory paralysis) — that's why pralidoxime (AChE regenerator) is added. Atropine + pralidoxime is the dual-antidote strategy. A — wrong because pralidoxime regenerates AChE. B — wrong because atropine is a pure competitive antagonist, not partial agonist. C — wrong because atropine doesn't remove OP from synapses. D — wrong because no new AChE synthesis. [LO 12.1 — Atropine in OP Poisoning]",
+      "basic"
+     ],
+     [
+      "Benztropine and trihexyphenidyl are central anticholinergic agents used in:",
+      [
+       "Asthma maintenance therapy",
+       "Parkinson tremor or drug-induced EPS",
+       "Acute angle-closure glaucoma treatment",
+       "Symptomatic bradycardia in heart block",
+       "Motion sickness prophylaxis"
+      ],
+      1,
+      "Benztropine and trihexyphenidyl are tertiary-amine anticholinergics that cross the BBB. In Parkinson disease, dopamine deficiency unbalances the striatal dopamine-ACh ratio (ACh excess relative to DA). Blocking M receptors centrally restores some balance, helping tremor and dystonia (less so for bradykinesia). Also used for acute dystonic reactions from antipsychotics (D2 blockade tips the balance toward ACh excess → dystonia). Side effects predictable: dry mouth, constipation, urinary retention, confusion/delirium (especially elderly). A — wrong because inhaled anticholinergics for COPD/asthma. C — wrong because pilocarpine for acute closed-angle glaucoma. D — wrong because atropine for bradycardia. E — wrong because scopolamine for motion sickness. [LO 12.1 — Central Anticholinergics]",
+      "basic"
+     ],
+     [
+      "A 72-year-old with chronic stable COPD on tiotropium presents with new red, painful eye and blurred vision. The MOST likely diagnosis is:",
+      [
+       "Acute angle-closure glaucoma precipitation",
+       "Bacterial conjunctivitis from contamination",
+       "Optic neuritis from inflammatory cause",
+       "Allergic conjunctivitis from medication",
+       "Acute ischemic stroke with visual symptoms"
+      ],
+      0,
+      "Tiotropium is inhaled, but enough drug deposits in the upper airway and gets swallowed/absorbed to produce mild systemic anticholinergic effects. Mydriasis can precipitate acute angle-closure in patients with narrow anterior chamber angles. Symptoms: red painful eye, blurred vision, halos around lights, nausea, IOP >40. Black-box warning. Counsel patients with narrow-angle history. Emergency: pilocarpine + IV mannitol + β-blocker drops + laser iridotomy. B — wrong because conjunctivitis doesn't typically cause blurred vision acutely. C — wrong because optic neuritis is gradual vision loss. D — wrong because allergic gives itching, not pain. E — wrong because stroke would have other neurologic signs. [LO 12.2 — Glaucoma Precipitation]",
+      "basic"
+     ],
+     [
+      "Solifenacin and darifenacin are M3-selective antagonists used for:",
+      [
+       "Asthma rescue",
+       "Parkinson disease",
+       "Acute glaucoma",
+       "Overactive bladder",
+       "Postoperative ileus"
+      ],
+      3,
+      "Solifenacin (Vesicare) and darifenacin (Enablex) are M3-selective antagonists for overactive bladder. M3 selectivity reduces M1-mediated cognitive side effects (compared to oxybutynin) and M2-mediated cardiac effects. Important alternative for elderly patients where anticholinergic burden matters. Mirabegron (β3 agonist) is a non-anticholinergic alternative that relaxes detrusor via β3. A — wrong because asthma rescue is albuterol. B — wrong because Parkinson uses benztropine, trihexyphenidyl. C — wrong because pilocarpine for acute glaucoma. E — wrong because no role in postop ileus (would worsen it). [LO 12.1 — M3-Selective Antagonists]",
+      "basic"
+     ],
+     [
+      "Acute angle-closure glaucoma is treated with which COMBINATION (mechanism-based)?",
+      [
+       "Topical pilocarpine plus timolol and brimonidine",
+       "IV insulin plus dextrose infusion drip",
+       "Topical atropine eyedrops as monotherapy",
+       "Oral corticosteroids tapered over weeks",
+       "Therapeutic anticoagulation with IV heparin"
+      ],
+      0,
+      "Acute angle-closure is multi-mechanism emergency. Pilocarpine (M3 agonist) constricts the pupil → pulls iris away from angle. Timolol (β-blocker) reduces aqueous humor production. Brimonidine (α2 agonist) further reduces aqueous production. Acetazolamide (oral or IV carbonic anhydrase inhibitor) reduces aqueous production. Mannitol (IV osmotic agent) draws fluid out of the eye. Definitive treatment: laser peripheral iridotomy. This integration ties together cholinergic, adrenergic, and other classes. B — wrong because no role for insulin/dextrose. C — wrong because atropine WORSENS angle-closure (mydriatic). D — wrong because steroids aren't acute glaucoma treatment. E — wrong because no role for anticoagulation. [Integration: Glaucoma Combination]",
+      "basic"
+     ],
+     [
+      "Which scenario BEST illustrates the principle that the same receptor blocked in one tissue and stimulated in another can have OPPOSITE clinical effects?",
+      [
+       "M3 antagonism dilates pupils but risks angle closure",
+       "β1 blockade slows HR and lowers renin in parallel",
+       "α1 central sedation vs peripheral hypertension treatment",
+       "β2 stimulation always produces bronchodilation",
+       "α2 stimulation always lowers systemic blood pressure"
+      ],
+      0,
+      "Tropicamide's M3 antagonism produces mydriasis — useful for diagnostic fundoscopy in most patients, but in a patient with shallow anterior chamber angle, the same mydriasis can precipitate acute angle-closure glaucoma. Same drug, same receptor effect, opposite clinical valence based on patient factors. This is why screening pre-existing glaucoma matters before any mydriatic. Same principle: tiotropium (inhaled M3 antagonist for COPD) precipitating angle-closure in a susceptible patient. Drug effects are contextual. B — wrong because this illustrates SAME-direction effects in different tissues. C — wrong because central vs peripheral α1 effects don't typically oppose clinically. D — wrong because β2 is consistent in direction but variable in tissue importance. E — wrong because α2 doesn't universally lower BP — central α2 lowers; peripheral α2 has different effects. [Integration: Receptor in Context]",
       "basic"
      ]
     ]
@@ -12787,6 +14939,155 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Succinylcholine produces neuromuscular blockade via:",
+      [
+       "Persistent depolarization at the NM receptor",
+       "Competitive antagonism at the NM nicotinic receptor",
+       "Inhibition of acetylcholinesterase",
+       "Block of voltage-gated sodium channels in motor nerve",
+       "Inhibition of presynaptic ACh release"
+      ],
+      0,
+      "Succinylcholine is two ACh molecules joined — acts as an NM nicotinic AGONIST. Sustained depolarization keeps Na+ channels inactivated → muscle cannot repolarize → flaccid paralysis. Initial brief fasciculations (depolarization), then flaccid block. Onset 30-60 sec; duration 5-10 min. Hydrolyzed by plasma (butyryl-) cholinesterase, NOT by synaptic AChE — that's why AChE inhibitors WORSEN the block (more ACh adds to the depolarization). Indication: rapid-sequence intubation. B — wrong because competitive antagonism is the NON-depolarizing mechanism (rocuronium, vecuronium, cisatracurium). C — wrong because no AChE inhibition. D — wrong because no Na+ channel blockade. E — wrong because no effect on ACh release. [LO 13.1 — Succinylcholine Mechanism]",
+      "basic"
+     ],
+     [
+      "Succinylcholine should be AVOIDED in patients with:",
+      [
+       "Healthy young adult needing rapid intubation",
+       "Burn injury more than 24 hours old",
+       "Active asthma exacerbation on prednisone",
+       "Type 2 diabetes mellitus on metformin",
+       "Mild essential hypertension on lisinopril"
+      ],
+      1,
+      "The brief succinylcholine-induced depolarization normally produces a small (~0.5 mEq/L) K+ release from muscle. In conditions with upregulated EXTRAJUNCTIONAL NM receptors (the receptors that spread beyond the NMJ in denervation states), the K+ release is massive — 4-8 mEq/L jumps → cardiac arrest. At-risk populations: burns > 24 hours (persists ~1 year post-injury), spinal cord injury, denervation, major crush trauma, prolonged immobilization, severe sepsis. Use a non-depolarizing alternative (rocuronium). A — wrong because this is the standard indication. C — wrong because asthma isn't an absolute contraindication. D — wrong because diabetes isn't a contraindication. E — wrong because hypertension isn't a contraindication. [LO 13.2 — Succinylcholine Avoid List]",
+      "basic"
+     ],
+     [
+      "Malignant hyperthermia from succinylcholine (or volatile anesthetics) is treated with:",
+      [
+       "Acetaminophen and cooling blankets only",
+       "Sodium bicarbonate alone",
+       "Dantrolene",
+       "β-blockers",
+       "Atropine"
+      ],
+      2,
+      "Malignant hyperthermia (RYR1 mutation in genetically susceptible patients) triggered by succinylcholine or volatile anesthetics. Presentation: rigidity, hyperthermia (often >40°C), tachycardia, hypercarbia, metabolic + respiratory acidosis. Dantrolene is the specific antidote — directly inhibits Ca2+ release from sarcoplasmic reticulum via RYR1 receptor, breaking the runaway muscle Ca2+ cycling. Plus: cooling, supportive care, bicarbonate for acidosis. Family history is the key red flag. A — wrong because cooling alone is inadequate — dantrolene is essential. B — wrong because bicarbonate helps acidosis but doesn't address the underlying mechanism. D — wrong because β-blockers don't address Ca2+ release. E — wrong because atropine doesn't help. [LO 13.2 — Malignant Hyperthermia]",
+      "basic"
+     ],
+     [
+      "Pseudocholinesterase deficiency results in:",
+      [
+       "Resistance to succinylcholine with no paralysis",
+       "Prolonged paralysis lasting hours, not minutes",
+       "Triggered malignant hyperthermia",
+       "IgE-mediated allergic reaction",
+       "Acute severe hyperkalemia and arrest"
+      ],
+      1,
+      "Succinylcholine is hydrolyzed by PLASMA (pseudo-) cholinesterase, not synaptic AChE. Patients with genetic or acquired pseudocholinesterase deficiency clear succinylcholine slowly — paralysis lasts hours. Management: continue ventilation until drug clears (no specific antidote — neostigmine would worsen). Family history is the clue. Test: dibucaine number (measures pseudocholinesterase activity). Acquired causes: pregnancy, liver disease, malnutrition, MAOI use. A — wrong because OPPOSITE — sensitivity is INCREASED, not decreased. C — wrong because MH is RYR1 mutation, different mechanism. D — wrong because not an allergic reaction. E — wrong because hyperkalemia is a different succinylcholine complication. [LO 13.2 — Pseudocholinesterase]",
+      "basic"
+     ],
+     [
+      "Non-depolarizing NM blockers (rocuronium, vecuronium, cisatracurium) work by:",
+      [
+       "Competitive antagonism at NM nicotinic receptors",
+       "Persistent depolarization of the NM endplate",
+       "Inhibition of presynaptic ACh release",
+       "Direct Ca2+ channel blockade in skeletal muscle",
+       "Inhibition of synaptic acetylcholinesterase"
+      ],
+      0,
+      "Non-depolarizing NMBs are competitive antagonists at NM nicotinic receptors. They block ACh from activating the receptor → no muscle action potential → paralysis. Onset 1-3 min (rocuronium: 60-90 sec — fastest non-depolarizer), duration varies 20-60 min depending on agent. Reversal: neostigmine (raises ACh to outcompete drug — give with glycopyrrolate to block muscarinic effects) OR sugammadex (encapsulates rocuronium/vecuronium directly — much faster, no muscarinic effects). B — wrong because depolarization is the SUCCINYLCHOLINE mechanism. C — wrong because no effect on ACh release. D — wrong because no Ca2+ channel blockade. E — wrong because no AChE inhibition. [LO 13.1 — Non-Depolarizing Mechanism]",
+      "basic"
+     ],
+     [
+      "Pancuronium causes tachycardia primarily via:",
+      [
+       "Direct β1 stimulation at the SA node",
+       "Direct release of stored catecholamines",
+       "M2 vagolytic effect blocking SA node ACh",
+       "Activation of nicotinic ganglion receptors",
+       "Histamine release from mast cell degranulation"
+      ],
+      2,
+      "Pancuronium is an older non-depolarizing NMB with prominent VAGOLYTIC activity — blocks M2 at the SA node, removing parasympathetic restraint, allowing tachycardia. Was a problem in cardiac surgery patients. Newer agents (cisatracurium, vecuronium, rocuronium) are cardiovascularly NEUTRAL — preferred in patients where reflex tachycardia matters. A — wrong because no β1 stimulation. B — wrong because no catecholamine release. D — wrong because ganglionic effects don't drive the tachycardia. E — wrong because histamine release is the OLDER curare-like agents (d-tubocurarine, atracurium minor); pancuronium is mostly vagolytic. [LO 13.2 — Pancuronium ADEs]",
+      "basic"
+     ],
+     [
+      "Atracurium and cisatracurium are unique among NM blockers because they undergo:",
+      [
+       "Renal excretion alone, dependent on GFR",
+       "Direct excretion through the pulmonary route",
+       "Hepatic CYP3A4 metabolism with biliary excretion",
+       "Hofmann elimination, independent of liver and kidney",
+       "No metabolism with unchanged renal excretion"
+      ],
+      3,
+      "Atracurium and cisatracurium undergo Hofmann elimination — spontaneous non-enzymatic breakdown at physiologic pH and 37°C. Independence from liver and kidney makes them ideal in patients with hepatic or renal failure. Cisatracurium is the cleaner isomer (less histamine release than atracurium). One metabolite (laudanosine) can theoretically cross BBB and cause seizures, but not clinically significant at standard doses. A — wrong because they don't depend on renal excretion. B — wrong because not lung-excreted. C — wrong because Hofmann is non-enzymatic, not CYP3A4. E — wrong because they ARE metabolized — by Hofmann breakdown. [LO 13.2 — Hofmann Elimination]",
+      "basic"
+     ],
+     [
+      "Why does neostigmine WORSEN succinylcholine-induced (depolarizing) NM blockade?",
+      [
+       "Neostigmine directly blocks NM nicotinic receptors",
+       "Neostigmine raises ACh, adding to the depolarization",
+       "Neostigmine causes severe acute hyperkalemia",
+       "Neostigmine triggers malignant hyperthermia syndrome",
+       "Neostigmine is metabolized by plasma cholinesterase"
+      ],
+      1,
+      "Neostigmine raises synaptic ACh. With NON-depolarizing blockade (rocuronium et al), the extra ACh OUTCOMPETES the blocker — reversing the block. With DEPOLARIZING blockade (succinylcholine), the receptor is already saturated and stuck in depolarization — extra ACh from neostigmine adds MORE depolarizing stimulus, deepening the block. Wait for plasma cholinesterase to clear succinylcholine, or use sugammadex (which doesn't work on succinylcholine either — different alternative is just supportive ventilation). A — wrong because neostigmine doesn't directly block NM receptors. C — wrong because no hyperkalemia from neostigmine. D — wrong because no MH trigger. E — wrong because metabolism isn't the relevant mechanism. [LO 13.2 — Phase I Block Reversal]",
+      "basic"
+     ],
+     [
+      "Rapid-sequence intubation typically uses which NM blocker as first-line?",
+      [
+       "Pancuronium",
+       "Vecuronium",
+       "Atracurium",
+       "Cisatracurium",
+       "Succinylcholine"
+      ],
+      4,
+      "RSI needs fast onset (30-60 sec) and short duration (so that if intubation fails, the patient resumes breathing quickly). Succinylcholine fits both — 30-60 sec onset, 5-10 min duration. Alternative when succinylcholine is contraindicated (hyperkalemia risk, MH history, pseudocholinesterase deficiency): high-dose rocuronium (1.2 mg/kg) — gets onset down to ~60 sec but lasts much longer (45+ min). Sugammadex is needed for rapid reversal if intubation fails with rocuronium. A — wrong because pancuronium has slow onset, long duration. B — wrong because vecuronium has slower onset than rocuronium. C — wrong because atracurium has slower onset. D — wrong because cisatracurium has slow onset. [LO 13.1 — RSI]",
+      "basic"
+     ],
+     [
+      "Postoperative residual NM blockade (PORC) is a leading cause of postop respiratory complications. Strategies to prevent PORC include:",
+      [
+       "Avoiding NM blocker use in surgery entirely",
+       "Routine postoperative reintubation strategy",
+       "Using higher induction doses of NM blocker",
+       "Quantitative train-of-four monitoring with full reversal",
+       "Empiric naloxone administration after surgery"
+      ],
+      3,
+      "Residual paralysis at extubation → impaired airway protection, hypoventilation, atelectasis, aspiration. Best practice: quantitative train-of-four monitoring (peripheral nerve stimulator) to ensure TOF ratio ≥0.9 before extubation; complete pharmacologic reversal with neostigmine + glycopyrrolate, OR sugammadex (faster, more complete reversal of rocuronium/vecuronium). A — wrong because many surgeries require NM blockade — avoidance isn't always feasible. B — wrong because reintubation is the rescue, not prevention. C — wrong because higher doses worsen the problem. E — wrong because naloxone is for opioids, unrelated. [LO 13.2 — PORC]",
+      "basic"
+     ],
+     [
+      "A patient in the ICU on rocuronium infusion needs reversal at the end of the case. Patient also has severe asthma. Which reversal agent is preferred?",
+      [
+       "Sugammadex",
+       "Neostigmine + atropine",
+       "Edrophonium",
+       "Pyridostigmine",
+       "Physostigmine"
+      ],
+      0,
+      "Neostigmine raises ACh at ALL cholinergic synapses — including M3 on bronchi → bronchospasm risk in asthma. Even with glycopyrrolate, the muscarinic effects are imperfectly blocked. Sugammadex encapsulates rocuronium directly with NO muscarinic activity — no bradycardia, no bronchospasm, no GI cramping. Faster and more complete reversal. Higher cost has been the main limitation. Particularly favored in patients with conduction disease, asthma, or where rapid full reversal matters. B — wrong because neostigmine + atropine carries bronchospasm risk. C — wrong because edrophonium is too short-acting for clinical reversal. D — wrong because pyridostigmine isn't used for postop reversal. E — wrong because physostigmine is for anticholinergic toxicity. [Integration: Sugammadex + Asthma]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -13089,6 +15390,246 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A patient in anaphylaxis receives 0.3 mg IM epinephrine. The lifesaving effect is mediated by which RECEPTOR combination?",
+      [
+       "Pure β2 bronchodilation",
+       "Pure α1 vasoconstriction",
+       "α1, β1, β2",
+       "M3 antagonism",
+       "Pure β1 inotropy"
+      ],
+      2,
+      "Epinephrine is a non-selective adrenergic agonist. In anaphylaxis, all four receptors matter: α1 vasoconstriction reverses shock and reduces mucosal edema; β1 inotropy/chronotropy supports cardiac output; β2 bronchodilation reverses bronchospasm. No other single drug covers all three simultaneously. IM epi 0.3 mg (adult dose) into the lateral thigh — fast absorption, rapid systemic effect. Repeat q5-15min as needed. A — wrong because β2 alone wouldn't fix vasodilation or hypotension. B — wrong because α1 alone wouldn't fix bronchospasm. D — wrong because M3 antagonism doesn't drive epi's effects. E — wrong because β1 alone misses vasoconstriction and bronchodilation. [LO 14.1 — Epinephrine]",
+      "basic"
+     ],
+     [
+      "Phenylephrine is BEST classified as a:",
+      [
+       "Non-selective β agonist",
+       "Non-selective adrenergic agonist",
+       "Pure α1 agonist",
+       "Selective β2 agonist",
+       "α2 agonist"
+      ],
+      2,
+      "Phenylephrine is a selective α1 agonist. Uses: (1) IV vasopressor in hypotension where reflex tachycardia is unwanted (e.g., aortic stenosis); (2) topical nasal decongestant (Sudafed PE); (3) topical mydriatic for fundoscopy. Causes REFLEX BRADYCARDIA via baroreflex — IS the mechanism, not a side effect. Atropine pretreatment blocks the bradycardia by breaking the vagal limb. A — wrong because phenylephrine is α1, not β. B — wrong because selective α1, not non-selective. D — wrong because albuterol is the selective β2. E — wrong because α2 agonists are clonidine/methyldopa/dexmedetomidine. [LO 14.1 — Phenylephrine]",
+      "basic"
+     ],
+     [
+      "Oxymetazoline (Afrin) for nasal congestion produces effect via:",
+      [
+       "Central α2 agonism in the brainstem",
+       "β2-mediated bronchial dilation at the nasal mucosa",
+       "Topical α1 vasoconstriction of nasal vessels",
+       "M3 receptor blockade at nasal glands",
+       "Histamine H1 receptor competitive blockade"
+      ],
+      2,
+      "Oxymetazoline is a topical α1/α2 agonist that vasoconstricts nasal mucosal vessels → reduces engorgement → relieves congestion. KEY counseling point: limit to 3-5 days to prevent rhinitis medicamentosa (rebound congestion from α1 receptor downregulation/tachyphylaxis). For chronic rhinitis, switch to intranasal corticosteroids + saline. A — wrong because central α2 is clonidine. B — wrong because no β2 effect. D — wrong because anticholinergic nasal spray (ipratropium) has a separate role for rhinorrhea. E — wrong because antihistamines are different — block H1, not vasoconstrict. [LO 14.1 — Oxymetazoline]",
+      "basic"
+     ],
+     [
+      "Clonidine lowers blood pressure by:",
+      [
+       "Peripheral α1 receptor antagonism",
+       "Direct arteriolar smooth-muscle vasodilation",
+       "β1 receptor blockade at the SA node",
+       "Central α2 agonism in the brainstem",
+       "Increased renal sodium and water excretion"
+      ],
+      3,
+      "Clonidine activates α2 receptors in the brainstem (rostral ventrolateral medulla, NTS). Central α2 stimulation reduces sympathetic outflow → lower peripheral NE release → vasodilation + lower HR. Other uses: opioid withdrawal (suppresses sympathetic hyperactivity), ADHD (alternative to stimulants), hot flashes, Tourette syndrome. WARNING: abrupt discontinuation → rebound hypertension (sympathetic overshoot from upregulated α1). Always taper. A — wrong because α1 antagonism is prazosin/doxazosin. B — wrong because direct vasodilators are hydralazine, nitrates. C — wrong because β1 blockade is β-blockers. E — wrong because ENaC/thiazides/loops are the natriuretic agents. [LO 14.1 — Clonidine]",
+      "basic"
+     ],
+     [
+      "Methyldopa is the textbook antihypertensive for which population?",
+      [
+       "ICU sedation in mechanically ventilated patients",
+       "Pheochromocytoma preoperative blood pressure control",
+       "Benign prostatic hyperplasia outlet obstruction",
+       "Hypertension management during pregnancy",
+       "Chronic open-angle glaucoma maintenance therapy"
+      ],
+      3,
+      "Methyldopa is a centrally acting α2 agonist (its metabolite α-methyl-NE is the active form). Long safety record in pregnancy — no fetal renin-angiotensin effects. ACE inhibitors and ARBs are TERATOGENIC (renal dysgenesis, oligohydramnios) — contraindicated. Alternatives for pregnancy HTN: labetalol, nifedipine, hydralazine. Methyldopa side effects: sedation, positive Coombs test (rare hemolytic anemia), hepatitis. A — wrong because dexmedetomidine for ICU sedation. B — wrong because phenoxybenzamine for pheo. C — wrong because tamsulosin/finasteride for BPH. E — wrong because timolol/pilocarpine for glaucoma. [LO 14.1 — Methyldopa]",
+      "basic"
+     ],
+     [
+      "Dexmedetomidine differs from other sedatives in that it:",
+      [
+       "Causes profound respiratory depression at clinical doses",
+       "Requires deep mechanical ventilation during sedation",
+       "Is a GABA-A receptor agonist like propofol",
+       "Has no analgesic effect at any infusion rate",
+       "Produces sedation and analgesia without respiratory depression"
+      ],
+      4,
+      "Dexmedetomidine is a selective central α2 agonist used for ICU sedation, procedural sedation, awake fiberoptic intubation. Unique profile: sedation + analgesia + anxiolysis without respiratory depression — patient is easily arousable. Side effects: bradycardia, hypotension. Avoids the GABA-mediated respiratory depression of propofol/benzodiazepines. Particularly useful for delirium prevention compared to benzo-based sedation. A — wrong because preserves respiration — that's the key advantage. B — wrong because doesn't require deep ventilation — that's the benefit. C — wrong because α2 agonist, not GABA. D — wrong because produces analgesia. [LO 14.1 — Dexmedetomidine]",
+      "basic"
+     ],
+     [
+      "Dobutamine is BEST classified as:",
+      [
+       "Pure α1 agonist",
+       "α2 agonist",
+       "Selective β2 agonist",
+       "Non-selective β agonist",
+       "Selective β1 agonist"
+      ],
+      4,
+      "Dobutamine is a selective β1 agonist. Primary use: inotropic support in cardiogenic shock and acute decompensated HF — increases contractility, increases cardiac output. Minimal effect on SVR (some β2 vasodilation balances slight α1). Watch for tachycardia, arrhythmias, increased myocardial O2 demand. Tachyphylaxis develops over days. Also used in stress echocardiography. A — wrong because phenylephrine is pure α1. B — wrong because clonidine is α2. C — wrong because albuterol is selective β2. D — wrong because isoproterenol is non-selective β. [LO 14.1 — Dobutamine]",
+      "basic"
+     ],
+     [
+      "Albuterol is a short-acting β2 agonist used for acute asthma. Salmeterol and formoterol differ in being:",
+      [
+       "Short-acting bronchodilators for rescue use",
+       "Selective α1 receptor agonists for vasoconstriction",
+       "Long-acting β2 agonists for maintenance therapy",
+       "Anticholinergic bronchodilators for COPD",
+       "Selective β1 receptor agonists for inotropy"
+      ],
+      2,
+      "Salmeterol (12 hr) and formoterol (12 hr, faster onset) are LABAs. NEVER as monotherapy in asthma — black-box warning for increased asthma-related mortality. Must combine with inhaled corticosteroid (combo inhalers like fluticasone/salmeterol = Advair, budesonide/formoterol = Symbicort). LABAs alone in COPD are acceptable (no mortality signal), often with LAMAs (tiotropium). Formoterol's fast onset enables SMART therapy (single inhaler maintenance and reliever). A — wrong because SABAs (albuterol, levalbuterol) are the short-acting. B — wrong because no α1 activity. D — wrong because anticholinergic bronchodilators are ipratropium/tiotropium. E — wrong because β1 agonists are dobutamine. [LO 14.1 — LABAs]",
+      "basic"
+     ],
+     [
+      "Dopamine has dose-dependent receptor activity. At LOW doses (2-5 µg/kg/min), the dominant receptor is:",
+      [
+       "D1 receptors on renal and mesenteric vasculature",
+       "α1 receptors causing peripheral vasoconstriction",
+       "β2 receptors causing skeletal-muscle vasodilation",
+       "M3 muscarinic receptors on smooth muscle",
+       "5-HT serotonin receptors in the gut"
+      ],
+      0,
+      "Dopamine's effects shift with dose. LOW (1-5 µg/kg/min): D1 receptors on renal/mesenteric vasculature → vasodilation. The old 'renal dose' concept (to preserve renal function) is now disproven — no mortality benefit, may cause arrhythmias. MEDIUM (5-10): β1 dominant → inotropy + chronotropy. HIGH (>10): α1 dominant → vasoconstriction. NE has supplanted dopamine as first-line vasopressor for septic shock (clearer mortality benefit, fewer arrhythmias). B — wrong because α1 dominates at HIGH doses, not low. C — wrong because β2 isn't dopamine's signature. D — wrong because no muscarinic activity. E — wrong because 5-HT isn't relevant. [LO 14.2 — Dopamine Dose-Dependence]",
+      "basic"
+     ],
+     [
+      "Norepinephrine is preferred over dopamine as first-line vasopressor in septic shock because:",
+      [
+       "NE has more β1 activity supporting cardiac output",
+       "NE shows lower mortality and arrhythmia rates in trials",
+       "NE provides additional bronchodilator activity",
+       "NE is more reliably cleared in renal impairment",
+       "Dopamine is absolutely contraindicated in septic shock"
+      ],
+      1,
+      "SOAP II trial (NEJM 2010) compared NE vs dopamine as first-line vasopressor in shock — no mortality difference overall, but dopamine arm had significantly more arrhythmias. Subgroup of cardiogenic shock favored NE for mortality. Guidelines (Surviving Sepsis Campaign) now recommend NE first-line; dopamine reserved for highly selected patients (e.g., absolute or relative bradycardia + low arrhythmia risk). A — wrong because NE has α1 dominance, β1 supportive — but the dopamine difference isn't about β1. C — wrong because no bronchodilator role in shock. D — wrong because neither is renally cleared in a clinically dominant way for shock. E — wrong because dopamine is still used, just not first-line. [LO 14.2 — NE in Shock]",
+      "basic"
+     ],
+     [
+      "Fenoldopam is a selective D1 agonist used IV for:",
+      [
+       "Hypertensive emergency with preserved renal function",
+       "Septic shock with low systemic vascular resistance",
+       "Anaphylaxis with bronchospasm and hypotension",
+       "Symptomatic bradycardia from heart block",
+       "Acute asthma exacerbation requiring bronchodilation"
+      ],
+      0,
+      "Fenoldopam is a peripheral D1 agonist — vasodilation of renal and mesenteric vessels. IV agent for hypertensive emergency, particularly favored when renal protection matters. Short half-life, titratable. Caution: increases intraocular pressure (avoid in glaucoma). Alternatives for HTN emergency: nitroprusside, nicardipine, clevidipine, labetalol. B — wrong because NE for septic shock. C — wrong because epinephrine for anaphylaxis. D — wrong because atropine for bradycardia. E — wrong because albuterol for asthma. [LO 14.1 — Fenoldopam]",
+      "basic"
+     ],
+     [
+      "Brimonidine eyedrops for glaucoma work via:",
+      [
+       "α1 vasoconstriction",
+       "Direct prostaglandin agonism",
+       "β-blockade",
+       "α2 agonism",
+       "M3 agonism"
+      ],
+      3,
+      "Brimonidine is a topical α2 agonist used in chronic glaucoma (and as adjunct in acute angle-closure). Activates α2 on the ciliary epithelium → decreases aqueous humor production. Also increases uveoscleral outflow. Combines well with timolol (β-blocker) and prostaglandin analogs (latanoprost). Systemic absorption is minimal but can occur in children/infants → dangerous CNS depression (avoid in <2 years). A — wrong because α1 isn't the glaucoma mechanism. B — wrong because latanoprost is the prostaglandin analog. C — wrong because timolol is the β-blocker eyedrop. E — wrong because pilocarpine is M3. [LO 14.1 — Brimonidine]",
+      "basic"
+     ],
+     [
+      "Selective β2 agonist effects (e.g., from terbutaline) include all of the following EXCEPT:",
+      [
+       "Bronchodilation",
+       "Pupillary miosis",
+       "Vasodilation in skeletal muscle vasculature",
+       "Tremor (skeletal muscle β2)",
+       "Tocolysis (uterine relaxation)"
+      ],
+      1,
+      "β2 effects: bronchodilation (asthma/COPD), tocolysis (terbutaline historically; ritodrine), vasodilation in skeletal muscle vasculature, tremor (β2 on muscle spindles), hypokalemia (β2 drives K+ into cells via Na/K-ATPase — used in hyperkalemia management), hyperglycemia (glycogenolysis). Pupillary MIOSIS is M3 (parasympathetic), NOT β2. β2 has no significant ocular effect at clinical doses. A — wrong because yes, β2 effect. C — wrong because yes, β2 effect. D — wrong because yes, β2 effect. E — wrong because yes, β2 effect. [LO 14.2 — β2 Effects]",
+      "basic"
+     ],
+     [
+      "Isoproterenol is a non-selective β agonist used historically for:",
+      [
+       "Chronic hypertension",
+       "Asthma maintenance",
+       "Septic shock as first-line",
+       "Acute angle-closure glaucoma",
+       "Anaphylaxis"
+      ],
+      1,
+      "Isoproterenol is a non-selective β1/β2 agonist. Effects: ↑ HR (β1), ↑ contractility (β1), bronchodilation (β2), peripheral vasodilation (β2). Historical asthma drug — replaced by selective β2 agonists (less tachycardia). Modern niche uses: refractory torsades de pointes (rate support), denervated transplant heart (atropine doesn't work). Largely off market in many places. A — wrong because would worsen HTN by tachycardia. C — wrong because NE/dopamine for shock. D — wrong because pilocarpine for glaucoma. E — wrong because epinephrine for anaphylaxis (β2 alone insufficient). [LO 14.1 — Isoproterenol]",
+      "basic"
+     ],
+     [
+      "A patient in the ICU is being weaned from propofol-based sedation toward a non-respiratory-depressing alternative. The MOST appropriate switch is:",
+      [
+       "Add benzodiazepines",
+       "Switch to dexmedetomidine",
+       "Continue propofol indefinitely",
+       "Switch to ketamine",
+       "Switch to oral diphenhydramine"
+      ],
+      1,
+      "Dexmedetomidine's defining ICU advantage: sedation + analgesia + anxiolysis without respiratory depression — patient is easily arousable. Excellent for weaning toward extubation, for delirium-prone elderly patients, and where neuro exam needs preservation. Cardiovascular side effects: bradycardia, hypotension (especially with bolus dosing — usually no bolus, gentle infusion start). PADIS guidelines favor dexmedetomidine or propofol over benzodiazepines for routine ICU sedation (less delirium). A — wrong because benzodiazepines increase delirium and respiratory depression. C — wrong because indefinite propofol prevents weaning. D — wrong because ketamine has its own role but isn't a standard wean target. E — wrong because Benadryl isn't an ICU sedative. [Integration: Dexmedetomidine ICU]",
+      "basic"
+     ],
+     [
+      "A patient newly diagnosed with primary open-angle glaucoma needs first-line topical therapy. The preferred initial agent (single drop nightly, mortality-neutral, highly effective) is:",
+      [
+       "Topical timolol",
+       "Topical latanoprost",
+       "Topical pilocarpine",
+       "Topical brimonidine",
+       "Oral acetazolamide"
+      ],
+      1,
+      "Prostaglandin F2α analogs (latanoprost, bimatoprost, travoprost) are first-line for primary open-angle glaucoma. Mechanism: increase uveoscleral outflow. Once-daily dosing, excellent IOP reduction, minimal systemic side effects. Cosmetic side effects: iris pigmentation change, eyelash growth, periorbital fat atrophy. β-blockers (timolol) used to be first-line — still effective but contraindicated in many systemic conditions. Pilocarpine has fallen out of first-line use (multiple daily doses, miosis). A — wrong because β-blocker eyedrops are second-line now. C — wrong because pilocarpine is acute angle-closure rescue, not chronic first-line. D — wrong because brimonidine is second-line. E — wrong because oral acetazolamide is for acute/refractory disease, not chronic first-line. [Integration: Glaucoma First-Line]",
+      "basic"
+     ],
+     [
+      "A 22-year-old presents with anaphylaxis from peanut exposure. After IM epinephrine, BP is restoring but bronchospasm persists. The MOST appropriate adjunct is:",
+      [
+       "IV phenylephrine for additional vasopressor support",
+       "Oral propranolol to control reflex tachycardia",
+       "Inhaled albuterol with IV diphenhydramine and steroids",
+       "Oral atenolol to reduce sympathetic surge",
+       "Inhaled tiotropium for bronchodilator effect"
+      ],
+      2,
+      "Anaphylaxis management: IM epinephrine FIRST (lifesaving — covers α1 + β1 + β2). Adjuncts: inhaled β2 agonist (albuterol) for persistent bronchospasm; H1 antihistamine (diphenhydramine) for hives/itch; H2 blocker (famotidine) some role; IV corticosteroids (methylprednisolone) for prevention of biphasic late-phase reaction (delayed onset ~6-8h after initial event). H1+H2 blockers don't replace epinephrine. Observe 4-6h after resolution. A — wrong because phenylephrine doesn't address bronchospasm. B — wrong because β-blocker contraindicated in anaphylaxis — blocks β2 bronchodilation. D — wrong because β-blocker contraindicated. E — wrong because anticholinergic isn't the first adjunct for anaphylaxis bronchospasm. [Integration: Anaphylaxis Adjuncts]",
+      "basic"
+     ],
+     [
+      "Which receptor activation produces the COMBINED effects of bronchodilation, tocolysis, vasodilation in skeletal muscle, hypokalemia, and tremor?",
+      [
+       "α1",
+       "α2",
+       "M3",
+       "β2",
+       "D1"
+      ],
+      3,
+      "β2 effects roster (every exam question on adrenergic pharmacology touches this): bronchodilation, tocolysis (terbutaline historically for premature labor), vasodilation in skeletal muscle (the warm-flush of fight-or-flight), tremor (β2 on muscle spindles), hypokalemia (β2 activates Na/K-ATPase → K+ into cells — used in hyperkalemia management), hyperglycemia (β2 stimulates glycogenolysis), lipolysis (β2 + β3). High-dose albuterol or terbutaline can produce all these as side effects. A — wrong because α1 produces vasoconstriction, mydriasis. B — wrong because α2 reduces NE release. C — wrong because M3 produces miosis, bronchoconstriction, gland secretion. E — wrong because D1 vasodilates renal vessels. [Integration: β2 Effects Roster]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -13382,6 +15923,207 @@ const QUIZ = [
       ],
       4,
       "Methylphenidate inhibits the metabolism of warfarin, phenytoin, phenobarbital, primidone, and the tricyclic antidepressants, raising their levels — a key interaction set to remember. (A) Inhaled bronchodilators are not the set. (B) Beta-lactam antibiotics are not the interacting set. (C) Insulin/metformin are not the listed interactions. (D) Levothyroxine/aspirin are not the set.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Amphetamine raises synaptic NE primarily by:",
+      [
+       "Direct β1 stimulation at cardiac receptors",
+       "Inhibiting monoamine oxidase in the synapse",
+       "Promoting NE release by reversing presynaptic NET",
+       "Direct α1 receptor agonism at vascular sites",
+       "Blocking catechol-O-methyltransferase in the gut"
+      ],
+      2,
+      "Amphetamine is an INDIRECT sympathomimetic. Enters the presynaptic terminal via NET (norepinephrine transporter), displaces NE from vesicles into the cytoplasm, then NET reverses direction pushing NE out into the synaptic cleft. Net effect: massive NE release. Same mechanism for methamphetamine (more lipophilic, crosses BBB faster). Therapeutic uses: ADHD (lower doses, sustained release), narcolepsy. Toxicity: sympathomimetic toxidrome (HTN, tachycardia, hyperthermia, agitation, paranoia, psychosis). A — wrong because amphetamine isn't a direct β1 agonist. B — wrong because MAO inhibitors are a separate class (phenelzine, tranylcypromine). D — wrong because amphetamine doesn't directly bind α1. E — wrong because COMT inhibitors are entacapone/tolcapone for Parkinson disease.",
+      "basic"
+     ],
+     [
+      "Cocaine produces sympathomimetic effects by:",
+      [
+       "Blocking the norepinephrine transporter",
+       "Direct α1 agonism",
+       "Inhibiting MAO",
+       "Direct release of NE via amphetamine-like mechanism",
+       "β2 agonism"
+      ],
+      0,
+      "Cocaine blocks NET (and the dopamine/serotonin transporters) — NE accumulates in the synapse and continues to stimulate post-synaptic adrenergic receptors. Same mechanism for TCAs (NE/serotonin), SNRIs (duloxetine, venlafaxine), atomoxetine (selective NET). Cocaine toxicity: HTN, tachycardia, arrhythmias, vasospasm (cocaine chest pain), seizures, hyperthermia. The 'cocaine chest pain — avoid propranolol' rule comes from this mechanism. B — wrong because cocaine doesn't directly bind adrenergic receptors. C — wrong because different class. D — wrong because amphetamine releases NE via NET reversal — cocaine just blocks NET. E — wrong because no direct β2.",
+      "basic"
+     ],
+     [
+      "A patient with cocaine-induced chest pain should NOT receive propranolol because:",
+      [
+       "β-blockade leaves α1 stimulation UNOPPOSED",
+       "Propranolol is contraindicated in any chest pain",
+       "Propranolol causes tachycardia paradoxically",
+       "Propranolol is hepatotoxic",
+       "Propranolol triggers seizures"
+      ],
+      0,
+      "Cocaine raises synaptic NE → stimulates BOTH α1 (vasoconstriction) and β2 (vasodilation). Net effect on coronaries leans toward vasospasm. Adding propranolol (non-selective β-blocker) blocks β2's compensatory vasodilation while leaving α1 vasoconstriction intact → 'unopposed α' worsens coronary spasm and raises BP. Standard cocaine chest pain protocol: benzodiazepines (anxiolysis + lowers sympathetic tone), nitroglycerin (coronary dilation), aspirin, phentolamine (α-blocker) if HTN refractory. Avoid β-blockers — especially non-selective. B — wrong because propranolol is fine in most chest pain. C — wrong because propranolol doesn't cause paradoxical tachycardia. D — wrong because no acute hepatotoxicity. E — wrong because no seizure trigger.",
+      "basic"
+     ],
+     [
+      "A patient on an MAOI (phenelzine) for depression eats aged cheese and develops BP 220/120, severe headache. The MOST likely mechanism is:",
+      [
+       "Direct β-adrenergic receptor blockade",
+       "Serotonin syndrome from serotonin excess",
+       "Cocaine-like blockade of the NE transporter",
+       "Tyramine displacing stored NE from terminals",
+       "Histamine reaction from food allergy"
+      ],
+      3,
+      "MAO in the gut and liver normally breaks down dietary tyramine (a sympathomimetic amine). With MAOI on board, dietary tyramine bypasses degradation, enters systemic circulation, gets transported into sympathetic nerve terminals via NET, and displaces stored NE — same mechanism as amphetamine. Result: massive NE release → hypertensive crisis with risk of stroke, MI. Dietary list to avoid: aged cheese, cured meats, fermented foods, red wine, beer, sauerkraut, soy sauce. Treatment: phentolamine (α-blocker) or nitroprusside. A — wrong because MAOIs don't β-block. B — wrong because serotonin syndrome is a different MAOI complication (with SSRIs, tramadol, meperidine). C — wrong because cocaine mechanism is NET blockade, not displacement. E — wrong because histamine isn't the mechanism.",
+      "basic"
+     ],
+     [
+      "Pseudoephedrine, found in oral decongestants, works by:",
+      [
+       "Direct α1 agonism only",
+       "Direct M3 antagonism",
+       "Pure β2 agonism",
+       "MAO inhibition",
+       "Mixed direct α1 agonism plus indirect NE release"
+      ],
+      4,
+      "Pseudoephedrine is a mixed direct + indirect adrenergic agonist. Direct α1 stimulates nasal mucosal vasoconstriction → decongestion. Indirect NE release adds systemic sympathomimetic effects: ↑ HR, ↑ BP, agitation, insomnia. Caution in HTN, CAD, hyperthyroidism, BPH. Used historically as illicit methamphetamine precursor — that's why behind-the-counter restrictions exist. Phenylephrine (pure α1) is the on-shelf OTC alternative but with lower efficacy due to first-pass metabolism. A — wrong because pseudoephedrine is MIXED (both direct and indirect). B — wrong because not anticholinergic. C — wrong because minor β2 activity at most. D — wrong because not an MAOI.",
+      "basic"
+     ],
+     [
+      "Ephedrine is a mixed-action sympathomimetic used in:",
+      [
+       "Asthma rescue as bronchodilator inhaler",
+       "Anaphylaxis as first-line vasopressor agent",
+       "Cardiac arrest as part of ACLS protocol",
+       "Symptomatic bradycardia from heart block",
+       "Spinal anesthesia hypotension and historical stimulant"
+      ],
+      4,
+      "Ephedrine is the prototype mixed sympathomimetic — direct + indirect. Main modern use: IV bolus for hypotension from spinal/epidural anesthesia (raises BP via α1 + supports HR via β1). Useful for short-term BP support pending other measures. Historical uses: asthma (replaced by selective β2 agonists), weight loss (banned due to cardiovascular events). Effects diminish with repeated doses (tachyphylaxis — depletion of presynaptic NE stores). A — wrong because albuterol for asthma rescue. B — wrong because epinephrine for anaphylaxis. C — wrong because epinephrine for arrest. D — wrong because atropine or pacing for heart block.",
+      "basic"
+     ],
+     [
+      "Tizanidine is an α2 agonist used clinically for:",
+      [
+       "Resistant hypertension as add-on therapy",
+       "ICU sedation as continuous infusion",
+       "Open-angle glaucoma as topical eyedrop",
+       "Muscle spasticity in MS or spinal injury",
+       "Pediatric ADHD as alternative to stimulants"
+      ],
+      3,
+      "Tizanidine is a centrally acting α2 agonist used for muscle spasticity in MS, spinal cord injury, and cerebral palsy. Mechanism: α2 stimulation in the spinal cord reduces excitatory transmission to motor neurons → reduced muscle tone. Side effects: sedation (prominent), dry mouth, hypotension, hepatotoxicity (monitor LFTs). Alternatives for spasticity: baclofen (GABA-B agonist), dantrolene (RYR1 Ca2+ release), gabapentin. A — wrong because clonidine/methyldopa for HTN. B — wrong because dexmedetomidine for ICU sedation. C — wrong because brimonidine for glaucoma. E — wrong because clonidine/guanfacine for ADHD.",
+      "basic"
+     ],
+     [
+      "An opioid-dependent patient is being managed for acute withdrawal. Adjunctive pharmacotherapy for autonomic symptoms (sweating, hypertension, anxiety, GI cramping) commonly includes:",
+      [
+       "Propranolol",
+       "Clonidine",
+       "Phenelzine",
+       "Tizanidine",
+       "Atropine"
+      ],
+      1,
+      "Opioid withdrawal produces sympathetic overactivity (NE storm) — sweating, tachycardia, HTN, anxiety, piloerection, GI cramping. Clonidine's central α2 agonism reduces sympathetic outflow, suppressing the autonomic symptoms. Standard adjunct alongside methadone or buprenorphine for craving control. Also used for autonomic symptoms of nicotine withdrawal, alcohol withdrawal (less commonly). A — wrong because β-blocker doesn't address central sympathetic outflow as effectively. C — wrong because MAOI is unrelated. D — wrong because tizanidine is for spasticity; similar α2 mechanism but not the standard withdrawal adjunct. E — wrong because atropine doesn't help with the underlying mechanism.",
+      "basic"
+     ],
+     [
+      "Selegiline (low-dose, MAO-B selective) is used in:",
+      [
+       "Acute asthma",
+       "ADHD",
+       "Septic shock",
+       "Hypertension",
+       "Parkinson disease"
+      ],
+      4,
+      "Selegiline at LOW doses is MAO-B selective. MAO-B preferentially degrades dopamine in the brain — inhibiting it preserves DA in nigrostriatal neurons, helping Parkinson symptoms. At HIGH doses, selectivity is lost and MAO-A is also inhibited → tyramine reaction risk re-emerges. Other Parkinson MAO-B inhibitors: rasagiline, safinamide. A — wrong because no asthma role. B — wrong because stimulants for ADHD. C — wrong because no shock role. D — wrong because MAOIs aren't HTN drugs (cause HTN via tyramine).",
+      "basic"
+     ],
+     [
+      "Tachyphylaxis to indirect sympathomimetics (e.g., ephedrine, amphetamine on repeated dosing) results from:",
+      [
+       "Receptor upregulation at the postsynaptic membrane",
+       "Hepatic CYP enzyme induction over time",
+       "Depletion of presynaptic NE storage vesicles",
+       "Acute renal failure reducing drug clearance",
+       "Antibody formation against the parent drug"
+      ],
+      2,
+      "Indirect-acting sympathomimetics work by releasing stored NE from presynaptic vesicles. Repeated rapid dosing depletes the stores faster than tyrosine hydroxylase can resynthesize NE → diminished response. Resolves with rest period for NE store recovery. Different from receptor desensitization (the mechanism for DIRECT-acting agent tachyphylaxis like oxymetazoline's rhinitis medicamentosa). A — wrong because downregulation drives DIRECT-acting tachyphylaxis. B — wrong because enzyme induction is too slow for the timecourse. D — wrong because renal failure isn't the mechanism. E — wrong because no antibody formation in this timeframe.",
+      "basic"
+     ],
+     [
+      "A patient on MAOI antidepressant should avoid all the following dietary items EXCEPT:",
+      [
+       "Aged cheese",
+       "Cured meats and salami",
+       "Red wine and beer",
+       "Fresh fish and chicken",
+       "Fermented soy sauce"
+      ],
+      3,
+      "Foods to AVOID on MAOI: aged cheese (cheddar, parmesan, blue), cured meats (salami, pepperoni), fermented foods (sauerkraut, kimchi, miso, soy sauce), red wine, beer (especially tap/draft), broad beans, marmite/vegemite. Fresh, unfermented foods are fine — fresh chicken, fresh fish, fresh produce. The common factor: tyramine accumulates as proteins age/ferment. A — wrong because tyramine-rich, avoid. B — wrong because tyramine-rich, avoid. C — wrong because tyramine-rich, avoid. E — wrong because tyramine-rich, avoid.",
+      "basic"
+     ],
+     [
+      "Methylphenidate (Ritalin) and dextroamphetamine differ in their primary mechanism such that methylphenidate:",
+      [
+       "Blocks NET and DAT",
+       "Is a direct α1 agonist",
+       "Inhibits MAO",
+       "Acts purely on dopamine receptors",
+       "Is a partial β2 agonist"
+      ],
+      0,
+      "Methylphenidate primarily blocks NET and DAT — like cocaine, but slower and longer-acting. Amphetamine also blocks NET/DAT but ALSO causes vesicular displacement (releases stored NE/DA via VMAT-2 reversal). The release mechanism makes amphetamine more potent at high doses and more addictive. Both used for ADHD and narcolepsy. B — wrong because no α1 direct agonism. C — wrong because not an MAOI. D — wrong because blocks transporters, not just DA receptors. E — wrong because not a β2 agonist.",
+      "basic"
+     ],
+     [
+      "A 28-year-old presents with chest pain 2 hours after cocaine use. The MOST appropriate initial management is:",
+      [
+       "Propranolol + nitroglycerin",
+       "Observation without medication",
+       "β-blocker IV bolus alone",
+       "Calcium channel blocker only",
+       "Benzodiazepines + nitroglycerin + aspirin"
+      ],
+      4,
+      "Cocaine raises synaptic NE → α1 (vasoconstriction including coronary) + β1 (tachycardia) + β2 (peripheral vasodilation). Standard protocol: benzodiazepines (lower central sympathetic tone + anxiolysis) + nitroglycerin (coronary dilation) + aspirin. If HTN refractory, add phentolamine (α-blocker). β-blockers (especially non-selective like propranolol) leave α1 unopposed → worsen vasospasm and BP. Same 'unopposed α' principle as pheochromocytoma. ED rule: NO β-blockers in suspected cocaine chest pain. A — wrong because propranolol is the WRONG drug here. B — wrong because active management required. C — wrong because β-blocker alone is contraindicated. D — wrong because CCB can be used as adjunct but isn't initial first-line.",
+      "basic"
+     ],
+     [
+      "A depressed patient on phenelzine (MAOI) develops BP 220/130 and severe headache 2 hours after a meal of aged cheddar and red wine. Treatment is:",
+      [
+       "IV propranolol for rapid β-blockade",
+       "IV furosemide for diuresis",
+       "IV ACE inhibitor for slow afterload reduction",
+       "IV phentolamine with adjunctive sodium nitroprusside",
+       "Observation without antihypertensive therapy"
+      ],
+      3,
+      "Tyramine in aged cheese + red wine bypasses MAO degradation, enters sympathetic terminals via NET, displaces stored NE → massive NE release → α1 + β1 stimulation → hypertensive crisis. Phentolamine (IV α-blocker) reverses the α1 vasoconstriction. Nitroprusside as adjunctive vasodilator. AVOID β-blockers (same unopposed α principle). Counsel patients about dietary restrictions and avoid co-administered serotonergic drugs (serotonin syndrome risk). A — wrong because β-blocker alone leaves α1 unopposed. B — wrong because diuretic isn't the answer. C — wrong because ACE inhibitor too slow for crisis. E — wrong because active treatment required.",
+      "basic"
+     ],
+     [
+      "A teenager presents with sympathomimetic toxidrome (HTN, tachycardia, hyperthermia, dilated pupils, agitation, diaphoresis) after recreational drug use. The agent is MOST likely:",
+      [
+       "Heroin or other opioid agonist",
+       "Marijuana or cannabinoid overdose",
+       "Benzodiazepine sedative overdose",
+       "Alcohol intoxication and binge",
+       "Methamphetamine or cocaine intoxication"
+      ],
+      4,
+      "Sympathomimetic toxidrome features: HTN, tachycardia, hyperthermia, dilated pupils (mydriasis from α1), agitation, paranoia/psychosis, sweating (diaphoresis — preserved because sweat glands are sympathetic cholinergic; differentiates from anticholinergic toxidrome which has DRY skin). Causes: cocaine, methamphetamine, MDMA, PCP, synthetic cathinones ('bath salts'), pseudoephedrine megadose, MAOI + tyramine. Treatment: benzodiazepines (gold standard — controls agitation, lowers sympathetic outflow, cools the patient), aggressive cooling, supportive care. AVOID β-blockers (unopposed α). A — wrong because heroin produces opioid toxidrome (miosis, respiratory depression, sedation) — opposite. B — wrong because marijuana doesn't typically produce sympathomimetic toxidrome. C — wrong because benzodiazepine OD = sedation, NORMAL pupils. D — wrong because alcohol intoxication is sedating, not sympathomimetic.",
       "basic"
      ]
     ]
@@ -13681,6 +16423,142 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 40-year-old with episodic headaches, palpitations, diaphoresis is diagnosed with pheochromocytoma. Preoperative blood pressure management requires:",
+      [
+       "β-blocker first, then α-blocker",
+       "α-blockade FIRST for 10-14 days",
+       "Calcium channel blocker only",
+       "ACE inhibitor only",
+       "No preoperative BP management needed"
+      ],
+      1,
+      "Pheochromocytoma releases massive catecholamines (mostly NE, some epi) — α1 vasoconstriction + β1 tachycardia. Critical rule: α-BLOCK BEFORE β-BLOCK. Phenoxybenzamine (irreversible non-selective α-blocker) is started 10-14 days preoperatively. Once α is blocked, β-blocker can be added safely for tachycardia. If β-blocker given FIRST: blocks β2 vasodilation but leaves α1 vasoconstriction unopposed → hypertensive crisis (same logic as cocaine + propranolol). After surgical removal of tumor, BP can crash from sudden catecholamine withdrawal — volume load before resection. A — wrong because β-FIRST causes unopposed α1 → hypertensive crisis. CRITICAL exam answer. C — wrong because CCB alone is inadequate. D — wrong because ACE inhibitor doesn't address the catecholamine surge. E — wrong because patient is at high risk without pretreatment. [LO 16.1 — Pheochromocytoma]",
+      "basic"
+     ],
+     [
+      "Phenoxybenzamine differs from phentolamine in being:",
+      [
+       "Selective for α1",
+       "Reversible and short-acting",
+       "An IRREVERSIBLE non-selective α-blocker",
+       "Selective for α2",
+       "A β-blocker"
+      ],
+      2,
+      "Phenoxybenzamine is an IRREVERSIBLE, non-selective α-blocker (alkylates the receptor). Long duration (24+ hours) makes it ideal for chronic pheochromocytoma preoperative preparation. Phentolamine is REVERSIBLE non-selective α-blocker, short-acting (minutes-hours) — used INTRAoperatively for hypertensive surges during pheo surgery, for cocaine-induced HTN, and for extravasation of vasopressors (local SQ injection to reverse vasoconstriction). Major side effect of both: reflex tachycardia, orthostatic hypotension. A — wrong because non-selective (α1 + α2). B — wrong because irreversible and long-acting. D — wrong because non-selective. E — wrong because α-blocker. [LO 16.1 — Phenoxybenzamine vs Phentolamine]",
+      "basic"
+     ],
+     [
+      "A patient develops extravasation of IV norepinephrine at the infusion site. The MOST appropriate local antidote is:",
+      [
+       "Subcutaneous phentolamine infiltrated around the site",
+       "Hot compresses applied locally to the site",
+       "Naloxone given intravenously at the site",
+       "Heparin injection at the extravasation site",
+       "Local lidocaine for pain control alone"
+      ],
+      0,
+      "NE extravasation → intense local α1 vasoconstriction → tissue ischemia → necrosis. Phentolamine SQ infiltration around the extravasation site blocks α1 locally, restores perfusion, prevents necrosis. Standard dose: 5-10 mg in 10-15 mL saline, infiltrated SQ around the site. Within hours. Same approach for any extravasated α-acting vasopressor (epinephrine, dopamine, phenylephrine). B — wrong because warm compresses help locally but don't address α1 vasoconstriction. C — wrong because naloxone reverses opioids. D — wrong because heparin doesn't address vasoconstriction. E — wrong because lidocaine numbs pain but doesn't reverse vasoconstriction. [LO 16.1 — Phentolamine Extravasation]",
+      "basic"
+     ],
+     [
+      "Prazosin, doxazosin, and terazosin are selective α1-blockers used in:",
+      [
+       "Both hypertension and benign prostatic hyperplasia",
+       "Acute cardiogenic shock with hypotension",
+       "Acute angle-closure glaucoma in the ED",
+       "Anaphylaxis as adjunctive vasopressor",
+       "Migraine prophylaxis as oral daily therapy"
+      ],
+      0,
+      "Prazosin, doxazosin, terazosin = selective α1 antagonists. Dual use: HTN (vasodilation) and BPH (prostatic smooth muscle relaxation improves urinary flow). Doxazosin and terazosin are longer-acting → preferred for BPH. KEY SIDE EFFECT: first-dose orthostatic hypotension — take first dose at bedtime, supine. Prazosin specifically has a role in PTSD-related nightmares (off-label, evidence mixed). Doxazosin in ALLHAT trial showed worse HF outcomes vs chlorthalidone — generally not first-line for HTN. B — wrong because no shock indication. C — wrong because glaucoma uses different agents. D — wrong because epinephrine for anaphylaxis. E — wrong because β-blockers for migraine. [LO 16.1 — α1 Selective Blockers]",
+      "basic"
+     ],
+     [
+      "Tamsulosin (Flomax) is preferred in BPH over prazosin because:",
+      [
+       "Tamsulosin is α1A-selective — less BP-lowering effect",
+       "Tamsulosin is α2-selective",
+       "Tamsulosin is a β-blocker",
+       "Tamsulosin doesn't require dose titration",
+       "Tamsulosin treats both HTN and BPH"
+      ],
+      0,
+      "α1 has subtypes: α1A (predominant in prostate and bladder neck) vs α1B (predominant in vascular smooth muscle). Tamsulosin (and silodosin, alfuzosin) preferentially block α1A → improve BPH urinary symptoms WITHOUT significant BP lowering. Good for normotensive BPH patients. Side effect: floppy iris syndrome (interferes with cataract surgery — surgeons need to know about tamsulosin use). Doxazosin/terazosin work for BOTH HTN + BPH in patients who have both. B — wrong because α1A, not α2. C — wrong because not a β-blocker. D — wrong because all α-blockers benefit from titration. E — wrong because tamsulosin's relative BP-sparing actually makes it WORSE for HTN — doxazosin/terazosin treat both. [LO 16.1 — Tamsulosin]",
+      "basic"
+     ],
+     [
+      "First-dose orthostatic hypotension is MOST associated with which medication?",
+      [
+       "Atenolol",
+       "Amlodipine",
+       "Hydrochlorothiazide",
+       "Lisinopril",
+       "Prazosin"
+      ],
+      4,
+      "First-dose orthostatic hypotension is the classic α1-blocker pitfall, most striking with prazosin. Sympathetic α1 vasoconstriction is abruptly removed → blood pools in lower extremities on standing → syncope. Counsel patients: take first dose at bedtime, in supine position. Hold diuretics for 24 hours before initiation. Doxazosin and terazosin are slightly less dramatic but still have first-dose phenomenon. A — wrong because β-blockers cause less first-dose ortho. B — wrong because amlodipine can cause edema but not first-dose syncope. C — wrong because thiazides don't have first-dose phenomenon. D — wrong because ACE inhibitors can cause hypotension but not the classic first-dose effect. [LO 16.2 — Prazosin First-Dose]",
+      "basic"
+     ],
+     [
+      "α-blockers used in BPH (tamsulosin) have which ophthalmologic concern?",
+      [
+       "Persistent pupillary miosis after surgery",
+       "Accelerated cataract formation over years",
+       "Optic neuritis with progressive vision loss",
+       "Acute angle-closure glaucoma precipitation",
+       "Floppy iris syndrome during cataract surgery"
+      ],
+      4,
+      "α1 blockade on the iris dilator muscle causes intraoperative floppy iris syndrome (IFIS) during cataract surgery. The iris billows, undulates, and prolapses through incisions — surgical complication. Effect persists for months even after stopping tamsulosin. Patients should disclose tamsulosin use to ophthalmologist before any planned cataract surgery, so the surgeon can plan accordingly (iris hooks, viscoelastic, pupil expansion rings). A — wrong because α1 blockade causes MIOSIS (loss of pupillary dilator tone) but the surgical issue is floppy iris. B — wrong because doesn't cause cataracts. C — wrong because no optic neuritis. D — wrong because tamsulosin doesn't precipitate angle closure (it relaxes the dilator). [LO 16.2 — Floppy Iris]",
+      "basic"
+     ],
+     [
+      "Phentolamine's clinical uses include all the following EXCEPT:",
+      [
+       "Cocaine-induced hypertension",
+       "Pheochromocytoma intraoperative hypertensive surges",
+       "Extravasation of vasopressors (local SQ injection)",
+       "MAOI tyramine hypertensive crisis",
+       "Chronic hypertension as first-line"
+      ],
+      4,
+      "Phentolamine = REVERSIBLE non-selective α-blocker, IV/short-acting. Indications: (1) cocaine-induced HTN; (2) intraoperative HTN surges during pheo surgery; (3) extravasation of α-acting vasopressors (local SQ infiltration); (4) MAOI tyramine hypertensive crisis. NOT for chronic HTN — short duration, prominent reflex tachycardia. Prazosin/doxazosin are chronic α1-selective alternatives. A — wrong because yes, indication. B — wrong because yes, indication. C — wrong because yes, indication. D — wrong because yes, indication. [LO 16.1 — Phentolamine Uses]",
+      "basic"
+     ],
+     [
+      "Prazosin reduces nightmares and improves sleep in patients with PTSD because:",
+      [
+       "Direct sedation via H1 antihistamine effect",
+       "Serotonin reuptake inhibition like SSRIs",
+       "GABA-A receptor activation like benzodiazepines",
+       "Central α1 blockade reducing arousal during sleep",
+       "Direct hypnotic effect at the GABA-A complex"
+      ],
+      3,
+      "PTSD patients have elevated central sympathetic tone, manifesting as hyperarousal, nightmares, and disrupted sleep. Prazosin crosses the BBB and blocks central α1 receptors involved in arousal circuits → fewer/less intense nightmares. Off-label use, supported by smaller trials but mixed in larger ones (CAPTAIN trial less convincing). Doses 2-15 mg at bedtime. Side effects: hypotension, dizziness. A — wrong because not a direct sedative. B — wrong because not serotonergic. C — wrong because not GABA-A. E — wrong because not a hypnotic. [LO 16.2 — Prazosin PTSD]",
+      "basic"
+     ],
+     [
+      "A pheochromocytoma patient is given propranolol BEFORE α-blockade. The MOST likely consequence is:",
+      [
+       "Hypertensive crisis from unopposed α1 vasoconstriction",
+       "Improved blood pressure control and stability",
+       "Bradycardia and severe symptomatic hypotension",
+       "Isolated bronchospasm without hemodynamic change",
+       "No effect because the order does not matter"
+      ],
+      0,
+      "Pheo releases massive catecholamines hitting both α1 (vasoconstriction) and β2 (vasodilation). β-blockade first removes β2 vasodilation, leaving α1 unopposed → severe HTN crisis. Same mechanism as the cocaine + propranolol trap. ALWAYS α-block (phenoxybenzamine x 10-14 days) FIRST, then add β-blocker for tachycardia control. This rule appears on every exam covering pheo or autonomic pharmacology. B — wrong because BP control gets WORSE, not better. C — wrong because the dominant feature is hypertensive surge, not hypotension. D — wrong because non-selective β-blocker could cause bronchospasm but HTN crisis dominates. E — wrong because order is CRITICAL. [Integration: Lec 14-17 — Pheo α-before-β]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -13974,6 +16852,233 @@ const QUIZ = [
       ],
       2,
       "Pheo + propranolol-alone crisis → ? With catecholamine excess, β-blockade alone removes β₂-mediated vasodilation and leaves α₁ vasoconstriction unopposed → hypertensive crisis. The rule — set up in the α-blocker lecture with phentolamine/phenoxybenzamine for pheo — is give the α-blocker FIRST, then the β-blocker; labetalol/carvedilol are the exceptions because they block α and β together.  (A) Propranolol does not stimulate catecholamine release.  (B) Reversed: β-block (not α-block) is what was given, leaving α unopposed.  (D) β₁ blockade lowers renin; that is not the crisis mechanism.  (E) NO blockade is not the pheo-crisis mechanism.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Carvedilol, bisoprolol, and metoprolol succinate are first-line β-blockers in HFrEF because:",
+      [
+       "These three specifically show mortality reduction in randomized trials",
+       "All β-blockers reduce mortality equally in HF",
+       "They are the only β-blockers approved for HF",
+       "They have unique vasodilator properties",
+       "They are short-acting"
+      ],
+      0,
+      "Three β-blockers with mortality-reduction evidence in HFrEF: carvedilol (non-selective + α1-blocking), bisoprolol (β1-selective), metoprolol SUCCINATE (β1-selective, extended-release). Metoprolol TARTRATE (immediate-release) is not the same drug for HF. Atenolol, propranolol, nadolol don't have the same evidence. Start at low dose, titrate slowly — initial worsening is common before benefit emerges over weeks-months. Mechanism: blocking chronic β1 over-activation reverses pathologic remodeling. B — wrong because not all β-blockers — only the three named. C — wrong because approval isn't the issue — evidence is. D — wrong because carvedilol has α1 blockade (yes); but bisoprolol and metoprolol succinate don't. E — wrong because the HF formulations are extended-release. [LO 17.1 — HF β-Blockers]",
+      "basic"
+     ],
+     [
+      "A patient with asthma needs antihypertensive treatment. Which β-blocker is RELATIVELY safer?",
+      [
+       "Propranolol",
+       "Carvedilol",
+       "Nadolol",
+       "Metoprolol",
+       "Timolol"
+      ],
+      3,
+      "Cardioselective (β1-selective) β-blockers — metoprolol, atenolol, bisoprolol, nebivolol, acebutolol, esmolol — preserve β2 bronchial function at LOW-MODERATE doses. Selectivity is RELATIVE, not absolute — at high doses or with active asthma exacerbation, β2 blockade can occur. Even cardioselective β-blockers should be used cautiously in asthma; COPD tolerates them better. Mnemonic for cardioselective: 'A BEAM N' (Acebutolol, Bisoprolol, Esmolol, Atenolol, Metoprolol, Nebivolol). A — wrong because propranolol is non-selective — bronchospasm risk. B — wrong because carvedilol is non-selective (plus α1). C — wrong because nadolol is non-selective. E — wrong because timolol is non-selective. [LO 17.1 — Cardioselectivity]",
+      "basic"
+     ],
+     [
+      "Propranolol is the textbook lipophilic β-blocker. Its CNS-penetrating properties make it useful for:",
+      [
+       "Acute decompensated heart failure with hypotension",
+       "Cocaine-induced chest pain in the ED",
+       "Asthma exacerbation requiring bronchodilation",
+       "Acute MI during pregnancy at any trimester",
+       "Migraine prophylaxis, essential tremor, performance anxiety"
+      ],
+      4,
+      "Propranolol crosses the BBB (lipophilic, non-selective). Uses: migraine prophylaxis, essential tremor, performance/situational anxiety (single-dose), thyrotoxicosis symptom control (blocks β-driven symptoms and inhibits peripheral T4→T3 conversion), portal HTN/variceal bleeding prophylaxis. Hydrophilic alternatives (atenolol, nadolol) don't penetrate CNS — better tolerated in elderly (less fatigue, depression, vivid dreams) but useless for migraine/tremor. A — wrong because carvedilol/bisoprolol/metoprolol-succinate for chronic HF. B — wrong because cocaine + propranolol is the CONTRAINDICATED combo (unopposed α). C — wrong because non-selective β-blocker WORSENS asthma. D — wrong because labetalol is the pregnancy-safe option. [LO 17.1 — Propranolol Uses]",
+      "basic"
+     ],
+     [
+      "A patient with a long-standing prescription for metoprolol abruptly stops taking it. After 2 days, he develops angina and tachycardia. The MOST likely mechanism is:",
+      [
+       "Allergic reaction",
+       "Acute MI from drug-induced platelet activation",
+       "β-blocker withdrawal syndrome",
+       "Calcium channel blocker rebound",
+       "Renal failure"
+      ],
+      2,
+      "Chronic β-blockade → compensatory upregulation of β-receptors. Abrupt withdrawal exposes the now-amplified β-receptor pool to ambient catecholamines → rebound HTN, tachycardia, angina, even MI in patients with CAD. Always TAPER β-blockers over 1-2 weeks. Counsel patients never to stop abruptly. Same rebound principle applies to clonidine (centrally acting α2 → rebound HTN on withdrawal). Treatment of overshoot: restart β-blocker; supportive care; α-blocker if HTN crisis. A — wrong because no allergic pattern. B — wrong because drug-induced MI possible but the dominant mechanism is rebound. D — wrong because CCBs are different. E — wrong because no renal pathology described. [LO 17.2 — β-Blocker Withdrawal]",
+      "basic"
+     ],
+     [
+      "β-blocker overdose presenting with bradycardia, hypotension, and hypoglycemia is treated with which specific antidote (beyond supportive care + IV fluids + atropine)?",
+      [
+       "Naloxone",
+       "Sodium bicarbonate",
+       "Calcium chloride",
+       "Glucagon",
+       "Digoxin-Fab"
+      ],
+      3,
+      "β-blocker overdose blocks β1 → bradycardia + hypotension; blocks β2-mediated gluconeogenesis → hypoglycemia. Glucagon binds its own receptor (Gs-coupled, distinct from β-receptor) and raises cAMP downstream of β-receptor blockade — bypasses the block. Gold-standard antidote. Dose: 3-10 mg IV bolus, then infusion. Vomiting is a common side effect (usually pretreat with antiemetic). Other supports: IV fluids, atropine for bradycardia, high-dose insulin + glucose (for both BB and CCB overdose — improves cardiac contractility), ECMO for refractory. A — wrong because naloxone for opioids. B — wrong because bicarb for TCA overdose. C — wrong because calcium for CCB overdose, not BB primary. E — wrong because digoxin-Fab for digoxin overdose. [LO 17.2 — Glucagon Antidote]",
+      "basic"
+     ],
+     [
+      "Labetalol and carvedilol are unique in that they block:",
+      [
+       "Only the β1 cardiac adrenergic receptors",
+       "Calcium channels and β1 receptors together",
+       "Only the α2 presynaptic autoreceptors",
+       "Both α1 and β receptors for combined effect",
+       "M3 muscarinic receptors at smooth muscle"
+      ],
+      3,
+      "Labetalol and carvedilol are mixed α1/β-blockers. α1 vasodilation reduces afterload; β-blockade controls rate/contractility. Labetalol: IV form is workhorse for hypertensive emergency and pregnancy HTN. Carvedilol: oral form with mortality benefit in HFrEF (along with bisoprolol and metoprolol succinate). Side effects predictable: orthostatic hypotension (α1), bradycardia (β). A — wrong because labetalol/carvedilol are non-selective β PLUS α1. B — wrong because not calcium channel blockers. C — wrong because no α2 blockade. E — wrong because no muscarinic activity. [LO 17.1 — Mixed α/β]",
+      "basic"
+     ],
+     [
+      "Esmolol is the IV β-blocker of choice for short-term, titratable rate control in surgery or critical care because:",
+      [
+       "Long duration of action allows once-daily dosing",
+       "Intrinsic α1 vasodilator activity at infusion",
+       "Excellent BBB penetration for migraine prophylaxis",
+       "Selective β2 activity for bronchodilation",
+       "Ultra-short half-life from rapid esterase hydrolysis"
+      ],
+      4,
+      "Esmolol is a β1-selective IV β-blocker with very short half-life (~9 minutes) due to rapid hydrolysis by plasma esterases. Continuous infusion with rapid on/off — ideal for intraoperative HTN, perioperative arrhythmia control, hypertensive emergencies where titration matters, thyroid storm. Stops within minutes of stopping the drip. Less useful for chronic management. A — wrong because esmolol is ultra-SHORT, not long. B — wrong because no α1 activity. C — wrong because doesn't significantly cross BBB. D — wrong because β1-selective. [LO 17.1 — Esmolol]",
+      "basic"
+     ],
+     [
+      "Timolol is used in topical form for:",
+      [
+       "Acute cardiac arrhythmias as IV bolus",
+       "Benign prostatic hyperplasia outlet obstruction",
+       "Migraine prophylaxis as oral therapy",
+       "Chronic open-angle glaucoma maintenance",
+       "Asthma bronchospasm as inhaled therapy"
+      ],
+      3,
+      "Topical timolol eyedrops reduce aqueous humor production by blocking β-receptors on the ciliary epithelium. First-line for chronic open-angle glaucoma (along with prostaglandin analogs like latanoprost). KEY caution: systemic absorption can occur (eyedrops drain into nasolacrimal duct) — can produce systemic bradycardia, bronchospasm in asthma/COPD patients, fatigue. Patients should occlude the punctum (press inner corner of eye) for 1 minute after instillation to reduce systemic absorption. A — wrong because various β-blockers used systemically for arrhythmias. B — wrong because α1-blockers for BPH. C — wrong because propranolol for migraine prophylaxis. E — wrong because would WORSEN bronchospasm — timolol is non-selective. [LO 17.1 — Timolol Glaucoma]",
+      "basic"
+     ],
+     [
+      "A type 1 diabetic on insulin is started on propranolol for migraine prophylaxis. The MOST important counseling point is:",
+      [
+       "Propranolol cures diabetes",
+       "Propranolol raises blood glucose",
+       "Non-selective β-blockers MASK hypoglycemia symptoms",
+       "Insulin dosing must be doubled",
+       "Stop insulin while on propranolol"
+      ],
+      2,
+      "Hypoglycemia produces autonomic warning symptoms via β-mediated catecholamine surge: tachycardia, tremor, palpitations, anxiety. Non-selective β-blockers BLOCK these warnings. Sweating is M-mediated (sympathetic cholinergic at sweat glands) — the only preserved warning. Diabetic patients on β-blockers may have unrecognized hypoglycemia → severe events. Counseling: monitor glucose more frequently; recognize sweating as the warning sign. Cardioselective (β1) less affecting of hypoglycemia awareness, but still some risk. A — wrong because propranolol doesn't cure diabetes. B — wrong because no significant glucose-raising effect. D — wrong because no automatic dose doubling. E — wrong because never stop insulin in type 1 diabetes. [LO 17.2 — Hypoglycemia Masking]",
+      "basic"
+     ],
+     [
+      "Nebivolol is a unique β1-selective β-blocker that ALSO:",
+      [
+       "Stimulates endothelial nitric oxide release, producing vasodilation",
+       "Has α1-blocking activity",
+       "Has intrinsic sympathomimetic activity (ISA)",
+       "Has class III antiarrhythmic activity",
+       "Is a calcium channel blocker"
+      ],
+      0,
+      "Nebivolol is a β1-selective β-blocker with the unique property of stimulating endothelial nitric oxide synthase (eNOS) → NO release → vasodilation. Lowers BP via combined β1 blockade + vasodilation. Better metabolic profile (less impact on glucose/lipids) than older β-blockers. Some evidence for delaying atherosclerosis progression. Otherwise similar uses to other β1-selective agents. B — wrong because carvedilol/labetalol have α1. C — wrong because ISA is pindolol/acebutolol. D — wrong because class III is sotalol, amiodarone. E — wrong because not a CCB. [LO 17.1 — Nebivolol]",
+      "basic"
+     ],
+     [
+      "β-blockers reduce the rate of progression of HFrEF by:",
+      [
+       "Acute inotropy",
+       "Direct diuretic effect",
+       "Blocking chronic β1 over-activation",
+       "Direct vasodilation",
+       "Renin secretion enhancement"
+      ],
+      2,
+      "Chronic HF involves sustained sympathetic hyperactivation — high catecholamines drive β1 over-stimulation → receptor downregulation, myocyte apoptosis, fibrosis, ongoing remodeling. β-blockade interrupts this cycle. Long-term: β-receptor density recovers, ejection fraction improves, mortality drops. Counterintuitive timeline: short-term β-blockade can WORSEN HF (negative inotropy); long-term improves it. Start LOW, titrate SLOWLY, expect initial worsening, communicate to patients. A — wrong because OPPOSITE — β-blockers are negative inotropes acutely. B — wrong because no diuretic effect. D — wrong because no direct vasodilation (except mixed agents). E — wrong because β-blockers SUPPRESS renin. [LO 17.1 — β-Blockers HF Mechanism]",
+      "basic"
+     ],
+     [
+      "Carvedilol's mortality benefit in HFrEF likely benefits from its α1-blocking activity because:",
+      [
+       "α1 blockade improves contractility directly",
+       "α1 blockade blocks renin release",
+       "α1 blockade reduces afterload",
+       "α1 blockade prevents arrhythmias",
+       "α1 blockade increases HR"
+      ],
+      2,
+      "In HFrEF, peripheral vasoconstriction (high SVR from sympathetic activation) worsens cardiac output by raising afterload. α1 blockade reduces SVR/afterload → easier LV ejection → better forward flow. Carvedilol's dual action — β1 blockade for chronic remodeling, α1 for afterload reduction — produces a slightly different benefit profile than bisoprolol or metoprolol succinate. Choice among the three depends on patient factors (HR, BP, tolerance). A — wrong because α1 blockade is a vasodilator, not direct inotrope. B — wrong because renin is suppressed by β1 blockade, not α1. D — wrong because no significant arrhythmia prevention from α1. E — wrong because α1 blockade doesn't raise HR (may cause reflex tachycardia in some). [LO 17.1 — Carvedilol α1]",
+      "basic"
+     ],
+     [
+      "A patient develops bronchospasm after starting topical timolol eyedrops. The MOST appropriate management is:",
+      [
+       "Continue timolol and add an inhaled corticosteroid",
+       "Switch to topical pilocarpine as monotherapy",
+       "Add oral propranolol for cardiac protection",
+       "Add IV β-blocker for further BP control",
+       "Stop timolol and switch to a non-β-blocker drop"
+      ],
+      4,
+      "Systemic absorption of topical β-blocker from eyedrops can cause bronchospasm, bradycardia, fatigue. Stop timolol. Better alternatives for glaucoma in asthma/COPD: prostaglandin analogs (latanoprost — first-line for glaucoma broadly), α2 agonists (brimonidine), carbonic anhydrase inhibitors (dorzolamide, brinzolamide). Pilocarpine could be added but rarely as monotherapy in chronic open-angle glaucoma. A — wrong because continuing the offending drug isn't appropriate. B — wrong because pilocarpine alone is rarely adequate for chronic glaucoma. C — wrong because more β-blocker worsens bronchospasm. D — wrong because more β-blocker worsens bronchospasm. [LO 17.2 — Timolol Bronchospasm]",
+      "basic"
+     ],
+     [
+      "A pregnant patient at 28 weeks with chronic hypertension needs ongoing antihypertensive therapy. The PREFERRED agent is:",
+      [
+       "Lisinopril",
+       "Hydrochlorothiazide as first-line",
+       "Labetalol",
+       "Spironolactone",
+       "Metoprolol only"
+      ],
+      2,
+      "Pregnancy HTN safe agents: labetalol (most widely used), methyldopa (decades of safety), nifedipine (extended-release), hydralazine (for hypertensive emergencies in pregnancy). ACE inhibitors and ARBs are TERATOGENIC (renal dysgenesis, oligohydramnios, fetal demise) — absolutely contraindicated in pregnancy. Atenolol has been associated with IUGR — generally avoided. Diuretics aren't first-line but not absolutely contraindicated. A — wrong because ACE inhibitor — teratogenic. B — wrong because thiazide isn't first-line in pregnancy. D — wrong because spironolactone is teratogenic (feminization of male fetus). E — wrong because metoprolol is not preferred; atenolol-class concerns. [LO 17.2 — Pregnancy HTN]",
+      "basic"
+     ],
+     [
+      "A patient with chronic stable HFrEF (EF 25%) is on metoprolol succinate, lisinopril, spironolactone, and furosemide. The combination is best understood as:",
+      [
+       "Maximally aggressive — risk of polypharmacy",
+       "Guideline-directed medical therapy — each drug class targets a different neurohormonal axis",
+       "Excessive — should reduce to single agent",
+       "Diuretic-only therapy",
+       "Inotrope-based regimen"
+      ],
+      1,
+      "Pillars of HFrEF guideline-directed therapy: (1) β-blocker (metoprolol succinate / carvedilol / bisoprolol) — sympathetic; (2) ACE inhibitor/ARB or ARNI (sacubitril-valsartan) — RAAS; (3) mineralocorticoid receptor antagonist (spironolactone, eplerenone) — aldosterone; (4) SGLT2 inhibitor (dapagliflozin, empagliflozin) — newer addition with mortality benefit. Furosemide for volume management (symptomatic, no mortality benefit). Each pillar addresses a different neurohormonal axis. Adding pillars sequentially produces incremental mortality reductions. A — wrong because this IS modern GDMT, not 'polypharmacy.' C — wrong because reducing therapy worsens outcomes. D — wrong because diuretic alone isn't enough. E — wrong because no inotrope here. [Integration: HF Polypharmacy]",
+      "basic"
+     ],
+     [
+      "A pregnant patient at 30 weeks develops severe hypertension (BP 175/115) with end-organ symptoms (severe headache, visual changes, proteinuria). The MOST appropriate immediate antihypertensive is:",
+      [
+       "IV lisinopril",
+       "IV nitroprusside",
+       "IV labetalol",
+       "IV losartan",
+       "Oral spironolactone"
+      ],
+      2,
+      "Severe HTN in pregnancy (with or without preeclampsia/eclampsia features) requires urgent treatment. First-line IV options: labetalol (mixed α/β-blocker), hydralazine (direct vasodilator). Oral: nifedipine extended-release. Methyldopa is for chronic management, slower onset. AVOID: ACE inhibitors and ARBs (teratogenic), nitroprusside (fetal cyanide accumulation with prolonged use), spironolactone (anti-androgenic). Co-management with magnesium sulfate for seizure prophylaxis if preeclampsia features present. A — wrong because ACE inhibitor teratogenic. B — wrong because nitroprusside fetal toxicity. D — wrong because ARB teratogenic. E — wrong because spironolactone anti-androgenic. [Integration: Pregnancy HTN Acute]",
+      "basic"
+     ],
+     [
+      "A patient with stable COPD and stable HFrEF is established on tiotropium, β2-LABA, ICS, AND carvedilol. Which combination concern is MOST important?",
+      [
+       "These drugs can't be used together — pick one disease",
+       "β2-LABA blunts carvedilol effect",
+       "Tiotropium causes systemic anticholinergic toxicity",
+       "ICS causes hyperglycemia",
+       "Carvedilol could theoretically cause bronchospasm in COPD"
+      ],
+      4,
+      "Stable COPD is no longer a strict contraindication to β-blockers. Cardioselective (β1) agents (bisoprolol, metoprolol succinate) are preferred. Carvedilol is non-selective + α1 — historically avoided but registry data and trials show tolerable in stable COPD. Mortality benefit in HFrEF usually exceeds theoretical bronchospasm risk. Active asthma is a different story (less tolerance). Monitor PEFR/FEV1 after initiation; watch for bronchospasm. The β2 LABA + β-blocker concept seems paradoxical — but at clinical doses they coexist in distinct receptor populations. A — wrong because co-management is well-established. B — wrong because β2 LABA and carvedilol have separate clinical effects. C — wrong because tiotropium is inhaled and quaternary — minimal systemic effects. D — wrong because ICS doesn't significantly raise glucose. [Integration: COPD + HF]",
       "basic"
      ]
     ]
@@ -14273,6 +17378,103 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A neutropenic cancer patient develops fever. Empiric antibiotic therapy must be bactericidal rather than bacteriostatic because:",
+      [
+       "Bactericidal agents kill organisms the absent neutrophils cannot",
+       "Bacteriostatic agents penetrate tissues poorly in fever",
+       "Bacteriostatic agents cause more allergic reactions acutely",
+       "Bactericidal agents have lower minimum inhibitory concentrations",
+       "Bacteriostatic agents work only in pediatric populations"
+      ],
+      0,
+      "Bacteriostatic drugs halt bacterial growth and rely on the host immune system (especially neutrophils) to clear residual organisms. In neutropenic patients, there are no neutrophils to do that clearing — surviving bacteria proliferate again once drug levels fall below MIC. Bactericidal classes (β-lactams, vancomycin, aminoglycosides, fluoroquinolones, metronidazole, daptomycin, TMP-SMX) actually kill organisms (MBC ≈ MIC). Same logic applies in meningitis, endocarditis, and deep-tissue infection where host immunity is mechanically excluded. B — wrong because tissue penetration isn't the dominant issue in neutropenic fever. C — wrong because no allergy difference between classes drives this choice. D — wrong because MIC is a property of the organism, not the class. E — wrong because no age-restricted activity here. [LO 18.1 — Bactericidal vs Bacteriostatic]",
+      "basic"
+     ],
+     [
+      "Aminoglycosides display concentration-dependent killing and a long post-antibiotic effect. The dosing strategy this favors is:",
+      [
+       "Continuous IV infusion at low steady-state concentration",
+       "Twice-daily dosing matched to elimination half-life",
+       "Frequent small doses every two to three hours",
+       "Once-daily extended-interval dosing maximizing peak/MIC ratio",
+       "Loading dose followed by oral maintenance therapy"
+      ],
+      3,
+      "Concentration-dependent killing means efficacy scales with peak/MIC ratio — a high transient peak kills more effectively than a sustained moderate level. The long post-antibiotic effect (PAE) means bacterial regrowth is suppressed even after drug levels fall below MIC. Together these favor once-daily extended-interval dosing: maximizes the peak, minimizes the trough (reduces nephrotoxicity from sustained cortical accumulation). Same logic applies to fluoroquinolones and daptomycin. Contrast: β-lactams and vancomycin are time-dependent (time above MIC matters) and favor frequent dosing or continuous infusion. A — wrong because continuous infusion minimizes peak — wrong for concentration-dependent killing. B — wrong because twice-daily isn't optimal — once-daily maximizes peak. C — wrong because frequent small doses also flatten the peak. E — wrong because aminoglycosides are not orally absorbed. [LO 18.1 — PK/PD Dosing]",
+      "basic"
+     ],
+     [
+      "MRSA acquires methicillin resistance through which molecular mechanism?",
+      [
+       "Production of an extended-spectrum β-lactamase enzyme",
+       "Active efflux pump exporting all β-lactams from the cytoplasm",
+       "Substitution of D-Ala-D-Lac for D-Ala-D-Ala in peptidoglycan",
+       "Acquisition of mecA gene encoding altered penicillin-binding protein",
+       "Reduced outer membrane porin permeability blocking drug entry"
+      ],
+      3,
+      "MRSA carries the mecA gene encoding PBP2a — a penicillin-binding protein with markedly reduced affinity for all β-lactams except ceftaroline (a 5th-gen cephalosporin specifically designed to bind PBP2a). Standard β-lactams (penicillins, methicillin, oxacillin, nafcillin, most cephalosporins) all fail. Treatment alternatives: vancomycin, daptomycin, linezolid, ceftaroline, tedizolid. Don't confuse with VRE — VRE substitutes D-Ala-D-Lac for D-Ala-D-Ala in peptidoglycan precursors, dropping vancomycin binding ~1000-fold. A — wrong because ESBLs are a gram-negative resistance mechanism, not MRSA. B — wrong because efflux pumps exist but aren't the MRSA mechanism. C — wrong because this is the VRE mechanism, not MRSA. E — wrong because porin loss is gram-negative, not staphylococcal. [LO 18.2 — MRSA Resistance]",
+      "basic"
+     ],
+     [
+      "Vancomycin-resistant Enterococcus (VRE) resists vancomycin through which mechanism?",
+      [
+       "Production of β-lactamase enzymes degrading vancomycin",
+       "Active efflux of vancomycin through an outer-membrane pump",
+       "Acquisition of mecA gene encoding altered penicillin-binding protein",
+       "Substitution of D-Ala-D-Lactate for D-Ala-D-Alanine in cell wall",
+       "Reduced porin permeability blocking vancomycin entry to cytoplasm"
+      ],
+      3,
+      "VRE substitutes D-Ala-D-Lactate (vanA, vanB phenotypes) or D-Ala-D-Serine (vanC) for the normal D-Ala-D-Ala terminus of peptidoglycan precursors. Vancomycin binds D-Ala-D-Ala via hydrogen bonds — the lactate substitution drops binding affinity ~1000-fold. Vancomycin fails. Treatment: linezolid, daptomycin, tigecycline. The mecA/PBP2a mechanism is MRSA, not VRE. β-lactamases don't touch vancomycin (no β-lactam ring). A — wrong because vancomycin has no β-lactam ring — β-lactamases don't affect it. B — wrong because efflux isn't the primary VRE mechanism. C — wrong because mecA/PBP2a is MRSA, not VRE. E — wrong because Enterococcus is gram-positive — no outer membrane porins. [LO 18.2 — VRE Resistance]",
+      "basic"
+     ],
+     [
+      "Which of the following antibiotic classes is bacteriostatic rather than bactericidal?",
+      [
+       "β-lactam penicillins like nafcillin and amoxicillin",
+       "Tetracyclines like doxycycline and minocycline",
+       "Fluoroquinolones like ciprofloxacin and levofloxacin",
+       "Aminoglycosides like gentamicin and tobramycin",
+       "Glycopeptides like vancomycin and telavancin"
+      ],
+      1,
+      "Tetracyclines bind the 30S ribosomal subunit, blocking aminoacyl-tRNA from entering the A site — halts protein synthesis, halts bacterial growth, but doesn't kill (MBC >> MIC). The ECSTaTiC mnemonic for bacteriostatic agents: Erythromycin (macrolides), Clindamycin, Sulfonamides, Tetracyclines, Chloramphenicol. The other choices are all bactericidal classes — β-lactams disrupt cell wall integrity, fluoroquinolones break DNA, aminoglycosides cause misreading and membrane damage, vancomycin disrupts peptidoglycan crosslinking. A — wrong because β-lactams are bactericidal — they disrupt the cell wall. C — wrong because fluoroquinolones are bactericidal — DNA-strand breakage. D — wrong because aminoglycosides are bactericidal — membrane and translational damage. E — wrong because vancomycin is bactericidal — cell-wall synthesis blockade. [LO 18.1 — Drug Class Identification]",
+      "basic"
+     ],
+     [
+      "The principle of selective toxicity in antimicrobial therapy refers to:",
+      [
+       "Exploiting biological differences between bacterial and host cells",
+       "Selecting the narrowest-spectrum antibiotic for the suspected organism",
+       "Choosing drugs with the lowest minimum inhibitory concentration value",
+       "Restricting antibiotic use to immunocompetent adult populations",
+       "Selecting bactericidal over bacteriostatic agents whenever possible"
+      ],
+      0,
+      "Selective toxicity = exploiting biological differences between bacteria and host. Targets that hosts lack or differ on: peptidoglycan cell wall (β-lactams, vancomycin); 70S ribosome (aminoglycosides, tetracyclines, macrolides, chloramphenicol — host has 80S); bacterial folate synthesis (sulfonamides, trimethoprim — hosts get dietary folate); bacterial DNA gyrase (fluoroquinolones); bacterial RNA polymerase (rifampin). Drugs lacking selective toxicity (e.g., older antimycobacterials with prominent host toxicity) require careful monitoring. B — wrong because narrow-spectrum is a stewardship principle, not selective toxicity. C — wrong because MIC is a measurable property, not the principle. D — wrong because selective toxicity isn't about patient population. E — wrong because bactericidal selection is a separate principle. [LO 18.1 — Selective Toxicity]",
+      "basic"
+     ],
+     [
+      "Empiric neutropenic fever therapy in a chemotherapy patient with ANC under 500 uses:",
+      [
+       "Oral amoxicillin-clavulanate as outpatient management for low-risk patients only",
+       "IV broad-spectrum antipseudomonal β-lactam such as cefepime or piperacillin-tazobactam",
+       "IV vancomycin monotherapy reserved for low-risk neutropenic fever patients broadly",
+       "Oral fluoroquinolone alone for inpatient management of all neutropenic fever cases",
+       "IV ampicillin plus gentamicin as standard empiric coverage for neutropenic fever"
+      ],
+      1,
+      "Neutropenic fever empiric: bactericidal antipseudomonal broad-spectrum IV β-lactam — cefepime (4th-gen), piperacillin-tazobactam, or meropenem. Add VANCOMYCIN if: skin/soft tissue infection, suspected line infection, mucositis, hemodynamic instability, prior MRSA colonization. Add ANTIFUNGAL (echinocandin or liposomal amphotericin B) if persistent fever despite 4-7 days of broad-spectrum antibiotics. Low-risk outpatient neutropenic fever (MASCC score, brief expected duration) can use oral cipro + amoxicillin-clavulanate at home. Source workup: blood cultures, urinalysis, chest imaging, line cultures, full exam. A — wrong because outpatient management only for LOW-risk subset. C — wrong because vanc monotherapy isn't standard. D — wrong because FQ alone isn't standard inpatient. E — wrong because amp/gent isn't broad enough for neutropenic fever. [LO 18.1 — Integration]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -14465,6 +17667,155 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Penicillin G remains first-line for which spirochete infection in pregnancy, requiring desensitization if the patient is allergic?",
+      [
+       "Lyme disease from Borrelia burgdorferi infection",
+       "Leptospirosis from Leptospira interrogans infection",
+       "Syphilis from Treponema pallidum spirochete infection",
+       "Relapsing fever from Borrelia recurrentis infection",
+       "Rat-bite fever from Spirillum minus infection"
+      ],
+      2,
+      "Penicillin G benzathine is the ONLY validated treatment for syphilis in pregnancy — no alternative regimen is equivalent. The CDC recommends desensitization for allergic pregnant patients rather than substitution. Doxycycline (alternative for non-pregnant) is contraindicated in pregnancy (tooth/bone effects). Ceftriaxone alternatives haven't been validated for congenital syphilis prevention. For neurosyphilis, only IV penicillin G achieves CSF levels — no oral alternative. A — wrong because Lyme disease uses doxycycline as first-line (or amoxicillin in pregnancy). B — wrong because leptospirosis can use doxycycline or penicillin — not the desensitization-required scenario. D — wrong because relapsing fever uses doxycycline. E — wrong because rat-bite fever has alternatives — not pregnancy-pinned to penicillin. [LO 19.2 — Penicillin in Pregnancy]",
+      "basic"
+     ],
+     [
+      "A child develops a diffuse maculopapular rash one week into amoxicillin for sore throat. EBV mononucleosis is later confirmed. The MOST appropriate interpretation is:",
+      [
+       "True IgE-mediated penicillin allergy requiring lifelong avoidance",
+       "Stevens-Johnson syndrome onset warranting urgent dermatology referral",
+       "Severe drug eruption requiring immediate steroid and antihistamine therapy",
+       "Cephalosporin cross-reactivity that contraindicates the entire β-lactam class",
+       "Non-allergic ampicillin-EBV rash that doesn't predict future reactions"
+      ],
+      4,
+      "Ampicillin or amoxicillin given during EBV mononucleosis produces a diffuse maculopapular rash in ~90% of patients — this is a non-allergic immune-mediated phenomenon, NOT a true IgE-mediated allergy. The patient can receive amoxicillin/ampicillin again later without incident. This presentation is frequently mis-labeled as 'penicillin allergy' in childhood and follows the patient for life, driving overuse of broader/more toxic alternatives. The clinical hint: sore throat (likely EBV) + rash with amoxicillin = pseudo-allergy. A — wrong because true IgE allergy is <1% of 'penicillin allergic' labels. B — wrong because SJS has mucosal involvement and target lesions — not this presentation. C — wrong because no steroid/antihistamine is needed — self-limited. D — wrong because EBV rash doesn't predict cephalosporin reaction. [LO 19.3 — Penicillin Pseudoallergy]",
+      "basic"
+     ],
+     [
+      "Penicillin G's bactericidal action against susceptible streptococci is achieved through which mechanism?",
+      [
+       "Inhibition of bacterial 30S ribosomal subunit protein synthesis",
+       "Disruption of bacterial RNA polymerase transcription initiation",
+       "Disruption of bacterial DNA gyrase and topoisomerase IV function",
+       "Inhibition of bacterial dihydrofolate reductase folate synthesis",
+       "Binding to PBPs and blocking peptidoglycan crosslinking transpeptidation"
+      ],
+      4,
+      "Penicillins bind penicillin-binding proteins (PBPs) — bacterial transpeptidase enzymes that crosslink the peptidoglycan layer. Blocked crosslinking → weakened cell wall → osmotic lysis as the bacterium grows. This is why penicillins require growing/dividing bacteria to work (combining with bacteriostatic drugs that halt growth can blunt the bactericidal effect — the tetracycline-penicillin antagonism). Bactericidal, time-dependent killing, narrow spectrum (G+ cocci, some G−, anaerobes above the diaphragm, spirochetes). A — wrong because 30S inhibition is tetracyclines and aminoglycosides. B — wrong because RNA polymerase is rifampin. C — wrong because DNA gyrase is fluoroquinolones. D — wrong because DHFR inhibition is trimethoprim. [LO 19.1 — Penicillin Mechanism]",
+      "basic"
+     ],
+     [
+      "Methicillin-sensitive Staphylococcus aureus (MSSA) endocarditis is treated with which first-line antibiotic?",
+      [
+       "Vancomycin given as continuous IV infusion for six weeks",
+       "Linezolid given orally for the entire treatment duration",
+       "Piperacillin-tazobactam combined with an aminoglycoside synergy",
+       "Daptomycin given once daily through a peripheral IV line",
+       "Nafcillin or oxacillin given parenterally for six weeks total"
+      ],
+      4,
+      "Nafcillin and oxacillin are antistaphylococcal penicillins — narrow spectrum aimed at MSSA, β-lactamase-stable. For MSSA endocarditis they outperform vancomycin (faster sterilization of blood cultures, lower mortality). Vancomycin is reserved for MRSA or true penicillin allergy. Cefazolin is the alternative for patients with non-anaphylactic penicillin allergy. Daptomycin is mostly MRSA/VRE territory. Always check culture and susceptibility — empiric vancomycin is often started until MSSA confirmed, then switched. A — wrong because vancomycin is inferior to nafcillin for MSSA endocarditis. B — wrong because linezolid is bacteriostatic — endocarditis needs bactericidal. C — wrong because pip-tazo isn't an endocarditis first-line. D — wrong because daptomycin is MRSA territory. [LO 19.2 — MSSA Therapy]",
+      "basic"
+     ],
+     [
+      "Amoxicillin-clavulanate adds clavulanate to amoxicillin in order to:",
+      [
+       "Enhance amoxicillin absorption across the intestinal mucosa",
+       "Inhibit β-lactamase enzymes produced by resistant bacterial organisms",
+       "Provide additional gram-positive coverage against staphylococcal species",
+       "Extend amoxicillin half-life and reduce twice-daily dosing requirements",
+       "Reduce amoxicillin-associated diarrhea and gastrointestinal upset symptoms"
+      ],
+      1,
+      "Clavulanate is a 'suicide inhibitor' of bacterial β-lactamases — itself a β-lactam, it binds and irreversibly inactivates β-lactamase enzymes. This restores amoxicillin activity against β-lactamase-producing organisms (H. influenzae, M. catarrhalis, some E. coli, S. aureus methicillin-sensitive). Other β-lactam/β-lactamase inhibitor pairs: ampicillin-sulbactam, piperacillin-tazobactam, ceftolozane-tazobactam, ceftazidime-avibactam, meropenem-vaborbactam. Clavulanate is also responsible for most of the GI upset (paradoxically, the opposite of choice E). A — wrong because no absorption enhancement. C — wrong because clavulanate doesn't add inherent gram-positive coverage. D — wrong because no half-life extension. E — wrong because the OPPOSITE — clavulanate INCREASES diarrhea. [LO 19.1 — β-lactamase Inhibitors]",
+      "basic"
+     ],
+     [
+      "Piperacillin-tazobactam covers Pseudomonas aeruginosa because:",
+      [
+       "Piperacillin is an antipseudomonal penicillin with anti-PBP activity",
+       "Tazobactam directly inhibits Pseudomonas penicillin-binding protein activity",
+       "Tazobactam disrupts the Pseudomonas outer membrane permeability barrier",
+       "Piperacillin chelates Pseudomonas iron-acquisition siderophore systems directly",
+       "Tazobactam blocks Pseudomonas efflux pumps that export β-lactams normally"
+      ],
+      0,
+      "Piperacillin is the antipseudomonal of the ureidopenicillin class — broad-spectrum penicillin with intrinsic activity against Pseudomonas aeruginosa, plus most enterobacteriaceae and gram-positives. Tazobactam adds β-lactamase inhibition, restoring activity against β-lactamase-producers. Common empiric use: hospital-acquired pneumonia, neutropenic fever, intra-abdominal infection, complicated UTI/skin. Caution: AKI risk when combined with vancomycin (the 'VAP combo' is the textbook nephrotoxicity setup). B — wrong because tazobactam is a β-lactamase inhibitor, not a direct PBP binder. C — wrong because tazobactam doesn't disrupt outer membrane. D — wrong because no siderophore activity. E — wrong because no efflux blockade. [LO 19.2 — Antipseudomonal Penicillins]",
+      "basic"
+     ],
+     [
+      "An elderly patient with Listeria meningitis requires which antibiotic combination as empiric therapy?",
+      [
+       "Vancomycin plus ceftriaxone plus metronidazole given parenterally",
+       "Ampicillin plus ceftriaxone plus vancomycin given parenterally",
+       "Cefepime plus vancomycin plus aminoglycoside given parenterally",
+       "Meropenem plus linezolid plus rifampin given parenterally",
+       "Piperacillin-tazobactam plus vancomycin given parenterally only"
+      ],
+      1,
+      "Listeria monocytogenes is a notable gap in cephalosporin coverage — ampicillin is required. In patients >50 years, immunocompromised, pregnant, or alcoholic, Listeria is a meningitis pathogen. Empiric meningitis cocktail in this population: ampicillin (Listeria) + ceftriaxone (S. pneumo, N. meningitidis, H. flu) + vancomycin (resistant pneumococci) ± dexamethasone (pneumococcal meningitis benefit). Add acyclovir if HSV encephalitis on the differential. For non-elderly immunocompetent adults: skip ampicillin (Listeria much less likely). A — wrong because metronidazole doesn't cover Listeria. C — wrong because no ampicillin = no Listeria coverage. D — wrong because meropenem covers Listeria but is rescue, not first-line. E — wrong because pip-tazo poorly penetrates CSF. [LO 19.2 — Listeria Meningitis]",
+      "basic"
+     ],
+     [
+      "True IgE-mediated penicillin anaphylaxis is reported in patient charts at rates approaching 10%, but actual confirmed prevalence is closer to:",
+      [
+       "Approximately 5% based on confirmed skin-testing patient cohorts",
+       "Approximately 15% based on confirmed skin-testing patient cohorts",
+       "Approximately 25% based on confirmed skin-testing patient cohorts",
+       "Less than 1% based on confirmed skin-testing patient cohorts",
+       "Approximately 50% based on confirmed skin-testing patient cohorts"
+      ],
+      3,
+      "Patient-reported 'penicillin allergy' labels carry ~10% prevalence, but skin-testing studies confirm true IgE-mediated allergy in <1%. The label persists in charts for life, driving overuse of broader/more toxic alternatives (fluoroquinolones, vancomycin, clindamycin) — worse outcomes, higher cost, more C. difficile. Modern allergy delabeling protocols (history-based, skin testing, graded oral challenge) recover these patients for narrow-spectrum β-lactam therapy. Cephalosporin cross-reactivity historically quoted at 10% is closer to 1-2% (lower for 3rd-gen and higher). A — wrong because 5% is too high — true rate is <1%. B — wrong because 15% is too high. C — wrong because 25% is the reverse of true rate. E — wrong because 50% is implausible. [LO 19.3 — Allergy Delabeling]",
+      "basic"
+     ],
+     [
+      "Empiric therapy for adult bacterial meningitis adds ampicillin to ceftriaxone + vancomycin in which patient population?",
+      [
+       "Adults over 50, immunocompromised, pregnant, or with alcoholism history",
+       "Any adult under 50 with otherwise healthy immune system status",
+       "Children under 18 with otherwise healthy immune system status",
+       "Any pregnant woman regardless of immune status or other risk factors",
+       "Any healthcare worker regardless of immune status or other risk factors"
+      ],
+      0,
+      "Listeria monocytogenes is a notable gap in cephalosporin coverage — add AMPICILLIN to the standard meningitis cocktail (ceftriaxone + vancomycin) in patients at risk for Listeria: age >50, immunocompromised, pregnant, alcoholic, or other significant comorbidity. For meningitis in OTHERWISE HEALTHY younger adults: ceftriaxone + vancomycin suffices (Listeria much less likely). Dexamethasone reduces neurologic sequelae in pneumococcal meningitis — start with or before first antibiotic dose. Add acyclovir if HSV encephalitis on the differential. B — wrong because no Listeria coverage needed in healthy young adults. C — wrong because children have different epidemiology. D — wrong because pregnancy is in the correct answer but listed alone here. E — wrong because healthcare worker status alone isn't an indication. [LO 19.2 — Integration]",
+      "basic"
+     ],
+     [
+      "A pregnant woman in the second trimester is diagnosed with uncomplicated cystitis. The MOST appropriate first-line oral antibiotic is:",
+      [
+       "TMP-SMX given orally for 3 days as standard cystitis course in pregnancy",
+       "Cephalexin given orally for 5-7 days as pregnancy-safe cystitis treatment",
+       "Ciprofloxacin given orally for 5 days as standard cystitis course in pregnancy",
+       "Doxycycline given orally for 7 days as standard cystitis course in pregnancy",
+       "Nitrofurantoin given orally for 5 days regardless of trimester in pregnancy"
+      ],
+      1,
+      "Pregnancy-safe UTI antibiotics: cephalexin (cephalosporin, safe throughout), amoxicillin-clavulanate, fosfomycin (single dose). Caveats: TMP-SMX (avoid 1st trimester for neural tube defects from TMP; avoid 3rd trimester for kernicterus from sulfa); nitrofurantoin (avoid in late pregnancy — neonatal hemolysis; some sources also avoid 1st trimester); fluoroquinolones AVOID (cartilage concerns); tetracyclines AVOID (tooth/bone effects + maternal liver toxicity in pregnancy). Bacteriuria — even asymptomatic — must be treated in pregnancy to prevent pyelonephritis + preterm labor. A — wrong because TMP-SMX avoided in 1st and 3rd trimesters. C — wrong because fluoroquinolones avoided in pregnancy. D — wrong because tetracyclines absolutely contraindicated. E — wrong because nitrofurantoin avoided near term (and some avoid 1st trimester). [LO 19.1 — Integration]",
+      "basic"
+     ],
+     [
+      "Treatment of pregnant patient with syphilis who is allergic to penicillin involves which approach?",
+      [
+       "Penicillin desensitization followed by standard penicillin G benzathine treatment",
+       "Doxycycline as standard pregnancy-safe alternative to penicillin for syphilis",
+       "Ceftriaxone as equivalent alternative to penicillin in pregnant syphilis treatment",
+       "Azithromycin as equivalent alternative to penicillin in pregnant syphilis treatment",
+       "Erythromycin as equivalent alternative to penicillin in pregnant syphilis treatment"
+      ],
+      0,
+      "Penicillin G benzathine is the ONLY validated treatment for syphilis in pregnancy. No alternative regimen is equivalent for preventing congenital syphilis. CDC recommends DESENSITIZATION in penicillin-allergic pregnant patients with syphilis. Doxycycline (alternative for non-pregnant) is contraindicated in pregnancy (tooth/bone). Ceftriaxone alternative hasn't been validated for congenital syphilis prevention. Azithromycin has documented treponemal resistance. Erythromycin doesn't reliably cross the placenta. For neurosyphilis, only IV penicillin G achieves CSF levels. Desensitization protocols are well-established and safely performed in monitored settings. B — wrong because doxycycline contraindicated in pregnancy. C — wrong because ceftriaxone not validated for congenital syphilis prevention. D — wrong because azithromycin has resistance issues. E — wrong because erythromycin doesn't cross placenta reliably. [LO 19.2 — Integration]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -14584,6 +17935,116 @@ const QUIZ = [
       ],
       0,
       "True carbapenem statement. Imipenem/cilastatin is the broadest-spectrum beta-lactam (excluding MRSA). (B) MRSA is a coverage gap. (C) meropenem needs no cilastatin. (D) seizures occur, especially with imipenem. (E) ertapenem is beta-lactamase-stable.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Cefazolin is the standard antibiotic for surgical prophylaxis in clean procedures because it covers:",
+      [
+       "MRSA and Pseudomonas at high parenteral doses",
+       "MSSA and skin streptococci with reliable activity",
+       "Enterococcus faecium and vancomycin-resistant species",
+       "Anaerobes including Bacteroides fragilis in colorectal cases",
+       "Atypical pneumonia organisms including Mycoplasma species"
+      ],
+      1,
+      "Cefazolin is a first-generation cephalosporin (PEcK: Proteus, E. coli, Klebsiella, plus G+ cocci including MSSA and most streptococci). Skin flora is the dominant target in clean surgical procedures — cefazolin's MSSA + strep coverage matches. Standard dose: 1-2 g IV within 60 minutes of incision, redose if surgery >4 hours. For known MRSA colonization or beta-lactam allergy: vancomycin. For colorectal surgery (anaerobes): add metronidazole. Cefazolin does NOT cover MRSA, Enterococcus, Pseudomonas, or anaerobes. A — wrong because 1st-gen cephalosporins miss MRSA and Pseudomonas. C — wrong because Enterococcus has intrinsic cephalosporin resistance. D — wrong because no anaerobic coverage — that's cefoxitin/cefotetan or metronidazole. E — wrong because atypicals are macrolide/doxycycline territory. [LO 20.1 — Surgical Prophylaxis]",
+      "basic"
+     ],
+     [
+      "Empiric therapy for adult bacterial meningitis in an otherwise healthy young adult includes:",
+      [
+       "Cefazolin plus metronidazole given parenterally with corticosteroids",
+       "Vancomycin plus ceftriaxone given parenterally with dexamethasone",
+       "Levofloxacin monotherapy given orally with adjunctive steroids",
+       "Piperacillin-tazobactam monotherapy given parenterally with steroids",
+       "Doxycycline plus rifampin given orally with adjunctive steroids"
+      ],
+      1,
+      "Empiric bacterial meningitis (young adult): ceftriaxone (S. pneumoniae, N. meningitidis, H. influenzae — excellent CSF penetration) + vancomycin (covers ceftriaxone-resistant pneumococcus). Dexamethasone reduces neurologic sequelae in pneumococcal meningitis if given before/with first antibiotic dose. In patients >50, immunocompromised, alcoholic, or pregnant, ADD ampicillin for Listeria. Add acyclovir if HSV encephalitis on the differential. A — wrong because cefazolin doesn't penetrate CSF reliably. C — wrong because fluoroquinolone monotherapy is not first-line for bacterial meningitis. D — wrong because pip-tazo doesn't penetrate CSF well. E — wrong because doxycycline doesn't penetrate CSF adequately and misses pneumococcus. [LO 20.1 — Meningitis Empiric]",
+      "basic"
+     ],
+     [
+      "Ceftriaxone is contraindicated in neonates with hyperbilirubinemia because:",
+      [
+       "Ceftriaxone causes hemolysis in glucose-6-phosphate dehydrogenase deficiency",
+       "Ceftriaxone directly inhibits hepatic UDP-glucuronyltransferase activity in liver",
+       "Ceftriaxone competes with bilirubin for serum albumin binding sites",
+       "Ceftriaxone induces kernicterus through direct CNS toxic mechanisms",
+       "Ceftriaxone reduces enterohepatic recirculation of bilirubin in the gut"
+      ],
+      2,
+      "Ceftriaxone is highly protein-bound (~95% to albumin) and displaces bilirubin from albumin binding sites → rising free bilirubin → kernicterus risk in neonates with hyperbilirubinemia. Use cefotaxime instead — same 3rd-generation cephalosporin spectrum, no albumin displacement, no biliary sludge. Other ceftriaxone caution: precipitates with calcium-containing IV solutions in neonates — can cause fatal pulmonary/renal calcium-ceftriaxone precipitates. A — wrong because G6PD hemolysis is sulfonamides, dapsone, nitrofurantoin, primaquine — not ceftriaxone. B — wrong because no direct UDP-glucuronyltransferase inhibition. D — wrong because kernicterus is via free bilirubin displacement, not direct CNS toxicity. E — wrong because no relevant enterohepatic effect. [LO 20.2 — Ceftriaxone Neonate]",
+      "basic"
+     ],
+     [
+      "Imipenem is co-administered with cilastatin in order to:",
+      [
+       "Enhance imipenem absorption across the intestinal epithelium",
+       "Extend imipenem half-life and reduce four-times-daily dosing frequency",
+       "Provide additional gram-positive coverage against staphylococcal species",
+       "Reduce imipenem-induced seizures in patients with renal impairment",
+       "Inhibit renal dehydropeptidase that would inactivate imipenem otherwise"
+      ],
+      4,
+      "Imipenem is rapidly inactivated by renal dehydropeptidase-1 in the proximal tubule — cilastatin inhibits this enzyme, allowing imipenem to reach therapeutic urinary concentrations and reducing nephrotoxicity from accumulated breakdown products. Cilastatin itself has no antibacterial activity. Imipenem-cilastatin is reserved for serious gram+ / gram− / anaerobe / Pseudomonas infections — the broadest β-lactam spectrum. Known adverse effect: seizures (especially in renal failure with under-adjusted dosing). Meropenem has a slightly lower seizure rate. Ertapenem doesn't cover Pseudomonas or Enterococcus. A — wrong because no GI absorption enhancement — imipenem is IV. B — wrong because no half-life extension from cilastatin. C — wrong because cilastatin doesn't add antimicrobial spectrum. D — wrong because seizure prevention isn't the cilastatin role. [LO 20.2 — Imipenem-Cilastatin]",
+      "basic"
+     ],
+     [
+      "Aztreonam is the safest β-lactam for a patient with documented anaphylaxis to penicillin because:",
+      [
+       "Aztreonam is metabolized differently than other β-lactam antibiotics",
+       "Aztreonam achieves much lower plasma concentrations than other β-lactams",
+       "Aztreonam contains no β-lactam ring in its molecular structure",
+       "Aztreonam binds different penicillin-binding proteins than penicillins do",
+       "Aztreonam is a monobactam with minimal cross-reactivity to penicillins"
+      ],
+      4,
+      "Aztreonam is the only monobactam — single-ring β-lactam with structural differences from the bicyclic penicillins/cephalosporins/carbapenems. Cross-reactivity with penicillins is <1% (vs ~1-2% for cephalosporins, ~1% for carbapenems). Considered safe in documented penicillin anaphylaxis when gram-negative coverage is needed. Spectrum: gram-negatives ONLY, including Pseudomonas. No gram-positive activity (won't cover MRSA, strep). Pair with vancomycin if mixed flora suspected. EXCEPTION: aztreonam DOES cross-react with ceftazidime (shared side chain). A — wrong because metabolism similarity isn't the issue. B — wrong because no relevant plasma-level difference. C — wrong because aztreonam DOES have a β-lactam ring — single-ring monobactam. D — wrong because PBP binding similarity isn't the cross-reactivity driver. [LO 20.2 — Aztreonam Cross-Reactivity]",
+      "basic"
+     ],
+     [
+      "Cefepime stands out among cephalosporins as 4th-generation because it covers:",
+      [
+       "Pseudomonas plus broad gram-positives and gram-negatives empirically",
+       "Methicillin-resistant Staphylococcus aureus through altered PBP2a binding",
+       "Vancomycin-resistant Enterococcus through D-Ala-D-Lac binding",
+       "Anaerobes including Bacteroides fragilis for intra-abdominal coverage",
+       "Atypicals including Mycoplasma and Legionella for pneumonia"
+      ],
+      0,
+      "Cefepime is broad-spectrum 4th-generation: gram-positives (MSSA, strep), gram-negatives including Pseudomonas, with stability against many β-lactamases. Used for empiric coverage in hospitalized patients with sepsis, neutropenic fever, hospital-acquired pneumonia, complicated UTI. KEY adverse effect: cefepime neurotoxicity (encephalopathy, confusion, myoclonus, seizures, non-convulsive status epilepticus) in renal failure with inadequate dose adjustment — often misdiagnosed as 'sepsis encephalopathy.' Check the cefepime dose first. B — wrong because ceftaroline (5th-gen) covers MRSA via PBP2a binding, not cefepime. C — wrong because no cephalosporin covers VRE. D — wrong because no anaerobic coverage — needs metronidazole adjunct. E — wrong because atypicals need macrolide or doxycycline. [LO 20.1 — Cefepime]",
+      "basic"
+     ],
+     [
+      "A patient with a true type-I IgE-mediated penicillin allergy needs empiric coverage for Pseudomonas pneumonia. The SAFEST β-lactam choice is:",
+      [
+       "Cefepime which has minimal cross-reactivity with penicillin in this patient",
+       "Cefazolin which is acceptable with mild non-anaphylaxis penicillin reactions",
+       "Imipenem-cilastatin which provides broadest coverage with low cross-reactivity",
+       "Piperacillin-tazobactam which is the standard empiric antipseudomonal therapy",
+       "Aztreonam which is a monobactam with under 1% cross-reactivity"
+      ],
+      4,
+      "Aztreonam is the safest β-lactam in true penicillin anaphylaxis — single-ring monobactam with <1% cross-reactivity. Covers gram-negatives including Pseudomonas. Combine with vancomycin for empiric gram-positive coverage. Carbapenems have ~1% cross-reactivity — usable in mild penicillin allergy but caution in anaphylaxis. Cephalosporins ~1-2% cross-reactivity (lower for 3rd-gen). EXCEPTION: aztreonam DOES cross-react with ceftazidime (shared side chain). For anaphylaxis with Pseudomonas needs: aztreonam + vancomycin is the textbook combo. Alternative: fluoroquinolone or aminoglycoside-based regimen. A — wrong because cefepime has 1-2% cross-reactivity. B — wrong because cefazolin has higher cross-reactivity than later-gen cephs. C — wrong because carbapenems have low but not minimal cross-reactivity. D — wrong because pip-tazo IS a penicillin — high cross-reactivity. [LO 20.2 — Integration]",
+      "basic"
+     ],
+     [
+      "A pediatric patient with sickle cell disease develops fever and chest pain — pneumococcal infection suspected. The MOST appropriate empiric coverage is:",
+      [
+       "Oral amoxicillin alone as standard empiric coverage for low-risk pediatric pneumonia",
+       "IV vancomycin monotherapy reserved for confirmed MRSA pneumonia in pediatrics",
+       "Oral azithromycin alone as monotherapy for pediatric atypical pneumonia coverage",
+       "IV ceftriaxone plus a macrolide for atypical and resistant pneumococcal coverage",
+       "IV gentamicin monotherapy reserved for gram-negative pneumonia in pediatrics"
+      ],
+      3,
+      "Sickle cell disease patients have functional asplenia (autoinfarction by adolescence) → high risk of encapsulated organisms: S. pneumoniae (most common), H. influenzae, N. meningitidis, Salmonella. Empiric pneumonia: IV ceftriaxone (covers S. pneumo including penicillin-resistant + H. flu) + macrolide (atypicals + Legionella). Sickle cell pneumonia is also a presentation of acute chest syndrome (severe complication — requires aggressive management, transfusion, pain control). Vaccinations critical in SCD: pneumococcal (PCV13 + PPSV23), Hib, meningococcal, influenza annual. Penicillin prophylaxis to age 5+ in children with SCD. A — wrong because oral amoxicillin alone is inadequate empiric in SCD. B — wrong because vancomycin alone misses encapsulated organisms. C — wrong because atypicals don't cover encapsulated organisms. E — wrong because gentamicin misses encapsulated organisms. [LO 20.1 — Integration]",
       "basic"
      ]
     ]
@@ -14718,6 +18179,64 @@ const QUIZ = [
       ],
       3,
       "Static tetracyclines halt the growth penicillins need to kill, antagonizing the bactericidal effect. (A) Not the antagonism mechanism. (B) Tetracyclines do not prolong QT. (C) Penicillins do not bind 30S. (E) Not the mechanism.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A 6-year-old in Oklahoma develops fever, headache, and a centripetal rash spreading from wrists to trunk. The MOST appropriate first-line antibiotic is:",
+      [
+       "Amoxicillin given orally for fourteen days",
+       "Azithromycin given orally for five-day course",
+       "Doxycycline given orally regardless of patient age",
+       "Cefotaxime given parenterally for ten days",
+       "Vancomycin given parenterally for two-week course"
+      ],
+      2,
+      "Rocky Mountain spotted fever (Rickettsia rickettsii) presents with fever + headache + centripetal rash starting at wrists/ankles. Untreated mortality 20-25%. Doxycycline is the ONLY effective first-line — age is NOT a barrier here despite the usual pediatric concerns about tooth-staining. The 5-10 day treatment course minimizes cosmetic risk; survival benefit dominates. Same rule for other rickettsial infections (ehrlichiosis, anaplasmosis), Lyme disease, Q fever. Chloramphenicol is alternative but more toxic and rarely used. A — wrong because amoxicillin doesn't cover Rickettsia (intracellular pathogen). B — wrong because azithromycin isn't first-line for RMSF. D — wrong because ceftriaxone/cefotaxime miss Rickettsia. E — wrong because vancomycin has no Rickettsial activity. [LO 21.1 — RMSF]",
+      "basic"
+     ],
+     [
+      "Tetracycline absorption from oral dosing is markedly reduced when co-administered with which substance?",
+      [
+       "Dairy or antacid with calcium magnesium aluminum cations",
+       "Vitamin C orange juice taken with the morning dose",
+       "Dietary fiber supplements taken with the evening dose",
+       "Acetaminophen taken concurrently for headache",
+       "Acidic carbonated beverages taken with the dose"
+      ],
+      0,
+      "Tetracyclines (especially older formulations like tetracycline itself; doxycycline is somewhat less affected) form non-absorbable chelation complexes with divalent and trivalent cations: Ca²⁺ (dairy, antacids, calcium supplements), Mg²⁺ (antacids), Al³⁺ (antacids, sucralfate), Fe²⁺ (iron supplements), Zn²⁺, bismuth. Counsel patients to separate tetracycline from these by at least 2 hours. Iron supplements drop absorption by 80%+. Same mechanism applies to fluoroquinolones (the other chelation-vulnerable class). B — wrong because vitamin C doesn't impair tetracycline absorption. C — wrong because fiber isn't the dominant interaction. D — wrong because acetaminophen doesn't chelate. E — wrong because acidity isn't the issue — cations are. [LO 21.1 — Tetracycline Chelation]",
+      "basic"
+     ],
+     [
+      "A patient on simvastatin develops rhabdomyolysis one week after starting clarithromycin for sinusitis. The MOST likely mechanism is:",
+      [
+       "Direct synergistic muscle toxicity from combined antibiotic and statin",
+       "Clarithromycin displaces simvastatin from albumin binding sites",
+       "Clarithromycin inhibits CYP3A4 and elevates simvastatin levels",
+       "Simvastatin enhances clarithromycin absorption and tissue distribution",
+       "Concurrent dehydration from clarithromycin diarrhea and electrolyte loss"
+      ],
+      2,
+      "Erythromycin and clarithromycin are potent CYP3A4 inhibitors. Simvastatin and lovastatin are CYP3A4-metabolized — co-administration raises statin levels 5-10x → rhabdomyolysis risk. Other CYP3A4 substrates affected: warfarin (↑ INR), cyclosporine, tacrolimus (transplant toxicity), colchicine (severe toxicity, sometimes fatal), theophylline, diltiazem, midazolam. AZITHROMYCIN lacks significant CYP3A4 inhibition — preferred macrolide when CYP3A4 substrates are on board. Same teaching point for grapefruit juice (also CYP3A4 inhibitor → similar statin interaction). A — wrong because no direct synergistic muscle toxicity. B — wrong because no significant albumin displacement. D — wrong because absorption isn't the issue. E — wrong because dehydration isn't the dominant mechanism. [LO 21.2 — Macrolide Interactions]",
+      "basic"
+     ],
+     [
+      "Azithromycin is preferred over clarithromycin in patients on multiple medications because:",
+      [
+       "Azithromycin penetrates intracellular pathogens more effectively than clarithromycin",
+       "Azithromycin causes less QT prolongation than any other macrolide ever",
+       "Azithromycin covers gram-negative pathogens better than clarithromycin generally",
+       "Azithromycin has minimal CYP3A4 inhibition unlike other macrolides",
+       "Azithromycin is bactericidal while other macrolides remain bacteriostatic"
+      ],
+      3,
+      "Azithromycin is the only major macrolide that lacks significant CYP3A4 inhibition — drug-drug interactions with statins, warfarin, cyclosporine, tacrolimus, and colchicine are much less concerning than with erythromycin or clarithromycin. Preferred in transplant patients, polypharmacy elderly, statin users. Long half-life enables 5-day Z-Pak dosing. Caveat: all macrolides prolong QT modestly — azithromycin is implicated in FDA warning re cardiovascular death (additive with other QT-prolonging agents). For non-CYP-3A4-substrate patients with strep, clarithromycin is fine. A — wrong because no major intracellular difference. B — wrong because azithromycin DOES prolong QT — FDA warning. C — wrong because spectrum is roughly similar. E — wrong because macrolides are all bacteriostatic. [LO 21.2 — Azithromycin Safety]",
       "basic"
      ]
     ]
@@ -14910,6 +18429,77 @@ const QUIZ = [
       ],
       4,
       "Plasmid-encoded modifying enzymes (acetyl-/phosphoryl-/adenylyl-transferases) chemically inactivate the drug; amikacin resists most. (A) aminoglycosides act on the 30S, not the 50S. (B) beta-lactamase is irrelevant to ribosomal drugs. (C) reduced peptidoglycan is not a ribosomal mechanism. (D) the relevant change is decreased, not increased, uptake.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Aminoglycosides are ineffective against anaerobic bacteria because:",
+      [
+       "Anaerobes have impermeable outer membrane porin channels",
+       "Anaerobes lack oxygen-dependent active uptake of aminoglycosides",
+       "Anaerobes produce aminoglycoside-modifying enzymes constitutively",
+       "Anaerobes have modified 30S ribosomal subunits resisting binding",
+       "Anaerobes express efflux pumps removing aminoglycosides actively"
+      ],
+      1,
+      "Aminoglycoside entry into bacteria requires an active, oxygen-dependent transport system. Anaerobes lack this system — aminoglycosides simply can't get inside in clinically meaningful concentrations. This explains why aminoglycosides are useless for anaerobic infection (B. fragilis intra-abdominal, anaerobic abscess). For intra-abdominal infections, combine an aminoglycoside (for gram-negative aerobes) with metronidazole or clindamycin (anaerobic coverage), or use a single agent with anaerobic activity (piperacillin-tazobactam, carbapenem, cefoxitin). A — wrong because porins matter for entry but the oxygen issue is specifically what excludes anaerobes. C — wrong because modifying enzymes are an acquired resistance mechanism in some isolates, not the universal anaerobic gap. D — wrong because no ribosomal modification across anaerobes. E — wrong because efflux isn't the systemic anaerobic explanation. [LO 22.1 — Aminoglycoside Spectrum]",
+      "basic"
+     ],
+     [
+      "Enterococcal endocarditis treatment combines a β-lactam with an aminoglycoside specifically because:",
+      [
+       "Both classes are independently bactericidal against Enterococcus species",
+       "β-lactam inhibits aminoglycoside-modifying enzymes in resistant strains",
+       "Aminoglycosides require pH change that β-lactams provide cytoplasmically",
+       "β-lactam disrupts cell wall, allowing aminoglycoside entry for synergy",
+       "Combined therapy reduces aminoglycoside nephrotoxicity by displacement"
+      ],
+      3,
+      "Enterococci are intrinsically resistant to β-lactams as monotherapy (high MIC) and aminoglycosides can't penetrate the intact gram-positive cell wall well. Synergy: β-lactam (ampicillin or penicillin) disrupts the cell wall, opening it up for aminoglycoside entry. Bactericidal activity emerges from the combination that neither drug alone produces. Standard regimen: ampicillin + gentamicin (or streptomycin) for 4-6 weeks. CRITICAL: if the enterococcus is resistant to EITHER drug (high-level aminoglycoside resistance, or ampicillin resistance), the synergy is lost — switch to vancomycin + gentamicin or linezolid/daptomycin. A — wrong because neither is reliably bactericidal alone against enterococcus. B — wrong because β-lactams don't inhibit aminoglycoside-modifying enzymes. C — wrong because no pH-based mechanism. E — wrong because no nephroprotective effect from combination. [LO 22.2 — Synergy Combinations]",
+      "basic"
+     ],
+     [
+      "Gentamicin nephrotoxicity manifests as which clinical pattern after 5-7 days of therapy?",
+      [
+       "Acute tubular necrosis with rising BUN and creatinine values",
+       "Glomerulonephritis with hematuria and red-cell casts on urinalysis",
+       "Acute interstitial nephritis with rash and peripheral eosinophilia",
+       "Nephrolithiasis with flank pain and hematuria on imaging",
+       "Renal artery thrombosis with severe hypertension and oliguria"
+      ],
+      0,
+      "Aminoglycosides accumulate in proximal tubule cells (cortical accumulation), causing acute tubular necrosis. Time course: rising BUN/Cr after 5-7 days of therapy, often reversible if drug is stopped early. Risk factors: prolonged therapy, sustained trough levels (extended-interval dosing minimizes this), advanced age, baseline renal dysfunction, concurrent nephrotoxins (vancomycin, loop diuretics, NSAIDs, IV contrast, amphotericin B). Monitor renal function + trough levels (target trough <1 µg/mL for gentamicin/tobramycin). Ototoxicity (cochlear hearing loss + vestibular dysfunction) is often IRREVERSIBLE — separate from nephrotoxicity. B — wrong because aminoglycosides don't cause glomerulonephritis. C — wrong because AIN is β-lactams (methicillin classically), NSAIDs, PPIs. D — wrong because no nephrolithiasis association. E — wrong because no thrombotic mechanism. [LO 22.1 — Aminoglycoside Toxicity]",
+      "basic"
+     ],
+     [
+      "Doxycycline is safe in renal failure because it undergoes which type of clearance?",
+      [
+       "Hepatic metabolism and biliary excretion mainly",
+       "Renal tubular secretion at the proximal tubule level",
+       "Glomerular filtration as the dominant elimination pathway",
+       "Pulmonary elimination of unchanged drug primarily",
+       "Salivary excretion and reabsorption from the gut"
+      ],
+      0,
+      "Doxycycline is cleared primarily by hepatic metabolism and biliary excretion — minimal renal elimination. Safe to use in renal failure without dose adjustment. Unique among tetracyclines: other tetracyclines (tetracycline itself, minocycline less so) have renal clearance and accumulate in renal failure. Doxycycline is the workhorse tetracycline in CKD/ESRD patients. Caveat: still chelates with divalent cations, still causes photosensitivity, still pregnancy/pediatric contraindications (except RMSF). B — wrong because tubular secretion isn't doxycycline's primary route. C — wrong because filtration is minimal. D — wrong because no pulmonary clearance. E — wrong because no salivary recirculation mechanism. [LO 22.1 — Doxycycline Clearance]",
+      "basic"
+     ],
+     [
+      "MLSB resistance phenotype refers to cross-resistance across which three antibiotic classes?",
+      [
+       "Macrolides, lincosamides, and aminoglycosides (any group)",
+       "Macrolides, lincosamides, and sulfonamides (any group)",
+       "Macrolides, lipopeptides (daptomycin), and streptogramins",
+       "Methicillin, lincosamides (clindamycin), and streptogramins",
+       "Macrolides, lincosamides (clindamycin), and streptogramins (B group)"
+      ],
+      4,
+      "MLSB = Macrolides + Lincosamides (clindamycin) + Streptogramins (group B — like quinupristin/dalfopristin's dalfopristin component). The erm gene methylates the 23S rRNA at a site shared by all three classes' binding sites, conferring cross-resistance. Clinically important: the 'D-test' detects inducible clindamycin resistance — if erythromycin-resistant strain shows D-zone next to clindamycin disk on agar, clindamycin therapy may fail due to inducible resistance even though direct testing shows clindamycin-sensitive. Order the D-test before using clindamycin in erythromycin-resistant S. aureus. A — wrong because aminoglycosides aren't in MLSB. B — wrong because sulfonamides aren't in MLSB. C — wrong because lipopeptides aren't in MLSB. D — wrong because methicillin isn't in MLSB. [LO 22.2 — MLSB Resistance]",
       "basic"
      ]
     ]
@@ -15215,6 +18805,116 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A patient receives vancomycin infused rapidly over 20 minutes and develops upper-body flushing, pruritus, and hypotension during infusion. The MOST appropriate interpretation is:",
+      [
+       "Type I IgE-mediated allergy requiring lifelong avoidance of vancomycin",
+       "Vancomycin-induced thrombocytopenia requiring platelet transfusion support",
+       "Anaphylaxis requiring epinephrine and emergency intervention immediately",
+       "Red man syndrome from rate-related histamine release, not allergy",
+       "Stevens-Johnson syndrome onset warranting steroid and supportive care"
+      ],
+      3,
+      "Red man syndrome is rate-related, non-IgE mediated direct histamine release from mast cells. NOT a true allergy. Presentation: flushing of face/neck/upper body, pruritus, hypotension during rapid vancomycin infusion. Management: slow the infusion to ≥60 minutes (preferably 90-120 min for higher doses), pre-treat with diphenhydramine. NOT a contraindication to future vancomycin use. Mislabeling as 'vancomycin allergy' denies patients effective MRSA therapy. Differential: true anaphylaxis (rare, includes airway compromise + true IgE) does require avoidance. A — wrong because not IgE-mediated — slow infusion prevents recurrence. B — wrong because thrombocytopenia is a different vancomycin AE, with different presentation. C — wrong because no airway/cardiovascular collapse pattern of anaphylaxis. E — wrong because SJS has mucosal involvement and target lesions. [LO 23.1 — Red Man Syndrome]",
+      "basic"
+     ],
+     [
+      "Vancomycin is given ORALLY for which specific indication?",
+      [
+       "Severe MRSA bacteremia with endocarditis or deep tissue infection",
+       "Clostridioides difficile colitis treatment within the gut lumen",
+       "Methicillin-resistant Staphylococcus epidermidis prosthetic joint infection",
+       "Vancomycin-resistant Enterococcus urinary tract infection treatment",
+       "Cellulitis from MRSA in patients with penicillin allergy history"
+      ],
+      1,
+      "Oral vancomycin is NOT absorbed from the GI tract — it stays in the gut lumen where it acts locally against Clostridioides difficile (the colon flora target). Standard dose: 125 mg PO QID × 10 days for first episode. Fidaxomicin is the other first-line agent. Metronidazole is now reserved for mild non-severe cases. CRITICAL TRAP: oral vancomycin DOES NOT TREAT SYSTEMIC INFECTION — for MRSA bacteremia, endocarditis, or any non-GI infection, IV vancomycin is required. Same molecule, completely different therapeutic role by route. A — wrong because MRSA bacteremia requires IV vancomycin. C — wrong because prosthetic joint MRSA requires IV. D — wrong because VRE has lost vancomycin susceptibility. E — wrong because cellulitis needs IV vancomycin if systemic. [LO 23.1 — Oral Vancomycin]",
+      "basic"
+     ],
+     [
+      "Daptomycin is INEFFECTIVE for MRSA pneumonia because:",
+      [
+       "Daptomycin penetrates lung tissue poorly from circulation",
+       "Daptomycin is too large to cross the alveolar capillary membrane",
+       "Daptomycin loses activity in acidic infected pulmonary tissues",
+       "Pulmonary surfactant binds and inactivates daptomycin in alveoli",
+       "Pneumonia organisms develop daptomycin resistance very rapidly"
+      ],
+      3,
+      "Pulmonary surfactant (rich in phospholipids) binds and sequesters daptomycin in the alveolar lining, preventing effective drug-pathogen contact. Even an MRSA pneumonia patient with bacteremia (where daptomycin works systemically) will fail at the lung site. For MRSA pneumonia: vancomycin, linezolid, or ceftaroline. Daptomycin remains first-line for MRSA bacteremia and right-sided endocarditis when vancomycin MIC is rising. Daptomycin's other niche: VRE infections. A — wrong because penetration isn't the dominant issue — surfactant binding is. B — wrong because size isn't the limiting factor. C — wrong because no pH-related inactivation. E — wrong because no rapid resistance development at the species level. [LO 23.2 — Daptomycin Pneumonia]",
+      "basic"
+     ],
+     [
+      "Daptomycin's main monitoring concern during prolonged therapy is:",
+      [
+       "Liver function tests including AST and ALT trending upward",
+       "Complete blood count showing thrombocytopenia or neutropenia developing",
+       "Creatine phosphokinase elevation suggesting skeletal muscle toxicity",
+       "Renal function with creatinine clearance and BUN values trending",
+       "Hearing audiometry with vestibular function testing periodically"
+      ],
+      2,
+      "Daptomycin causes a dose-related skeletal muscle toxicity (myopathy, rhabdomyolysis). Monitor CPK weekly; hold drug if CPK >5x upper limit of normal with symptoms, or >10x without symptoms. Worsens with concurrent statins (some clinicians hold statins during daptomycin). Other notable adverse effects: eosinophilic pneumonia (rare but recognized), peripheral neuropathy. Vancomycin's main concern is nephrotoxicity + trough levels. Aminoglycosides have nephro/ototoxicity. Knowing the class-specific monitoring is exam-classic. A — wrong because no signature hepatotoxicity. B — wrong because no signature cytopenias. D — wrong because less prominent than CPK. E — wrong because ototoxicity is aminoglycosides/vancomycin, not daptomycin. [LO 23.2 — Daptomycin Monitoring]",
+      "basic"
+     ],
+     [
+      "Fosfomycin is uniquely useful for which clinical scenario as a single oral dose?",
+      [
+       "Complicated pyelonephritis with hospitalization for IV therapy",
+       "Severe MRSA skin infection requiring outpatient oral therapy",
+       "Uncomplicated cystitis in women including ESBL E. coli strains",
+       "Chronic prostatitis in men requiring six-week therapy course",
+       "Hospital-acquired pneumonia in mechanically ventilated patients"
+      ],
+      2,
+      "Fosfomycin (Monurol) is a phosphonic-acid derivative that inhibits enolpyruvate transferase (MurA) in early cell wall synthesis. Concentrates in urine. Single-dose oral therapy (3 g) for uncomplicated CYSTITIS in women — useful for ESBL-producing E. coli that resists most oral options. Activity against many MDR organisms. Convenient single-dose dosing improves adherence. NOT for complicated UTI, pyelonephritis, prostatitis, systemic infection — drug concentrates only in urine, doesn't penetrate tissues. A — wrong because pyelonephritis needs tissue-penetrating drug. B — wrong because no MRSA skin infection role. D — wrong because prostatitis needs sustained therapy with tissue penetration. E — wrong because HAP needs broader systemic agent. [LO 23.2 — Fosfomycin]",
+      "basic"
+     ],
+     [
+      "Polymyxin B and colistin are reserved as last-resort agents for which clinical scenario?",
+      [
+       "Routine empiric coverage for community-acquired bacterial infections",
+       "First-line therapy for methicillin-resistant Staphylococcus aureus pneumonia",
+       "Prophylactic decontamination in immunocompromised cancer patients",
+       "Multidrug-resistant gram-negative infections with no other options",
+       "Outpatient oral therapy for uncomplicated urinary tract infections"
+      ],
+      3,
+      "Polymyxins are cationic polypeptides that bind LPS and disrupt the gram-negative outer membrane. Reserved for multidrug-resistant gram-negative infections: carbapenem-resistant Enterobacteriaceae (CRE), carbapenem-resistant Acinetobacter baumannii, MDR Pseudomonas aeruginosa. Significant nephrotoxicity (proximal tubular damage — dose-limiting) and neurotoxicity (paresthesias, weakness, rarely neuromuscular blockade). Salvage use only — modern newer agents (ceftolozane-tazobactam, ceftazidime-avibactam, meropenem-vaborbactam, eravacycline, plazomicin) often spare them. A — wrong because polymyxins are NOT for routine empiric coverage. B — wrong because no MRSA activity (gram-positive). C — wrong because no prophylactic role. E — wrong because no oral formulation in clinical use for UTI. [LO 23.2 — Polymyxins]",
+      "basic"
+     ],
+     [
+      "A patient on vancomycin develops AKI when piperacillin-tazobactam is added empirically for sepsis. This combination is recognized for:",
+      [
+       "Synergistic broad-spectrum coverage justifying the empiric combination broadly",
+       "Antagonistic effects requiring vancomycin dose increase for adequate coverage",
+       "Synergistic nephrotoxicity raising AKI risk above either drug alone",
+       "Allergic cross-reactivity in any patient with documented penicillin allergy",
+       "Direct vancomycin elevation from pip-tazo competing for tubular secretion"
+      ],
+      2,
+      "The 'VAP combo' (vancomycin + piperacillin-tazobactam) is associated with increased AKI risk compared to vancomycin alone or vancomycin + cefepime/meropenem. Mechanism debated but well-recognized — possibly synergistic tubular toxicity. Risk factors: ICU, baseline renal dysfunction, prolonged duration. Newer guidelines suggest substituting cefepime or meropenem for pip-tazo when vancomycin is needed in empiric sepsis, especially with baseline CKD. Same vancomycin AKI risk amplification: aminoglycosides, NSAIDs, contrast, loop diuretics. A — wrong because the combination IS used empirically but the AKI risk is real. B — wrong because no antagonism. D — wrong because no allergic cross-reactivity per se. E — wrong because no tubular secretion competition. [LO 23.1 — Integration]",
+      "basic"
+     ],
+     [
+      "MRSA bacteremia from a soft tissue source is empirically treated with which first-line agent?",
+      [
+       "Cefepime monotherapy given parenterally with weekly drug level monitoring",
+       "Ceftriaxone given parenterally as monotherapy for MRSA bacteremia",
+       "Daptomycin given parenterally as monotherapy for MRSA bacteremia",
+       "Vancomycin given parenterally with trough level monitoring at goal range",
+       "Linezolid given orally as monotherapy after first IV dose only"
+      ],
+      3,
+      "Vancomycin is first-line for MRSA bacteremia — IV, with trough 15-20 µg/mL for serious infections. Daptomycin is alternative, especially when vancomycin MIC creeping (>1.5) or when vancomycin failing. Choose between vancomycin and daptomycin based on source: NOT daptomycin for MRSA pneumonia (surfactant inactivation). Linezolid is bacteriostatic and inferior for bacteremia/endocarditis. Cefepime has no MRSA activity. Ceftaroline (5th-gen cephalosporin) IS MRSA-active and used for some MRSA infections. Source control (drainage, foreign body removal) is essential alongside antibiotics. A — wrong because cefepime has no MRSA activity. B — wrong because ceftriaxone has no MRSA activity. C — wrong because daptomycin is alternative, not first-line for soft tissue MRSA. E — wrong because linezolid bacteriostatic — inferior for bacteremia. [LO 23.1 — Integration]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -15517,6 +19217,103 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Amphotericin B kills fungi through which mechanism?",
+      [
+       "Inhibition of fungal cytochrome P450 demethylase enzyme activity",
+       "Inhibition of fungal β-1,3-glucan synthase cell wall enzyme",
+       "Binding fungal ergosterol and forming transmembrane pores",
+       "Conversion to 5-fluorouracil and DNA synthesis inhibition",
+       "Disruption of fungal microtubule assembly during cell division"
+      ],
+      2,
+      "Amphotericin B is a polyene antifungal that binds ergosterol (the fungal membrane sterol — mammalian membranes use cholesterol). Insertion of polyene molecules creates transmembrane pores → K+ efflux → fungal cell death. Selective toxicity comes from ergosterol vs cholesterol preference (imperfect — explains the nephrotoxicity and infusion reactions). Liposomal amphotericin B has markedly less nephrotoxicity. Used for severe invasive infections (Candida, Aspergillus, cryptococcal meningitis, mucormycosis, severe endemic mycoses). The other classes have distinct mechanisms — see the choice list. A — wrong because CYP51 (lanosterol demethylase) inhibition is the azole mechanism. B — wrong because β-glucan synthase inhibition is echinocandin mechanism. D — wrong because 5-FU conversion is flucytosine mechanism. E — wrong because microtubule disruption is griseofulvin mechanism. [LO 24.1 — Amphotericin Mechanism]",
+      "basic"
+     ],
+     [
+      "Azole antifungals (fluconazole, voriconazole, itraconazole) inhibit fungal ergosterol synthesis by targeting:",
+      [
+       "Squalene epoxidase upstream of lanosterol formation",
+       "Lanosterol 14-α-demethylase blocking ergosterol synthesis",
+       "β-1,3-glucan synthase at the fungal cell wall",
+       "Microtubule assembly during fungal cellular division",
+       "Cytosine deaminase converting flucytosine to 5-FU"
+      ],
+      1,
+      "Azoles inhibit fungal CYP51 (lanosterol 14-α-demethylase) → blocks ergosterol synthesis → fungal membrane disruption. The 'unfortunate' off-target effect: azoles also inhibit mammalian CYP3A4, CYP2C9, etc. → potent drug-drug interactions. Affected substrates: warfarin (↑ INR — major), statins (rhabdomyolysis risk), sirolimus and tacrolimus (transplant toxicity), benzodiazepines, sulfonylureas, calcium channel blockers. Ketoconazole inhibits human CYP17 → gynecomastia and adrenal suppression. Voriconazole has signature visual disturbances. All azoles are hepatotoxic — monitor LFTs. A — wrong because squalene epoxidase is terbinafine's target. C — wrong because β-glucan synthase is echinocandins. D — wrong because microtubule disruption is griseofulvin. E — wrong because flucytosine activation is a different mechanism. [LO 24.1 — Azole Mechanism]",
+      "basic"
+     ],
+     [
+      "Echinocandins (caspofungin, micafungin, anidulafungin) work by inhibiting:",
+      [
+       "Fungal squalene epoxidase upstream in ergosterol synthesis pathway",
+       "Fungal lanosterol 14-α-demethylase blocking ergosterol production",
+       "Fungal β-1,3-glucan synthase at the fungal cell wall surface",
+       "Fungal cytosine deaminase converting flucytosine to 5-FU",
+       "Fungal microtubule assembly during cellular mitotic division"
+      ],
+      2,
+      "Echinocandins inhibit β-1,3-glucan synthase — disrupts fungal cell wall formation. Mammalian cells have no β-glucan → excellent selective toxicity. Spectrum: invasive Candida (workhorse, including azole-resistant strains), Aspergillus (salvage). Not effective against Cryptococcus, Mucorales, or endemic mycoses. Adverse effects mild: histamine release with rapid infusion, mild LFT elevations, minimal renal toxicity, FEW drug interactions (advantage over azoles in transplant/critical care). Often first-line for invasive Candida in critically ill patients. A — wrong because squalene epoxidase is terbinafine. B — wrong because lanosterol demethylase is azoles. D — wrong because cytosine deaminase activates flucytosine. E — wrong because microtubule disruption is griseofulvin. [LO 24.1 — Echinocandins]",
+      "basic"
+     ],
+     [
+      "Cryptococcal meningitis induction therapy classically combines amphotericin B with:",
+      [
+       "Caspofungin given as IV daily dose for two weeks",
+       "Flucytosine given orally with weekly bone marrow monitoring",
+       "Voriconazole given parenterally with serum level monitoring",
+       "Itraconazole given orally with hepatic function monitoring",
+       "Terbinafine given orally with weekly liver function panels"
+      ],
+      1,
+      "Cryptococcal meningitis induction: amphotericin B + flucytosine for 2 weeks → fluconazole consolidation for 8 weeks → fluconazole suppression. Flucytosine is converted by fungal cytosine deaminase to 5-FU, inhibiting fungal DNA/RNA synthesis. Always combined (resistance emerges rapidly in monotherapy). Dose-limiting toxicity: bone marrow suppression — monitor CBC. Renal-adjust dose. Echinocandins lack cryptococcal activity (Cryptococcus has minimal β-1,3-glucan). Fluconazole alone is inadequate induction in severe disease. A — wrong because echinocandins have no cryptococcal activity. C — wrong because voriconazole isn't standard cryptococcal therapy. D — wrong because itraconazole isn't first-line for cryptococcus. E — wrong because terbinafine has no systemic cryptococcal indication. [LO 24.1 — Crypto Meningitis]",
+      "basic"
+     ],
+     [
+      "Invasive aspergillosis is treated with which first-line antifungal?",
+      [
+       "Fluconazole given orally with weekly liver function monitoring",
+       "Caspofungin given as IV monotherapy without other agents",
+       "Voriconazole given parenterally with therapeutic drug monitoring",
+       "Liposomal amphotericin B given as IV monotherapy primarily",
+       "Terbinafine given orally with periodic liver function tests"
+      ],
+      2,
+      "Voriconazole is first-line for invasive aspergillosis (lower mortality vs amphotericin B in trials). Triazole with broad anti-mold activity. Signature adverse effects: visual disturbances (~30% — transient flashes/color changes), hepatotoxicity, QT prolongation, photosensitivity rash (with chronic use), periostitis, hallucinations. Therapeutic drug monitoring is standard (highly variable PK). Alternatives: isavuconazole (better tolerated, no QT effect), liposomal amphotericin B (salvage). Posaconazole for prophylaxis. Caspofungin is salvage only for invasive aspergillosis. A — wrong because fluconazole has no Aspergillus activity. B — wrong because echinocandins are salvage, not first-line for Aspergillus. D — wrong because amphotericin is alternative, not first-line. E — wrong because terbinafine is for dermatophytes/onychomycosis. [LO 24.1 — Aspergillosis]",
+      "basic"
+     ],
+     [
+      "Amphotericin B infusion reactions (fever, rigors, hypotension) are typically managed with:",
+      [
+       "Lifelong avoidance of amphotericin B and substitution permanently",
+       "Epinephrine IM at the first sign of reaction onset",
+       "Acetaminophen plus diphenhydramine, sometimes hydrocortisone pretreatment",
+       "Aggressive IV fluid resuscitation with vasopressor support routinely",
+       "Switch to oral fluconazole as monotherapy after first reaction"
+      ],
+      2,
+      "Amphotericin B infusion reactions: fever, rigors, hypotension during/shortly after infusion. NOT IgE-mediated — direct release of inflammatory mediators. Pretreatment with acetaminophen + diphenhydramine (sometimes hydrocortisone) reduces severity. Slow infusion. NOT a contraindication to future use. Other amphotericin issues to manage: nephrotoxicity (saline preload), K+/Mg²⁺ wasting (replete, recheck). Liposomal amphotericin B has markedly fewer infusion reactions and less nephrotoxicity. A — wrong because lifelong avoidance is unnecessary. B — wrong because epinephrine for true anaphylaxis, not these infusion reactions. D — wrong because fluids/vasopressors only if severe shock. E — wrong because fluconazole isn't substitution for serious mold infection. [LO 24.1 — Amphotericin Reactions]",
+      "basic"
+     ],
+     [
+      "Terbinafine for onychomycosis (toenail fungus) requires which baseline and periodic monitoring?",
+      [
+       "Renal function with creatinine clearance and BUN at intervals",
+       "Liver function tests including AST and ALT at baseline and periodically",
+       "Complete blood count with platelet count at weekly intervals",
+       "Electrolyte panel with potassium and magnesium at monthly intervals",
+       "Echocardiogram for QT interval assessment at baseline and follow-up"
+      ],
+      1,
+      "Terbinafine is the oral first-line for onychomycosis (12 weeks for toenails, 6 weeks for fingernails) — inhibits squalene epoxidase, blocks ergosterol synthesis upstream of azoles. Hepatotoxicity is the dose-limiting concern — check LFTs at baseline + at 6 weeks (some guidelines suggest at baseline only). Other adverse effects: taste disturbance (sometimes permanent), neutropenia (rare), severe skin reactions (SJS rare). Alternative: pulse-dose itraconazole if terbinafine contraindicated. Topical agents poorly penetrate nail plate — oral therapy needed for nail infections. A — wrong because no signature renal toxicity. C — wrong because neutropenia is rare and CBC isn't routine. D — wrong because no K+/Mg²⁺ wasting (that's amphotericin). E — wrong because QT isn't terbinafine's concern. [LO 24.2 — Terbinafine]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -15810,6 +19607,103 @@ const QUIZ = [
       ],
       0,
       "Pyrimethamine inhibits dihydrofolate reductase (folate reduction) and the sulfonamide inhibits dihydropteroate synthase (folate synthesis); blocking the pathway at two sequential steps is synergistic. Leucovorin is added to protect host marrow. B: heme polymerase is the chloroquine target, not this combination. C: mixes nifurtimox and benzimidazole mechanisms. D: mixes ivermectin and praziquantel mechanisms. E: that is the arsenical (melarsoprol) mechanism.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "A returned traveler from sub-Saharan Africa is diagnosed with Plasmodium vivax malaria. Treatment must include primaquine in addition to chloroquine because:",
+      [
+       "Primaquine boosts chloroquine activity through synergistic mechanism",
+       "Primaquine provides bactericidal coverage against secondary bacterial infections",
+       "Primaquine treats the chloroquine-resistant strains of P. vivax found there",
+       "Primaquine prevents gametocyte transmission to feeding mosquitoes locally",
+       "Primaquine eliminates dormant liver-stage hypnozoites preventing relapse"
+      ],
+      4,
+      "P. vivax and P. ovale form dormant liver-stage hypnozoites that survive blood-stage treatment and cause relapse weeks to months later. Chloroquine clears blood-stage parasites only; primaquine eliminates the hypnozoites. CRITICAL: test for G6PD deficiency before primaquine — primaquine causes severe acute hemolytic anemia in G6PD-deficient patients (high prevalence in African, Mediterranean, Middle Eastern, Asian ancestries). Tafenoquine is an alternative single-dose hypnozoite-killing agent (also requires G6PD testing). A — wrong because no synergy with chloroquine — they hit different stages. B — wrong because no antibacterial activity. C — wrong because primaquine targets hypnozoites, not resistant blood-stage strains. D — wrong because gametocyte transmission is a separate consideration. [LO 25.1 — Primaquine]",
+      "basic"
+     ],
+     [
+      "Metronidazole's broad clinical use covers all of the following EXCEPT:",
+      [
+       "Anaerobic infections including Bacteroides intra-abdominal disease",
+       "Aerobic gram-negative bacilli including Pseudomonas aeruginosa infections",
+       "Protozoal infections including Trichomonas, Giardia, and Entamoeba",
+       "Clostridioides difficile colitis in mild non-severe disease",
+       "Bacterial vaginosis from Gardnerella vaginalis genital infection"
+      ],
+      1,
+      "Metronidazole spectrum is ANAEROBES (Bacteroides, Clostridium, Fusobacterium) + PROTOZOA (Trichomonas, Giardia, Entamoeba) + selected GI pathogens (C. difficile, H. pylori in some regimens) + bacterial vaginosis. NO aerobic gram-negative activity — Pseudomonas requires antipseudomonal β-lactam, fluoroquinolone, or aminoglycoside. Mechanism: activated by anaerobic metabolism into reactive intermediates that damage parasite/bacterial DNA. KEY adverse effect: disulfiram-like reaction with alcohol (warn patients explicitly). Peripheral neuropathy with prolonged use, metallic taste. A — wrong because yes, anaerobic coverage. C — wrong because yes, protozoal coverage. D — wrong because yes, C. difficile (mild disease). E — wrong because yes, bacterial vaginosis is metronidazole-treated. [LO 25.1 — Metronidazole]",
+      "basic"
+     ],
+     [
+      "A child with perianal itching at night has Enterobius (pinworm) on tape test. The MOST appropriate treatment plan is:",
+      [
+       "Albendazole single dose for the child only, no follow-up needed",
+       "Ivermectin oral dose for child plus contacts plus environmental cleaning",
+       "Praziquantel single dose for child plus all household contacts immediately",
+       "Albendazole for child plus contacts, repeat dose two weeks later",
+       "Metronidazole oral course for child plus contacts plus partner treatment"
+      ],
+      3,
+      "Enterobius vermicularis (pinworm) is highly contagious through fecal-oral transmission (fingernails, bedding, clothing). Treatment: albendazole 400 mg PO single dose (or mebendazole 100 mg PO single dose), REPEAT in 2 weeks to catch lifecycle. CRITICAL: treat all household contacts simultaneously; wash bedding/clothes in hot water; clean fingernails. Without contacts treated + repeat dose, reinfection is the rule. Pyrantel pamoate is OTC alternative. A — wrong because no follow-up + no contacts = reinfection. B — wrong because ivermectin is for strongyloides/scabies, not first-line pinworm. C — wrong because praziquantel is for trematodes/cestodes, not nematodes like pinworm. E — wrong because metronidazole is for protozoa, not nematodes. [LO 25.2 — Pinworm]",
+      "basic"
+     ],
+     [
+      "Ivermectin's parasite-selective mechanism involves activation of which channel?",
+      [
+       "Mammalian GABA-A chloride channels in the central nervous system",
+       "Acetylcholine nicotinic channels at parasite neuromuscular junctions",
+       "Voltage-gated sodium channels shared between hosts and parasites broadly",
+       "ATP-sensitive potassium channels in parasite muscle cell membranes",
+       "Glutamate-gated chloride channels unique to invertebrate parasite neurons"
+      ],
+      4,
+      "Ivermectin activates glutamate-gated chloride channels (GluCl) — present in invertebrate nerve and muscle cells, ABSENT in mammals. Cl⁻ influx → hyperpolarization → paralysis of the parasite. Selective toxicity is excellent. Used for: onchocerciasis (river blindness), strongyloidiasis, cutaneous larva migrans, scabies, pediculosis (lice). Single-dose for most indications. Caution: high doses or impaired blood-brain barrier (P-glycoprotein deficient) can produce CNS toxicity via mammalian GABA-A channels — rare. Notable contraindication during ivermectin's COVID misuse: was not effective for COVID. A — wrong because mammalian GABA-A engagement is the toxicity mechanism, not the therapeutic target. B — wrong because no nicotinic action. C — wrong because no voltage-gated sodium action. D — wrong because no K-ATP activation. [LO 25.2 — Ivermectin]",
+      "basic"
+     ],
+     [
+      "Toxoplasma encephalitis in an AIDS patient with CD4 count of 50 is treated with which regimen?",
+      [
+       "Praziquantel plus albendazole given orally with corticosteroid adjunctive use",
+       "Metronidazole plus paromomycin given orally for two weeks of therapy",
+       "Pyrimethamine plus sulfadiazine plus leucovorin given orally for treatment",
+       "Chloroquine plus primaquine given orally after G6PD testing first",
+       "TMP-SMX double-strength given orally as monotherapy for treatment"
+      ],
+      2,
+      "Active toxoplasma encephalitis: pyrimethamine (DHFR inhibitor) + sulfadiazine (sulfonamide) + leucovorin (folinic acid — rescues host bone marrow from pyrimethamine's antifolate toxicity, doesn't affect protozoal target). Treatment 6+ weeks then suppression. Alternative for sulfa-allergic: pyrimethamine + clindamycin + leucovorin. TMP-SMX has activity but the pyrimethamine combo is preferred for active disease; TMP-SMX is used for PROPHYLAXIS in AIDS with CD4 <100. Same TMP-SMX prophylaxis also covers PCP. A — wrong because no toxoplasmosis activity. B — wrong because no toxoplasmosis activity. D — wrong because antimalarial — not toxoplasmosis. E — wrong because TMP-SMX is for prophylaxis, not active treatment first-line. [LO 25.1 — Toxoplasmosis]",
+      "basic"
+     ],
+     [
+      "Praziquantel is the treatment for which class of parasitic infection?",
+      [
+       "Nematodes including pinworm, hookworm, and ascariasis infections",
+       "Trematodes and cestodes including schistosomiasis and tapeworm disease",
+       "Protozoal infections including malaria, amebiasis, and toxoplasmosis",
+       "Ectoparasites including scabies, lice, and bedbug infestations",
+       "Filarial nematodes including onchocerciasis and lymphatic filariasis"
+      ],
+      1,
+      "Praziquantel increases membrane permeability to Ca²⁺ → paralysis of trematodes (flukes — schistosomiasis, liver flukes, lung flukes) and cestodes (tapeworms — taeniasis, cysticercosis, hymenolepsis). Schistosomiasis is the major global indication. Cysticercosis treatment combines praziquantel or albendazole + corticosteroids (to suppress inflammatory response to dying cysts in the brain — can cause seizures). Nematodes (roundworms) need albendazole/mebendazole/ivermectin instead. A — wrong because nematodes need albendazole or mebendazole. C — wrong because protozoa need different drugs. D — wrong because ectoparasites need ivermectin or permethrin. E — wrong because filarial need ivermectin or diethylcarbamazine. [LO 25.2 — Praziquantel]",
+      "basic"
+     ],
+     [
+      "A patient drinks beer during a metronidazole course for bacterial vaginosis and develops flushing, headache, nausea, and palpitations. The MOST likely mechanism is:",
+      [
+       "Disulfiram-like reaction from metronidazole inhibition of aldehyde dehydrogenase",
+       "Tyramine reaction from beer interacting with metronidazole as MAOI",
+       "Histamine release from metronidazole-induced mast cell degranulation acutely",
+       "Direct beer-metronidazole chelation forming toxic complexes in the gut",
+       "Allergic reaction from beer-metronidazole cross-reactive immune response acutely"
+      ],
+      0,
+      "Metronidazole inhibits aldehyde dehydrogenase → acetaldehyde accumulation when alcohol is consumed → disulfiram-like reaction (flushing, headache, nausea, vomiting, palpitations, hypotension). Counsel patients to AVOID alcohol during metronidazole and for 24-48 hours after completion. Same reaction with cefotetan, cefoperazone (some cephalosporins), griseofulvin, tinidazole, sulfonylureas (variable). Disulfiram itself is used in alcohol use disorder treatment as a deterrent. Tinidazole has the same alcohol caution (and similar duration of effect). B — wrong because metronidazole isn't an MAOI; that's linezolid. C — wrong because no histamine release pattern. D — wrong because no chelation mechanism. E — wrong because not allergic — it's pharmacologic. [LO 25.1 — Integration]",
       "basic"
      ]
     ]
@@ -16115,6 +20009,90 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Clindamycin is added to vancomycin in severe toxic shock syndrome or necrotizing fasciitis for which mechanism beyond bacterial killing?",
+      [
+       "Synergistic cell wall disruption with vancomycin glycopeptide action",
+       "Enhanced anaerobic coverage beyond what vancomycin can achieve alone",
+       "Improved tissue penetration into deep abscess cavities and fascia",
+       "Ribosomal toxin-production suppression even when bacteria are dying",
+       "Hepatic CYP induction increasing vancomycin metabolic clearance rate"
+      ],
+      3,
+      "Clindamycin binds 50S ribosome at the same site as macrolides, inhibiting bacterial protein synthesis — INCLUDING toxin production. In toxin-mediated diseases (toxic shock syndrome, necrotizing fasciitis, invasive group A strep), β-lactams or vancomycin kill the organism but don't immediately stop toxin synthesis from existing ribosomes; clindamycin DOES stop ongoing toxin synthesis at the ribosome level. This 'Eagle effect' rationale: bacteria in stationary phase (not actively dividing/synthesizing cell wall) escape β-lactam killing but remain clindamycin-sensitive. Clindamycin's adjunctive role in toxin-mediated disease is exam-classic. A — wrong because no synergistic cell-wall mechanism. B — wrong because vancomycin already covers most anaerobic gram-positives. C — wrong because clindamycin does penetrate well, but toxin suppression is the canonical answer. E — wrong because no CYP induction effect. [LO 26.1 — Clindamycin Toxin Suppression]",
+      "basic"
+     ],
+     [
+      "Clindamycin's MOST notable adverse effect that limits its use is:",
+      [
+       "Clostridioides difficile colitis from selective gut flora disruption",
+       "Severe hepatotoxicity requiring monthly liver function monitoring",
+       "Bone marrow suppression with neutropenia and thrombocytopenia developing",
+       "QT prolongation with torsades risk in susceptible patients",
+       "Nephrotoxicity requiring renal dose adjustment in mild impairment"
+      ],
+      0,
+      "Clindamycin is historically THE drug most associated with C. difficile colitis — broad anti-anaerobic activity selectively kills competing colonic anaerobes, allowing C. difficile to overgrow. Risk is highest in elderly, hospitalized, recently antibiotic-treated patients. Limit clindamycin duration when alternatives exist. Other clindamycin issues: rash, hepatic transaminitis (mild), inducible MLSB resistance in some staphylococci (order D-test in erythromycin-resistant strains before clindamycin therapy). Note: nearly ALL antibiotics increase C. difficile risk — clindamycin is just the highest. B — wrong because transaminitis is mild, not severe hepatotoxicity. C — wrong because no signature cytopenias. D — wrong because no major QT effect. E — wrong because no renal dose adjustment needed. [LO 26.1 — Clindamycin C. diff]",
+      "basic"
+     ],
+     [
+      "Linezolid is a key oral option for which difficult-to-treat infection?",
+      [
+       "Carbapenem-resistant Enterobacteriaceae bloodstream infection in hospital",
+       "Multidrug-resistant Pseudomonas aeruginosa hospital-acquired pneumonia treatment",
+       "Vancomycin-resistant Enterococcus and methicillin-resistant Staph oral therapy",
+       "Multidrug-resistant tuberculosis with extensively-resistant susceptibility profile",
+       "Carbapenem-resistant Acinetobacter ventilator-associated pneumonia regimens"
+      ],
+      2,
+      "Linezolid is an oxazolidinone that binds 50S subunit at a UNIQUE site (no cross-resistance with macrolides, clindamycin, streptogramins). Spectrum: gram-positive only — MRSA, VRE (major indication), MDR-Streptococcus, penicillin-resistant pneumococci. Excellent oral bioavailability ≈ 100% (oral = IV — useful for step-down therapy and outpatient oral options). Adverse effects: thrombocytopenia + anemia with prolonged use (>2 weeks — monitor CBC), peripheral and optic neuropathy, lactic acidosis, serotonin syndrome (weak MAOI — AVOID with SSRIs, MAOIs, tyramine-rich foods). Tedizolid is newer alternative with less hematologic toxicity. A — wrong because linezolid is gram-positive only, no gram-negative coverage. B — wrong because no Pseudomonas activity. D — wrong because linezolid is used in MDR-TB but as adjunct, not key oral; bedaquiline/delamanid more recent. E — wrong because no Acinetobacter coverage. [LO 26.1 — Linezolid]",
+      "basic"
+     ],
+     [
+      "A patient on chronic sertraline is admitted with VRE bacteremia. Adding linezolid risks which adverse interaction?",
+      [
+       "Sertraline-induced linezolid hepatotoxicity from CYP3A4 inhibition",
+       "Linezolid-induced QT prolongation worsened by sertraline cardiac effects",
+       "Serotonin syndrome from linezolid's weak MAO inhibition with SSRI",
+       "Sertraline-driven linezolid renal clearance reduction and toxicity",
+       "Linezolid-induced thrombocytopenia worsened by sertraline platelet effects"
+      ],
+      2,
+      "Linezolid is a weak nonselective MAO inhibitor — combined with SSRIs (sertraline, fluoxetine, paroxetine, etc.), SNRIs (venlafaxine, duloxetine), MAOIs, or other serotonergic agents (tramadol, meperidine, triptans), risk of serotonin syndrome rises. Symptoms: agitation, hyperreflexia, clonus, myoclonus, hyperthermia, autonomic instability. Management: discontinue offending agents, supportive care, cyproheptadine for severe cases. Either hold the SSRI 2 weeks before linezolid OR use alternative for VRE (daptomycin). Same MAOI-tyramine concern with aged cheese, cured meats, red wine, beer. A — wrong because no signature hepatotoxicity interaction. B — wrong because QT isn't the linezolid concern. D — wrong because no renal clearance interaction. E — wrong because thrombocytopenia is duration-related, not SSRI-driven. [LO 26.1 — Linezolid Serotonin]",
+      "basic"
+     ],
+     [
+      "A premature infant develops cyanosis, abdominal distension, and vasomotor collapse three days after receiving an antibiotic at adult-ratio dose. The MOST likely cause is:",
+      [
+       "Chloramphenicol-induced gray baby syndrome from immature hepatic glucuronidation",
+       "Erythromycin-induced infantile hypertrophic pyloric stenosis from prokinetic effect",
+       "Ceftriaxone-induced kernicterus from bilirubin displacement at the albumin",
+       "Vancomycin-induced red man syndrome from rapid histamine release reaction",
+       "Tetracycline-induced bone and tooth deposition with growth retardation"
+      ],
+      0,
+      "Gray baby syndrome: chloramphenicol accumulation in neonates due to immature hepatic UDP-glucuronyltransferase. Manifests 2-9 days as vomiting, abdominal distension, cyanosis ('gray'), hypotension, vasomotor collapse, death. Chloramphenicol dosing in neonates must be markedly reduced; safer alternatives now standard. Chloramphenicol is otherwise rarely used in developed countries due to aplastic anemia risk (rare, idiosyncratic, often fatal). The other choices DO have neonatal cautions (ceftriaxone-kernicterus, tetracycline-bone/tooth, erythromycin-pyloric stenosis), but the vasomotor-collapse-with-cyanosis pattern is specific to chloramphenicol. B — wrong because pyloric stenosis is a different syndrome. C — wrong because kernicterus presents with neurologic features. D — wrong because red man is rate-related rash + hypotension, not vasomotor collapse + cyanosis. E — wrong because tetracycline issues are chronic dental/skeletal, not acute. [LO 26.2 — Gray Baby Syndrome]",
+      "basic"
+     ],
+     [
+      "Quinupristin-dalfopristin (Synercid) covers which specific organism while NOT covering its close relative?",
+      [
+       "Methicillin-resistant S. aureus but not methicillin-sensitive S. aureus generally",
+       "Carbapenem-resistant Klebsiella but not carbapenem-sensitive Klebsiella strains",
+       "Penicillin-resistant pneumococcus but not penicillin-sensitive pneumococcus broadly",
+       "Vancomycin-resistant E. faecium but not vancomycin-resistant E. faecalis species",
+       "Vancomycin-resistant E. faecalis but not vancomycin-resistant E. faecium generally"
+      ],
+      3,
+      "Quinupristin-dalfopristin (Synercid) covers VRE Enterococcus FAECIUM only — E. faecalis is intrinsically resistant (different efflux mechanism). This is an unusual species-specific gap. Mechanism: streptogramin combination, synergistic 50S binders, bactericidal. Used as alternative for VRE faecium when linezolid contraindicated. Adverse effects: arthralgia/myalgia (often dose-limiting), severe infusion-site reactions (requires central line), liver enzyme elevation. Limited modern use due to toxicity profile and emergence of linezolid/daptomycin as VRE alternatives. A — wrong because covers both MRSA and MSSA. B — wrong because no gram-negative coverage. C — wrong because covers both penicillin-resistant and sensitive pneumococcus. E — wrong because REVERSED — it covers E. faecium NOT E. faecalis. [LO 26.2 — Synercid]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -16417,6 +20395,207 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Sulfamethoxazole and trimethoprim are synergistic in TMP-SMX because together they:",
+      [
+       "Block the same folate-synthesis enzyme at two different binding sites",
+       "Block two sequential steps in bacterial folate synthesis for true synergy",
+       "Disrupt cell wall synthesis while inhibiting bacterial protein synthesis simultaneously",
+       "Inhibit ribosomal initiation while blocking DNA gyrase unwinding activity",
+       "Inhibit RNA polymerase while disrupting bacterial cell membrane integrity"
+      ],
+      1,
+      "Sulfamethoxazole inhibits dihydropteroate synthase (DHPS) — blocks PABA → dihydrofolate. Trimethoprim inhibits dihydrofolate reductase (DHFR) — blocks dihydrofolate → tetrahydrofolate. Two sequential blocks of the same pathway produce SYNERGY and convert two bacteriostatic drugs into a bactericidal combination. Selective toxicity is excellent: mammals don't synthesize folate from PABA (we get folate from diet — DHPS step absent), and human DHFR is ~100,000x less sensitive to trimethoprim than bacterial DHFR. A — wrong because different enzymes, not same enzyme at different sites. C — wrong because not cell-wall or protein-synthesis drugs. D — wrong because not DNA gyrase or ribosomal initiation. E — wrong because not RNA polymerase or membrane drugs. [LO 27.1 — TMP-SMX Synergy]",
+      "basic"
+     ],
+     [
+      "TMP-SMX is the drug of choice for which AIDS-related infection in patients with CD4 count under 200?",
+      [
+       "Cryptococcal meningitis induction therapy and consolidation phases",
+       "Disseminated histoplasmosis with adrenal insufficiency from infection",
+       "Mycobacterium avium complex disseminated disease and prophylaxis",
+       "Cytomegalovirus retinitis with sight-threatening macular involvement",
+       "Pneumocystis jirovecii pneumonia treatment and chronic prophylaxis"
+      ],
+      4,
+      "TMP-SMX is the drug of choice for both treatment and prophylaxis of Pneumocystis jirovecii pneumonia (PCP) — the AIDS-defining opportunistic infection that drove the early HIV epidemic mortality. Treatment: high-dose TMP-SMX IV/PO + steroids if hypoxic (PaO2 <70 or A-a gradient >35). Prophylaxis at CD4 <200 (or thrush, prior PCP, AIDS-defining illness). Also covers Toxoplasma prophylaxis (CD4 <100). Alternatives for sulfa-allergic: pentamidine, atovaquone, dapsone + trimethoprim, clindamycin + primaquine. A — wrong because amphotericin + flucytosine for crypto. B — wrong because itraconazole or amphotericin for histoplasmosis. C — wrong because azithromycin or rifabutin for MAC. D — wrong because ganciclovir for CMV retinitis. [LO 27.1 — TMP-SMX PCP]",
+      "basic"
+     ],
+     [
+      "A 75-year-old on lisinopril is started on TMP-SMX for cellulitis. One week later her potassium is 6.2. The MOST likely mechanism is:",
+      [
+       "Sulfa-mediated tubular damage causing potassium reabsorption increase",
+       "Sulfa-mediated tumor lysis-like cellular potassium release into blood",
+       "Sulfa-mediated rhabdomyolysis with potassium release into circulation",
+       "Trimethoprim inhibits aldosterone receptor binding at distal tubule",
+       "Trimethoprim blocks ENaC like amiloride, reducing potassium secretion"
+      ],
+      4,
+      "Trimethoprim structurally resembles amiloride and blocks the epithelial sodium channel (ENaC) in the distal nephron. Reduced Na+ reabsorption → reduced electrochemical gradient driving K+ secretion → K+ retention → hyperkalemia. Risk amplified by ACEIs (lisinopril), ARBs, K-sparing diuretics (spironolactone), NSAIDs, and renal impairment. Common in elderly outpatients on TMP-SMX for UTI. Check K+ 5-7 days into therapy in at-risk patients. Discontinue + treat hyperkalemia (Kayexalate, calcium gluconate, insulin/glucose) if severe. A — wrong because no tubular damage mechanism — it's ENaC blockade. B — wrong because no tumor lysis pattern. C — wrong because no rhabdomyolysis. D — wrong because not aldosterone receptor. [LO 27.2 — TMP Hyperkalemia]",
+      "basic"
+     ],
+     [
+      "TMP-SMX should be avoided in late pregnancy and neonates because sulfonamides:",
+      [
+       "Cross the placenta and directly inhibit fetal folate metabolism",
+       "Cause closure of the ductus arteriosus through prostaglandin inhibition",
+       "Displace bilirubin from albumin, raising kernicterus risk in neonates",
+       "Cause direct teratogenesis affecting cardiac septal development specifically",
+       "Cause neonatal hypoglycemia by stimulating pancreatic insulin release"
+      ],
+      2,
+      "Sulfonamides displace bilirubin from albumin binding sites — free bilirubin crosses the immature neonatal blood-brain barrier → kernicterus (bilirubin encephalopathy). Permanent neurologic damage: choreoathetoid CP, hearing loss, gaze palsy. Avoid sulfonamides in third-trimester pregnancy and in neonates <2 months. Similar concern with ceftriaxone (also displaces bilirubin — use cefotaxime instead). Other pregnancy/neonatal antibiotic concerns: tetracyclines (teeth/bone), fluoroquinolones (cartilage), aminoglycosides (ototoxicity), chloramphenicol (gray baby). A — wrong because folate is a concern with TMP component for fetus (neural tube defects), but kernicterus is the late-pregnancy/neonatal concern. B — wrong because PDA closure is NSAIDs/indomethacin. D — wrong because no specific cardiac teratogen pattern. E — wrong because sulfonylureas, not sulfa antibiotics, cause hypoglycemia. [LO 27.2 — Sulfa Kernicterus]",
+      "basic"
+     ],
+     [
+      "Sulfonamide hemolytic anemia is most likely in patients with which enzyme deficiency?",
+      [
+       "Glucose-6-phosphate dehydrogenase deficiency in red blood cells",
+       "Pyruvate kinase deficiency in red blood cell metabolism",
+       "N-acetyltransferase 2 (NAT2) slow-acetylator phenotype in liver",
+       "Cytochrome P450 2C9 reduced-function variant in liver metabolism",
+       "Hexokinase deficiency in red blood cell glycolysis metabolism"
+      ],
+      0,
+      "G6PD-deficient RBCs cannot adequately generate NADPH to maintain reduced glutathione, which protects against oxidant stress. Sulfonamides (also dapsone, nitrofurantoin, primaquine, methylene blue, rasburicase, fava beans) are oxidant drugs → trigger acute hemolytic anemia in G6PD-deficient patients. Higher prevalence in African, Mediterranean, Middle Eastern, Asian ancestries. Check G6PD status when feasible before high-dose sulfa or primaquine/dapsone. Mnemonic for G6PD-triggering drugs: 'sulfa drugs, anti-malarials, fava beans' or various 'PRIDE' versions (Primaquine, Rasburicase/Ribavirin, Isoniazid, Dapsone/Doxorubicin, Ester local anesthetics). B — wrong because pyruvate kinase deficiency causes chronic hemolysis but not the sulfa-trigger pattern. C — wrong because NAT2 affects isoniazid metabolism, not sulfa hemolysis. D — wrong because CYP2C9 affects warfarin/phenytoin, not sulfa hemolysis. E — wrong because hexokinase deficiency is extremely rare. [LO 27.2 — G6PD]",
+      "basic"
+     ],
+     [
+      "TMP-SMX is the drug of choice for which unusual gram-negative pathogen in immunocompromised hosts?",
+      [
+       "Acinetobacter baumannii pneumonia in trauma intensive care units",
+       "Pseudomonas aeruginosa bacteremia in ventilated ICU patients",
+       "Stenotrophomonas maltophilia infection in hospitalized cancer patients",
+       "Klebsiella pneumoniae bloodstream infection from biliary source",
+       "Burkholderia cepacia pulmonary infection in cystic fibrosis patients"
+      ],
+      2,
+      "Stenotrophomonas maltophilia is intrinsically resistant to most antibiotics including carbapenems (often emerges after broad antibiotic pressure in hospitalized patients). TMP-SMX is the drug of choice. Alternatives: levofloxacin, minocycline, ceftazidime-avibactam, combination therapy for severe disease. Also remember TMP-SMX is preferred therapy for Nocardia, Pneumocystis jirovecii, and serves as alternative for Listeria when ampicillin allergic. Burkholderia cepacia (CF patients) also can be TMP-SMX treated, but Stenotrophomonas is the more classic 'unusual gram-negative' TMP-SMX answer. A — wrong because Acinetobacter often needs carbapenem, polymyxin, or sulbactam. B — wrong because Pseudomonas needs antipseudomonal β-lactam, fluoroquinolone, or aminoglycoside. D — wrong because Klebsiella uses β-lactam or carbapenem first-line. E — wrong because Burkholderia is treatable but Stenotrophomonas is the classic TMP-SMX answer. [LO 27.1 — TMP-SMX Stenotrophomonas]",
+      "basic"
+     ],
+     [
+      "Sulfonamides interact dangerously with warfarin because they:",
+      [
+       "Induce CYP2C9, accelerating warfarin metabolism and reducing INR control",
+       "Form chelate complexes with warfarin reducing absorption from the gut",
+       "Compete with warfarin for vitamin K reductase binding sites directly",
+       "Increase warfarin renal clearance through tubular transporter induction",
+       "Inhibit CYP2C9 and displace warfarin from albumin, raising INR sharply"
+      ],
+      4,
+      "Sulfonamides both DISPLACE warfarin from albumin (free fraction rises) AND inhibit CYP2C9 (warfarin metabolism slows) → INR rises sharply, often requiring warfarin dose reduction or hold. Check INR within 3-5 days of starting TMP-SMX in any warfarin patient. Similar concerns with methotrexate (albumin displacement → toxicity) and phenytoin (albumin displacement + CYP inhibition → toxic levels). When a UTI patient on warfarin needs antibiotics, prefer nitrofurantoin or fosfomycin over TMP-SMX. A — wrong because REVERSED — sulfas INHIBIT, not induce, CYP2C9. B — wrong because no chelation. C — wrong because no vitamin K reductase competition. D — wrong because no renal clearance enhancement. [LO 27.2 — Sulfa-Warfarin]",
+      "basic"
+     ],
+     [
+      "Sulfa-induced Stevens-Johnson syndrome / toxic epidermal necrolysis presents with:",
+      [
+       "Diffuse maculopapular rash without mucosal involvement clearing rapidly",
+       "Photosensitive rash on sun-exposed surfaces only mild appearance",
+       "Localized urticaria with pruritus responding to antihistamine therapy",
+       "Mucocutaneous bullae with epidermal sloughing and high mortality",
+       "Erythema multiforme target lesions self-limited within one week"
+      ],
+      3,
+      "Stevens-Johnson syndrome (SJS, <10% body surface) and toxic epidermal necrolysis (TEN, >30% BSA) are life-threatening mucocutaneous reactions. Sulfonamides are classic culprits. Presentation: prodrome (fever, malaise), then painful erythema, bullae, full-thickness epidermal sloughing, mucosal involvement (oral, ocular, genital). Mortality 5-30%. Management: stop drug immediately, supportive care in burn unit, fluid/electrolyte support, ophthalmology evaluation. Other SJS/TEN culprits: allopurinol, lamotrigine, carbamazepine, phenytoin, nevirapine, NSAIDs. NEVER rechallenge with the same drug class. A — wrong because this is a benign maculopapular rash, not SJS/TEN. B — wrong because photosensitivity is a different sulfa effect (less severe). C — wrong because urticaria is type I hypersensitivity. E — wrong because erythema multiforme can be related but isn't the full SJS/TEN picture. [LO 27.2 — Sulfa SJS/TEN]",
+      "basic"
+     ],
+     [
+      "Pyrimethamine differs from trimethoprim in being selective for which enzyme?",
+      [
+       "Bacterial dihydropteroate synthase (DHPS) found in gram-positive species",
+       "Mammalian dihydrofolate reductase (DHFR) targeted in anti-cancer therapy",
+       "Protozoal dihydrofolate reductase (DHFR) found in Plasmodium and Toxoplasma",
+       "Bacterial thymidylate synthase found in DNA-synthesis pathway organisms",
+       "Mammalian thymidylate synthase targeted by chemotherapy fluorouracil agents"
+      ],
+      2,
+      "Pyrimethamine inhibits DHFR but is selective for PROTOZOAL DHFR — used clinically for Toxoplasma (combined with sulfadiazine + leucovorin) and as an antimalarial component (sulfadoxine-pyrimethamine = Fansidar, for malaria treatment/prophylaxis in some regions). Trimethoprim is selective for BACTERIAL DHFR. Methotrexate targets MAMMALIAN DHFR for cancer/autoimmune therapy. All three drugs share the DHFR-inhibitor framework but differ in species selectivity — a classic exam tie-together. Leucovorin (folinic acid) bypasses the DHFR block in mammalian cells, rescuing host marrow without affecting the protozoal/bacterial target. A — wrong because DHPS is sulfonamide target, not pyrimethamine. B — wrong because methotrexate targets mammalian DHFR. D — wrong because thymidylate synthase is 5-FU mechanism. E — wrong because 5-FU targets mammalian thymidylate synthase. [LO 27.1 — Pyrimethamine]",
+      "basic"
+     ],
+     [
+      "TMP-SMX is now first-line oral therapy for which community-acquired skin/soft tissue infection?",
+      [
+       "Strep pyogenes cellulitis with classic well-demarcated erythema findings",
+       "Erysipelas with bright erythema and well-demarcated facial involvement",
+       "Necrotizing fasciitis with rapid progression and systemic toxicity",
+       "Community-acquired MRSA skin abscess and uncomplicated soft-tissue infection",
+       "Vibrio vulnificus skin infection after raw oyster exposure history"
+      ],
+      3,
+      "Community-acquired MRSA (CA-MRSA, USA300 strain) became the dominant cause of community skin/soft tissue infections in the 2000s. TMP-SMX and doxycycline are the preferred oral options for uncomplicated CA-MRSA skin/soft tissue infection (cellulitis, abscess — also drain). Clindamycin is alternative (D-test before using if erythromycin-resistant). Severe MRSA needs IV vancomycin, daptomycin, or linezolid. Strep pyogenes responds to penicillin/cephalexin. Necrotizing fasciitis is surgical emergency + broad-spectrum + clindamycin for toxin suppression. A — wrong because strep cellulitis = penicillin or cephalexin first-line. B — wrong because erysipelas = penicillin. C — wrong because nec fasc is surgical + IV broad-spectrum. E — wrong because Vibrio = doxycycline + ceftriaxone. [LO 27.1 — TMP-SMX MRSA]",
+      "basic"
+     ],
+     [
+      "Dapsone is used as second-line PCP prophylaxis in HIV with sulfa allergy. Before starting, the prescriber must check:",
+      [
+       "Hepatitis B surface antigen and surface antibody status before therapy",
+       "Electrocardiogram for QT interval baseline before starting therapy",
+       "Tuberculosis status with interferon-gamma release assay before therapy",
+       "Pregnancy status with serum beta-HCG measurement before therapy",
+       "Glucose-6-phosphate dehydrogenase status to avoid acute hemolytic anemia"
+      ],
+      4,
+      "Dapsone is an oxidant drug — causes severe acute hemolytic anemia in G6PD-deficient patients. Always check G6PD status before starting dapsone, especially in patients of African, Mediterranean, Middle Eastern, or Asian ancestry. Used for: PCP prophylaxis alternative to TMP-SMX, leprosy (combined with rifampin + clofazimine), dermatitis herpetiformis. Methemoglobinemia is another dapsone toxicity (treated with methylene blue — but methylene blue itself triggers hemolysis in G6PD-deficient, creating a treatment paradox; use ascorbic acid instead in G6PD-deficient methemoglobinemia). A — wrong because HBV doesn't affect dapsone. B — wrong because QT isn't dapsone's concern. C — wrong because TB status isn't a dapsone screen. D — wrong because no specific pregnancy contraindication driving the pre-test. [LO 27.2 — Dapsone G6PD]",
+      "basic"
+     ],
+     [
+      "Sulfasalazine differs from other sulfonamides in being:",
+      [
+       "An IV-only formulation reserved for hospitalized severe infections only",
+       "A topical-only agent applied to skin for dermatophyte infections",
+       "A combination agent including trimethoprim for true bactericidal synergy",
+       "A prodrug cleaved by colonic bacteria to release 5-ASA for IBD",
+       "An ophthalmic preparation used exclusively for bacterial conjunctivitis"
+      ],
+      3,
+      "Sulfasalazine is a prodrug: cleaved by colonic bacterial azoreductases into 5-aminosalicylic acid (5-ASA, the active anti-inflammatory) and sulfapyridine (mostly absorbed, responsible for many side effects). Used for inflammatory bowel disease (ulcerative colitis especially, also Crohn's), rheumatoid arthritis, ankylosing spondylitis. Side effects: sulfa SE roster (rash, hemolysis in G6PD, oligospermia in men — reversible). Newer 5-ASA formulations (mesalamine, balsalazide, olsalazine) skip the sulfa moiety and have better tolerability. Sulfacetamide is the topical-eye sulfa. A — wrong because oral, not IV-only. B — wrong because not topical. C — wrong because no trimethoprim component. E — wrong because sulfacetamide is the topical eye sulfa, not sulfasalazine. [LO 27.1 — Sulfasalazine]",
+      "basic"
+     ],
+     [
+      "Trimethoprim selectivity is achieved because mammalian DHFR is:",
+      [
+       "Approximately 100,000-fold less sensitive than bacterial DHFR",
+       "More abundant per cell than the bacterial homolog enzyme",
+       "Located in the mitochondrial matrix instead of bacterial cytoplasm",
+       "Regulated differently by upstream allosteric folate metabolites",
+       "Glycosylated heavily compared with bacterial DHFR enzyme structure"
+      ],
+      0,
+      "Trimethoprim has ~100,000-fold higher affinity for bacterial DHFR than human DHFR — this enormous differential is what provides selective toxicity at clinical doses. Pyrimethamine has similar but protozoal-targeted selectivity. Methotrexate (used in cancer/RA) targets human DHFR directly — high doses cause bone marrow suppression and GI mucositis, which is why leucovorin 'rescue' is given after high-dose methotrexate. The folate-pathway drugs are a classic teaching example of how selectivity ratios determine the therapeutic window of an enzyme inhibitor across species. B — wrong because abundance isn't the selectivity mechanism. C — wrong because DHFR is cytoplasmic in mammals too. D — wrong because not allosteric regulation differences. E — wrong because no glycosylation difference matters here. [LO 27.1 — Trimethoprim Selectivity]",
+      "basic"
+     ],
+     [
+      "A list of drugs that precipitate hemolysis in G6PD-deficient patients includes all of the following EXCEPT:",
+      [
+       "Dapsone used for PCP prophylaxis or leprosy combination treatment",
+       "Nitrofurantoin used for uncomplicated cystitis in non-pregnant patients",
+       "Sulfonamides including TMP-SMX used for UTI or PCP treatment",
+       "Primaquine used for P. vivax malaria hypnozoite eradication",
+       "Doxycycline used for community-acquired pneumonia or skin infection"
+      ],
+      4,
+      "G6PD-deficient RBCs cannot regenerate NADPH adequately → vulnerable to oxidant drugs → acute hemolytic anemia. CLASSIC G6PD-triggering drugs (mnemonic 'PRIDE'): Primaquine (and other antimalarials), Rasburicase (and Ribavirin), Isoniazid (variable), Dapsone (and Doxorubicin), Ester-class local anesthetics. Add: sulfonamides, sulfasalazine, nitrofurantoin, methylene blue (paradoxically — used to treat methemoglobinemia, but triggers hemolysis in G6PD — use ascorbate instead), fava beans. DOXYCYCLINE is NOT a G6PD trigger. Important pre-prescribing: G6PD test in patients of African, Mediterranean, Middle Eastern, Asian ancestry before high-risk drugs. A — wrong because dapsone IS a classic trigger. B — wrong because nitrofurantoin IS a trigger. C — wrong because sulfonamides ARE classic triggers. D — wrong because primaquine IS the prototypical trigger. [LO 27.2 — Integration]",
+      "basic"
+     ],
+     [
+      "An elderly diabetic on metformin develops a UTI and is started on TMP-SMX. The MOST important monitoring concern is:",
+      [
+       "Hyperkalemia from TMP ENaC blockade with diabetic renal disease background",
+       "Vitamin B12 deficiency from combined metformin and TMP-SMX exposure broadly",
+       "Hypoglycemia from sulfonamide stimulation of pancreatic insulin secretion",
+       "Lactic acidosis from combined metformin and TMP-SMX exposure broadly",
+       "Photosensitivity from sulfonamide reaction with sun-exposed skin areas"
+      ],
+      0,
+      "Trimethoprim blocks ENaC in the distal nephron (like amiloride) → hyperkalemia. Risk amplified by: ACEIs, ARBs, K-sparing diuretics (spironolactone), NSAIDs, renal impairment (diabetic CKD). Elderly diabetics on TMP-SMX for UTI are at high risk — check K+ 5-7 days into therapy. Many cases of TMP-SMX hyperkalemia could be avoided by using nitrofurantoin or fosfomycin instead (no hyperkalemia risk). Other TMP-SMX considerations in elderly diabetic: warfarin INR rise if anticoagulated, hypoglycemia from sulfa-displacing sulfonylureas like glipizide (less concern with metformin), photosensitivity, SJS/TEN if rare hypersensitivity. B — wrong because B12 deficiency is metformin alone, not amplified by TMP-SMX. C — wrong because TMP-SMX can rarely cause hypoglycemia via sulfonylurea-like effect with sulfonylureas, but not the dominant concern here. D — wrong because no lactic acidosis from this combination directly. E — wrong because photosensitivity is real but minor compared to hyperkalemia. [LO 27.2 — Integration]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -16710,6 +20889,194 @@ const QUIZ = [
       ],
       0,
       "With many effective drugs available for complicated and uncomplicated UTI, methenamine is rarely used — reserved for niche chronic-suppression situations rather than acute first-line therapy. Its action is confined to the urinary tract. (B) it is not first-line for acute cystitis. (C) it does not treat pyelonephritis (acts only in urine, not tissue). (D) it is an oral urinary agent, not IV for urosepsis. (E) it has no systemic antibacterial action.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Fluoroquinolones (ciprofloxacin, levofloxacin, moxifloxacin) kill bacteria through which mechanism?",
+      [
+       "Inhibition of bacterial DNA gyrase and topoisomerase IV causing DNA breaks",
+       "Inhibition of bacterial dihydrofolate reductase blocking tetrahydrofolate production",
+       "Binding to 50S ribosomal subunit blocking peptide bond formation",
+       "Disruption of bacterial cell membrane through pore formation directly",
+       "Binding to D-Ala-D-Ala blocking peptidoglycan cross-linking transpeptidation"
+      ],
+      0,
+      "Fluoroquinolones inhibit bacterial DNA gyrase (topoisomerase II, primary gram-negative target) and topoisomerase IV (primary gram-positive target). These enzymes manage DNA supercoiling during replication — inhibition causes DNA fragmentation and bacterial death. Bactericidal, concentration-dependent killing with long post-antibiotic effect. Excellent oral bioavailability ≈ IV (oral-IV switch easy). Resistance: mutations in gyrA/parC, efflux pumps, or plasmid-mediated qnr genes. B — wrong because DHFR is trimethoprim, not fluoroquinolones. C — wrong because 50S is macrolides/clindamycin/linezolid/chloramphenicol. D — wrong because pore formation is amphotericin B or daptomycin. E — wrong because D-Ala-D-Ala is vancomycin. [LO 28.1 — Fluoroquinolone Mechanism]",
+      "basic"
+     ],
+     [
+      "A 72-year-old on prednisone for polymyalgia rheumatica develops sudden Achilles tendon pain 5 days into levofloxacin. The MOST appropriate next step is:",
+      [
+       "Continue levofloxacin and add NSAIDs for symptomatic tendon pain control",
+       "Stop levofloxacin immediately and avoid fluoroquinolones in future use",
+       "Continue levofloxacin and reduce prednisone dose to half temporarily",
+       "Stop prednisone and complete the levofloxacin course as originally planned",
+       "Continue levofloxacin and add muscle relaxants for symptom control"
+      ],
+      1,
+      "Fluoroquinolone-associated tendinopathy and tendon rupture (especially Achilles) is a black-box FDA warning. Risk factors: age >60 (this patient), corticosteroid use (this patient), post-transplant, renal disease, history of tendon disorder. Onset: hours to months. Mechanism: oxidative damage to tenocytes and matrix metalloproteinase imbalance. Management: STOP the FQ immediately, rest the affected tendon, orthopedic referral if rupture suspected, AVOID future fluoroquinolones (lifetime risk). Other FQ black-box: peripheral neuropathy (irreversible), CNS effects (psychosis, seizures), aortic dissection, dysglycemia. A — wrong because continuing risks tendon rupture and irreversible damage. C — wrong because dose reduction doesn't eliminate the tendon risk. D — wrong because stopping prednisone doesn't address the FQ-tendon cause. E — wrong because muscle relaxants don't address tendinopathy. [LO 28.1 — FQ Tendinopathy]",
+      "basic"
+     ],
+     [
+      "Ciprofloxacin and levofloxacin chelate with which substances, requiring 2-hour dose separation?",
+      [
+       "Vitamin C and ascorbic acid found in citrus juices commonly",
+       "Divalent and trivalent cations including calcium, magnesium, aluminum, iron",
+       "Dietary fiber supplements affecting general gastrointestinal absorption rates",
+       "Acidic carbonated beverages affecting general stomach pH levels",
+       "Alcohol-containing solutions affecting general drug absorption broadly"
+      ],
+      1,
+      "Fluoroquinolones chelate divalent and trivalent cations (Ca²⁺, Mg²⁺, Al³⁺, Fe²⁺, Zn²⁺) in the gut, forming non-absorbable complexes — bioavailability drops dramatically. Separate FQ dose from antacids, dairy, calcium/iron/multivitamin supplements, sucralfate, didanosine buffered formulation by at least 2 hours. SAME mechanism applies to tetracyclines (the other chelation-vulnerable class). Same teaching point: counsel patients explicitly. Drug failure from chelation is common and avoidable. A — wrong because vitamin C doesn't chelate. C — wrong because fiber isn't the chelation issue. D — wrong because acidity isn't the issue — cations are. E — wrong because alcohol isn't the issue. [LO 28.1 — FQ Chelation]",
+      "basic"
+     ],
+     [
+      "Ciprofloxacin's spectrum differs from levofloxacin and moxifloxacin in being notably stronger against:",
+      [
+       "Pseudomonas aeruginosa among the standard fluoroquinolone agents",
+       "Streptococcus pneumoniae and other typical pneumonia gram-positives",
+       "Anaerobic gram-negative pathogens including Bacteroides fragilis species",
+       "Methicillin-resistant Staphylococcus aureus skin and soft-tissue infection",
+       "Atypical pneumonia pathogens including Legionella and Mycoplasma species"
+      ],
+      0,
+      "Ciprofloxacin = strongest gram-negative and antipseudomonal fluoroquinolone, weaker on gram-positives. Uses: complicated UTI, pyelonephritis, prostatitis, traveler's diarrhea, intra-abdominal (combined with metronidazole). Levofloxacin and moxifloxacin = 'respiratory fluoroquinolones' — added gram-positive activity (S. pneumoniae) and atypical coverage (Mycoplasma, Chlamydia, Legionella) for community-acquired pneumonia. Moxifloxacin covers anaerobes better; longer QT prolongation. Delafloxacin is newer with MRSA activity. B — wrong because pneumococcus is levofloxacin/moxifloxacin territory. C — wrong because moxifloxacin has better anaerobic coverage, not cipro. D — wrong because MRSA needs delafloxacin among FQs, not cipro. E — wrong because atypicals are levo/moxi, not cipro's strength. [LO 28.1 — FQ Spectrum]",
+      "basic"
+     ],
+     [
+      "Nitrofurantoin is contraindicated when creatinine clearance falls below 60 mL/min because:",
+      [
+       "Reduced renal clearance causes systemic toxicity from drug accumulation",
+       "Increased risk of cardiac arrhythmias from electrolyte disturbances acutely",
+       "Increased risk of bone marrow suppression in renal impairment specifically",
+       "Inadequate urinary drug concentration to inhibit bacteria in the urine",
+       "Direct nephrotoxicity progressing to acute tubular necrosis acutely"
+      ],
+      3,
+      "Nitrofurantoin concentrates in urine via active tubular secretion. With CrCl <60, urinary concentrations drop below therapeutic levels — the drug becomes inadequate for UTI while still exposing the body to systemic side effects (pulmonary fibrosis with chronic use, hepatotoxicity, peripheral neuropathy, hemolysis in G6PD). Avoid in CKD and in elderly with declining renal function — common cystitis prescribing error. ALSO avoid in last weeks of pregnancy (neonatal hemolysis risk). Used for uncomplicated cystitis ONLY — never pyelonephritis or systemic infection (concentrates only in urine, not in tissue). A — wrong because systemic toxicity matters but isn't the reason for the cutoff. B — wrong because no major electrolyte/arrhythmia issue. C — wrong because no bone marrow association specific to renal failure. E — wrong because no direct nephrotoxicity. [LO 28.2 — Nitrofurantoin]",
+      "basic"
+     ],
+     [
+      "Outpatient uncomplicated pyelonephritis in a healthy adult is treated with which first-line agent?",
+      [
+       "Ciprofloxacin oral 7-day course or initial ceftriaxone IV followed by oral",
+       "Nitrofurantoin 5-day course oral once daily for pyelonephritis",
+       "Fosfomycin single 3-g oral dose for outpatient pyelonephritis treatment",
+       "Amoxicillin oral course for 7 days as first-line outpatient treatment",
+       "Azithromycin oral 5-day course as first-line outpatient pyelonephritis treatment"
+      ],
+      0,
+      "Outpatient uncomplicated pyelonephritis: ciprofloxacin (covers most E. coli including some resistant strains, concentrates in renal tissue) — 7-day course. Often start with a single IV dose of ceftriaxone in the ED, then transition to oral. If local FQ resistance >10% in E. coli or patient has FQ contraindication: ceftriaxone IV daily or once-daily oral cefpodoxime can substitute. Inpatient: IV ceftriaxone or other. Nitrofurantoin and fosfomycin are urinary-concentrated only — DO NOT use for pyelonephritis (no tissue penetration). TMP-SMX is alternative if local susceptibility is good. B — wrong because nitrofurantoin doesn't penetrate renal tissue. C — wrong because fosfomycin doesn't penetrate renal tissue. D — wrong because amoxicillin has too much E. coli resistance. E — wrong because azithromycin doesn't cover urinary pathogens reliably. [LO 28.2 — Pyelonephritis]",
+      "basic"
+     ],
+     [
+      "Asymptomatic bacteriuria should be treated in which scenario?",
+      [
+       "Elderly nursing home resident with foul-smelling urine on routine UA",
+       "Diabetic patient with positive screening culture but no symptoms",
+       "Pregnant woman in any trimester with positive screening urine culture",
+       "Chronic indwelling catheter patient with positive urine culture monthly",
+       "Otherwise healthy young adult with positive culture from physical exam"
+      ],
+      2,
+      "Asymptomatic bacteriuria (ASB) should be treated in only two scenarios: (1) pregnancy (any trimester — increased risk of pyelonephritis and preterm labor) and (2) before urologic procedures with mucosal trauma. In all other groups (elderly, diabetic, catheterized, transplant, otherwise healthy), treating ASB drives antibiotic resistance and C. difficile risk without improving outcomes. Foul-smelling urine and cloudy urine in elderly without true symptoms is NOT a treatment indication. Modern stewardship has worked hard to undo decades of over-treatment. A — wrong because elderly with foul-smelling urine alone is NOT a treatment indication. B — wrong because diabetic ASB doesn't need treatment. D — wrong because catheterized ASB doesn't need routine treatment. E — wrong because healthy young adult with incidental positive culture doesn't need treatment without symptoms. [LO 28.2 — ASB]",
+      "basic"
+     ],
+     [
+      "Fluoroquinolones can cause dysglycemia, with the highest risk for which adverse glucose event?",
+      [
+       "Hyperglycemic hyperosmolar state in elderly nondiabetic patient population",
+       "Diabetic ketoacidosis precipitation in type 1 diabetic patients exclusively",
+       "Both hypoglycemia and hyperglycemia, especially in diabetic patients",
+       "Reactive hypoglycemia after meals in non-diabetic patient population only",
+       "Type 1 diabetes new-onset autoimmune destruction of pancreatic islets"
+      ],
+      2,
+      "Fluoroquinolones cause BOTH hypoglycemia and hyperglycemia — bidirectional dysglycemia. Hypoglycemia is more common with gatifloxacin (withdrawn for this), still occurs with levofloxacin and moxifloxacin (especially in elderly, diabetics on sulfonylureas or insulin). Mechanism: K-ATP channel blockade in pancreatic β cells → insulin secretion + impaired counter-regulation. Risk is enough that FDA labels include warnings. Counsel diabetic patients about glucose monitoring during FQ courses. Other FQ black-box: tendinopathy, peripheral neuropathy, CNS (seizures, psychosis), QT prolongation, aortic dissection. A — wrong because HHS isn't the typical pattern. B — wrong because DKA isn't the typical dysglycemia pattern. D — wrong because FQ dysglycemia is bidirectional, not just postprandial. E — wrong because no autoimmune destruction. [LO 28.1 — FQ Dysglycemia]",
+      "basic"
+     ],
+     [
+      "An otherwise healthy 28-year-old woman has classic uncomplicated cystitis (dysuria, frequency, urgency, positive UA). The MOST appropriate first-line oral options are:",
+      [
+       "Nitrofurantoin, TMP-SMX, or fosfomycin chosen by resistance and renal status",
+       "Ciprofloxacin, levofloxacin, or moxifloxacin as broad-spectrum first-line agents",
+       "Amoxicillin-clavulanate, cefdinir, or cephalexin as oral β-lactam first-line",
+       "Doxycycline, minocycline, or tigecycline as bacteriostatic tetracycline options",
+       "Azithromycin, clarithromycin, or erythromycin as macrolide first-line options"
+      ],
+      0,
+      "Uncomplicated cystitis in non-pregnant women: three first-line oral options — nitrofurantoin (5-day course, avoid CrCl <60), TMP-SMX (3-day course, avoid if local E. coli resistance >20% or patient on ACEi/ARB with hyperkalemia risk), fosfomycin (single 3-g dose, convenient but costly). Choice driven by local susceptibility, renal function, drug interactions, allergies. Fluoroquinolones are NOT first-line for uncomplicated cystitis (black-box AEs + resistance pressure — reserve for pyelonephritis, complicated UTI, or true alternative needs). β-lactams are second-line. B — wrong because fluoroquinolones aren't first-line for uncomplicated cystitis. C — wrong because β-lactams are second-line. D — wrong because tetracyclines aren't first-line for UTI. E — wrong because macrolides don't cover UTI pathogens reliably. [LO 28.2 — Cystitis First-Line]",
+      "basic"
+     ],
+     [
+      "Ciprofloxacin combined with warfarin produces which interaction?",
+      [
+       "Decreased warfarin effect from CYP2C9 induction by ciprofloxacin acutely",
+       "Increased warfarin effect with rising INR from CYP enzyme inhibition",
+       "No clinically meaningful interaction warranting dose adjustment monitoring",
+       "Decreased ciprofloxacin levels from warfarin-induced absorption reduction acutely",
+       "Direct displacement of ciprofloxacin from albumin causing serum level changes"
+      ],
+      1,
+      "Ciprofloxacin inhibits CYP1A2 and CYP3A4 — warfarin (CYP2C9/CYP3A4 metabolized) levels rise, INR rises (sometimes dramatically). Check INR within 3-5 days of starting any fluoroquinolone in a warfarin patient. Mechanism applies to most quinolones but cipro is the canonical example. Same teaching point as TMP-SMX warfarin (which also displaces from albumin + inhibits CYP2C9 directly). When warfarin patient needs UTI antibiotic, prefer nitrofurantoin or fosfomycin to minimize INR perturbation. A — wrong because REVERSED — cipro inhibits, not induces CYP. C — wrong because interaction IS clinically meaningful. D — wrong because warfarin doesn't affect cipro absorption. E — wrong because no major albumin displacement role. [LO 28.1 — FQ-Warfarin]",
+      "basic"
+     ],
+     [
+      "Fluoroquinolones are traditionally avoided in children and pregnancy because of which preclinical concern?",
+      [
+       "Direct hepatotoxicity that worsens with fetal liver immaturity rapidly",
+       "Cartilage damage observed in animal models with growing developing animals",
+       "Neural tube defects from interference with folate metabolism pathway",
+       "Cardiac malformations from QT prolongation during fetal development period",
+       "Hearing loss from ototoxicity similar to aminoglycoside concerns broadly"
+      ],
+      1,
+      "Animal studies of immature dogs showed fluoroquinolone-associated cartilage damage in weight-bearing joints — traditional rationale for avoiding FQs in children and pregnancy. Human data have been reassuring (no clear cartilage signal in children who received cipro for cystic fibrosis or anthrax exposure), and FDA now considers ciprofloxacin acceptable in selected pediatric infections (complicated UTI, anthrax prophylaxis, severe Pseudomonas pneumonia in CF). Still generally avoided in pregnancy. FQ alternatives in pregnancy: cephalexin, amoxicillin-clavulanate, fosfomycin, nitrofurantoin (early pregnancy only). A — wrong because no signature fetal hepatotoxicity pattern. C — wrong because neural tube defects are TMP, not FQ. D — wrong because no cardiac teratogen signal. E — wrong because ototoxicity is aminoglycosides. [LO 28.1 — FQ Pediatric]",
+      "basic"
+     ],
+     [
+      "Fosfomycin's primary clinical role is:",
+      [
+       "Hospital-acquired pneumonia with multi-drug resistant gram-negative pathogens",
+       "Uncomplicated cystitis in women as single-dose convenient oral therapy",
+       "Methicillin-resistant Staphylococcus aureus bloodstream infection from line source",
+       "Complicated intra-abdominal infection requiring broad-spectrum coverage broadly",
+       "Pseudomonas aeruginosa hospital-acquired bacteremia in ICU patients"
+      ],
+      1,
+      "Fosfomycin (Monurol) is a single 3-g oral dose for uncomplicated cystitis. Mechanism: inhibits enolpyruvate transferase (MurA) in early cell wall synthesis. Concentrates in urine. Especially useful for ESBL-producing E. coli that resists most oral options. Single-dose convenience improves adherence. Costly. NOT for complicated UTI, pyelonephritis, prostatitis, systemic infection — concentrates only in urine. IV fosfomycin (used outside US) has broader role in MDR gram-negative infections in some countries. A — wrong because not for HAP. C — wrong because not for bacteremia. D — wrong because not for intra-abdominal. E — wrong because not for systemic Pseudomonas. [LO 28.2 — Fosfomycin]",
+      "basic"
+     ],
+     [
+      "Moxifloxacin differs from ciprofloxacin and levofloxacin in providing additional coverage for:",
+      [
+       "Anaerobes including Bacteroides fragilis useful for intra-abdominal infection",
+       "Pseudomonas aeruginosa with comparable activity to ciprofloxacin overall",
+       "Methicillin-resistant Staphylococcus aureus in skin and soft tissue",
+       "Atypical mycobacterial pathogens including Mycobacterium kansasii infection",
+       "Enterococcus faecium including vancomycin-resistant urinary tract strains"
+      ],
+      0,
+      "Moxifloxacin (along with respiratory FQ coverage shared with levofloxacin) is notable for anaerobic coverage including Bacteroides fragilis — sometimes used for intra-abdominal infection as monotherapy (vs cipro/levo which need metronidazole added for anaerobes). Trade-off: moxifloxacin has the longest QT prolongation among FQs and significant black-box concerns. NOT used for UTI (poor urinary concentration). Moxifloxacin role: community-acquired pneumonia (especially if anaerobic aspiration suspected), select intra-abdominal infection. Delafloxacin is the FQ that adds MRSA coverage. B — wrong because ciprofloxacin is the antipseudomonal FQ, not moxifloxacin. C — wrong because MRSA is delafloxacin (newer FQ). D — wrong because moxi covers some mycobacteria as adjunct but isn't the distinguishing feature. E — wrong because no enterococcus coverage strength. [LO 28.1 — Moxifloxacin]",
+      "basic"
+     ],
+     [
+      "An HIV-positive patient on a fluoroquinolone for community-acquired pneumonia also starts methadone maintenance. The MOST important interaction concern is:",
+      [
+       "Methadone reduces fluoroquinolone absorption from gut chelation interaction",
+       "Combined QT prolongation from both methadone and fluoroquinolone exposure",
+       "Methadone induces CYP enzymes lowering fluoroquinolone serum levels acutely",
+       "Fluoroquinolone displaces methadone from albumin causing toxic free levels",
+       "Methadone and fluoroquinolone cross-react allergically requiring desensitization"
+      ],
+      1,
+      "Both methadone and fluoroquinolones (especially moxifloxacin > levofloxacin > ciprofloxacin) prolong the QT interval. Combined → additive QT prolongation → torsades de pointes risk. Same caution applies to combinations of QT-prolonging drugs: macrolides (especially erythromycin, clarithromycin, azithromycin), ondansetron, antipsychotics (haloperidol, chlorpromazine, ziprasidone), antidepressants (citalopram >40 mg, TCAs), antiarrhythmics (sotalol, amiodarone, procainamide), antifungals (azoles, especially voriconazole), bedaquiline (TB), some HIV PIs. Check baseline ECG; correct K⁺ and Mg²⁺; avoid combinations in patients with congenital long QT or prior arrhythmia. A — wrong because no chelation between these two. C — wrong because no CYP induction by methadone affecting FQs. D — wrong because no albumin displacement role. E — wrong because no allergic cross-reactivity pattern. [LO 28.1 — Integration QT]",
       "basic"
      ]
     ]
@@ -17015,6 +21382,259 @@ const QUIZ = [
       "basic"
      ]
     ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Acyclovir selectively damages HSV-infected cells while sparing uninfected cells because:",
+      [
+       "Acyclovir directly binds and inhibits the herpesvirus DNA polymerase",
+       "Viral thymidine kinase phosphorylates acyclovir only inside infected cells",
+       "Acyclovir crosses only the viral envelope and not host plasma membranes",
+       "Host cellular kinases preferentially phosphorylate acyclovir over native nucleotides",
+       "Acyclovir is selectively transported into infected cells by viral surface receptors"
+      ],
+      1,
+      "Acyclovir is a guanosine analog. KEY activation step: monophosphorylation by VIRAL thymidine kinase (TK) — present ONLY in HSV/VZV-infected cells. Uninfected host cells lack viral TK and cannot activate the drug. Host cellular kinases then complete activation to acyclovir triphosphate, which is incorporated into viral DNA → chain termination + viral DNA polymerase inhibition. This is the canonical selective-toxicity example among antivirals. Resistance: loss of viral TK (immunocompromised patients with prolonged exposure) → drug can't be activated → use foscarnet (bypasses TK requirement, directly inhibits viral DNA polymerase). A — wrong because DNA polymerase is the TARGET after activation, not the selectivity mechanism. C — wrong because no envelope-only crossing. D — wrong because host kinases activate but the first step requires viral TK. E — wrong because no surface-receptor transport. [LO 29.1 — Acyclovir]",
+      "basic"
+     ],
+     [
+      "An immunocompromised transplant patient develops acyclovir-resistant HSV. The MOST appropriate alternative is:",
+      [
+       "Higher-dose IV acyclovir given more frequently to overcome resistance",
+       "Valacyclovir given orally as a higher-bioavailability acyclovir prodrug",
+       "Ganciclovir given orally with weekly therapeutic drug level monitoring",
+       "Famciclovir given orally as a different acyclovir-class nucleoside analog",
+       "Foscarnet given parenterally bypassing the viral thymidine kinase requirement"
+      ],
+      4,
+      "Acyclovir resistance in HSV/VZV typically arises from LOSS of viral thymidine kinase (TK) — without TK, acyclovir cannot be activated to its triphosphate form. Higher doses won't help; same applies to famciclovir and valacyclovir (all require TK). FOSCARNET directly inhibits viral DNA polymerase without requiring phosphorylation — bypasses the resistance mechanism. Same logic for acyclovir-resistant VZV. Foscarnet downsides: nephrotoxic, electrolyte derangements (hypocalcemia, hypomagnesemia, hypokalemia), IV only, requires monitoring. Cidofovir is another alternative (also TK-independent but more toxic). A — wrong because higher dose doesn't overcome TK loss. B — wrong because valacyclovir is acyclovir prodrug — same TK requirement. C — wrong because ganciclovir is for CMV (different kinase, UL97), not HSV first-line. D — wrong because famciclovir requires TK — same resistance pattern. [LO 29.1 — Foscarnet]",
+      "basic"
+     ],
+     [
+      "Ganciclovir's primary indication is treatment of which viral infection?",
+      [
+       "Herpes simplex virus encephalitis in immunocompetent adult patients",
+       "Hepatitis C virus chronic infection requiring long-term oral antiviral",
+       "Varicella-zoster virus dermatomal zoster in elderly adult patients",
+       "Influenza A or B within 48 hours of symptom onset in adults",
+       "Cytomegalovirus retinitis or colitis in immunocompromised host patients"
+      ],
+      4,
+      "Ganciclovir is activated by CMV-specific UL97 kinase (analogous to HSV's thymidine kinase) — provides selectivity for CMV-infected cells. Uses: CMV retinitis (sight-threatening in AIDS), CMV colitis, CMV pneumonitis, CMV prophylaxis in transplant patients. Valganciclovir is the oral prodrug with much better bioavailability. KEY adverse effect: bone marrow suppression (neutropenia, thrombocytopenia) — dose-limiting, sometimes requires G-CSF support. Resistance: UL97 mutations → foscarnet or cidofovir as alternatives. Letermovir is a newer CMV prophylaxis agent (different mechanism — inhibits terminase complex). A — wrong because HSV encephalitis = IV acyclovir. B — wrong because HCV = direct-acting antivirals (sofosbuvir + other). C — wrong because VZV zoster = acyclovir/valacyclovir/famciclovir. D — wrong because influenza = oseltamivir/baloxavir. [LO 29.1 — Ganciclovir]",
+      "basic"
+     ],
+     [
+      "Oseltamivir for influenza is MOST effective when started within which time window from symptom onset?",
+      [
+       "Within 24 hours of symptom onset for maximal influenza benefit",
+       "Within 14 days of symptom onset for any meaningful clinical impact",
+       "Within 7 days of symptom onset for any meaningful clinical impact",
+       "Within 48 hours of symptom onset for meaningful clinical benefit",
+       "At any time during the influenza illness for meaningful symptom benefit"
+      ],
+      3,
+      "Oseltamivir (Tamiflu) and zanamivir are neuraminidase inhibitors — prevent influenza virion release from infected cells. Effective only when viral replication is still active: start within 48 hours of symptom onset. Reduces illness duration by ~1 day, modestly reduces complications. After 48 hours: minimal benefit; supportive care. Oseltamivir is oral; zanamivir is inhaled (caution in asthma — bronchospasm risk). Baloxavir is single-dose oral, inhibits viral cap-dependent endonuclease, different mechanism. Annual vaccination remains the dominant prevention strategy — antivirals are adjuncts. A — wrong because 24 hours is even better but the 48-hour cutoff is the standard teaching. B — wrong because 14 days far too late. C — wrong because 7 days is too late for meaningful benefit. E — wrong because not effective at any time — replication must still be active. [LO 29.1 — Oseltamivir]",
+      "basic"
+     ],
+     [
+      "Modern first-line HIV antiretroviral therapy uses which regimen architecture?",
+      [
+       "Three NRTIs combined as backbone with no additional anchor drug",
+       "Four-drug regimen of two NRTIs plus NNRTI plus PI for treatment-naive",
+       "Two NRTIs combined with one protease inhibitor without ritonavir boost",
+       "One NRTI combined with one NNRTI as a two-drug oral regimen",
+       "Two NRTIs combined with one integrase strand transfer inhibitor anchor"
+      ],
+      4,
+      "Modern first-line HIV cART: 2 NRTI backbone (typically tenofovir + emtricitabine; or abacavir + lamivudine after HLA-B*5701 testing) + 1 INSTI anchor (bictegravir, dolutegravir most commonly). Single-tablet regimens: Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide), Triumeq (dolutegravir/abacavir/lamivudine). INSTIs are anchor of choice due to high potency, low pill burden, few interactions, high resistance barrier. Treat at ANY CD4 count, start as soon as possible. Goal: undetectable viral load → 'U=U' (undetectable = untransmittable). A — wrong because three NRTIs alone isn't standard first-line. B — wrong because four-drug isn't standard first-line. C — wrong because PI-anchored regimens are less common in modern practice. D — wrong because two-drug NRTI+NNRTI isn't standard first-line for treatment-naive. [LO 29.2 — HIV cART]",
+      "basic"
+     ],
+     [
+      "Before starting abacavir, the prescriber must check for which patient-specific risk factor?",
+      [
+       "HLA-B*5701 allele to avoid potentially fatal hypersensitivity syndrome",
+       "Glucose-6-phosphate dehydrogenase deficiency to avoid acute hemolytic anemia",
+       "Cytochrome P450 2D6 poor-metabolizer phenotype to avoid toxic accumulation",
+       "Hepatitis B core antibody to avoid acute viral hepatitis reactivation",
+       "Mycobacterium tuberculosis latent infection to avoid disseminated tuberculosis"
+      ],
+      0,
+      "Abacavir hypersensitivity syndrome occurs in ~5-8% of patients carrying HLA-B*5701 allele — fever, rash, GI symptoms, respiratory symptoms, hypotension. Re-challenge after hypersensitivity has caused fatal anaphylaxis. Testing HLA-B*5701 before abacavir reduces hypersensitivity to near zero. ALWAYS test before starting; document carrier status; avoid abacavir entirely in carriers. Similar pharmacogenomic-allele links: HLA-B*1502 + carbamazepine (SJS/TEN in Asian populations), HLA-B*5701 + flucloxacillin (DILI), HLA-B*5801 + allopurinol. B — wrong because G6PD is dapsone/sulfa/primaquine concern, not abacavir. C — wrong because no CYP2D6 abacavir issue. D — wrong because no HBV concern with abacavir specifically. E — wrong because TB testing isn't an abacavir prerequisite. [LO 29.2 — Abacavir HLA]",
+      "basic"
+     ],
+     [
+      "Efavirenz should be AVOIDED in early pregnancy because of risk of:",
+      [
+       "Neonatal cardiac malformations from CYP3A4 inhibition in the fetus",
+       "Direct teratogenesis affecting limb development in early embryogenesis",
+       "Maternal hepatotoxicity worsening during third trimester of pregnancy",
+       "Neural tube defects from interference with fetal central nervous system",
+       "Neonatal withdrawal syndrome at the time of postnatal delivery"
+      ],
+      3,
+      "Efavirenz (NNRTI) is associated with neural tube defects when used in early pregnancy. Switch to rilpivirine, dolutegravir, or other safer alternative when pregnancy planned or detected. Other efavirenz issues: vivid dreams, CNS effects (dizziness, mood changes, sometimes psychiatric symptoms — usually settle after weeks). Modern HIV regimens have largely moved past efavirenz toward INSTI-anchored regimens (dolutegravir, bictegravir) which are also pregnancy-safe with appropriate folate supplementation. PrEP regimens (tenofovir + emtricitabine, or long-acting cabotegravir) are pregnancy-considered. A — wrong because no cardiac teratogen pattern. B — wrong because no limb teratogen pattern. C — wrong because hepatotoxicity isn't the pregnancy issue. E — wrong because no neonatal withdrawal pattern. [LO 29.2 — Efavirenz]",
+      "basic"
+     ],
+     [
+      "Atazanavir (HIV protease inhibitor) causes which characteristic benign adverse effect?",
+      [
+       "Direct hepatocellular hepatotoxicity with significantly elevated liver enzymes",
+       "Indirect hyperbilirubinemia with jaundice but no actual hepatotoxic injury",
+       "Bone marrow suppression with anemia, neutropenia, and thrombocytopenia developing",
+       "Severe nephrotoxicity with rising creatinine and proteinuria patterns acutely",
+       "Cardiac arrhythmias from QT prolongation worsened by other medications"
+      ],
+      1,
+      "Atazanavir competitively inhibits UDP-glucuronyltransferase 1A1 (UGT1A1) — the enzyme that conjugates unconjugated bilirubin. Result: indirect hyperbilirubinemia, sometimes visible jaundice and scleral icterus. NOT hepatotoxicity — LFTs are normal, function is intact. Resembles Gilbert syndrome physiologically. Counsel patients to expect possible yellowing but it's benign. Some patients (especially Gilbert carriers) develop more pronounced effect — switch to alternative PI if cosmetically distressing. Dolutegravir mildly raises serum creatinine via tubular secretion competition without true renal injury — similar 'cosmetic lab finding' teaching point. A — wrong because NOT true hepatotoxicity. C — wrong because no signature marrow suppression. D — wrong because no signature nephrotoxicity. E — wrong because no signature QT effect. [LO 29.2 — Atazanavir]",
+      "basic"
+     ],
+     [
+      "Tenofovir disoproxil fumarate (TDF) has signature toxicities affecting which two organ systems?",
+      [
+       "Hepatic toxicity with rising LFTs and pulmonary fibrosis with chronic use",
+       "Dermatologic toxicity with severe rash and ocular toxicity with retinopathy",
+       "Cardiac toxicity with QT prolongation and central nervous system toxicity",
+       "Hematologic toxicity with anemia and gastrointestinal toxicity with mucositis",
+       "Renal toxicity with proximal tubulopathy and bone loss with chronic use"
+      ],
+      4,
+      "Tenofovir disoproxil fumarate (TDF) signature toxicities: (1) proximal renal tubulopathy — Fanconi-like syndrome with phosphate wasting, glucosuria without diabetes, rising creatinine; (2) bone loss (BMD decline) related to phosphate wasting. Monitor renal function and bone density. TENOFOVIR ALAFENAMIDE (TAF) is the newer prodrug that achieves higher intracellular levels with lower systemic exposure → significantly less renal and bone toxicity. TAF replaces TDF in most modern regimens. Tenofovir is used both for HIV (one of two NRTIs) and for hepatitis B (long-term suppression). A — wrong because no pulmonary fibrosis pattern. B — wrong because no dermatologic or ocular signature. C — wrong because no QT or CNS signature. D — wrong because no marrow or mucositis pattern. [LO 29.2 — Tenofovir]",
+      "basic"
+     ],
+     [
+      "HIV post-exposure prophylaxis (PEP) after a high-risk exposure must be started within which time window?",
+      [
+       "Within 72 hours of the high-risk exposure event maximally",
+       "Within 24 hours of the high-risk exposure event optimally",
+       "Within 7 days of the high-risk exposure event maximally",
+       "Within 14 days of the high-risk exposure event maximally",
+       "Within 30 days of the high-risk exposure event maximally"
+      ],
+      0,
+      "HIV post-exposure prophylaxis (PEP): start within 72 hours (earlier = better; ideally within hours). 3-drug regimen × 28 days, typically tenofovir + emtricitabine + INSTI (dolutegravir or raltegravir). After 72 hours: efficacy drops sharply. Compare to PrEP (pre-exposure prophylaxis): daily oral tenofovir + emtricitabine, or long-acting injectable cabotegravir every 2 months — for ongoing high-risk individuals (MSM with multiple partners, IDU sharing needles, serodiscordant couples). PrEP is highly effective (>90% reduction in transmission with good adherence). B — wrong because 24 hours is better but 72 is the standard cutoff. C — wrong because 7 days too late. D — wrong because 14 days too late. E — wrong because 30 days too late. [LO 29.2 — HIV PEP]",
+      "basic"
+     ],
+     [
+      "Direct-acting antivirals (DAAs) for hepatitis C achieve cure rates exceeding what percentage in modern 12-week regimens?",
+      [
+       "Greater than 95% sustained virologic response across genotypes commonly",
+       "Approximately 50% sustained virologic response after 12 weeks of therapy",
+       "Approximately 70% sustained virologic response after 12 weeks of therapy",
+       "Approximately 80% sustained virologic response after 12 weeks of therapy",
+       "Approximately 25% sustained virologic response after 12 weeks of therapy"
+      ],
+      0,
+      "Hepatitis C direct-acting antivirals (DAAs) achieve >95% sustained virologic response (SVR — functional cure) in 8-12 week oral regimens. Combinations of NS3/4A protease inhibitors (-previrs: glecaprevir, voxilaprevir), NS5A inhibitors (-asvirs: ledipasvir, pibrentasvir, velpatasvir), NS5B polymerase inhibitors (-buvirs: sofosbuvir). Common pan-genotypic regimens: sofosbuvir/velpatasvir (Epclusa) 12 weeks, glecaprevir/pibrentasvir (Mavyret) 8 weeks. Revolutionized HCV — from interferon-ribavirin (lower cure, terrible side effects) to oral cure in weeks. Hepatitis B is suppression not cure (tenofovir or entecavir lifelong) due to persistent cccDNA in hepatocytes. B — wrong because DAAs cure rates are much higher than this. C — wrong because 70% understates modern DAA performance. D — wrong because 80% still understates. E — wrong because this was old interferon-ribavirin era. [LO 29.2 — HCV DAA]",
+      "basic"
+     ],
+     [
+      "Hepatitis B treatment uses tenofovir or entecavir long-term because:",
+      [
+       "These drugs cure hepatitis B within an 8 to 12 week regimen typically",
+       "Tenofovir and entecavir induce immune clearance leading to functional cure",
+       "Direct-acting antivirals like sofosbuvir replace interferon for cure regimens",
+       "Pegylated interferon is contraindicated in patients with chronic hepatitis B",
+       "Suppression of HBV DNA is achieved but cccDNA cannot be eradicated"
+      ],
+      4,
+      "Hepatitis B virus persists as covalently closed circular DNA (cccDNA) within hepatocyte nuclei — current drugs (tenofovir, entecavir) suppress active HBV DNA replication but cannot eradicate cccDNA reservoir. Therapy is therefore SUPPRESSION not cure — usually lifelong. Treatment goals: reduce viral load, normalize ALT, prevent cirrhosis/HCC. Pegylated interferon alpha is alternative (less common modern use due to side effects; not lifelong). Tenofovir or entecavir is preferred first-line for chronic HBV. Functional cure (HBsAg loss) is rare with current therapy — research focus is on cccDNA targeting. A — wrong because HBV ISN'T cured — that's HCV. B — wrong because no functional cure with current drugs. C — wrong because DAAs are HCV drugs, not used for HBV. D — wrong because interferon CAN be used in HBV but isn't first-line. [LO 29.2 — HBV Suppression]",
+      "basic"
+     ],
+     [
+      "Foscarnet's signature toxicities include nephrotoxicity and:",
+      [
+       "Bone marrow suppression with anemia, neutropenia, and thrombocytopenia",
+       "Cardiac arrhythmias from QT prolongation worsened by other agents",
+       "Hepatocellular toxicity with rising AST, ALT, and alkaline phosphatase",
+       "Pulmonary fibrosis with chronic interstitial lung changes on imaging",
+       "Electrolyte derangements including hypocalcemia, hypomagnesemia, hypokalemia"
+      ],
+      4,
+      "Foscarnet causes signature renal toxicity + electrolyte derangements: hypocalcemia (often symptomatic — perioral numbness, tetany, seizures), hypomagnesemia, hypokalemia, hypophosphatemia or hyperphosphatemia. Foscarnet binds calcium directly in serum and alters tubular handling. Monitor electrolytes daily. Saline hydration reduces nephrotoxicity. Used for: acyclovir-resistant HSV/VZV (no TK requirement — bypasses resistance), ganciclovir-resistant CMV. IV only. Reserved for resistance scenarios because of toxicity profile. A — wrong because marrow suppression is ganciclovir's signature. B — wrong because no signature QT effect. C — wrong because no signature hepatotoxicity. D — wrong because no signature pulmonary fibrosis. [LO 29.1 — Foscarnet Toxicity]",
+      "basic"
+     ],
+     [
+      "HIV pre-exposure prophylaxis (PrEP) for high-risk individuals uses:",
+      [
+       "Daily oral lamivudine alone as single-drug long-term prophylaxis",
+       "Three-drug daily oral regimen identical to active HIV treatment",
+       "Daily oral tenofovir/emtricitabine or long-acting injectable cabotegravir",
+       "Monthly oral acyclovir as prophylactic regimen for HIV high-risk",
+       "Daily oral isoniazid as monotherapy prophylactic regimen for HIV"
+      ],
+      2,
+      "HIV PrEP options: (1) daily oral tenofovir + emtricitabine — TDF/FTC (Truvada) or TAF/FTC (Descovy); (2) long-acting injectable cabotegravir every 2 months. Adherence-dependent — >90% reduction in HIV transmission with good adherence. Test HIV status every 3 months while on PrEP (acute HIV during PrEP can develop tenofovir/emtricitabine resistance). Test for STIs, monitor renal function for TDF. PrEP candidates: MSM with multiple partners, IDU sharing needles, serodiscordant couples, sex workers. PEP (post-exposure): start within 72 hours, 28-day 3-drug regimen. A — wrong because lamivudine alone isn't PrEP. B — wrong because PrEP isn't full treatment regimen — it's 2 NRTIs. D — wrong because acyclovir is for herpes, not HIV PrEP. E — wrong because INH is for TB, not HIV PrEP. [LO 29.2 — HIV PrEP]",
+      "basic"
+     ],
+     [
+      "Valganciclovir is preferred over IV ganciclovir for CMV prophylaxis in transplant patients because:",
+      [
+       "Valganciclovir has broader CMV resistance coverage than ganciclovir intravenous",
+       "Valganciclovir has no significant drug-drug interactions like IV ganciclovir",
+       "Valganciclovir has less bone marrow suppression than IV ganciclovir consistently",
+       "Valganciclovir penetrates the retina better for CMV retinitis prevention",
+       "Valganciclovir is the oral prodrug with much higher bioavailability than oral ganciclovir"
+      ],
+      4,
+      "Valganciclovir is the L-valine ester prodrug of ganciclovir — much higher oral bioavailability (~60%) than oral ganciclovir itself (~6%). Allows outpatient oral CMV therapy/prophylaxis instead of IV ganciclovir's home infusion logistics. Standard for CMV prophylaxis in transplant (solid organ + bone marrow), CMV treatment of mild-moderate disease, and step-down from IV ganciclovir induction. Same active drug, same mechanism (UL97 phosphorylation → DNA polymerase inhibition), same bone marrow suppression risk (monitor CBC). Letermovir is a newer prophylaxis option (different mechanism — terminase inhibitor; no marrow suppression). A — wrong because no spectrum or resistance difference. B — wrong because interactions are similar. C — wrong because same active drug, same marrow toxicity. D — wrong because no retinal penetration advantage. [LO 29.1 — Valganciclovir]",
+      "basic"
+     ],
+     [
+      "Zanamivir (inhaled neuraminidase inhibitor) is specifically cautioned in patients with:",
+      [
+       "Diabetes mellitus due to dysglycemia risk from neuraminidase inhibition",
+       "Renal failure due to inadequate clearance of inhaled drug",
+       "Asthma or COPD due to bronchospasm risk from inhalation administration",
+       "Pregnancy due to teratogenic risk to fetal development",
+       "Elderly age due to increased CNS toxicity from inhaled administration"
+      ],
+      2,
+      "Zanamivir is delivered by powder inhalation — can trigger bronchospasm in asthma and COPD patients. AVOID in obstructive airway disease. Oseltamivir is oral and doesn't have this issue — preferred in asthma/COPD. Same effectiveness window: within 48 hours of symptom onset. Both reduce illness duration ~1 day in immunocompetent. Higher-benefit populations: pregnant women, immunocompromised, very young/old, severe disease. Baloxavir is newer single-dose oral inhibitor of cap-dependent endonuclease. A — wrong because no dysglycemia concern (that's fluoroquinolones). B — wrong because renal failure isn't the inhaled-drug concern. D — wrong because no specific teratogenicity. E — wrong because no specific CNS toxicity. [LO 29.1 — Zanamivir]",
+      "basic"
+     ],
+     [
+      "Sofosbuvir is a hepatitis C direct-acting antiviral that targets which viral component?",
+      [
+       "NS3/4A protease inhibitor blocking viral polyprotein processing steps",
+       "Viral entry inhibitor blocking viral attachment to hepatocyte surface",
+       "NS5A inhibitor blocking viral replication complex assembly steps",
+       "NS2 protease inhibitor blocking viral polyprotein autocatalytic cleavage",
+       "NS5B polymerase inhibitor blocking viral RNA-dependent RNA synthesis"
+      ],
+      4,
+      "Sofosbuvir is the prototype NS5B polymerase inhibitor (-buvir suffix) — blocks RNA-dependent RNA polymerase, the central HCV replication enzyme. Backbone of most modern DAA combinations. Combined with NS5A inhibitor (-asvir suffix: ledipasvir, velpatasvir, pibrentasvir) for pan-genotypic coverage. NS3/4A protease inhibitors (-previr suffix: glecaprevir, voxilaprevir) added in some regimens. Common regimens: sofosbuvir/velpatasvir (Epclusa, 12 weeks pan-genotypic), glecaprevir/pibrentasvir (Mavyret, 8 weeks pan-genotypic). Cure rate >95%. Pre-treatment: confirm HCV RNA + genotype, evaluate for cirrhosis, screen for HBV co-infection (reactivation risk). A — wrong because NS3/4A protease is the -previr class. B — wrong because no clinical entry inhibitor for HCV currently. C — wrong because NS5A inhibition is -asvir class. D — wrong because NS2 isn't a clinical target. [LO 29.2 — Sofosbuvir]",
+      "basic"
+     ],
+     [
+      "Ritonavir is now used at low dose primarily for which purpose in HIV regimens?",
+      [
+       "Direct antiviral effect through protease inhibition at the active site",
+       "Direct reverse transcriptase inhibition complementing the NRTI backbone agents",
+       "Direct integrase inhibition strengthening the regimen's resistance barrier broadly",
+       "Pharmacokinetic boosting of other protease inhibitors via CYP3A4 inhibition",
+       "Direct entry inhibition blocking viral attachment to CD4 cells effectively"
+      ],
+      3,
+      "Ritonavir is a potent CYP3A4 inhibitor — at low dose, it inhibits the metabolism of other PIs (darunavir, atazanavir, lopinavir), allowing them to maintain therapeutic levels with less frequent dosing. Pharmacologic 'boosting' rather than direct antiviral therapy. Cobicistat is a similar boosting agent (no antiviral activity, just CYP3A4 inhibition). The CYP3A4 inhibition causes the MAJOR drug-drug interactions of PI-based HIV regimens — statins (rhabdomyolysis), corticosteroids (Cushing's), antiarrhythmics, contraceptives, benzodiazepines, ergots, sildenafil. Modern INSTI-based regimens have fewer interactions and have largely displaced PI-based first-line. A — wrong because ritonavir's antiviral activity at low boost dose is minimal. B — wrong because not a reverse transcriptase inhibitor. C — wrong because not an INSTI. E — wrong because not an entry inhibitor. [LO 29.2 — Ritonavir Boost]",
+      "basic"
+     ],
+     [
+      "A patient with severe COVID requiring hospitalization is started on remdesivir. The mechanism of action is:",
+      [
+       "Inhibition of viral 3CL protease blocking viral polyprotein processing steps",
+       "Inhibition of viral nucleocapsid assembly preventing infectious virion formation",
+       "Inhibition of viral spike protein binding to ACE2 host cell receptor",
+       "Inhibition of viral RNA-dependent RNA polymerase causing chain termination",
+       "Inhibition of host cell furin protease required for spike protein activation"
+      ],
+      3,
+      "Remdesivir is a nucleoside analog prodrug — activated intracellularly, incorporated into viral RNA by RNA-dependent RNA polymerase, causes chain termination. Used for hospitalized COVID-19 patients, especially those requiring oxygen (not yet ventilated). Reduces hospital stay modestly; less clear mortality benefit. Other COVID antivirals: paxlovid (nirmatrelvir + ritonavir — nirmatrelvir is 3CL protease inhibitor, ritonavir is CYP boost) for outpatient high-risk patients within 5 days of symptoms; molnupiravir (oral nucleoside analog) alternative. Monoclonal antibodies (largely failed against newer variants). Dexamethasone for severe disease lowers mortality (immunomodulation, not antiviral). A — wrong because 3CL protease is paxlovid's target. B — wrong because no clinical nucleocapsid drug. C — wrong because ACE2 binding inhibition is monoclonal antibody mechanism. E — wrong because no clinical furin inhibitor. [LO 29.1 — Remdesivir]",
+      "basic"
+     ]
+    ]
    ]
   ]
  ],
@@ -17314,6 +21934,207 @@ const QUIZ = [
       ],
       3,
       "Who gets disseminated MAC: Atypical mycobacteria are environmental and harmless to most people, but in immunosuppressed patients - notably AIDS - MAC causes dangerous disseminated infections. Panavelil noted we encounter these organisms constantly without infection unless immunocompromised. (A) it is not neonate-exclusive. B: healthy athletes are not the at-risk group. C: normal immunity generally prevents disease despite exposure. E: TB therapy does not define the MAC-risk group.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    90,
+    "Practice Exam — ClaudeTest",
+    [
+     [
+      "Active tuberculosis is treated with the RIPE regimen for two months, then continuation. RIPE stands for:",
+      [
+       "Rifabutin, isoniazid, pyrazinamide, ethionamide given orally daily",
+       "Rifabutin, imipenem, pyrazinamide, ethambutol given parenterally daily",
+       "Rifampin, isoniazid, piperacillin, ertapenem given parenterally daily",
+       "Rifampin, isoniazid, pyrazinamide, ethambutol given orally daily",
+       "Rifampin, INH, polymyxin, ethambutol given orally for extended duration"
+      ],
+      3,
+      "Standard active TB therapy: 2 months intensive phase RIPE (Rifampin + Isoniazid + Pyrazinamide + Ethambutol) -> 4 months continuation phase with INH + rifampin. Total 6 months. Combination therapy prevents emergence of resistance (large bacterial load -> resistant mutants likely without combination); prolonged duration kills slowly-replicating organisms in caseating granulomas. Drug-susceptibility testing on initial isolate guides regimen modification. All 4 RIPE drugs are hepatotoxic - monitor LFTs. INH always with B6 (pyridoxine) supplementation to prevent peripheral neuropathy. A - wrong because rifabutin/ethionamide are second-line, not RIPE. B - wrong because carbapenems aren't first-line TB. C - wrong because piperacillin/ertapenem aren't TB drugs. E - wrong because polymyxin isn't a TB drug. [LO 30.1 - RIPE]",
+      "basic"
+     ],
+     [
+      "A 45-year-old on RIPE for TB develops decreased visual acuity and difficulty distinguishing red from green at one month. The MOST likely culprit is:",
+      [
+       "Ethambutol causing retrobulbar optic neuritis with color vision loss",
+       "Isoniazid causing peripheral neuropathy with visual symptoms acutely",
+       "Rifampin causing direct retinal toxicity with photoreceptor damage",
+       "Pyrazinamide causing hyperuricemic uveitis with vision changes acutely",
+       "Streptomycin causing vestibular toxicity with secondary vision changes"
+      ],
+      0,
+      "Ethambutol causes retrobulbar (optic) neuritis - decreased visual acuity and characteristic red-green color blindness. Dose-related and largely reversible if caught early. Management: stop ethambutol immediately, ophthalmology referral, switch to alternative agent guided by drug susceptibility. Baseline + monthly Snellen acuity and color vision testing is standard of care. Dose-adjust ethambutol in renal failure (renal clearance). The RIPE adverse-effect matrix is exam-classic: Rifampin (CYP induction + orange fluids + flu-like syndrome), Isoniazid (B6 deficiency neuropathy, lupus, hepatotox), Pyrazinamide (hyperuricemia + most hepatotoxic), Ethambutol (optic neuritis). B - wrong because INH peripheral neuropathy presents differently - distal stocking-glove, not visual. C - wrong because no rifampin retinal toxicity. D - wrong because no PZA uveitis pattern. E - wrong because streptomycin causes hearing loss + vestibular, not visual. [LO 30.1 - Ethambutol]",
+      "basic"
+     ],
+     [
+      "Isoniazid is co-administered with pyridoxine (vitamin B6) to prevent:",
+      [
+       "Hepatotoxicity from accumulating isoniazid metabolites in the liver",
+       "Drug-induced lupus from chronic isoniazid administration over months",
+       "Peripheral neuropathy from isoniazid-induced pyridoxine deficiency clinically",
+       "Sideroblastic anemia from isoniazid effect on heme synthesis pathway",
+       "Seizures from isoniazid overdose toxicity in renal failure"
+      ],
+      2,
+      "Isoniazid chelates pyridoxine (vitamin B6) -> functional B6 deficiency -> peripheral neuropathy (distal stocking-glove). Co-administer pyridoxine 25-50 mg daily prevents this. Higher risk groups: pregnancy, breastfeeding, diabetes, alcoholism, malnutrition, HIV, uremia. INH adverse-effect roster: peripheral neuropathy (B6), hepatotoxicity (age-related, monitor LFTs - STOP if symptoms or ALT >3x ULN with symptoms or >5x ULN asymptomatic), drug-induced lupus, sideroblastic anemia, seizures in overdose (treat with IV pyridoxine). NAT2 slow-acetylator polymorphism increases toxicity risk. KatG mutations -> INH resistance. A - wrong because B6 doesn't prevent hepatotoxicity. B - wrong because lupus is separate, not prevented by B6. D - wrong because B6 doesn't prevent sideroblastic anemia. E - wrong because B6 TREATS overdose seizures but is given prophylactically for neuropathy. [LO 30.1 - INH + B6]",
+      "basic"
+     ],
+     [
+      "Rifampin causes harmless orange-red discoloration of which body fluids?",
+      [
+       "Urine and stool from biliary excretion of orange metabolites",
+       "Stool and breath from gut metabolism of rifampin orange products",
+       "Saliva and tears with photophobia from corneal staining acutely",
+       "Sweat and breath from pulmonary excretion of orange metabolites",
+       "Urine, sweat, tears, and contact lenses staining permanently sometimes"
+      ],
+      4,
+      "Rifampin causes harmless orange-red discoloration of urine, sweat, tears, saliva - and stains soft contact lenses permanently (warn patients to wear glasses or switch lenses during therapy). Patients should be counseled to expect this and that it's NOT a sign of toxicity. Rifampin's more serious effects: CYP enzyme INDUCTION (CYP3A4, CYP2C9, etc.) - massively lowers levels of warfarin, oral contraceptives (counsel backup contraception), protease inhibitors (use rifabutin in HIV patients on PIs), methadone, cyclosporine, azoles, statins. Hepatotoxicity. Rare 'flu-like syndrome' with intermittent dosing. A - wrong because stool isn't notable, urine is. B - wrong because stool/breath aren't notable. C - wrong because no photophobia syndrome. D - wrong because breath isn't a recognized site. [LO 30.1 - Rifampin Orange]",
+      "basic"
+     ],
+     [
+      "In an HIV-positive patient on a protease inhibitor-based regimen who develops active TB, rifampin should be replaced with:",
+      [
+       "Bedaquiline which substitutes for rifampin in HIV-co-infected TB patients",
+       "Rifapentine which combines longer half-life with less CYP induction",
+       "Isoniazid monotherapy which provides adequate TB coverage temporarily",
+       "Rifabutin which has substantially less CYP induction than rifampin",
+       "Linezolid which substitutes for rifampin in HIV-co-infected TB patients"
+      ],
+      3,
+      "Rifampin is a potent CYP3A4 inducer - drops protease inhibitor levels below therapeutic, risking HIV treatment failure and resistance. Rifabutin has substantially less CYP induction (still some, requires PI dose adjustment) and can be safely combined with most PI regimens. Same logic applies to INSTI-based regimens (dolutegravir levels drop with rifampin; rifabutin compatible with some dose adjustment). When TB co-infected HIV patient needs rifamycin, rifabutin is preferred. Same teaching for MAC treatment in HIV (use rifabutin, not rifampin, in 3-drug regimen of macrolide + ethambutol + rifabutin). A - wrong because bedaquiline doesn't substitute for rifamycin in standard regimen. B - wrong because rifapentine has CYP induction. C - wrong because INH monotherapy doesn't treat active TB. E - wrong because linezolid is for MDR-TB, not substituting rifampin in regular regimen. [LO 30.1 - Rifabutin]",
+      "basic"
+     ],
+     [
+      "Latent tuberculosis (positive IGRA, no symptoms, normal CXR) can be treated with which regimen?",
+      [
+       "Bedaquiline plus linezolid for 18 months for any latent TB infection",
+       "Full RIPE 4-drug therapy for 6 months as for active disease",
+       "INH for 9 months, rifampin for 4 months, or 3HP weekly for 12 weeks",
+       "Azithromycin weekly for 12 months as for MAC prophylaxis broadly",
+       "TMP-SMX double-strength daily for 12 months as PCP prophylaxis broadly"
+      ],
+      2,
+      "Latent TB infection (LTBI) treatment options: (1) INH 9 months (oldest, most established, with B6) - completion rate is the issue; (2) Rifampin 4 months (shorter, simpler, fewer side effects) - interactions with other meds; (3) 3HP = isoniazid + rifapentine weekly x 12 doses (12 weeks) - directly observed therapy, high completion rate. (4) Rifampin + INH daily x 3 months alternative. LTBI screening with IGRA (interferon-gamma release assay) preferred over PPD skin test in BCG-vaccinated patients. Treatment reduces lifetime reactivation risk substantially. Active TB always requires combination therapy - never INH alone for active. A - wrong because bedaquiline is for MDR-TB. B - wrong because RIPE is for ACTIVE TB, not latent. D - wrong because azithromycin is MAC prophylaxis. E - wrong because TMP-SMX is PCP/toxo prophylaxis. [LO 30.1 - LTBI]",
+      "basic"
+     ],
+     [
+      "Pyrazinamide's most prominent adverse effects are:",
+      [
+       "Optic neuritis with red-green color blindness from chronic use",
+       "Marked hepatotoxicity plus hyperuricemia sometimes precipitating gout flares",
+       "Peripheral neuropathy from pyridoxine chelation in long-term users",
+       "Bone marrow suppression with neutropenia and thrombocytopenia developing",
+       "Nephrotoxicity from proximal tubular damage with electrolyte disturbances"
+      ],
+      1,
+      "Pyrazinamide (PZA) is the most hepatotoxic RIPE drug - monitor LFTs, STOP if ALT elevation symptomatic or >5x ULN asymptomatic. Hyperuricemia is a signature effect - PZA blocks uric acid renal tubular secretion, can precipitate gout flares. Use with caution in gout history. GI upset. PZA is a prodrug activated to pyrazinoic acid in acidic environments (active in caseating granulomas - where TB hides). Active only against M. tuberculosis (not M. bovis or atypical mycobacteria). Used in the intensive 2-month phase; not continued in the 4-month continuation phase. A - wrong because optic neuritis is ethambutol. C - wrong because peripheral neuropathy from B6 chelation is INH. D - wrong because no marrow suppression signature. E - wrong because no nephrotoxicity signature. [LO 30.1 - Pyrazinamide]",
+      "basic"
+     ],
+     [
+      "Mycobacterium avium complex (MAC) prophylaxis in HIV with CD4 count under 50 uses:",
+      [
+       "TMP-SMX double-strength daily as combined PCP and MAC prophylaxis",
+       "Azithromycin weekly as standard MAC prophylactic regimen for advanced HIV",
+       "Rifampin daily as standard MAC prophylactic regimen for advanced HIV",
+       "Bedaquiline weekly as MAC prophylactic regimen for advanced HIV patients",
+       "Dapsone daily as MAC prophylactic regimen for advanced HIV patients"
+      ],
+      1,
+      "MAC prophylaxis in HIV with CD4 <50: azithromycin 1200 mg PO weekly (or clarithromycin 500 mg BID). Discontinue once CD4 sustained >100 on ART for >3 months. Treatment of established MAC: 3-drug regimen - macrolide (azithro or clarithro) + ethambutol + rifabutin (NOT rifampin in HIV due to PI/INSTI interactions). MAC clinical: disseminated in advanced HIV (fever, weight loss, night sweats, diarrhea, hepatosplenomegaly, anemia, elevated alk phos), or pulmonary MAC in older non-HIV patients with structural lung disease (CF, bronchiectasis, COPD - often middle-aged thin women, 'Lady Windermere syndrome'). A - wrong because TMP-SMX is PCP/toxo prophylaxis, not MAC. C - wrong because rifampin isn't standard MAC prophylaxis. D - wrong because bedaquiline is for MDR-TB, not MAC. E - wrong because dapsone is PCP alternative, not MAC. [LO 30.2 - MAC Prophylaxis]",
+      "basic"
+     ],
+     [
+      "MDR-TB (multi-drug-resistant tuberculosis) is defined as resistance to which two drugs?",
+      [
+       "Resistance to isoniazid AND pyrazinamide at minimum, regardless of other susceptibilities",
+       "Resistance to rifampin AND pyrazinamide at minimum, regardless of other susceptibilities",
+       "Resistance to rifampin AND ethambutol at minimum, regardless of other susceptibilities",
+       "Resistance to isoniazid AND streptomycin at minimum, regardless of other susceptibilities",
+       "Resistance to isoniazid AND rifampin at minimum, regardless of other susceptibilities"
+      ],
+      4,
+      "MDR-TB = resistance to at least ISONIAZID + RIFAMPIN (the two most effective first-line drugs). XDR-TB = MDR + resistance to a fluoroquinolone + at least one injectable (amikacin, capreomycin, kanamycin). Treatment: 4-6 active drugs combined over 18-24 months. Active drugs include: streptomycin/amikacin/capreomycin (aminoglycosides/related, IM injectables), fluoroquinolones (moxifloxacin or levofloxacin), linezolid (now standard component), bedaquiline (ATP synthase inhibitor - QT prolongation, hepatotoxicity), delamanid (mycolic acid synthesis inhibitor), cycloserine (CNS side effects, psychiatric), para-aminosalicylic acid, ethionamide. Modern shorter regimens (BPaL: bedaquiline + pretomanid + linezolid) reduce duration. A - wrong because INH + PZA is not the MDR definition. B - wrong because rifampin + PZA isn't MDR. C - wrong because rifampin + ethambutol isn't MDR. D - wrong because streptomycin isn't part of the MDR definition. [LO 30.2 - MDR-TB]",
+      "basic"
+     ],
+     [
+      "Multibacillary (lepromatous) leprosy is treated with which drug combination for 12 months?",
+      [
+       "Rifampin plus isoniazid plus pyrazinamide plus ethambutol given daily",
+       "Streptomycin plus ethambutol plus rifampin given daily for treatment",
+       "Bedaquiline plus delamanid plus linezolid given daily for treatment",
+       "Azithromycin plus ethambutol plus rifabutin given daily for treatment",
+       "Rifampin plus dapsone plus clofazimine given monthly and daily orally"
+      ],
+      4,
+      "Multibacillary (lepromatous) leprosy: rifampin once-monthly + dapsone daily + clofazimine daily, for 12 months. Paucibacillary (tuberculoid) leprosy: rifampin once-monthly + dapsone daily, for 6 months. Dapsone is a sulfone - inhibits folate synthesis (DHPS inhibitor like sulfonamides); G6PD test before starting (hemolysis), methemoglobinemia, agranulocytosis. Clofazimine causes red-brown skin discoloration (warn patient - reversible but slow). Leprosy types: tuberculoid (T-cell mediated, few organisms, asymmetric anesthetic skin lesions) vs lepromatous (anergic, many organisms, symmetric diffuse skin and nerve involvement). WHO-funded therapy globally. A - wrong because RIPE is TB regimen. B - wrong because strep/etham/rifampin isn't leprosy regimen. C - wrong because bedaquiline/delamanid/linezolid is MDR-TB. D - wrong because azithro/etham/rifabutin is MAC treatment. [LO 30.2 - Leprosy]",
+      "basic"
+     ],
+     [
+      "Rifampin in a woman on combined oral contraceptives causes which interaction?",
+      [
+       "Reduced contraceptive efficacy from CYP induction lowering estrogen levels",
+       "No clinically meaningful interaction warranting backup contraception advice",
+       "Increased contraceptive effect from rifampin-induced absorption enhancement acutely",
+       "Direct displacement of ethinyl estradiol from albumin causing toxic levels",
+       "Increased rifampin levels from estrogen-induced CYP enzyme inhibition"
+      ],
+      0,
+      "Rifampin massively induces CYP3A4 (and other CYPs) -> ethinyl estradiol and progestin levels drop -> contraceptive failure. CRITICAL counseling point: women on OCPs starting rifampin (for TB, MAC, or short courses like prophylaxis for meningococcal exposure) need BACKUP non-hormonal contraception (condoms, IUD) during treatment AND for several weeks after (CYP induction persists). Same teaching applies to other CYP inducers: carbamazepine, phenytoin, phenobarbital, St. John's wort, modafinil. Rifabutin has less CYP induction. Same logic for warfarin (INR drops), HIV PIs (treatment failure - use rifabutin), methadone (withdrawal), tacrolimus/cyclosporine (transplant rejection), azoles (subtherapeutic). B - wrong because interaction IS clinically meaningful. C - wrong because no absorption enhancement. D - wrong because no albumin displacement. E - wrong because REVERSED - rifampin induces, not estrogen inhibits. [LO 30.1 - Rifampin OCP]",
+      "basic"
+     ],
+     [
+      "Bedaquiline is a newer drug for MDR-TB with which signature monitoring concern?",
+      [
+       "Renal function monitoring with serum creatinine assessment monthly throughout",
+       "Liver function monitoring with weekly AST and ALT assessment throughout",
+       "QT interval monitoring with baseline and serial ECG measurements throughout",
+       "Audiometry monitoring with monthly hearing assessment throughout therapy",
+       "Visual acuity monitoring with monthly color vision assessment throughout"
+      ],
+      2,
+      "Bedaquiline inhibits mycobacterial ATP synthase - novel mechanism. Used for MDR-TB and XDR-TB as part of combination regimens. SIGNATURE adverse effect: QT prolongation (sometimes severe) - baseline ECG required, serial monitoring throughout therapy. Also hepatotoxic. Black-box for increased mortality in early trials (mechanism unclear - possibly QT-related arrhythmias). Combine cautiously with other QT-prolongers (moxifloxacin, fluoroquinolones, clofazimine, ondansetron, methadone). Delamanid is similar newer MDR-TB drug also with QT concerns. Modern shorter MDR-TB regimens (BPaL: bedaquiline + pretomanid + linezolid) include bedaquiline. A - wrong because renal monitoring isn't the signature. B - wrong because hepatotoxicity is a concern but QT is signature. D - wrong because ototoxicity is aminoglycosides (streptomycin/amikacin) in TB regimens. E - wrong because visual monitoring is ethambutol. [LO 30.2 - Bedaquiline]",
+      "basic"
+     ],
+     [
+      "Isoniazid-induced drug-induced lupus presents with which clinical features?",
+      [
+       "Renal involvement with active urine sediment and red-cell casts",
+       "Severe central nervous system involvement with seizures and psychosis",
+       "Arthralgias, malar rash, positive ANA and anti-histone antibody",
+       "Pulmonary involvement with hemoptysis and pulmonary hemorrhage events",
+       "Cardiac involvement with pericarditis and myocarditis acutely developing"
+      ],
+      2,
+      "Drug-induced lupus from INH (and procainamide, hydralazine, minocycline, anti-TNF agents): arthralgias, malar rash, fevers, fatigue. Anti-histone antibody positive. ANA positive but typically negative anti-dsDNA (distinguishing feature from idiopathic SLE). Generally MILDER than idiopathic SLE - renal and CNS involvement are RARE in drug-induced lupus. Management: discontinue offending agent -> symptoms resolve over weeks-months. NSAIDs for joints, short-course steroids if severe. Drug-induced lupus culprits include: Procainamide, Hydralazine, Isoniazid, Minocycline, anti-TNF, Methyldopa, Chlorpromazine, Quinidine. A - wrong because renal involvement is rare in drug-induced lupus. B - wrong because CNS is rare. D - wrong because pulmonary hemorrhage is rare. E - wrong because cardiac is rare beyond mild pericarditis. [LO 30.1 - INH Lupus]",
+      "basic"
+     ],
+     [
+      "Drug-induced lupus presents with arthralgias, malar rash, and anti-histone antibody. Which of the following drugs is NOT a classic drug-induced lupus culprit?",
+      [
+       "Vancomycin used for MRSA bacteremia and serious gram-positive infections",
+       "Hydralazine used for hypertensive emergency and chronic hypertension",
+       "Procainamide used historically for ventricular arrhythmia management",
+       "Isoniazid used as part of the four-drug RIPE regimen for active TB",
+       "Minocycline used for acne and various tetracycline-class infections"
+      ],
+      0,
+      "Classic drug-induced lupus culprits: Procainamide (highest incidence), Hydralazine (high incidence in slow acetylators), Isoniazid, Minocycline, anti-TNF agents (infliximab, etanercept, adalimumab), Methyldopa, Chlorpromazine, Quinidine. VANCOMYCIN is NOT on this list. Presentation: arthralgia, malar rash, fever, fatigue, ANA+, anti-histone+ (~90% of drug-induced lupus, contrast with idiopathic SLE where anti-histone present in ~70%); renal and CNS involvement RARE. Management: discontinue -> resolves over weeks-months. B - wrong because hydralazine IS a classic culprit. C - wrong because procainamide IS a classic culprit. D - wrong because isoniazid IS a classic culprit. E - wrong because minocycline IS a classic culprit. [LO 30.1 - Integration]",
+      "basic"
+     ],
+     [
+      "A patient with HIV on a protease inhibitor-based regimen needs treatment for newly diagnosed pulmonary TB. The MOST important regimen modification is:",
+      [
+       "Substitute isoniazid with linezolid for the duration of TB therapy continuously",
+       "Substitute pyrazinamide with bedaquiline for the duration of TB therapy continuously",
+       "Substitute ethambutol with moxifloxacin for the duration of TB therapy continuously",
+       "Substitute rifampin with rifabutin to reduce CYP3A4 induction interaction",
+       "Discontinue the protease inhibitor entirely and use NRTI monotherapy temporarily"
+      ],
+      3,
+      "Rifampin is a potent CYP3A4 inducer - protease inhibitor levels drop dramatically, HIV treatment fails, resistance emerges. RIFABUTIN has substantially less CYP induction and can be combined with most PI regimens (with appropriate dose adjustment). Standard RIPE substitution: replace rifampin with rifabutin throughout treatment. Dolutegravir-based INSTI regimens can use rifampin with dolutegravir dose increase (twice-daily); bictegravir is incompatible with rifamycins. Modern approach often: switch to dolutegravir-based regimen + use rifampin; or maintain PI + use rifabutin. Don't discontinue ART entirely - risk of opportunistic infections + resistance. A - wrong because INH stays in TB regimen. B - wrong because PZA stays in TB regimen. C - wrong because ethambutol stays in TB regimen. E - wrong because don't discontinue ART entirely. [LO 30.1 - Integration]",
       "basic"
      ]
     ]
