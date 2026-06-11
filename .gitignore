@@ -7,3 +7,6 @@ build/_immuno_content.json
 build/_path_slidetext.json
 build/_path_content.json
 build/_path_questions.json
+build/_pharm_slidetext.json
+build/_pharm_content.json
+build/_pharm_questions.json
