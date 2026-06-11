@@ -663,13 +663,9 @@ function mustKnowCardHTML(text, key, i){
 // Optional curated chapter grouping per lecture. Each entry groups LO ids
 // under a friendly title. Lectures without an entry fall back to one
 // chapter per LO (title derived from the LO statement).
-const LECTURE_CHAPTERS = {
-  1: [
-    { icon:"🔌", title:"How the gut is wired", los:[1] },
-    { icon:"🔬", title:"How GI disease gets started", los:[2] },
-    { icon:"🩺", title:"Diseases you'll actually see", los:[3] }
-  ]
-};
+// Optional per-lecture chapter overrides (lecture# -> [{icon,title,los}]). Left
+// empty — chapters fall back to FLASHCARDS sections or are derived from the LOs.
+const LECTURE_CHAPTERS = {};
 
 const NOTE_META = {
   key:       { tag:"🔑 Key",          cls:"key" },
@@ -748,7 +744,7 @@ function reflectHTML(n, loId, qtext, key){
     <span class="rc-recall-hint">tap to check</span></div>`;
 }
 
-// strategic, sparse bolding: high-yield possessive eponyms (Barrett's, Meissner's…)
+// strategic, sparse bolding: high-yield possessive eponyms (e.g. named structures/syndromes)
 function emphEponyms(escaped){
   return String(escaped).replace(/\b([A-Z][a-zA-Z]+(?:[-’'][A-Z][a-zA-Z]+)?[’']s)\b/g, '<strong>$1</strong>');
 }
@@ -2490,24 +2486,9 @@ function renderReviewConcepts(){
 // =============================================================
 // CONCEPT DIAGRAMS (signature visuals)
 // =============================================================
-const DIAGRAMS = {
-  "1_1": `<svg viewBox="0 0 520 116" class="dgm" preserveAspectRatio="xMidYMid meet">
-    <rect class="dgm-box" x="8" y="22" width="232" height="72" rx="11"/>
-    <text class="dgm-t" x="124" y="52" text-anchor="middle">Submucosal · Meissner</text>
-    <text class="dgm-s" x="124" y="76" text-anchor="middle">→ Secretion</text>
-    <rect class="dgm-box dgm-box2" x="280" y="22" width="232" height="72" rx="11"/>
-    <text class="dgm-t" x="396" y="52" text-anchor="middle">Myenteric · Auerbach</text>
-    <text class="dgm-s" x="396" y="76" text-anchor="middle">→ Motility</text></svg>`,
-  "1_2": `<svg viewBox="0 0 580 96" class="dgm" preserveAspectRatio="xMidYMid meet">
-    <rect class="dgm-box" x="6" y="34" width="108" height="40" rx="8"/><text class="dgm-t" x="60" y="59" text-anchor="middle">Normal</text>
-    <rect class="dgm-box" x="156" y="34" width="108" height="40" rx="8"/><text class="dgm-t" x="210" y="59" text-anchor="middle">Metaplasia</text>
-    <rect class="dgm-box" x="306" y="34" width="108" height="40" rx="8"/><text class="dgm-t" x="360" y="59" text-anchor="middle">Dysplasia</text>
-    <rect class="dgm-box dgm-box-bad" x="456" y="34" width="118" height="40" rx="8"/><text class="dgm-t" x="515" y="59" text-anchor="middle">Carcinoma</text>
-    <line class="dgm-arrow" x1="116" y1="54" x2="154" y2="54"/><line class="dgm-arrow" x1="266" y1="54" x2="304" y2="54"/><line class="dgm-arrow dgm-arrow-bad" x1="416" y1="54" x2="454" y2="54"/>
-    <text class="dgm-cap dgm-good" x="135" y="26" text-anchor="middle">reversible</text>
-    <text class="dgm-cap dgm-good" x="285" y="26" text-anchor="middle">reversible</text>
-    <text class="dgm-cap dgm-bad" x="435" y="26" text-anchor="middle">irreversible</text></svg>`
-};
+// No hardcoded course-specific diagrams in the remediation app. (The GI midterm
+// app shipped signature SVGs keyed by lecture_LO here; they don't belong here.)
+const DIAGRAMS = {};
 
 // =============================================================
 // ANNOTATIONS — highlight + ⚠️ review + ⭐ important (text),
