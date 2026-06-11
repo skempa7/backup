@@ -22,6 +22,15 @@ const IMAGES = {};
 // "Teach Me This" long-form explanations, keyed "lecture_LO" (filled in later)
 const LO_ANSWERS = {};
 
+// Optional rich-content maps — populated per lecture as content is built.
+// Defined empty up front so the engine never hits an undefined reference.
+const SLIDES = {};
+const SLIDE_JUMPS = {};
+const SLIDE_EMBED = {};
+const FLASHCARDS = {};
+const LECTURE_CONTENT = {};
+const LECTURE_REFERENCES = {};
+
 // QUIZ_START
 const QUIZ = [
   [1, "Cell Injury I", [
