@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="../../manifest.webmanifest">
+<meta name="theme-color" content="#1f1f1e">
+<link rel="apple-touch-icon" href="../../icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Remediation">
 <title>Question Bank</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,5 +174,6 @@
 <script src="content.js?v=7"></script>
 <script src="../../shared/engine.js?v=15"></script>
 
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("../../service-worker.js").catch(function(){});});}</script>
 </body>
 </html>
