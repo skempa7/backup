@@ -58,7 +58,9 @@ def parse_course(docs):
     bank=[]
     for path in docs:
         full=doc_text(path)
-        qpos=[m.start() for m in re.finditer(r'PRECLAUDE[\s—–\-]*\(?\s*20\s*QUESTIONS\)?', full)]
+        # tolerate header variants: 'PRECLAUDE — 20 QUESTIONS', 'PRECLAUDE (20 QUESTIONS)',
+        # and 'PRECLAUDE · LECTURE N · 20 QUESTIONS' (immuno 1-6). Same-line only; not ANSWER KEY.
+        qpos=[m.start() for m in re.finditer(r'PRECLAUDE[^\n]{0,45}?20\s*QUESTIONS', full)]
         apos=[m.start() for m in re.finditer(r'PRECLAUDE[\s—–\-]*ANSWER KEY', full)]
         # pair each questions-section with the next answer-key section
         for i,qs in enumerate(qpos):
