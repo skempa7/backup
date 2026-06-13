@@ -1,0 +1,856 @@
+{
+ "1": {
+  "1": [
+   {
+    "t": "Axonotmesis spares the connective-tissue sheath → Wallerian degeneration then regrowth",
+    "e": "Final"
+   },
+   {
+    "t": "Three injury grades by severity (neuropraxia / axonotmesis / neurotmesis)",
+    "e": "Final"
+   },
+   {
+    "t": "Carpal tunnel spares thenar sensation (palmar cutaneous branch leaves before the retinaculum); pronator teres does not",
+    "e": "Final"
+   },
+   {
+    "t": "Thenar pad is the median-localization key: spared = wrist, numb = proximal",
+    "e": "Final"
+   },
+   {
+    "t": "Flick sign is the most specific finding for carpal tunnel",
+    "e": "Final"
+   },
+   {
+    "t": "AIN syndrome is pure motor → cannot make an “O” sign, no sensory loss",
+    "e": "Final"
+   },
+   {
+    "t": "Median = most common UE entrapment",
+    "e": "Final"
+   },
+   {
+    "t": "Common peroneal at the fibular head = most common LE mononeuropathy",
+    "e": "Final"
+   },
+   {
+    "t": "Deep peroneal = dorsiflexion + first web space; superficial = eversion + dorsum",
+    "e": "Final"
+   },
+   {
+    "t": "Common peroneal lesion causes foot drop",
+    "e": "Final"
+   },
+   {
+    "t": "Foot drop at initial evaluation = poor prognosis (motor already involved)",
+    "e": "Final"
+   },
+   {
+    "t": "A sciatic lesion can also cause foot drop — localize by associated signs",
+    "e": "Final"
+   },
+   {
+    "t": "Piriformis vs hamstring discriminators (immediate-on-sitting + resisted knee flexion at 90° + ischial tenderness = hamstring)",
+    "e": "Final"
+   },
+   {
+    "t": "Meralgia paresthetica = LFCN under the inguinal ligament; sensory only, normal EMG",
+    "e": "Final"
+   },
+   {
+    "t": "NCS/EMG is the most effective test to confirm and grade; treat empirically in a hypersensitive patient",
+    "e": "Final"
+   }
+  ]
+ },
+ "2": {
+  "1.1": [
+   {
+    "t": "Attachment classification: true/vertebrosternal 1–7, false/vertebrochondral 8–10, floating/vertebral 11–12",
+    "e": "Final"
+   },
+   {
+    "t": "Atypical ribs = 1, 2, 10, 11, 12 (the “1s and 2s”)",
+    "e": "Final"
+   },
+   {
+    "t": "Rib 10 articulates with T10 only — one vertebra",
+    "e": "Final"
+   },
+   {
+    "t": "Rib 8 is false by attachment but typical by shape — two independent axes",
+    "e": "Final"
+   }
+  ],
+  "1.2": [
+   {
+    "t": "Sympathetic chain ganglia lie anterior to the rib heads in shared fascia",
+    "e": "Final"
+   },
+   {
+    "t": "Restricted rib motion raises sympathetic tone; rib-raising frees the fascia (rationale)",
+    "e": "Final"
+   },
+   {
+    "t": "Rib motion drives venous and lymphatic return against gravity (third rib-cage function)",
+    "e": "Final"
+   }
+  ],
+  "1.3": [
+   {
+    "t": "Diaphragm generates ~60% of inspiratory pressure change (primary muscle)",
+    "e": "Final"
+   },
+   {
+    "t": "Accessory muscles fire only in forced breathing; forced in = neck/shoulders, forced out = abdominal core",
+    "e": "Final"
+   },
+   {
+    "t": "Anterior + middle scalenes attach to rib 1; posterior scalene to rib 2 (reused in Ribs II ME map)",
+    "e": "Final"
+   }
+  ],
+  "1.4": [
+   {
+    "t": "Pump-handle ribs 2–5 increase AP diameter; bucket-handle ribs 6–10 increase transverse diameter",
+    "e": "Final"
+   },
+   {
+    "t": "Caliper motion (ribs 11–12) exists because they lack a costotransverse joint → both diameters slightly",
+    "e": "Final"
+   },
+   {
+    "t": "Rib 1 ≈ 50% pump / 50% bucket motion",
+    "e": "Final"
+   }
+  ],
+  "1.5": [
+   {
+    "t": "A rib SD is named for the position of ease — find the restricted rib, name where it likes to go",
+    "e": "Final"
+   },
+   {
+    "t": "Palpate pump-handle ribs anteriorly (sternochondral junction); bucket-handle ribs at the mid-axillary line",
+    "e": "Final"
+   },
+   {
+    "t": "Pump-handle pain = sharp/pinprick at costosternal/costotransverse region; bucket-handle pain = deeper aching at the mid-axillary line",
+    "e": "Final"
+   }
+  ]
+ },
+ "3": {
+  "1": [
+   {
+    "t": "Diaphragm contracts/descends inferiorly on inhalation, relaxes on exhalation",
+    "e": "Final"
+   },
+   {
+    "t": "Pump-handle pain = sharp/pinprick at costosternal/costotransverse junctions",
+    "e": "Final"
+   },
+   {
+    "t": "Bucket-handle pain = deep, aching, regional at the mid-axillary line",
+    "e": "Final"
+   },
+   {
+    "t": "Pump rotates on transverse axis (AP diameter); bucket on AP axis (transverse diameter)",
+    "e": "Final"
+   },
+   {
+    "t": "Pain on inhalation = exhaled rib (refuses inhalation); pain on exhalation = inhaled rib",
+    "e": "Final"
+   },
+   {
+    "t": "Inhaled rib: space above narrows, space below widens; anterior inferior edge prominent in front",
+    "e": "Final"
+   },
+   {
+    "t": "Rib 1 is ~50/50 pump and bucket — assess for both",
+    "e": "Final"
+   },
+   {
+    "t": "Caliper ribs 11–12 couple to diaphragm: inhaled rib swings posteriorly and inferiorly",
+    "e": "Final"
+   },
+   {
+    "t": "Static prominence infers side of dominance but requires dynamic motion testing",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "Naming order: side → rib number → where it lives (inhaled/exhaled) → predominant motion",
+    "e": "Final"
+   },
+   {
+    "t": "Name a rib SD for the position of ease, never the restricted direction",
+    "e": "Final"
+   },
+   {
+    "t": "Slot 3 (inhaled/exhaled) is the somatic dysfunction itself",
+    "e": "Final"
+   },
+   {
+    "t": "B.I.T.E. = Bottom for Inhaled, Top for Exhaled (group-treatment order)",
+    "e": "Final"
+   },
+   {
+    "t": "Wrong-end treatment of a group = mechanical brick wall",
+    "e": "Final"
+   },
+   {
+    "t": "Rib-dance ME muscles: rib 1 ant/mid scalene, rib 2 post scalene",
+    "e": "Final"
+   },
+   {
+    "t": "Rib-dance ME muscles: ribs 3–5 pec minor, 6–10 serratus anterior, 11–12 lat dorsi + QL",
+    "e": "Final"
+   },
+   {
+    "t": "Predominance by palpation site: parasternal → pump, mid-axillary → bucket",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Costochondritis = tender junction, no swelling",
+    "e": "Final"
+   },
+   {
+    "t": "Tietze syndrome = tender junction PLUS visible edema (swelling is the splitter)",
+    "e": "Final"
+   },
+   {
+    "t": "Cervical rib compresses the lower trunk of the brachial plexus → thoracic outlet syndrome",
+    "e": "Final"
+   },
+   {
+    "t": "Scapular repositioning test confirms scapular dyskinesis (treat stabilizers, not cuff)",
+    "e": "Final"
+   },
+   {
+    "t": "Rib fracture: distal cage compression localizes pain to the fracture site, not under the hand",
+    "e": "Final"
+   },
+   {
+    "t": "Shingles = deep burning dermatomal pain, one side, from DRG varicella reactivation",
+    "e": "Final"
+   },
+   {
+    "t": "Musculoskeletal is the most common cause of chest pain",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "Scapular dyskinesis rehab = PT to strengthen and stretch the scapular stabilizer muscles",
+    "e": "Final"
+   }
+  ]
+ },
+ "4": {
+  "1": [
+   {
+    "t": "CRPS Type I = no confirmed nerve lesion (was RSD); Type II = confirmed peripheral nerve lesion (was causalgia) — the single most-marked fact",
+    "e": "Final"
+   },
+   {
+    "t": "Recognition triad: disproportionate, non-dermatomal, distal pain",
+    "e": "Final"
+   },
+   {
+    "t": "CRPS (regional, objective findings) vs fibromyalgia (widespread four-quadrant, no objective findings)",
+    "e": "Final"
+   },
+   {
+    "t": "Allodynia (non-painful stimulus) vs hyperalgesia (exaggerated pain from a painful stimulus)",
+    "e": "Final"
+   },
+   {
+    "t": "Type I vs II decided ONLY by a confirmed nerve lesion — not severity, not stage",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "Fracture = most common precipitant (~42%), classically distal radius/Colles’",
+    "e": "Final"
+   },
+   {
+    "t": "Surgery ~12%, nerve entrapment ~7%, spontaneous ~5%",
+    "e": "Final"
+   },
+   {
+    "t": "Epidemiologic skew: female 3–4:1; adults UE-predominant, kids LE",
+    "e": "Final"
+   },
+   {
+    "t": "Annual incidence 5–26 per 100,000 per year",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Stage 3 = irreversible dystrophy/atrophy; burning pain is in ALL stages (the stage-3 tell is irreversibility)",
+    "e": "Final"
+   },
+   {
+    "t": "Central sensitization = NMDA-driven wind-up + receptive-field expansion + loss of GABA/glycine inhibition",
+    "e": "Final"
+   },
+   {
+    "t": "Ectopic activity = spontaneous Na-channel firing; ephaptic transmission = synapse-free electrical crosstalk to healthy fibers",
+    "e": "Final"
+   },
+   {
+    "t": "Livedo reticularis = lace-like purplish mottling of stage 3 (vasospasm → venous pooling)",
+    "e": "Final"
+   },
+   {
+    "t": "Reduced ROM = most common motor finding",
+    "e": "Final"
+   },
+   {
+    "t": "Pain perceived centrally in the somatosensory cortex (“the pain is in your head”)",
+    "e": "Final"
+   },
+   {
+    "t": "Four symptom domains: sensory, vasomotor, sudomotor, motor/trophic",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "A negative sympathetic block does NOT rule out CRPS (positive confirmatory, negative not exclusionary — Spurling logic)",
+    "e": "Final"
+   },
+   {
+    "t": "OMT: HVLA with caution (osteoporosis); indirect techniques better tolerated",
+    "e": "Final"
+   },
+   {
+    "t": "Bone scan preferred over plain radiographs in stage 1",
+    "e": "Final"
+   },
+   {
+    "t": "CRPS is a clinical Budapest diagnosis — no confirmatory test; do not delay treatment for imaging",
+    "e": "Final"
+   },
+   {
+    "t": "Multi-agent pharmacotherapy + PT/OT + psychotherapy (throw the book)",
+    "e": "Final"
+   },
+   {
+    "t": "Ketamine (NMDA antagonist) for refractory CRPS",
+    "e": "Final"
+   },
+   {
+    "t": "Plain radiographs assess bone, not the autonomic nervous system",
+    "e": "Final"
+   }
+  ]
+ },
+ "5": {
+  "1": [
+   {
+    "t": "C1 has no spinous process and no body (dens “stolen” by C2)",
+    "e": "Final"
+   },
+   {
+    "t": "C2 carries the dens; first large palpable SP off the occiput",
+    "e": "Final"
+   },
+   {
+    "t": "Vertigo associated with C2 dysfunction (dural attachments)",
+    "e": "Final"
+   },
+   {
+    "t": "Diaphragm function via C3–C5 (“C3, 4, 5 keep the diaphragm alive”)",
+    "e": "Final"
+   },
+   {
+    "t": "Intrinsic = deep/near axis/precise; extrinsic = far/larger/power",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "SCM: ipsilateral sidebend + contralateral rotation",
+    "e": "Final"
+   },
+   {
+    "t": "SCM shares CN XI (spinal accessory) with trapezius",
+    "e": "Final"
+   },
+   {
+    "t": "Scalenes: unilateral ipsilateral sidebend, bilateral flexion, accessory respiration (ant/mid → 1st rib, post → 2nd rib)",
+    "e": "Final"
+   },
+   {
+    "t": "Semispinalis pain presents as pain turning the OPPOSITE way",
+    "e": "Final"
+   },
+   {
+    "t": "Bilateral = flex/extend, unilateral = sidebend/rotate template",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Tight most-midline suboccipital (RCP minor) on OAD compression = cervicogenic headache via the myodural bridge",
+    "e": "Final"
+   },
+   {
+    "t": "Myodural bridge from RCP minor to intracranial dura (Spine Journal, 1997)",
+    "e": "Final"
+   },
+   {
+    "t": "Palpate/translate the articular pillars, NOT the transverse processes (tender, nerves exit)",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "The cervical spine does NOT follow Fryette’s Principles 1 & 2",
+    "e": "Final"
+   },
+   {
+    "t": "OA = Opposite Always — sidebending & rotation opposite regardless of AP curve; primary motion flexion/extension",
+    "e": "Final"
+   },
+   {
+    "t": "AA = ~50% of cervical rotation; full flexion isolates it; diagnosis records rotation only",
+    "e": "Final"
+   },
+   {
+    "t": "C2–C7 same-side coupling; C2–C4 rotate more, C5–C7 sidebend more",
+    "e": "Final"
+   },
+   {
+    "t": "Push left → sidebend left; limited translation right = restricted left sidebending = lives in right sidebending",
+    "e": "Final"
+   },
+   {
+    "t": "3-part diagnosis: Type (N/F/E) + SR + direction of freedom (worked: C3 NSRRR; OA ESRRL)",
+    "e": "Final"
+   },
+   {
+    "t": "Cervical superior facets BUM (Backward, Upward, Medial) vs thoracic BUL",
+    "e": "Final"
+   }
+  ]
+ },
+ "6": {
+  "1": [
+   {
+    "t": "Most common disc herniation = C6–C7 → C7 nerve root (single most common cervical radiculopathy)",
+    "e": "Final"
+   },
+   {
+    "t": "Compressive (disc, spondylosis, stenosis) vs non-degenerative (tumor, infection, systemic) etiology buckets",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "C5–T1 nerve-root chart (motor/reflex/sensation per root) — highest-yield figure to memorize",
+    "e": "Final"
+   },
+   {
+    "t": "C5: deltoid/biceps, biceps reflex, lateral arm",
+    "e": "Final"
+   },
+   {
+    "t": "C6: wrist extensors, brachioradialis reflex, thumb/index",
+    "e": "Final"
+   },
+   {
+    "t": "C7: finger extensors, triceps reflex, middle finger",
+    "e": "Final"
+   },
+   {
+    "t": "C8: finger flexors, no reliable reflex, ulnar 4th–5th digits",
+    "e": "Final"
+   },
+   {
+    "t": "T1: hand interossei (finger abduction), no reflex, medial arm",
+    "e": "Final"
+   },
+   {
+    "t": "DTR grade 4 = clonus = always abnormal; hyporeflexia = LMN/root, hyperreflexia/clonus = UMN",
+    "e": "Final"
+   },
+   {
+    "t": "Pain most intense proximally (neck); paresthesias distal; shooting/electrical, worse with Valsalva",
+    "e": "Final"
+   },
+   {
+    "t": "Cervical roots exit ABOVE the like-numbered vertebra through C7; C8 fills the gap below C7",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Root lesion = whole-dermatome motor + sensory deficit; entrapment = localized/distal",
+    "e": "Final"
+   },
+   {
+    "t": "EMG localizes root vs peripheral (syrinx case: real lesion was median nerve at the wrist)",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "Spurling worsens (narrows foramen); distraction improves (opens foramen)",
+    "e": "Final"
+   },
+   {
+    "t": "Valsalva worsens symptoms with a herniation/mass",
+    "e": "Final"
+   }
+  ],
+  "5": [
+   {
+    "t": "Needle EMG/NCS = gold standard — only test of nerve-root physiological integrity; best use = clarify an unclear diagnosis",
+    "e": "Final"
+   },
+   {
+    "t": "Acute radiculopathy, no red flags → no immediate imaging; reserve MRI for red flags or failed conservative care",
+    "e": "Final"
+   }
+  ],
+  "6": [
+   {
+    "t": "Gentle OMT (soft tissue/MFR/FPR); AVOID HVLA in the radiculopathy region",
+    "e": "Final"
+   },
+   {
+    "t": "AC7 counterstrain = flex, sidebend toward, rotate away",
+    "e": "Final"
+   },
+   {
+    "t": "Conservative care 6–12 weeks first; progressive deficit/myelopathy skips the wait → urgent referral",
+    "e": "Final"
+   }
+  ],
+  "7": [
+   {
+    "t": "Radiculopathy = LMN (hyporeflexia); myelopathy = mixed: hyporeflexia AT the level + hyperreflexia BELOW",
+    "e": "Final"
+   },
+   {
+    "t": "Hoffmann’s sign (UE analog of Babinski) — the UMN red flag Barry is most concerned about",
+    "e": "Final"
+   },
+   {
+    "t": "Lhermitte’s phenomenon = shock-like paresthesia with neck flexion",
+    "e": "Final"
+   },
+   {
+    "t": "Cervical spondylotic myelopathy = MC cord dysfunction in the elderly; broad-based gait may be presenting sign",
+    "e": "Final"
+   }
+  ]
+ },
+ "7": {
+  "1": [
+   {
+    "t": "SNS to lungs = bronchodilation, then (over time) vasoconstriction + thickened secretions",
+    "e": "Final"
+   },
+   {
+    "t": "PNS/vagus = bronchoconstriction + thinned secretions",
+    "e": "Final"
+   },
+   {
+    "t": "Pulmonary sympathetics = T2–T7; parasympathetics = vagus (CN X)",
+    "e": "Final"
+   },
+   {
+    "t": "Treat OA / C2–C3 / cranial base to normalize vagal tone (vagus exits skull there)",
+    "e": "Final"
+   },
+   {
+    "t": "Chapman point treatment always decreases sympathetic tone to the viscera",
+    "e": "Final"
+   },
+   {
+    "t": "Same input, opposite value: SNS good acutely (bronchodilation), bad chronically (vasoconstriction)",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "Most lung lymph (even part of left lung) drains to the RIGHT lymphatic duct ('left thoracic duct' is a labeling trap)",
+    "e": "Final"
+   },
+   {
+    "t": "Lymph does double duty: drains waste AND delivers immune cells",
+    "e": "Final"
+   },
+   {
+    "t": "Lymphatic OMT research: ↓ lung bacterial colony counts and ↓ IV-antibiotic duration (augments, doesn't replace antibiotics)",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Hering-Breuer reflex = shallow half: airway afferents can't tell air from fluid → fluid-filled lung trips it → limited diaphragm excursion",
+    "e": "Final"
+   },
+   {
+    "t": "Carotid body = rapid half: senses hypoxia → drives respiratory rate up",
+    "e": "Final"
+   },
+   {
+    "t": "Diaphragm stress → lower six ribs + thoracolumbar junction; T1–T6 paraspinals show increased tone",
+    "e": "Final"
+   },
+   {
+    "t": "Phrenic nerve = C3-C4-C5 ('C3-4-5 keeps the diaphragm alive')",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "FIRST lymphatic step is always open the thoracic inlet ('easy one on your level one')",
+    "e": "Final"
+   },
+   {
+    "t": "No pump techniques until afebrile (pumping while febrile drives cytokines/bacteria before antibiotics cut the load)",
+    "e": "Final"
+   },
+   {
+    "t": "Rib-raising >90 s decreases sympathetics (pneumonia); short burst stimulates them (acute asthma)",
+    "e": "Final"
+   },
+   {
+    "t": "MOPSE: OMT + antibiotics beat antibiotics alone on length of stay, IV-antibiotic duration, respiratory failure/ventilator, and mortality",
+    "e": "Final"
+   },
+   {
+    "t": "Atelectasis: TLP vs incentive spirometry → similar atelectasis rates, but TLP gives better PFTs + earlier recovery — use both",
+    "e": "Final"
+   }
+  ]
+ },
+ "8": {
+  "1": [
+   {
+    "t": "Cardiac sympathetics arise from T1-T6 (vs peripheral/renal T10-L2)",
+    "e": "Final"
+   },
+   {
+    "t": "Increased sympathetic tone increases rate, contractility, and cardiac output",
+    "e": "Final"
+   },
+   {
+    "t": "Right hypersympathetic activity drives SVTs (SA node)",
+    "e": "Final"
+   },
+   {
+    "t": "Left hypersympathetic activity drives ectopic foci / VF (AV node/ventricle)",
+    "e": "Final"
+   },
+   {
+    "t": "Sustained sympathetic tone causes coronary vasospasm (angina without fixed stenosis)",
+    "e": "Final"
+   },
+   {
+    "t": "Renal sympathetic stimulation causes water/salt retention and raises BP",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "Cardiac parasympathetics travel via the vagus; increased tone lowers rate and contractility",
+    "e": "Final"
+   },
+   {
+    "t": "Right hyperparasympathetic activity produces sinus bradyarrhythmias (SA node)",
+    "e": "Final"
+   },
+   {
+    "t": "Left hyperparasympathetic activity produces AV blocks (AV node)",
+    "e": "Final"
+   },
+   {
+    "t": "Cervical myofascial release shifts sympathovagal balance toward parasympathetic",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Impaired lymphatic drainage reduces collateral circulation and causes congestion-driven arrhythmias",
+    "e": "Final"
+   },
+   {
+    "t": "Lymphatic dysfunction linked to atherosclerosis, HTN, and CHF edema",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "ALL cardiac OMT is done AFTER emergent medical treatment and stabilization (adjunct, never substitute)",
+    "e": "Final"
+   },
+   {
+    "t": "Anterior MI = sympathicotonia T1-T6 (esp. T2-T3 left)",
+    "e": "Final"
+   },
+   {
+    "t": "Inferior wall MI = vagal hyperactivity (C2 / cranial base)",
+    "e": "Final"
+   },
+   {
+    "t": "HTN: posterior Chapman adrenal points lower BP and decrease serum aldosterone",
+    "e": "Final"
+   },
+   {
+    "t": "HTN: renal contribution reduced via sympathetic inhibition at T10-L2",
+    "e": "Final"
+   },
+   {
+    "t": "CHF lymphatic return challenged 3-40x; treat T1-T6 plus lymphatic pump/effleurage",
+    "e": "Final"
+   },
+   {
+    "t": "Right pectoralis major trigger point drives SVT (postural arrhythmia contributor)",
+    "e": "Final"
+   },
+   {
+    "t": "Post-CPR: treat ribs and sternum with indirect techniques",
+    "e": "Final"
+   }
+  ]
+ },
+ "9": {
+  "CU.1": [
+   {
+    "t": "Organ→cord-level viscerosomatic chart is the high-yield unit (\"KNOW CHART\")",
+    "e": "Final"
+   },
+   {
+    "t": "Kidneys T10–T11 and uterus/cervix T10–L2 (prior-student-highlighted rows)",
+    "e": "Final"
+   },
+   {
+    "t": "Hindgut/pelvic parasympathetics = pelvic splanchnics S2–S4; vagus stops at the splenic flexure",
+    "e": "Final"
+   },
+   {
+    "t": "Foregut T5–T9 / midgut T10–T11 / hindgut T12–L2 embryologic bands",
+    "e": "Final"
+   },
+   {
+    "t": "Appendix = T12; adrenals = T10; all GU = T10–L2",
+    "e": "Final"
+   }
+  ],
+  "CU.2": [
+   {
+    "t": "Standing flexion: PSIS that moves MORE = dysfunctional side",
+    "e": "Final"
+   },
+   {
+    "t": "ASIS compression test: less motion / more resistance marks the dysfunctional side",
+    "e": "Final"
+   },
+   {
+    "t": "ME levers: anterior→extensors, posterior→flexors, inflare→adductors, outflare→abductors",
+    "e": "Final"
+   },
+   {
+    "t": "Anterior innominate = ASIS inferior + PSIS superior; posterior = reverse",
+    "e": "Final"
+   },
+   {
+    "t": "Superior shear = ALL landmarks superior; inflare toward midline / outflare away",
+    "e": "Final"
+   }
+  ],
+  "CU.3": [
+   {
+    "t": "Three transverse axes — S1 respiratory, S2 postural, inferior iliosacral",
+    "e": "Final"
+   },
+   {
+    "t": "Base posterior on inhalation, base anterior on exhalation",
+    "e": "Final"
+   }
+  ],
+  "CU.4": [
+   {
+    "t": "Seated flexion test positive OPPOSITE the oblique axis",
+    "e": "Final"
+   },
+   {
+    "t": "Forward torsion = negative spring + sphinx more symmetrical; backward = positive spring + more asymmetrical",
+    "e": "Final"
+   },
+   {
+    "t": "Bilateral flexion = exhalation (deep sulci, posterior ILAs); bilateral extension = inhalation (shallow sulci, anterior ILAs)",
+    "e": "Final"
+   },
+   {
+    "t": "ILAs <1 thumb apart = torsion; >1 thumb apart = unilateral (\"E elevates, F falls\")",
+    "e": "Final"
+   },
+   {
+    "t": "L5 rotates opposite the sacrum; L5 sidebends toward the axis",
+    "e": "Final"
+   }
+  ],
+  "CU.5": [
+   {
+    "t": "Board-elimination rule: option E/F → SB+rotation SAME; option N → SB+rotation OPPOSITE; answer must name segments + N/E/F",
+    "e": "Final"
+   },
+   {
+    "t": "Law III: inducing motion in one plane restricts motion in the other two",
+    "e": "Final"
+   },
+   {
+    "t": "Type I neutral/opposite/group vs Type II non-neutral/same/single",
+    "e": "Final"
+   },
+   {
+    "t": "Name the SD for the direction of ease / freer motion, not the restriction",
+    "e": "Final"
+   }
+  ],
+  "CU.6": [
+   {
+    "t": "\"Only to knee\" hallmark + seated externally-rotated hip sign (most-flagged topic)",
+    "e": "Final"
+   },
+   {
+    "t": "Right hypertonic piriformis → left sacral torsion → L5 rotates right",
+    "e": "Final"
+   },
+   {
+    "t": "Piriformis origin anterolateral sacrum S2–S4, primary external rotator (internal at >90° flexion)",
+    "e": "Final"
+   }
+  ],
+  "CU.7": [
+   {
+    "t": "Won't improve without treating the KEY LESION (flexed L1/L2)",
+    "e": "Final"
+   },
+   {
+    "t": "Most-common misdiagnosis = lumbar radiculopathy; psoas → contralateral knee, radiculopathy → nerve distribution to foot",
+    "e": "Final"
+   },
+   {
+    "t": "Late-stage S-curve: L1/L2 Type II toward tight side, L3–L4 Type I opposite, pelvis shifts away, piriformis contralateral",
+    "e": "Final"
+   },
+   {
+    "t": "Psoas does NOT attach to L5; rehab is extension-biased with NO sit-ups",
+    "e": "Final"
+   }
+  ]
+ }
+}

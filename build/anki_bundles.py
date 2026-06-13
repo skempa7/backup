@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build per-lecture Anki card-source bundles from parsed ClaudeCore + slide text."""
 import json, os
-COURSES={"immuno":"immunology","path":"pathology","pharm":"pharmacology"}
+COURSES={"immuno":"immunology","path":"pathology","pharm":"pharmacology","opp3":"opp3"}
 TITLES=json.load(open("build/_anki_titles.json")) if os.path.exists("build/_anki_titles.json") else {}
 def titles_for(course):
     # pull lecture titles from the assembled content.js QUIZ (authoritative)
@@ -11,6 +11,7 @@ def titles_for(course):
     quiz=json.loads(m.group(1))
     return {str(L[0]):L[1] for L in quiz}
 for course,qd in COURSES.items():
+    if not os.path.exists(f"build/_{course}_content.json"): continue   # skip courses not yet parsed
     content=json.load(open(f"build/_{course}_content.json"))
     slidetext=json.load(open(f"build/_{course}_slidetext.json"))
     slides=json.load(open(f"build/_{course}_slides.json"))

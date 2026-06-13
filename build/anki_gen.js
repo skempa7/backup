@@ -1,6 +1,6 @@
 export const meta = { name:'anki-cards', description:'Generate Anki notes per lecture from the KPClaude card sources', phases:[{title:'Cards'}] }
-const COURSE = "pharm";            // immuno | path | pharm  (edit per course)
-const NLEC = { immuno:24, path:22, pharm:30 }[COURSE];
+const COURSE = "opp3";             // immuno | path | pharm | opp3  (edit per course)
+const NLEC = { immuno:24, path:22, pharm:30, opp3:9 }[COURSE];
 const LECS = Array.from({length:NLEC},(_,i)=>i+1);
 log(`Generating Anki cards for ${COURSE}: ${NLEC} lectures`);
 

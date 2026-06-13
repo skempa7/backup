@@ -4,7 +4,7 @@
 import json, os, sys, hashlib, glob, shutil, re
 import genanki
 
-COURSES={"immuno":("immunology","Immuno"),"path":("pathology","Path"),"pharm":("pharmacology","Pharm")}
+COURSES={"immuno":("immunology","Immuno"),"path":("pathology","Path"),"pharm":("pharmacology","Pharm"),"opp3":("opp3","OPP3")}
 def det_id(s): return int(hashlib.md5(s.encode()).hexdigest()[:8],16) | 0x40000000
 
 CSS = """
@@ -50,17 +50,24 @@ def main():
     deck_root=f"claudderall::{abbrev} lec {rng}"
     media_dir=f"/tmp/anki_media/{course}"; shutil.rmtree(media_dir,ignore_errors=True); os.makedirs(media_dir)
     media=set(); decks=[]; n_notes=n_cards=n_cloze=n_basic=n_img=n_two=n_free=0; n_tq=0; per_lec={}
-    # exam-tested (TQ) map for this course: lec -> lo -> [(topic, exam)]
+    # exam-tested (TQ) map for this course: str(lec) -> str(lo) -> [(topic, exam)]
     TQ={}
-    if os.path.exists("build/_tq_data.json"):
+    if course=="opp3" and os.path.exists("build/_opp3_tested.json"):
+        # OPP3 TESTED comes from the assembled content.js map (string LO ids like '1.1' / 'CU.1')
+        for lec,los in json.load(open("build/_opp3_tested.json")).items():
+            for lo,ents in los.items():
+                for e in ents:
+                    TQ.setdefault(str(lec),{}).setdefault(str(lo),[]).append((e["t"],e["e"]))
+    elif os.path.exists("build/_tq_data.json"):
         for lec,items in json.load(open("build/_tq_data.json")).get(course,{}).items():
             for it in items:
                 for obj in it["objs"]:
                     mm=re.match(r'\d+',obj)
-                    if mm: TQ.setdefault(int(lec),{}).setdefault(int(mm.group(0)),[]).append((it["topic"].title(),it["exam"]))
+                    if mm: TQ.setdefault(str(int(lec)),{}).setdefault(str(int(mm.group(0))),[]).append((it["topic"].title(),it["exam"]))
     def tq_for(L,lo):
-        if not lo or L not in TQ or lo not in TQ[L]: return None
-        ents=TQ[L][lo]; exams=sorted(set(e for _,e in ents)); topics=sorted(set(t for t,_ in ents))
+        d=TQ.get(str(L),{}).get(str(lo)) if lo is not None else None
+        if not d: return None
+        ents=d; exams=sorted(set(e for _,e in ents)); topics=sorted(set(t for t,_ in ents))
         return ("Tested on the "+" & ".join(exams)+" — "+" · ".join(topics), exams)
     def slide_img(L,idx):
         b=bundles[L]; d=b["slideDir"]; cnt=b["slideCount"]
