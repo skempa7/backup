@@ -352,8 +352,10 @@ function renderSidebar() {
     const practiceDone = s.total > 0 && s.answered === s.total;
     const status = mastered ? `<span class="lec-status master" title="Mastered">★</span>`
                  : practiceDone ? `<span class="lec-status read" title="Practice complete">✓</span>` : "";
+    const tqc = tqLecCount(n);
+    const tqChip = tqc ? `<span class="tq-chip" title="${tqc} exam-tested objective${tqc>1?'s':''}">TQ ${tqc}</span>` : "";
     html += `<div class="lec-item ${active}" onclick="goToLec(${n})">
-      <span class="lec-name">${status}<strong>${n}.</strong> ${shortTitle}</span>
+      <span class="lec-name">${status}<strong>${n}.</strong> ${shortTitle}${tqChip}</span>
       <span class="count">${s.answered}/${s.total}</span>
     </div>`;
   });
@@ -898,8 +900,9 @@ function renderReadingContent(n){
       usedSlides.add(pg);
       sectionSlide = `<div class="rc-section-slide">${inlineSlideHTML(n, pg)}</div>`;
     }
+    const chTq = (ch.los||[]).flatMap(lo => tqFor(n, lo) || []);
     html += `<section class="rc-chapter" id="ch-${n}-${ci}">
-      <h3 class="rc-chapter-h"><span class="rc-chapter-n">${ci+1}</span>${ch.icon?`<span class="rc-chapter-ic">${ch.icon}</span>`:""}<span class="rc-chapter-t">${esc(ch.title)}</span></h3>
+      <h3 class="rc-chapter-h"><span class="rc-chapter-n">${ci+1}</span>${ch.icon?`<span class="rc-chapter-ic">${ch.icon}</span>`:""}<span class="rc-chapter-t">${esc(ch.title)}</span>${tqBadge(chTq)}</h3>
       ${sectionSlide}${content}</section>`;
   });
   return html;
@@ -1030,12 +1033,33 @@ function renderMasterView(){
   main.innerHTML = html;
 }
 
+// ============================================================
+// EXAM-TESTED (TQ) — green markers derived from past midterm/final
+// answer reports (the `TESTED` map in content.js, keyed lec -> LO).
+// ============================================================
+function tqFor(n, lo){ return (typeof TESTED!=="undefined" && TESTED[String(n)] && TESTED[String(n)][String(lo)]) || null; }
+function tqLecCount(n){ const t=(typeof TESTED!=="undefined")?TESTED[String(n)]:null; return t?Object.keys(t).length:0; }
+function tqExams(entries){ return [...new Set(entries.map(e=>e.e))].join(" & "); }
+function tqBadge(entries){
+  if(!entries||!entries.length) return "";
+  return `<span class="tq-badge" title="Tested on the ${tqExams(entries)} — ${entries.map(e=>e.t).join(' · ').replace(/"/g,'')}">TQ</span>`;
+}
+function tqTopicsLine(entries){
+  if(!entries||!entries.length) return "";
+  return `<div class="tq-topics"><span class="tq-mark">TQ</span> Tested on the <b>${tqExams(entries)}</b> — ${entries.map(e=>esc(e.t)).join(" · ")}</div>`;
+}
+function toggleTqOnly(){ state.tqOnly=!state.tqOnly; renderLecture(); }
+
 function renderLecture() {
   showTray(false); hideAnnoPopup();
   const main = document.getElementById("main");
   const lec = getLecture(state.currentLec);
   if (!lec) { main.innerHTML = "<p>Lecture not found.</p>"; return; }
   const [n, title, los] = lec;
+  const lecTq = tqLecCount(n);
+  let shownLos = los;
+  if (state.tqOnly) shownLos = los.filter(l => tqFor(n, l[0]));
+  else if (lecTq) shownLos = [...los].sort((a,b) => (tqFor(n,b[0])?1:0) - (tqFor(n,a[0])?1:0));
   const stats = lectureStats(n);
   const pct = stats.total === 0 ? 0 : Math.round(100 * stats.answered / stats.total);
   const accuracyText = stats.answered === 0 ? "" :
@@ -1048,6 +1072,7 @@ function renderLecture() {
       <span class="lec-pill">Lecture ${n}${profTxt}</span>
       <h2>${title}</h2>
       <div class="sub">${los.length} learning objective${los.length === 1 ? "" : "s"}${accuracyText}</div>
+      ${lecTq ? `<button class="btn btn-small tq-toggle ${state.tqOnly?'on':''}" onclick="toggleTqOnly()">🎯 ${state.tqOnly?'Showing exam-tested only ✓':`Exam-tested · ${lecTq} LO${lecTq>1?'s':''}`}</button>` : ""}
     </div>
     ${lectureModeBar(n)}
     <div class="score-row">
@@ -1058,14 +1083,19 @@ function renderLecture() {
     ${LECTURE_REFERENCES[n] || ""}
   `;
 
-  los.forEach(([loNum, loText, _]) => {
+  if (state.tqOnly && shownLos.length === 0)
+    html += `<div class="placeholder-q">No exam-tested objectives in this lecture. <button class="btn btn-small" onclick="toggleTqOnly()">Show all</button></div>`;
+
+  shownLos.forEach(([loNum, loText, _]) => {
     const loKey = `${n}_${loNum}`;
     const answer = LO_ANSWERS[loKey];
-    html += `<div class="lo-card">
+    const tqE = tqFor(n, loNum);
+    html += `<div class="lo-card ${tqE?'tq-card':''}">
       <div class="lo-row">
-        <div class="lo-text"><span class="lo-num">LO ${loNum}</span>${loText}</div>
+        <div class="lo-text"><span class="lo-num">LO ${loNum}</span>${loText}${tqBadge(tqE)}</div>
         <button class="btn-teach" id="teach-btn-${loKey}" onclick="toggleTeach('${loKey}')">Teach Me This</button>
       </div>
+      ${tqTopicsLine(tqE)}
       <div class="lo-answer" id="teach-${loKey}">
         ${renderTeachContent(answer)}
       </div>`;

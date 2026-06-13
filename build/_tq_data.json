@@ -1,0 +1,1470 @@
+{
+ "immuno": {
+  "1": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "INNATE VERSUS ADAPTIVE IMMUNE MECHANISMS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "ADAPTIVE IMMUNE MECHANISMS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "INNATE AND ADAPTIVE INTERACTION",
+    "exam": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "COMPLEMENT DEFICIENCY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "OPSONIZATION BY COMPLEMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ACTION OF LYSOZYME",
+    "exam": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "INTERFERON RESPONSE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "8"
+    ],
+    "topic": "TLR4-MEDIATED SIGNALING",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "7"
+    ],
+    "topic": "ROLE OF IL-6 DURING INFLAMMATION",
+    "exam": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "objs": [
+     "8"
+    ],
+    "topic": "NK CELL IMMUNOSURVEILLANCE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "NK-MACROPHAGE POSITIVE FEEDBACK",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "NEUTROPHIL GRANULES",
+    "exam": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "COMPARTMENTALIZATION OF T CELLS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "LYMPH MOVEMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "MICROFOLD CELL FUNCTION",
+    "exam": "Midterm"
+   }
+  ],
+  "6": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "SIGNALING MOLECULES OF T CELLS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "IMMUNOGENICITY OF ANTIGEN",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ACTION OF SUPERANTIGENS",
+    "exam": "Midterm"
+   }
+  ],
+  "7": [
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "MOLECULES OF ANTIGEN PRESENTATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "DEFECTS IN PEPTIDE TRANSPORT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "EXOGENOUS ANTIGEN PRESENTATION",
+    "exam": "Midterm"
+   }
+  ],
+  "8": [
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "ALLELIC EXCLUSION AND GENE REARRANGEMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "GENE ARRANGEMENT IN B CELL RECEPTORS",
+    "exam": "Midterm"
+   }
+  ],
+  "9": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "SOMATIC HYPERMUTATION DIVERSITY IN BCRs",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "REGULATORY ENZYMES OF GENE REARRANGEMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "RSS HEPTAMER",
+    "exam": "Midterm"
+   }
+  ],
+  "10": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "STEPS IN T CELL DEVELOPMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "FUNCTION ON NOTCH1",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "GAMMA DELTA T CELL DEVELOPMENT",
+    "exam": "Midterm"
+   }
+  ],
+  "11": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ROLE OF INTERLEUKIN-2 IN T CELLS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "TCR SIGNALING EVENTS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "3 SIGNALS FOR T CELL ACTIVATION",
+    "exam": "Midterm"
+   }
+  ],
+  "12": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "TH2 CYTOKINE PRODUCTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "FUNCTION OF TH17 IL-17",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "T CELL CONTRACTION",
+    "exam": "Midterm"
+   }
+  ],
+  "13": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "B CELL CORECEPTOR",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "BTK AND B CELL ONTOGENY",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "B CELL MATURATION",
+    "exam": "Final"
+   }
+  ],
+  "14": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "CD40 AND SOMATIC HYPERMUTATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "CLASS SWITCH RECOMBINATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "CYTOKINES IN MEMORY B CELLS",
+    "exam": "Final"
+   }
+  ],
+  "15": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ANTIBODY-MEDIATED CELL CYTOTOXICITY",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "IgG CROSS THE PLACENTA",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "IMMUNE COMPLEX REMOVAL",
+    "exam": "Final"
+   }
+  ],
+  "16": [
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "ALPHA DEFENSINS MUCOSAL DEFENSES",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "SECRETORY ANTIBODIES IN THE GUT",
+    "exam": "Final"
+   }
+  ],
+  "17": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "EXAMPLES OF PASSIVE IMMUNITY",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "R0 DEFINITION",
+    "exam": "Final"
+   }
+  ],
+  "18": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "HYPERSENSITIVITY AND IgE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "MYASTHENIA GRAVIS PATHOGENESIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "TYPE I HYPERSENSITIVITY PREDISPOSITION",
+    "exam": "Final"
+   }
+  ],
+  "19": [
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "SLE PATHOGENESIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "CONTACT DERMATITIS MECHANISM",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "IMMUNE COMPLEX MEDIATED DAMAGE",
+    "exam": "Final"
+   }
+  ],
+  "20": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "TYPES OF IMMUNODEFICIENCIES",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "CLINICAL FEATURES OF HEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "HODGKIN LYMPHOMA",
+    "exam": "Final"
+   }
+  ],
+  "21": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "PERIPHERAL TOLERANCE OF T CELLS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "B CELL CENTRAL TOLERANCE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "HLA ASSOCIATION WITH AUTOIMMUNITY",
+    "exam": "Final"
+   }
+  ],
+  "22": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "HYPERACUTE TRANSPLANTATION REJECTION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "9"
+    ],
+    "topic": "DIRECT COOMBS TEST",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "CHRONIC REJECTION",
+    "exam": "Final"
+   }
+  ],
+  "23": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "AUTOIMMUNITY AND LOSS OF TOLERANCE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "CROHN DISEASE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "CLINICAL FEATURE OF PSORIATIC ARTHRITIS",
+    "exam": "Final"
+   }
+  ],
+  "24": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "CAUSES OF ITP - CASE 2",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "CLINICAL FEATURES OF XLA - CASE 1",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "CAUSES OF SEIZURES IN DiGEORGE - CASE 4",
+    "exam": "Final"
+   }
+  ]
+ },
+ "pharm": {
+  "1": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "BENEFITS OF INTRAVENOUS ROUTE OF ADMINISTRATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "URINARY EXCRETION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "3"
+    ],
+    "topic": "DRUG RECEPTOR INTERACTION",
+    "exam": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG POTENCY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "COMPETITIVE ANTAGONISTS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG TOLERANCE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "GPCR PATHWAY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "STEROID RECEPTORS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "TYROSINE KINASE RECEPTORS",
+    "exam": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG POTENCY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "COMPETITIVE ANTAGONISTS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG TOLERANCE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "GPCR PATHWAY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "STEROID RECEPTORS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "TYROSINE KINASE RECEPTORS",
+    "exam": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "VOLUME OF DISTRIBUTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "DRUG DISTRIBUTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "PHASE I DRUG METABOLISM",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "FIRST ORDER KINETICS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "HALF-LIFE CALCULATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "CYP450 INHIBITION",
+    "exam": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "VOLUME OF DISTRIBUTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "DRUG DISTRIBUTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "PHASE I DRUG METABOLISM",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "FIRST ORDER KINETICS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "HALF-LIFE CALCULATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "CYP450 INHIBITION",
+    "exam": "Midterm"
+   }
+  ],
+  "6": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "BIOEQUIVALENCE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "LOADING DOSE CALCULATIONS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "MAINTENANCE DOSE",
+    "exam": "Midterm"
+   }
+  ],
+  "7": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "T-CELL EXPRESSING CHIMERIC ANTIGEN RECEPTOR",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "AMYOTROPHIC LATERAL SCLEROSIS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "CRISPR-BASED THERAPY",
+    "exam": "Midterm"
+   }
+  ],
+  "8": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "PARASYMPATHETIC SYSTEM EFFECTS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ACETYLCHOLINE SYNAPTIC ELIMINATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "PRESYNAPTIC ADRENERGIC NEURON",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3",
+     "4"
+    ],
+    "topic": "ADRENORECEPTOR AND BLOOD VESSEL",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "NEUROTRANSMITTER RELEASE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "FIGHT OR FLIGHT RESPONSE",
+    "exam": "Midterm"
+   }
+  ],
+  "9": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "PARASYMPATHETIC SYSTEM EFFECTS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ACETYLCHOLINE SYNAPTIC ELIMINATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "PRESYNAPTIC ADRENERGIC NEURON",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3",
+     "4"
+    ],
+    "topic": "ADRENORECEPTOR AND BLOOD VESSEL",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "NEUROTRANSMITTER RELEASE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "FIGHT OR FLIGHT RESPONSE",
+    "exam": "Midterm"
+   }
+  ],
+  "10": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "SMOKING CESSATION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4",
+     "5"
+    ],
+    "topic": "CEVIMELINE PHARMACOLOGY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4",
+     "5"
+    ],
+    "topic": "OPEN-ANGLE GLAUCOMA",
+    "exam": "Midterm"
+   }
+  ],
+  "11": [
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "ATROPINE TOXICITY TREATMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "3"
+    ],
+    "topic": "NEOSTIGMINE PROPERTIES",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "6"
+    ],
+    "topic": "ACETYLCHOLINESTERASE REACTIVATOR",
+    "exam": "Midterm"
+   }
+  ],
+  "12": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "CONTRAINDICATIONS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "ASTHMA TREATMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "5"
+    ],
+    "topic": "ATROPINE MECHANISM OF ACTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "TRIHEXYPHENIDYL",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "DRUG INDUCING CYCLOPEGIA",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "3",
+     "4"
+    ],
+    "topic": "TROSPIUM CHARACTERISTICS",
+    "exam": "Midterm"
+   }
+  ],
+  "13": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "CONTRAINDICATIONS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "ASTHMA TREATMENT",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "5"
+    ],
+    "topic": "ATROPINE MECHANISM OF ACTION",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "TRIHEXYPHENIDYL",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "DRUG INDUCING CYCLOPEGIA",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "2",
+     "3",
+     "4"
+    ],
+    "topic": "TROSPIUM CHARACTERISTICS",
+    "exam": "Midterm"
+   }
+  ],
+  "14": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "SELECTIVE BETA2 AGONIST AND RESPIRATORY DISEASES",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "ALPHA-2 ADRENERGIC AUTORECEPTORS",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "FENOLDOPAM MECHANISM OF ACTION",
+    "exam": "Midterm"
+   }
+  ],
+  "15": [
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "BINGE-EATING DISEASE",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "COCAINE TOXICITY",
+    "exam": "Midterm"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "METHYLPHENIDATE ADVERSE EFFECTS",
+    "exam": "Midterm"
+   }
+  ],
+  "16": [
+   {
+    "objs": [
+     "1",
+     "4"
+    ],
+    "topic": "ALPHA-1A SELECTIVE MEDICATION FOR BPH",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "ORTHOSTATIC HYPOTENSION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "3",
+     "4"
+    ],
+    "topic": "ALPHA-ADRENERGIC ANTAGONISTS",
+    "exam": "Final"
+   }
+  ],
+  "17": [
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "TREATMENT OF OCULAR HYPERTENSION AND OPEN-ANGLE GLAUCOMA",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "LABETALOL ADVERSE EFFECT",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2",
+     "3",
+     "4"
+    ],
+    "topic": "PROPANOLOL THERAPEUTIC USE",
+    "exam": "Final"
+   }
+  ],
+  "18": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "ADVERSE EFFECTS - GENERAL",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "PHARMACOKINETICS AND DYNAMICS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "HOST FACTORS",
+    "exam": "Final"
+   }
+  ],
+  "19": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "BETALACTAMS FOR SYPHILIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "BETALACTAM FOR SKIN INFECTIONS AND CAP",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "PENICILLINS",
+    "exam": "Final"
+   }
+  ],
+  "20": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "GENERATION 5 CEPHALOSPORIN THERAPEUTIC USE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "PARENTERAL DRUG FOR GRAM-NEGATIVE INFECTIONS",
+    "exam": "Final"
+   }
+  ],
+  "21": [
+   {
+    "objs": [
+     "2C"
+    ],
+    "topic": "QT PROLONGATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG RESISTANCE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "TREATMENT FOR LYME DISEASE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "TETRACYCLINE AGENTS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "ANTIBIOTICS THAT BLOCK PROTEIN SYNTHESIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "ANTIBIOTIC BINDING TO THE 30S SUBUNIT OF BACTERIAL RIBOSOME",
+    "exam": "Final"
+   }
+  ],
+  "22": [
+   {
+    "objs": [
+     "2C"
+    ],
+    "topic": "QT PROLONGATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "4"
+    ],
+    "topic": "DRUG RESISTANCE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "TREATMENT FOR LYME DISEASE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "TETRACYCLINE AGENTS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "ANTIBIOTICS THAT BLOCK PROTEIN SYNTHESIS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "ANTIBIOTIC BINDING TO THE 30S SUBUNIT OF BACTERIAL RIBOSOME",
+    "exam": "Final"
+   }
+  ],
+  "23": [
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "ALTERNATIVE ANTIBIOTICS TO TREAT A GIVEN INFECTION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "TELAVANCIN",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "MISCELLANEOUS CELL WALL SI CYCLOSERINE",
+    "exam": "Final"
+   }
+  ],
+  "24": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "TERBINAFINE THERAPEUTIC USE",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "AMPHOTERICIN B MECHANISM",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "3"
+    ],
+    "topic": "PROPHYLAXIS OF CRYPTOCOCCAL MENINGITIS",
+    "exam": "Final"
+   }
+  ],
+  "25": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "ANTIPARASITIC MEDICATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "ANTIPROTOZOAL MEDICATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "ANTI-PARASITIC MEDICATION",
+    "exam": "Final"
+   }
+  ],
+  "26": [
+   {
+    "objs": [
+     "2"
+    ],
+    "topic": "TREATMENT FOR CAP",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "2A"
+    ],
+    "topic": "ADVANCED PROTEIN SYNTHESIS INHIBITORS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "3"
+    ],
+    "topic": "PROPHYLAXIS OF BACTERIAL ENDOCARDITIS",
+    "exam": "Final"
+   }
+  ],
+  "27": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "ADVERSE DRUG REACTIONS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "TREATMENT OF PROSTATITIS AND UTI",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "SULFONAMIDE EFFECT ON BURN COLONIZATION",
+    "exam": "Final"
+   }
+  ],
+  "28": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "GI FLUOROQUINOLONES",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "RESPIRATORY FLUOROQUINOLONES",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "EMPIRIC THERAPY FOR MRSA",
+    "exam": "Final"
+   }
+  ],
+  "29": [
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "HIV FUSION INHIBITOR",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1",
+     "2"
+    ],
+    "topic": "HIV DRUGS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "INFLUENZA PROPHYLAXIS",
+    "exam": "Final"
+   }
+  ],
+  "30": [
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "ANTIMYCOBACTERIALS",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "5"
+    ],
+    "topic": "ANTIMYCOBACTERIALS CONTRAINDICATION",
+    "exam": "Final"
+   },
+   {
+    "objs": [
+     "1"
+    ],
+    "topic": "FIRST-LINE TREATMENT FOR TUBERCULOSIS",
+    "exam": "Final"
+   }
+  ]
+ }
+}
