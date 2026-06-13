@@ -7,7 +7,854 @@
 const QUIZ_CONFIG = { id: "immuno_remediation", title: "Immunology — Remediation", emoji: "🦠" };
 
 // Exam-tested objectives (from past midterm+final answer reports) — lec -> LO -> [{t:topic,e:Midterm|Final}]
-const TESTED = {"1": {"2": [{"t": "Innate Versus Adaptive Immune Mechanisms", "e": "Midterm"}], "1": [{"t": "Adaptive Immune Mechanisms", "e": "Midterm"}], "3": [{"t": "Innate And Adaptive Interaction", "e": "Midterm"}]}, "2": {"6": [{"t": "Complement Deficiency", "e": "Midterm"}], "5": [{"t": "Opsonization By Complement", "e": "Midterm"}], "2": [{"t": "Action Of Lysozyme", "e": "Midterm"}]}, "3": {"2": [{"t": "Interferon Response", "e": "Midterm"}], "8": [{"t": "Tlr4-Mediated Signaling", "e": "Midterm"}], "7": [{"t": "Role Of Il-6 During Inflammation", "e": "Midterm"}]}, "4": {"8": [{"t": "Nk Cell Immunosurveillance", "e": "Midterm"}], "3": [{"t": "Nk-Macrophage Positive Feedback", "e": "Midterm"}], "4": [{"t": "Neutrophil Granules", "e": "Midterm"}]}, "5": {"2": [{"t": "Compartmentalization Of T Cells", "e": "Midterm"}], "3": [{"t": "Lymph Movement", "e": "Midterm"}], "6": [{"t": "Microfold Cell Function", "e": "Midterm"}]}, "6": {"5": [{"t": "Signaling Molecules Of T Cells", "e": "Midterm"}], "4": [{"t": "Immunogenicity Of Antigen", "e": "Midterm"}], "2": [{"t": "Action Of Superantigens", "e": "Midterm"}]}, "7": {"3": [{"t": "Molecules Of Antigen Presentation", "e": "Midterm"}], "5": [{"t": "Defects In Peptide Transport", "e": "Midterm"}], "2": [{"t": "Exogenous Antigen Presentation", "e": "Midterm"}]}, "8": {"3": [{"t": "Allelic Exclusion And Gene Rearrangement", "e": "Midterm"}], "5": [{"t": "Gene Arrangement In B Cell Receptors", "e": "Midterm"}]}, "9": {"4": [{"t": "Somatic Hypermutation Diversity In Bcrs", "e": "Midterm"}], "3": [{"t": "Regulatory Enzymes Of Gene Rearrangement", "e": "Midterm"}], "2": [{"t": "Rss Heptamer", "e": "Midterm"}]}, "10": {"1": [{"t": "Steps In T Cell Development", "e": "Midterm"}], "2": [{"t": "Function On Notch1", "e": "Midterm"}], "6": [{"t": "Gamma Delta T Cell Development", "e": "Midterm"}]}, "11": {"2": [{"t": "Role Of Interleukin-2 In T Cells", "e": "Midterm"}], "3": [{"t": "Tcr Signaling Events", "e": "Midterm"}], "1": [{"t": "3 Signals For T Cell Activation", "e": "Midterm"}]}, "12": {"2": [{"t": "Th2 Cytokine Production", "e": "Midterm"}, {"t": "Function Of Th17 Il-17", "e": "Midterm"}], "4": [{"t": "T Cell Contraction", "e": "Midterm"}]}, "13": {"2": [{"t": "B Cell Coreceptor", "e": "Final"}, {"t": "B Cell Maturation", "e": "Final"}], "1": [{"t": "Btk And B Cell Ontogeny", "e": "Final"}]}, "14": {"2": [{"t": "Cd40 And Somatic Hypermutation", "e": "Final"}], "3": [{"t": "Class Switch Recombination", "e": "Final"}], "1": [{"t": "Cytokines In Memory B Cells", "e": "Final"}]}, "15": {"2": [{"t": "Antibody-Mediated Cell Cytotoxicity", "e": "Final"}, {"t": "Igg Cross The Placenta", "e": "Final"}, {"t": "Immune Complex Removal", "e": "Final"}]}, "16": {"3": [{"t": "Alpha Defensins Mucosal Defenses", "e": "Final"}, {"t": "Secretory Antibodies In The Gut", "e": "Final"}]}, "17": {"1": [{"t": "Examples Of Passive Immunity", "e": "Final"}], "4": [{"t": "R0 Definition", "e": "Final"}]}, "18": {"2": [{"t": "Hypersensitivity And Ige", "e": "Final"}], "3": [{"t": "Myasthenia Gravis Pathogenesis", "e": "Final"}], "1": [{"t": "Type I Hypersensitivity Predisposition", "e": "Final"}]}, "19": {"3": [{"t": "Sle Pathogenesis", "e": "Final"}, {"t": "Contact Dermatitis Mechanism", "e": "Final"}], "4": [{"t": "Immune Complex Mediated Damage", "e": "Final"}]}, "20": {"2": [{"t": "Types Of Immunodeficiencies", "e": "Final"}], "3": [{"t": "Clinical Features Of Hemophagocytic Lymphohistiocytosis", "e": "Final"}], "5": [{"t": "Hodgkin Lymphoma", "e": "Final"}]}, "21": {"5": [{"t": "Peripheral Tolerance Of T Cells", "e": "Final"}], "1": [{"t": "B Cell Central Tolerance", "e": "Final"}], "6": [{"t": "Hla Association With Autoimmunity", "e": "Final"}]}, "22": {"4": [{"t": "Hyperacute Transplantation Rejection", "e": "Final"}], "9": [{"t": "Direct Coombs Test", "e": "Final"}], "1": [{"t": "Chronic Rejection", "e": "Final"}]}, "23": {"1": [{"t": "Autoimmunity And Loss Of Tolerance", "e": "Final"}], "2": [{"t": "Crohn Disease", "e": "Final"}], "4": [{"t": "Clinical Feature Of Psoriatic Arthritis", "e": "Final"}]}, "24": {"1": [{"t": "Causes Of Itp - Case 2", "e": "Final"}, {"t": "Clinical Features Of Xla - Case 1", "e": "Final"}, {"t": "Causes Of Seizures In Digeorge - Case 4", "e": "Final"}]}};
+const TESTED = {
+ "1": {
+  "2": [
+   {
+    "t": "Innate Versus Adaptive Immune Mechanisms",
+    "e": "Midterm"
+   }
+  ],
+  "1": [
+   {
+    "t": "Adaptive Immune Mechanisms",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Innate And Adaptive Interaction",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "2": {
+  "6": [
+   {
+    "t": "Complement Deficiency",
+    "e": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "t": "Opsonization By Complement",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Action Of Lysozyme",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "3": {
+  "2": [
+   {
+    "t": "Interferon Response",
+    "e": "Midterm"
+   }
+  ],
+  "8": [
+   {
+    "t": "Tlr4-Mediated Signaling",
+    "e": "Midterm"
+   }
+  ],
+  "7": [
+   {
+    "t": "Role Of Il-6 During Inflammation",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "4": {
+  "8": [
+   {
+    "t": "Nk Cell Immunosurveillance",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Nk-Macrophage Positive Feedback",
+    "e": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "t": "Neutrophil Granules",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "5": {
+  "2": [
+   {
+    "t": "Compartmentalization Of T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Lymph Movement",
+    "e": "Midterm"
+   }
+  ],
+  "6": [
+   {
+    "t": "Microfold Cell Function",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "6": {
+  "5": [
+   {
+    "t": "Signaling Molecules Of T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "t": "Immunogenicity Of Antigen",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Action Of Superantigens",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "7": {
+  "3": [
+   {
+    "t": "Molecules Of Antigen Presentation",
+    "e": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "t": "Defects In Peptide Transport",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Exogenous Antigen Presentation",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "8": {
+  "3": [
+   {
+    "t": "Allelic Exclusion And Gene Rearrangement",
+    "e": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "t": "Gene Arrangement In B Cell Receptors",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "9": {
+  "4": [
+   {
+    "t": "Somatic Hypermutation Diversity In Bcrs",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Regulatory Enzymes Of Gene Rearrangement",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Rss Heptamer",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "10": {
+  "1": [
+   {
+    "t": "Steps In T Cell Development",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Function On Notch1",
+    "e": "Midterm"
+   }
+  ],
+  "6": [
+   {
+    "t": "Gamma Delta T Cell Development",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "11": {
+  "2": [
+   {
+    "t": "Role Of Interleukin-2 In T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Tcr Signaling Events",
+    "e": "Midterm"
+   }
+  ],
+  "1": [
+   {
+    "t": "3 Signals For T Cell Activation",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "12": {
+  "2": [
+   {
+    "t": "Th2 Cytokine Production",
+    "e": "Midterm"
+   },
+   {
+    "t": "Function Of Th17 Il-17",
+    "e": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "t": "T Cell Contraction",
+    "e": "Midterm"
+   }
+  ]
+ },
+ "13": {
+  "2": [
+   {
+    "t": "B Cell Coreceptor",
+    "e": "Final"
+   },
+   {
+    "t": "B Cell Maturation",
+    "e": "Final"
+   }
+  ],
+  "1": [
+   {
+    "t": "Btk And B Cell Ontogeny",
+    "e": "Final"
+   }
+  ]
+ },
+ "14": {
+  "2": [
+   {
+    "t": "Cd40 And Somatic Hypermutation",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Class Switch Recombination",
+    "e": "Final"
+   }
+  ],
+  "1": [
+   {
+    "t": "Cytokines In Memory B Cells",
+    "e": "Final"
+   }
+  ]
+ },
+ "15": {
+  "2": [
+   {
+    "t": "Antibody-Mediated Cell Cytotoxicity",
+    "e": "Final"
+   },
+   {
+    "t": "Igg Cross The Placenta",
+    "e": "Final"
+   },
+   {
+    "t": "Immune Complex Removal",
+    "e": "Final"
+   }
+  ]
+ },
+ "16": {
+  "3": [
+   {
+    "t": "Alpha Defensins Mucosal Defenses",
+    "e": "Final"
+   },
+   {
+    "t": "Secretory Antibodies In The Gut",
+    "e": "Final"
+   }
+  ]
+ },
+ "17": {
+  "1": [
+   {
+    "t": "Examples Of Passive Immunity",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "R0 Definition",
+    "e": "Final"
+   }
+  ]
+ },
+ "18": {
+  "2": [
+   {
+    "t": "Hypersensitivity And Ige",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Myasthenia Gravis Pathogenesis",
+    "e": "Final"
+   }
+  ],
+  "1": [
+   {
+    "t": "Type I Hypersensitivity Predisposition",
+    "e": "Final"
+   }
+  ]
+ },
+ "19": {
+  "3": [
+   {
+    "t": "Sle Pathogenesis",
+    "e": "Final"
+   },
+   {
+    "t": "Contact Dermatitis Mechanism",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "Immune Complex Mediated Damage",
+    "e": "Final"
+   }
+  ]
+ },
+ "20": {
+  "2": [
+   {
+    "t": "Types Of Immunodeficiencies",
+    "e": "Final"
+   }
+  ],
+  "3": [
+   {
+    "t": "Clinical Features Of Hemophagocytic Lymphohistiocytosis",
+    "e": "Final"
+   }
+  ],
+  "5": [
+   {
+    "t": "Hodgkin Lymphoma",
+    "e": "Final"
+   }
+  ]
+ },
+ "21": {
+  "5": [
+   {
+    "t": "Peripheral Tolerance Of T Cells",
+    "e": "Final"
+   }
+  ],
+  "1": [
+   {
+    "t": "B Cell Central Tolerance",
+    "e": "Final"
+   }
+  ],
+  "6": [
+   {
+    "t": "Hla Association With Autoimmunity",
+    "e": "Final"
+   }
+  ]
+ },
+ "22": {
+  "4": [
+   {
+    "t": "Hyperacute Transplantation Rejection",
+    "e": "Final"
+   }
+  ],
+  "9": [
+   {
+    "t": "Direct Coombs Test",
+    "e": "Final"
+   }
+  ],
+  "1": [
+   {
+    "t": "Chronic Rejection",
+    "e": "Final"
+   }
+  ]
+ },
+ "23": {
+  "1": [
+   {
+    "t": "Autoimmunity And Loss Of Tolerance",
+    "e": "Final"
+   }
+  ],
+  "2": [
+   {
+    "t": "Crohn Disease",
+    "e": "Final"
+   }
+  ],
+  "4": [
+   {
+    "t": "Clinical Feature Of Psoriatic Arthritis",
+    "e": "Final"
+   }
+  ]
+ },
+ "24": {
+  "1": [
+   {
+    "t": "Causes Of Itp - Case 2",
+    "e": "Final"
+   },
+   {
+    "t": "Clinical Features Of Xla - Case 1",
+    "e": "Final"
+   },
+   {
+    "t": "Causes Of Seizures In Digeorge - Case 4",
+    "e": "Final"
+   }
+  ]
+ },
+ "99": {
+  "1": [
+   {
+    "t": "Adaptive Immune Mechanisms",
+    "e": "Midterm"
+   }
+  ],
+  "2": [
+   {
+    "t": "Innate Versus Adaptive Immune Mechanisms",
+    "e": "Midterm"
+   }
+  ],
+  "3": [
+   {
+    "t": "Innate And Adaptive Interaction",
+    "e": "Midterm"
+   }
+  ],
+  "4": [
+   {
+    "t": "Action Of Lysozyme",
+    "e": "Midterm"
+   }
+  ],
+  "5": [
+   {
+    "t": "Opsonization By Complement",
+    "e": "Midterm"
+   }
+  ],
+  "6": [
+   {
+    "t": "Complement Deficiency",
+    "e": "Midterm"
+   }
+  ],
+  "7": [
+   {
+    "t": "Interferon Response",
+    "e": "Midterm"
+   }
+  ],
+  "8": [
+   {
+    "t": "Role Of Il-6 During Inflammation",
+    "e": "Midterm"
+   }
+  ],
+  "9": [
+   {
+    "t": "Tlr4-Mediated Signaling",
+    "e": "Midterm"
+   }
+  ],
+  "10": [
+   {
+    "t": "Nk-Macrophage Positive Feedback",
+    "e": "Midterm"
+   }
+  ],
+  "11": [
+   {
+    "t": "Neutrophil Granules",
+    "e": "Midterm"
+   }
+  ],
+  "12": [
+   {
+    "t": "Nk Cell Immunosurveillance",
+    "e": "Midterm"
+   }
+  ],
+  "13": [
+   {
+    "t": "Compartmentalization Of T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "14": [
+   {
+    "t": "Lymph Movement",
+    "e": "Midterm"
+   }
+  ],
+  "15": [
+   {
+    "t": "Microfold Cell Function",
+    "e": "Midterm"
+   }
+  ],
+  "16": [
+   {
+    "t": "Action Of Superantigens",
+    "e": "Midterm"
+   }
+  ],
+  "17": [
+   {
+    "t": "Immunogenicity Of Antigen",
+    "e": "Midterm"
+   }
+  ],
+  "18": [
+   {
+    "t": "Signaling Molecules Of T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "19": [
+   {
+    "t": "Exogenous Antigen Presentation",
+    "e": "Midterm"
+   }
+  ],
+  "20": [
+   {
+    "t": "Molecules Of Antigen Presentation",
+    "e": "Midterm"
+   }
+  ],
+  "21": [
+   {
+    "t": "Defects In Peptide Transport",
+    "e": "Midterm"
+   }
+  ],
+  "22": [
+   {
+    "t": "Allelic Exclusion And Gene Rearrangement",
+    "e": "Midterm"
+   }
+  ],
+  "23": [
+   {
+    "t": "Gene Arrangement In B Cell Receptors",
+    "e": "Midterm"
+   }
+  ],
+  "24": [
+   {
+    "t": "Rss Heptamer",
+    "e": "Midterm"
+   }
+  ],
+  "25": [
+   {
+    "t": "Regulatory Enzymes Of Gene Rearrangement",
+    "e": "Midterm"
+   }
+  ],
+  "26": [
+   {
+    "t": "Somatic Hypermutation Diversity In Bcrs",
+    "e": "Midterm"
+   }
+  ],
+  "27": [
+   {
+    "t": "Steps In T Cell Development",
+    "e": "Midterm"
+   }
+  ],
+  "28": [
+   {
+    "t": "Function On Notch1",
+    "e": "Midterm"
+   }
+  ],
+  "29": [
+   {
+    "t": "Gamma Delta T Cell Development",
+    "e": "Midterm"
+   }
+  ],
+  "30": [
+   {
+    "t": "3 Signals For T Cell Activation",
+    "e": "Midterm"
+   }
+  ],
+  "31": [
+   {
+    "t": "Role Of Interleukin-2 In T Cells",
+    "e": "Midterm"
+   }
+  ],
+  "32": [
+   {
+    "t": "Tcr Signaling Events",
+    "e": "Midterm"
+   }
+  ],
+  "33": [
+   {
+    "t": "Th2 Cytokine Production",
+    "e": "Midterm"
+   },
+   {
+    "t": "Function Of Th17 Il-17",
+    "e": "Midterm"
+   }
+  ],
+  "34": [
+   {
+    "t": "T Cell Contraction",
+    "e": "Midterm"
+   }
+  ],
+  "35": [
+   {
+    "t": "Btk And B Cell Ontogeny",
+    "e": "Final"
+   }
+  ],
+  "36": [
+   {
+    "t": "B Cell Coreceptor",
+    "e": "Final"
+   },
+   {
+    "t": "B Cell Maturation",
+    "e": "Final"
+   }
+  ],
+  "37": [
+   {
+    "t": "Cytokines In Memory B Cells",
+    "e": "Final"
+   }
+  ],
+  "38": [
+   {
+    "t": "Cd40 And Somatic Hypermutation",
+    "e": "Final"
+   }
+  ],
+  "39": [
+   {
+    "t": "Class Switch Recombination",
+    "e": "Final"
+   }
+  ],
+  "40": [
+   {
+    "t": "Antibody-Mediated Cell Cytotoxicity",
+    "e": "Final"
+   },
+   {
+    "t": "Igg Cross The Placenta",
+    "e": "Final"
+   },
+   {
+    "t": "Immune Complex Removal",
+    "e": "Final"
+   }
+  ],
+  "41": [
+   {
+    "t": "Alpha Defensins Mucosal Defenses",
+    "e": "Final"
+   },
+   {
+    "t": "Secretory Antibodies In The Gut",
+    "e": "Final"
+   }
+  ],
+  "42": [
+   {
+    "t": "Examples Of Passive Immunity",
+    "e": "Final"
+   }
+  ],
+  "43": [
+   {
+    "t": "R0 Definition",
+    "e": "Final"
+   }
+  ],
+  "44": [
+   {
+    "t": "Type I Hypersensitivity Predisposition",
+    "e": "Final"
+   }
+  ],
+  "45": [
+   {
+    "t": "Hypersensitivity And Ige",
+    "e": "Final"
+   }
+  ],
+  "46": [
+   {
+    "t": "Myasthenia Gravis Pathogenesis",
+    "e": "Final"
+   }
+  ],
+  "47": [
+   {
+    "t": "Sle Pathogenesis",
+    "e": "Final"
+   },
+   {
+    "t": "Contact Dermatitis Mechanism",
+    "e": "Final"
+   }
+  ],
+  "48": [
+   {
+    "t": "Immune Complex Mediated Damage",
+    "e": "Final"
+   }
+  ],
+  "49": [
+   {
+    "t": "Types Of Immunodeficiencies",
+    "e": "Final"
+   }
+  ],
+  "50": [
+   {
+    "t": "Clinical Features Of Hemophagocytic Lymphohistiocytosis",
+    "e": "Final"
+   }
+  ],
+  "51": [
+   {
+    "t": "Hodgkin Lymphoma",
+    "e": "Final"
+   }
+  ],
+  "52": [
+   {
+    "t": "B Cell Central Tolerance",
+    "e": "Final"
+   }
+  ],
+  "53": [
+   {
+    "t": "Peripheral Tolerance Of T Cells",
+    "e": "Final"
+   }
+  ],
+  "54": [
+   {
+    "t": "Hla Association With Autoimmunity",
+    "e": "Final"
+   }
+  ],
+  "55": [
+   {
+    "t": "Chronic Rejection",
+    "e": "Final"
+   }
+  ],
+  "56": [
+   {
+    "t": "Hyperacute Transplantation Rejection",
+    "e": "Final"
+   }
+  ],
+  "57": [
+   {
+    "t": "Direct Coombs Test",
+    "e": "Final"
+   }
+  ],
+  "58": [
+   {
+    "t": "Autoimmunity And Loss Of Tolerance",
+    "e": "Final"
+   }
+  ],
+  "59": [
+   {
+    "t": "Crohn Disease",
+    "e": "Final"
+   }
+  ],
+  "60": [
+   {
+    "t": "Clinical Feature Of Psoriatic Arthritis",
+    "e": "Final"
+   }
+  ],
+  "61": [
+   {
+    "t": "Causes Of Itp - Case 2",
+    "e": "Final"
+   },
+   {
+    "t": "Clinical Features Of Xla - Case 1",
+    "e": "Final"
+   },
+   {
+    "t": "Causes Of Seizures In Digeorge - Case 4",
+    "e": "Final"
+   }
+  ]
+ }
+};
 
 const IMAGES = {};
 
@@ -6971,6 +7818,3382 @@ const LECTURE_CONTENT = {
     ]
    }
   ]
+ },
+ "99": {
+  "prof": "",
+  "tldr": "Every objective your professors tested on the Winter 2026 Midterm + Final, gathered in one place. The must-knows below list them; Practice drills their questions; this Core explains each; Master locks them in. Each is cumulative-exam high-yield.",
+  "mustKnows": [
+   "Lec 1 — Adaptive Immune Mechanisms. (Midterm)",
+   "Lec 1 — Innate Versus Adaptive Immune Mechanisms. (Midterm)",
+   "Lec 1 — Innate And Adaptive Interaction. (Midterm)",
+   "Lec 2 — Action Of Lysozyme. (Midterm)",
+   "Lec 2 — Opsonization By Complement. (Midterm)",
+   "Lec 2 — Complement Deficiency. (Midterm)",
+   "Lec 3 — Interferon Response. (Midterm)",
+   "Lec 3 — Role Of Il-6 During Inflammation. (Midterm)",
+   "Lec 3 — Tlr4-Mediated Signaling. (Midterm)",
+   "Lec 4 — Nk-Macrophage Positive Feedback. (Midterm)",
+   "Lec 4 — Neutrophil Granules. (Midterm)",
+   "Lec 4 — Nk Cell Immunosurveillance. (Midterm)",
+   "Lec 5 — Compartmentalization Of T Cells. (Midterm)",
+   "Lec 5 — Lymph Movement. (Midterm)",
+   "Lec 5 — Microfold Cell Function. (Midterm)",
+   "Lec 6 — Action Of Superantigens. (Midterm)",
+   "Lec 6 — Immunogenicity Of Antigen. (Midterm)",
+   "Lec 6 — Signaling Molecules Of T Cells. (Midterm)",
+   "Lec 7 — Exogenous Antigen Presentation. (Midterm)",
+   "Lec 7 — Molecules Of Antigen Presentation. (Midterm)",
+   "Lec 7 — Defects In Peptide Transport. (Midterm)",
+   "Lec 8 — Allelic Exclusion And Gene Rearrangement. (Midterm)",
+   "Lec 8 — Gene Arrangement In B Cell Receptors. (Midterm)",
+   "Lec 9 — Rss Heptamer. (Midterm)",
+   "Lec 9 — Regulatory Enzymes Of Gene Rearrangement. (Midterm)",
+   "Lec 9 — Somatic Hypermutation Diversity In Bcrs. (Midterm)",
+   "Lec 10 — Steps In T Cell Development. (Midterm)",
+   "Lec 10 — Function On Notch1. (Midterm)",
+   "Lec 10 — Gamma Delta T Cell Development. (Midterm)",
+   "Lec 11 — 3 Signals For T Cell Activation. (Midterm)",
+   "Lec 11 — Role Of Interleukin-2 In T Cells. (Midterm)",
+   "Lec 11 — Tcr Signaling Events. (Midterm)",
+   "Lec 12 — Th2 Cytokine Production · Function Of Th17 Il-17. (Midterm)",
+   "Lec 12 — T Cell Contraction. (Midterm)",
+   "Lec 13 — Btk And B Cell Ontogeny. (Final)",
+   "Lec 13 — B Cell Coreceptor · B Cell Maturation. (Final)",
+   "Lec 14 — Cytokines In Memory B Cells. (Final)",
+   "Lec 14 — Cd40 And Somatic Hypermutation. (Final)",
+   "Lec 14 — Class Switch Recombination. (Final)",
+   "Lec 15 — Antibody-Mediated Cell Cytotoxicity · Igg Cross The Placenta · Immune Complex Removal. (Final)",
+   "Lec 16 — Alpha Defensins Mucosal Defenses · Secretory Antibodies In The Gut. (Final)",
+   "Lec 17 — Examples Of Passive Immunity. (Final)",
+   "Lec 17 — R0 Definition. (Final)",
+   "Lec 18 — Type I Hypersensitivity Predisposition. (Final)",
+   "Lec 18 — Hypersensitivity And Ige. (Final)",
+   "Lec 18 — Myasthenia Gravis Pathogenesis. (Final)",
+   "Lec 19 — Sle Pathogenesis · Contact Dermatitis Mechanism. (Final)",
+   "Lec 19 — Immune Complex Mediated Damage. (Final)",
+   "Lec 20 — Types Of Immunodeficiencies. (Final)",
+   "Lec 20 — Clinical Features Of Hemophagocytic Lymphohistiocytosis. (Final)",
+   "Lec 20 — Hodgkin Lymphoma. (Final)",
+   "Lec 21 — B Cell Central Tolerance. (Final)",
+   "Lec 21 — Peripheral Tolerance Of T Cells. (Final)",
+   "Lec 21 — Hla Association With Autoimmunity. (Final)",
+   "Lec 22 — Chronic Rejection. (Final)",
+   "Lec 22 — Hyperacute Transplantation Rejection. (Final)",
+   "Lec 22 — Direct Coombs Test. (Final)",
+   "Lec 23 — Autoimmunity And Loss Of Tolerance. (Final)",
+   "Lec 23 — Crohn Disease. (Final)",
+   "Lec 23 — Clinical Feature Of Psoriatic Arthritis. (Final)",
+   "Lec 24 — Causes Of Itp - Case 2 · Clinical Features Of Xla - Case 1 · Causes Of Seizures In Digeorge - Case 4. (Final)"
+  ],
+  "los": [
+   {
+    "id": 1,
+    "statement": "Lec 1 · Adaptive Immune Mechanisms",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Name the two branches of the immune system and give the single defining feature that separates them."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Davis opens the whole course from 30,000 feet, and the single idea she wants you to carry out of this lecture is that the immune system is built in two branches — the innate system at the top of Dr. Gregg’s master figure and the adaptive (also called acquired) system at the bottom. Almost everything in the next fifteen-odd lectures hangs off this one split, so the goal here is to install the scaffolding, not to memorize details you haven’t earned yet."
+     },
+     {
+      "t": "p",
+      "x": "The purpose of the whole apparatus is narrower than it sounds: prevent or control infection, and patrol for things that shouldn’t be there. Davis makes the point vividly — 100% of us have a tumor right now, and almost none of us will ever need treatment for it, because the immune system clears it before it declares itself. That patrol-and-clear job is carried out by cells, organs, tissues, and molecules working together, which is the cast of characters the rest of the course introduces one at a time."
+     },
+     {
+      "t": "cq",
+      "x": "The two branches of immunity are innate and adaptive (acquired). (branch dichotomy — the course spine)"
+     },
+     {
+      "t": "p",
+      "x": "Every response is two activities: recognize that something is non-self, THEN respond to it."
+     },
+     {
+      "t": "p",
+      "x": "Role of the immune system: defense against infection and tumors, immunosurveillance, and the autoimmunity/transplant flip side."
+     },
+     {
+      "t": "p",
+      "x": "Layering — within each branch there are multiple means of protection (barriers, enzymes) and effector mechanisms."
+     },
+     {
+      "t": "p",
+      "x": "TWO ACTIVITIES, IN ORDER. Before any branch can do anything, the response has to clear a two-step bar. First, recognize that something is non-self — distinguish “us” from “them.” Then respond to it, whether that means an innate response or an adaptive one. Hold onto the order, because it explains the system’s two failure modes: fail to recognize non-self and you get infection; mistakenly react against self and you get autoimmunity. The same recognition machinery that protects you is the thing that, turned the wrong way, attacks you."
+     },
+     {
+      "t": "p",
+      "x": "LAYERING AND REDUNDANCY. Davis keeps returning to the word layering: within each branch there are multiple, overlapping ways to fight the same pathogen. Staphylococcus aureus is her running example — it causes skin infections, pneumonia, osteomyelitis, even meningitis, so the body needs different defenses in different tissues that can all recognize and clear it. That redundancy is deliberate: a defense available in the skin (say, the oxidative burst) may not be available across the blood–brain barrier, so the system layers physical barriers, enzymes, effector mechanisms, cells, and molecules so that something can respond wherever the pathogen lands."
+     },
+     {
+      "t": "cq",
+      "x": "An immune response has two steps in fixed order: recognize non-self, then respond. (recognition precedes response) CQ Failure to recognize non-self → infection; reaction against self → autoimmunity. (the two failure modes)"
+     },
+     {
+      "t": "key",
+      "x": "The innate/adaptive split is the organizing axis of the entire course. Map every later cell, molecule, and pathway onto “which branch, and what does it do there.”"
+     },
+     {
+      "t": "confusion",
+      "x": "“Two branches” = innate vs adaptive. It does NOT mean humoral vs cell-mediated (that’s a split WITHIN adaptive) or cells vs molecules (a component split)."
+     },
+     {
+      "t": "pearl",
+      "x": "“100% of us have a tumor right now” — immunosurveillance runs constantly; you only need clinical help when a tumor escapes it. A memorable anchor for why the system patrols, not just defends."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The two branches are innate (fast, generic, no memory) and adaptive/acquired (slow on first exposure, antigen-specific, memory-forming). They are defined by speed, specificity, and the presence or absence of memory — not by anatomy or by the cells-vs-molecules split."
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "statement": "Lec 1 · Innate Versus Adaptive Immune Mechanisms",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "For speed, specificity, and memory, which branch owns which property — and why does \"specific\" not mean \"fast\"?"
+     },
+     {
+      "t": "p",
+      "x": "THE CONTRAST. If LO 1.1 named the two branches, this LO is about telling them apart on the dimensions that actually get tested: specificity, speed, memory, and what does the recognizing. Davis’s framing device is military — innate is a grenade (generic, hits everything in the vicinity, causes collateral damage), adaptive is a sniper or marksman (one precise target). That single image carries most of the distinction, and the collateral-damage half of it is where immunopathology comes from."
+     },
+     {
+      "t": "p",
+      "x": "Innate immunity: rapid but generalized — acts within minutes to hours on the first encounter."
+     },
+     {
+      "t": "p",
+      "x": "Innate = the grenade: non-specific, present at birth, always on, responds to conserved PAMPs, no memory."
+     },
+     {
+      "t": "p",
+      "x": "Adaptive = the sniper: specific and targeted, acquired on encounter, improves and remembers — but slower."
+     },
+     {
+      "t": "p",
+      "x": "HOW EACH BRANCH RECOGNIZES. This is the heart of the distinction. Innate immunity reads conserved patterns, not identities. Faced with a gram-negative Klebsiella, the innate system does not say “Klebsiella” — it says “I see LPS, and LPS isn’t human, so this is non-self.” The same goes for teichoic acid on gram-positives and mannose on fungi. These conserved structures are pathogen-associated molecular patterns (PAMPs), and the receptors that read them are pattern-recognition receptors (PRRs). So the rule is short: PRRs recognize PAMPs, and the answer they return is always generic — “bacterium” or “fungus,” never the species. Adaptive immunity, by contrast, recognizes the specific pathogen through B-cell and T-cell receptors, so only the cells that match that pathogen respond."
+     },
+     {
+      "t": "cq",
+      "x": "Innate PRRs recognize conserved PAMPs (LPS, teichoic acid, mannose) and report non-self/bacterium, never the species. (PRR–PAMP recognition)"
+     },
+     {
+      "t": "p",
+      "x": "BORN WITH IT vs ACQUIRING IT. You are born with your innate defenses — skin, tears, mucus, lysozyme — and they are always on at basal levels. The adaptive system is called acquired precisely because you are immunologically naive to a given pathogen until you encounter it; only then do you develop (acquire) immunity to it. This is why the flu shot is annual: the virus undergoes antigenic drift, so last year’s acquired immunity no longer matches, and the vaccine must be updated. The textbook calls it adaptive for a second reason — it gets better with each exposure, a point Dr. Gregg will unpack when he covers how antibodies improve over a response."
+     },
+     {
+      "t": "p",
+      "x": "THE TIMING PAYOFF — MEMORY. The crown jewel of the adaptive branch is the memory cell. A primary (first-time) adaptive response takes about 7–10 days to develop — far too slow to be your only defense, which is exactly why innate has to act first and buy time. But once memory cells exist, a re-exposure is handled in about 2–3 days (the anamnestic response). That is the entire logic of vaccination: manufacture memory now so the real encounter is fast. Memory is faster than a primary response but still never as instant as the always-ready innate barriers — your skin is already there."
+     },
+     {
+      "t": "cq",
+      "x": "Primary adaptive response ≈ 7–10 days; memory (anamnestic) response ≈ 2–3 days; innate is faster still (already present). (the timing hierarchy) CQ Annual flu vaccination is needed because influenza undergoes antigenic drift. (why “acquired” immunity must be updated)"
+     },
+     {
+      "t": "p",
+      "x": "Representative PAMPs by class — nucleic acids, cell-wall lipids (LPS, teichoic acid), carbohydrates (mannose). Conserved, non-self, broadly shared."
+     },
+     {
+      "t": "p",
+      "x": "Clonal expansion: one antigen-specific naive cell proliferates into many identical clones — one cell isn’t enough."
+     },
+     {
+      "t": "p",
+      "x": "Clones differentiate into effector cells (act now, terminal) and memory cells (persist, re-activatable)."
+     },
+     {
+      "t": "p",
+      "x": "CLONAL EXPANSION AND THE EFFECTOR/MEMORY SPLIT. Here is the mechanical core of how the specific branch scales up. A naive lymphocyte (one that has never seen its pathogen) carries an antigen receptor; when that receptor finds its match, the cell undergoes clonal expansion (also called clonal proliferation) — it makes many copies of itself, all with the same specificity, because one B cell making antibody is not enough when you need billions of molecules. The expanded clones then differentiate into two fates: effector cells that do the job right now (and are terminally differentiated — they act, then die by apoptosis) and memory cells that persist, sometimes for decades, ready to re-activate. Every time you re-encounter the antigen, you remake both — so you always keep a memory bank for the next round."
+     },
+     {
+      "t": "p",
+      "x": "HUMORAL vs CELL-MEDIATED. The adaptive branch itself splits in two by where the pathogen lives. Humoral immunity — antibodies made by plasma cells — handles extracellular threats. Davis’s room analogy is worth keeping: if the cell is this room and the hallway is outside it, antibody can stick to anything in the hallway but cannot pass through the wall. Cell-mediated immunity — cytotoxic T cells — handles intracellular threats like viruses, which must live inside a host cell to replicate. Critically, the T cell does not reach inside and kill the virus; it kills the infected host cell, and the pathogen dies with it. The kill is indirect — a point the exam loves."
+     },
+     {
+      "t": "cq",
+      "x": "Humoral immunity (antibody/plasma cells) = extracellular pathogens; cell-mediated immunity (cytotoxic T cells) = intracellular pathogens. (the where-it-lives split) CQ Cytotoxic T cells kill the infected host cell, not the pathogen directly. (indirect kill — high-yield)"
+     },
+     {
+      "t": "p",
+      "x": "Innate vs adaptive at a glance: non-specific/specific, rapid/slow, no-memory/memory, PAMP-sensing cells vs lymphocytes."
+     },
+     {
+      "t": "key",
+      "x": "Specificity, speed, and memory are the three axes that separate the branches. Innate = generic, fast, no memory. Adaptive = specific, slow-then-fast, memory."
+     },
+     {
+      "t": "trap",
+      "x": "Do NOT equate “specific” with “fast.” Adaptive is the specific one but the SLOW one on first encounter (7–10 days). Innate leads because it’s already on."
+     },
+     {
+      "t": "cue",
+      "x": "Pathogen inside a cell (virus) → think cell-mediated (CTL kills the host cell). Pathogen outside (extracellular bacterium, toxin) → think humoral (antibody neutralizes/opsonizes)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Innate is generic (PRRs read conserved PAMPs, returning “non-self,” never the species), fast, present at birth, and memoryless. Adaptive is antigen-specific (BCR/TCR recognize the exact target), slow on first exposure (7–10 days) but fast on recall via memory (2–3 days), and improves with each encounter. Grenade vs sniper."
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "statement": "Lec 1 · Innate And Adaptive Interaction",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Give one way innate signaling shapes the adaptive response and one way adaptive output redirects innate cells."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. This is the conceptual heart of the lecture: the two branches do not act in a vacuum. They talk to each other constantly, in both directions, using secreted molecules — chiefly cytokines and complement — as the language. One branch tells the other “here’s what we’ve got, here’s what I need you to do.” Getting the direction of each example right (innate→adaptive vs adaptive→innate) is exactly what the exam tests, so we’ll keep flagging which way the arrow points."
+     },
+     {
+      "t": "p",
+      "x": "WHO GOES FIRST. On a first-ever (naive) encounter, the innate system always responds first, and the adaptive system follows only if the innate response can’t contain the pathogen. The reason is timing: a primary adaptive response needs 7–10 days, and “we’d be sick and dying all the time” if that were our first line. Innate is the right-there, ready-to-go response that buys the days adaptive needs. The one twist: on a re-exposure, adaptive memory can effectively lead, then recruit innate — so “innate first” is a first-encounter rule, not an absolute."
+     },
+     {
+      "t": "cq",
+      "x": "On a naive encounter, innate responds first; adaptive follows (7–10 days) only if innate fails to contain the pathogen. (innate-first timing)"
+     },
+     {
+      "t": "p",
+      "x": "Dr. Gregg’s master figure — innate at top, adaptive at bottom; the through-line for the first ~15 lectures."
+     },
+     {
+      "t": "p",
+      "x": "Inflammation is initiated in the innate response and can carry over into the adaptive response; it both clears and contains pathogens."
+     },
+     {
+      "t": "p",
+      "x": "The two branches do not act in isolation — innate generally responds first and then informs/regulates the adaptive response."
+     },
+     {
+      "t": "p",
+      "x": "IMMUNOPATHOLOGY — WHEN THE GRENADE HURTS YOU. Before the directional examples, anchor the cost side. When you have the flu and feel achy, feverish, and chilled, that is not the bug — that is your immune system. The body aches and fever are your cytokines at work; the inflammation that clears pathogens also damages your own tissue, and that damage is immunopathology. Davis notes you’ll meet it again throughout pathology — a great deal of organ damage in disease is the immune response, not the pathogen. Even fever is a deliberate immune tactic: pathogens grow best at 37°C, so raising body temperature slows their replication — the same logic as a refrigerator slowing food spoilage — buying the adaptive system time to catch up."
+     },
+     {
+      "t": "cq",
+      "x": "Flu malaise (aches, fever, chills) is host cytokine activity — immunopathology, not direct viral damage. (“that’s not the bug”) CQ Fever slows pathogen replication (optimal growth ≈ 37°C), buying the adaptive response time. (fever ≈ refrigerator analogy)"
+     },
+     {
+      "t": "p",
+      "x": "INNATE REGULATES ADAPTIVE. Now the first arrow. Innate outputs shape the adaptive response in two concrete ways. First, complement proteins can activate B cells — they lower the B-cell activation threshold, so less antigen is needed to switch a B cell on. Second, phagocytes (macrophages, neutrophils) and infected cells secrete cytokines that direct which way B and T cells differentiate — whether a CD4 cell becomes a TH1, TH2, or TH17, and which antibody isotype a B cell should make (IgA in the mucosa, IgG in tissue). In other words, the innate response doesn’t just buy time; it instructs the adaptive response on what to become."
+     },
+     {
+      "t": "p",
+      "x": "ADAPTIVE REGULATES INNATE. The reverse arrow runs whether it’s a first encounter or a memory response. T cells produce cytokines that order macrophages and neutrophils to be more aggressive — “you’re not killing fast enough, ramp it up.” And antibodies bound to a pathogen act as handles: macrophages and neutrophils (innate cells) grab those antibody handles to phagocytose and destroy the pathogen by oxidative burst. So the specific branch reaches back and makes the generic branch both harder-hitting and better-aimed. The whole point: the branches form one integrated, mutually-regulating system, not two parallel machines."
+     },
+     {
+      "t": "cq",
+      "x": "Innate→adaptive: complement lowers the B-cell activation threshold; innate cytokines steer B/T differentiation and isotype. (direction: innate regulates adaptive) CQ Adaptive→innate: antibody handles let phagocytes grab pathogens; T-cell cytokines push macrophages to kill harder. (direction: adaptive regulates innate)"
+     },
+     {
+      "t": "p",
+      "x": "The innate response can inform and regulate the adaptive response, and vice versa — a two-way regulatory loop."
+     },
+     {
+      "t": "p",
+      "x": "Innate regulates adaptive: complement activates B cells; innate-cell cytokines guide B/T activation and differentiation."
+     },
+     {
+      "t": "p",
+      "x": "Adaptive regulates innate: T-cell cytokines boost phagocyte killing; antibodies opsonize — “handles” for phagocytes."
+     },
+     {
+      "t": "key",
+      "x": "The branches form one integrated system that regulates itself in BOTH directions. The exam tests which way the arrow points, so tag every example innate→adaptive or adaptive→innate."
+     },
+     {
+      "t": "pearl",
+      "x": "Fever as a refrigerator: pathogens grow best at body temp, so a fever slows them like a fridge slows spoilage — immunopathology that’s actually working for you."
+     },
+     {
+      "t": "confusion",
+      "x": "Innate→adaptive = complement activating B cells + innate cytokines steering differentiation. Adaptive→innate = antibody opsonization + T-cell cytokines driving phagocytes. Don’t flip them."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Innate→adaptive: complement proteins activate B cells and lower their activation threshold, and innate cytokines direct B/T differentiation and antibody isotype. Adaptive→innate: T-cell cytokines make phagocytes more aggressive, and antibody bound to a pathogen opsonizes it, giving phagocytes handles to grab. The two branches continuously regulate each other."
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "statement": "Lec 2 · Action Of Lysozyme",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "How does the defensin mechanism differ from the lysozyme mechanism?"
+     },
+     {
+      "t": "p",
+      "x": "THE UNIFYING IDEA. Almost every chemical barrier in this lecture kills the same cheap way: it disrupts or perforates the membrane, and then ordinary physiologic fluid shifts do the rest by osmotic lysis. Gregg keeps returning to this — “you just create a pore and a cell lyses” — because it explains why so much of innate immunity (defensins, cathelicidins, fatty acids, and later the complement MAC) converges on pore formation: it is low-energy, you let chemistry finish the kill. Lysozyme is the one enzymatic exception, and it is the one he says shows up on boards constantly."
+     },
+     {
+      "t": "p",
+      "x": "DEFENSINS. Defensins are antimicrobial peptides (AMPs). In the gut they are produced largely by Paneth cells in the intestinal crypts at a constitutive basal level (epithelial cells and neutrophils can be induced to make more). For the exam, the one thing to lock down is the mechanism: defensins create pores in microbial membranes. Once the pore is open the microbe cannot control fluid movement, and osmotic lysis follows. Gregg said it almost verbatim — what you need to know for the exam is that they create pores."
+     },
+     {
+      "t": "cq",
+      "x": "Defensins (Paneth cells, constitutive) kill by creating pores in membranes → osmotic lysis. (defensin mechanism — exam-flagged)"
+     },
+     {
+      "t": "p",
+      "x": "Defensins (AMPs) from Paneth cells insert into the microbial membrane and form pores; loss of fluid control → osmotic lysis."
+     },
+     {
+      "t": "p",
+      "x": "Lysozyme hydrolyzes the β(1–4) bond between NAM and NAG in peptidoglycan, weakening the wall so the cell lyses."
+     },
+     {
+      "t": "p",
+      "x": "Other chemical barriers: phospholipase A2, cathelicidins (LL-37), lactic/fatty acids, lactoferrin/transferrin (iron), and HCl."
+     },
+     {
+      "t": "p",
+      "x": "LYSOZYME — the board favorite. Lysozyme is the enzyme in saliva, tears, and mucus that targets peptidoglycan. It hydrolyzes the linkage between N-acetylmuramic acid (NAM) and N-acetylglucosamine (NAG), the repeating backbone of the wall. Weaken peptidoglycan and the cell can no longer resist its own osmotic pressure, so it lyses. Because gram-positives carry thick, exposed peptidoglycan, they are the most susceptible; gram-negatives have peptidoglycan too, but it sits behind an outer membrane. Gregg flagged this one specifically — it is one he sees on the board exam all the time."
+     },
+     {
+      "t": "cq",
+      "x": "Lysozyme hydrolyzes the NAM–NAG bond in peptidoglycan; gram-positives (thick exposed wall) are most susceptible. (lysozyme target + mechanism)"
+     },
+     {
+      "t": "p",
+      "x": "THE REST OF THE CHEMICAL TOOLKIT. Phospholipase A2 clips a fatty acid off membrane phospholipids, distorting the membrane toward a leaky micelle and also generating the very fatty acids that coat skin. Cathelicidins (the human one is LL-37, a 37-amino-acid peptide) do the same membrane-disrupting, micelle-forming job, concentrated in mucosa. Lactic and fatty acids in sebaceous and sweat secretions disrupt membranes and even limit bacterial conjugation (plasmid transfer), slowing the spread of resistance. Lactoferrin (secretions/tissue) and transferrin (blood) lock up iron, a nutrient bacteria depend on — driving a literal arms race where bacteria deploy siderophores to steal iron back and the host counters with “stealth siderophores.” And hydrochloric acid in the stomach wrecks the structure of anything swallowed."
+     },
+     {
+      "t": "cq",
+      "x": "Lactoferrin/transferrin sequester iron; bacteria counter with siderophores, host counters with stealth siderophores. (iron arms race)"
+     },
+     {
+      "t": "confusion",
+      "x": "Defensins make pores; lysozyme is an enzyme that cleaves the NAM–NAG peptidoglycan bond. Different mechanism, different target — don’t blur “antimicrobial peptide” with “wall enzyme.”"
+     },
+     {
+      "t": "key",
+      "x": "The recurring innate killing motif is membrane perforation/disruption → osmotic lysis. Defensins, cathelicidins/LL-37, fatty acids, and the complement MAC all use it; lysozyme is the enzymatic exception."
+     },
+     {
+      "t": "pearl",
+      "x": "Two board-flagged items live here: lysozyme (“on the board exam all the time”) and the pore principle. If a stem describes peptidoglycan-bond cleavage, think lysozyme; if it describes membrane pores, think defensins/AMPs."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Defensins form pores in the membrane (osmotic lysis); lysozyme is an enzyme that cleaves the NAM–NAG peptidoglycan bond (most effective against gram-positives). One perforates the membrane, the other digests the wall — both end in osmotic lysis."
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "statement": "Lec 2 · Opsonization By Complement",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "What are complement’s three functions, and which complement defect causes recurrent Neisseria?"
+     },
+     {
+      "t": "p",
+      "x": "THE THREE FUNCTIONS. Everything complement does sorts into three jobs, and Gregg wants them cold: lysis (kill the microbe outright), opsonization (tag it for phagocytes), and inflammation (recruit the cells that do the killing). They work hand in hand — inflame to bring in phagocytes, opsonize so those phagocytes can grab on, and lyse what you can directly. The two phagocytes that get recruited are the same ones from micro: neutrophils and macrophages."
+     },
+     {
+      "t": "cq",
+      "x": "Complement’s three functions: lysis (MAC), opsonization (C3b/CR1), inflammation (C3a/C5a). (three functions — memorize)"
+     },
+     {
+      "t": "p",
+      "x": "OPSONIZATION NEEDS A RECEPTOR. Coating a microbe in C3b only matters because phagocytes carry complement receptor 1 (CR1), which is essentially a C3b receptor. CR1 binds the surface C3b, giving the cell a handle to engulf the organism into a phagosome that fuses with a lysosome. Gregg defines it crisply — opsonization is enhancing phagocytosis through the complement system. This is exactly why encapsulated bacteria are complement-dependent: a capsule exists to mask the surface so phagocytes have nothing to grab; C3b deposited on the capsule restores a handle. The C3a released during cleavage is the chemotactic signal pulling neutrophils and macrophages in."
+     },
+     {
+      "t": "cq",
+      "x": "Opsonization = C3b coats the microbe and phagocyte CR1 binds it → why encapsulated bacteria depend on complement. (C3b/CR1 + capsule logic)"
+     },
+     {
+      "t": "p",
+      "x": "Macrophage CR1 (C3b receptor) binds surface-bound C3b on the bacterium, driving complement-mediated phagocytosis (opsonization)."
+     },
+     {
+      "t": "p",
+      "x": "The phagosome fuses with a lysosome; H+ pumped in lowers the pH and activates hydrolytic enzymes that destroy the microbe."
+     },
+     {
+      "t": "p",
+      "x": "Adding one C3b to C3bBb makes the C5 convertase (C3bBb3b), which cleaves C5 → C5a (chemotaxis) + C5b (seeds the MAC)."
+     },
+     {
+      "t": "p",
+      "x": "LYSIS — THE MEMBRANE ATTACK COMPLEX. The C5 convertase (C3bBb3b) cleaves C5 into C5a (a potent chemoattractant, even stronger than C3a) and C5b, which stays near the surface and seeds the terminal cascade. The assembly order is pure recruitment, only one cleavage having happened: C5b → C6 → C7 (C7 inserts into the membrane and anchors the complex) → C8 (solidifies the insertion) → C9, which polymerizes into a pore. Pores again — fluid rushes in and out and the cell dies by osmotic lysis, the free kill. That terminal C5b–C9 structure is the membrane attack complex (MAC)."
+     },
+     {
+      "t": "cq",
+      "x": "MAC assembles C5b→C6→C7 (membrane insertion)→C8→C9 (polymerizes into the lytic pore). (MAC order)"
+     },
+     {
+      "t": "p",
+      "x": "Membrane attack complex: C5b–C8 anchors the complex; polymerized C9 forms the transmembrane pore → osmotic lysis."
+     },
+     {
+      "t": "p",
+      "x": "C3a/C5a as anaphylatoxins: locally recruit neutrophils/macrophages and activate mast cells to promote inflammation."
+     },
+     {
+      "t": "p",
+      "x": "Complement-deficiency table: terminal (C5–C9/MAC) defects → recurrent Neisseria; early defects → broad encapsulated-organism susceptibility."
+     },
+     {
+      "t": "p",
+      "x": "NEISSERIA, AND THE ANAPHYLATOXIN PARALLEL. The deficiency table has one board-critical row: a defect anywhere in C5–C9 wrecks the MAC and gives recurrent Neisseria meningitidis — Gregg says remember that for boards, because the MAC is the primary way you kill meningococcus. Separately, C3a and C5a are anaphylatoxins: locally they recruit phagocytes and activate mast cells (which sit around blood"
+     },
+     {
+      "t": "p",
+      "x": "vessels) to release histamine and drive inflammation. Let them go systemic and you activate mast cells body-wide → vasodilation, increased vascular permeability, adhesion-molecule upregulation → anaphylactic shock. That is the same three-effect vascular collapse TNF-α produces in septic shock (LPS-driven) — different trigger, identical hemodynamics, and a comparison worth holding onto for Lec 3."
+     },
+     {
+      "t": "cq",
+      "x": "A C5–C9 (MAC) defect → recurrent Neisseria meningitidis. (terminal-complement board flag) CQ Systemic C3a/C5a → mast-cell histamine → anaphylactic shock (same triad as TNF-α septic shock). (anaphylatoxin ↔ septic-shock parallel)"
+     },
+     {
+      "t": "p",
+      "x": "Anaphylactic shock: systemic mast-cell activation → vasodilation, capillary leak, bronchoconstriction → hypotension and airway compromise."
+     },
+     {
+      "t": "key",
+      "x": "Three functions, three mediators: lysis = MAC (C5b–C9), opsonization = C3b–CR1, inflammation = C3a/C5a. Anchor every complement detail to which of these three it serves."
+     },
+     {
+      "t": "trap",
+      "x": "Terminal (C5–C9 / MAC) deficiency → recurrent Neisseria. Don’t default to “C3” for this stem — early-component loss gives broad encapsulated-organism problems, not the meningococcal signature."
+     },
+     {
+      "t": "pearl",
+      "x": "Anaphylatoxin shock (C3a/C5a) and septic shock (TNF-α) converge on the SAME three vascular effects. If a stem lists vasodilation + capillary leak + adhesion upregulation, identify the trigger, not a new mechanism."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Lysis (the MAC, C5b–C9 forming a pore), opsonization (C3b bound by phagocyte CR1), and inflammation (C3a/C5a recruiting neutrophils/macrophages and activating mast cells). The cells involved are neutrophils and macrophages (phagocytes) and mast cells (anaphylatoxin targets)."
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "statement": "Lec 2 · Complement Deficiency",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "How do the early regulators (DAF vs MCP/factor H) differ from the late one (CD59)?"
+     },
+     {
+      "t": "p",
+      "x": "THE UNIFYING IDEA. Complement runs spontaneously on every surface, so the question that keeps you alive is: why doesn’t it destroy your own cells? The answer is a panel of host-cell regulators that either decay the convertase or block the MAC. Two jobs at once: protect self, and ration C3 so amplification doesn’t exhaust it. Lose these regulators and the failure is not weaker defense — it is self-lysis."
+     },
+     {
+      "t": "p",
+      "x": "EARLY REGULATORS — DAF and MCP (and factor H/I). On host surfaces, DAF (decay-accelerating factor) dissociates Bb from the convertase, decaying C3bBb so it stops cleaving C3. MCP (membrane cofactor protein) works differently — it is a cofactor that recruits factor I to cleave the surface C3b. (Soluble factor H does the H-side of the same job in fluid phase, again with factor I.) The distinction is the testable point: DAF decays the enzyme; MCP/factor H recruit factor I to cleave C3b. A student asked whether C3b inactivated by DAF can still opsonize — Gregg’s answer: DAF acts so early (on the first convertase) that you never amplify enough C3a/C3b to actually recruit and feed phagocytes, so it dies down fast."
+     },
+     {
+      "t": "cq",
+      "x": "DAF dissociates Bb (decays the convertase); MCP/factor H recruit factor I to cleave C3b. (decay vs cofactor — distinguish)"
+     },
+     {
+      "t": "p",
+      "x": "Host regulators DAF and MCP on the human cell surface: DAF dissociates Bb; MCP recruits factor I to cleave C3b — stopping the convertase on self."
+     },
+     {
+      "t": "p",
+      "x": "PNH: a GPI-anchor synthesis defect prevents DAF/CD59 from sitting on the RBC surface, so complement lyses the red cells."
+     },
+     {
+      "t": "p",
+      "x": "LATE REGULATORS — blocking the MAC. If the cascade reaches C5b–C8 on a host cell, two more checkpoints stop the pore. CD59 (and HRF) block C9 from joining and polymerizing, so no pore forms. S-protein, clusterin, and factor J (three distinct proteins, three sites on C7) prevent C7 from anchoring the complex to the membrane in the first place. Five molecules total guard the terminal step on self."
+     },
+     {
+      "t": "cq",
+      "x": "CD59 blocks C9 from joining C5b-8 (no MAC pore) on host cells. (late-stage MAC regulator)"
+     },
+     {
+      "t": "p",
+      "x": "PNH AND FACTOR I DEFICIENCY — the two clinical mirrors. Paroxysmal nocturnal hemoglobinuria (PNH) is the regulator-loss disease: a defect in GPI-anchor synthesis means DAF and CD59 cannot be tethered to the cell surface, so complement lyses the most numerous blood cells — red cells. The lesion is the missing anchor, not a missing complement protein. The other clinically loaded regulator is factor I: deficiency both depletes C3 (unchecked consumption) and blunts the antibody response, because factor I generates the C3b cleavage product C3d, and C3d lowers"
+     },
+     {
+      "t": "p",
+      "x": "the B-cell activation threshold. That is the promised payoff from LO 2.4 — lose factor I and you become highly susceptible to encapsulated bacteria from both a complement and an antibody direction."
+     },
+     {
+      "t": "cq",
+      "x": "PNH = GPI-anchor defect → no surface DAF/CD59 → complement lyses RBCs. (PNH mechanism) CQ Factor I deficiency → depleted C3 + blunted antibody response (no C3d to lower the B-cell threshold). (factor I → antibody link)"
+     },
+     {
+      "t": "trap",
+      "x": "PNH is a GPI-anchor defect, not a missing complement component. The regulators (DAF, CD59) are present in the body but can’t attach, so the patient’s own complement lyses their RBCs."
+     },
+     {
+      "t": "cue",
+      "x": "Recurrent encapsulated-bacteria infection + low C3 + poor antibody response → think factor I deficiency (C3d link). Recurrent Neisseria alone → think terminal MAC (C5–C9)."
+     },
+     {
+      "t": "key",
+      "x": "Regulators do two jobs: protect host cells and ration C3. Sort them by stage — early (DAF decays Bb; MCP/factor H + factor I cleave C3b) vs late (CD59 blocks C9; S-protein/clusterin/factor J block C7)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Early regulators act on the convertase — DAF dissociates Bb; MCP and factor H recruit factor I to cleave C3b. Late regulators block the MAC — CD59 stops C9 polymerizing; S-protein/clusterin/factor J block C7 anchoring. They protect host cells and ration C3; losing the GPI anchor for DAF/CD59 causes PNH."
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "statement": "Lec 3 · Interferon Response",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Trace LPS recognition through to cytokine transcription, naming each molecule."
+     },
+     {
+      "t": "p",
+      "x": "THE RECOGNITION COMPLEX. TLR4 doesn’t touch LPS directly — it needs accessory molecules. LBP (LPS-binding protein) grabs LPS and delivers it to CD14, which sits near the TLR4 homodimer. Then MD2 stabilizes the LPS on TLR4. That assembled complex (LPS·CD14·MD2·TLR4) changes the shape of TLR4’s cytoplasmic TIR domain, and the conformational change is what lets the adaptor MyD88 dock. Recognition is therefore a small committee, not a single handshake."
+     },
+     {
+      "t": "cq",
+      "x": "TLR4 recognizes LPS via accessories: LBP → CD14, with MD2 stabilizing LPS → TIR-domain change → MyD88 docks. (TLR4 recognition complex)"
+     },
+     {
+      "t": "p",
+      "x": "TLR signaling output: the NF-κB–induced cytokines that drive the inflammatory response."
+     },
+     {
+      "t": "p",
+      "x": "LPS recognition by TLR4: LBP hands LPS to CD14; MD2 stabilizes it on the TLR4 homodimer, changing the TIR domain."
+     },
+     {
+      "t": "p",
+      "x": "Signaling cascade: MyD88 → IKK → phosphorylates IκB → frees NF-κB → nucleus → cytokine transcription."
+     },
+     {
+      "t": "p",
+      "x": "THE NF-κB CASCADE. Once MyD88 binds, the cascade is worth knowing as a clean chain: MyD88 → activates IKK (IκB kinase) → IKK phosphorylates IκB → phosphorylated IκB releases NF-κB. Free NF-κB, a cytoplasmic transcription factor, translocates through the nuclear pore, binds gene promoters, and drives cytokine production. The one inhibitor to keep straight is IκB — it holds NF-κB hostage until IKK phosphorylates it. The five cytokines this produces are the subject of LO 3.4: IL-1β, IL-6, TNF-α, IL-8, IL-12."
+     },
+     {
+      "t": "cq",
+      "x": "Cascade: MyD88 → IKK → phosphorylates IκB → releases NF-κB → cytokine transcription. (NF-κB cascade order)"
+     },
+     {
+      "t": "cue",
+      "x": "If a stem gives “LPS recognition needs which helper molecules?” the answer set is LBP, CD14, MD2 (not a kinase, not a cytokine)."
+     },
+     {
+      "t": "key",
+      "x": "Read it as one inhibitor being removed: NF-κB is chained to IκB; IKK phosphorylates IκB, NF-κB is freed, cytokines get transcribed. This same cascade later triggers NLRP3."
+     },
+     {
+      "t": "confusion",
+      "x": "IKK (the kinase) phosphorylates IκB (the inhibitor). Students invert these or phosphorylate NF-κB itself — it’s IκB that gets phosphorylated and lets NF-κB go."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: LPS is presented by LBP→CD14 with MD2 stabilizing it on the TLR4 dimer, changing the TIR domain so MyD88 docks. Cascade: MyD88 → IKK → phosphorylates IκB → releases NF-κB → nucleus → transcription of IL-1β, IL-6, TNF-α, IL-8, IL-12."
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "statement": "Lec 3 · Role Of Il-6 During Inflammation",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Which cytokine drives the acute phase, and where do CRP, MBL, and SAA each route?"
+     },
+     {
+      "t": "p",
+      "x": "IL-6 REPROGRAMS THE LIVER. The acute-phase response is IL-6 telling hepatocytes to switch production: up with acute-phase proteins (pentraxins) and complement, down with transport proteins like albumin — more immune reactivity, less housekeeping. The three acute-phase proteins to know route into three different effector arms: C-reactive protein (CRP) → classical complement, mannose-binding lectin (MBL) → lectin complement, and serum amyloid A (SAA) → TLR signaling and phagocytosis. Pentraxins also flag apoptotic cells for clearance — a detail that returns with lupus, where faulty apoptotic-cell uptake matters."
+     },
+     {
+      "t": "cq",
+      "x": "IL-6 drives the acute phase: ↑ pentraxins (CRP, SAA, MBL) + complement, ↓ albumin. (acute-phase driver)"
+     },
+     {
+      "t": "p",
+      "x": "IL-1β (with IL-6, TNF-α) raises PGE2 → hypothalamic set point → fever; PGE2 also drives myalgia/arthralgia."
+     },
+     {
+      "t": "p",
+      "x": "Acute-phase proteins: CRP → classical pathway, MBL → lectin pathway, SAA → TLR signaling/phagocytosis; albumin falls."
+     },
+     {
+      "t": "p",
+      "x": "All three complement pathways (alternative, lectin, classical) converge on a C3 convertase and the membrane attack complex."
+     },
+     {
+      "t": "p",
+      "x": "THE LECTIN PATHWAY. Once the acute phase is running, MBL becomes biologically meaningful (basal level is low). MBL complexes with the serine proteases MASP and binds surface mannose (and similar carbohydrates) on pathogens. MASP then cleaves C4 — C4b attaches to the surface (just as C3b did in the alternative pathway) — and cleaves C2. Here the nomenclature is deliberately confusing: the larger fragment is C2a. C2a binds C4b to form C4b2a, the classical C3 convertase. So the lectin pathway builds the classical convertase. From there it behaves like any C3 convertase: cleave C3, deposit C3b, and the presence of C3b lets the alternative pathway amplify alongside — two systems now spreading C3b together."
+     },
+     {
+      "t": "cq",
+      "x": "Lectin: MBL+MASP binds mannose → cleaves C4 (C4b attaches) + C2 → C4b2a = classical C3 convertase. (lectin pathway → C4b2a)"
+     },
+     {
+      "t": "p",
+      "x": "Lectin pathway: MBL+MASP binds mannose, cleaves C4 (C4b attaches) and C2 → C4b2a, the classical C3 convertase."
+     },
+     {
+      "t": "p",
+      "x": "Classical pathway (innate-triggered here): CRP binds phosphocholine → recruits C1 → cleaves C4/C2 → the same C4b2a convertase."
+     },
+     {
+      "t": "p",
+      "x": "THE CLASSICAL PATHWAY (innate-triggered). CRP closes the loop. CRP binds phosphocholine head groups on pathogen surfaces; bound CRP then recruits C1 (the C1q architecture plus serine proteases C1r/C1s, made by dendritic cells). C1 does exactly what MASP did: cleave C4 and C2 to build C4b2a, the classical C3 convertase — and everything proceeds to opsonization and the MAC. So three pathways, one convergence:"
+     },
+     {
+      "t": "p",
+      "x": "alternative (spontaneous, Lec 2), lectin (MBL→mannose), and classical (here, CRP→C1) all build a C3 convertase. The board-flagged corollary recurs: MBL or any complement deficiency → encapsulated-bacteria susceptibility, with terminal C5–C9 → Neisseria."
+     },
+     {
+      "t": "cq",
+      "x": "Classical (innate-triggered): CRP binds phosphocholine → C1 → C4/C2 cleavage → same C4b2a convertase. (classical via CRP/C1)"
+     },
+     {
+      "t": "p",
+      "x": "BAND NEUTROPHILS — the practical readout. Because IL-6 also drives neutrophil output, an overwhelming infection forces the marrow to release immature band neutrophils. Gregg’s rule: more than 5% bands means you are losing — the microbe is outpacing the response. It is the clinical “left shift,” and neutrophil elevations track bacterial infection."
+     },
+     {
+      "t": "cq",
+      "x": ">5% band (immature) neutrophils = left shift = the infection is winning. (band-neutrophil rule)"
+     },
+     {
+      "t": "key",
+      "x": "IL-6 is the acute-phase conductor. Route the three proteins: CRP → classical, MBL → lectin, SAA → TLR/phagocytosis — and remember lectin + classical both build C4b2a."
+     },
+     {
+      "t": "trap",
+      "x": "Watch the C2 nomenclature: the LARGER fragment is C2a, so the classical/lectin C3 convertase is C4b2a (not C4b2b). Different from the alternative pathway’s C3bBb."
+     },
+     {
+      "t": "pearl",
+      "x": ">5% bands = you’re losing. A clean, testable readout of an overwhelming (usually bacterial) infection driven by IL-6 boosting neutrophil output."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: IL-6 drives the acute-phase response: hepatocytes make CRP (→ classical), MBL (→ lectin), and SAA (→ TLR/phagocytosis) while albumin falls. Lectin (MBL+MASP→mannose) and classical (CRP→C1) both cleave C4/C2 to build C4b2a, the classical C3 convertase. >5% band neutrophils signals a losing infection."
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "statement": "Lec 3 · Tlr4-Mediated Signaling",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Put the trafficking steps in order and name the board-flagged integrin/ligand pair."
+     },
+     {
+      "t": "p",
+      "x": "THE THREE-STEP. Getting a blood leukocyte into infected tissue is a fixed sequence, and the cytokine-activated endothelium makes it possible. Step 1 — rolling: selectins on activated endothelium bind carbohydrate ligands on the leukocyte, a weak interaction that lets the cell tether and roll along the vessel wall, slowing down. Step 2 — firm arrest: a chemokine signal flips the leukocyte’s integrins to high-affinity, and they grip endothelial ligands to stop the cell. Step 3 — diapedesis: the arrested cell squeezes between endothelial cells (through the thinned tight junctions TNF-α loosened) into the tissue."
+     },
+     {
+      "t": "cq",
+      "x": "Trafficking: selectin rolling → integrin firm arrest → chemokine signal → diapedesis. (the three-step)"
+     },
+     {
+      "t": "p",
+      "x": "Step 1 — rolling: selectins on activated endothelium bind leukocyte carbohydrate ligands, a weak tether that slows the cell."
+     },
+     {
+      "t": "p",
+      "x": "Step 2 — firm arrest: chemokines raise integrin affinity; LFA-1 binds ICAM-1 to stop the cell on the endothelium."
+     },
+     {
+      "t": "p",
+      "x": "Step 3 — diapedesis: the arrested cell follows the chemokine gradient and transmigrates between endothelial cells into tissue."
+     },
+     {
+      "t": "p",
+      "x": "THE BOARD PAIR. The integrin/ligand interaction to lock down is LFA-1 (on the leukocyte) binding ICAM-1 (on endothelium) — Gregg flags it as the one that shows up most on boards, with the bonus that ICAM-1 is also the rhinovirus receptor. The chemokine that activates integrins and arrests neutrophils is IL-8/CXCL8, made by the same macrophages. Neutrophils go first — they are 50–70% of blood leukocytes and arrive within about two hours — with monocytes and NK cells following. This three-step is previewed here and detailed as extravasation in Lec 4; the molecules (selectin/integrin/chemokine) are the takeaway."
+     },
+     {
+      "t": "cq",
+      "x": "Board pair: LFA-1 (leukocyte) → ICAM-1 (endothelium); ICAM-1 is also the rhinovirus receptor. (LFA-1/ICAM-1)"
+     },
+     {
+      "t": "p",
+      "x": "Summary table — the major innate cytokines (IL-1β, IL-6, TNF-α, IL-8, IL-12, type I IFN): releasing cell, target, and primary effects."
+     },
+     {
+      "t": "pearl",
+      "x": "LFA-1 → ICAM-1 is the board-flagged firm-arrest pair, and ICAM-1 is the rhinovirus receptor — a frequently tested two-for-one."
+     },
+     {
+      "t": "key",
+      "x": "Three molecules, three steps, in order: selectins (rolling) → integrins (arrest) → chemokine (activation/diapedesis). Neutrophils lead because they’re most abundant and fastest."
+     },
+     {
+      "t": "cue",
+      "x": "If a stem describes weak, reversible tethering/rolling, that’s selectins; firm stop is integrins (LFA-1/ICAM-1); the cell then transmigrates (diapedesis)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Selectins on activated endothelium mediate rolling (weak), chemokines (IL-8) then raise integrin affinity for firm arrest (LFA-1–ICAM-1), and the cell undergoes diapedesis into tissue. Neutrophils traffic first (most abundant, fastest), followed by monocytes and NK cells."
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "statement": "Lec 4 · Nk-Macrophage Positive Feedback",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Trace the respiratory burst from NADPH oxidase to HOCl, naming each enzyme and product."
+     },
+     {
+      "t": "p",
+      "x": "THE MOST IMPORTANT REACTIVITY OF THE SEMESTER. Gregg says it outright — phagocytosis is the single most important immune reactivity of the whole unit, and “everything is geared towards it.” The killing happens in two stages with a clear logic: paralyze first, then digest. Stage one is the respiratory burst (oxygen-dependent); stage two is acid digestion in the phagolysosome."
+     },
+     {
+      "t": "cq",
+      "x": "Phagocytosis logic: paralyze replication first (respiratory burst), then digest (acid hydrolases). (two-stage logic)"
+     },
+     {
+      "t": "p",
+      "x": "Late reactions: the vacuolar ATPase pumps H+ in to acidify the phagosome — required for the next step."
+     },
+     {
+      "t": "p",
+      "x": "Phagosome–lysosome fusion delivers acid hydrolases (active at low pH) plus defensins and lysozyme to digest the microbe."
+     },
+     {
+      "t": "p",
+      "x": "Early O2-dependent reactions (respiratory burst): NADPH oxidase → superoxide; SOD → H2O2; catalase → water; MPO → HOCl; iNOS → NO (RNS)."
+     },
+     {
+      "t": "p",
+      "x": "THE RESPIRATORY BURST. Once a microbe is in the phagosome, the cell takes a big breath of oxygen to fuel a cascade of reactive oxygen species (ROS). NADPH oxidase (phagocyte oxidase) makes superoxide (O2−); SOD converts it to H2O2; catalase detoxifies H2O2 to water, while myeloperoxidase (MPO) converts H2O2 to hypochlorous acid (HOCl) (bleach). Separately, iNOS makes nitric oxide and downstream"
+     },
+     {
+      "t": "p",
+      "x": "reactive nitrogen species (RNS). All of these damage nucleic acid — the point is to stop replication so the microbe can’t out-grow the response. (Clinically, NADPH-oxidase deficiency is the lesion behind chronic granulomatous disease — a good one to remember.)"
+     },
+     {
+      "t": "cq",
+      "x": "ROS chain: NADPH oxidase→O2−; SOD→H2O2; catalase→water; MPO→HOCl; iNOS→NO (RNS). (respiratory-burst enzymes)"
+     },
+     {
+      "t": "p",
+      "x": "EVASION, AND THE IFN-γ COUNTER. Bacteria that live with oxygen carry the same protective enzymes. Staphylococcus is catalase-positive (and SOD-positive), so it detoxifies ROS and resists the early burst. The host’s answer is volume: NK-derived IFN-γ ramps ROS production to overwhelm the bacterium’s finite catalase/SOD — the macrophage–NK loop (LO 4.8). A second evasion is anatomical: Mycobacterium tuberculosis blocks phagosome acidification AND lysosome fusion, which is exactly why it survives inside macrophages."
+     },
+     {
+      "t": "cq",
+      "x": "Staph (catalase+) resists the burst; IFN-γ overwhelms it. M. tuberculosis blocks acidification + lysosome fusion. (evasion + counter)"
+     },
+     {
+      "t": "p",
+      "x": "ACIDIFY, THEN DIGEST. Before the lysosome fuses, the vacuolar ATPase pumps H+ into the phagosome to acidify it — critical, because the next step depends on low pH. The lysosome then fuses and delivers acid hydrolases (the “acid” means they work at low pH): nucleases, proteases, lipases, glycosidases — enough to dismantle every macromolecule of the now-paralyzed microbe — along with more defensins and lysozyme for good measure. No acidification, no digestion: that single dependency is what M. tuberculosis exploits."
+     },
+     {
+      "t": "cq",
+      "x": "Vacuolar ATPase acidifies the phagosome → acid hydrolases (low-pH nucleases/proteases/lipases) digest the microbe. (acidify → digest)"
+     },
+     {
+      "t": "key",
+      "x": "Two stages, in order: burst (ROS/RNS) paralyzes the microbe by damaging nucleic acid; then acidification + acid hydrolases digest it. Memorize the ROS enzyme chain as the spine."
+     },
+     {
+      "t": "trap",
+      "x": "Keep the enzymes distinct: NADPH oxidase makes superoxide (deficiency → CGD); SOD → H2O2; catalase detoxifies H2O2; MPO → HOCl. Bacterial catalase/SOD is what blunts the burst."
+     },
+     {
+      "t": "cue",
+      "x": "Recurrent catalase-positive infections → think failed respiratory burst (NADPH-oxidase / CGD). A bug surviving inside macrophages by blocking acidification → M. tuberculosis."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The respiratory burst (NADPH oxidase→superoxide; SOD→H2O2; catalase→water; MPO→HOCl; iNOS→NO/RNS) damages nucleic acid to paralyze replication. The vacuolar ATPase then acidifies the phagosome, and the fused lysosome delivers low-pH acid hydrolases (plus defensins/lysozyme) to digest the microbe. Paralyze first, then digest."
+     }
+    ]
+   },
+   {
+    "id": 11,
+    "statement": "Lec 4 · Neutrophil Granules",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "List the granules in developmental order and say why band neutrophils can kill but not migrate."
+     },
+     {
+      "t": "p",
+      "x": "WHY GRANULES MAKE THE NEUTROPHIL SUPERIOR. Macrophages phagocytose and that’s it; the neutrophil is the premier phagocyte because it adds granules. Granule biology is organized around development: granules appear in a fixed order, and the order maps onto neutrophil maturity. Appearance order is azurophilic (primary) → specific (secondary) → gelatinase (tertiary) → secretory/ficolin. On activation, release runs the reverse, gated by intracellular calcium — highest calcium fires the secretory/ficolin granule first."
+     },
+     {
+      "t": "cq",
+      "x": "Development order: azurophilic → specific → gelatinase → secretory/ficolin; release reverses it (calcium-gated). (granule order)"
+     },
+     {
+      "t": "p",
+      "x": "Granule appearance maps to neutrophil maturity: azurophilic → specific → gelatinase → secretory/ficolin (bands lack the last)."
+     },
+     {
+      "t": "p",
+      "x": "First released (highest Ca2+): secretory/ficolin — supplies selectin ligands and integrins for adhesion/extravasation."
+     },
+     {
+      "t": "p",
+      "x": "Last released (lowest Ca2+): azurophilic fuses with the phagolysosome — acid hydrolases, defensins, MPO (kept inside to protect host tissue)."
+     },
+     {
+      "t": "p",
+      "x": "RELEASE ORDER = FUNCTION. At activation (highest calcium) the secretory/ficolin granule fuses first, placing selectin ligands and integrins on the neutrophil surface for adhesion/extravasation. As calcium falls, gelatinase (MMP-9) is released to break down CD31 and loosen tight junctions for transit (arginase-1 then helps reseal the junctions behind it). Specific granules supply chemokine receptors (to follow the gradient) plus lactoferrin and NGAL (which blocks bacterial siderophores, denying iron). Finally azurophilic granules fuse with the phagolysosome — not the surface — delivering acid hydrolases, defensins, and MPO; keeping them internal protects host tissue."
+     },
+     {
+      "t": "cq",
+      "x": "Secretory/ficolin = adhesion (selectin ligands/integrins); azurophilic = phagolysosome killing (kept internal). (first vs last granule)"
+     },
+     {
+      "t": "p",
+      "x": "THE BAND-NEUTROPHIL DEFECT. This is the high-yield payoff. Band (immature) neutrophils stop at the gelatinase stage — they have not yet made the secretory/ficolin granule, so they lack the selectin ligands and integrins needed to roll and arrest. The consequence: bands can phagocytose and kill, but they can’t migrate out of the blood to where the microbe is. That is why a left shift (>5% bands) signals trouble — the marrow is dumping cells that can’t reach the fight."
+     },
+     {
+      "t": "cq",
+      "x": "Band neutrophils stop at gelatinase → no secretory/ficolin → can kill but can’t migrate. (band-neutrophil defect)"
+     },
+     {
+      "t": "key",
+      "x": "Development = azurophilic→specific→gelatinase →secretory/ficolin; release reverses it. First out (secretory/ficolin) = adhesion molecules; last out (azurophilic) = phagolysosome killing."
+     },
+     {
+      "t": "trap",
+      "x": "Bands CAN kill — they just can’t migrate. The missing secretory/ficolin granule means no selectin ligands/integrins, so they’re stuck in the vessel. The defect is trafficking, not killing."
+     },
+     {
+      "t": "pearl",
+      "x": "Azurophilic granules fuse with the phagolysosome, not the membrane — their toxic contents are kept internal to avoid damaging host tissue (frustrated phagocytosis dumps them out — seen later in rejection)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Granules appear azurophilic → specific → gelatinase → secretory/ficolin during development; release reverses this, gated by calcium. Secretory/ficolin (first) supplies selectin ligands/integrins for migration; azurophilic (last) fuses with the phagolysosome to kill. Band neutrophils stop at gelatinase, lack secretory/ficolin, and so can kill but cannot migrate."
+     }
+    ]
+   },
+   {
+    "id": 12,
+    "statement": "Lec 4 · Nk Cell Immunosurveillance",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Why does a cell that loses MHC class I get killed by NK but hide from cytotoxic T cells?"
+     },
+     {
+      "t": "p",
+      "x": "THE MISSING-SELF DETECTIVE. NK cells solve a problem antibodies and T cells can’t: a virus or tumor that hides by switching off MHC class I. Cytotoxic T cells need to see peptide on MHC I to kill; a cell that drops MHC I becomes invisible to T cells. NK cells do the opposite — they read MHC I as a “don’t kill me” license, so a cell missing MHC I gets killed. This is the missing-self hypothesis, and it is the conceptual heart of the objective. Surface markers: CD56+, CD16+, CD3− (the CD3-negative is what separates NK from T cells)."
+     },
+     {
+      "t": "cq",
+      "x": "NK missing-self: loss of MHC I (which licenses “don’t kill”) → NK kills. Markers CD56+ CD16+ CD3−. (missing-self + NK markers)"
+     },
+     {
+      "t": "p",
+      "x": "NK cells: CD56+ CD16+ CD3− lymphocytes that survey MHC class I and kill cells that have lost it."
+     },
+     {
+      "t": "p",
+      "x": "Missing-self: normal MHC I delivers an inhibitory “don’t kill” signal; virus/tumor downregulation of MHC I removes the brake."
+     },
+     {
+      "t": "p",
+      "x": "Killing uses perforin to breach the membrane and granzymes to trigger apoptosis — the same lethal hit cytotoxic T cells use."
+     },
+     {
+      "t": "p",
+      "x": "HOW THEY KILL — AND THE TWO BALANCING SIGNALS. NK killing is governed by a balance of activating and inhibitory receptors. MHC I engages the inhibitory receptor and shuts the NK cell off; stress ligands engage activating receptors. When a cell loses MHC I, the inhibitory brake is released and activation wins. The lethal hit is the same one cytotoxic T cells use: perforin punches pores and granzymes enter to trigger apoptosis. NK cells also kill by ADCC through CD16 (FcγRIII), binding antibody-coated targets."
+     },
+     {
+      "t": "cq",
+      "x": "NK killing = perforin + granzyme → apoptosis; also ADCC via CD16. Balance of activating vs inhibitory (MHC I) receptors decides. (perforin/granzyme + ADCC)"
+     },
+     {
+      "t": "p",
+      "x": "THE IL-12 → NK → IFN-γ LOOP. Don’t lose the cytokine circuit Gregg stressed: macrophages and dendritic cells make IL-12, IL-12 drives NK cells to secrete IFN-γ, and IFN-γ activates macrophages (the M1 program) to kill what they’ve eaten. It is a feed-forward amplifier linking the phagocyte and the NK cell before adaptive immunity arrives — and the same IFN-γ later becomes the signature Th1 cytokine."
+     },
+     {
+      "t": "cq",
+      "x": "IL-12 (macrophage/DC) → NK secretes IFN-γ → M1 macrophage activation. Feed-forward innate amplifier. (IL-12→NK→IFN-γ loop)"
+     },
+     {
+      "t": "p",
+      "x": "The IL-12 → NK → IFN-γ → M1 loop: dendritic cells and macrophages and NK cells amplify each other ahead of adaptive immunity."
+     },
+     {
+      "t": "key",
+      "x": "NK = the missing-self killer. MHC I licenses “don’t kill”; lose it (virus/tumor) and NK kills via perforin/granzyme. CD56+ CD16+ CD3−. Also ADCC via CD16. IL-12 → NK → IFN-γ → M1."
+     },
+     {
+      "t": "cue",
+      "x": "See downregulated/absent MHC I on a virus-infected or tumor cell → think NK killing. See antibody-coated target → think NK ADCC via CD16."
+     },
+     {
+      "t": "trap",
+      "x": "NK is the mirror image of cytotoxic T cells. CTLs kill cells that show the wrong peptide-MHC; NK kills cells that lack MHC I. A cell hiding from T cells by dropping MHC I walks straight into the NK cell."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: NK cells (CD56+ CD16+ CD3−) kill by missing-self recognition: MHC class I engages an inhibitory receptor that licenses “don’t kill,” so cells that lose MHC I (virus/tumor) are killed via perforin/granzyme-induced apoptosis. They also perform ADCC through CD16, and the IL-12 → NK → IFN-γ loop activates M1 macrophages."
+     }
+    ]
+   },
+   {
+    "id": 13,
+    "statement": "Lec 5 · Compartmentalization Of T Cells",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Match each splenic and nodal compartment to its resident cells and primary function."
+     },
+     {
+      "t": "p",
+      "x": "THE COMPARTMENTALIZATION PRINCIPLE. Immature B cells leave the marrow and travel to the spleen, which has two zones with two jobs. The red pulp is the blood-handling zone: it filters blood, holds a blood reserve for trauma, and is where macrophages remove aged (~120-day) red cells. Dendritic cells and macrophages there also survey for microbes — a TLR hit triggers cytokines and phagocytosis on the spot, and dendritic cells carry captured microbes to the white pulp to prime T cells."
+     },
+     {
+      "t": "cq",
+      "x": "Red pulp = blood filter + aged-RBC removal (macrophages) + blood reserve. (red pulp function)"
+     },
+     {
+      "t": "p",
+      "x": "Newly formed naive B cells exit the bone marrow and enter the spleen as transitional cells."
+     },
+     {
+      "t": "p",
+      "x": "Red pulp filters blood, stores a blood reserve, and is where macrophages remove aged red cells."
+     },
+     {
+      "t": "p",
+      "x": "White pulp is the immune tissue: follicles (B cells), PALS (T cells), and the marginal zone (rapid-IgM B cells)."
+     },
+     {
+      "t": "p",
+      "x": "WHITE PULP — FOLLICLE, PALS, MARGINAL ZONE. The white pulp is the immune tissue, and B and T cells are kept separate. Follicles = B cells; the periarteriolar lymphatic sheath (PALS) = T cells. Surrounding both is the marginal zone, home to marginal-zone B cells — the emergency cell. They recognize mostly carbohydrate, respond to blood-borne antigen within hours (a normal B cell takes 7–10 days), and make only IgM, the complement-activating antibody. Something dangerous in the blood needs a response now; the marginal-zone B cell provides it."
+     },
+     {
+      "t": "cq",
+      "x": "White pulp: follicle = B, PALS = T. Marginal-zone B cell = rapid IgM vs blood-borne carbohydrate (hours, not days). (white pulp + emergency IgM)"
+     },
+     {
+      "t": "p",
+      "x": "Splenic white-pulp anatomy around the central arteriole: follicle, PALS, and marginal zone."
+     },
+     {
+      "t": "p",
+      "x": "T cells arriving from the thymus populate the PALS (T-cell zone)."
+     },
+     {
+      "t": "p",
+      "x": "Transitional B cells become follicular (FO) or marginal-zone (MZ) B cells — and are tested for self-reactivity here."
+     },
+     {
+      "t": "p",
+      "x": "THE LYMPH NODE — SAME LOGIC, NEW NAMES. The lymph node compartmentalizes B and T cells just like the spleen, but the names change. Follicle = B cells; paracortex = T cells; and when cells get activated they move into the medulla and exit through the efferent lymphatics into the blood, where they circulate until they find inflamed tissue. Antigen arrives the other way — via afferent lymphatics, carried almost entirely by dendritic cells (a few macrophages), which deliver microbial components to the paracortical T cells. One clinical aside Gregg flagged: damaged lymph nodes do not regenerate, though new lymphoid aggregates can form at sites of chronic infection."
+     },
+     {
+      "t": "cq",
+      "x": "Lymph node: follicle = B, paracortex = T, activated cells exit via medulla → efferent. Antigen enters via afferent (dendritic cells). (node compartments + flow)"
+     },
+     {
+      "t": "p",
+      "x": "Lymph-node compartments: B cells in follicles (germinal centers), T cells in the paracortex, and activated cells exiting through the medulla."
+     },
+     {
+      "t": "confusion",
+      "x": "PALS (spleen) = paracortex (node) = T-cell zone. Follicle = B-cell zone in both. Don’t put lymphocytes in the red pulp — red pulp is blood-handling, white pulp is immune tissue."
+     },
+     {
+      "t": "pearl",
+      "x": "Marginal-zone B cell = the emergency cell. Blood-borne carbohydrate → IgM within hours. It’s why splenectomy raises the risk from encapsulated (polysaccharide-coated) bacteria."
+     },
+     {
+      "t": "key",
+      "x": "Two organs, one rule: B cells in follicles, T cells in the T-zone (PALS in spleen, paracortex in node). Red pulp filters blood; white pulp mounts the response; the marginal zone holds the emergency-IgM B cell."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Spleen red pulp filters blood, removes aged RBCs (macrophages), and stores a blood reserve; white pulp is immune tissue with follicles (B cells), PALS (T cells), and a marginal zone (rapid-IgM B cells). In the lymph node, the follicle holds B cells, the paracortex holds T cells, and activated cells exit via the medulla into efferent lymphatics."
+     }
+    ]
+   },
+   {
+    "id": 14,
+    "statement": "Lec 5 · Lymph Movement",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Name the three functions of the lymphatic system and one effect of OMM lymphatic-pump techniques."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW — THREE JOBS, NO PUMP. The lymphatic system is a network of vessels that drains fluid from tissues to lymph nodes, and it does three things: maintain fluid balance, absorb dietary fat, and provide immune surveillance. The key mechanical fact: unlike the cardiovascular system, the lymphatics have no heart pump. Flow is driven by skeletal-muscle movement, breathing, and a little smooth muscle, and kept one-directional by a valve system. Sedentary patients move lymph slowly — which is exactly why activity (and osteopathic manipulation) matters."
+     },
+     {
+      "t": "cq",
+      "x": "Lymphatics: no heart pump — muscle/breathing/smooth muscle + one-way valves drive flow. Backup → edema. (lymph propulsion)"
+     },
+     {
+      "t": "p",
+      "x": "One-way valves keep lymph moving forward; muscle/respiratory movement supplies the force."
+     },
+     {
+      "t": "p",
+      "x": "Lymph is a clear, multi-component fluid — mostly interstitial fluid drained from tissues back toward the blood."
+     },
+     {
+      "t": "p",
+      "x": "Fluid balance: afferent lymphatics drain interstitial fluid to prevent edema — the lymphatics are the tissue’s drain."
+     },
+     {
+      "t": "p",
+      "x": "FAT ABSORPTION. Dietary lipids can’t simply diffuse into blood capillaries. They’re packaged into chylomicrons (triglyceride wrapped with cholesterol and other lipids), released, and picked up by gut lacteals — the intestinal lymphatic vessels. The lymphatics then deliver them to the blood for transport to the liver. After a fatty meal the mesenteric lymphatics run milky-white with chylomicrons. So the lymphatic system isn’t just immune plumbing; it’s the absorptive route for fat."
+     },
+     {
+      "t": "cq",
+      "x": "Dietary fat → chylomicrons → gut lacteals (lymphatics) → blood → liver. (fat absorption route)"
+     },
+     {
+      "t": "p",
+      "x": "Osteopathic manipulation can drive lymph flow — a central reason to keep patients moving."
+     },
+     {
+      "t": "p",
+      "x": "Abdominal lymphatic-pump treatment measurably increases lymph flow (thoracic-duct data)."
+     },
+     {
+      "t": "p",
+      "x": "Dietary fat is packaged into chylomicrons and absorbed by intestinal lacteals, then delivered to the blood."
+     },
+     {
+      "t": "p",
+      "x": "OMM AND THE LYMPHATICS — the osteopathic hook. Because lymph depends on movement, osteopathic lymphatic-pump techniques (thoracic, abdominal, pedal pumps) exaggerate respiratory motion to push lymph through. This isn’t hand-waving — Gregg cited data: pump techniques increase thoracic-duct flow (measured in dogs), improve vaccine efficacy, and reduce the duration of infectious disease. In his own mouse cancer work, the lymphatic pump mobilized NK cells into the blood and blocked cancer development in about half the animals. The takeaway for boards: OMM lymphatic techniques promote lymph movement, which clears waste, reduces edema, and improves immune surveillance."
+     },
+     {
+      "t": "cq",
+      "x": "OMM lymphatic pumps ↑ thoracic-duct flow, ↑ vaccine efficacy, ↓ infection duration; mobilize NK cells. (OMM pump evidence)"
+     },
+     {
+      "t": "key",
+      "x": "Three lymphatic jobs: fluid balance (drain → prevent edema), fat absorption (chylomicrons via lacteals), immune surveillance. No heart pump — movement + valves drive flow."
+     },
+     {
+      "t": "cue",
+      "x": "Stem about a sedentary or post-op patient with swelling → think impaired lymphatic drainage → edema, and OMM lymphatic-pump techniques as a movement-promoting intervention."
+     },
+     {
+      "t": "pearl",
+      "x": "OMM lymphatic-pump data are board-relevant: increased thoracic-duct flow, improved vaccine efficacy, reduced infection duration, and NK mobilization. Damaged lymph nodes, by contrast, do not regenerate."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The lymphatic system maintains fluid balance (draining interstitial fluid to prevent edema), absorbs dietary fat (chylomicrons via gut lacteals), and provides immune surveillance. It has no heart pump — muscle/respiratory movement and one-way valves drive flow — which is why OMM lymphatic-pump techniques (shown to raise thoracic-duct flow, improve vaccine efficacy, and shorten infections) help."
+     }
+    ]
+   },
+   {
+    "id": 15,
+    "statement": "Lec 5 · Microfold Cell Function",
+    "blocks": []
+   },
+   {
+    "id": 16,
+    "statement": "Lec 6 · Action Of Superantigens",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "What distinguishes a superantigen from a mitogen, and what is an alloantigen?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW — a slide-sourced objective. Gregg ran out of time and deferred alloantigens, superantigens, mitogens, and haptens to the start of the T-cell lectures — so the depth here is built from his slides plus the framework you need, flagged as such. The objective names five special immunogen categories beyond “ordinary” antigen. Alloantigens are antigens that differ between individuals of the same species (the basis of transplant rejection). Autoantigens are self-antigens (the targets in autoimmunity). Heterophile antigens are shared across species (cross-reacting)."
+     },
+     {
+      "t": "cq",
+      "x": "Allo = differs within a species (transplant). Auto = self (autoimmunity). Heterophile = shared across species. (allo/auto/heterophile)"
+     },
+     {
+      "t": "p",
+      "x": "Superantigens cross-link the TCR Vβ region directly to MHC II, polyclonally activating up to ~20% of T cells (toxic-shock mechanism)."
+     },
+     {
+      "t": "p",
+      "x": "Mitogens drive polyclonal lymphocyte proliferation by binding stimulatory receptors (e.g., TLR), independent of antigen specificity."
+     },
+     {
+      "t": "p",
+      "x": "Haptens are small molecules that need a carrier protein to become immunogenic — the mechanism behind contact (type IV) hypersensitivity."
+     },
+     {
+      "t": "p",
+      "x": "SUPERANTIGENS AND MITOGENS — the two polyclonal activators. A superantigen bypasses normal peptide specificity by bridging the TCR Vβ region directly to MHC class II, outside the peptide groove. The result is polyclonal activation of up to ~20% of all T cells at once — a cytokine storm, the mechanism behind toxic-shock syndrome. A mitogen also causes polyclonal proliferation, but through stimulatory receptors such as TLR, driving cell-cycle progression independent of antigen specificity. And a hapten is the small-molecule case: too small to be immunogenic alone, it must couple to a carrier protein to provoke a response — the basis of contact dermatitis (a type IV hypersensitivity)."
+     },
+     {
+      "t": "cq",
+      "x": "Superantigen = TCR Vβ–MHC II bridge → ~20% T cells (toxic shock). Mitogen = TLR-type polyclonal proliferation. Hapten = needs carrier. (superantigen vs mitogen vs hapten)"
+     },
+     {
+      "t": "confusion",
+      "x": "Superantigen vs mitogen: both polyclonal, different routes. Superantigen bridges TCR Vβ to MHC II directly; mitogen acts through stimulatory receptors like TLR — not via Vβ–MHC."
+     },
+     {
+      "t": "trap",
+      "x": "This LO is slide-built — Gregg deferred it. He covers superantigens, mitogens, and haptens at the start of the T-cell lectures; the definitions here come from his slides, not the recorded lecture."
+     },
+     {
+      "t": "key",
+      "x": "Five categories: alloantigen (within species), autoantigen (self), heterophile (across species), superantigen (Vβ–MHC II bridge, polyclonal), mitogen (TLR-type polyclonal). Hapten = needs a carrier."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The five types: alloantigens differ between individuals of the same species (transplant), autoantigens are self-antigens (autoimmunity), heterophile antigens are shared across species, superantigens bridge the TCR Vβ region to MHC II for polyclonal activation of ~20% of T cells, and mitogens drive polyclonal proliferation via stimulatory receptors like TLR. (Slide-sourced — Gregg deferred this to the T-cell lectures.)"
+     }
+    ]
+   },
+   {
+    "id": 17,
+    "statement": "Lec 6 · Immunogenicity Of Antigen",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Rank the four antigen classes and state which class T cells can respond to."
+     },
+     {
+      "t": "p",
+      "x": "FOUR CLASSES, ONE HIERARCHY. Antigens come in four chemical classes, and their immunogenicity ranks proteins > polysaccharides > nucleic acids > lipids. Proteins are the most immunogenic and the only class T cells respond to — and they must be larger than about 10 kDa. Polysaccharides are second-strongest but are B-cell only (T cells can’t see carbohydrate). The rule to anchor: T cells respond ONLY to protein (as processed peptide); B cells respond to all four classes."
+     },
+     {
+      "t": "cq",
+      "x": "Immunogenicity: protein > polysaccharide > nucleic acid > lipid. T cells = protein only (>10 kDa); B cells = all four. (antigen-class hierarchy)"
+     },
+     {
+      "t": "p",
+      "x": "Proteins are most immunogenic (B + T cells, >10 kDa); polysaccharides are second but B-cell only."
+     },
+     {
+      "t": "p",
+      "x": "Nucleic acids and lipids are B-cell only — lupus anti-DNA antibodies show B-cell response to nucleic acids; lipids respond best with protein."
+     },
+     {
+      "t": "p",
+      "x": "NUCLEIC ACIDS AND LIPIDS — B-cell territory. Nucleic acids are B-cell only, and you already know the proof: systemic lupus erythematosus, where B cells make antibodies against DNA. T cells can’t respond to DNA. Lipids are also B-cell only, and they respond best when associated with protein — if a lipid carries some protein, you can pull T-cell involvement in, but the T cell is still only seeing the protein part. The single unifying rule for the whole lecture: T cells never respond to anything but protein."
+     },
+     {
+      "t": "cq",
+      "x": "Nucleic acids (lupus anti-DNA) and lipids = B-cell only; lipids respond best protein-associated. T cells: protein only, always. (nucleic acids + lipids)"
+     },
+     {
+      "t": "pearl",
+      "x": "Lupus anti-dsDNA is the board-favorite proof that B cells answer nucleic-acid antigens — something T cells can never do."
+     },
+     {
+      "t": "key",
+      "x": "Protein > polysaccharide > nucleic acid > lipid. The load-bearing rule: T cells respond ONLY to protein (processed peptide); B cells respond to all four classes."
+     },
+     {
+      "t": "confusion",
+      "x": "Lipids CAN pull in T-cell help, but only when protein-associated — and even then the T cell sees the protein, not the lipid. T cells never recognize lipid, carbohydrate, or nucleic acid alone."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Antigen classes rank protein > polysaccharide > nucleic acid > lipid in immunogenicity. Proteins are most immunogenic, must exceed ~10 kDa, and are the only class T cells respond to (as processed peptide); polysaccharides, nucleic acids, and lipids are B-cell only (lupus anti-DNA proves the nucleic-acid case)."
+     }
+    ]
+   },
+   {
+    "id": 18,
+    "statement": "Lec 6 · Signaling Molecules Of T Cells",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Name the recognition and signaling parts of the TCR and the chains of the BCR."
+     },
+     {
+      "t": "p",
+      "x": "NEARSIGHTED T CELLS, PERFECT-VISION B CELLS. Before the receptors themselves, hold the metaphor Gregg leaned on. T cells are nearsighted: they cannot see free antigen — it must be processed into peptide and displayed on MHC by an antigen-presenting cell, which holds it up close so the TCR can read it. B cells have perfect vision: the BCR binds native, unprocessed antigen directly, no helper needed. That difference shapes the structure and behavior of both receptors."
+     },
+     {
+      "t": "cq",
+      "x": "T cells nearsighted (need peptide on MHC via APC); B cells perfect vision (bind native antigen directly). (T vs B antigen access)"
+     },
+     {
+      "t": "p",
+      "x": "B cells recognize native antigen directly through the BCR — no processing or presentation required."
+     },
+     {
+      "t": "p",
+      "x": "T cells express a TCR that reads antigen only as peptide displayed on MHC by an antigen-presenting cell."
+     },
+     {
+      "t": "p",
+      "x": "TCR components: an αβ recognition heterodimer plus CD3 and zeta (ζ) signaling chains that dock ZAP-70 on activation."
+     },
+     {
+      "t": "p",
+      "x": "THE TCR — recognition plus signaling. The T-cell receptor has two functional parts. The α and β chains form the antigen-recognition heterodimer; each chain has a variable region (changes to recognize different antigens) and a constant region (fixed), anchored by a transmembrane segment. Bolted alongside are the CD3 and zeta (ζ) signaling chains — when the αβ dimer engages peptide-MHC, the CD3/zeta cytoplasmic tails get phosphorylated and dock adaptors like ZAP-70, launching activation → proliferation → effector function. The whole αβ receptor is assembled by random V(D)J recombination in the thymus, then tested against self."
+     },
+     {
+      "t": "cq",
+      "x": "TCR: αβ = recognition (variable + constant); CD3 + zeta = signaling (dock ZAP-70). Built by V(D)J in the thymus. (TCR components)"
+     },
+     {
+      "t": "p",
+      "x": "BCR components: two heavy and two light chains, each with a variable (antigen-binding) and a constant region."
+     },
+     {
+      "t": "p",
+      "x": "THE BCR — heavy and light chains. The B-cell receptor is built from two heavy chains and two light chains, each chain again split into a variable (antigen-binding) region and a constant region. The variable regions of the heavy and light chains together form the antigen-binding site; the constant region is fixed. Like the TCR, a transmembrane segment anchors it in the membrane — and that anchor is exactly what gets removed when the B cell becomes a plasma cell and secretes the receptor as antibody (LO 6.9)."
+     },
+     {
+      "t": "cq",
+      "x": "BCR: two heavy + two light chains, each with variable (antigen-binding) + constant regions. (BCR components)"
+     },
+     {
+      "t": "confusion",
+      "x": "Don’t mix the chains: αβ belong to the TCR; heavy/light belong to the BCR. CD3 and zeta are TCR signaling chains, not recognition chains."
+     },
+     {
+      "t": "key",
+      "x": "TCR = αβ recognition + CD3/zeta signaling. BCR = 2 heavy + 2 light chains, each variable + constant. Both assembled by random V(D)J; both have a transmembrane anchor."
+     },
+     {
+      "t": "pearl",
+      "x": "Nearsighted T, perfect-vision B is the single best way to remember why T cells need an APC + MHC and B cells don’t — and it explains the whole presentation story in Lec 7."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The TCR has an αβ heterodimer for antigen recognition (each chain with variable and constant regions) plus CD3 and zeta chains for signaling. The BCR has two heavy and two light chains, each with variable (antigen-binding) and constant regions. T cells need processed peptide on MHC; B cells bind native antigen directly."
+     }
+    ]
+   },
+   {
+    "id": 19,
+    "statement": "Lec 7 · Exogenous Antigen Presentation",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A bacterium is growing inside a macrophage’s phagosome. Is its antigen endogenous or exogenous, and why does the answer NOT depend on the fact that it is “inside a cell”?"
+     },
+     {
+      "t": "p",
+      "x": "THE UNIFYING DISTINCTION. There are two presentation pathways, and the single fact that sorts every antigen between them is where the protein is made or held — cytosol versus vesicle. The endogenous pathway handles protein synthesized in the cytosol (your own proteins, or a"
+     },
+     {
+      "t": "p",
+      "x": "virus replicating in the cytoplasm), routes it through class I, and shows it to CD8 cells for cell-mediated killing. The exogenous pathway handles protein taken into a vesicle — either phagocytosed from outside or growing inside a phagosome — routes it through class II, and shows it to CD4 cells for help. Hold onto the location rule and the rest follows."
+     },
+     {
+      "t": "cq",
+      "x": "Endogenous = cytosolic protein → class I → CD8; exogenous = vesicular protein → class II → CD4. (the master sorting rule)"
+     },
+     {
+      "t": "p",
+      "x": "T cells are MHC-restricted AND class-restricted: CD4→class II, CD8→class I (“it always has to equal 8”)."
+     },
+     {
+      "t": "p",
+      "x": "APC presenting on class I is recognized by a CD8 cell → clonal proliferation into cytotoxic T lymphocytes."
+     },
+     {
+      "t": "p",
+      "x": "APC presenting on class II is recognized by a CD4 cell → differentiation into helper subsets that license B cells."
+     },
+     {
+      "t": "p",
+      "x": "CLASS RESTRICTION — the “equal 8” hook. T cells are not only restricted to self-MHC, they are class-restricted: a CD4 cell reads class II, a CD8 cell reads class I, and they cannot cross over. Davis’s mnemonic is the one students actually remember on exam day — the numbers always multiply to 8: 4×2 and 8×1. The architectural reason the pairing is enforced is the set of “knobs” on the MHC that engage the correct co-receptor, but the test reward is just getting the direction right under pressure."
+     },
+     {
+      "t": "p",
+      "x": "THE TWO ENDPOINTS. Once a naive cell is activated in the lymph node or spleen, it undergoes clonal proliferation and differentiation. A class I–activated CD8 becomes a cytotoxic T lymphocyte (CTL) that circulates and kills any cell displaying the same peptide-MHC that activated it — this is cell-mediated immunity. A class II–activated CD4 becomes a helper subset (Th1, Th2, Th17, Treg) that licenses B cells and shapes which antibody isotype they make — this is the gateway to humoral immunity. Recall from the first lecture that this is the same clonal-proliferation-then-differentiate logic; we will see CD8 effector killing again in LO 12.3 and CD4 differentiation in LO 12.1."
+     },
+     {
+      "t": "cq",
+      "x": "Class restriction: CD4→class II, CD8→class I — “it always has to equal 8” (4×2, 8×1). (class-restriction mnemonic) CQ Activated CD8 → CTL (cell-mediated); activated CD4 → helper subsets (gateway to humoral). (pathway endpoints)"
+     },
+     {
+      "t": "p",
+      "x": "Endogenous pathway overview: cytosolic protein → proteasome → TAP → class I in ER → surface → CD8."
+     },
+     {
+      "t": "p",
+      "x": "Exogenous pathway overview: phagocytosed antigen → phagolysosome → class II loading → surface → CD4."
+     },
+     {
+      "t": "p",
+      "x": "Class I vs class II side by side — the single best summary slide: uptake, processing, loading compartment, and which T cell reads each."
+     },
+     {
+      "t": "p",
+      "x": "THE CYTOSOL-VS-INSIDE TRAP. Here is where the exam loves to set you up. “Inside the cell” is not the same as “in the cytosol.” Mycobacterium and Listeria grow inside a macrophage, but they sit in a vesicle, making their proteins in the phagosome rather than the cytosol. That makes them exogenous / class II / CD4, even though they are physically intracellular. Davis calls these intravesicular pathogens and contrasts them with a cytosolic virus, which is endogenous. If a stem stresses that the organism is “growing inside the phagosome,” the location rule — vesicle, not cytosol — gives you class II."
+     },
+     {
+      "t": "key",
+      "x": "One rule sorts everything: location of the protein. Cytosol → endogenous → class I → CD8. Vesicle (phagocytosed OR intravesicular) → exogenous → class II → CD4."
+     },
+     {
+      "t": "trap",
+      "x": "“Inside a cell” ≠ “in the cytosol.” Intravesicular pathogens (Mycobacterium, Listeria) grow inside the cell but in a vesicle → exogenous → class II / CD4. Only cytosolic protein is endogenous / class I."
+     },
+     {
+      "t": "cue",
+      "x": "On a vignette, find the antigen’s compartment first. Cytosolic virus → CD8/CTL answer. Phagocytosed or intravesicular bug → CD4/helper answer. Decide compartment, then everything else falls out."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Exogenous. Although the bacterium is physically inside the cell, it resides in a vesicle (phagosome) and makes its proteins there, not in the cytosol — and the pathway is decided by compartment (cytosol vs vesicle), not by whether the antigen is intracellular. Vesicular location → class II → CD4."
+     }
+    ]
+   },
+   {
+    "id": 20,
+    "statement": "Lec 7 · Molecules Of Antigen Presentation",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "HLA-DM carries the “HLA-D” name of the class II family — so why is it a mistake to call it an MHC class II molecule, and what does it actually do?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Each pathway is a little assembly line, and the testable content here is the named worker at each station. The trap the exam exploits is that several of these workers are accessory molecules — chaperones and transporters — not MHC molecules themselves. Keep the class I line and the class II line on separate tracks in your head and assign each molecule to one."
+     },
+     {
+      "t": "p",
+      "x": "THE CLASS I LINE (endogenous). A cytosolic protein is tagged with ubiquitin and fed into the proteasome — Davis’s “wood chipper,” big protein in, small peptides out. During infection, IFN-γ remodels it into the immunoproteasome, which preferentially cuts after hydrophobic or basic"
+     },
+     {
+      "t": "p",
+      "x": "residues so the fragments carry good class I anchors. Those peptides then cross from cytosol into the ER through TAP1/TAP2, the ATP-dependent transporter associated with antigen processing. Waiting in the ER, the empty class I α chain is held by the chaperone calnexin, which stabilizes it until β2-microglobulin binds and also keeps empty molecules from leaving prematurely; tapasin then tethers the class I molecule near the TAP channel so peptides can be tried on as they arrive."
+     },
+     {
+      "t": "cq",
+      "x": "Class I peptides are made by the proteasome/immunoproteasome; IFN-γ induces the immunoproteasome for better anchors. (class I peptide generation) CQ TAP1/TAP2 moves peptides cytosol→ER (ATP-dependent); calnexin stabilizes class I until β2m binds; tapasin docks it at TAP. (class I ER machinery)"
+     },
+     {
+      "t": "p",
+      "x": "Calnexin stabilizes the class I α chain in the ER; tapasin positions it at the TAP gateway for loading."
+     },
+     {
+      "t": "p",
+      "x": "Endogenous antigen processing: cytosolic protein degraded by the proteasome into peptides for class I."
+     },
+     {
+      "t": "p",
+      "x": "IFN-γ converts the proteasome to the immunoproteasome; IFN-α/β drive the antiviral state."
+     },
+     {
+      "t": "p",
+      "x": "Full class I trafficking: proteasome → TAP into ER → assembly with β2m/chaperone/tapasin → surface → CD8."
+     },
+     {
+      "t": "p",
+      "x": "THE CLASS II LINE (exogenous). Antigen taken into a vesicle meets the phagolysosome, where the pH is dropped and cathepsins — enzymes, not a structure — do the cutting that the proteasome does on the other track. Meanwhile class II is also built in the ER (both classes are), so the cell must stop cytosolic peptides from loading into class II by mistake. It does this with the invariant chain (Ii), which has three jobs: it chaperones class II folding, blocks the binding cleft from endogenous peptide, and routes the class II molecule to the endosomal compartment. In the vesicle the invariant chain is trimmed down to a remnant called CLIP still sitting in the groove."
+     },
+     {
+      "t": "p",
+      "x": "HLA-DM — the molecule Davis flags hardest. The class II molecules are DP, DQ, DR. HLA-DM shares that “HLA-D” naming but is not an MHC class II molecule — it is an accessory molecule, “kind of like tapasin or calnexin.” Its job is to remove CLIP and facilitate peptide loading into the now-open class II cleft. Davis stops and says “now remember this is important” precisely because the name invites you to mis-file it as a presenting molecule. Once loaded, the class II–peptide complex moves to the APC surface for a CD4 cell."
+     },
+     {
+      "t": "cq",
+      "x": "Class II peptides are cut by cathepsins in the phagolysosome (the enzyme analog of the proteasome). (class II peptide generation) CQ Invariant chain (Ii) chaperones class II, blocks the cleft, and routes it to the vesicle; its remnant is CLIP. (invariant chain three roles) CQ HLA-DM is an accessory molecule (NOT a class II molecule) that removes CLIP and loads peptide. (HLA-DM identity + job)"
+     },
+     {
+      "t": "p",
+      "x": "In the vesicle, invariant chain is trimmed to CLIP, which still blocks the binding cleft until exchange."
+     },
+     {
+      "t": "p",
+      "x": "Invariant chain occupies the class II cleft in the ER, blocking endogenous peptide and routing class II to the vesicle."
+     },
+     {
+      "t": "p",
+      "x": "HLA-DM removes CLIP and facilitates loading of antigenic peptide — then class II moves to the surface for CD4."
+     },
+     {
+      "t": "confusion",
+      "x": "HLA-DM is NOT an MHC class II molecule. The class II presenting molecules are DP/DQ/DR. HLA-DM is an accessory molecule (like tapasin/calnexin) that swaps out CLIP. The shared “HLA-D” name is the bait."
+     },
+     {
+      "t": "key",
+      "x": "Same job, different track: proteasome (class I, cytosol) and cathepsins (class II, vesicle) both cut protein into peptides. TAP (class I) and HLA-DM (class II) both make loading possible — on opposite lines."
+     },
+     {
+      "t": "pearl",
+      "x": "Both class I and class II are built in the ER. The difference is where they load — class I in the ER, class II in the vesicle — which is exactly why the invariant chain has to guard the class II cleft until it reaches the vesicle."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: HLA-DM shares the HLA-D family name but is an accessory molecule, like tapasin or calnexin — not a peptide-presenting class II molecule (those are DP/DQ/DR). Its job is to remove CLIP from the class II cleft and facilitate loading of antigenic peptide in the acidic vesicle."
+     },
+     {
+      "t": "q",
+      "x": "A cytotoxic T cell finds a virally infected epithelial cell in the throat. Trace why this is “cell-mediated immunity” and how it differs from what a CD4 cell would have done."
+     },
+     {
+      "t": "p",
+      "x": "THE TWO ARMS. The pathway you load determines the kind of immunity you get. Class I → CD8 → CTL → killing of infected cells is cell-mediated immunity. Class II → CD4 → helper subsets → B-cell licensing is the gateway to humoral immunity. Davis returns to her day-one line here as the anchor: “T cells don’t kill pathogens, they kill infected cells.” A CTL does not chase a free virus; it recognizes the peptide-MHC on a host cell that has been hijacked and destroys that cell."
+     },
+     {
+      "t": "cq",
+      "x": "Class I/CD8 → cell-mediated immunity (CTL kills infected cells); class II/CD4 → humoral (B-cell help). (pathway → immune arm) CQ CTLs kill infected cells, not free pathogens — they recognize peptide-MHC on a hijacked host cell. (core CTL principle)"
+     },
+     {
+      "t": "pearl",
+      "x": "Class II peptide binding: longer peptides in an open-ended cleft — the CD4/humoral arm."
+     },
+     {
+      "t": "confusion",
+      "x": "MHC class I molecules (HLA-A/B/C) on all nucleated cells — the cell-mediated arm read by CD8 cells."
+     },
+     {
+      "t": "key",
+      "x": "Class I peptide binding: ~8–10 aa held by anchor residues, optimal length 9, ends pinned in a closed cleft. Anchor residues with defined chemistry (hydrophobic/basic/charged) let one groove bind many peptides."
+     },
+     {
+      "t": "p",
+      "x": "WHY HEALTHY CELLS STILL PRESENT. Every nucleated cell constantly shows self-peptide on class I even when uninfected. That is not wasted effort — it is the signal NK cells read. A cell that downregulates class I to hide from CD8 surveillance (a favorite viral and tumor trick) triggers the NK “missing-self” response and gets killed anyway. Davis frames it as plan A (CTL) and plan B (NK): lose your MHC to dodge the T cell, and the NK cell finishes the job. On the CD4 side, the helper cell that recognizes class II goes on to license B cells and steer isotype switching — IgA at mucosa, IgG in tissue, IgE in allergy/parasite settings — which is how presentation choice ultimately shapes the antibody response."
+     },
+     {
+      "t": "key",
+      "x": "“T cells don’t kill pathogens — they kill infected cells.” Davis’s day-one line and the spine of LO 7.4. Class I/CD8 = cell-mediated killing; class II/CD4 = humoral help."
+     },
+     {
+      "t": "pearl",
+      "x": "Constant self-peptide on class I is the NK “billboard.” Downregulate class I to dodge CD8 (plan A) and you trip NK missing-self (plan B). Evasion of one arm exposes you to the other."
+     },
+     {
+      "t": "cue",
+      "x": "Stem says “kills the infected cell directly” → CD8/CTL/class I. Stem says “helps B cells / drives antibody isotype” → CD4/class II. Match the verb to the arm."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The virus is made in the infected cell’s cytosol → class I → the CD8 CTL recognizes peptide-MHC on that host cell and lyses it: killing an infected host cell is cell-mediated immunity. A CD4 cell, by contrast, would have read class II on an APC and helped B cells make antibody — it would not itself kill the infected cell."
+     },
+     {
+      "t": "q",
+      "x": "If a patient loses TAP function entirely, which arm of adaptive immunity collapses, which is spared, and what infection pattern results?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. This is the LO Davis builds toward with the self-study prompt on the class I-vs-II slide: “what happens if a mutation prevents class I or class II expression on the APCs?” The way to answer any presentation-deficiency question is to ask which line is broken and then read off the downstream arm. Break the class I line and you lose CD8/cell-mediated immunity; break the class II line and you lose CD4 help, which takes the antibody response down with it because most antibody responses are T-dependent."
+     },
+     {
+      "t": "p",
+      "x": "WORKED CASES. Lose TAP and peptides never reach the ER → class I cannot be loaded → low CD8/CTL responses and recurrent viral infections, while the class II/CD4/antibody arm — which loads in the vesicle independent of TAP — is comparatively spared. Lose class II (bare lymphocyte syndrome, class II) and CD4 cells are not primed → low CD4 and failed T-dependent antibody responses, with class I/CD8 relatively intact. The pattern is always the same: a presentation defect knocks out the arm it feeds, and the spared arm tells you which line stayed open. NK cells can blunt but not replace antigen-specific CTL immunity, so “NK fully compensates” is never the right answer."
+     },
+     {
+      "t": "cq",
+      "x": "TAP loss → no class I loading → low CD8/CTL → viral susceptibility; CD4/antibody spared (TAP-independent). (TAP-deficiency phenotype) CQ Class II loss (bare lymphocyte syndrome II) → no CD4 priming → low CD4 + poor T-dependent antibody. (class II-deficiency phenotype)"
+     },
+     {
+      "t": "pearl",
+      "x": "CD1 follows the class II vesicular pathway but has a class I-like structure including β2-microglobulin. CD1 is recognized by invariant NKT cells (invariant α chain + β chain TCR); also involved in anti-tumor surveillance."
+     },
+     {
+      "t": "confusion",
+      "x": "Nonclassical antigens: lipid/glycolipid/phospholipid presented on CD1 (not classical MHC) — relevant to mycobacterial cell-wall lipids."
+     },
+     {
+      "t": "p",
+      "x": "NONCLASSICAL FOOTNOTE. Davis closes with a brief, low-emphasis aside (Tier 1): not every antigen is a protein. Lipid and glycolipid antigens — think mycobacterial cell wall — are too hydrophobic for the classical grooves and are instead presented on CD1, a non-polymorphic molecule with a class I-like structure (including β2m) that nonetheless trafficks through the class II vesicular pathway. CD1 is read by invariant NKT cells. It is worth recognizing, not memorizing in depth."
+     },
+     {
+      "t": "key",
+      "x": "CD1 presents lipid antigen to invariant NKT cells: class I-like structure (with β2m) but class II-style vesicular trafficking. Recognize it; don’t over-study it (Tier 1)."
+     },
+     {
+      "t": "cue",
+      "x": "Presentation-defect question? Ask which line broke. Class I line down → CD8/cell-mediated fails (viral infections). Class II line down → CD4 help fails → antibody fails. The spared arm reveals the open line."
+     },
+     {
+      "t": "trap",
+      "x": "“NK cells fully compensate for absent class I” is a distractor. NK cells exploit missing-self and help, but they do not replace antigen-specific CTL immunity — TAP/class I patients still get sick with viruses."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Cell-mediated immunity collapses: no TAP → no peptide into the ER → no class I loading → deficient CD8/CTL responses and recurrent viral infections. The class II/CD4/antibody arm is spared because class II loads in the vesicle independent of TAP. NK cells help via missing-self but cannot fully substitute for antigen-specific CTLs."
+     }
+    ]
+   },
+   {
+    "id": 21,
+    "statement": "Lec 7 · Defects In Peptide Transport",
+    "blocks": []
+   },
+   {
+    "id": 22,
+    "statement": "Lec 8 · Allelic Exclusion And Gene Rearrangement",
+    "blocks": []
+   },
+   {
+    "id": 23,
+    "statement": "Lec 8 · Gene Arrangement In B Cell Receptors",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Walk the heavy chain from germline DNA to a surface receptor. At which single step does failure doom the cell, and why?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. This LO is the ordered choreography of V(D)J recombination — the actual sequence of cuts, joins, and checkpoints. The unifying idea is that rearrangement proceeds in a fixed order with a checkpoint: the heavy chain goes first, and only a successful, in-frame heavy chain licenses the light chain to proceed. Fail the checkpoint and the cell dies. Everything else is the mechanics around that gate."
+     },
+     {
+      "t": "p",
+      "x": "HEAVY CHAIN FIRST — D-J, THEN V-DJ. Heavy-chain rearrangement leads, and within it the order is specific: D joins J first, then V joins the DJ. You cannot skip the D segment (>99% of the time). When the DNA is cut and religated, the join is only productive if it lands in frame; an out-of-frame join makes no protein. The cell gets two tries (maternal and paternal alleles), but if both heavy-chain alleles fail to produce an in-frame product, there is no heavy chain — and the cell undergoes apoptosis. This is the load-bearing checkpoint."
+     },
+     {
+      "t": "cq",
+      "x": "Heavy chain rearranges first; order is D-J then V-DJ (you cannot skip D). (heavy-chain join order) CQ An in-frame heavy chain is the checkpoint; both alleles failing → apoptosis. (heavy-chain checkpoint)"
+     },
+     {
+      "t": "p",
+      "x": "Alternative splicing of the heavy-chain transcript generates the mature IgM and IgD mRNAs."
+     },
+     {
+      "t": "p",
+      "x": "Light-chain (kappa) rearrangement: V→J joining, then splicing removes extra J introns to the mRNA."
+     },
+     {
+      "t": "p",
+      "x": "Heavy-chain rearrangement: D→J joining, then V→DJ; DNA is permanently altered (deleted segments are gone)."
+     },
+     {
+      "t": "p",
+      "x": "Primary transcript includes introns and extra J segments; transcribed through μ and δ for IgM/IgD."
+     },
+     {
+      "t": "p",
+      "x": "LIGHT CHAIN SECOND — only if heavy succeeds. A successful heavy chain triggers light-chain rearrangement, which starts with kappa (isotypic exclusion suppressing lambda); lambda proceeds only if kappa fails in frame. Light chains use simple V-J joining. At every stage the rule is the same: an out-of-frame or non-productive rearrangement that exhausts the available alleles sends the cell to apoptosis — the immune system would rather kill a non-functional precursor than let it linger."
+     },
+     {
+      "t": "p",
+      "x": "FROM DNA TO PROTEIN. Once segments are joined, the rearranged DNA is permanently altered — the intervening segments are deleted and degraded, never recovered. Transcription makes a primary RNA that still contains extra J segments and introns; splicing removes them to yield mature mRNA. For the heavy chain specifically, alternative splicing across Cμ and Cδ produces both IgM and IgD (LO 8.4); for the light chain, ordinary splicing just trims the extra J introns. Translation then sends the chains to the ER, where heavy and light pair into a complete receptor displayed on the surface. The same V(D)J choreography runs in T cells in the thymus — β/δ like a heavy chain, α/γ like a light chain."
+     },
+     {
+      "t": "cq",
+      "x": "Light chain rearranges only if heavy succeeds; starts with kappa (V-J), lambda only on kappa failure. (light-chain order) CQ Rearranged DNA is permanently altered (segments deleted); splicing trims introns/extra J to mature mRNA. (DNA-to-mRNA processing)"
+     },
+     {
+      "t": "key",
+      "x": "Fixed order with a gate: heavy first (D-J then V-DJ) → checkpoint → light second (V-J, kappa first). An in-frame heavy chain is the permission slip for everything downstream."
+     },
+     {
+      "t": "trap",
+      "x": "Heavy-chain order is D-J first, then V-DJ — not V-D first. And you cannot skip the D segment. A stem that joins V to D before D-J is describing the wrong sequence."
+     },
+     {
+      "t": "pearl",
+      "x": "Failure → apoptosis. No in-frame heavy chain means no light-chain rearrangement and a dead precursor. The system discards non-functional cells rather than tolerating them."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Germline DNA → D-J joining → V-DJ joining → in-frame check → (if productive) transcription, splicing to mRNA, translation, ER pairing with light chain, surface display. The doomed step is the in-frame heavy-chain checkpoint: if both alleles join out of frame there is no heavy chain, light-chain rearrangement never starts, and the cell undergoes apoptosis."
+     }
+    ]
+   },
+   {
+    "id": 24,
+    "statement": "Lec 9 · Rss Heptamer",
+    "blocks": []
+   },
+   {
+    "id": 25,
+    "statement": "Lec 9 · Regulatory Enzymes Of Gene Rearrangement",
+    "blocks": []
+   },
+   {
+    "id": 26,
+    "statement": "Lec 9 · Somatic Hypermutation Diversity In Bcrs",
+    "blocks": []
+   },
+   {
+    "id": 27,
+    "statement": "Lec 10 · Steps In T Cell Development",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A thymocyte has made a β chain but has no α chain yet. How does it prove the β chain is real and in-frame — and what is the consequence if it cannot?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. T-cell ontogeny is a staged assembly line with two go/no-go checkpoints. The unifying idea: a thymocyte must first build a working TCR (the double-negative stages, gated by proving each chain is in-frame) and only then is it tested against self (selection, the next LO). Everything that follows hangs on that order — build first, select second — and on the fact that nearly all of it happens in the cortex."
+     },
+     {
+      "t": "p",
+      "x": "WHERE AND WHAT. A hematopoietic progenitor commits to the T lineage, leaves the marrow, and enters the thymus as a thymocyte, arriving through the subcapsular region and moving into the outer cortex. Because it expresses neither co-receptor, it is double-negative (DN) — CD4− CD8−. There are four DN stages, and the TCR β chain is assembled across them in the same order as a B-cell heavy chain: D-J first, then V-DJ."
+     },
+     {
+      "t": "cq",
+      "x": "Progenitor → thymus → thymocyte; enters via subcapsular region into the outer cortex; starts double-negative. (entry / DN start) CQ DN1 Notch1 + IL-7 commit T-lineage; DN2 β D-J join (RAG up); DN3 β V-DJ join completes β. (DN1–DN3 β rearrangement)"
+     },
+     {
+      "t": "p",
+      "x": "DN2: β-chain D-J joining begins (RAG1/RAG2 upregulated); γ/δ genes rearrange in parallel."
+     },
+     {
+      "t": "p",
+      "x": "DN3: V-DJ joining completes the β chain; splicing yields β mRNA, then β-chain protein."
+     },
+     {
+      "t": "p",
+      "x": "DN1: progenitor expresses Notch1; cTECs express Notch ligand and IL-7, committing the cell to the T lineage."
+     },
+     {
+      "t": "p",
+      "x": "CHECKPOINT 1 — prove the β chain (DN3). Most rearrangements fail in frame, so the cell must prove it made a real β chain before investing in an α chain. It cannot wait for the α chain, so it builds an invariant surrogate pre-T-α chain (no V(D)J — the same sequence in everyone), pairs it with the β chain plus the CD3 complex and ζ chains, and sends this pre-TCR to the surface. Reaching the surface IS the proof — “yes, there is a β chain.” Fail this checkpoint and the cell undergoes apoptosis. Success triggers a round of proliferation (one good β chain copied into many cells), because the next step also has a high failure rate."
+     },
+     {
+      "t": "p",
+      "x": "CHECKPOINT 2 — prove the α chain (DN4). RAG1/RAG2 are re-expressed and the α chain rearranges (V-J). Now a real α chain pairs with the β chain (plus CD3/ζ) to form a complete αβ TCR — checkpoint 2 confirms an in-frame α chain. Allelic exclusion applies throughout (mom’s or dad’s allele wins), with the α-chain bypass exception from Lecture 9. Having proven both chains, the cell finally upregulates both CD4 and CD8 to become double-positive (DP) — and only now is it ready for selection."
+     },
+     {
+      "t": "cq",
+      "x": "Checkpoint 1 (DN3): β + surrogate pre-T-α + CD3/ζ → pre-TCR to surface proves β; fail → apoptosis, pass → proliferation. (checkpoint 1) CQ Checkpoint 2 (DN4): α V-J rearranges → complete αβ TCR; then upregulate CD4 + CD8 → double-positive. (checkpoint 2 → DP)"
+     },
+     {
+      "t": "p",
+      "x": "Checkpoint 1: the pre-TCR (β + pre-T-α + CD3 + ζ) on the surface confirms a successful β-chain rearrangement."
+     },
+     {
+      "t": "p",
+      "x": "DN4: RAG re-expressed; α-chain V-J rearrangement forms a complete TCR — checkpoint 2 confirms the α chain."
+     },
+     {
+      "t": "p",
+      "x": "Double-positive: CD4 and CD8 are both upregulated alongside the complete αβ TCR and CD3/ζ."
+     },
+     {
+      "t": "p",
+      "x": "WHY THE ORDER MATTERS. The checkpoints exist because random rearrangement is wasteful — the cell refuses to build the second chain until the first is proven, and refuses to express co-receptors until a whole TCR exists. Proliferation after checkpoint 1 rescues yield from the high α-chain failure rate. Hold this thread into the next LO: a double-positive cell with a complete TCR has earned the right to be tested against self, and that test (positive then negative selection) is what turns a DP thymocyte into a single mature T cell."
+     },
+     {
+      "t": "confusion",
+      "x": "The pre-T-α (surrogate α) is invariant — it does NOT undergo V(D)J and is the same in everyone. Its only job is to escort the β chain to the surface for checkpoint 1."
+     },
+     {
+      "t": "pearl",
+      "x": "β-chain order mirrors the heavy chain: D-J (DN2) before V-DJ (DN3). The α chain (V-J) comes last, in DN4. Build the receptor first; selection comes only after the double-positive stage."
+     },
+     {
+      "t": "key",
+      "x": "Two checkpoints gate the build: checkpoint 1 (DN3) proves the β chain via the surrogate pre-T-α pre-TCR; checkpoint 2 (DN4) proves the α chain via the complete αβ TCR. Then CD4+CD8 → double-positive."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: It builds an invariant surrogate pre-T-α chain, pairs it with the β chain plus CD3 and ζ, and displays this pre-TCR on the surface — reaching the surface is the proof that an in-frame β chain was made (checkpoint 1, DN3). If it cannot, the thymocyte undergoes apoptosis; if it can, it proliferates and proceeds to rearrange the α chain at DN4."
+     }
+    ]
+   },
+   {
+    "id": 28,
+    "statement": "Lec 10 · Function On Notch1",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Two thymic epithelial cell types do superficially similar jobs — presenting MHC to thymocytes — yet they sit in different regions and serve opposite halves of education. Name them and their distinct roles."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. The thymus has two regions — outer cortex and inner medulla — each stocked with specific cells for specific steps. The unifying idea: cortex = build + positive selection, medulla = final negative selection + Treg induction. Knowing which cell lives where and what signal it provides answers most component questions, because the location maps directly onto the step."
+     },
+     {
+      "t": "p",
+      "x": "CORTEX COMPONENTS. The cortical thymic epithelial cells (cTECs) are the workhorses: they express Notch ligand and secrete IL-7 to push the progenitor down the T-cell road and support development, and later they display class I and class II MHC for positive selection. Dendritic cells also present MHC-peptide during selection, and macrophages clear the many thymocytes that fail and die. The Notch1 (thymocyte) – Notch-ligand (cTEC) interaction is decisive: too little permits aberrant B-cell development in the thymus; Notch1 overexpression in marrow can drive ectopic T-cell development there."
+     },
+     {
+      "t": "cq",
+      "x": "Cortex = cTECs (Notch ligand + IL-7, then MHC I/II), dendritic cells, macrophages; site of build + positive selection. (cortex components) CQ Notch1 – Notch ligand commits T-lineage; too little → thymic B cells, marrow overexpression → marrow T cells. (Notch signaling)"
+     },
+     {
+      "t": "p",
+      "x": "Thymus structure: two regions — outer cortex and inner medulla — each with distinct cells and steps."
+     },
+     {
+      "t": "p",
+      "x": "Medulla cells: mTECs and dendritic cells present self-peptides for negative selection; macrophages remove apoptotic cells."
+     },
+     {
+      "t": "p",
+      "x": "Cortex cells: cTECs (express Notch ligand and IL-7, promote development), macrophages (clear apoptotic thymocytes), dendritic cells (present peptide)."
+     },
+     {
+      "t": "p",
+      "x": "MEDULLA COMPONENTS. The medullary thymic epithelial cells (mTECs) and dendritic cells present self-peptide on MHC for the second round of negative selection. Their special tool is AIRE (autoimmune regulator), which drives mTECs to express tissue-restricted self-antigens they would not normally make — so thymocytes reactive to peripheral tissues can be deleted centrally. The clinical hook: an AIRE mutation causes autoimmune polyendocrine syndrome. The medulla also contains Hassall’s corpuscles, where mTECs express thymic stromal lymphopoietin (TSLP); TSLP prompts dendritic cells to drive a small subset of thymocytes to express FoxP3 and become regulatory T cells (Tregs)."
+     },
+     {
+      "t": "cq",
+      "x": "Medulla = mTECs + dendritic cells (self-peptide for negative selection) using AIRE; AIRE mutation → autoimmune polyendocrine syndrome. (medulla / AIRE) CQ Hassall’s corpuscles → mTEC TSLP → DCs induce FoxP3 → Tregs. (Hassall’s / TSLP / Tregs)"
+     },
+     {
+      "t": "p",
+      "x": "Inner medulla: Hassall’s corpuscles express TSLP, which triggers DCs to induce FoxP3+ regulatory T cells."
+     },
+     {
+      "t": "p",
+      "x": "mTECs express AIRE (autoimmune regulator) to display tissue-restricted self-antigens for negative selection."
+     },
+     {
+      "t": "p",
+      "x": "WHY THIS MATTERS. The component list is really a map: if a question places an event in the cortex, the actors are cTECs/DCs/macrophages and the step is build or positive selection; if in the medulla, the actors are mTECs/DCs (with AIRE) and Hassall’s corpuscles, and the step is negative selection or Treg induction. AIRE and FoxP3 are the two named molecules most likely to be tested, each tied to a clinical consequence (autoimmunity when AIRE fails; tolerance when FoxP3 drives Tregs)."
+     },
+     {
+      "t": "key",
+      "x": "Location = function. cTECs (cortex): Notch ligand + IL-7, then positive selection. mTECs (medulla): AIRE-driven self-antigen for negative selection. Hassall’s corpuscles → TSLP → Tregs."
+     },
+     {
+      "t": "trap",
+      "x": "Don’t swap cTECs and mTECs. cTEC = cortex = positive selection; mTEC = medulla = negative selection (with AIRE). The first letters line up: c-cortex, m-medulla."
+     },
+     {
+      "t": "pearl",
+      "x": "Two named molecules carry clinical weight: AIRE (loss → autoimmune polyendocrine syndrome) and FoxP3 (drives Tregs; its failure → loss of tolerance). Expect both on an exam."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Cortical thymic epithelial cells (cTECs) sit in the cortex and mediate positive selection (after first providing Notch ligand and IL-7); medullary thymic epithelial cells (mTECs) sit in the medulla and mediate negative selection, using AIRE to express tissue-restricted self-antigens. Same MHC-presentation activity, opposite halves of education, different regions."
+     }
+    ]
+   },
+   {
+    "id": 29,
+    "statement": "Lec 10 · Gamma Delta T Cell Development",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Both lineages rearrange their TCR genes in the cortex, yet only one runs the full selection gauntlet. Which one skips it, where does it branch off, and what is it built to do?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Most of this lecture followed the αβ lineage; this LO contrasts it with the γδ minority. The unifying idea: αβ cells are the heavily-educated majority built for MHC-restricted, body-wide surveillance, while γδ cells are an early-branching minority that skip selection and guard barrier tissues. The split happens early, and the developmental shortcut matches their different job."
+     },
+     {
+      "t": "p",
+      "x": "THE αβ PATH (the default). αβ thymocytes are ~95–97% of T cells. They run the full program from this lecture: DN stages, both checkpoints, the double-positive stage, then positive and negative selection, emerging as MHC-restricted single-positive CD4 or CD8 cells. They populate the entire body and can recognize essentially any peptide on MHC."
+     },
+     {
+      "t": "p",
+      "x": "THE γδ PATH (the shortcut). The γ, δ, and β genes attempt rearrangement simultaneously; if a successful γδ TCR forms (before β succeeds, or because both β alleles failed), the cell commits to the γδ lineage and exits the thymus early — around DN2/DN3 — without positive or negative selection. γδ cells therefore remain largely double-negative (CD4− CD8−; rare CD8+ examples exist, never CD4+). They are enriched in mucosa and skin (gut, lung), are more prominent before birth (helping infants guard developing mucosa/flora), have a less diverse repertoire with preferred V/D/J combinations, and can recognize lipid antigens on CD1 — fitting targets like mycobacterial lipids at barrier surfaces."
+     },
+     {
+      "t": "cq",
+      "x": "αβ = ~95%, full selection → single-positive, body-wide, MHC-restricted. (αβ path) CQ γδ = exit at DN2/DN3 without selection, stay double-negative, mucosa/skin, CD1 lipids, more pre-birth. (γδ path)"
+     },
+     {
+      "t": "p",
+      "x": "γδ thymocytes branch off around DN2/DN3 and exit prior to positive/negative selection, remaining double-negative."
+     },
+     {
+      "t": "p",
+      "x": "All thymocytes start double-negative; γδ cells exit early to periphery without the selection steps αβ cells undergo."
+     },
+     {
+      "t": "p",
+      "x": "Summary: nearly every step is in the cortex; only the second negative-selection round (single-positive) is in the medulla."
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST — and a useful summary trick. Answering the anchor: the γδ lineage skips selection, branches off early (around DN2/DN3 in the cortex), stays double-negative, and is built to guard mucosa and skin using CD1-presented lipids. Davis offered a memory shortcut for the whole lecture: on the summary chart, almost everything happens in the cortex — the only step in the medulla is the second (single-positive) round of negative selection. So if a question asks where any stage (DN1–4, positive selection, death by neglect, the first negative round, γδ exit) occurs, the answer is the cortex unless it is specifically that single-positive medullary round. Memorize the short list (the one medullary step) and everything else is cortex by elimination."
+     },
+     {
+      "t": "trap",
+      "x": "γδ cells do NOT undergo positive or negative selection — they leave early and stay double-negative. Don’t apply MHC restriction or CD4/CD8 commitment to them."
+     },
+     {
+      "t": "key",
+      "x": "αβ: ~95%, fully selected, single-positive, body-wide. γδ: minority, NO positive/negative selection, exits at DN2/DN3, stays double-negative, mucosa/skin, CD1 lipids, more before birth."
+     },
+     {
+      "t": "pearl",
+      "x": "Summary shortcut: only the single-positive negative-selection round is in the medulla; everything else (DN stages, positive selection, death by neglect, γδ exit) is in the cortex. Memorize the one exception."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The γδ lineage skips selection: γ/δ/β genes rearrange together, and a successful γδ TCR makes the cell exit early — around DN2/DN3 in the cortex — without positive or negative selection, remaining double-negative. γδ cells guard mucosa and skin, are enriched before birth, and recognize lipid antigens on CD1. αβ cells, by contrast, run the full selection program and become MHC-restricted single-positive cells."
+     }
+    ]
+   },
+   {
+    "id": 30,
+    "statement": "Lec 11 · 3 Signals For T Cell Activation",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A naive T cell meets its antigen on a dendritic cell, yet nothing happens — no clone army. Two explanations: the DC was immature, or a signal was missing. What are the three signals, and which two does an immature DC fail to deliver?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. This is where antigen presentation (Lec 7) and the receptors (Lec 8–10) get put to use: the dendritic cell presents antigen, and the T cell responds. The unifying idea is a three-signal rule delivered by a mature APC: signal 1 = antigen, signal 2 = co-stimulation, signal 3 = cytokine. Signals 1+2 build the clone army; signal 3 weaponizes it. Miss a signal — or use an immature DC that cannot give signals 2 and 3 — and you get anergy, not activation."
+     },
+     {
+      "t": "p",
+      "x": "THE THREE PROFESSIONAL APCs. All three present antigen, but their jobs differ. Dendritic cells are THE primary primers: they capture antigen in tissue and traffic it to the lymph node to activate naive T cells. B cells present antigen too, but “selfishly” — not to activate the T cell, but to get close enough to receive help (the T-dependent antibody response). Macrophages stay in the tissue as phagocytic soldiers, presenting locally rather than migrating. Dendritic cells prime; macrophages fight and present at the target."
+     },
+     {
+      "t": "cq",
+      "x": "3 APCs: dendritic cells (prime naive T cells, traffic to node), B cells (present to GET help), macrophages (tissue soldiers, present locally). (three professional APCs) CQ Signal 1 = antigen/peptide-MHC→TCR; Signal 2 = CD28–B7 (B7 = CD80/CD86); Signal 3 = cytokine from APC. (the three signals)"
+     },
+     {
+      "t": "p",
+      "x": "Signal 3: the APC produces a cytokine that polarizes the T cell into Th1, Th2, or Th17."
+     },
+     {
+      "t": "p",
+      "x": "Three signals essential for T-cell activation: signal 1 (antigen), signal 2 (co-stimulation), signal 3 (cytokine) — all from the APC."
+     },
+     {
+      "t": "p",
+      "x": "Signal 2: microbial components/cytokines induce B7 (CD80/CD86) on the APC — co-stimulation binding CD28."
+     },
+     {
+      "t": "p",
+      "x": "SIGNALS 1+2 vs SIGNAL 3. The division of labor is testable. Signals 1 and 2 together drive clonal expansion — the proliferation (IL-2-driven) that builds a large army of T cells all recognizing the same antigen. Signal 3, the cytokine, drives differentiation — it tells the army which weapon to carry, polarizing the cells into Th1, Th2, or Th17 depending on the pathogen class. Without signal 3 you would have an army with no guns; without signals 1+2 you would have no army at all."
+     },
+     {
+      "t": "p",
+      "x": "WHY DC MATURATION IS THE GATEKEEPER. An immature DC captures antigen well but expresses little B7 and makes no cytokine — so it can give signal 1 but not signals 2 and 3. Something must mature it, classically TLR signaling (sensing danger), which upregulates CD80/CD86, switches on cytokine genes, and raises MHC. Only a mature DC supplies all three signals. Prime a T cell on an immature DC and it becomes anergic — no clone army — which is exactly one way tumors evade immunity (they block DC maturation)."
+     },
+     {
+      "t": "cq",
+      "x": "Signals 1+2 → clonal expansion (build the army); signal 3 → differentiation (Th1/Th2/Th17 — the weapon). (expansion vs differentiation) CQ Immature DC = signal 1 only → anergy; TLR signaling matures the DC → B7 + cytokine + MHC → all three signals. (DC maturation gate)"
+     },
+     {
+      "t": "p",
+      "x": "Signals 1+2 = proliferation (clone army); signal 3 = differentiation (weapons) into the effector T cell."
+     },
+     {
+      "t": "p",
+      "x": "Maturation of the DC is required: immature DCs capture antigen; mature DCs present it with full co-stimulation."
+     },
+     {
+      "t": "p",
+      "x": "Process overview: naive T-cell activation → clonal expansion → T-cell differentiation into effector subsets."
+     },
+     {
+      "t": "p",
+      "x": "PRIMING AND THE TWO-PRESENTATION RULE. A subtle point Gregg stresses (textbooks gloss it): priming activates the T cell but withholds effector release. If a freshly primed cell dumped cytokine in the lymph node, systemic TNF-alpha would activate endothelium everywhere and you would bleed to death. So the effector cell leaves the node and must see antigen a second time in the tissue (e.g., on a macrophage) to release cytokine locally, at the target. CD8 cells are likewise primed in the node but only kill once they reach infected tissue — otherwise they would lyse everything in their path."
+     },
+     {
+      "t": "p",
+      "x": "SPECIALTY ANTIGENS (the activation curveballs). Superantigens cross-link the TCR V-beta to MHC class II outside the peptide groove, forcing signaling regardless of specificity → polyclonal activation and a cytokine storm (IL-1/IL-6/TNF-alpha); the SARS-CoV-2 spike encodes one (COVID hyperinflammation), and bacterial versions cause toxic shock. Mitogens are polyclonal lab activators that bypass the antigen receptor by binding downstream signaling molecules or TLRs — used to test immune function. Haptens are small molecules that become immunogenic only when coupled to protein (e.g., penicillin on red cells → drug-induced hemolytic anemia; contact dermatitis)."
+     },
+     {
+      "t": "cq",
+      "x": "Priming = activated but effectors withheld; must see antigen a 2nd time in tissue to release locally (avoids systemic TNF-alpha). (two-presentation rule) CQ Superantigen = V-beta–MHC-II cross-link → polyclonal storm; mitogen = lab polyclonal activator; hapten = small molecule + protein. (specialty antigens)"
+     },
+     {
+      "t": "key",
+      "x": "Three signals from a mature APC: 1 = antigen (peptide-MHC→TCR), 2 = CD28–B7 (CD80/CD86), 3 = cytokine. Signals 1+2 → expansion; signal 3 → Th1/Th2/Th17 differentiation."
+     },
+     {
+      "t": "confusion",
+      "x": "Don’t conflate the APCs: dendritic cells prime naive T cells; B cells present to GET help (selfish, T-dependent); macrophages stay in tissue presenting locally. Only the mature DC gives all three signals."
+     },
+     {
+      "t": "pearl",
+      "x": "Priming ≠ effector release. A primed cell needs a second antigen encounter in tissue to act locally — otherwise systemic TNF-alpha would be lethal. This is why we don’t bleed to death every immune response."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The three signals are antigen (signal 1, peptide-MHC→TCR), co-stimulation (signal 2, CD28 binding B7 = CD80/CD86), and a cytokine from the APC (signal 3). An immature dendritic cell delivers only signal 1 — it lacks B7 and makes no cytokine, so it fails signals 2 and 3 — and priming on it yields anergy rather than a clone army. TLR-driven maturation is what licenses the DC to deliver all three."
+     },
+     {
+      "t": "q",
+      "x": "Trace the signal from a ligated TCR to the IL-2 gene. Which single kinase is the indispensable hub — the one whose loss abolishes the entire T-cell response — and what three transcription factors finally switch IL-2 on?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Signals 1 and 2 trigger an intracellular relay that ends at the IL-2 gene. The unifying idea is a proximal-to-distal cascade with one bottleneck (ZAP-70) that then branches into three transcription-factor arms, all of which must fire to transcribe IL-2. Learn the spine of the cascade and the three branch points and you can place any drug or deficiency on the map."
+     },
+     {
+      "t": "p",
+      "x": "PROXIMAL SIGNALING. The TCR itself barely signals — the work is done by the associated CD3 complex and zeta chains, whose cytoplasmic ITAMs get phosphorylated. The kinase LCK (lymphocyte-specific protein tyrosine kinase), brought in by the CD4/CD8 co-receptor, phosphorylates those ITAMs, creating docking sites for ZAP-70. ZAP-70 is the hub: if ZAP-70 is deficient, there is no T-cell response. Active ZAP-70 then phosphorylates LAT (linker of activated T cells), the scaffold that launches the downstream branches. Adhesion molecules (LFA-1–ICAM-1) hold the DC–T contact together long enough for this to assemble."
+     },
+     {
+      "t": "cq",
+      "x": "TCR doesn’t signal — CD3 + zeta ITAMs do; LCK phosphorylates ITAMs → docks ZAP-70 (loss → no response) → phosphorylates LAT. (proximal cascade) CQ Adhesion (LFA-1–ICAM-1) sustains DC–T contact time; CD4/CD8 co-receptor brings in LCK and stabilizes peptide-MHC. (adhesion / co-receptor)"
+     },
+     {
+      "t": "pearl",
+      "x": "Active ZAP-70 phosphorylates LAT, branching into the MAPK, NF-kB, and NFAT pathways."
+     },
+     {
+      "t": "p",
+      "x": "TCR + CD28 engagement: CD3 and the zeta chains serve as the TCR’s signaling complex (ITAMs phosphorylated)."
+     },
+     {
+      "t": "confusion",
+      "x": "LCK phosphorylates CD3/zeta ITAMs, recruiting ZAP-70 — the critical docking kinase (deficiency → no response)."
+     },
+     {
+      "t": "p",
+      "x": "THE THREE TRANSCRIPTION-FACTOR ARMS. From LAT the signal splits three ways, all converging on IL-2. (1) NF-kB arm: protein kinase C (PKC) activates IkB kinase, which phosphorylates IkB; IkB is degraded, freeing NF-kB to enter the nucleus. (2) NFAT arm: phospholipase C makes IP3 → Ca2+ release → Ca2+ binds calmodulin → calmodulin activates calcineurin → calcineurin dephosphorylates NFAT, letting it enter the nucleus. (3) AP-1 arm: RAS/RAC GTPases drive the MAPK pathway (ERK/JNK) → c-Fos + c-Jun assemble into AP-1. All three bind the IL-2 promoter — and all three are required; block any one and the response is crippled. (Two of these arms are the drug targets in the next LO.)"
+     },
+     {
+      "t": "cq",
+      "x": "Three arms to IL-2: PKC→NF-kB; Ca2+→calmodulin→calcineurin→NFAT; RAS/RAC→MAPK→AP-1. All required. (three TF arms)"
+     },
+     {
+      "t": "p",
+      "x": "NF-kB arm: PKC → IkB kinase → phosphorylates IkB → frees NF-kB → nucleus (glucocorticoid target)."
+     },
+     {
+      "t": "confusion",
+      "x": "NFAT arm: Ca2+ → calmodulin → calcineurin dephosphorylates NFAT → nucleus (cyclosporine target)."
+     },
+     {
+      "t": "pearl",
+      "x": "AP-1 arm: RAS/RAC → MAPK (ERK/JNK) → c-Fos + c-Jun = AP-1; all three arms converge on the IL-2 gene."
+     },
+     {
+      "t": "p",
+      "x": "IL-2 AND INDUCED SURFACE PROTEINS. IL-2 is the payoff of the cascade (CD4 cells are the main producers; CD8 expansion depends on CD4 IL-2). IL-2 (1) drives clonal expansion, (2) induces anti-apoptotic BCL proteins that block BAK/BAX pores (any strongly stimulated cell defaults to apoptosis unless rescued), and (3) upregulates the IL-2 receptor alpha chain = CD25, transiently, opening a window for expansion. Meanwhile CD28 co-stimulation amplifies TCR signaling (without it, signal is too weak) — making CD28 a transplant-drug target. CD40 ligand appears too: it drives B-cell help and class switching beyond IgM, and can mature bystander DCs."
+     },
+     {
+      "t": "p",
+      "x": "BRAKES ON THE RESPONSE. Expansion cannot run forever (that would be lymphoma), so inhibitory receptors rise ~day 3–4. CTLA-4 outcompetes CD28 for B7 (removing co-stimulation) AND recruits a phosphatase that strips the CD3/zeta ITAM phosphates — shutting down signaling. PD-1 binds its ligand on the APC and likewise recruits phosphatases. Together they convert exponential growth into a plateau, then contraction — and they reappear later as central tolerance / checkpoint-therapy targets."
+     },
+     {
+      "t": "cq",
+      "x": "IL-2: clonal expansion + anti-apoptotic BCL + upregulates CD25 (IL-2Rα, transient). CD4 is the main IL-2 source. (IL-2 actions) CQ CD28 amplifies TCR; brakes CTLA-4 (outcompetes CD28 for B7 + phosphatase) and PD-1 arrest expansion ~day 3–4. (amplifier and brakes)"
+     },
+     {
+      "t": "confusion",
+      "x": "IL-2 actions: drives clonal expansion, induces anti-apoptotic BCL (survival), and prepares cells for signal 3. Brakes: CTLA-4 and PD-1 rise ~day 3–4 to arrest expansion (outcompete CD28 / recruit phosphatases)."
+     },
+     {
+      "t": "key",
+      "x": "Spine: CD3/zeta ITAMs → LCK → ZAP-70 → LAT → three arms (NF-kB, NFAT, AP-1) → IL-2. ZAP-70 is the indispensable hub; all three transcription factors are required."
+     },
+     {
+      "t": "trap",
+      "x": "The TCR does not signal itself — CD3 and the zeta chains carry the ITAMs. And IL-2 upregulates CD25 (IL-2Rα), which is transient, not permanent."
+     },
+     {
+      "t": "pearl",
+      "x": "Brakes vs gas: CD28 amplifies (gas); CTLA-4 and PD-1 brake (recruit phosphatases ~day 3–4). CTLA-4 also outcompetes CD28 for B7. Same B7, opposite effect."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The indispensable hub is ZAP-70: after LCK phosphorylates the CD3/zeta ITAMs, ZAP-70 docks and phosphorylates LAT — lose ZAP-70 and the entire response fails. The cascade then branches into three transcription-factor arms — NF-kB (via PKC), NFAT (via Ca2+/calmodulin/calcineurin), and AP-1 (via MAPK) — all of which bind the IL-2 promoter and all of which are required."
+     }
+    ]
+   },
+   {
+    "id": 31,
+    "statement": "Lec 11 · Role Of Interleukin-2 In T Cells",
+    "blocks": []
+   },
+   {
+    "id": 32,
+    "statement": "Lec 11 · Tcr Signaling Events",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Two immunosuppressants both lower IL-2 and dampen T cells, but they hit different arms of the same cascade. One blocks NF-kB; the other freezes NFAT in the cytoplasm. Name each drug and its precise target."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. This LO maps two drug classes onto the signaling cascade from LO 11.2. The unifying idea: both drugs reduce IL-2 transcription, but by hitting different transcription-factor arms — glucocorticoids on the NF-kB arm, cyclosporine on the NFAT arm. Because all three arms are required for IL-2, knocking out either one cripples clonal expansion."
+     },
+     {
+      "t": "p",
+      "x": "GLUCOCORTICOIDS — block NF-kB. Glucocorticoids block NF-kB activation/mobilization. Since NF-kB drives pro-inflammatory cytokine genes (in both innate cells and T cells), blocking it produces broad anti-inflammatory effects — hence glucocorticoids are used for allergies, asthma, autoimmune disease, and sepsis. On the T-cell cascade, no NF-kB means one of the three required IL-2 inputs is missing."
+     },
+     {
+      "t": "p",
+      "x": "CYCLOSPORINE — inhibit calcineurin. Cyclosporine inhibits calcineurin. Normally Ca2+ → calmodulin → calcineurin dephosphorylates NFAT so it can enter the nucleus. With calcineurin blocked, NFAT stays phosphorylated in the cytoplasm and never reaches the IL-2 promoter — IL-2 falls, clonal expansion is impaired, and the anti-graft response is blunted. This is why cyclosporine is a mainstay in organ transplantation."
+     },
+     {
+      "t": "cq",
+      "x": "Glucocorticoids → block NF-kB (broad anti-inflammatory: allergy/asthma/autoimmune/sepsis). (glucocorticoid target) CQ Cyclosporine → inhibit calcineurin → NFAT stuck phosphorylated in cytoplasm → less IL-2 (transplant drug). (cyclosporine target)"
+     },
+     {
+      "t": "p",
+      "x": "Cyclosporine inhibits calcineurin, so NFAT cannot be dephosphorylated and stays out of the nucleus."
+     },
+     {
+      "t": "p",
+      "x": "Both targets sit on the TCR-driven cascade that converges on the IL-2 gene for clonal expansion."
+     },
+     {
+      "t": "p",
+      "x": "Glucocorticoids block NF-kB activation — reducing pro-inflammatory cytokine and IL-2 transcription."
+     },
+     {
+      "t": "p",
+      "x": "Glucocorticoids NF-kB (blocks activation) Less pro-inflammatory cytokine + IL-2 Allergy, asthma, autoimmune, sepsis"
+     },
+     {
+      "t": "p",
+      "x": "Cyclosporine Calcineurin (inhibits) NFAT stays phosphorylated → less IL-2 Organ transplantation"
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST. Keep the two arms straight: glucocorticoid → NF-kB; cyclosporine → calcineurin → NFAT. A clean memory hook is that cyclosporine hits calcineurin. Both ultimately lower IL-2 because the IL-2 promoter needs all three transcription factors (NF-kB, NFAT, AP-1); remove either NF-kB or NFAT and IL-2 transcription fails, so clonal expansion — and any T-cell-driven inflammation or rejection — is suppressed."
+     },
+     {
+      "t": "trap",
+      "x": "Don’t swap them. Memory hook: cyclosporine → calcineurin → NFAT. Glucocorticoids are the NF-kB blockers (broad anti-inflammatory)."
+     },
+     {
+      "t": "key",
+      "x": "Two arms, two drugs: glucocorticoids block NF-kB; cyclosporine inhibits calcineurin (so NFAT can’t enter the nucleus). Both lower IL-2 → less clonal expansion."
+     },
+     {
+      "t": "pearl",
+      "x": "Why it works: the IL-2 promoter needs all three (NF-kB + NFAT + AP-1). Disable either NF-kB or NFAT and IL-2 transcription collapses — no clone army, dampened rejection."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Glucocorticoids block NF-kB activation (broad anti-inflammatory, used for allergy/asthma/autoimmune/sepsis); cyclosporine inhibits calcineurin, so NFAT stays phosphorylated in the cytoplasm and cannot transcribe IL-2 (used in transplantation). Both lower IL-2 because the IL-2 promoter requires all three transcription factors."
+     },
+     {
+      "t": "q",
+      "x": "After a response resolves, three T-cell fates exist: short-lived effectors and two memory types. Two markers — one for survival, one for homing — sort them all out. Which marker does which job, and which cell is which?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. After expansion and the plateau, the T-cell population contracts (most effectors die), leaving a memory pool. The unifying idea is two markers, two jobs: IL-7R governs survival (who lives long-term) and CCR7 governs lymph-node homing (who stays central vs goes to tissue). Reading those two markers tells you the cell’s identity and behavior."
+     },
+     {
+      "t": "p",
+      "x": "IL-7R — the survival switch. Naive T cells are IL-7R+, which keeps them alive in the lymph node/spleen. On activation, short-lived effector cells lose IL-7R (and CCR7) — they are IL-7R− CCR7−, go to tissue, act, and then die by apoptosis during contraction. Memory cells, by contrast, retain IL-7R, giving them the survival signal to persist long-term until the next encounter."
+     },
+     {
+      "t": "cq",
+      "x": "IL-7R = survival. Naive IL-7R+; effectors lose it (IL-7R− → short-lived); memory retains it (long-lived). (IL-7R / survival)"
+     },
+     {
+      "t": "p",
+      "x": "Population dynamics: expansion → plateau → contraction (effectors die) → a persistent memory pool remains."
+     },
+     {
+      "t": "trap",
+      "x": "Naive (IL-7R+ CCR7+) → effector (IL-7R− CCR7−, tissue, apoptosis) or memory (IL-7R+); memory splits by CCR7."
+     },
+     {
+      "t": "pearl",
+      "x": "Effector and effector-memory cells use selectins/integrins/chemokine receptors to migrate into tissues."
+     },
+     {
+      "t": "p",
+      "x": "CCR7 — the homing switch (central vs effector memory). Within the IL-7R+ memory pool, CCR7 splits the two memory subsets. Central-memory cells (T_CM) keep CCR7 — CCR7 is the receptor that homes cells to lymph nodes, so T_CM remain in the lymph nodes/spleen as a reservoir, ready to re-expand and generate fresh effectors if a response is insufficient. Effector-memory cells (T_EM) lose CCR7 — so they leave the lymph nodes and patrol peripheral tissues, poised for a rapid local recall response at sites of likely re-exposure (skin, gut, lung)."
+     },
+     {
+      "t": "p",
+      "x": "Naive + + Lymph node; awaiting first antigen"
+     },
+     {
+      "t": "p",
+      "x": "Effector − − Tissue; acts then dies (short-lived)"
+     },
+     {
+      "t": "p",
+      "x": "Central memory (T_CM) + + Lymph node reservoir; re-expands"
+     },
+     {
+      "t": "p",
+      "x": "Effector memory (T_EM) + − Tissue patrol; rapid local recall"
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST. Two markers do all the work: IL-7R = survival (memory keeps it, effectors lose it) and CCR7 = lymph-node homing (central-memory keeps it and stays central; effector-memory loses it and goes to tissue). So T_CM = IL-7R+ CCR7+ (reservoir) and T_EM = IL-7R+ CCR7− (tissue patrol); a short-lived effector is IL-7R− CCR7−. The single most common confusion is thinking IL-7R distinguishes the memory subsets — it does not (both retain it); CCR7 is the subset discriminator."
+     },
+     {
+      "t": "cq",
+      "x": "CCR7 = lymph-node homing. T_CM CCR7+ (stay = reservoir); T_EM CCR7− (tissue = local recall). Both are IL-7R+. (CCR7 / memory split)"
+     },
+     {
+      "t": "trap",
+      "x": "IL-7R does NOT separate the memory subsets — both T_CM and T_EM keep it. CCR7 is the discriminator (central keeps it, effector-memory loses it)."
+     },
+     {
+      "t": "pearl",
+      "x": "CCR7 is your ticket into the lymph node. Keep it → you stay central (T_CM, reservoir). Lose it → you head to the tissues (T_EM, fast local recall). Naive cells also need CCR7 to enter the node."
+     },
+     {
+      "t": "key",
+      "x": "Two markers: IL-7R = survival (memory+, effector−); CCR7 = lymph-node homing (T_CM+, T_EM−). So T_CM = IL-7R+CCR7+ (reservoir), T_EM = IL-7R+CCR7− (tissue), effector = IL-7R−CCR7−."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: IL-7R marks survival: memory cells retain it (long-lived), short-lived effectors lose it. CCR7 marks lymph-node homing: central-memory cells (T_CM) keep CCR7 and stay in the lymph nodes as a reservoir, while effector-memory cells (T_EM) lose CCR7 and patrol tissues for rapid local recall. So T_CM = IL-7R+ CCR7+, T_EM = IL-7R+"
+     },
+     {
+      "t": "pearl",
+      "x": "CCR7−, and an effector = IL-7R− CCR7−."
+     }
+    ]
+   },
+   {
+    "id": 33,
+    "statement": "Lec 12 · Th2 Cytokine Production · Function Of Th17 Il-17",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Three patients: one with an intracellular mycobacterial infection, one with an intestinal parasitic worm, one with an extracellular bacterial infection. Which helper subset leads each, which signature cytokines and effector cells does it deploy, and is the response pro- or anti-inflammatory?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Each subset is a specialist matched to a pathogen class. The unifying idea: Th1 fights intracellular pathogens (pro-inflammatory, macrophage-powered); Th2 fights parasitic worms (largely anti-inflammatory, IgE/eosinophil/M2-powered); Th17 fights extracellular bacteria (neutrophil-powered, barrier-reinforcing). The CD8 versions (Tc1/Tc2/Tc17) share the profiles but mainly kill. Read each subset as"
+     },
+     {
+      "t": "p",
+      "x": "target → cytokines → effector cells → tone."
+     },
+     {
+      "t": "p",
+      "x": "TH1 — intracellular pathogens, macrophage activation. Th1 makes IFN-gamma, IL-2, and TNF-alpha and targets intracellular pathogens. Its central act is IFN-gamma activating macrophages: it drives M1 polarization and ramps up NADPH oxidase and iNOS, flooding the phagosome with ROS/RNS to overwhelm even catalase-positive organisms, and it raises MHC I and B7 (do your job, or be killed by a CD8 cell). IFN-gamma needs a partner — CD40 ligand from the T cell — for full macrophage killing. IL-2 also expands/activates NK cells; TNF-alpha sustains inflammation and, chronically, drives apoptosis (a basis of T-cell-mediated autoimmune damage)."
+     },
+     {
+      "t": "cq",
+      "x": "Th1 (IFN-gamma/IL-2/TNF-alpha) → intracellular pathogens; IFN-gamma → M1 + NADPH oxidase/iNOS (ROS/RNS) + ↑MHC I/B7. (Th1 functions) CQ IFN-gamma needs CD40 ligand for full macrophage killing; Th1 is pro-inflammatory. (IFN-gamma + CD40L)"
+     },
+     {
+      "t": "p",
+      "x": "Th1 activates macrophages via IFN-gamma + CD40L signaling → killing of intracellular bacteria."
+     },
+     {
+      "t": "p",
+      "x": "Major Th1 cytokines: IL-2 (clonal expansion + NK), IFN-gamma (macrophage activation), TNF-alpha (inflammation)."
+     },
+     {
+      "t": "p",
+      "x": "IFN-gamma effects: M1 polarization, more NADPH oxidase/iNOS (ROS/RNS), ↑MHC I — making the macrophage a better killer and a CD8 target."
+     },
+     {
+      "t": "p",
+      "x": "TH2 — parasitic worms, anti-inflammatory and healing. Th2 makes IL-4, IL-5, and IL-13 and targets parasitic worms; overall it is anti-inflammatory and promotes wound healing. IL-4 drives B-cell IgE, which arms mast cells (Fc-epsilon receptors) to degranulate and create the inflammation that recruits worm-killers. IL-5 recruits and activates eosinophils — the parasite specialists that can reach the gut lumen and degranulate on IgE-coated worms. IL-4 + IL-13 together polarize macrophages to M2 (healing, apoptotic-cell cleanup) and drive worm expulsion (mucus + peristalsis → diarrhea; the same axis underlies allergic diarrhea). Crucially, IFN-gamma and IL-4 are mutually antagonistic — each suppresses the other, the molecular basis of the pro- vs anti-inflammatory seesaw."
+     },
+     {
+      "t": "cq",
+      "x": "Th2 (IL-4/IL-5/IL-13) → parasitic worms; IL-4→IgE→mast cells; IL-5→eosinophils; IL-4+IL-13→M2 + expulsion. (Th2 functions) CQ IFN-gamma ↔ IL-4 mutual antagonism: Th1 pro-inflammatory vs Th2 anti-inflammatory / wound-healing. (Th1–Th2 seesaw)"
+     },
+     {
+      "t": "p",
+      "x": "IL-4: drives B-cell IgE production (arming mast cells via Fc-epsilon receptors)."
+     },
+     {
+      "t": "p",
+      "x": "IL-5: recruits and activates eosinophils — the parasite specialists able to reach the gut lumen."
+     },
+     {
+      "t": "p",
+      "x": "IL-13 (with IL-4): M2 polarization (wound healing, anti-inflammatory) and worm expulsion in the intestine."
+     },
+     {
+      "t": "p",
+      "x": "Macrophage polarization: IFN-gamma → M1 (pro-inflammatory killing) vs IL-4/IL-13 → M2 (healing, cleanup)."
+     },
+     {
+      "t": "p",
+      "x": "TH17 — extracellular bacteria, neutrophils and barrier. Th17 makes IL-17 and IL-22 and targets extracellular bacteria (a mucosal, heavily inflammatory program). IL-17 itself does little directly — it triggers epithelial/stromal cells to release cytokines and growth factors that recruit and activate neutrophils (the anti-extracellular-bacteria effector) and pull in macrophages/DCs. IL-22 reinforces the barrier: it induces antimicrobial peptides (e.g., defensins), supports wound healing, and can loosen tight junctions to flush pathogens (watery diarrhea). The mucosal context matters — TGF-beta normally keeps the gut tolerant (favoring IgA and suppression), but when a pathogen overgrows, IL-6 rises and flips the program to ROR-gamma-T / Th17."
+     },
+     {
+      "t": "cq",
+      "x": "Th17 (IL-17/IL-22) → extracellular bacteria; IL-17 → neutrophil recruitment; IL-22 → antimicrobial peptides + barrier. (Th17 functions)"
+     },
+     {
+      "t": "p",
+      "x": "IL-17: triggers epithelial cytokines/growth factors that recruit and activate neutrophils against extracellular bacteria."
+     },
+     {
+      "t": "p",
+      "x": "IL-22: induces antimicrobial peptides (defensins), reinforces the epithelial barrier, supports wound healing."
+     },
+     {
+      "t": "p",
+      "x": "Major Th17 cytokines IL-17 and IL-22 — a mucosal, neutrophil-oriented, barrier-protective program."
+     },
+     {
+      "t": "p",
+      "x": "Subset Cytokines Target Key effectors / tone"
+     },
+     {
+      "t": "p",
+      "x": "Th1 / Tc1 IFN-gamma, IL-2, TNF-alpha Intracellular pathogens M1 macrophages, ROS/RNS; pro-inflammatory"
+     },
+     {
+      "t": "p",
+      "x": "Th2 / Tc2 IL-4, IL-5, IL-13 Parasitic worms IgE/mast cells, eosinophils, M2; anti-inflammatory"
+     },
+     {
+      "t": "p",
+      "x": "Th17 / Tc17 IL-17, IL-22 Extracellular bacteria Neutrophils, barrier peptides; inflammatory"
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST. Answering the three patients: the mycobacterial (intracellular) case is Th1 — IFN-gamma/IL-2/TNF-alpha, M1 macrophages and ROS, pro-inflammatory; the intestinal worm case is Th2 — IL-4/IL-5/IL-13, IgE/mast cells and eosinophils with M2 healing, largely anti-inflammatory (with a local inflammatory carve-out to bring eosinophils in); the extracellular bacterial case is Th17 — IL-17/IL-22, neutrophils and barrier peptides, inflammatory. Map each subset by its target pathogen first; the cytokines and effector cells follow from there, and the inflammatory tone (Th1/Th17 pro-, Th2 anti-) falls out of the IFN-gamma–IL-4 antagonism."
+     },
+     {
+      "t": "pearl",
+      "x": "The seesaw: IFN-gamma ↔ IL-4 suppress each other. Th1/Th17 are pro-inflammatory; Th2 is anti-inflammatory and healing. A Th1 response often resolves into a Th2 wound-healing phase."
+     },
+     {
+      "t": "confusion",
+      "x": "Don’t cross the effector cells: eosinophils = Th2 (worms), neutrophils = Th17 (extracellular bacteria), M1 macrophages = Th1 (intracellular). Each subset, its own foot soldier."
+     },
+     {
+      "t": "key",
+      "x": "Target-first: Th1 = intracellular (IFN-gamma, M1/ROS); Th2 = worms (IL-4/5/13, IgE/eosinophils/M2); Th17 = extracellular bacteria (IL-17/22, neutrophils/barrier)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The mycobacterial (intracellular) case is led by Th1 — IFN-gamma/IL-2/TNF-alpha, M1 macrophages with ROS/RNS, pro-inflammatory. The worm case is Th2 — IL-4/IL-5/IL-13, IgE-armed mast cells and eosinophils with M2 healing, largely anti-inflammatory. The extracellular bacterial case is Th17 — IL-17/IL-22, neutrophil recruitment and barrier antimicrobial peptides, inflammatory. CD8 Tc1/Tc2/Tc17 share the profiles but mainly kill."
+     },
+     {
+      "t": "q",
+      "x": "A CD8 T cell can kill a target two ways. One punches a hole to deliver enzymes; the other flips a death switch on the target’s surface. Name both pathways, the key molecules in each, and the one protein a tumor can use to block the second."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. A cytotoxic T cell kills by two routes that converge on caspases and apoptosis but enter differently. The unifying idea: perforin/granzyme delivers killer enzymes through a pore (TCR/MHC-I-directed); Fas/FasL flips a death receptor that builds the DISC and activates caspase-8. Both end in clean, low-inflammation apoptosis — and the death-receptor route has a built-in off-switch (c-FLIP) that tumors and viruses exploit."
+     },
+     {
+      "t": "p",
+      "x": "PERFORIN / GRANZYME — the pore-and-enzyme route. After the CTL engages MHC I + antigen on the target, it releases granules. Perforin polymerizes into a pore (in the membrane or an endosome), creating a conduit for granzymes to enter the cytosol. Granzymes then activate caspases, producing DNA fragmentation and apoptotic-body formation (blebbing). Because apoptotic bodies display phosphatidylserine and are cleared by macrophages, this is a quiet, low-inflammation kill — the body removes the infected cell without collateral damage. This route is TCR/MHC-I-directed: the CTL needs to see the target’s class I."
+     },
+     {
+      "t": "cq",
+      "x": "Perforin/granzyme: needs MHC I + antigen; perforin pore → granzymes enter → caspases → apoptosis (DNA fragmentation + blebbing). (perforin/granzyme route) CQ Perforin/granzyme is a quiet, low-inflammation kill (apoptotic bodies cleared by macrophages). (quiet apoptosis)"
+     },
+     {
+      "t": "pearl",
+      "x": "CTL engages MHC I + antigen on the target, then releases perforin + granzyme to induce apoptosis."
+     },
+     {
+      "t": "p",
+      "x": "Perforin/granzyme: perforin polymerizes into pores; granzymes diffuse into the cytosol → caspases → DNA fragmentation + blebbing."
+     },
+     {
+      "t": "confusion",
+      "x": "CTL recognition of microbial antigen increases Fas-ligand expression — setting up the death-receptor route."
+     },
+     {
+      "t": "p",
+      "x": "FAS / FAS-LIGAND — the death-receptor route. The CTL upregulates Fas ligand (FasL) on activation; it binds Fas — a stress receptor that infected or tumor cells upregulate — on the target. FasL–Fas binding assembles the DISC (death-inducing signaling complex), which activates caspase-8 (the initiator — Gregg said to remember it). Caspase-8 then cleaves effector caspases-3, -6, and -7 (mainly -3), producing the same CAD-mediated DNA fragmentation and blebbing. This route can fire independent of the TCR but works better with it. Its off-switch is c-FLIP: c-FLIP outcompetes caspase-8 at the complex (and the analogous TNF-alpha complex), blocking activation. c-FLIP is induced by NF-kB/cytokine signaling — so a tumor (or virus like HIV) that drives c-FLIP, plus drops MHC I, escapes both killing routes."
+     },
+     {
+      "t": "pearl",
+      "x": "Fas/FasL: FasL binds Fas → DISC assembles → caspase-8 activated → effector caspases-3/6/7 → DNA fragmentation + blebbing. c-FLIP blocks the death-receptor route by outcompeting caspase-8 at the complex — a tumor/virus escape mechanism."
+     },
+     {
+      "t": "p",
+      "x": "Feature Perforin / granzyme Fas / Fas-ligand"
+     },
+     {
+      "t": "p",
+      "x": "Trigger TCR sees MHC I + antigen FasL binds Fas (stress receptor); can be TCR-independent"
+     },
+     {
+      "t": "p",
+      "x": "Entry / complex Perforin pore → granzymes enter DISC assembles at the receptor"
+     },
+     {
+      "t": "p",
+      "x": "Key caspase Caspases (via granzyme) Caspase-8 → caspase-3/6/7"
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST. Both routes end in caspase-driven apoptosis, but: perforin/granzyme is the pore-and-enzyme, strictly MHC-I/TCR-directed route (granzymes activate caspases after entering); Fas/FasL is the death-receptor route (DISC → caspase-8 → effectors), which can be TCR-independent and is uniquely blockable by c-FLIP. The clinical payoff (answering the anchor): a tumor escapes Fas killing by upregulating c-FLIP, and escapes perforin/granzyme by downregulating MHC I — disabling both routes at once."
+     },
+     {
+      "t": "pearl",
+      "x": "Caspase-8 is the death-receptor initiator (remember it). c-FLIP outcompetes it to block Fas/TNF-alpha apoptosis — induced by NF-kB/cytokine, exploited by tumors and HIV."
+     },
+     {
+      "t": "trap",
+      "x": "Don’t swap entry points: perforin makes the pore; granzymes are the enzymes that trigger caspases. The Fas route needs no pore — it signals through the receptor/DISC."
+     },
+     {
+      "t": "key",
+      "x": "Two routes, one endpoint: perforin pore → granzymes → caspases (MHC-I/TCR-directed); FasL–Fas → DISC → caspase-8 → caspase-3/6/7. Both → apoptosis (DNA fragmentation + blebbing)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Route 1 is perforin/granzyme: after the CTL sees MHC I + antigen, perforin forms a pore and granzymes enter to activate caspases → apoptosis. Route 2 is Fas/FasL: FasL on the CTL binds Fas on the target → DISC → caspase-8 → effector caspases. A tumor blocks the second route with c-FLIP (which outcompetes caspase-8), and blocks the first by downregulating MHC I."
+     },
+     {
+      "t": "q",
+      "x": "When the pathogen is cleared, the effector army must shrink. Two mechanisms do it: one is a passive consequence of losing cytokine support, the other is an active suicide. Name both, their key molecules, and which cells survive."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. After expansion (IL-2) and the CTLA-4/PD-1 plateau, the response enters contraction — most effectors die so the tissue is not inflamed forever. The unifying idea: two death routes shrink the army — passive (cytokine-withdrawal, intrinsic/mitochondrial) and active (AICD, Fas/FasL) — and memory cells are spared both."
+     },
+     {
+      "t": "p",
+      "x": "PASSIVE CELL DEATH — cytokine withdrawal (intrinsic). Any strongly activated cell is pre-programmed to die via mitochondrial BAK/BAX pores — a cancer-prevention failsafe. While cytokine (e.g., IL-2) is present, it induces anti-apoptotic BCL-2, which blocks BAK/BAX pore formation and prevents MOMP (mitochondrial outer membrane permeabilization). As the antigen clears, cytokine falls, BCL-2 drops, BAK/BAX pores open → MOMP → cytochrome C release → apoptosome → caspase-3 → apoptosis. This is “death by neglect” for the effector — it dies because its survival signal disappeared. Tumors subvert this by overexpressing BCL-2 to stay alive despite self-driven proliferation."
+     },
+     {
+      "t": "cq",
+      "x": "Passive (cytokine-withdrawal) death: cytokine↓ → BCL-2↓ → BAK/BAX pores → MOMP → cytochrome C → caspase-3. (passive cell death) CQ Tumors overexpress BCL-2 to block MOMP and resist apoptosis despite constitutive activation. (BCL-2 in cancer)"
+     },
+     {
+      "t": "p",
+      "x": "Passive death: loss of growth/cytokine signal → BCL-2 falls → BAK/BAX pores → MOMP → cytochrome C → apoptosis."
+     },
+     {
+      "t": "pearl",
+      "x": "Two mechanisms of lymphocyte apoptosis during contraction: passive (mitochondrial) and activation-induced."
+     },
+     {
+      "t": "confusion",
+      "x": "Activation-induced cell death: Fas/FasL on activated T cells drives T-cell-to-T-cell suicide as the response resolves."
+     },
+     {
+      "t": "p",
+      "x": "ACTIVATION-INDUCED CELL DEATH (AICD) — Fas/FasL suicide. The active route uses the same death-receptor machinery from LO 12.3. Activated T cells (CD4 and CD8) upregulate both Fas and Fas ligand — FasL quickly, Fas more slowly. Over time, as Fas accumulates on the surface, activated T cells engage each other Fas-to-FasL and kill one another — a suicide that drives contraction. AICD is itself cytokine-driven (cytokines upregulate Fas and FasL), and it can be blocked by c-FLIP just like the killing route. The cells spared from both passive death and AICD are the memory T cells (kept alive by IL-7R signaling), which persist for the next encounter."
+     },
+     {
+      "t": "p",
+      "x": "Feature Passive (cytokine withdrawal) Activation-induced (AICD)"
+     },
+     {
+      "t": "p",
+      "x": "Trigger Loss of cytokine/BCL-2 support Fas/FasL engagement (T cell–T cell)"
+     },
+     {
+      "t": "p",
+      "x": "Key molecules BCL-2 ↓ → BAK/BAX → MOMP → cytochrome C Fas + FasL → DISC → caspase-8"
+     },
+     {
+      "t": "p",
+      "x": "Type Intrinsic (mitochondrial) Extrinsic (death receptor)"
+     },
+     {
+      "t": "p",
+      "x": "Spared cells Memory T cells Memory T cells"
+     },
+     {
+      "t": "p",
+      "x": "THE TESTABLE CONTRAST. Answering the anchor: passive cell death is the intrinsic, mitochondrial route — cytokine withdrawal lowers BCL-2, so BAK/BAX open pores (MOMP → cytochrome C → caspase-3); AICD is the extrinsic, death-receptor route — Fas/FasL drives T-cell-to-T-cell suicide via caspase-8. Both clear effectors during contraction; memory T cells survive both. A clean split: passive = “lost my survival signal” (BCL-2/mitochondria); AICD = “told to die” (Fas/FasL/caspase-8)."
+     },
+     {
+      "t": "pearl",
+      "x": "Mnemonic split: passive = “lost my survival signal” (mitochondrial, BCL-2); AICD = “told to die” (Fas/FasL, caspase-8). Cancer flips the first by overexpressing BCL-2."
+     },
+     {
+      "t": "trap",
+      "x": "AICD is cytokine-driven (cytokines upregulate Fas/FasL) and uses the extrinsic (death-receptor) pathway — don’t confuse it with the intrinsic, cytokine-withdrawal route."
+     },
+     {
+      "t": "key",
+      "x": "Two contraction routes: passive (cytokine↓ → BCL-2↓ → BAK/BAX → MOMP → cytochrome C → caspase-3, intrinsic) and AICD (Fas/FasL → caspase-8, extrinsic). Memory cells survive both."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Passive cell death is intrinsic: as antigen clears, cytokine and BCL-2 fall, so BAK/BAX form mitochondrial pores (MOMP) → cytochrome C → apoptosome → caspase-3. AICD is extrinsic: activated T cells upregulate Fas and FasL and kill each other (Fas→DISC→caspase-8) — a cytokine-driven suicide. Both drive contraction; memory T cells (IL-7R-supported) survive both."
+     }
+    ]
+   },
+   {
+    "id": 34,
+    "statement": "Lec 12 · T Cell Contraction",
+    "blocks": []
+   },
+   {
+    "id": 35,
+    "statement": "Lec 13 · Btk And B Cell Ontogeny",
+    "blocks": []
+   },
+   {
+    "id": 36,
+    "statement": "Lec 13 · B Cell Coreceptor · B Cell Maturation",
+    "blocks": []
+   },
+   {
+    "id": 37,
+    "statement": "Lec 14 · Cytokines In Memory B Cells",
+    "blocks": []
+   },
+   {
+    "id": 38,
+    "statement": "Lec 14 · Cd40 And Somatic Hypermutation",
+    "blocks": []
+   },
+   {
+    "id": 39,
+    "statement": "Lec 14 · Class Switch Recombination",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A B cell starts out making IgM against a toxin and later makes IgG against the very same toxin with even higher affinity. Name the single enzyme behind both changes, and state what happened to the antibody’s specificity."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. ‘Isotype switching’ is the last step of a longer story, so this LO walks the whole T-dependent germinal-center reaction and lands on the switch. The through-line to hold onto: a single enzyme, AID (activation-induced deaminase), powers both the affinity-tuning mutations and the isotype switch. Everything else is choreography that gets the right cells together so AID can act."
+     },
+     {
+      "t": "p",
+      "x": "FINDING EACH OTHER. Help happens in the interfollicular zone, between the T-cell paracortex and the B-cell follicle. A naive pre-TFH starts CXCR5−/CCR7+ (drawn to the T zone by DC-made CCL19/CCL21); a naive B cell is CXCR5+ (drawn to the follicle by FDC-made CXCL13). When each is activated by antigen, they reverse their chemokine receptors: the activated B cell turns CCR7 up / CXCR5 down and moves toward the T zone, while the activated pre-TFH turns CCR7 down / CXCR5 up and moves toward the follicle. They meet in between — a deliberate, reciprocal migration, not chance."
+     },
+     {
+      "t": "cq",
+      "x": "Reciprocal chemokines: activated B cell CCR7↑/CXCR5↓, activated pre-TFH CCR7↓/CXCR5↑ — they meet in the interfollicular zone. (choreography)"
+     },
+     {
+      "t": "p",
+      "x": "Unique helper T cells sit in the interfollicular zone between the T-cell paracortex and the B-cell follicle."
+     },
+     {
+      "t": "p",
+      "x": "FDCs make CXCL13 (for CXCR5); DCs make CCL19/CCL21 (for CCR7) — setting the gradients that position pre-TFH and B cells."
+     },
+     {
+      "t": "p",
+      "x": "On activation the B cell (CCR7↑/CXCR5↓) and pre-TFH (CCR7↓/CXCR5↑) migrate toward each other in the interfollicular zone."
+     },
+     {
+      "t": "p",
+      "x": "THE CONJUGATE PAIR. When they meet, the activated pre-TFH and activated B cell form a conjugate pair — physically engaged through MHC II–TCR, the CD40–CD40L contact, and cytokines (IL-2/IL-4/IL-5 from the Th2-like pre-TFH binding the B cell’s IL-2R/IL-4R/IL-5R). This engagement does two decisive things. First, it induces AID in the B cell — the enzyme that all the later mutation and switching depend on. Second, the B cell pushes back on the pre-TFH: it drives Bcl-6 in the pre-TFH, which stabilizes CXCR5 and CD40L and completes differentiation into a true TFH cell. (Bcl-6 matters because the antibody response takes 7–10 days — the TFH program has to be locked in to last.)"
+     },
+     {
+      "t": "p",
+      "x": "TO THE MEDULLA, THEN BACK. The conjugate pair migrates to the medulla, where both cells divide over several days under TFH cytokines. Some B cells become B lymphoblasts → short-lived plasma cells that secrete the initial IgM seen in blood. Most conjugate pairs then traffic back to the follicle, where the rapidly proliferating B lymphoblasts seed a secondary follicle — the start of a germinal center."
+     },
+     {
+      "t": "p",
+      "x": "Conjugate pair: pre-TFH engaged to an activated B cell via CD40–CD40L, MHC II–TCR, and IL-2/4/5 — inducing AID in the B cell."
+     },
+     {
+      "t": "p",
+      "x": "The activated B cell drives Bcl-6 in the pre-TFH, stabilizing CXCR5/CD40L and completing differentiation into a TFH cell."
+     },
+     {
+      "t": "p",
+      "x": "The conjugate pair migrates to the medulla; some B cells become short-lived plasma cells secreting the initial IgM."
+     },
+     {
+      "t": "p",
+      "x": "THE GERMINAL CENTER. Back in the follicle, the fast-dividing B lymphoblasts are now centroblasts; they push naive B cells out to a surrounding mantle, forming a germinal center. A key concept Gregg flagged: a germinal center represents a B-cell response to ONE antigen (which may carry several epitopes) — it is clonal and antigen-focused. TFH cytokines (IL-2/4/5) initiate centroblast proliferation; FDC factors (IL-6, IL-15, BAFF) sustain it. Centroblasts shut off surface Ig while they divide."
+     },
+     {
+      "t": "p",
+      "x": "SOMATIC HYPERMUTATION. Continued centroblast–TFH interaction induces more AID, which now drives somatic hypermutation: a high rate of point mutation in the variable (V) region of both heavy and light chains. This generates BCRs of varying affinity. A centroblast that has finished hypermutating and re-expresses surface Ig is renamed a centrocyte. Note the division of labor that defines the exam answer: SHM edits the V region to change affinity — distinct from the switch, which will edit the constant region to change isotype."
+     },
+     {
+      "t": "cq",
+      "x": "A germinal center = response to ONE antigen. Centroblast (proliferating, sIg-off, hypermutating) → centrocyte (sIg re-expressed). (GC vocabulary) CQ SHM = AID-driven point mutation of the V region (affinity); it does not touch the constant region. (SHM target)"
+     },
+     {
+      "t": "p",
+      "x": "A centroblast that completes hypermutation and re-expresses surface Ig is renamed a centrocyte."
+     },
+     {
+      "t": "p",
+      "x": "Centroblasts push out naive B cells to the mantle, forming a germinal center — a response to ONE antigen (multiple epitopes)."
+     },
+     {
+      "t": "p",
+      "x": "AID drives somatic hypermutation in the V region of both chains, generating BCRs of varying affinity."
+     },
+     {
+      "t": "p",
+      "x": "AFFINITY MATURATION — SELECTION ON THE FDC. Centrocytes now compete for antigen held intact by follicular dendritic cells on complement receptors (CR1–3) and Fc receptors. A centrocyte survives only if it gets both a strong BCR signal (its hypermutated receptor binds the FDC-displayed antigen well) and TFH help. Higher-affinity clones win; centrocytes that cannot compete undergo apoptosis and are cleared by tingible-body macrophages. This is affinity maturation: the surviving repertoire drifts toward higher affinity over the reaction. Surviving GC B cells then receive TFH IL-10/IL-21 signals (Bcl-6) that drive differentiation toward plasma cells — and it is during this interaction that isotype switching occurs."
+     },
+     {
+      "t": "p",
+      "x": "FDCs display intact antigen on complement (CR1–3) and Fc receptors for centrocytes to test their hypermutated BCRs against."
+     },
+     {
+      "t": "p",
+      "x": "Survival requires BOTH BCR and CR signaling — high-affinity centrocytes stay attached to FDC and TFH; the rest apoptose."
+     },
+     {
+      "t": "p",
+      "x": "Surviving GC B cells get TFH IL-10/IL-21 (Bcl-6) to become plasma cells — and undergo isotype switching during this step."
+     },
+     {
+      "t": "p",
+      "x": "CLASS SWITCH RECOMBINATION — THE SWITCH ITSELF. Now the actual mechanism. The heavy-chain locus has the variable region, then the constant-region exons, each preceded by a switch region. Two inputs license switching: CD40 ligation induces AID, and the TFH cytokine directs AID to the correct switch region. Before switching, alternative splicing lets the cell make IgM and IgD off the same V region. The cytokine sets the target: for example, IFN-γ drives IgG switching. Mechanistically: AID deaminates cytosine → uracil in the donor (Sμ) and acceptor (e.g., Sγ1) switch regions; uracil-DNA-glycosylase (UNG) removes the uracil, leaving an abasic site; APE1 (an endonuclease) nicks that site; nicks on both strands of both switch regions create double-strand breaks that recombine, looping out the intervening constant exons as a circle. Crucially, the V region is untouched — so the switched IgG has the same antigen specificity and affinity as the parent IgM. Only the isotype changed."
+     },
+     {
+      "t": "cq",
+      "x": "CSR steps: AID (C→U) → UNG removes uracil → APE1 nicks → double-strand breaks recombine the switch regions. (CSR mechanism) CQ CD40L induces AID; the cytokine aims it (IFN-γ→IgG). V region preserved → same specificity/affinity, new isotype. (switch control)"
+     },
+     {
+      "t": "p",
+      "x": "Heavy-chain locus: variable region, constant-region exons, and the switch regions; CD40 induces AID, cytokines direct it."
+     },
+     {
+      "t": "p",
+      "x": "AID→uracil, UNG removes it, APE1 nicks the abasic site; double-strand nicks in both switch regions enable recombination."
+     },
+     {
+      "t": "p",
+      "x": "Intervening constant exons loop out as circular DNA; the V region realigns with Cγ1 — same specificity/affinity, new IgG1 isotype."
+     },
+     {
+      "t": "p",
+      "x": "PLASMA CELLS AND MEMORY — THE OUTPUTS. Two fates remain. Long-lived plasma cells home to the bone marrow, sit on stromal cells, are non-migratory, and secrete antibody for years (the ‘memory plasma cell’). Memory B cells are different: they circulate, carry a BCR, and do NOT secrete antibody, waiting as a reservoir for a fast recall response. A switch in TFH cytokine (toward IL-4/IL-21 patterns) tips GC B cells toward the memory fate rather than the plasma-cell fate. Remember the timing discriminator: short-lived plasma cells give the first IgM over several days, but antigen-specific IgM within ~2 days with no maturation points to marginal-zone (T-independent) B cells, not the germinal center."
+     },
+     {
+      "t": "key",
+      "x": "One enzyme, two edits. AID does SHM (V region → affinity) AND CSR (switch regions → isotype). CD40L induces it; the cytokine aims it."
+     },
+     {
+      "t": "pearl",
+      "x": "The 2-day rule. IgM within ~2 days, unmatured = marginal-zone (T-independent). The germinal-center (TD) IgM is slower and matures."
+     },
+     {
+      "t": "confusion",
+      "x": "SHM vs CSR. SHM = point mutations in the V region (changes affinity). CSR = recombination of the constant region (changes isotype). Specificity is preserved by CSR."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The enzyme is AID (activation-induced deaminase): it drove the somatic hypermutation that raised affinity and the class switch recombination that changed IgM to IgG. Specificity is unchanged — CSR swaps only the constant region, leaving the V region (and thus the antigen target) intact."
+     }
+    ]
+   },
+   {
+    "id": 40,
+    "statement": "Lec 15 · Antibody-Mediated Cell Cytotoxicity · Igg Cross The Placenta · Immune Complex Removal",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "An exam stem says ‘NK cell kills an antibody-coated tumor cell.’ Name the effector function, the Fc receptor, its CD number, and the isotype — and contrast it with how a macrophage handles the same coated cell."
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. The whole LO reduces to one rule: the constant region (isotype) plus the Fc receptor on the responding cell decides what happens to the antibody-bound target. Same antigen-binding end, different back end, different outcome. Walk the effector functions in order and attach each to its isotype and receptor."
+     },
+     {
+      "t": "p",
+      "x": "NEUTRALIZATION (IgG, IgA). The simplest function: the antibody physically blocks a pathogen or toxin from attaching to host-cell receptors. Influenza must bind hemagglutinin on respiratory epithelium to infect; anti-H antibody blocks that contact (the object of the flu vaccine). Likewise, antibody against an exotoxin (tetanus, diphtheria) blocks the toxin from reaching its receptor — which is why toxin-mediated diseases are such good vaccine targets. IgG and IgA are the neutralizing isotypes."
+     },
+     {
+      "t": "p",
+      "x": "OPSONIZATION (IgG, IgA). Antibody coats the microbe; phagocytes carrying the matching Fc receptor bind that coat and engulf the target. Macrophage/neutrophil FcγRI (CD64) and FcγRIIA engage IgG; FcαRI (CD89) engages IgA. The coat itself — the thing that enhances phagocytosis — is the opsonin."
+     },
+     {
+      "t": "cq",
+      "x": "Neutralization = block attachment (IgG, IgA). Opsonization = antibody coat that Fc receptors grab for phagocytosis (IgG via FcγRI/IIA; IgA via FcαRI)."
+     },
+     {
+      "t": "p",
+      "x": "Neutralization: antibody binds a viral surface protein (e.g., influenza HA) and blocks attachment to the host-cell receptor."
+     },
+     {
+      "t": "p",
+      "x": "Neutralization of exotoxins (tetanus, diphtheria): antibody blocks toxin binding to host receptors — the basis of toxoid vaccines."
+     },
+     {
+      "t": "p",
+      "x": "Opsonization: IgG/IgA coat the microbe; phagocyte Fc receptors bind the Fc and drive uptake and digestion."
+     },
+     {
+      "t": "p",
+      "x": "ADCC — NK CELLS, FcγRIII (CD16), IgG. This is the highest-yield receptor fact in the lecture. NK cells express FcγRIII, whose alias is CD16; it binds the Fc of IgG (IgG1/IgG3) attached to a target cell. Ligation makes the NK cell release perforin and granzyme, which activate caspases and drive the target into apoptosis. Antibody-directed killing of a coated cell is antibody-dependent cellular cytotoxicity. Contrast the macrophage:"
+     },
+     {
+      "t": "p",
+      "x": "same IgG-coated target, but the macrophage eats it (opsonization) rather than puncturing it. Eosinophils run a parallel program against large parasites — IgE coats the worm, eosinophils bind via FcεRI, and degranulate to destroy it."
+     },
+     {
+      "t": "p",
+      "x": "THE Fc-RECEPTOR MAP — LEARN THE ROWS. The exam tests the cell–receptor–isotype–outcome table directly. FcγRI (macrophages; induced on neutrophils): IgG → opsonization. FcγRIIA (macrophages, neutrophils): IgG → opsonization. FcγRIII / CD16 (NK cells): IgG → perforin/granzyme (ADCC). FcεRI (mast cells, basophils; induced on eosinophils): IgE → degranulation. FcαRI / CD89 (macrophages, neutrophils): IgA → opsonization; (on dendritic cells) uptake of neutralized antigen for processing."
+     },
+     {
+      "t": "cq",
+      "x": "ADCC = NK cell + FcγRIII (CD16) + IgG → perforin/granzyme → apoptosis. CD16 = FcγRIII is the alias to memorize. (ADCC triad) CQ FcR rows: FcγRI/IIA→opsonize (IgG); FcγRIII/CD16→ADCC (NK, IgG); FcεRI→degranulate (IgE); FcαRI/CD89→opsonize (IgA). (FcR map)"
+     },
+     {
+      "t": "p",
+      "x": "Against large worms, IgE coats the parasite and eosinophils bind via FcεRI, degranulating to destroy it."
+     },
+     {
+      "t": "p",
+      "x": "Fc-receptor map: FcγRI/IIA (opsonization), FcγRIII/CD16 (NK ADCC), FcεRI (degranulation), FcαRI (IgA opsonization/uptake)."
+     },
+     {
+      "t": "p",
+      "x": "ADCC: NK-cell FcγRIII (CD16) binds IgG (IgG1/IgG3) on the target and releases perforin/granzyme, driving caspase-mediated apoptosis."
+     },
+     {
+      "t": "p",
+      "x": "COMPLEMENT ACTIVATION (IgM, IgG1–3). IgM and IgG1–IgG3 bind antigen and recruit C1 to fire the classical pathway. The structural punchline: because IgM is a pentamer, it presents multiple Fc regions at once, so far fewer IgM molecules are needed to activate complement — a single bound IgM can do it, whereas IgG needs two molecules close together."
+     },
+     {
+      "t": "p",
+      "x": "IMMUNE-COMPLEX REMOVAL (IgG). IgG binds soluble or surface-deposited antigen to form immune complexes; because IgG’s binding sites are higher-affinity than IgM’s, most complexes are IgG. C1 activation deposits C3b on the complex. Erythrocytes carry CR1, which binds that C3b and ferries the complexes to macrophages in the spleen and liver for removal. This clearance matters clinically: if complexes are not removed, they deposit in small vessels and renal glomeruli, where complement activation causes vasculitis and glomerulonephritis."
+     },
+     {
+      "t": "cq",
+      "x": "Complement: IgM (pentamer) and IgG1–3 recruit C1; fewer IgM needed. Erythrocyte CR1 clears C3b-tagged immune complexes to spleen/liver."
+     },
+     {
+      "t": "p",
+      "x": "IgM, IgG1, IgG3 bind antigen and recruit C1; pentameric IgM needs far fewer molecules to activate the classical pathway."
+     },
+     {
+      "t": "p",
+      "x": "IgG forms immune complexes; C1 activation deposits C3b, and phagocytes take up the complexes (cleared in spleen and liver)."
+     },
+     {
+      "t": "p",
+      "x": "Erythrocyte CR1 binds C3b on complexes and delivers them to splenic/hepatic macrophages; failure causes vasculitis and glomerulonephritis."
+     },
+     {
+      "t": "p",
+      "x": "IgG SUBCLASSES AND THE PLACENTA. IgG1 is the most common serum subclass; IgG1 and IgG3 are the best at opsonization, complement activation, and ADCC, and are the subclasses that cross the placenta. Transfer is by FcRn (the neonatal Fc receptor): in the syncytiotrophoblast, circulating IgG is pinocytosed, FcRn binds it in the acidified endosome (protecting it from proteases), and the endosome releases the IgG into the fetal circulation at physiological pH. The same FcRn transcytosis moves IgG (and some IgA) from blood into tissues and mucosa, and recycles serum IgG — the basis of its long half-life in the next LO."
+     },
+     {
+      "t": "p",
+      "x": "IgG subclasses: IgG1 most common; IgG1/IgG3 best for opsonization, complement, ADCC, and are the placental crossers."
+     },
+     {
+      "t": "p",
+      "x": "FcRn transfers maternal IgG across the syncytiotrophoblast: acidified endosomes bind IgG and release it into fetal blood at physiological pH."
+     },
+     {
+      "t": "p",
+      "x": "Placental IgG transfer is efficient (neonatal IgG approaches adult levels); a deficiency window follows as maternal IgG wanes."
+     },
+     {
+      "t": "p",
+      "x": "SECRETORY IgA — pIgR AND THE SECRETORY PIECE. Mucosal plasma cells make dimeric IgA on the basolateral side of the epithelium; it must reach the lumen. The polymeric Ig receptor (pIgR) binds the IgA J chain, transcytoses it to the apical surface, and is then cleaved to leave a secretory piece attached to the IgA. That secretory piece protects the IgA from proteolysis and helps anchor it in mucus. (pIgR carries pentameric IgM the same way.) This is the molecular core of the next lecture, mucosal immunity."
+     },
+     {
+      "t": "p",
+      "x": "IgM AND IgE — THE BOOKENDS. IgM is the first isotype synthesized, the first surface BCR on naive mature B cells, an efficient complement activator, and an agglutinator of microbes. IgE mediates immunity to parasites and type I allergy: it arms mast cells and basophils via FcεRI, and antigen/allergen cross-linking triggers degranulation (histamine and other mediators) — expulsion responses (sneeze, cough, vomit, diarrhea) against pathogens, and allergic symptoms against allergens in genetically predisposed people. The same IgE–FcεRI logic is the engine of type I hypersensitivity in Lec 18."
+     },
+     {
+      "t": "cq",
+      "x": "Secretory IgA: pIgR binds the J chain, transcytoses dimeric IgA, and is cleaved to leave the protective secretory piece. (secretory IgA) CQ IgM = first Ig + first BCR + complement + agglutination. IgE = parasites + allergy via FcεRI degranulation. (IgM/IgE bookends)"
+     },
+     {
+      "t": "p",
+      "x": "Secretory IgA: pIgR binds the J chain of dimeric IgA, transcytoses it, and is cleaved to leave the secretory piece that resists proteolysis."
+     },
+     {
+      "t": "p",
+      "x": "IgM: first isotype synthesized, first surface BCR, complement activation, and agglutination of microbes."
+     },
+     {
+      "t": "p",
+      "x": "IgE: allergen/antigen cross-links IgE on mast-cell FcεRI → degranulation — expulsion responses and allergic symptoms."
+     },
+     {
+      "t": "confusion",
+      "x": "FcRn vs pIgR. FcRn moves IgG (placenta, tissue) and recycles it (half-life). pIgR moves dimeric IgA across mucosa and leaves the secretory piece."
+     },
+     {
+      "t": "key",
+      "x": "Isotype + Fc receptor = function. Same antigen end; the constant region and the responding cell’s Fc receptor decide neutralize / opsonize / ADCC / degranulate / fix complement."
+     },
+     {
+      "t": "pearl",
+      "x": "CD16 = FcγRIII = NK ADCC for IgG. The single most tested alias in the lecture — NK cell binds IgG on the target and fires perforin/granzyme."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: It is ADCC: the NK cell uses FcγRIII (CD16) to bind IgG (IgG1/IgG3) on the coated cell and releases perforin/granzyme to drive apoptosis. A macrophage meeting the same IgG-coated cell instead phagocytoses it via FcγRI/FcγRIIA (opsonization) — same antibody, different Fc receptor, different fate."
+     }
+    ]
+   },
+   {
+    "id": 41,
+    "statement": "Lec 16 · Alpha Defensins Mucosal Defenses · Secretory Antibodies In The Gut",
+    "blocks": []
+   },
+   {
+    "id": 42,
+    "statement": "Lec 17 · Examples Of Passive Immunity",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Two patients are protected against the same microbe — one because they were given antibodies, one because they were infected last year. Which has memory, which had immediate protection, and what are the four resulting categories?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. Immunization — providing immunity to an infectious agent — can happen actively or passively, and either can be acquired naturally or artificially (deliberately induced, i.e. vaccines). The whole LO is a 2×2 grid: passive/active × natural/artificial. The defining contrast is who made the antibody."
+     },
+     {
+      "t": "p",
+      "x": "PASSIVE IMMUNITY — BORROWED ANTIBODY. The recipient receives preformed antibody that someone (or something) else made. Consequences follow directly: protection is rapid (antibody is already there), but temporary (antibody has a short half-life and decays), and it produces no memory — no recipient B or T lymphocytes are involved, so the recipient’s immune system never learns anything. It does not rely on the recipient mounting a response at all."
+     },
+     {
+      "t": "p",
+      "x": "ACTIVE IMMUNITY — YOUR OWN RESPONSE. An antigen is introduced and the recipient develops their own response. This is slower (it requires T- and B-lymphocyte activation, proliferation, and differentiation), but yields long-term protection because memory T and B cells form. The trade is the mirror image of passive: delayed but durable, with memory."
+     },
+     {
+      "t": "cq",
+      "x": "Passive = receive preformed antibody → immediate, temporary, no memory. Active = make your own response → slow, durable, memory. (the core contrast)"
+     },
+     {
+      "t": "p",
+      "x": "Passive immunity: receiving preformed antibody — immediate but temporary, with no memory because no recipient lymphocytes respond."
+     },
+     {
+      "t": "p",
+      "x": "Active immunity: introducing antigen so the recipient develops their own response — slower, but long-lasting with memory T and B cells."
+     },
+     {
+      "t": "p",
+      "x": "Passive immunity splits into natural (maternal antibody) and artificial (receiving serum/antibody preparations)."
+     },
+     {
+      "t": "p",
+      "x": "NATURAL vs ARTIFICIAL — THE FOUR BOXES. Passive-natural: maternal antibodies passed to the fetus (placenta) or infant (milk). Passive-artificial: receiving serum/antibody — human immune serum globulin, hyperimmune/convalescent serum, antitoxin/antivenom, or lab monoclonals. Active-natural: contact with antigen through the infectious process (even mild/subclinical disease can leave antibodies and memory). Active-artificial: intentional exposure to an antigen BEFORE infection, usually by vaccination."
+     },
+     {
+      "t": "cq",
+      "x": "Grid: passive-natural = maternal Ab; passive-artificial = serum/globulin; active-natural = infection; active-artificial = vaccine. (the 2×2 grid)"
+     },
+     {
+      "t": "p",
+      "x": "Active immunity splits into natural (response to real infection) and artificial (vaccination — deliberate exposure before infection)."
+     },
+     {
+      "t": "p",
+      "x": "Active-natural is infection-driven; active-artificial is intentional exposure to antigen before an infection occurs."
+     },
+     {
+      "t": "p",
+      "x": "Sources of artificial passive immunity: immune serum globulin, hyperimmune/convalescent serum, antitoxin/antivenom, and monoclonal antibodies."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The patient given antibodies had passive immunity — immediate protection, no memory. The patient infected last year has active immunity — it developed slowly but left memory. The four categories: passive-natural (maternal antibody), passive-artificial (serum/globulin), active-natural (infection), active-artificial (vaccination)."
+     },
+     {
+      "t": "q",
+      "x": "Someone steps on a rusty nail and has no tetanus immunity. Why might they get BOTH a shot of antibody and a shot that is a vaccine — what does each one do?"
+     },
+     {
+      "t": "p",
+      "x": "OVERVIEW. The clinical question is always a timing question: do you need protection now, or do you need it to last? Passive and active immunity answer different halves of that, and sometimes you deploy both."
+     },
+     {
+      "t": "p",
+      "x": "PASSIVE — FOR IMMEDIATE NEED. When a non-immune patient faces an immediate threat — a wound carrying a toxin, a recent exposure, a venom — you give preformed antibody for protection that works at once. Artificial passive products are organized by source: from human serum (immune globulin / IVIG, and disease-specific immune globulins used as pre-exposure or post-exposure prophylaxis), from monoclonal antibodies (e.g. an anti-toxin mAb that binds and neutralizes a bacterial toxin), and from non-human donors (antitoxins/antivenoms raised in animals). (Per the syllabus you reason about the category and property, not which brand belongs to which class.)"
+     },
+     {
+      "t": "p",
+      "x": "ACTIVE — FOR DURABLE PROTECTION. To make protection last, you induce the patient’s own response, normally by vaccination (or by surviving the natural infection). And in high-risk post-exposure situations you combine them: immune globulin bridges the gap immediately while the vaccine builds the patient’s own durable, memory-based immunity — covering both timelines at once."
+     },
+     {
+      "t": "cq",
+      "x": "Passive = immediate need (toxin, exposure, venom); active = durable protection (vaccine). High-risk post-exposure → give both. (use-case logic)"
+     },
+     {
+      "t": "p",
+      "x": "Monoclonal-antibody passive protection: lab-made antibodies that bind and neutralize a specific pathogen or toxin."
+     },
+     {
+      "t": "p",
+      "x": "Active protection: exposure to a pathogen (or vaccine antigen) elicits the patient’s own response, providing antibodies and memory for the future."
+     },
+     {
+      "t": "p",
+      "x": "Artificial passive protection from human serum globulin: IVIG and disease-specific immune globulins used as pre- or post-exposure prophylaxis."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: They get an antibody shot (passive — immediate but temporary protection against the toxin, no memory) and a vaccine shot (active — builds their own durable, memory-based immunity). Together the globulin covers the gap now while the vaccine establishes lasting protection."
+     }
+    ]
+   },
+   {
+    "id": 43,
+    "statement": "Lec 17 · R0 Definition",
+    "blocks": []
+   },
+   {
+    "id": 44,
+    "statement": "Lec 18 · Type I Hypersensitivity Predisposition",
+    "blocks": []
+   },
+   {
+    "id": 45,
+    "statement": "Lec 18 · Hypersensitivity And Ige",
+    "blocks": []
+   },
+   {
+    "id": 46,
+    "statement": "Lec 18 · Myasthenia Gravis Pathogenesis",
+    "blocks": []
+   },
+   {
+    "id": 47,
+    "statement": "Lec 19 · Sle Pathogenesis · Contact Dermatitis Mechanism",
+    "blocks": []
+   },
+   {
+    "id": 48,
+    "statement": "Lec 19 · Immune Complex Mediated Damage",
+    "blocks": []
+   },
+   {
+    "id": 49,
+    "statement": "Lec 20 · Types Of Immunodeficiencies",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "What single feature must every SCID share, and which primary immunodeficiency is the most common overall?"
+     },
+     {
+      "t": "p",
+      "x": "ORGANIZING THE CATALOG. Primary immunodeficiencies are grouped by the immune compartment they damage — cellular (T/NK), humoral (B-cell/antibody), SCID (combined), phagocytic, and complement. The humoral group is by far the largest. There are ~550 recognized PIs, with the causative gene now identified for the great majority. SCID is an umbrella term, not a single disease: it describes deficiencies that always involve T cells plus at least one other arm — usually B cells (because they depend on T-cell help), sometimes NK cells. The single most common PI overall is selective IgA deficiency, which is also one of the mildest."
+     },
+     {
+      "t": "cq",
+      "x": "PIs sort by compartment (cellular/humoral/SCID/phagocytic/complement). SCID always involves T cells + another arm. Most common PI = selective IgA deficiency. (PI catalog organization)"
+     },
+     {
+      "t": "p",
+      "x": "Most common types of primary immunodeficiencies (the humoral/antibody compartment dominates). ~550 recognized PIs; gene identified for ~485."
+     },
+     {
+      "t": "p",
+      "x": "Primary immunodeficiencies manifest in childhood and divide by compartment (humoral, cellular, complement, phagocytic). SCID always involves T cells + another arm (B or NK)."
+     },
+     {
+      "t": "p",
+      "x": "Hallmark of immunodeficiency: enhanced susceptibility — frequent/chronic illness, opportunistic or commensal organisms, infections that fail to respond normally to treatment."
+     },
+     {
+      "t": "confusion",
+      "x": "SCID is not one disease. It is any combined defect that includes T cells. HIGM-1 (CD40L) and BLS are both SCIDs because the T-cell arm is hit."
+     },
+     {
+      "t": "key",
+      "x": "Five compartments organize every PI on the exam: cellular (T/NK), humoral (B/Ab), SCID (combined), phagocytic, complement. Humoral is the biggest bucket."
+     },
+     {
+      "t": "pearl",
+      "x": "When asked for the most common PI, the answer is selective IgA deficiency — and it is also among the mildest, which is why most carriers never know."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Every SCID must involve T cells (plus at least one other compartment, usually B cells). The most common primary immunodeficiency overall is selective IgA deficiency."
+     },
+     {
+      "t": "q",
+      "x": "A 9-month-old has anemia, low platelets, and splenomegaly with a perforin mutation — how does a cytotoxic-killing defect end up producing macrophage-driven pathology?"
+     },
+     {
+      "t": "p",
+      "x": "CELLULAR PI — HEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS (HLH). HLH is the cleanest example of Davis's recurring lesson: what you see is not always the problem. The defect is in perforin/granzyme killing by CTLs and NK cells — either perforin cannot be made, or the perforin/granzyme vesicle cannot fuse with the cell membrane to release its cargo. Because those killers cannot clear intracellular targets, they keep secreting IFN-γ, which does not just activate macrophages but hyperactivates them. The over-driven macrophages then phagocytose red blood cells (anemia → fatigue), platelets, and neutrophils, and pile up in the spleen (splenomegaly). So the defect is in the T/NK cell, but the pathology is macrophage-mediated — a severe, potentially fatal systemic inflammatory syndrome. Treatment suppresses the inflammation (methotrexate, dexamethasone, etoposide, cyclosporine A, anti-IFN-γ mAb) or replaces the stem cells (HSCT)."
+     },
+     {
+      "t": "cq",
+      "x": "HLH: defect in perforin/granzyme killing (T/NK) → unchecked targets → sustained IFN-γ → macrophage hyperactivation → phagocytosis of RBCs/platelets/neutrophils (anemia, cytopenias, splenomegaly). (HLH mechanism)"
+     },
+     {
+      "t": "p",
+      "x": "HLH cause: mutations in perforin/granzyme killing by CTLs & NK cells. Without killing, CTLs/NK keep secreting IFN-γ → macrophage overactivation."
+     },
+     {
+      "t": "pearl",
+      "x": "Hemophagocytic lymphohistiocytosis, decoded: hemo (blood) + phagocytic cells + lympho (lymphatic) + histiocytosis (excess macrophages). Primary form: birth–18 months."
+     },
+     {
+      "t": "confusion",
+      "x": "HLH clinical: phagocytosis of RBCs → anemia/fatigue; low platelets/neutrophils/hemoglobin; splenomegaly; severe systemic inflammation. Defect in T/NK, pathology in macrophage."
+     },
+     {
+      "t": "p",
+      "x": "HUMORAL PI — SELECTIVE IgA DEFICIENCY. The most common PI: a defect in B-cell differentiation into IgA-secreting plasma cells (the IgA genes are normal). The result is recurrent mucosal infections (GI, respiratory, ears) and a higher rate of allergy, asthma, RA, and diabetes. Labs show low IgA with normal IgM and IgG and normal peripheral B-cell numbers — the B cells exist, they just do not become IgA plasma cells."
+     },
+     {
+      "t": "cq",
+      "x": "Selective IgA deficiency: defect in differentiation to IgA plasma cells (genes normal) → low IgA, normal IgM/IgG, normal B-cell counts, mucosal infections. (selective IgA pattern) HUMORAL PI — AID HYPER-IgM SYNDROME (HIGM-2). The key concept is the ratio, not the absolute number. AID (activation-induced cytidine deaminase) performs class-switch recombination, and its expression is induced by CD40–CD40L help from the T cell. Without AID, B cells cannot switch isotypes, so they are stuck making IgM — the IgM-to-IgG/IgA ratio is elevated even when absolute IgM is within the normal range. Cell counts (CD4, CD8, CD19+ B cells) are all normal; only switching fails, and patients often develop hemolytic anemia. Treatment is IVIG (replacing the IgG they cannot make) plus antibiotics. (On any exam Ig-level question, Davis stated she provides normal-vs-patient value columns — so reason from the ratio, never from memorized absolute values.)"
+     },
+     {
+      "t": "cq",
+      "x": "AID hyper-IgM: AID (induced by CD40–CD40L) drives class switching; its loss → stuck at IgM → elevated IgM:IgG/IgA ratio (absolute IgM may be normal). Counts normal; treat with IVIG. (AID hyper-IgM ratio)"
+     },
+     {
+      "t": "p",
+      "x": "AID hyper-IgM (HIGM-2): mutation in the AID enzyme in B cells. AID drives class-switch recombination, induced by CD40–CD40L interaction with the TH cell."
+     },
+     {
+      "t": "confusion",
+      "x": "Other hyper-IgM forms: HIGM-1 (CD40L, T-cell defect → SCID), HIGM-3 (CD40, B-cell), HIGM-4 (switch-region DNA breaks, B-cell), HIGM-5 (UNG, B-cell)."
+     },
+     {
+      "t": "p",
+      "x": "Hyper-IgM lab logic: IgM may be high OR within normal range, but the ratio of IgM to IgG/IgA is higher than normal when isotype switching is impaired. SCID — BARE LYMPHOCYTE SYNDROME (BLS). Two types, distinguished by which MHC class is missing from the cell surface. BLS-I: no surface MHC class I, from a TAP1/TAP2 mutation — class I is made but cannot be loaded/displayed → failed positive selection of CD8 T cells. BLS-II (more common): no MHC class II, from a transcription-factor mutation — class II is never made → low CD4 T cells. In both, the MHC genes themselves are normal, and γδ T cells are normal because they do not undergo MHC-dependent positive selection. BLS-I gives necrotizing granulomatous skin lesions and bacterial respiratory infections (most reach adulthood with treatment); BLS-II causes broad bacterial/viral/fungal infections and GI infections → failure to thrive, and is fatal by adolescence without HSCT."
+     },
+     {
+      "t": "cq",
+      "x": "BLS-I = no surface MHC-I (TAP mutation) → low CD8; BLS-II = no MHC-II (Tx-factor mutation) → low CD4. Genes normal in both; γδ T cells spared (skip MHC positive selection). (BLS I vs II)"
+     },
+     {
+      "t": "confusion",
+      "x": "BLS: absent surface MHC → failed positive selection → low αβ CD4/CD8 thymocytes; γδ T cells normal (they skip MHC positive selection)."
+     },
+     {
+      "t": "p",
+      "x": "BLS: class I defect = TAP mutation (MHC-I made but not displayed); class II defect = transcription-factor mutation (MHC-II not made). Both are SCID."
+     },
+     {
+      "t": "p",
+      "x": "BLS-II (more common in Mediterranean/N. African descent): broad bacterial/viral/fungal/opportunistic + GI infections → failure to thrive; fatal by adolescence without HSCT. PHAGOCYTIC PI — CHRONIC GRANULOMATOUS DISEASE (CGD). A defect in the oxidative (respiratory) burst — classically NADPH oxidase — so phagocytosed bacteria and fungi survive inside macrophages and neutrophils. The frustrated phagocytes fuse into granulomas. Clinically: opportunistic bacterial/fungal infections, soft-tissue infections, oral/gum disease, abscesses (brain, liver, lung, bone). Treatment is prophylactic antimicrobials."
+     },
+     {
+      "t": "p",
+      "x": "PHAGOCYTIC PI — LEUKOCYTE ADHESION DEFICIENCY (LAD). All three LADs are extravasation/migration defects. LAD-1: a CD18 mutation (CD18 is part of the LFA-1 integrin that binds ICAM-1) → neutrophils cannot adhere and leave the vessel, so they accumulate in blood (neutrophilia) but cannot reach tissue — recurrent soft-tissue infections, no pus (pus is mostly dead neutrophils), poor wound healing, delayed umbilical-cord separation; often fatal before age 1. LAD-2: a sialyl-Lewis-X/fucose-metabolism defect → cannot bind selectins (rolling fails); adds neurologic and growth defects. LAD-3: a FERMT3/KINDLIN3 signaling defect → presents like LAD-1 but adds a bleeding disorder (platelets cannot bind fibrinogen and aggregate, despite normal platelet counts)."
+     },
+     {
+      "t": "cq",
+      "x": "LAD-1 (CD18/LFA-1): no extravasation → neutrophilia + no pus + delayed cord separation. LAD-3 (KINDLIN3) adds a bleeding disorder (defective platelet aggregation, normal counts). (LAD mechanisms)"
+     },
+     {
+      "t": "p",
+      "x": "CGD: defect in the oxidative burst (e.g. NADPH oxidase) → phagocytosed pathogens survive inside macrophages/neutrophils → frustrated phagocytes fuse into granulomas."
+     },
+     {
+      "t": "confusion",
+      "x": "LAD-1: CD18 (part of LFA-1) mutation → LFA-1 cannot bind ICAM-1 → loss of neutrophil migration → neutrophilia, no pus, delayed cord separation; usually fatal before age 1."
+     },
+     {
+      "t": "p",
+      "x": "LAD-3: FERMT3/KINDLIN3 signaling defect → poor integrin upregulation (LFA-1, VLA-4) AND defective platelet aggregation (normal counts) → bleeding disorder. COMPLEMENT PI. Three patterns worth holding apart. C1, C2, or C4 deficiency → little increase in infection but immune-complex disease (RA, SLE, vasculitis), because complexes are not cleared. C5–C9 (MAC) deficiency → recurrent, invasive Neisseria infections (meningitidis, gonorrhoeae), which require MAC lysis to clear — two bouts of meningitis by 18 should prompt a complement workup. C3 deficiency is the most severe (C3 is in all pathways) → broad susceptibility to encapsulated bacteria. Among the regulatory proteins, C1-inhibitor deficiency causes hereditary angioedema: unchecked cleavage of C4 and C2 releases vasoactive C2 kinin — \"C4 isn't the problem, C2 is.\""
+     },
+     {
+      "t": "cq",
+      "x": "Complement patterns: C1/C2/C4 → immune-complex disease; C5–C9 → Neisseria; C3 → most severe (encapsulated bacteria); C1-INH → hereditary angioedema (C2 kinin). (complement PI patterns)"
+     },
+     {
+      "t": "confusion",
+      "x": "C1-inhibitor deficiency: uncontrolled C4/C2 activation releases large amounts of vasoactive C2 kinin → edema → hereditary angioedema."
+     },
+     {
+      "t": "p",
+      "x": "Complement PIs: C1/C2/C4 → immune-complex disease (RA, SLE, vasculitis); C5–C9 MAC → recurrent invasive Neisseria; C3 (most severe) → encapsulated bacteria."
+     },
+     {
+      "t": "pearl",
+      "x": "Immunodeficiency-associated issues: anemia, arthritis/joint pain, ~25% have an autoimmune disease, neoplasias (leukemias/lymphomas), growth retardation."
+     },
+     {
+      "t": "trap",
+      "x": "\"Hyper-IgM\" does not require elevated absolute IgM. It is defined by the IgM:IgG/IgA ratio being high because switching fails — absolute IgM can sit in the normal range."
+     },
+     {
+      "t": "cue",
+      "x": "Oral/gum lesions + abscesses → think CGD; neutrophilia + no pus + delayed cord → LAD-1; recurrent Neisseria → C5–C9; non-pitting edema → C1-INH/hereditary angioedema."
+     },
+     {
+      "t": "key",
+      "x": "Davis's through-line: what you see is not always the problem. HLH anemia comes from macrophages, not RBC autoantibodies; LAD-1 neutrophilia comes from cells trapped in blood, not overproduction. Trace symptom → mechanism."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Failed perforin/granzyme killing leaves intracellular targets unchecked, so CTLs/NK cells keep secreting IFN-γ; that sustained IFN-γ hyperactivates macrophages, which phagocytose RBCs, platelets, and neutrophils — producing the anemia, cytopenias, and splenomegaly. The defect is in the T/NK cell; the pathology is in the macrophage."
+     }
+    ]
+   },
+   {
+    "id": 50,
+    "statement": "Lec 20 · Clinical Features Of Hemophagocytic Lymphohistiocytosis",
+    "blocks": []
+   },
+   {
+    "id": 51,
+    "statement": "Lec 20 · Hodgkin Lymphoma",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A young child with clonal expansion of a B-cell progenitor in the marrow, versus an older adult with punched-out skull lesions and urinary light chains — name each malignancy."
+     },
+     {
+      "t": "p",
+      "x": "LEUKEMIA VS LYMPHOMA. Immune-system cancers split by architecture: leukemias proliferate as individual cells (lymphoid or myeloid), while lymphomas proliferate as a mass of cells. The four leukemias are named by acute/chronic and by lineage, and the age clue is the exam's favorite discriminator. ALL (acute lymphoblastic) — clonal expansion of a lymphoid progenitor (usually a B cell), the most common pediatric malignancy (~⅓ of childhood cancers). CLL (chronic lymphocytic) — mature circulating B cells that cannot undergo apoptosis, in older adults (55+); fewer healthy B cells → more infections. AML (acute myeloid) — malignant immature granulocyte precursors crowd the marrow → low WBCs, then anemia and bleeding. CML (chronic myeloid) — a family named by the affected myeloid cell (granulocytes → chronic myelocytic leukemia; megakaryocytes → malignant thrombocythemia or myeloid metaplasia; RBCs → polycythemia vera), mostly in adults."
+     },
+     {
+      "t": "cq",
+      "x": "Leukemia = individual cells; lymphoma = mass. Age clue: ALL = children (most common pediatric cancer); CLL = older adults (no apoptosis); AML/CML = adults. (leukemia types + age clues)"
+     },
+     {
+      "t": "p",
+      "x": "Neoplasms of the immune system: leukemias proliferate as individual cells (lymphoid or myeloid); lymphomas proliferate as a mass of cells."
+     },
+     {
+      "t": "p",
+      "x": "ALL: dysregulated clonal expansion of a lymphoid progenitor (usually B cell); most common pediatric malignancy (~⅓ of childhood cancers); anemia, bruising, lymphadenopathy."
+     },
+     {
+      "t": "p",
+      "x": "AML: malignant proliferation of immature granulocyte precursors crowd the marrow → low WBCs, increased infections, then anemia and bleeding. MULTIPLE MYELOMA. Malignant plasma cells accumulate as a mass in bone, destroying it to leave diagnostic \"punched-out\" lytic lesions (skull, spine). Normal B cells are crowded out, and the malignant plasma cells overproduce free light chains (Bence-Jones proteins) that clog the kidney → renal failure. Most common in older adults."
+     },
+     {
+      "t": "p",
+      "x": "HODGKIN VS NON-HODGKIN LYMPHOMA. Hodgkin — typically B-cell, spreads in an orderly, predictable node-to-node pattern (often beginning cervically), shows diagnostic Reed-Sternberg cells (a lymphoblastic form of a mature B cell, often EBV-linked), and is highly treatable (~90% 5-yr survival); more common in teens/young adults. Non-Hodgkin — can be B- or T-cell, is more aggressive and less predictable, spreads beyond nodes (spleen, liver, marrow), is usually diagnosed later (~74% survival), and is ~10× more common, skewing older."
+     },
+     {
+      "t": "cq",
+      "x": "Multiple myeloma = plasma cells, punched-out lytic lesions + Bence-Jones light chains → renal failure. Hodgkin = orderly node-to-node + Reed-Sternberg; non-Hodgkin = aggressive, B- or T-cell, beyond nodes. (myeloma + Hodgkin vs non-Hodgkin)"
+     },
+     {
+      "t": "p",
+      "x": "Multiple myeloma: malignant plasma cells accumulate as a mass in bone → \"punched-out\" lytic holes (spine, skull) that are diagnostic; normal B cells cannot be made."
+     },
+     {
+      "t": "p",
+      "x": "Multiple myeloma: mostly older adults; renal failure from Bence-Jones proteins (overproduced light chains) passing through and clogging the kidney."
+     },
+     {
+      "t": "p",
+      "x": "Hodgkin lymphoma: spreads orderly node-to-node; diagnostic Reed-Sternberg cells (a lymphoblastic form of a mature B cell); often EBV-associated, begins cervically."
+     },
+     {
+      "t": "pearl",
+      "x": "Two diagnostic findings to lock in: punched-out lytic lesions + Bence-Jones = multiple myeloma; Reed-Sternberg cells = Hodgkin lymphoma."
+     },
+     {
+      "t": "cue",
+      "x": "Age is the discriminator: a young child → ALL; an older adult with no-apoptosis mature B cells → CLL; teens/young adults with orderly nodal spread → Hodgkin."
+     },
+     {
+      "t": "key",
+      "x": "Two axes for leukemia (acute/chronic × lymphoid/myeloid) plus the age clue solve most stems. Lymphomas split Hodgkin (orderly, Reed-Sternberg, B-cell, ~90%) vs non-Hodgkin (aggressive, B-or-T, ~74%)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The child with marrow clonal expansion of a B-cell progenitor has acute lymphoblastic leukemia (ALL); the older adult with punched-out skull lesions and urinary Bence-Jones light chains has multiple myeloma."
+     }
+    ]
+   },
+   {
+    "id": 52,
+    "statement": "Lec 21 · B Cell Central Tolerance",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Why does \"strong binding\" send a B cell to apoptosis but let a T cell survive positive selection — and then kill that same T cell in negative selection?"
+     },
+     {
+      "t": "p",
+      "x": "WHERE AND WHY. Central tolerance happens in the generative organs — B cells in the bone marrow (though ~70% of negative selection actually occurs in the spleen) and T cells in the thymus. Tolerance is purely an adaptive phenomenon: it is the education of BCRs and TCRs to ignore self and attack foreign. The single hardest thing to keep straight is that the same phrase — \"strong binding\" — produces opposite fates depending on the step, so anchor each step to its rule."
+     },
+     {
+      "t": "p",
+      "x": "B-CELL NEGATIVE SELECTION (three outcomes + editing). An immature B cell (IgM+) meets self-Ag held by bone-marrow/splenic stromal cells. Strong binding to multivalent surface self-Ag WITH BCR cross-linking → apoptosis (cross-linking is the key — it always gives the strongest signal). Strong binding to soluble self-Ag WITHOUT cross-linking → anergy (the cell survives as an unresponsive IgM-lo IgD+ naive B cell). Weak or no binding → survival (a normal IgM+IgD+ naive B cell). In about a third of cells slated for apoptosis/anergy, persistent RAG1/2 attempt receptor editing of the light chain to escape self-reactivity."
+     },
+     {
+      "t": "cq",
+      "x": "B-cell negative selection: strong + cross-link → apoptosis; strong, no cross-link (soluble) → anergy; weak/no → survival. Cross-linking is the determinant."
+     },
+     {
+      "t": "p",
+      "x": "Outcome 3: weak or no binding to self-Ag → SURVIVAL (normal IgM+IgD+ naive mature B cell enters periphery)."
+     },
+     {
+      "t": "p",
+      "x": "B-cell negative selection outcome 1: strong binding to multivalent surface self-Ag WITH BCR cross-linking → APOPTOSIS. ~70% of negative selection occurs in the spleen."
+     },
+     {
+      "t": "p",
+      "x": "Outcome 2: strong binding to soluble self-Ag WITHOUT cross-linking → ANERGY (survives as unresponsive IgM-lo IgD+ naive B cell in the periphery)."
+     },
+     {
+      "t": "p",
+      "x": "T-CELL POSITIVE SELECTION (cortex) — fate determination. Double-positive (CD4+CD8+) thymocytes engage cortical thymic epithelial cells via HLA–self-Ag–TCR. Weak/no binding → apoptosis (death by neglect); moderate/strong binding → survival, and the MHC class fit sets lineage: CD8 fit with MHC I → cytotoxic, CD4 fit with MHC II → helper. Note this is the opposite rule from B-cell negative selection — here weak binding is the one that dies."
+     },
+     {
+      "t": "p",
+      "x": "T-CELL NEGATIVE SELECTION (medulla) — signaling test. Single-positive T cells (now CD3-high, so the TCR can signal) meet medullary thymic epithelial cells and thymic DCs. Weak binding → survival; strong OR no binding → apoptosis. Gregg framed this as a signaling test: a surviving T cell must signal weakly (proving a functional TCR) but not strongly (which would mean it recognizes self). The self-antigen breadth comes from AIRE in MTECs, a master switch that transcribes essentially all tissue-restricted self-antigens; Hassall's corpuscles make TSLP to mature the thymic DCs."
+     },
+     {
+      "t": "cq",
+      "x": "T-cell positive selection (cortex): weak/no → apoptosis, mod/strong → survival + lineage fate. T-cell negative selection (medulla): weak → survival, strong/no → apoptosis. AIRE supplies all self-Ags. (T-cell selection rules + AIRE)"
+     },
+     {
+      "t": "p",
+      "x": "T-cell positive selection (cortex): weak/no binding → apoptosis; moderate/strong → survival. CD8 fit with MHC I → cytotoxic; CD4 fit with MHC II → helper. Fate determination."
+     },
+     {
+      "t": "p",
+      "x": "T-cell negative selection: MTECs express AIRE → produce ALL self-Ags, present on MHC I/II and release to thymic DCs; Hassall's corpuscles make TSLP to mature the DCs."
+     },
+     {
+      "t": "p",
+      "x": "T-cell negative selection outcomes: weak TCR–self-Ag/MHC binding → SURVIVAL; strong OR no binding → APOPTOSIS. A surviving T cell must signal weakly but not strongly."
+     },
+     {
+      "t": "confusion",
+      "x": "Positive vs negative selection are opposite on weak binding: weak loses in positive (death by neglect) but wins in negative (proof of a safe, functional TCR). Lock the step first, then the rule."
+     },
+     {
+      "t": "cue",
+      "x": "\"All self-antigens in the thymus\" is your AIRE flag. AIRE knockout → autoimmunity; it is the master switch in MTECs that lets the thymus display tissue-restricted self."
+     },
+     {
+      "t": "key",
+      "x": "Three steps, three rules. B-cell negative: strong → die/anergy. T-cell positive: weak → die. T-cell negative: weak → live, strong/no → die. The phrase \"strong binding\" is meaningless until you name the step."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: \"Strong binding\" has no fixed meaning until you name the step. In B-cell negative selection it means the cell recognizes self → apoptosis/anergy. In T-cell positive selection, weak binders die (death by neglect) and moderate/strong binders survive. In T-cell negative selection, the surviving cell must signal weakly — strong binding now means self-recognition → apoptosis. So the same word maps to deletion in two steps and survival in one, because each step is testing for a different thing."
+     }
+    ]
+   },
+   {
+    "id": 53,
+    "statement": "Lec 21 · Peripheral Tolerance Of T Cells",
+    "blocks": []
+   },
+   {
+    "id": 54,
+    "statement": "Lec 21 · Hla Association With Autoimmunity",
+    "blocks": []
+   },
+   {
+    "id": 55,
+    "statement": "Lec 22 · Chronic Rejection",
+    "blocks": []
+   },
+   {
+    "id": 56,
+    "statement": "Lec 22 · Hyperacute Transplantation Rejection",
+    "blocks": []
+   },
+   {
+    "id": 57,
+    "statement": "Lec 22 · Direct Coombs Test",
+    "blocks": []
+   },
+   {
+    "id": 58,
+    "statement": "Lec 23 · Autoimmunity And Loss Of Tolerance",
+    "blocks": []
+   },
+   {
+    "id": 59,
+    "statement": "Lec 23 · Crohn Disease",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "Across the disorders Davis covered, which are systemic and which are organ-specific, and what defines each?"
+     },
+     {
+      "t": "p",
+      "x": "THE ROSTER. Davis grouped the lecture's diseases into systemic (rheumatoid arthritis, autoimmune hemolytic anemia, Guillain-Barré) and organ-specific (vitiligo, Crohn disease, ulcerative colitis). Each has a defining lesion: RA = symmetric inflammatory arthritis (citrullinated-peptide and rheumatoid-factor immune complexes); AIHA = antibody-mediated RBC destruction; Guillain-Barré = acute ascending paralysis from anti-ganglioside mimicry; vitiligo = CTL-mediated melanocyte destruction (depigmentation); Crohn/UC = the two forms of inflammatory bowel disease. Roughly 3% of the population is affected, women 2:1."
+     },
+     {
+      "t": "cq",
+      "x": "Systemic: RA, AIHA, Guillain-Barré. Organ-specific: vitiligo, Crohn, UC. Each has a defining lesion — match the disease to its target tissue and effector."
+     },
+     {
+      "t": "p",
+      "x": "Systemic vs organ-specific: systemic = RA, AIHA, Guillain-Barré; organ-specific = vitiligo, Crohn disease, ulcerative colitis."
+     },
+     {
+      "t": "p",
+      "x": "Autoimmune disease arises from failure to develop tolerance OR dysregulation that breaks tolerance; the response is chronic because self-antigen cannot be removed."
+     },
+     {
+      "t": "p",
+      "x": "Examples of autoimmune disorders: Sjögren, scleroderma, celiac, Behçet, T1D, atrophic gastritis, psoriasis, MS, IBD, Guillain-Barré, ALPS, pemphigus vulgaris. ~3% of the US population, 2:1 female bias."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: Davis grouped the diseases as systemic (rheumatoid arthritis, autoimmune hemolytic anemia, Guillain-Barré) or organ-specific (vitiligo, Crohn disease, ulcerative colitis); each is defined by its target tissue and dominant effector — e.g. RA by citrullinated-peptide/RF immune complexes in joints, vitiligo by CTL destruction of melanocytes."
+     },
+     {
+      "t": "q",
+      "x": "A patient has IBD — what location, depth, and bleeding pattern tell you Crohn disease from ulcerative colitis?"
+     },
+     {
+      "t": "p",
+      "x": "THE CROHN vs UC DISTINCTION (Davis's explicit focus). She taught these two side by side \"because it can be very confusing as to which one somebody has.\" Sort them on three axes: location, depth, and bleeding. Crohn disease: any GI segment, mouth to anus (often the terminal ileum/proximal colon junction), skip lesions, transmural (full bowel-wall thickness → cobblestoning, strictures, thickened wall/mesentery), and rectal bleeding is rare with more continuous pain. Ulcerative colitis: limited to the colon and rectum, spreads continuously from the rectum proximally, involves only the mucosa/submucosa, and rectal bleeding is characteristic with intermittent pain that coincides with bowel movements."
+     },
+     {
+      "t": "cq",
+      "x": "Crohn: mouth-to-anus, transmural, cobblestone, rectal bleeding RARE. UC: colon/rectum continuous-from-rectum, mucosa/submucosa, rectal bleeding CHARACTERISTIC. Location + depth + bleeding. (Crohn vs UC clinical)"
+     },
+     {
+      "t": "p",
+      "x": "Crohn disease lesions: crypt inflammation/abscesses → focal aphthoid ulcers → \"cobblestone\" appearance; transmural spread thickens the bowel wall and mesentery."
+     },
+     {
+      "t": "p",
+      "x": "Ulcerative colitis: chronic inflammatory disorder of the colonic mucosa, usually beginning in the rectum and extending proximally in a continuous manner."
+     },
+     {
+      "t": "p",
+      "x": "Crohn vs UC comparison: Crohn = any GI segment (mouth→anus), transmural, rectal bleeding rare, continuous pain, NOD2 link, IL-21→granzyme-B+ B cells. UC = colon/rectum, mucosa/submucosa, rectal bleeding characteristic, intermittent pain, elevated TNF-α, atypical Th2/NKT IL-4/IL-13."
+     },
+     {
+      "t": "p",
+      "x": "OTHER DEFINING FEATURES. RA: symmetric inflammatory arthritis, typically older onset; ~40% have extra-articular disease (skin, eyes, lungs, heart, kidneys, vessels — including vasculitis with petechial hemorrhages). Vitiligo: patchy depigmentation of skin/hair (non-segmental = symmetric/bilateral, more common; segmental = one area); ~50% appear before age 20, and onset after 40 links to autoimmune thyroid disease. Guillain-Barré: acute, progressive, usually temporary ascending paralysis after an antecedent infection, with autonomic dysfunction (arrhythmia, respiratory failure) in two-thirds."
+     },
+     {
+      "t": "p",
+      "x": "Rheumatoid arthritis: ~40% of patients have extra-articular symptoms — skin, eyes, lungs, heart, kidneys, salivary glands, blood vessels, bone marrow."
+     },
+     {
+      "t": "p",
+      "x": "Vitiligo: melanocyte destruction → patchy depigmentation of skin and hair follicles; non-segmental (symmetric, more common) vs segmental (one area)."
+     },
+     {
+      "t": "p",
+      "x": "Guillain-Barré: acute, progressive, monophasic paralytic neuropathy after a causative infection (most often C. jejuni); autonomic dysfunction in two-thirds (ileus, arrhythmia, respiratory failure)."
+     },
+     {
+      "t": "key",
+      "x": "Crohn vs UC on three axes — location (Crohn anywhere mouth→anus / UC colon-rectum), depth (Crohn transmural / UC mucosa-submucosa), bleeding (Crohn rare / UC characteristic)."
+     },
+     {
+      "t": "confusion",
+      "x": "Rectal bleeding is the fast discriminator. Characteristic in UC, rare in Crohn. Pair it with \"continuous from the rectum, mucosa-only\" (UC) vs \"skip lesions, transmural, cobblestone\" (Crohn)."
+     },
+     {
+      "t": "cue",
+      "x": "Crohn = \"Cobblestone, full-thickness, anywhere.\" UC = \"continUous, colon-only, bleeds.\" NOD2 is associated with both (so it does not distinguish them)."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: In Crohn disease the inflammation can occur anywhere from mouth to anus (often the ileocolic junction), is transmural (producing cobblestoning and strictures), and rarely causes rectal bleeding, with more continuous pain. Ulcerative colitis is confined to the colon and rectum, spreads continuously from the rectum, involves only mucosa/submucosa, and characteristically causes rectal bleeding with intermittent pain — so location, depth, and bleeding pattern separate them."
+     },
+     {
+      "t": "q",
+      "x": "For AIHA, vitiligo, Crohn, and UC, which effector arm does the damage — and which detail distinguishes Crohn's mechanism from UC's?"
+     },
+     {
+      "t": "p",
+      "x": "AIHA — IgG vs IgM determines the death pathway. Autoantibodies against RBC antigens cause destruction two ways: IgG → mostly Fc-receptor-mediated opsonization by splenic macrophages (the Fc protrudes, macrophages grab it), though IgG can fix complement; IgM → mostly complement fixation → MAC lysis. Drug-induced AIHA works by haptenation (the drug — cephalosporins now most common, IV penicillin, methyldopa, insulin — binds the RBC → IgG → splenic opsonization). About half of AIHA is idiopathic; the rest is secondary (neoplasm, infection, RA/SLE, drugs)."
+     },
+     {
+      "t": "cq",
+      "x": "AIHA: IgG → opsonization (splenic macrophages, FcγR); IgM → complement/MAC lysis. Drug-induced = haptenation → IgG → opsonization. RhoGAM context: anti-D IgG crosses placenta (HDN); ABO antibodies are IgM (don't cross). (AIHA mechanism)"
+     },
+     {
+      "t": "p",
+      "x": "AIHA: antibodies against RBC membrane antigens (e.g. Rh) — autoantibodies (autoimmune) or alloantibodies received from a donor (alloimmune) — accelerate RBC removal/destruction."
+     },
+     {
+      "t": "p",
+      "x": "AIHA: IgG autoantibodies → Fc-receptor-mediated opsonization in spleen/liver (can also fix complement); IgM autoantibodies → complement activation → MAC lysis (less common with IgG)."
+     },
+     {
+      "t": "confusion",
+      "x": "Drug-induced AIHA: haptenation of a drug to the RBC surface generates IgG → Fc-receptor-mediated opsonization by splenic macrophages. Common drugs: cephalosporins (most common now), IV penicillin, methyldopa, insulin."
+     },
+     {
+      "t": "p",
+      "x": "VITILIGO — CTLs do the damage. A trigger makes melanocytes express altered self-antigens/DAMPs (heat-shock proteins) during apoptosis; APCs present these to CD4 and CD8 T cells. CD4 cells release pro-inflammatory cytokines and B cells make anti-melanocyte antibodies — but the main effector is the CD8+ CTL, permitted by downregulated regulatory T cells that normally restrain it. Guillain-Barré is anti-ganglioside molecular mimicry (post-C. jejuni), with γδ T cells prominent because the trigger is mucosal/GI."
+     },
+     {
+      "t": "confusion",
+      "x": "Vitiligo: a trigger makes melanocytes express altered self-antigens and DAMPs (histones, ATP, uric acid, heat-shock proteins) during apoptosis; APCs present them to CD8 and CD4 T cells."
+     },
+     {
+      "t": "p",
+      "x": "Vitiligo: B cells make anti-melanocyte antibodies and CD4 cells release pro-inflammatory cytokines, but CTLs are the MAIN effector damaging melanocytes (Tregs are downregulated, removing the brake)."
+     },
+     {
+      "t": "p",
+      "x": "Guillain-Barré mechanism: cross-reactive antibodies to a C. jejuni epitope (molecular mimicry) bind nerve cells; T cells, B cells, macrophages, and complement participate, with γδ T cells prominent. CROHN vs UC — the mechanistic split (the key INTEGRATE). Crohn disease: Th1/Th17-driven inflammation against luminal bacteria, with innate involvement — NOD2 mutations and MUC2 variants (less mucus) — overproduced IL-12/IL-23/IL-34/TNF-α, and a signature step: IL-21 converts B cells into granzyme-B-expressing (cytotoxic) B cells that damage the mucosa. Ulcerative colitis: an atypical Th2 response by non-classical NKT cells (recognize lipid on CD1) producing IL-4 and IL-13; IL-13 is cytotoxic to epithelium (apoptosis, disrupted tight junctions) and feeds back to amplify the NKT cells, while MadCAM-1 recruits leukocytes and TNF-α is elevated in blood/stool."
+     },
+     {
+      "t": "cq",
+      "x": "Crohn = Th1/Th17, NOD2/MUC2, IL-21→granzyme-B+ B cells. UC = atypical Th2 via non-classical NKT (IL-4/IL-13), IL-13 cytotoxic + self-amplifying, MadCAM-1, TNF-α elevated. (NOD2 is in both.) (Crohn vs UC mechanism)"
+     },
+     {
+      "t": "p",
+      "x": "Crohn disease: overproduced IL-12/IL-23/IL-34/TNF-α (IL-34 highest in active inflammation); IL-21 converts B cells into granzyme-B-expressing cytotoxic B cells that damage the intestinal mucosa."
+     },
+     {
+      "t": "confusion",
+      "x": "Ulcerative colitis: reduced mucin, disrupted tight junctions; atypical Th2 response by non-classic NKT cells producing IL-4 and IL-13; IL-13 is cytotoxic to epithelium (apoptosis, altered tight junctions)."
+     },
+     {
+      "t": "p",
+      "x": "UC: pro-inflammatory cytokines upregulate adhesion molecules like MadCAM-1 on mucosal vessels, capturing leukocytes and promoting extravasation — perpetuating the inflammatory cycle."
+     },
+     {
+      "t": "key",
+      "x": "One effector per disease: AIHA = IgG opsonization / IgM complement; vitiligo = CD8 CTL; GBS = anti-ganglioside antibody (γδ T cells); Crohn = Th1/Th17 + granzyme-B+ B cells; UC = atypical Th2/NKT (IL-4/IL-13)."
+     },
+     {
+      "t": "confusion",
+      "x": "Crohn vs UC mechanism: Th1/Th17 + NOD2 + IL-21→granzyme-B+ B cells = Crohn; atypical Th2 via non-classical NKT (IL-4/IL-13, IL-13 cytotoxic) = UC. The Th-bias flips between the two."
+     },
+     {
+      "t": "pearl",
+      "x": "AIHA isotype rule reuses the antibody-valence logic: IgG (2 arms) → opsonization; IgM (pentamer, complement-efficient) → MAC lysis. Same rule explains why ABO (IgM) doesn't cross the placenta but anti-D (IgG) does."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: AIHA: IgG drives Fc-receptor opsonization by splenic macrophages while IgM fixes complement for MAC lysis. Vitiligo: CD8 CTLs are the main effector (Tregs downregulated), despite CD4 cytokines and anti-melanocyte antibodies. Crohn disease is Th1/Th17-driven with NOD2/MUC2 variants and IL-21-induced granzyme-B+ cytotoxic B cells; ulcerative colitis is an atypical Th2 response via non-classical NKT cells making IL-4/IL-13 (IL-13 cytotoxic to epithelium) with MadCAM-1 recruitment — so the Th-bias and signature cells distinguish the two IBDs."
+     }
+    ]
+   },
+   {
+    "id": 60,
+    "statement": "Lec 23 · Clinical Feature Of Psoriatic Arthritis",
+    "blocks": []
+   },
+   {
+    "id": 61,
+    "statement": "Lec 24 · Causes Of Itp - Case 2 · Clinical Features Of Xla - Case 1 · Causes Of Seizures In Digeorge - Case 4",
+    "blocks": [
+     {
+      "t": "q",
+      "x": "A neonate has truncus arteriosus, hypocalcemic seizures, dysmorphic facies, and <1% CD3 with normal B cells — what is it, and why are vaccine antibodies low?"
+     },
+     {
+      "t": "p",
+      "x": "THE PRESENTATION + LABS. A term neonate with low birth weight develops feeding difficulty, cyanosis, and a severe heart defect (truncus arteriosus), then seizures at 4 days. Dysmorphic facies (low-set ears, small \"fish mouth,\" undersized jaw). Labs: low calcium, very low PTH, severe T-cell lymphopenia (CD3+ <1%), and normal CD19+ B cells. This is DiGeorge syndrome, a 22q11.2 deletion affecting structures from that region: the heart (truncus arteriosus), the parathyroids (low PTH → hypocalcemia → seizures, which is why the seizures are metabolic, not neurologic — a normal neuro exam and no response to anti-epileptics), and the thymus."
+     },
+     {
+      "t": "p",
+      "x": "LOCALIZING THE DEFECT. CD3 marks all mature T cells, so CD3 <1% with normal B cells localizes the problem to the thymus: thymic aplasia/hypoplasia prevents T-cell maturation, and because both CD4 and CD8 lineages mature in the thymus, both are reduced. The marrow is fine, so B cells are normal. (X-ray shows an absent or small thymic shadow.)"
+     },
+     {
+      "t": "cq",
+      "x": "DiGeorge = 22q11.2 deletion → heart (truncus arteriosus) + parathyroid (low PTH → hypocalcemic seizures) + thymus (CD3 <1%, both CD4 & CD8 low). B cells normal. (DiGeorge diagnosis)"
+     },
+     {
+      "t": "p",
+      "x": "Case 4: dysmorphic facial features — low-set ears, small \"fish mouth,\" undersized lower jaw; very low/absent vaccine antibodies."
+     },
+     {
+      "t": "p",
+      "x": "Case 4 labs: low calcium (6.2 mg/dL), very low PTH, severe T-cell lymphopenia (CD3 <1%), normal naive CD19+ B cells."
+     },
+     {
+      "t": "p",
+      "x": "Case 4 presentation: term neonate with low birth weight, feeding difficulty, cyanosis, severe heart defect (truncus arteriosus), and seizures at 4 days of age."
+     },
+     {
+      "t": "p",
+      "x": "WHY LOW VACCINE ANTIBODIES (the recurring CD4-help thread). Even with normal B cells, antibody titers are low because there is no CD4+ T-cell help to drive B cells into plasma cells — the same \"no CD4 help → no antibody\" logic that explains why BLS-I (which keeps CD4) makes good vaccine antibody but DiGeorge does not. MANAGEMENT: thymic transplant is the definitive long-term fix (restoring T-cell development); supportive IVIg (compensating for absent CD4-dependent antibody), prophylactic antibiotics, and inactivated vaccines bridge until transplant."
+     },
+     {
+      "t": "p",
+      "x": "Case 4 management: prophylactic antibiotics, IVIg, thymic transplant (the definitive solution for the T-cell defect), and inactivated vaccines."
+     },
+     {
+      "t": "p",
+      "x": "Case 4 diagnosis: DiGeorge syndrome (22q11.2 deletion) — the deleted region governs heart and parathyroid development; low PTH → low calcium → seizures. Vaccine antibodies are low from lack of CD4 help."
+     },
+     {
+      "t": "p",
+      "x": "Case 4 course: at 6 months still below normal weight and behind on milestones; neuro exam normal with no CNS inflammation — confirming the seizures were metabolic (hypocalcemia), not neurologic."
+     },
+     {
+      "t": "key",
+      "x": "DiGeorge is the T-cell case: 22q11.2 deletion → cardiac (truncus arteriosus) + parathyroid (low PTH/Ca → seizures) + thymic aplasia (CD3 <1%, both CD4 and CD8). B cells normal."
+     },
+     {
+      "t": "confusion",
+      "x": "Low antibody despite normal B cells = no CD4 help. This is why DiGeorge has LOW vaccine titers but BLS-I (CD4 intact) has HIGH ones — the same rule, opposite outcomes."
+     },
+     {
+      "t": "cue",
+      "x": "Metabolic seizures: hypocalcemia from low PTH, with a normal neuro exam and no response to anti-epileptics. The definitive fix is a thymic transplant; IVIg/antibiotics bridge to it."
+     },
+     {
+      "t": "p",
+      "x": "ReClaude A: The neonate has DiGeorge syndrome: a 22q11.2 deletion produces the cardiac (truncus arteriosus), parathyroid (low PTH → hypocalcemia → seizures), and thymic (aplasia → CD3 <1%, both CD4 and CD8 low; normal B cells) triad. Vaccine antibodies are low because, without CD4 help, normal B cells still cannot be driven to make antibody — the inverse of BLS-I, which keeps CD4 and makes antibody well. Thymic transplant is the definitive treatment, with IVIg and antibiotics as a bridge."
+     }
+    ]
+   }
+  ]
  }
 };
 
@@ -7280,6 +11503,142 @@ const LO_ANSWERS = {
   "why": ""
  },
  "24_1": {
+  "answer": "<p><em>A neonate has truncus arteriosus, hypocalcemic seizures, dysmorphic facies, and &lt;1% CD3 with normal B cells — what is it, and why are vaccine antibodies low?</em></p><p>THE PRESENTATION + LABS. A term neonate with low birth weight develops feeding difficulty, cyanosis, and a severe heart defect (truncus arteriosus), then seizures at 4 days. Dysmorphic facies (low-set ears, small &quot;fish mouth,&quot; undersized jaw). Labs: low calcium, very low PTH, severe T-cell lymphopenia (CD3+ &lt;1%), and normal CD19+ B cells. This is DiGeorge syndrome, a 22q11.2 deletion affecting structures from that region: the heart (truncus arteriosus), the parathyroids (low PTH → hypocalcemia → seizures, which is why the seizures are metabolic, not neurologic — a normal neuro exam and no response to anti-epileptics), and the thymus.</p><p>LOCALIZING THE DEFECT. CD3 marks all mature T cells, so CD3 &lt;1% with normal B cells localizes the problem to the thymus: thymic aplasia/hypoplasia prevents T-cell maturation, and because both CD4 and CD8 lineages mature in the thymus, both are reduced. The marrow is fine, so B cells are normal. (X-ray shows an absent or small thymic shadow.)</p><p>DiGeorge = 22q11.2 deletion → heart (truncus arteriosus) + parathyroid (low PTH → hypocalcemic seizures) + thymus (CD3 &lt;1%, both CD4 &amp; CD8 low). B cells normal. (DiGeorge diagnosis)</p><p>Case 4: dysmorphic facial features — low-set ears, small &quot;fish mouth,&quot; undersized lower jaw; very low/absent vaccine antibodies.</p><p>Case 4 labs: low calcium (6.2 mg/dL), very low PTH, severe T-cell lymphopenia (CD3 &lt;1%), normal naive CD19+ B cells.</p><p>Case 4 presentation: term neonate with low birth weight, feeding difficulty, cyanosis, severe heart defect (truncus arteriosus), and seizures at 4 days of age.</p><p>WHY LOW VACCINE ANTIBODIES (the recurring CD4-help thread). Even with normal B cells, antibody titers are low because there is no CD4+ T-cell help to drive B cells into plasma cells — the same &quot;no CD4 help → no antibody&quot; logic that explains why BLS-I (which keeps CD4) makes good vaccine antibody but DiGeorge does not. MANAGEMENT: thymic transplant is the definitive long-term fix (restoring T-cell development); supportive IVIg (compensating for absent CD4-dependent antibody), prophylactic antibiotics, and inactivated vaccines bridge until transplant.</p><p>Case 4 management: prophylactic antibiotics, IVIg, thymic transplant (the definitive solution for the T-cell defect), and inactivated vaccines.</p><p>Case 4 diagnosis: DiGeorge syndrome (22q11.2 deletion) — the deleted region governs heart and parathyroid development; low PTH → low calcium → seizures. Vaccine antibodies are low from lack of CD4 help.</p><p>Case 4 course: at 6 months still below normal weight and behind on milestones; neuro exam normal with no CNS inflammation — confirming the seizures were metabolic (hypocalcemia), not neurologic.</p><p><strong>Key:</strong> DiGeorge is the T-cell case: 22q11.2 deletion → cardiac (truncus arteriosus) + parathyroid (low PTH/Ca → seizures) + thymic aplasia (CD3 &lt;1%, both CD4 and CD8). B cells normal.</p><p><strong>Confusion:</strong> Low antibody despite normal B cells = no CD4 help. This is why DiGeorge has LOW vaccine titers but BLS-I (CD4 intact) has HIGH ones — the same rule, opposite outcomes.</p><p><strong>Cue:</strong> Metabolic seizures: hypocalcemia from low PTH, with a normal neuro exam and no response to anti-epileptics. The definitive fix is a thymic transplant; IVIg/antibiotics bridge to it.</p><p>ReClaude A: The neonate has DiGeorge syndrome: a 22q11.2 deletion produces the cardiac (truncus arteriosus), parathyroid (low PTH → hypocalcemia → seizures), and thymic (aplasia → CD3 &lt;1%, both CD4 and CD8 low; normal B cells) triad. Vaccine antibodies are low because, without CD4 help, normal B cells still cannot be driven to make antibody — the inverse of BLS-I, which keeps CD4 and makes antibody well. Thymic transplant is the definitive treatment, with IVIg and antibiotics as a bridge.</p>",
+  "why": ""
+ },
+ "99_1": {
+  "answer": "<p><em>Name the two branches of the immune system and give the single defining feature that separates them.</em></p><p>OVERVIEW. Davis opens the whole course from 30,000 feet, and the single idea she wants you to carry out of this lecture is that the immune system is built in two branches — the innate system at the top of Dr. Gregg’s master figure and the adaptive (also called acquired) system at the bottom. Almost everything in the next fifteen-odd lectures hangs off this one split, so the goal here is to install the scaffolding, not to memorize details you haven’t earned yet.</p><p>The purpose of the whole apparatus is narrower than it sounds: prevent or control infection, and patrol for things that shouldn’t be there. Davis makes the point vividly — 100% of us have a tumor right now, and almost none of us will ever need treatment for it, because the immune system clears it before it declares itself. That patrol-and-clear job is carried out by cells, organs, tissues, and molecules working together, which is the cast of characters the rest of the course introduces one at a time.</p><p>The two branches of immunity are innate and adaptive (acquired). (branch dichotomy — the course spine)</p><p>Every response is two activities: recognize that something is non-self, THEN respond to it.</p><p>Role of the immune system: defense against infection and tumors, immunosurveillance, and the autoimmunity/transplant flip side.</p><p>Layering — within each branch there are multiple means of protection (barriers, enzymes) and effector mechanisms.</p><p>TWO ACTIVITIES, IN ORDER. Before any branch can do anything, the response has to clear a two-step bar. First, recognize that something is non-self — distinguish “us” from “them.” Then respond to it, whether that means an innate response or an adaptive one. Hold onto the order, because it explains the system’s two failure modes: fail to recognize non-self and you get infection; mistakenly react against self and you get autoimmunity. The same recognition machinery that protects you is the thing that, turned the wrong way, attacks you.</p><p>LAYERING AND REDUNDANCY. Davis keeps returning to the word layering: within each branch there are multiple, overlapping ways to fight the same pathogen. Staphylococcus aureus is her running example — it causes skin infections, pneumonia, osteomyelitis, even meningitis, so the body needs different defenses in different tissues that can all recognize and clear it. That redundancy is deliberate: a defense available in the skin (say, the oxidative burst) may not be available across the blood–brain barrier, so the system layers physical barriers, enzymes, effector mechanisms, cells, and molecules so that something can respond wherever the pathogen lands.</p><p>An immune response has two steps in fixed order: recognize non-self, then respond. (recognition precedes response) CQ Failure to recognize non-self → infection; reaction against self → autoimmunity. (the two failure modes)</p><p><strong>Key:</strong> The innate/adaptive split is the organizing axis of the entire course. Map every later cell, molecule, and pathway onto “which branch, and what does it do there.”</p><p><strong>Confusion:</strong> “Two branches” = innate vs adaptive. It does NOT mean humoral vs cell-mediated (that’s a split WITHIN adaptive) or cells vs molecules (a component split).</p><p><strong>Clinical pearl:</strong> “100% of us have a tumor right now” — immunosurveillance runs constantly; you only need clinical help when a tumor escapes it. A memorable anchor for why the system patrols, not just defends.</p><p>ReClaude A: The two branches are innate (fast, generic, no memory) and adaptive/acquired (slow on first exposure, antigen-specific, memory-forming). They are defined by speed, specificity, and the presence or absence of memory — not by anatomy or by the cells-vs-molecules split.</p>",
+  "why": ""
+ },
+ "99_2": {
+  "answer": "<p><em>For speed, specificity, and memory, which branch owns which property — and why does &quot;specific&quot; not mean &quot;fast&quot;?</em></p><p>THE CONTRAST. If LO 1.1 named the two branches, this LO is about telling them apart on the dimensions that actually get tested: specificity, speed, memory, and what does the recognizing. Davis’s framing device is military — innate is a grenade (generic, hits everything in the vicinity, causes collateral damage), adaptive is a sniper or marksman (one precise target). That single image carries most of the distinction, and the collateral-damage half of it is where immunopathology comes from.</p><p>Innate immunity: rapid but generalized — acts within minutes to hours on the first encounter.</p><p>Innate = the grenade: non-specific, present at birth, always on, responds to conserved PAMPs, no memory.</p><p>Adaptive = the sniper: specific and targeted, acquired on encounter, improves and remembers — but slower.</p><p>HOW EACH BRANCH RECOGNIZES. This is the heart of the distinction. Innate immunity reads conserved patterns, not identities. Faced with a gram-negative Klebsiella, the innate system does not say “Klebsiella” — it says “I see LPS, and LPS isn’t human, so this is non-self.” The same goes for teichoic acid on gram-positives and mannose on fungi. These conserved structures are pathogen-associated molecular patterns (PAMPs), and the receptors that read them are pattern-recognition receptors (PRRs). So the rule is short: PRRs recognize PAMPs, and the answer they return is always generic — “bacterium” or “fungus,” never the species. Adaptive immunity, by contrast, recognizes the specific pathogen through B-cell and T-cell receptors, so only the cells that match that pathogen respond.</p><p>Innate PRRs recognize conserved PAMPs (LPS, teichoic acid, mannose) and report non-self/bacterium, never the species. (PRR–PAMP recognition)</p><p>BORN WITH IT vs ACQUIRING IT. You are born with your innate defenses — skin, tears, mucus, lysozyme — and they are always on at basal levels. The adaptive system is called acquired precisely because you are immunologically naive to a given pathogen until you encounter it; only then do you develop (acquire) immunity to it. This is why the flu shot is annual: the virus undergoes antigenic drift, so last year’s acquired immunity no longer matches, and the vaccine must be updated. The textbook calls it adaptive for a second reason — it gets better with each exposure, a point Dr. Gregg will unpack when he covers how antibodies improve over a response.</p><p>THE TIMING PAYOFF — MEMORY. The crown jewel of the adaptive branch is the memory cell. A primary (first-time) adaptive response takes about 7–10 days to develop — far too slow to be your only defense, which is exactly why innate has to act first and buy time. But once memory cells exist, a re-exposure is handled in about 2–3 days (the anamnestic response). That is the entire logic of vaccination: manufacture memory now so the real encounter is fast. Memory is faster than a primary response but still never as instant as the always-ready innate barriers — your skin is already there.</p><p>Primary adaptive response ≈ 7–10 days; memory (anamnestic) response ≈ 2–3 days; innate is faster still (already present). (the timing hierarchy) CQ Annual flu vaccination is needed because influenza undergoes antigenic drift. (why “acquired” immunity must be updated)</p><p>Representative PAMPs by class — nucleic acids, cell-wall lipids (LPS, teichoic acid), carbohydrates (mannose). Conserved, non-self, broadly shared.</p><p>Clonal expansion: one antigen-specific naive cell proliferates into many identical clones — one cell isn’t enough.</p><p>Clones differentiate into effector cells (act now, terminal) and memory cells (persist, re-activatable).</p><p>CLONAL EXPANSION AND THE EFFECTOR/MEMORY SPLIT. Here is the mechanical core of how the specific branch scales up. A naive lymphocyte (one that has never seen its pathogen) carries an antigen receptor; when that receptor finds its match, the cell undergoes clonal expansion (also called clonal proliferation) — it makes many copies of itself, all with the same specificity, because one B cell making antibody is not enough when you need billions of molecules. The expanded clones then differentiate into two fates: effector cells that do the job right now (and are terminally differentiated — they act, then die by apoptosis) and memory cells that persist, sometimes for decades, ready to re-activate. Every time you re-encounter the antigen, you remake both — so you always keep a memory bank for the next round.</p><p>HUMORAL vs CELL-MEDIATED. The adaptive branch itself splits in two by where the pathogen lives. Humoral immunity — antibodies made by plasma cells — handles extracellular threats. Davis’s room analogy is worth keeping: if the cell is this room and the hallway is outside it, antibody can stick to anything in the hallway but cannot pass through the wall. Cell-mediated immunity — cytotoxic T cells — handles intracellular threats like viruses, which must live inside a host cell to replicate. Critically, the T cell does not reach inside and kill the virus; it kills the infected host cell, and the pathogen dies with it. The kill is indirect — a point the exam loves.</p><p>Humoral immunity (antibody/plasma cells) = extracellular pathogens; cell-mediated immunity (cytotoxic T cells) = intracellular pathogens. (the where-it-lives split) CQ Cytotoxic T cells kill the infected host cell, not the pathogen directly. (indirect kill — high-yield)</p><p>Innate vs adaptive at a glance: non-specific/specific, rapid/slow, no-memory/memory, PAMP-sensing cells vs lymphocytes.</p><p><strong>Key:</strong> Specificity, speed, and memory are the three axes that separate the branches. Innate = generic, fast, no memory. Adaptive = specific, slow-then-fast, memory.</p><p><strong>Trap:</strong> Do NOT equate “specific” with “fast.” Adaptive is the specific one but the SLOW one on first encounter (7–10 days). Innate leads because it’s already on.</p><p><strong>Cue:</strong> Pathogen inside a cell (virus) → think cell-mediated (CTL kills the host cell). Pathogen outside (extracellular bacterium, toxin) → think humoral (antibody neutralizes/opsonizes).</p><p>ReClaude A: Innate is generic (PRRs read conserved PAMPs, returning “non-self,” never the species), fast, present at birth, and memoryless. Adaptive is antigen-specific (BCR/TCR recognize the exact target), slow on first exposure (7–10 days) but fast on recall via memory (2–3 days), and improves with each encounter. Grenade vs sniper.</p>",
+  "why": ""
+ },
+ "99_3": {
+  "answer": "<p><em>Give one way innate signaling shapes the adaptive response and one way adaptive output redirects innate cells.</em></p><p>OVERVIEW. This is the conceptual heart of the lecture: the two branches do not act in a vacuum. They talk to each other constantly, in both directions, using secreted molecules — chiefly cytokines and complement — as the language. One branch tells the other “here’s what we’ve got, here’s what I need you to do.” Getting the direction of each example right (innate→adaptive vs adaptive→innate) is exactly what the exam tests, so we’ll keep flagging which way the arrow points.</p><p>WHO GOES FIRST. On a first-ever (naive) encounter, the innate system always responds first, and the adaptive system follows only if the innate response can’t contain the pathogen. The reason is timing: a primary adaptive response needs 7–10 days, and “we’d be sick and dying all the time” if that were our first line. Innate is the right-there, ready-to-go response that buys the days adaptive needs. The one twist: on a re-exposure, adaptive memory can effectively lead, then recruit innate — so “innate first” is a first-encounter rule, not an absolute.</p><p>On a naive encounter, innate responds first; adaptive follows (7–10 days) only if innate fails to contain the pathogen. (innate-first timing)</p><p>Dr. Gregg’s master figure — innate at top, adaptive at bottom; the through-line for the first ~15 lectures.</p><p>Inflammation is initiated in the innate response and can carry over into the adaptive response; it both clears and contains pathogens.</p><p>The two branches do not act in isolation — innate generally responds first and then informs/regulates the adaptive response.</p><p>IMMUNOPATHOLOGY — WHEN THE GRENADE HURTS YOU. Before the directional examples, anchor the cost side. When you have the flu and feel achy, feverish, and chilled, that is not the bug — that is your immune system. The body aches and fever are your cytokines at work; the inflammation that clears pathogens also damages your own tissue, and that damage is immunopathology. Davis notes you’ll meet it again throughout pathology — a great deal of organ damage in disease is the immune response, not the pathogen. Even fever is a deliberate immune tactic: pathogens grow best at 37°C, so raising body temperature slows their replication — the same logic as a refrigerator slowing food spoilage — buying the adaptive system time to catch up.</p><p>Flu malaise (aches, fever, chills) is host cytokine activity — immunopathology, not direct viral damage. (“that’s not the bug”) CQ Fever slows pathogen replication (optimal growth ≈ 37°C), buying the adaptive response time. (fever ≈ refrigerator analogy)</p><p>INNATE REGULATES ADAPTIVE. Now the first arrow. Innate outputs shape the adaptive response in two concrete ways. First, complement proteins can activate B cells — they lower the B-cell activation threshold, so less antigen is needed to switch a B cell on. Second, phagocytes (macrophages, neutrophils) and infected cells secrete cytokines that direct which way B and T cells differentiate — whether a CD4 cell becomes a TH1, TH2, or TH17, and which antibody isotype a B cell should make (IgA in the mucosa, IgG in tissue). In other words, the innate response doesn’t just buy time; it instructs the adaptive response on what to become.</p><p>ADAPTIVE REGULATES INNATE. The reverse arrow runs whether it’s a first encounter or a memory response. T cells produce cytokines that order macrophages and neutrophils to be more aggressive — “you’re not killing fast enough, ramp it up.” And antibodies bound to a pathogen act as handles: macrophages and neutrophils (innate cells) grab those antibody handles to phagocytose and destroy the pathogen by oxidative burst. So the specific branch reaches back and makes the generic branch both harder-hitting and better-aimed. The whole point: the branches form one integrated, mutually-regulating system, not two parallel machines.</p><p>Innate→adaptive: complement lowers the B-cell activation threshold; innate cytokines steer B/T differentiation and isotype. (direction: innate regulates adaptive) CQ Adaptive→innate: antibody handles let phagocytes grab pathogens; T-cell cytokines push macrophages to kill harder. (direction: adaptive regulates innate)</p><p>The innate response can inform and regulate the adaptive response, and vice versa — a two-way regulatory loop.</p><p>Innate regulates adaptive: complement activates B cells; innate-cell cytokines guide B/T activation and differentiation.</p><p>Adaptive regulates innate: T-cell cytokines boost phagocyte killing; antibodies opsonize — “handles” for phagocytes.</p><p><strong>Key:</strong> The branches form one integrated system that regulates itself in BOTH directions. The exam tests which way the arrow points, so tag every example innate→adaptive or adaptive→innate.</p><p><strong>Clinical pearl:</strong> Fever as a refrigerator: pathogens grow best at body temp, so a fever slows them like a fridge slows spoilage — immunopathology that’s actually working for you.</p><p><strong>Confusion:</strong> Innate→adaptive = complement activating B cells + innate cytokines steering differentiation. Adaptive→innate = antibody opsonization + T-cell cytokines driving phagocytes. Don’t flip them.</p><p>ReClaude A: Innate→adaptive: complement proteins activate B cells and lower their activation threshold, and innate cytokines direct B/T differentiation and antibody isotype. Adaptive→innate: T-cell cytokines make phagocytes more aggressive, and antibody bound to a pathogen opsonizes it, giving phagocytes handles to grab. The two branches continuously regulate each other.</p>",
+  "why": ""
+ },
+ "99_4": {
+  "answer": "<p><em>How does the defensin mechanism differ from the lysozyme mechanism?</em></p><p>THE UNIFYING IDEA. Almost every chemical barrier in this lecture kills the same cheap way: it disrupts or perforates the membrane, and then ordinary physiologic fluid shifts do the rest by osmotic lysis. Gregg keeps returning to this — “you just create a pore and a cell lyses” — because it explains why so much of innate immunity (defensins, cathelicidins, fatty acids, and later the complement MAC) converges on pore formation: it is low-energy, you let chemistry finish the kill. Lysozyme is the one enzymatic exception, and it is the one he says shows up on boards constantly.</p><p>DEFENSINS. Defensins are antimicrobial peptides (AMPs). In the gut they are produced largely by Paneth cells in the intestinal crypts at a constitutive basal level (epithelial cells and neutrophils can be induced to make more). For the exam, the one thing to lock down is the mechanism: defensins create pores in microbial membranes. Once the pore is open the microbe cannot control fluid movement, and osmotic lysis follows. Gregg said it almost verbatim — what you need to know for the exam is that they create pores.</p><p>Defensins (Paneth cells, constitutive) kill by creating pores in membranes → osmotic lysis. (defensin mechanism — exam-flagged)</p><p>Defensins (AMPs) from Paneth cells insert into the microbial membrane and form pores; loss of fluid control → osmotic lysis.</p><p>Lysozyme hydrolyzes the β(1–4) bond between NAM and NAG in peptidoglycan, weakening the wall so the cell lyses.</p><p>Other chemical barriers: phospholipase A2, cathelicidins (LL-37), lactic/fatty acids, lactoferrin/transferrin (iron), and HCl.</p><p>LYSOZYME — the board favorite. Lysozyme is the enzyme in saliva, tears, and mucus that targets peptidoglycan. It hydrolyzes the linkage between N-acetylmuramic acid (NAM) and N-acetylglucosamine (NAG), the repeating backbone of the wall. Weaken peptidoglycan and the cell can no longer resist its own osmotic pressure, so it lyses. Because gram-positives carry thick, exposed peptidoglycan, they are the most susceptible; gram-negatives have peptidoglycan too, but it sits behind an outer membrane. Gregg flagged this one specifically — it is one he sees on the board exam all the time.</p><p>Lysozyme hydrolyzes the NAM–NAG bond in peptidoglycan; gram-positives (thick exposed wall) are most susceptible. (lysozyme target + mechanism)</p><p>THE REST OF THE CHEMICAL TOOLKIT. Phospholipase A2 clips a fatty acid off membrane phospholipids, distorting the membrane toward a leaky micelle and also generating the very fatty acids that coat skin. Cathelicidins (the human one is LL-37, a 37-amino-acid peptide) do the same membrane-disrupting, micelle-forming job, concentrated in mucosa. Lactic and fatty acids in sebaceous and sweat secretions disrupt membranes and even limit bacterial conjugation (plasmid transfer), slowing the spread of resistance. Lactoferrin (secretions/tissue) and transferrin (blood) lock up iron, a nutrient bacteria depend on — driving a literal arms race where bacteria deploy siderophores to steal iron back and the host counters with “stealth siderophores.” And hydrochloric acid in the stomach wrecks the structure of anything swallowed.</p><p>Lactoferrin/transferrin sequester iron; bacteria counter with siderophores, host counters with stealth siderophores. (iron arms race)</p><p><strong>Confusion:</strong> Defensins make pores; lysozyme is an enzyme that cleaves the NAM–NAG peptidoglycan bond. Different mechanism, different target — don’t blur “antimicrobial peptide” with “wall enzyme.”</p><p><strong>Key:</strong> The recurring innate killing motif is membrane perforation/disruption → osmotic lysis. Defensins, cathelicidins/LL-37, fatty acids, and the complement MAC all use it; lysozyme is the enzymatic exception.</p><p><strong>Clinical pearl:</strong> Two board-flagged items live here: lysozyme (“on the board exam all the time”) and the pore principle. If a stem describes peptidoglycan-bond cleavage, think lysozyme; if it describes membrane pores, think defensins/AMPs.</p><p>ReClaude A: Defensins form pores in the membrane (osmotic lysis); lysozyme is an enzyme that cleaves the NAM–NAG peptidoglycan bond (most effective against gram-positives). One perforates the membrane, the other digests the wall — both end in osmotic lysis.</p>",
+  "why": ""
+ },
+ "99_5": {
+  "answer": "<p><em>What are complement’s three functions, and which complement defect causes recurrent Neisseria?</em></p><p>THE THREE FUNCTIONS. Everything complement does sorts into three jobs, and Gregg wants them cold: lysis (kill the microbe outright), opsonization (tag it for phagocytes), and inflammation (recruit the cells that do the killing). They work hand in hand — inflame to bring in phagocytes, opsonize so those phagocytes can grab on, and lyse what you can directly. The two phagocytes that get recruited are the same ones from micro: neutrophils and macrophages.</p><p>Complement’s three functions: lysis (MAC), opsonization (C3b/CR1), inflammation (C3a/C5a). (three functions — memorize)</p><p>OPSONIZATION NEEDS A RECEPTOR. Coating a microbe in C3b only matters because phagocytes carry complement receptor 1 (CR1), which is essentially a C3b receptor. CR1 binds the surface C3b, giving the cell a handle to engulf the organism into a phagosome that fuses with a lysosome. Gregg defines it crisply — opsonization is enhancing phagocytosis through the complement system. This is exactly why encapsulated bacteria are complement-dependent: a capsule exists to mask the surface so phagocytes have nothing to grab; C3b deposited on the capsule restores a handle. The C3a released during cleavage is the chemotactic signal pulling neutrophils and macrophages in.</p><p>Opsonization = C3b coats the microbe and phagocyte CR1 binds it → why encapsulated bacteria depend on complement. (C3b/CR1 + capsule logic)</p><p>Macrophage CR1 (C3b receptor) binds surface-bound C3b on the bacterium, driving complement-mediated phagocytosis (opsonization).</p><p>The phagosome fuses with a lysosome; H+ pumped in lowers the pH and activates hydrolytic enzymes that destroy the microbe.</p><p>Adding one C3b to C3bBb makes the C5 convertase (C3bBb3b), which cleaves C5 → C5a (chemotaxis) + C5b (seeds the MAC).</p><p>LYSIS — THE MEMBRANE ATTACK COMPLEX. The C5 convertase (C3bBb3b) cleaves C5 into C5a (a potent chemoattractant, even stronger than C3a) and C5b, which stays near the surface and seeds the terminal cascade. The assembly order is pure recruitment, only one cleavage having happened: C5b → C6 → C7 (C7 inserts into the membrane and anchors the complex) → C8 (solidifies the insertion) → C9, which polymerizes into a pore. Pores again — fluid rushes in and out and the cell dies by osmotic lysis, the free kill. That terminal C5b–C9 structure is the membrane attack complex (MAC).</p><p>MAC assembles C5b→C6→C7 (membrane insertion)→C8→C9 (polymerizes into the lytic pore). (MAC order)</p><p>Membrane attack complex: C5b–C8 anchors the complex; polymerized C9 forms the transmembrane pore → osmotic lysis.</p><p>C3a/C5a as anaphylatoxins: locally recruit neutrophils/macrophages and activate mast cells to promote inflammation.</p><p>Complement-deficiency table: terminal (C5–C9/MAC) defects → recurrent Neisseria; early defects → broad encapsulated-organism susceptibility.</p><p>NEISSERIA, AND THE ANAPHYLATOXIN PARALLEL. The deficiency table has one board-critical row: a defect anywhere in C5–C9 wrecks the MAC and gives recurrent Neisseria meningitidis — Gregg says remember that for boards, because the MAC is the primary way you kill meningococcus. Separately, C3a and C5a are anaphylatoxins: locally they recruit phagocytes and activate mast cells (which sit around blood</p><p>vessels) to release histamine and drive inflammation. Let them go systemic and you activate mast cells body-wide → vasodilation, increased vascular permeability, adhesion-molecule upregulation → anaphylactic shock. That is the same three-effect vascular collapse TNF-α produces in septic shock (LPS-driven) — different trigger, identical hemodynamics, and a comparison worth holding onto for Lec 3.</p><p>A C5–C9 (MAC) defect → recurrent Neisseria meningitidis. (terminal-complement board flag) CQ Systemic C3a/C5a → mast-cell histamine → anaphylactic shock (same triad as TNF-α septic shock). (anaphylatoxin ↔ septic-shock parallel)</p><p>Anaphylactic shock: systemic mast-cell activation → vasodilation, capillary leak, bronchoconstriction → hypotension and airway compromise.</p><p><strong>Key:</strong> Three functions, three mediators: lysis = MAC (C5b–C9), opsonization = C3b–CR1, inflammation = C3a/C5a. Anchor every complement detail to which of these three it serves.</p><p><strong>Trap:</strong> Terminal (C5–C9 / MAC) deficiency → recurrent Neisseria. Don’t default to “C3” for this stem — early-component loss gives broad encapsulated-organism problems, not the meningococcal signature.</p><p><strong>Clinical pearl:</strong> Anaphylatoxin shock (C3a/C5a) and septic shock (TNF-α) converge on the SAME three vascular effects. If a stem lists vasodilation + capillary leak + adhesion upregulation, identify the trigger, not a new mechanism.</p><p>ReClaude A: Lysis (the MAC, C5b–C9 forming a pore), opsonization (C3b bound by phagocyte CR1), and inflammation (C3a/C5a recruiting neutrophils/macrophages and activating mast cells). The cells involved are neutrophils and macrophages (phagocytes) and mast cells (anaphylatoxin targets).</p>",
+  "why": ""
+ },
+ "99_6": {
+  "answer": "<p><em>How do the early regulators (DAF vs MCP/factor H) differ from the late one (CD59)?</em></p><p>THE UNIFYING IDEA. Complement runs spontaneously on every surface, so the question that keeps you alive is: why doesn’t it destroy your own cells? The answer is a panel of host-cell regulators that either decay the convertase or block the MAC. Two jobs at once: protect self, and ration C3 so amplification doesn’t exhaust it. Lose these regulators and the failure is not weaker defense — it is self-lysis.</p><p>EARLY REGULATORS — DAF and MCP (and factor H/I). On host surfaces, DAF (decay-accelerating factor) dissociates Bb from the convertase, decaying C3bBb so it stops cleaving C3. MCP (membrane cofactor protein) works differently — it is a cofactor that recruits factor I to cleave the surface C3b. (Soluble factor H does the H-side of the same job in fluid phase, again with factor I.) The distinction is the testable point: DAF decays the enzyme; MCP/factor H recruit factor I to cleave C3b. A student asked whether C3b inactivated by DAF can still opsonize — Gregg’s answer: DAF acts so early (on the first convertase) that you never amplify enough C3a/C3b to actually recruit and feed phagocytes, so it dies down fast.</p><p>DAF dissociates Bb (decays the convertase); MCP/factor H recruit factor I to cleave C3b. (decay vs cofactor — distinguish)</p><p>Host regulators DAF and MCP on the human cell surface: DAF dissociates Bb; MCP recruits factor I to cleave C3b — stopping the convertase on self.</p><p>PNH: a GPI-anchor synthesis defect prevents DAF/CD59 from sitting on the RBC surface, so complement lyses the red cells.</p><p>LATE REGULATORS — blocking the MAC. If the cascade reaches C5b–C8 on a host cell, two more checkpoints stop the pore. CD59 (and HRF) block C9 from joining and polymerizing, so no pore forms. S-protein, clusterin, and factor J (three distinct proteins, three sites on C7) prevent C7 from anchoring the complex to the membrane in the first place. Five molecules total guard the terminal step on self.</p><p>CD59 blocks C9 from joining C5b-8 (no MAC pore) on host cells. (late-stage MAC regulator)</p><p>PNH AND FACTOR I DEFICIENCY — the two clinical mirrors. Paroxysmal nocturnal hemoglobinuria (PNH) is the regulator-loss disease: a defect in GPI-anchor synthesis means DAF and CD59 cannot be tethered to the cell surface, so complement lyses the most numerous blood cells — red cells. The lesion is the missing anchor, not a missing complement protein. The other clinically loaded regulator is factor I: deficiency both depletes C3 (unchecked consumption) and blunts the antibody response, because factor I generates the C3b cleavage product C3d, and C3d lowers</p><p>the B-cell activation threshold. That is the promised payoff from LO 2.4 — lose factor I and you become highly susceptible to encapsulated bacteria from both a complement and an antibody direction.</p><p>PNH = GPI-anchor defect → no surface DAF/CD59 → complement lyses RBCs. (PNH mechanism) CQ Factor I deficiency → depleted C3 + blunted antibody response (no C3d to lower the B-cell threshold). (factor I → antibody link)</p><p><strong>Trap:</strong> PNH is a GPI-anchor defect, not a missing complement component. The regulators (DAF, CD59) are present in the body but can’t attach, so the patient’s own complement lyses their RBCs.</p><p><strong>Cue:</strong> Recurrent encapsulated-bacteria infection + low C3 + poor antibody response → think factor I deficiency (C3d link). Recurrent Neisseria alone → think terminal MAC (C5–C9).</p><p><strong>Key:</strong> Regulators do two jobs: protect host cells and ration C3. Sort them by stage — early (DAF decays Bb; MCP/factor H + factor I cleave C3b) vs late (CD59 blocks C9; S-protein/clusterin/factor J block C7).</p><p>ReClaude A: Early regulators act on the convertase — DAF dissociates Bb; MCP and factor H recruit factor I to cleave C3b. Late regulators block the MAC — CD59 stops C9 polymerizing; S-protein/clusterin/factor J block C7 anchoring. They protect host cells and ration C3; losing the GPI anchor for DAF/CD59 causes PNH.</p>",
+  "why": ""
+ },
+ "99_7": {
+  "answer": "<p><em>Trace LPS recognition through to cytokine transcription, naming each molecule.</em></p><p>THE RECOGNITION COMPLEX. TLR4 doesn’t touch LPS directly — it needs accessory molecules. LBP (LPS-binding protein) grabs LPS and delivers it to CD14, which sits near the TLR4 homodimer. Then MD2 stabilizes the LPS on TLR4. That assembled complex (LPS·CD14·MD2·TLR4) changes the shape of TLR4’s cytoplasmic TIR domain, and the conformational change is what lets the adaptor MyD88 dock. Recognition is therefore a small committee, not a single handshake.</p><p>TLR4 recognizes LPS via accessories: LBP → CD14, with MD2 stabilizing LPS → TIR-domain change → MyD88 docks. (TLR4 recognition complex)</p><p>TLR signaling output: the NF-κB–induced cytokines that drive the inflammatory response.</p><p>LPS recognition by TLR4: LBP hands LPS to CD14; MD2 stabilizes it on the TLR4 homodimer, changing the TIR domain.</p><p>Signaling cascade: MyD88 → IKK → phosphorylates IκB → frees NF-κB → nucleus → cytokine transcription.</p><p>THE NF-κB CASCADE. Once MyD88 binds, the cascade is worth knowing as a clean chain: MyD88 → activates IKK (IκB kinase) → IKK phosphorylates IκB → phosphorylated IκB releases NF-κB. Free NF-κB, a cytoplasmic transcription factor, translocates through the nuclear pore, binds gene promoters, and drives cytokine production. The one inhibitor to keep straight is IκB — it holds NF-κB hostage until IKK phosphorylates it. The five cytokines this produces are the subject of LO 3.4: IL-1β, IL-6, TNF-α, IL-8, IL-12.</p><p>Cascade: MyD88 → IKK → phosphorylates IκB → releases NF-κB → cytokine transcription. (NF-κB cascade order)</p><p><strong>Cue:</strong> If a stem gives “LPS recognition needs which helper molecules?” the answer set is LBP, CD14, MD2 (not a kinase, not a cytokine).</p><p><strong>Key:</strong> Read it as one inhibitor being removed: NF-κB is chained to IκB; IKK phosphorylates IκB, NF-κB is freed, cytokines get transcribed. This same cascade later triggers NLRP3.</p><p><strong>Confusion:</strong> IKK (the kinase) phosphorylates IκB (the inhibitor). Students invert these or phosphorylate NF-κB itself — it’s IκB that gets phosphorylated and lets NF-κB go.</p><p>ReClaude A: LPS is presented by LBP→CD14 with MD2 stabilizing it on the TLR4 dimer, changing the TIR domain so MyD88 docks. Cascade: MyD88 → IKK → phosphorylates IκB → releases NF-κB → nucleus → transcription of IL-1β, IL-6, TNF-α, IL-8, IL-12.</p>",
+  "why": ""
+ },
+ "99_8": {
+  "answer": "<p><em>Which cytokine drives the acute phase, and where do CRP, MBL, and SAA each route?</em></p><p>IL-6 REPROGRAMS THE LIVER. The acute-phase response is IL-6 telling hepatocytes to switch production: up with acute-phase proteins (pentraxins) and complement, down with transport proteins like albumin — more immune reactivity, less housekeeping. The three acute-phase proteins to know route into three different effector arms: C-reactive protein (CRP) → classical complement, mannose-binding lectin (MBL) → lectin complement, and serum amyloid A (SAA) → TLR signaling and phagocytosis. Pentraxins also flag apoptotic cells for clearance — a detail that returns with lupus, where faulty apoptotic-cell uptake matters.</p><p>IL-6 drives the acute phase: ↑ pentraxins (CRP, SAA, MBL) + complement, ↓ albumin. (acute-phase driver)</p><p>IL-1β (with IL-6, TNF-α) raises PGE2 → hypothalamic set point → fever; PGE2 also drives myalgia/arthralgia.</p><p>Acute-phase proteins: CRP → classical pathway, MBL → lectin pathway, SAA → TLR signaling/phagocytosis; albumin falls.</p><p>All three complement pathways (alternative, lectin, classical) converge on a C3 convertase and the membrane attack complex.</p><p>THE LECTIN PATHWAY. Once the acute phase is running, MBL becomes biologically meaningful (basal level is low). MBL complexes with the serine proteases MASP and binds surface mannose (and similar carbohydrates) on pathogens. MASP then cleaves C4 — C4b attaches to the surface (just as C3b did in the alternative pathway) — and cleaves C2. Here the nomenclature is deliberately confusing: the larger fragment is C2a. C2a binds C4b to form C4b2a, the classical C3 convertase. So the lectin pathway builds the classical convertase. From there it behaves like any C3 convertase: cleave C3, deposit C3b, and the presence of C3b lets the alternative pathway amplify alongside — two systems now spreading C3b together.</p><p>Lectin: MBL+MASP binds mannose → cleaves C4 (C4b attaches) + C2 → C4b2a = classical C3 convertase. (lectin pathway → C4b2a)</p><p>Lectin pathway: MBL+MASP binds mannose, cleaves C4 (C4b attaches) and C2 → C4b2a, the classical C3 convertase.</p><p>Classical pathway (innate-triggered here): CRP binds phosphocholine → recruits C1 → cleaves C4/C2 → the same C4b2a convertase.</p><p>THE CLASSICAL PATHWAY (innate-triggered). CRP closes the loop. CRP binds phosphocholine head groups on pathogen surfaces; bound CRP then recruits C1 (the C1q architecture plus serine proteases C1r/C1s, made by dendritic cells). C1 does exactly what MASP did: cleave C4 and C2 to build C4b2a, the classical C3 convertase — and everything proceeds to opsonization and the MAC. So three pathways, one convergence:</p><p>alternative (spontaneous, Lec 2), lectin (MBL→mannose), and classical (here, CRP→C1) all build a C3 convertase. The board-flagged corollary recurs: MBL or any complement deficiency → encapsulated-bacteria susceptibility, with terminal C5–C9 → Neisseria.</p><p>Classical (innate-triggered): CRP binds phosphocholine → C1 → C4/C2 cleavage → same C4b2a convertase. (classical via CRP/C1)</p><p>BAND NEUTROPHILS — the practical readout. Because IL-6 also drives neutrophil output, an overwhelming infection forces the marrow to release immature band neutrophils. Gregg’s rule: more than 5% bands means you are losing — the microbe is outpacing the response. It is the clinical “left shift,” and neutrophil elevations track bacterial infection.</p><p>&gt;5% band (immature) neutrophils = left shift = the infection is winning. (band-neutrophil rule)</p><p><strong>Key:</strong> IL-6 is the acute-phase conductor. Route the three proteins: CRP → classical, MBL → lectin, SAA → TLR/phagocytosis — and remember lectin + classical both build C4b2a.</p><p><strong>Trap:</strong> Watch the C2 nomenclature: the LARGER fragment is C2a, so the classical/lectin C3 convertase is C4b2a (not C4b2b). Different from the alternative pathway’s C3bBb.</p><p><strong>Clinical pearl:</strong> &gt;5% bands = you’re losing. A clean, testable readout of an overwhelming (usually bacterial) infection driven by IL-6 boosting neutrophil output.</p><p>ReClaude A: IL-6 drives the acute-phase response: hepatocytes make CRP (→ classical), MBL (→ lectin), and SAA (→ TLR/phagocytosis) while albumin falls. Lectin (MBL+MASP→mannose) and classical (CRP→C1) both cleave C4/C2 to build C4b2a, the classical C3 convertase. &gt;5% band neutrophils signals a losing infection.</p>",
+  "why": ""
+ },
+ "99_9": {
+  "answer": "<p><em>Put the trafficking steps in order and name the board-flagged integrin/ligand pair.</em></p><p>THE THREE-STEP. Getting a blood leukocyte into infected tissue is a fixed sequence, and the cytokine-activated endothelium makes it possible. Step 1 — rolling: selectins on activated endothelium bind carbohydrate ligands on the leukocyte, a weak interaction that lets the cell tether and roll along the vessel wall, slowing down. Step 2 — firm arrest: a chemokine signal flips the leukocyte’s integrins to high-affinity, and they grip endothelial ligands to stop the cell. Step 3 — diapedesis: the arrested cell squeezes between endothelial cells (through the thinned tight junctions TNF-α loosened) into the tissue.</p><p>Trafficking: selectin rolling → integrin firm arrest → chemokine signal → diapedesis. (the three-step)</p><p>Step 1 — rolling: selectins on activated endothelium bind leukocyte carbohydrate ligands, a weak tether that slows the cell.</p><p>Step 2 — firm arrest: chemokines raise integrin affinity; LFA-1 binds ICAM-1 to stop the cell on the endothelium.</p><p>Step 3 — diapedesis: the arrested cell follows the chemokine gradient and transmigrates between endothelial cells into tissue.</p><p>THE BOARD PAIR. The integrin/ligand interaction to lock down is LFA-1 (on the leukocyte) binding ICAM-1 (on endothelium) — Gregg flags it as the one that shows up most on boards, with the bonus that ICAM-1 is also the rhinovirus receptor. The chemokine that activates integrins and arrests neutrophils is IL-8/CXCL8, made by the same macrophages. Neutrophils go first — they are 50–70% of blood leukocytes and arrive within about two hours — with monocytes and NK cells following. This three-step is previewed here and detailed as extravasation in Lec 4; the molecules (selectin/integrin/chemokine) are the takeaway.</p><p>Board pair: LFA-1 (leukocyte) → ICAM-1 (endothelium); ICAM-1 is also the rhinovirus receptor. (LFA-1/ICAM-1)</p><p>Summary table — the major innate cytokines (IL-1β, IL-6, TNF-α, IL-8, IL-12, type I IFN): releasing cell, target, and primary effects.</p><p><strong>Clinical pearl:</strong> LFA-1 → ICAM-1 is the board-flagged firm-arrest pair, and ICAM-1 is the rhinovirus receptor — a frequently tested two-for-one.</p><p><strong>Key:</strong> Three molecules, three steps, in order: selectins (rolling) → integrins (arrest) → chemokine (activation/diapedesis). Neutrophils lead because they’re most abundant and fastest.</p><p><strong>Cue:</strong> If a stem describes weak, reversible tethering/rolling, that’s selectins; firm stop is integrins (LFA-1/ICAM-1); the cell then transmigrates (diapedesis).</p><p>ReClaude A: Selectins on activated endothelium mediate rolling (weak), chemokines (IL-8) then raise integrin affinity for firm arrest (LFA-1–ICAM-1), and the cell undergoes diapedesis into tissue. Neutrophils traffic first (most abundant, fastest), followed by monocytes and NK cells.</p>",
+  "why": ""
+ },
+ "99_10": {
+  "answer": "<p><em>Trace the respiratory burst from NADPH oxidase to HOCl, naming each enzyme and product.</em></p><p>THE MOST IMPORTANT REACTIVITY OF THE SEMESTER. Gregg says it outright — phagocytosis is the single most important immune reactivity of the whole unit, and “everything is geared towards it.” The killing happens in two stages with a clear logic: paralyze first, then digest. Stage one is the respiratory burst (oxygen-dependent); stage two is acid digestion in the phagolysosome.</p><p>Phagocytosis logic: paralyze replication first (respiratory burst), then digest (acid hydrolases). (two-stage logic)</p><p>Late reactions: the vacuolar ATPase pumps H+ in to acidify the phagosome — required for the next step.</p><p>Phagosome–lysosome fusion delivers acid hydrolases (active at low pH) plus defensins and lysozyme to digest the microbe.</p><p>Early O2-dependent reactions (respiratory burst): NADPH oxidase → superoxide; SOD → H2O2; catalase → water; MPO → HOCl; iNOS → NO (RNS).</p><p>THE RESPIRATORY BURST. Once a microbe is in the phagosome, the cell takes a big breath of oxygen to fuel a cascade of reactive oxygen species (ROS). NADPH oxidase (phagocyte oxidase) makes superoxide (O2−); SOD converts it to H2O2; catalase detoxifies H2O2 to water, while myeloperoxidase (MPO) converts H2O2 to hypochlorous acid (HOCl) (bleach). Separately, iNOS makes nitric oxide and downstream</p><p>reactive nitrogen species (RNS). All of these damage nucleic acid — the point is to stop replication so the microbe can’t out-grow the response. (Clinically, NADPH-oxidase deficiency is the lesion behind chronic granulomatous disease — a good one to remember.)</p><p>ROS chain: NADPH oxidase→O2−; SOD→H2O2; catalase→water; MPO→HOCl; iNOS→NO (RNS). (respiratory-burst enzymes)</p><p>EVASION, AND THE IFN-γ COUNTER. Bacteria that live with oxygen carry the same protective enzymes. Staphylococcus is catalase-positive (and SOD-positive), so it detoxifies ROS and resists the early burst. The host’s answer is volume: NK-derived IFN-γ ramps ROS production to overwhelm the bacterium’s finite catalase/SOD — the macrophage–NK loop (LO 4.8). A second evasion is anatomical: Mycobacterium tuberculosis blocks phagosome acidification AND lysosome fusion, which is exactly why it survives inside macrophages.</p><p>Staph (catalase+) resists the burst; IFN-γ overwhelms it. M. tuberculosis blocks acidification + lysosome fusion. (evasion + counter)</p><p>ACIDIFY, THEN DIGEST. Before the lysosome fuses, the vacuolar ATPase pumps H+ into the phagosome to acidify it — critical, because the next step depends on low pH. The lysosome then fuses and delivers acid hydrolases (the “acid” means they work at low pH): nucleases, proteases, lipases, glycosidases — enough to dismantle every macromolecule of the now-paralyzed microbe — along with more defensins and lysozyme for good measure. No acidification, no digestion: that single dependency is what M. tuberculosis exploits.</p><p>Vacuolar ATPase acidifies the phagosome → acid hydrolases (low-pH nucleases/proteases/lipases) digest the microbe. (acidify → digest)</p><p><strong>Key:</strong> Two stages, in order: burst (ROS/RNS) paralyzes the microbe by damaging nucleic acid; then acidification + acid hydrolases digest it. Memorize the ROS enzyme chain as the spine.</p><p><strong>Trap:</strong> Keep the enzymes distinct: NADPH oxidase makes superoxide (deficiency → CGD); SOD → H2O2; catalase detoxifies H2O2; MPO → HOCl. Bacterial catalase/SOD is what blunts the burst.</p><p><strong>Cue:</strong> Recurrent catalase-positive infections → think failed respiratory burst (NADPH-oxidase / CGD). A bug surviving inside macrophages by blocking acidification → M. tuberculosis.</p><p>ReClaude A: The respiratory burst (NADPH oxidase→superoxide; SOD→H2O2; catalase→water; MPO→HOCl; iNOS→NO/RNS) damages nucleic acid to paralyze replication. The vacuolar ATPase then acidifies the phagosome, and the fused lysosome delivers low-pH acid hydrolases (plus defensins/lysozyme) to digest the microbe. Paralyze first, then digest.</p>",
+  "why": ""
+ },
+ "99_11": {
+  "answer": "<p><em>List the granules in developmental order and say why band neutrophils can kill but not migrate.</em></p><p>WHY GRANULES MAKE THE NEUTROPHIL SUPERIOR. Macrophages phagocytose and that’s it; the neutrophil is the premier phagocyte because it adds granules. Granule biology is organized around development: granules appear in a fixed order, and the order maps onto neutrophil maturity. Appearance order is azurophilic (primary) → specific (secondary) → gelatinase (tertiary) → secretory/ficolin. On activation, release runs the reverse, gated by intracellular calcium — highest calcium fires the secretory/ficolin granule first.</p><p>Development order: azurophilic → specific → gelatinase → secretory/ficolin; release reverses it (calcium-gated). (granule order)</p><p>Granule appearance maps to neutrophil maturity: azurophilic → specific → gelatinase → secretory/ficolin (bands lack the last).</p><p>First released (highest Ca2+): secretory/ficolin — supplies selectin ligands and integrins for adhesion/extravasation.</p><p>Last released (lowest Ca2+): azurophilic fuses with the phagolysosome — acid hydrolases, defensins, MPO (kept inside to protect host tissue).</p><p>RELEASE ORDER = FUNCTION. At activation (highest calcium) the secretory/ficolin granule fuses first, placing selectin ligands and integrins on the neutrophil surface for adhesion/extravasation. As calcium falls, gelatinase (MMP-9) is released to break down CD31 and loosen tight junctions for transit (arginase-1 then helps reseal the junctions behind it). Specific granules supply chemokine receptors (to follow the gradient) plus lactoferrin and NGAL (which blocks bacterial siderophores, denying iron). Finally azurophilic granules fuse with the phagolysosome — not the surface — delivering acid hydrolases, defensins, and MPO; keeping them internal protects host tissue.</p><p>Secretory/ficolin = adhesion (selectin ligands/integrins); azurophilic = phagolysosome killing (kept internal). (first vs last granule)</p><p>THE BAND-NEUTROPHIL DEFECT. This is the high-yield payoff. Band (immature) neutrophils stop at the gelatinase stage — they have not yet made the secretory/ficolin granule, so they lack the selectin ligands and integrins needed to roll and arrest. The consequence: bands can phagocytose and kill, but they can’t migrate out of the blood to where the microbe is. That is why a left shift (&gt;5% bands) signals trouble — the marrow is dumping cells that can’t reach the fight.</p><p>Band neutrophils stop at gelatinase → no secretory/ficolin → can kill but can’t migrate. (band-neutrophil defect)</p><p><strong>Key:</strong> Development = azurophilic→specific→gelatinase →secretory/ficolin; release reverses it. First out (secretory/ficolin) = adhesion molecules; last out (azurophilic) = phagolysosome killing.</p><p><strong>Trap:</strong> Bands CAN kill — they just can’t migrate. The missing secretory/ficolin granule means no selectin ligands/integrins, so they’re stuck in the vessel. The defect is trafficking, not killing.</p><p><strong>Clinical pearl:</strong> Azurophilic granules fuse with the phagolysosome, not the membrane — their toxic contents are kept internal to avoid damaging host tissue (frustrated phagocytosis dumps them out — seen later in rejection).</p><p>ReClaude A: Granules appear azurophilic → specific → gelatinase → secretory/ficolin during development; release reverses this, gated by calcium. Secretory/ficolin (first) supplies selectin ligands/integrins for migration; azurophilic (last) fuses with the phagolysosome to kill. Band neutrophils stop at gelatinase, lack secretory/ficolin, and so can kill but cannot migrate.</p>",
+  "why": ""
+ },
+ "99_12": {
+  "answer": "<p><em>Why does a cell that loses MHC class I get killed by NK but hide from cytotoxic T cells?</em></p><p>THE MISSING-SELF DETECTIVE. NK cells solve a problem antibodies and T cells can’t: a virus or tumor that hides by switching off MHC class I. Cytotoxic T cells need to see peptide on MHC I to kill; a cell that drops MHC I becomes invisible to T cells. NK cells do the opposite — they read MHC I as a “don’t kill me” license, so a cell missing MHC I gets killed. This is the missing-self hypothesis, and it is the conceptual heart of the objective. Surface markers: CD56+, CD16+, CD3− (the CD3-negative is what separates NK from T cells).</p><p>NK missing-self: loss of MHC I (which licenses “don’t kill”) → NK kills. Markers CD56+ CD16+ CD3−. (missing-self + NK markers)</p><p>NK cells: CD56+ CD16+ CD3− lymphocytes that survey MHC class I and kill cells that have lost it.</p><p>Missing-self: normal MHC I delivers an inhibitory “don’t kill” signal; virus/tumor downregulation of MHC I removes the brake.</p><p>Killing uses perforin to breach the membrane and granzymes to trigger apoptosis — the same lethal hit cytotoxic T cells use.</p><p>HOW THEY KILL — AND THE TWO BALANCING SIGNALS. NK killing is governed by a balance of activating and inhibitory receptors. MHC I engages the inhibitory receptor and shuts the NK cell off; stress ligands engage activating receptors. When a cell loses MHC I, the inhibitory brake is released and activation wins. The lethal hit is the same one cytotoxic T cells use: perforin punches pores and granzymes enter to trigger apoptosis. NK cells also kill by ADCC through CD16 (FcγRIII), binding antibody-coated targets.</p><p>NK killing = perforin + granzyme → apoptosis; also ADCC via CD16. Balance of activating vs inhibitory (MHC I) receptors decides. (perforin/granzyme + ADCC)</p><p>THE IL-12 → NK → IFN-γ LOOP. Don’t lose the cytokine circuit Gregg stressed: macrophages and dendritic cells make IL-12, IL-12 drives NK cells to secrete IFN-γ, and IFN-γ activates macrophages (the M1 program) to kill what they’ve eaten. It is a feed-forward amplifier linking the phagocyte and the NK cell before adaptive immunity arrives — and the same IFN-γ later becomes the signature Th1 cytokine.</p><p>IL-12 (macrophage/DC) → NK secretes IFN-γ → M1 macrophage activation. Feed-forward innate amplifier. (IL-12→NK→IFN-γ loop)</p><p>The IL-12 → NK → IFN-γ → M1 loop: dendritic cells and macrophages and NK cells amplify each other ahead of adaptive immunity.</p><p><strong>Key:</strong> NK = the missing-self killer. MHC I licenses “don’t kill”; lose it (virus/tumor) and NK kills via perforin/granzyme. CD56+ CD16+ CD3−. Also ADCC via CD16. IL-12 → NK → IFN-γ → M1.</p><p><strong>Cue:</strong> See downregulated/absent MHC I on a virus-infected or tumor cell → think NK killing. See antibody-coated target → think NK ADCC via CD16.</p><p><strong>Trap:</strong> NK is the mirror image of cytotoxic T cells. CTLs kill cells that show the wrong peptide-MHC; NK kills cells that lack MHC I. A cell hiding from T cells by dropping MHC I walks straight into the NK cell.</p><p>ReClaude A: NK cells (CD56+ CD16+ CD3−) kill by missing-self recognition: MHC class I engages an inhibitory receptor that licenses “don’t kill,” so cells that lose MHC I (virus/tumor) are killed via perforin/granzyme-induced apoptosis. They also perform ADCC through CD16, and the IL-12 → NK → IFN-γ loop activates M1 macrophages.</p>",
+  "why": ""
+ },
+ "99_13": {
+  "answer": "<p><em>Match each splenic and nodal compartment to its resident cells and primary function.</em></p><p>THE COMPARTMENTALIZATION PRINCIPLE. Immature B cells leave the marrow and travel to the spleen, which has two zones with two jobs. The red pulp is the blood-handling zone: it filters blood, holds a blood reserve for trauma, and is where macrophages remove aged (~120-day) red cells. Dendritic cells and macrophages there also survey for microbes — a TLR hit triggers cytokines and phagocytosis on the spot, and dendritic cells carry captured microbes to the white pulp to prime T cells.</p><p>Red pulp = blood filter + aged-RBC removal (macrophages) + blood reserve. (red pulp function)</p><p>Newly formed naive B cells exit the bone marrow and enter the spleen as transitional cells.</p><p>Red pulp filters blood, stores a blood reserve, and is where macrophages remove aged red cells.</p><p>White pulp is the immune tissue: follicles (B cells), PALS (T cells), and the marginal zone (rapid-IgM B cells).</p><p>WHITE PULP — FOLLICLE, PALS, MARGINAL ZONE. The white pulp is the immune tissue, and B and T cells are kept separate. Follicles = B cells; the periarteriolar lymphatic sheath (PALS) = T cells. Surrounding both is the marginal zone, home to marginal-zone B cells — the emergency cell. They recognize mostly carbohydrate, respond to blood-borne antigen within hours (a normal B cell takes 7–10 days), and make only IgM, the complement-activating antibody. Something dangerous in the blood needs a response now; the marginal-zone B cell provides it.</p><p>White pulp: follicle = B, PALS = T. Marginal-zone B cell = rapid IgM vs blood-borne carbohydrate (hours, not days). (white pulp + emergency IgM)</p><p>Splenic white-pulp anatomy around the central arteriole: follicle, PALS, and marginal zone.</p><p>T cells arriving from the thymus populate the PALS (T-cell zone).</p><p>Transitional B cells become follicular (FO) or marginal-zone (MZ) B cells — and are tested for self-reactivity here.</p><p>THE LYMPH NODE — SAME LOGIC, NEW NAMES. The lymph node compartmentalizes B and T cells just like the spleen, but the names change. Follicle = B cells; paracortex = T cells; and when cells get activated they move into the medulla and exit through the efferent lymphatics into the blood, where they circulate until they find inflamed tissue. Antigen arrives the other way — via afferent lymphatics, carried almost entirely by dendritic cells (a few macrophages), which deliver microbial components to the paracortical T cells. One clinical aside Gregg flagged: damaged lymph nodes do not regenerate, though new lymphoid aggregates can form at sites of chronic infection.</p><p>Lymph node: follicle = B, paracortex = T, activated cells exit via medulla → efferent. Antigen enters via afferent (dendritic cells). (node compartments + flow)</p><p>Lymph-node compartments: B cells in follicles (germinal centers), T cells in the paracortex, and activated cells exiting through the medulla.</p><p><strong>Confusion:</strong> PALS (spleen) = paracortex (node) = T-cell zone. Follicle = B-cell zone in both. Don’t put lymphocytes in the red pulp — red pulp is blood-handling, white pulp is immune tissue.</p><p><strong>Clinical pearl:</strong> Marginal-zone B cell = the emergency cell. Blood-borne carbohydrate → IgM within hours. It’s why splenectomy raises the risk from encapsulated (polysaccharide-coated) bacteria.</p><p><strong>Key:</strong> Two organs, one rule: B cells in follicles, T cells in the T-zone (PALS in spleen, paracortex in node). Red pulp filters blood; white pulp mounts the response; the marginal zone holds the emergency-IgM B cell.</p><p>ReClaude A: Spleen red pulp filters blood, removes aged RBCs (macrophages), and stores a blood reserve; white pulp is immune tissue with follicles (B cells), PALS (T cells), and a marginal zone (rapid-IgM B cells). In the lymph node, the follicle holds B cells, the paracortex holds T cells, and activated cells exit via the medulla into efferent lymphatics.</p>",
+  "why": ""
+ },
+ "99_14": {
+  "answer": "<p><em>Name the three functions of the lymphatic system and one effect of OMM lymphatic-pump techniques.</em></p><p>OVERVIEW — THREE JOBS, NO PUMP. The lymphatic system is a network of vessels that drains fluid from tissues to lymph nodes, and it does three things: maintain fluid balance, absorb dietary fat, and provide immune surveillance. The key mechanical fact: unlike the cardiovascular system, the lymphatics have no heart pump. Flow is driven by skeletal-muscle movement, breathing, and a little smooth muscle, and kept one-directional by a valve system. Sedentary patients move lymph slowly — which is exactly why activity (and osteopathic manipulation) matters.</p><p>Lymphatics: no heart pump — muscle/breathing/smooth muscle + one-way valves drive flow. Backup → edema. (lymph propulsion)</p><p>One-way valves keep lymph moving forward; muscle/respiratory movement supplies the force.</p><p>Lymph is a clear, multi-component fluid — mostly interstitial fluid drained from tissues back toward the blood.</p><p>Fluid balance: afferent lymphatics drain interstitial fluid to prevent edema — the lymphatics are the tissue’s drain.</p><p>FAT ABSORPTION. Dietary lipids can’t simply diffuse into blood capillaries. They’re packaged into chylomicrons (triglyceride wrapped with cholesterol and other lipids), released, and picked up by gut lacteals — the intestinal lymphatic vessels. The lymphatics then deliver them to the blood for transport to the liver. After a fatty meal the mesenteric lymphatics run milky-white with chylomicrons. So the lymphatic system isn’t just immune plumbing; it’s the absorptive route for fat.</p><p>Dietary fat → chylomicrons → gut lacteals (lymphatics) → blood → liver. (fat absorption route)</p><p>Osteopathic manipulation can drive lymph flow — a central reason to keep patients moving.</p><p>Abdominal lymphatic-pump treatment measurably increases lymph flow (thoracic-duct data).</p><p>Dietary fat is packaged into chylomicrons and absorbed by intestinal lacteals, then delivered to the blood.</p><p>OMM AND THE LYMPHATICS — the osteopathic hook. Because lymph depends on movement, osteopathic lymphatic-pump techniques (thoracic, abdominal, pedal pumps) exaggerate respiratory motion to push lymph through. This isn’t hand-waving — Gregg cited data: pump techniques increase thoracic-duct flow (measured in dogs), improve vaccine efficacy, and reduce the duration of infectious disease. In his own mouse cancer work, the lymphatic pump mobilized NK cells into the blood and blocked cancer development in about half the animals. The takeaway for boards: OMM lymphatic techniques promote lymph movement, which clears waste, reduces edema, and improves immune surveillance.</p><p>OMM lymphatic pumps ↑ thoracic-duct flow, ↑ vaccine efficacy, ↓ infection duration; mobilize NK cells. (OMM pump evidence)</p><p><strong>Key:</strong> Three lymphatic jobs: fluid balance (drain → prevent edema), fat absorption (chylomicrons via lacteals), immune surveillance. No heart pump — movement + valves drive flow.</p><p><strong>Cue:</strong> Stem about a sedentary or post-op patient with swelling → think impaired lymphatic drainage → edema, and OMM lymphatic-pump techniques as a movement-promoting intervention.</p><p><strong>Clinical pearl:</strong> OMM lymphatic-pump data are board-relevant: increased thoracic-duct flow, improved vaccine efficacy, reduced infection duration, and NK mobilization. Damaged lymph nodes, by contrast, do not regenerate.</p><p>ReClaude A: The lymphatic system maintains fluid balance (draining interstitial fluid to prevent edema), absorbs dietary fat (chylomicrons via gut lacteals), and provides immune surveillance. It has no heart pump — muscle/respiratory movement and one-way valves drive flow — which is why OMM lymphatic-pump techniques (shown to raise thoracic-duct flow, improve vaccine efficacy, and shorten infections) help.</p>",
+  "why": ""
+ },
+ "99_16": {
+  "answer": "<p><em>What distinguishes a superantigen from a mitogen, and what is an alloantigen?</em></p><p>OVERVIEW — a slide-sourced objective. Gregg ran out of time and deferred alloantigens, superantigens, mitogens, and haptens to the start of the T-cell lectures — so the depth here is built from his slides plus the framework you need, flagged as such. The objective names five special immunogen categories beyond “ordinary” antigen. Alloantigens are antigens that differ between individuals of the same species (the basis of transplant rejection). Autoantigens are self-antigens (the targets in autoimmunity). Heterophile antigens are shared across species (cross-reacting).</p><p>Allo = differs within a species (transplant). Auto = self (autoimmunity). Heterophile = shared across species. (allo/auto/heterophile)</p><p>Superantigens cross-link the TCR Vβ region directly to MHC II, polyclonally activating up to ~20% of T cells (toxic-shock mechanism).</p><p>Mitogens drive polyclonal lymphocyte proliferation by binding stimulatory receptors (e.g., TLR), independent of antigen specificity.</p><p>Haptens are small molecules that need a carrier protein to become immunogenic — the mechanism behind contact (type IV) hypersensitivity.</p><p>SUPERANTIGENS AND MITOGENS — the two polyclonal activators. A superantigen bypasses normal peptide specificity by bridging the TCR Vβ region directly to MHC class II, outside the peptide groove. The result is polyclonal activation of up to ~20% of all T cells at once — a cytokine storm, the mechanism behind toxic-shock syndrome. A mitogen also causes polyclonal proliferation, but through stimulatory receptors such as TLR, driving cell-cycle progression independent of antigen specificity. And a hapten is the small-molecule case: too small to be immunogenic alone, it must couple to a carrier protein to provoke a response — the basis of contact dermatitis (a type IV hypersensitivity).</p><p>Superantigen = TCR Vβ–MHC II bridge → ~20% T cells (toxic shock). Mitogen = TLR-type polyclonal proliferation. Hapten = needs carrier. (superantigen vs mitogen vs hapten)</p><p><strong>Confusion:</strong> Superantigen vs mitogen: both polyclonal, different routes. Superantigen bridges TCR Vβ to MHC II directly; mitogen acts through stimulatory receptors like TLR — not via Vβ–MHC.</p><p><strong>Trap:</strong> This LO is slide-built — Gregg deferred it. He covers superantigens, mitogens, and haptens at the start of the T-cell lectures; the definitions here come from his slides, not the recorded lecture.</p><p><strong>Key:</strong> Five categories: alloantigen (within species), autoantigen (self), heterophile (across species), superantigen (Vβ–MHC II bridge, polyclonal), mitogen (TLR-type polyclonal). Hapten = needs a carrier.</p><p>ReClaude A: The five types: alloantigens differ between individuals of the same species (transplant), autoantigens are self-antigens (autoimmunity), heterophile antigens are shared across species, superantigens bridge the TCR Vβ region to MHC II for polyclonal activation of ~20% of T cells, and mitogens drive polyclonal proliferation via stimulatory receptors like TLR. (Slide-sourced — Gregg deferred this to the T-cell lectures.)</p>",
+  "why": ""
+ },
+ "99_17": {
+  "answer": "<p><em>Rank the four antigen classes and state which class T cells can respond to.</em></p><p>FOUR CLASSES, ONE HIERARCHY. Antigens come in four chemical classes, and their immunogenicity ranks proteins &gt; polysaccharides &gt; nucleic acids &gt; lipids. Proteins are the most immunogenic and the only class T cells respond to — and they must be larger than about 10 kDa. Polysaccharides are second-strongest but are B-cell only (T cells can’t see carbohydrate). The rule to anchor: T cells respond ONLY to protein (as processed peptide); B cells respond to all four classes.</p><p>Immunogenicity: protein &gt; polysaccharide &gt; nucleic acid &gt; lipid. T cells = protein only (&gt;10 kDa); B cells = all four. (antigen-class hierarchy)</p><p>Proteins are most immunogenic (B + T cells, &gt;10 kDa); polysaccharides are second but B-cell only.</p><p>Nucleic acids and lipids are B-cell only — lupus anti-DNA antibodies show B-cell response to nucleic acids; lipids respond best with protein.</p><p>NUCLEIC ACIDS AND LIPIDS — B-cell territory. Nucleic acids are B-cell only, and you already know the proof: systemic lupus erythematosus, where B cells make antibodies against DNA. T cells can’t respond to DNA. Lipids are also B-cell only, and they respond best when associated with protein — if a lipid carries some protein, you can pull T-cell involvement in, but the T cell is still only seeing the protein part. The single unifying rule for the whole lecture: T cells never respond to anything but protein.</p><p>Nucleic acids (lupus anti-DNA) and lipids = B-cell only; lipids respond best protein-associated. T cells: protein only, always. (nucleic acids + lipids)</p><p><strong>Clinical pearl:</strong> Lupus anti-dsDNA is the board-favorite proof that B cells answer nucleic-acid antigens — something T cells can never do.</p><p><strong>Key:</strong> Protein &gt; polysaccharide &gt; nucleic acid &gt; lipid. The load-bearing rule: T cells respond ONLY to protein (processed peptide); B cells respond to all four classes.</p><p><strong>Confusion:</strong> Lipids CAN pull in T-cell help, but only when protein-associated — and even then the T cell sees the protein, not the lipid. T cells never recognize lipid, carbohydrate, or nucleic acid alone.</p><p>ReClaude A: Antigen classes rank protein &gt; polysaccharide &gt; nucleic acid &gt; lipid in immunogenicity. Proteins are most immunogenic, must exceed ~10 kDa, and are the only class T cells respond to (as processed peptide); polysaccharides, nucleic acids, and lipids are B-cell only (lupus anti-DNA proves the nucleic-acid case).</p>",
+  "why": ""
+ },
+ "99_18": {
+  "answer": "<p><em>Name the recognition and signaling parts of the TCR and the chains of the BCR.</em></p><p>NEARSIGHTED T CELLS, PERFECT-VISION B CELLS. Before the receptors themselves, hold the metaphor Gregg leaned on. T cells are nearsighted: they cannot see free antigen — it must be processed into peptide and displayed on MHC by an antigen-presenting cell, which holds it up close so the TCR can read it. B cells have perfect vision: the BCR binds native, unprocessed antigen directly, no helper needed. That difference shapes the structure and behavior of both receptors.</p><p>T cells nearsighted (need peptide on MHC via APC); B cells perfect vision (bind native antigen directly). (T vs B antigen access)</p><p>B cells recognize native antigen directly through the BCR — no processing or presentation required.</p><p>T cells express a TCR that reads antigen only as peptide displayed on MHC by an antigen-presenting cell.</p><p>TCR components: an αβ recognition heterodimer plus CD3 and zeta (ζ) signaling chains that dock ZAP-70 on activation.</p><p>THE TCR — recognition plus signaling. The T-cell receptor has two functional parts. The α and β chains form the antigen-recognition heterodimer; each chain has a variable region (changes to recognize different antigens) and a constant region (fixed), anchored by a transmembrane segment. Bolted alongside are the CD3 and zeta (ζ) signaling chains — when the αβ dimer engages peptide-MHC, the CD3/zeta cytoplasmic tails get phosphorylated and dock adaptors like ZAP-70, launching activation → proliferation → effector function. The whole αβ receptor is assembled by random V(D)J recombination in the thymus, then tested against self.</p><p>TCR: αβ = recognition (variable + constant); CD3 + zeta = signaling (dock ZAP-70). Built by V(D)J in the thymus. (TCR components)</p><p>BCR components: two heavy and two light chains, each with a variable (antigen-binding) and a constant region.</p><p>THE BCR — heavy and light chains. The B-cell receptor is built from two heavy chains and two light chains, each chain again split into a variable (antigen-binding) region and a constant region. The variable regions of the heavy and light chains together form the antigen-binding site; the constant region is fixed. Like the TCR, a transmembrane segment anchors it in the membrane — and that anchor is exactly what gets removed when the B cell becomes a plasma cell and secretes the receptor as antibody (LO 6.9).</p><p>BCR: two heavy + two light chains, each with variable (antigen-binding) + constant regions. (BCR components)</p><p><strong>Confusion:</strong> Don’t mix the chains: αβ belong to the TCR; heavy/light belong to the BCR. CD3 and zeta are TCR signaling chains, not recognition chains.</p><p><strong>Key:</strong> TCR = αβ recognition + CD3/zeta signaling. BCR = 2 heavy + 2 light chains, each variable + constant. Both assembled by random V(D)J; both have a transmembrane anchor.</p><p><strong>Clinical pearl:</strong> Nearsighted T, perfect-vision B is the single best way to remember why T cells need an APC + MHC and B cells don’t — and it explains the whole presentation story in Lec 7.</p><p>ReClaude A: The TCR has an αβ heterodimer for antigen recognition (each chain with variable and constant regions) plus CD3 and zeta chains for signaling. The BCR has two heavy and two light chains, each with variable (antigen-binding) and constant regions. T cells need processed peptide on MHC; B cells bind native antigen directly.</p>",
+  "why": ""
+ },
+ "99_19": {
+  "answer": "<p><em>A bacterium is growing inside a macrophage’s phagosome. Is its antigen endogenous or exogenous, and why does the answer NOT depend on the fact that it is “inside a cell”?</em></p><p>THE UNIFYING DISTINCTION. There are two presentation pathways, and the single fact that sorts every antigen between them is where the protein is made or held — cytosol versus vesicle. The endogenous pathway handles protein synthesized in the cytosol (your own proteins, or a</p><p>virus replicating in the cytoplasm), routes it through class I, and shows it to CD8 cells for cell-mediated killing. The exogenous pathway handles protein taken into a vesicle — either phagocytosed from outside or growing inside a phagosome — routes it through class II, and shows it to CD4 cells for help. Hold onto the location rule and the rest follows.</p><p>Endogenous = cytosolic protein → class I → CD8; exogenous = vesicular protein → class II → CD4. (the master sorting rule)</p><p>T cells are MHC-restricted AND class-restricted: CD4→class II, CD8→class I (“it always has to equal 8”).</p><p>APC presenting on class I is recognized by a CD8 cell → clonal proliferation into cytotoxic T lymphocytes.</p><p>APC presenting on class II is recognized by a CD4 cell → differentiation into helper subsets that license B cells.</p><p>CLASS RESTRICTION — the “equal 8” hook. T cells are not only restricted to self-MHC, they are class-restricted: a CD4 cell reads class II, a CD8 cell reads class I, and they cannot cross over. Davis’s mnemonic is the one students actually remember on exam day — the numbers always multiply to 8: 4×2 and 8×1. The architectural reason the pairing is enforced is the set of “knobs” on the MHC that engage the correct co-receptor, but the test reward is just getting the direction right under pressure.</p><p>THE TWO ENDPOINTS. Once a naive cell is activated in the lymph node or spleen, it undergoes clonal proliferation and differentiation. A class I–activated CD8 becomes a cytotoxic T lymphocyte (CTL) that circulates and kills any cell displaying the same peptide-MHC that activated it — this is cell-mediated immunity. A class II–activated CD4 becomes a helper subset (Th1, Th2, Th17, Treg) that licenses B cells and shapes which antibody isotype they make — this is the gateway to humoral immunity. Recall from the first lecture that this is the same clonal-proliferation-then-differentiate logic; we will see CD8 effector killing again in LO 12.3 and CD4 differentiation in LO 12.1.</p><p>Class restriction: CD4→class II, CD8→class I — “it always has to equal 8” (4×2, 8×1). (class-restriction mnemonic) CQ Activated CD8 → CTL (cell-mediated); activated CD4 → helper subsets (gateway to humoral). (pathway endpoints)</p><p>Endogenous pathway overview: cytosolic protein → proteasome → TAP → class I in ER → surface → CD8.</p><p>Exogenous pathway overview: phagocytosed antigen → phagolysosome → class II loading → surface → CD4.</p><p>Class I vs class II side by side — the single best summary slide: uptake, processing, loading compartment, and which T cell reads each.</p><p>THE CYTOSOL-VS-INSIDE TRAP. Here is where the exam loves to set you up. “Inside the cell” is not the same as “in the cytosol.” Mycobacterium and Listeria grow inside a macrophage, but they sit in a vesicle, making their proteins in the phagosome rather than the cytosol. That makes them exogenous / class II / CD4, even though they are physically intracellular. Davis calls these intravesicular pathogens and contrasts them with a cytosolic virus, which is endogenous. If a stem stresses that the organism is “growing inside the phagosome,” the location rule — vesicle, not cytosol — gives you class II.</p><p><strong>Key:</strong> One rule sorts everything: location of the protein. Cytosol → endogenous → class I → CD8. Vesicle (phagocytosed OR intravesicular) → exogenous → class II → CD4.</p><p><strong>Trap:</strong> “Inside a cell” ≠ “in the cytosol.” Intravesicular pathogens (Mycobacterium, Listeria) grow inside the cell but in a vesicle → exogenous → class II / CD4. Only cytosolic protein is endogenous / class I.</p><p><strong>Cue:</strong> On a vignette, find the antigen’s compartment first. Cytosolic virus → CD8/CTL answer. Phagocytosed or intravesicular bug → CD4/helper answer. Decide compartment, then everything else falls out.</p><p>ReClaude A: Exogenous. Although the bacterium is physically inside the cell, it resides in a vesicle (phagosome) and makes its proteins there, not in the cytosol — and the pathway is decided by compartment (cytosol vs vesicle), not by whether the antigen is intracellular. Vesicular location → class II → CD4.</p>",
+  "why": ""
+ },
+ "99_20": {
+  "answer": "<p><em>HLA-DM carries the “HLA-D” name of the class II family — so why is it a mistake to call it an MHC class II molecule, and what does it actually do?</em></p><p>OVERVIEW. Each pathway is a little assembly line, and the testable content here is the named worker at each station. The trap the exam exploits is that several of these workers are accessory molecules — chaperones and transporters — not MHC molecules themselves. Keep the class I line and the class II line on separate tracks in your head and assign each molecule to one.</p><p>THE CLASS I LINE (endogenous). A cytosolic protein is tagged with ubiquitin and fed into the proteasome — Davis’s “wood chipper,” big protein in, small peptides out. During infection, IFN-γ remodels it into the immunoproteasome, which preferentially cuts after hydrophobic or basic</p><p>residues so the fragments carry good class I anchors. Those peptides then cross from cytosol into the ER through TAP1/TAP2, the ATP-dependent transporter associated with antigen processing. Waiting in the ER, the empty class I α chain is held by the chaperone calnexin, which stabilizes it until β2-microglobulin binds and also keeps empty molecules from leaving prematurely; tapasin then tethers the class I molecule near the TAP channel so peptides can be tried on as they arrive.</p><p>Class I peptides are made by the proteasome/immunoproteasome; IFN-γ induces the immunoproteasome for better anchors. (class I peptide generation) CQ TAP1/TAP2 moves peptides cytosol→ER (ATP-dependent); calnexin stabilizes class I until β2m binds; tapasin docks it at TAP. (class I ER machinery)</p><p>Calnexin stabilizes the class I α chain in the ER; tapasin positions it at the TAP gateway for loading.</p><p>Endogenous antigen processing: cytosolic protein degraded by the proteasome into peptides for class I.</p><p>IFN-γ converts the proteasome to the immunoproteasome; IFN-α/β drive the antiviral state.</p><p>Full class I trafficking: proteasome → TAP into ER → assembly with β2m/chaperone/tapasin → surface → CD8.</p><p>THE CLASS II LINE (exogenous). Antigen taken into a vesicle meets the phagolysosome, where the pH is dropped and cathepsins — enzymes, not a structure — do the cutting that the proteasome does on the other track. Meanwhile class II is also built in the ER (both classes are), so the cell must stop cytosolic peptides from loading into class II by mistake. It does this with the invariant chain (Ii), which has three jobs: it chaperones class II folding, blocks the binding cleft from endogenous peptide, and routes the class II molecule to the endosomal compartment. In the vesicle the invariant chain is trimmed down to a remnant called CLIP still sitting in the groove.</p><p>HLA-DM — the molecule Davis flags hardest. The class II molecules are DP, DQ, DR. HLA-DM shares that “HLA-D” naming but is not an MHC class II molecule — it is an accessory molecule, “kind of like tapasin or calnexin.” Its job is to remove CLIP and facilitate peptide loading into the now-open class II cleft. Davis stops and says “now remember this is important” precisely because the name invites you to mis-file it as a presenting molecule. Once loaded, the class II–peptide complex moves to the APC surface for a CD4 cell.</p><p>Class II peptides are cut by cathepsins in the phagolysosome (the enzyme analog of the proteasome). (class II peptide generation) CQ Invariant chain (Ii) chaperones class II, blocks the cleft, and routes it to the vesicle; its remnant is CLIP. (invariant chain three roles) CQ HLA-DM is an accessory molecule (NOT a class II molecule) that removes CLIP and loads peptide. (HLA-DM identity + job)</p><p>In the vesicle, invariant chain is trimmed to CLIP, which still blocks the binding cleft until exchange.</p><p>Invariant chain occupies the class II cleft in the ER, blocking endogenous peptide and routing class II to the vesicle.</p><p>HLA-DM removes CLIP and facilitates loading of antigenic peptide — then class II moves to the surface for CD4.</p><p><strong>Confusion:</strong> HLA-DM is NOT an MHC class II molecule. The class II presenting molecules are DP/DQ/DR. HLA-DM is an accessory molecule (like tapasin/calnexin) that swaps out CLIP. The shared “HLA-D” name is the bait.</p><p><strong>Key:</strong> Same job, different track: proteasome (class I, cytosol) and cathepsins (class II, vesicle) both cut protein into peptides. TAP (class I) and HLA-DM (class II) both make loading possible — on opposite lines.</p><p><strong>Clinical pearl:</strong> Both class I and class II are built in the ER. The difference is where they load — class I in the ER, class II in the vesicle — which is exactly why the invariant chain has to guard the class II cleft until it reaches the vesicle.</p><p>ReClaude A: HLA-DM shares the HLA-D family name but is an accessory molecule, like tapasin or calnexin — not a peptide-presenting class II molecule (those are DP/DQ/DR). Its job is to remove CLIP from the class II cleft and facilitate loading of antigenic peptide in the acidic vesicle.</p><p><em>A cytotoxic T cell finds a virally infected epithelial cell in the throat. Trace why this is “cell-mediated immunity” and how it differs from what a CD4 cell would have done.</em></p><p>THE TWO ARMS. The pathway you load determines the kind of immunity you get. Class I → CD8 → CTL → killing of infected cells is cell-mediated immunity. Class II → CD4 → helper subsets → B-cell licensing is the gateway to humoral immunity. Davis returns to her day-one line here as the anchor: “T cells don’t kill pathogens, they kill infected cells.” A CTL does not chase a free virus; it recognizes the peptide-MHC on a host cell that has been hijacked and destroys that cell.</p><p>Class I/CD8 → cell-mediated immunity (CTL kills infected cells); class II/CD4 → humoral (B-cell help). (pathway → immune arm) CQ CTLs kill infected cells, not free pathogens — they recognize peptide-MHC on a hijacked host cell. (core CTL principle)</p><p><strong>Clinical pearl:</strong> Class II peptide binding: longer peptides in an open-ended cleft — the CD4/humoral arm.</p><p><strong>Confusion:</strong> MHC class I molecules (HLA-A/B/C) on all nucleated cells — the cell-mediated arm read by CD8 cells.</p><p><strong>Key:</strong> Class I peptide binding: ~8–10 aa held by anchor residues, optimal length 9, ends pinned in a closed cleft. Anchor residues with defined chemistry (hydrophobic/basic/charged) let one groove bind many peptides.</p><p>WHY HEALTHY CELLS STILL PRESENT. Every nucleated cell constantly shows self-peptide on class I even when uninfected. That is not wasted effort — it is the signal NK cells read. A cell that downregulates class I to hide from CD8 surveillance (a favorite viral and tumor trick) triggers the NK “missing-self” response and gets killed anyway. Davis frames it as plan A (CTL) and plan B (NK): lose your MHC to dodge the T cell, and the NK cell finishes the job. On the CD4 side, the helper cell that recognizes class II goes on to license B cells and steer isotype switching — IgA at mucosa, IgG in tissue, IgE in allergy/parasite settings — which is how presentation choice ultimately shapes the antibody response.</p><p><strong>Key:</strong> “T cells don’t kill pathogens — they kill infected cells.” Davis’s day-one line and the spine of LO 7.4. Class I/CD8 = cell-mediated killing; class II/CD4 = humoral help.</p><p><strong>Clinical pearl:</strong> Constant self-peptide on class I is the NK “billboard.” Downregulate class I to dodge CD8 (plan A) and you trip NK missing-self (plan B). Evasion of one arm exposes you to the other.</p><p><strong>Cue:</strong> Stem says “kills the infected cell directly” → CD8/CTL/class I. Stem says “helps B cells / drives antibody isotype” → CD4/class II. Match the verb to the arm.</p><p>ReClaude A: The virus is made in the infected cell’s cytosol → class I → the CD8 CTL recognizes peptide-MHC on that host cell and lyses it: killing an infected host cell is cell-mediated immunity. A CD4 cell, by contrast, would have read class II on an APC and helped B cells make antibody — it would not itself kill the infected cell.</p><p><em>If a patient loses TAP function entirely, which arm of adaptive immunity collapses, which is spared, and what infection pattern results?</em></p><p>OVERVIEW. This is the LO Davis builds toward with the self-study prompt on the class I-vs-II slide: “what happens if a mutation prevents class I or class II expression on the APCs?” The way to answer any presentation-deficiency question is to ask which line is broken and then read off the downstream arm. Break the class I line and you lose CD8/cell-mediated immunity; break the class II line and you lose CD4 help, which takes the antibody response down with it because most antibody responses are T-dependent.</p><p>WORKED CASES. Lose TAP and peptides never reach the ER → class I cannot be loaded → low CD8/CTL responses and recurrent viral infections, while the class II/CD4/antibody arm — which loads in the vesicle independent of TAP — is comparatively spared. Lose class II (bare lymphocyte syndrome, class II) and CD4 cells are not primed → low CD4 and failed T-dependent antibody responses, with class I/CD8 relatively intact. The pattern is always the same: a presentation defect knocks out the arm it feeds, and the spared arm tells you which line stayed open. NK cells can blunt but not replace antigen-specific CTL immunity, so “NK fully compensates” is never the right answer.</p><p>TAP loss → no class I loading → low CD8/CTL → viral susceptibility; CD4/antibody spared (TAP-independent). (TAP-deficiency phenotype) CQ Class II loss (bare lymphocyte syndrome II) → no CD4 priming → low CD4 + poor T-dependent antibody. (class II-deficiency phenotype)</p><p><strong>Clinical pearl:</strong> CD1 follows the class II vesicular pathway but has a class I-like structure including β2-microglobulin. CD1 is recognized by invariant NKT cells (invariant α chain + β chain TCR); also involved in anti-tumor surveillance.</p><p><strong>Confusion:</strong> Nonclassical antigens: lipid/glycolipid/phospholipid presented on CD1 (not classical MHC) — relevant to mycobacterial cell-wall lipids.</p><p>NONCLASSICAL FOOTNOTE. Davis closes with a brief, low-emphasis aside (Tier 1): not every antigen is a protein. Lipid and glycolipid antigens — think mycobacterial cell wall — are too hydrophobic for the classical grooves and are instead presented on CD1, a non-polymorphic molecule with a class I-like structure (including β2m) that nonetheless trafficks through the class II vesicular pathway. CD1 is read by invariant NKT cells. It is worth recognizing, not memorizing in depth.</p><p><strong>Key:</strong> CD1 presents lipid antigen to invariant NKT cells: class I-like structure (with β2m) but class II-style vesicular trafficking. Recognize it; don’t over-study it (Tier 1).</p><p><strong>Cue:</strong> Presentation-defect question? Ask which line broke. Class I line down → CD8/cell-mediated fails (viral infections). Class II line down → CD4 help fails → antibody fails. The spared arm reveals the open line.</p><p><strong>Trap:</strong> “NK cells fully compensate for absent class I” is a distractor. NK cells exploit missing-self and help, but they do not replace antigen-specific CTL immunity — TAP/class I patients still get sick with viruses.</p><p>ReClaude A: Cell-mediated immunity collapses: no TAP → no peptide into the ER → no class I loading → deficient CD8/CTL responses and recurrent viral infections. The class II/CD4/antibody arm is spared because class II loads in the vesicle independent of TAP. NK cells help via missing-self but cannot fully substitute for antigen-specific CTLs.</p>",
+  "why": ""
+ },
+ "99_23": {
+  "answer": "<p><em>Walk the heavy chain from germline DNA to a surface receptor. At which single step does failure doom the cell, and why?</em></p><p>OVERVIEW. This LO is the ordered choreography of V(D)J recombination — the actual sequence of cuts, joins, and checkpoints. The unifying idea is that rearrangement proceeds in a fixed order with a checkpoint: the heavy chain goes first, and only a successful, in-frame heavy chain licenses the light chain to proceed. Fail the checkpoint and the cell dies. Everything else is the mechanics around that gate.</p><p>HEAVY CHAIN FIRST — D-J, THEN V-DJ. Heavy-chain rearrangement leads, and within it the order is specific: D joins J first, then V joins the DJ. You cannot skip the D segment (&gt;99% of the time). When the DNA is cut and religated, the join is only productive if it lands in frame; an out-of-frame join makes no protein. The cell gets two tries (maternal and paternal alleles), but if both heavy-chain alleles fail to produce an in-frame product, there is no heavy chain — and the cell undergoes apoptosis. This is the load-bearing checkpoint.</p><p>Heavy chain rearranges first; order is D-J then V-DJ (you cannot skip D). (heavy-chain join order) CQ An in-frame heavy chain is the checkpoint; both alleles failing → apoptosis. (heavy-chain checkpoint)</p><p>Alternative splicing of the heavy-chain transcript generates the mature IgM and IgD mRNAs.</p><p>Light-chain (kappa) rearrangement: V→J joining, then splicing removes extra J introns to the mRNA.</p><p>Heavy-chain rearrangement: D→J joining, then V→DJ; DNA is permanently altered (deleted segments are gone).</p><p>Primary transcript includes introns and extra J segments; transcribed through μ and δ for IgM/IgD.</p><p>LIGHT CHAIN SECOND — only if heavy succeeds. A successful heavy chain triggers light-chain rearrangement, which starts with kappa (isotypic exclusion suppressing lambda); lambda proceeds only if kappa fails in frame. Light chains use simple V-J joining. At every stage the rule is the same: an out-of-frame or non-productive rearrangement that exhausts the available alleles sends the cell to apoptosis — the immune system would rather kill a non-functional precursor than let it linger.</p><p>FROM DNA TO PROTEIN. Once segments are joined, the rearranged DNA is permanently altered — the intervening segments are deleted and degraded, never recovered. Transcription makes a primary RNA that still contains extra J segments and introns; splicing removes them to yield mature mRNA. For the heavy chain specifically, alternative splicing across Cμ and Cδ produces both IgM and IgD (LO 8.4); for the light chain, ordinary splicing just trims the extra J introns. Translation then sends the chains to the ER, where heavy and light pair into a complete receptor displayed on the surface. The same V(D)J choreography runs in T cells in the thymus — β/δ like a heavy chain, α/γ like a light chain.</p><p>Light chain rearranges only if heavy succeeds; starts with kappa (V-J), lambda only on kappa failure. (light-chain order) CQ Rearranged DNA is permanently altered (segments deleted); splicing trims introns/extra J to mature mRNA. (DNA-to-mRNA processing)</p><p><strong>Key:</strong> Fixed order with a gate: heavy first (D-J then V-DJ) → checkpoint → light second (V-J, kappa first). An in-frame heavy chain is the permission slip for everything downstream.</p><p><strong>Trap:</strong> Heavy-chain order is D-J first, then V-DJ — not V-D first. And you cannot skip the D segment. A stem that joins V to D before D-J is describing the wrong sequence.</p><p><strong>Clinical pearl:</strong> Failure → apoptosis. No in-frame heavy chain means no light-chain rearrangement and a dead precursor. The system discards non-functional cells rather than tolerating them.</p><p>ReClaude A: Germline DNA → D-J joining → V-DJ joining → in-frame check → (if productive) transcription, splicing to mRNA, translation, ER pairing with light chain, surface display. The doomed step is the in-frame heavy-chain checkpoint: if both alleles join out of frame there is no heavy chain, light-chain rearrangement never starts, and the cell undergoes apoptosis.</p>",
+  "why": ""
+ },
+ "99_27": {
+  "answer": "<p><em>A thymocyte has made a β chain but has no α chain yet. How does it prove the β chain is real and in-frame — and what is the consequence if it cannot?</em></p><p>OVERVIEW. T-cell ontogeny is a staged assembly line with two go/no-go checkpoints. The unifying idea: a thymocyte must first build a working TCR (the double-negative stages, gated by proving each chain is in-frame) and only then is it tested against self (selection, the next LO). Everything that follows hangs on that order — build first, select second — and on the fact that nearly all of it happens in the cortex.</p><p>WHERE AND WHAT. A hematopoietic progenitor commits to the T lineage, leaves the marrow, and enters the thymus as a thymocyte, arriving through the subcapsular region and moving into the outer cortex. Because it expresses neither co-receptor, it is double-negative (DN) — CD4− CD8−. There are four DN stages, and the TCR β chain is assembled across them in the same order as a B-cell heavy chain: D-J first, then V-DJ.</p><p>Progenitor → thymus → thymocyte; enters via subcapsular region into the outer cortex; starts double-negative. (entry / DN start) CQ DN1 Notch1 + IL-7 commit T-lineage; DN2 β D-J join (RAG up); DN3 β V-DJ join completes β. (DN1–DN3 β rearrangement)</p><p>DN2: β-chain D-J joining begins (RAG1/RAG2 upregulated); γ/δ genes rearrange in parallel.</p><p>DN3: V-DJ joining completes the β chain; splicing yields β mRNA, then β-chain protein.</p><p>DN1: progenitor expresses Notch1; cTECs express Notch ligand and IL-7, committing the cell to the T lineage.</p><p>CHECKPOINT 1 — prove the β chain (DN3). Most rearrangements fail in frame, so the cell must prove it made a real β chain before investing in an α chain. It cannot wait for the α chain, so it builds an invariant surrogate pre-T-α chain (no V(D)J — the same sequence in everyone), pairs it with the β chain plus the CD3 complex and ζ chains, and sends this pre-TCR to the surface. Reaching the surface IS the proof — “yes, there is a β chain.” Fail this checkpoint and the cell undergoes apoptosis. Success triggers a round of proliferation (one good β chain copied into many cells), because the next step also has a high failure rate.</p><p>CHECKPOINT 2 — prove the α chain (DN4). RAG1/RAG2 are re-expressed and the α chain rearranges (V-J). Now a real α chain pairs with the β chain (plus CD3/ζ) to form a complete αβ TCR — checkpoint 2 confirms an in-frame α chain. Allelic exclusion applies throughout (mom’s or dad’s allele wins), with the α-chain bypass exception from Lecture 9. Having proven both chains, the cell finally upregulates both CD4 and CD8 to become double-positive (DP) — and only now is it ready for selection.</p><p>Checkpoint 1 (DN3): β + surrogate pre-T-α + CD3/ζ → pre-TCR to surface proves β; fail → apoptosis, pass → proliferation. (checkpoint 1) CQ Checkpoint 2 (DN4): α V-J rearranges → complete αβ TCR; then upregulate CD4 + CD8 → double-positive. (checkpoint 2 → DP)</p><p>Checkpoint 1: the pre-TCR (β + pre-T-α + CD3 + ζ) on the surface confirms a successful β-chain rearrangement.</p><p>DN4: RAG re-expressed; α-chain V-J rearrangement forms a complete TCR — checkpoint 2 confirms the α chain.</p><p>Double-positive: CD4 and CD8 are both upregulated alongside the complete αβ TCR and CD3/ζ.</p><p>WHY THE ORDER MATTERS. The checkpoints exist because random rearrangement is wasteful — the cell refuses to build the second chain until the first is proven, and refuses to express co-receptors until a whole TCR exists. Proliferation after checkpoint 1 rescues yield from the high α-chain failure rate. Hold this thread into the next LO: a double-positive cell with a complete TCR has earned the right to be tested against self, and that test (positive then negative selection) is what turns a DP thymocyte into a single mature T cell.</p><p><strong>Confusion:</strong> The pre-T-α (surrogate α) is invariant — it does NOT undergo V(D)J and is the same in everyone. Its only job is to escort the β chain to the surface for checkpoint 1.</p><p><strong>Clinical pearl:</strong> β-chain order mirrors the heavy chain: D-J (DN2) before V-DJ (DN3). The α chain (V-J) comes last, in DN4. Build the receptor first; selection comes only after the double-positive stage.</p><p><strong>Key:</strong> Two checkpoints gate the build: checkpoint 1 (DN3) proves the β chain via the surrogate pre-T-α pre-TCR; checkpoint 2 (DN4) proves the α chain via the complete αβ TCR. Then CD4+CD8 → double-positive.</p><p>ReClaude A: It builds an invariant surrogate pre-T-α chain, pairs it with the β chain plus CD3 and ζ, and displays this pre-TCR on the surface — reaching the surface is the proof that an in-frame β chain was made (checkpoint 1, DN3). If it cannot, the thymocyte undergoes apoptosis; if it can, it proliferates and proceeds to rearrange the α chain at DN4.</p>",
+  "why": ""
+ },
+ "99_28": {
+  "answer": "<p><em>Two thymic epithelial cell types do superficially similar jobs — presenting MHC to thymocytes — yet they sit in different regions and serve opposite halves of education. Name them and their distinct roles.</em></p><p>OVERVIEW. The thymus has two regions — outer cortex and inner medulla — each stocked with specific cells for specific steps. The unifying idea: cortex = build + positive selection, medulla = final negative selection + Treg induction. Knowing which cell lives where and what signal it provides answers most component questions, because the location maps directly onto the step.</p><p>CORTEX COMPONENTS. The cortical thymic epithelial cells (cTECs) are the workhorses: they express Notch ligand and secrete IL-7 to push the progenitor down the T-cell road and support development, and later they display class I and class II MHC for positive selection. Dendritic cells also present MHC-peptide during selection, and macrophages clear the many thymocytes that fail and die. The Notch1 (thymocyte) – Notch-ligand (cTEC) interaction is decisive: too little permits aberrant B-cell development in the thymus; Notch1 overexpression in marrow can drive ectopic T-cell development there.</p><p>Cortex = cTECs (Notch ligand + IL-7, then MHC I/II), dendritic cells, macrophages; site of build + positive selection. (cortex components) CQ Notch1 – Notch ligand commits T-lineage; too little → thymic B cells, marrow overexpression → marrow T cells. (Notch signaling)</p><p>Thymus structure: two regions — outer cortex and inner medulla — each with distinct cells and steps.</p><p>Medulla cells: mTECs and dendritic cells present self-peptides for negative selection; macrophages remove apoptotic cells.</p><p>Cortex cells: cTECs (express Notch ligand and IL-7, promote development), macrophages (clear apoptotic thymocytes), dendritic cells (present peptide).</p><p>MEDULLA COMPONENTS. The medullary thymic epithelial cells (mTECs) and dendritic cells present self-peptide on MHC for the second round of negative selection. Their special tool is AIRE (autoimmune regulator), which drives mTECs to express tissue-restricted self-antigens they would not normally make — so thymocytes reactive to peripheral tissues can be deleted centrally. The clinical hook: an AIRE mutation causes autoimmune polyendocrine syndrome. The medulla also contains Hassall’s corpuscles, where mTECs express thymic stromal lymphopoietin (TSLP); TSLP prompts dendritic cells to drive a small subset of thymocytes to express FoxP3 and become regulatory T cells (Tregs).</p><p>Medulla = mTECs + dendritic cells (self-peptide for negative selection) using AIRE; AIRE mutation → autoimmune polyendocrine syndrome. (medulla / AIRE) CQ Hassall’s corpuscles → mTEC TSLP → DCs induce FoxP3 → Tregs. (Hassall’s / TSLP / Tregs)</p><p>Inner medulla: Hassall’s corpuscles express TSLP, which triggers DCs to induce FoxP3+ regulatory T cells.</p><p>mTECs express AIRE (autoimmune regulator) to display tissue-restricted self-antigens for negative selection.</p><p>WHY THIS MATTERS. The component list is really a map: if a question places an event in the cortex, the actors are cTECs/DCs/macrophages and the step is build or positive selection; if in the medulla, the actors are mTECs/DCs (with AIRE) and Hassall’s corpuscles, and the step is negative selection or Treg induction. AIRE and FoxP3 are the two named molecules most likely to be tested, each tied to a clinical consequence (autoimmunity when AIRE fails; tolerance when FoxP3 drives Tregs).</p><p><strong>Key:</strong> Location = function. cTECs (cortex): Notch ligand + IL-7, then positive selection. mTECs (medulla): AIRE-driven self-antigen for negative selection. Hassall’s corpuscles → TSLP → Tregs.</p><p><strong>Trap:</strong> Don’t swap cTECs and mTECs. cTEC = cortex = positive selection; mTEC = medulla = negative selection (with AIRE). The first letters line up: c-cortex, m-medulla.</p><p><strong>Clinical pearl:</strong> Two named molecules carry clinical weight: AIRE (loss → autoimmune polyendocrine syndrome) and FoxP3 (drives Tregs; its failure → loss of tolerance). Expect both on an exam.</p><p>ReClaude A: Cortical thymic epithelial cells (cTECs) sit in the cortex and mediate positive selection (after first providing Notch ligand and IL-7); medullary thymic epithelial cells (mTECs) sit in the medulla and mediate negative selection, using AIRE to express tissue-restricted self-antigens. Same MHC-presentation activity, opposite halves of education, different regions.</p>",
+  "why": ""
+ },
+ "99_29": {
+  "answer": "<p><em>Both lineages rearrange their TCR genes in the cortex, yet only one runs the full selection gauntlet. Which one skips it, where does it branch off, and what is it built to do?</em></p><p>OVERVIEW. Most of this lecture followed the αβ lineage; this LO contrasts it with the γδ minority. The unifying idea: αβ cells are the heavily-educated majority built for MHC-restricted, body-wide surveillance, while γδ cells are an early-branching minority that skip selection and guard barrier tissues. The split happens early, and the developmental shortcut matches their different job.</p><p>THE αβ PATH (the default). αβ thymocytes are ~95–97% of T cells. They run the full program from this lecture: DN stages, both checkpoints, the double-positive stage, then positive and negative selection, emerging as MHC-restricted single-positive CD4 or CD8 cells. They populate the entire body and can recognize essentially any peptide on MHC.</p><p>THE γδ PATH (the shortcut). The γ, δ, and β genes attempt rearrangement simultaneously; if a successful γδ TCR forms (before β succeeds, or because both β alleles failed), the cell commits to the γδ lineage and exits the thymus early — around DN2/DN3 — without positive or negative selection. γδ cells therefore remain largely double-negative (CD4− CD8−; rare CD8+ examples exist, never CD4+). They are enriched in mucosa and skin (gut, lung), are more prominent before birth (helping infants guard developing mucosa/flora), have a less diverse repertoire with preferred V/D/J combinations, and can recognize lipid antigens on CD1 — fitting targets like mycobacterial lipids at barrier surfaces.</p><p>αβ = ~95%, full selection → single-positive, body-wide, MHC-restricted. (αβ path) CQ γδ = exit at DN2/DN3 without selection, stay double-negative, mucosa/skin, CD1 lipids, more pre-birth. (γδ path)</p><p>γδ thymocytes branch off around DN2/DN3 and exit prior to positive/negative selection, remaining double-negative.</p><p>All thymocytes start double-negative; γδ cells exit early to periphery without the selection steps αβ cells undergo.</p><p>Summary: nearly every step is in the cortex; only the second negative-selection round (single-positive) is in the medulla.</p><p>THE TESTABLE CONTRAST — and a useful summary trick. Answering the anchor: the γδ lineage skips selection, branches off early (around DN2/DN3 in the cortex), stays double-negative, and is built to guard mucosa and skin using CD1-presented lipids. Davis offered a memory shortcut for the whole lecture: on the summary chart, almost everything happens in the cortex — the only step in the medulla is the second (single-positive) round of negative selection. So if a question asks where any stage (DN1–4, positive selection, death by neglect, the first negative round, γδ exit) occurs, the answer is the cortex unless it is specifically that single-positive medullary round. Memorize the short list (the one medullary step) and everything else is cortex by elimination.</p><p><strong>Trap:</strong> γδ cells do NOT undergo positive or negative selection — they leave early and stay double-negative. Don’t apply MHC restriction or CD4/CD8 commitment to them.</p><p><strong>Key:</strong> αβ: ~95%, fully selected, single-positive, body-wide. γδ: minority, NO positive/negative selection, exits at DN2/DN3, stays double-negative, mucosa/skin, CD1 lipids, more before birth.</p><p><strong>Clinical pearl:</strong> Summary shortcut: only the single-positive negative-selection round is in the medulla; everything else (DN stages, positive selection, death by neglect, γδ exit) is in the cortex. Memorize the one exception.</p><p>ReClaude A: The γδ lineage skips selection: γ/δ/β genes rearrange together, and a successful γδ TCR makes the cell exit early — around DN2/DN3 in the cortex — without positive or negative selection, remaining double-negative. γδ cells guard mucosa and skin, are enriched before birth, and recognize lipid antigens on CD1. αβ cells, by contrast, run the full selection program and become MHC-restricted single-positive cells.</p>",
+  "why": ""
+ },
+ "99_30": {
+  "answer": "<p><em>A naive T cell meets its antigen on a dendritic cell, yet nothing happens — no clone army. Two explanations: the DC was immature, or a signal was missing. What are the three signals, and which two does an immature DC fail to deliver?</em></p><p>OVERVIEW. This is where antigen presentation (Lec 7) and the receptors (Lec 8–10) get put to use: the dendritic cell presents antigen, and the T cell responds. The unifying idea is a three-signal rule delivered by a mature APC: signal 1 = antigen, signal 2 = co-stimulation, signal 3 = cytokine. Signals 1+2 build the clone army; signal 3 weaponizes it. Miss a signal — or use an immature DC that cannot give signals 2 and 3 — and you get anergy, not activation.</p><p>THE THREE PROFESSIONAL APCs. All three present antigen, but their jobs differ. Dendritic cells are THE primary primers: they capture antigen in tissue and traffic it to the lymph node to activate naive T cells. B cells present antigen too, but “selfishly” — not to activate the T cell, but to get close enough to receive help (the T-dependent antibody response). Macrophages stay in the tissue as phagocytic soldiers, presenting locally rather than migrating. Dendritic cells prime; macrophages fight and present at the target.</p><p>3 APCs: dendritic cells (prime naive T cells, traffic to node), B cells (present to GET help), macrophages (tissue soldiers, present locally). (three professional APCs) CQ Signal 1 = antigen/peptide-MHC→TCR; Signal 2 = CD28–B7 (B7 = CD80/CD86); Signal 3 = cytokine from APC. (the three signals)</p><p>Signal 3: the APC produces a cytokine that polarizes the T cell into Th1, Th2, or Th17.</p><p>Three signals essential for T-cell activation: signal 1 (antigen), signal 2 (co-stimulation), signal 3 (cytokine) — all from the APC.</p><p>Signal 2: microbial components/cytokines induce B7 (CD80/CD86) on the APC — co-stimulation binding CD28.</p><p>SIGNALS 1+2 vs SIGNAL 3. The division of labor is testable. Signals 1 and 2 together drive clonal expansion — the proliferation (IL-2-driven) that builds a large army of T cells all recognizing the same antigen. Signal 3, the cytokine, drives differentiation — it tells the army which weapon to carry, polarizing the cells into Th1, Th2, or Th17 depending on the pathogen class. Without signal 3 you would have an army with no guns; without signals 1+2 you would have no army at all.</p><p>WHY DC MATURATION IS THE GATEKEEPER. An immature DC captures antigen well but expresses little B7 and makes no cytokine — so it can give signal 1 but not signals 2 and 3. Something must mature it, classically TLR signaling (sensing danger), which upregulates CD80/CD86, switches on cytokine genes, and raises MHC. Only a mature DC supplies all three signals. Prime a T cell on an immature DC and it becomes anergic — no clone army — which is exactly one way tumors evade immunity (they block DC maturation).</p><p>Signals 1+2 → clonal expansion (build the army); signal 3 → differentiation (Th1/Th2/Th17 — the weapon). (expansion vs differentiation) CQ Immature DC = signal 1 only → anergy; TLR signaling matures the DC → B7 + cytokine + MHC → all three signals. (DC maturation gate)</p><p>Signals 1+2 = proliferation (clone army); signal 3 = differentiation (weapons) into the effector T cell.</p><p>Maturation of the DC is required: immature DCs capture antigen; mature DCs present it with full co-stimulation.</p><p>Process overview: naive T-cell activation → clonal expansion → T-cell differentiation into effector subsets.</p><p>PRIMING AND THE TWO-PRESENTATION RULE. A subtle point Gregg stresses (textbooks gloss it): priming activates the T cell but withholds effector release. If a freshly primed cell dumped cytokine in the lymph node, systemic TNF-alpha would activate endothelium everywhere and you would bleed to death. So the effector cell leaves the node and must see antigen a second time in the tissue (e.g., on a macrophage) to release cytokine locally, at the target. CD8 cells are likewise primed in the node but only kill once they reach infected tissue — otherwise they would lyse everything in their path.</p><p>SPECIALTY ANTIGENS (the activation curveballs). Superantigens cross-link the TCR V-beta to MHC class II outside the peptide groove, forcing signaling regardless of specificity → polyclonal activation and a cytokine storm (IL-1/IL-6/TNF-alpha); the SARS-CoV-2 spike encodes one (COVID hyperinflammation), and bacterial versions cause toxic shock. Mitogens are polyclonal lab activators that bypass the antigen receptor by binding downstream signaling molecules or TLRs — used to test immune function. Haptens are small molecules that become immunogenic only when coupled to protein (e.g., penicillin on red cells → drug-induced hemolytic anemia; contact dermatitis).</p><p>Priming = activated but effectors withheld; must see antigen a 2nd time in tissue to release locally (avoids systemic TNF-alpha). (two-presentation rule) CQ Superantigen = V-beta–MHC-II cross-link → polyclonal storm; mitogen = lab polyclonal activator; hapten = small molecule + protein. (specialty antigens)</p><p><strong>Key:</strong> Three signals from a mature APC: 1 = antigen (peptide-MHC→TCR), 2 = CD28–B7 (CD80/CD86), 3 = cytokine. Signals 1+2 → expansion; signal 3 → Th1/Th2/Th17 differentiation.</p><p><strong>Confusion:</strong> Don’t conflate the APCs: dendritic cells prime naive T cells; B cells present to GET help (selfish, T-dependent); macrophages stay in tissue presenting locally. Only the mature DC gives all three signals.</p><p><strong>Clinical pearl:</strong> Priming ≠ effector release. A primed cell needs a second antigen encounter in tissue to act locally — otherwise systemic TNF-alpha would be lethal. This is why we don’t bleed to death every immune response.</p><p>ReClaude A: The three signals are antigen (signal 1, peptide-MHC→TCR), co-stimulation (signal 2, CD28 binding B7 = CD80/CD86), and a cytokine from the APC (signal 3). An immature dendritic cell delivers only signal 1 — it lacks B7 and makes no cytokine, so it fails signals 2 and 3 — and priming on it yields anergy rather than a clone army. TLR-driven maturation is what licenses the DC to deliver all three.</p><p><em>Trace the signal from a ligated TCR to the IL-2 gene. Which single kinase is the indispensable hub — the one whose loss abolishes the entire T-cell response — and what three transcription factors finally switch IL-2 on?</em></p><p>OVERVIEW. Signals 1 and 2 trigger an intracellular relay that ends at the IL-2 gene. The unifying idea is a proximal-to-distal cascade with one bottleneck (ZAP-70) that then branches into three transcription-factor arms, all of which must fire to transcribe IL-2. Learn the spine of the cascade and the three branch points and you can place any drug or deficiency on the map.</p><p>PROXIMAL SIGNALING. The TCR itself barely signals — the work is done by the associated CD3 complex and zeta chains, whose cytoplasmic ITAMs get phosphorylated. The kinase LCK (lymphocyte-specific protein tyrosine kinase), brought in by the CD4/CD8 co-receptor, phosphorylates those ITAMs, creating docking sites for ZAP-70. ZAP-70 is the hub: if ZAP-70 is deficient, there is no T-cell response. Active ZAP-70 then phosphorylates LAT (linker of activated T cells), the scaffold that launches the downstream branches. Adhesion molecules (LFA-1–ICAM-1) hold the DC–T contact together long enough for this to assemble.</p><p>TCR doesn’t signal — CD3 + zeta ITAMs do; LCK phosphorylates ITAMs → docks ZAP-70 (loss → no response) → phosphorylates LAT. (proximal cascade) CQ Adhesion (LFA-1–ICAM-1) sustains DC–T contact time; CD4/CD8 co-receptor brings in LCK and stabilizes peptide-MHC. (adhesion / co-receptor)</p><p><strong>Clinical pearl:</strong> Active ZAP-70 phosphorylates LAT, branching into the MAPK, NF-kB, and NFAT pathways.</p><p>TCR + CD28 engagement: CD3 and the zeta chains serve as the TCR’s signaling complex (ITAMs phosphorylated).</p><p><strong>Confusion:</strong> LCK phosphorylates CD3/zeta ITAMs, recruiting ZAP-70 — the critical docking kinase (deficiency → no response).</p><p>THE THREE TRANSCRIPTION-FACTOR ARMS. From LAT the signal splits three ways, all converging on IL-2. (1) NF-kB arm: protein kinase C (PKC) activates IkB kinase, which phosphorylates IkB; IkB is degraded, freeing NF-kB to enter the nucleus. (2) NFAT arm: phospholipase C makes IP3 → Ca2+ release → Ca2+ binds calmodulin → calmodulin activates calcineurin → calcineurin dephosphorylates NFAT, letting it enter the nucleus. (3) AP-1 arm: RAS/RAC GTPases drive the MAPK pathway (ERK/JNK) → c-Fos + c-Jun assemble into AP-1. All three bind the IL-2 promoter — and all three are required; block any one and the response is crippled. (Two of these arms are the drug targets in the next LO.)</p><p>Three arms to IL-2: PKC→NF-kB; Ca2+→calmodulin→calcineurin→NFAT; RAS/RAC→MAPK→AP-1. All required. (three TF arms)</p><p>NF-kB arm: PKC → IkB kinase → phosphorylates IkB → frees NF-kB → nucleus (glucocorticoid target).</p><p><strong>Confusion:</strong> NFAT arm: Ca2+ → calmodulin → calcineurin dephosphorylates NFAT → nucleus (cyclosporine target).</p><p><strong>Clinical pearl:</strong> AP-1 arm: RAS/RAC → MAPK (ERK/JNK) → c-Fos + c-Jun = AP-1; all three arms converge on the IL-2 gene.</p><p>IL-2 AND INDUCED SURFACE PROTEINS. IL-2 is the payoff of the cascade (CD4 cells are the main producers; CD8 expansion depends on CD4 IL-2). IL-2 (1) drives clonal expansion, (2) induces anti-apoptotic BCL proteins that block BAK/BAX pores (any strongly stimulated cell defaults to apoptosis unless rescued), and (3) upregulates the IL-2 receptor alpha chain = CD25, transiently, opening a window for expansion. Meanwhile CD28 co-stimulation amplifies TCR signaling (without it, signal is too weak) — making CD28 a transplant-drug target. CD40 ligand appears too: it drives B-cell help and class switching beyond IgM, and can mature bystander DCs.</p><p>BRAKES ON THE RESPONSE. Expansion cannot run forever (that would be lymphoma), so inhibitory receptors rise ~day 3–4. CTLA-4 outcompetes CD28 for B7 (removing co-stimulation) AND recruits a phosphatase that strips the CD3/zeta ITAM phosphates — shutting down signaling. PD-1 binds its ligand on the APC and likewise recruits phosphatases. Together they convert exponential growth into a plateau, then contraction — and they reappear later as central tolerance / checkpoint-therapy targets.</p><p>IL-2: clonal expansion + anti-apoptotic BCL + upregulates CD25 (IL-2Rα, transient). CD4 is the main IL-2 source. (IL-2 actions) CQ CD28 amplifies TCR; brakes CTLA-4 (outcompetes CD28 for B7 + phosphatase) and PD-1 arrest expansion ~day 3–4. (amplifier and brakes)</p><p><strong>Confusion:</strong> IL-2 actions: drives clonal expansion, induces anti-apoptotic BCL (survival), and prepares cells for signal 3. Brakes: CTLA-4 and PD-1 rise ~day 3–4 to arrest expansion (outcompete CD28 / recruit phosphatases).</p><p><strong>Key:</strong> Spine: CD3/zeta ITAMs → LCK → ZAP-70 → LAT → three arms (NF-kB, NFAT, AP-1) → IL-2. ZAP-70 is the indispensable hub; all three transcription factors are required.</p><p><strong>Trap:</strong> The TCR does not signal itself — CD3 and the zeta chains carry the ITAMs. And IL-2 upregulates CD25 (IL-2Rα), which is transient, not permanent.</p><p><strong>Clinical pearl:</strong> Brakes vs gas: CD28 amplifies (gas); CTLA-4 and PD-1 brake (recruit phosphatases ~day 3–4). CTLA-4 also outcompetes CD28 for B7. Same B7, opposite effect.</p><p>ReClaude A: The indispensable hub is ZAP-70: after LCK phosphorylates the CD3/zeta ITAMs, ZAP-70 docks and phosphorylates LAT — lose ZAP-70 and the entire response fails. The cascade then branches into three transcription-factor arms — NF-kB (via PKC), NFAT (via Ca2+/calmodulin/calcineurin), and AP-1 (via MAPK) — all of which bind the IL-2 promoter and all of which are required.</p>",
+  "why": ""
+ },
+ "99_32": {
+  "answer": "<p><em>Two immunosuppressants both lower IL-2 and dampen T cells, but they hit different arms of the same cascade. One blocks NF-kB; the other freezes NFAT in the cytoplasm. Name each drug and its precise target.</em></p><p>OVERVIEW. This LO maps two drug classes onto the signaling cascade from LO 11.2. The unifying idea: both drugs reduce IL-2 transcription, but by hitting different transcription-factor arms — glucocorticoids on the NF-kB arm, cyclosporine on the NFAT arm. Because all three arms are required for IL-2, knocking out either one cripples clonal expansion.</p><p>GLUCOCORTICOIDS — block NF-kB. Glucocorticoids block NF-kB activation/mobilization. Since NF-kB drives pro-inflammatory cytokine genes (in both innate cells and T cells), blocking it produces broad anti-inflammatory effects — hence glucocorticoids are used for allergies, asthma, autoimmune disease, and sepsis. On the T-cell cascade, no NF-kB means one of the three required IL-2 inputs is missing.</p><p>CYCLOSPORINE — inhibit calcineurin. Cyclosporine inhibits calcineurin. Normally Ca2+ → calmodulin → calcineurin dephosphorylates NFAT so it can enter the nucleus. With calcineurin blocked, NFAT stays phosphorylated in the cytoplasm and never reaches the IL-2 promoter — IL-2 falls, clonal expansion is impaired, and the anti-graft response is blunted. This is why cyclosporine is a mainstay in organ transplantation.</p><p>Glucocorticoids → block NF-kB (broad anti-inflammatory: allergy/asthma/autoimmune/sepsis). (glucocorticoid target) CQ Cyclosporine → inhibit calcineurin → NFAT stuck phosphorylated in cytoplasm → less IL-2 (transplant drug). (cyclosporine target)</p><p>Cyclosporine inhibits calcineurin, so NFAT cannot be dephosphorylated and stays out of the nucleus.</p><p>Both targets sit on the TCR-driven cascade that converges on the IL-2 gene for clonal expansion.</p><p>Glucocorticoids block NF-kB activation — reducing pro-inflammatory cytokine and IL-2 transcription.</p><p>Glucocorticoids NF-kB (blocks activation) Less pro-inflammatory cytokine + IL-2 Allergy, asthma, autoimmune, sepsis</p><p>Cyclosporine Calcineurin (inhibits) NFAT stays phosphorylated → less IL-2 Organ transplantation</p><p>THE TESTABLE CONTRAST. Keep the two arms straight: glucocorticoid → NF-kB; cyclosporine → calcineurin → NFAT. A clean memory hook is that cyclosporine hits calcineurin. Both ultimately lower IL-2 because the IL-2 promoter needs all three transcription factors (NF-kB, NFAT, AP-1); remove either NF-kB or NFAT and IL-2 transcription fails, so clonal expansion — and any T-cell-driven inflammation or rejection — is suppressed.</p><p><strong>Trap:</strong> Don’t swap them. Memory hook: cyclosporine → calcineurin → NFAT. Glucocorticoids are the NF-kB blockers (broad anti-inflammatory).</p><p><strong>Key:</strong> Two arms, two drugs: glucocorticoids block NF-kB; cyclosporine inhibits calcineurin (so NFAT can’t enter the nucleus). Both lower IL-2 → less clonal expansion.</p><p><strong>Clinical pearl:</strong> Why it works: the IL-2 promoter needs all three (NF-kB + NFAT + AP-1). Disable either NF-kB or NFAT and IL-2 transcription collapses — no clone army, dampened rejection.</p><p>ReClaude A: Glucocorticoids block NF-kB activation (broad anti-inflammatory, used for allergy/asthma/autoimmune/sepsis); cyclosporine inhibits calcineurin, so NFAT stays phosphorylated in the cytoplasm and cannot transcribe IL-2 (used in transplantation). Both lower IL-2 because the IL-2 promoter requires all three transcription factors.</p><p><em>After a response resolves, three T-cell fates exist: short-lived effectors and two memory types. Two markers — one for survival, one for homing — sort them all out. Which marker does which job, and which cell is which?</em></p><p>OVERVIEW. After expansion and the plateau, the T-cell population contracts (most effectors die), leaving a memory pool. The unifying idea is two markers, two jobs: IL-7R governs survival (who lives long-term) and CCR7 governs lymph-node homing (who stays central vs goes to tissue). Reading those two markers tells you the cell’s identity and behavior.</p><p>IL-7R — the survival switch. Naive T cells are IL-7R+, which keeps them alive in the lymph node/spleen. On activation, short-lived effector cells lose IL-7R (and CCR7) — they are IL-7R− CCR7−, go to tissue, act, and then die by apoptosis during contraction. Memory cells, by contrast, retain IL-7R, giving them the survival signal to persist long-term until the next encounter.</p><p>IL-7R = survival. Naive IL-7R+; effectors lose it (IL-7R− → short-lived); memory retains it (long-lived). (IL-7R / survival)</p><p>Population dynamics: expansion → plateau → contraction (effectors die) → a persistent memory pool remains.</p><p><strong>Trap:</strong> Naive (IL-7R+ CCR7+) → effector (IL-7R− CCR7−, tissue, apoptosis) or memory (IL-7R+); memory splits by CCR7.</p><p><strong>Clinical pearl:</strong> Effector and effector-memory cells use selectins/integrins/chemokine receptors to migrate into tissues.</p><p>CCR7 — the homing switch (central vs effector memory). Within the IL-7R+ memory pool, CCR7 splits the two memory subsets. Central-memory cells (T_CM) keep CCR7 — CCR7 is the receptor that homes cells to lymph nodes, so T_CM remain in the lymph nodes/spleen as a reservoir, ready to re-expand and generate fresh effectors if a response is insufficient. Effector-memory cells (T_EM) lose CCR7 — so they leave the lymph nodes and patrol peripheral tissues, poised for a rapid local recall response at sites of likely re-exposure (skin, gut, lung).</p><p>Naive + + Lymph node; awaiting first antigen</p><p>Effector − − Tissue; acts then dies (short-lived)</p><p>Central memory (T_CM) + + Lymph node reservoir; re-expands</p><p>Effector memory (T_EM) + − Tissue patrol; rapid local recall</p><p>THE TESTABLE CONTRAST. Two markers do all the work: IL-7R = survival (memory keeps it, effectors lose it) and CCR7 = lymph-node homing (central-memory keeps it and stays central; effector-memory loses it and goes to tissue). So T_CM = IL-7R+ CCR7+ (reservoir) and T_EM = IL-7R+ CCR7− (tissue patrol); a short-lived effector is IL-7R− CCR7−. The single most common confusion is thinking IL-7R distinguishes the memory subsets — it does not (both retain it); CCR7 is the subset discriminator.</p><p>CCR7 = lymph-node homing. T_CM CCR7+ (stay = reservoir); T_EM CCR7− (tissue = local recall). Both are IL-7R+. (CCR7 / memory split)</p><p><strong>Trap:</strong> IL-7R does NOT separate the memory subsets — both T_CM and T_EM keep it. CCR7 is the discriminator (central keeps it, effector-memory loses it).</p><p><strong>Clinical pearl:</strong> CCR7 is your ticket into the lymph node. Keep it → you stay central (T_CM, reservoir). Lose it → you head to the tissues (T_EM, fast local recall). Naive cells also need CCR7 to enter the node.</p><p><strong>Key:</strong> Two markers: IL-7R = survival (memory+, effector−); CCR7 = lymph-node homing (T_CM+, T_EM−). So T_CM = IL-7R+CCR7+ (reservoir), T_EM = IL-7R+CCR7− (tissue), effector = IL-7R−CCR7−.</p><p>ReClaude A: IL-7R marks survival: memory cells retain it (long-lived), short-lived effectors lose it. CCR7 marks lymph-node homing: central-memory cells (T_CM) keep CCR7 and stay in the lymph nodes as a reservoir, while effector-memory cells (T_EM) lose CCR7 and patrol tissues for rapid local recall. So T_CM = IL-7R+ CCR7+, T_EM = IL-7R+</p><p><strong>Clinical pearl:</strong> CCR7−, and an effector = IL-7R− CCR7−.</p>",
+  "why": ""
+ },
+ "99_33": {
+  "answer": "<p><em>Three patients: one with an intracellular mycobacterial infection, one with an intestinal parasitic worm, one with an extracellular bacterial infection. Which helper subset leads each, which signature cytokines and effector cells does it deploy, and is the response pro- or anti-inflammatory?</em></p><p>OVERVIEW. Each subset is a specialist matched to a pathogen class. The unifying idea: Th1 fights intracellular pathogens (pro-inflammatory, macrophage-powered); Th2 fights parasitic worms (largely anti-inflammatory, IgE/eosinophil/M2-powered); Th17 fights extracellular bacteria (neutrophil-powered, barrier-reinforcing). The CD8 versions (Tc1/Tc2/Tc17) share the profiles but mainly kill. Read each subset as</p><p>target → cytokines → effector cells → tone.</p><p>TH1 — intracellular pathogens, macrophage activation. Th1 makes IFN-gamma, IL-2, and TNF-alpha and targets intracellular pathogens. Its central act is IFN-gamma activating macrophages: it drives M1 polarization and ramps up NADPH oxidase and iNOS, flooding the phagosome with ROS/RNS to overwhelm even catalase-positive organisms, and it raises MHC I and B7 (do your job, or be killed by a CD8 cell). IFN-gamma needs a partner — CD40 ligand from the T cell — for full macrophage killing. IL-2 also expands/activates NK cells; TNF-alpha sustains inflammation and, chronically, drives apoptosis (a basis of T-cell-mediated autoimmune damage).</p><p>Th1 (IFN-gamma/IL-2/TNF-alpha) → intracellular pathogens; IFN-gamma → M1 + NADPH oxidase/iNOS (ROS/RNS) + ↑MHC I/B7. (Th1 functions) CQ IFN-gamma needs CD40 ligand for full macrophage killing; Th1 is pro-inflammatory. (IFN-gamma + CD40L)</p><p>Th1 activates macrophages via IFN-gamma + CD40L signaling → killing of intracellular bacteria.</p><p>Major Th1 cytokines: IL-2 (clonal expansion + NK), IFN-gamma (macrophage activation), TNF-alpha (inflammation).</p><p>IFN-gamma effects: M1 polarization, more NADPH oxidase/iNOS (ROS/RNS), ↑MHC I — making the macrophage a better killer and a CD8 target.</p><p>TH2 — parasitic worms, anti-inflammatory and healing. Th2 makes IL-4, IL-5, and IL-13 and targets parasitic worms; overall it is anti-inflammatory and promotes wound healing. IL-4 drives B-cell IgE, which arms mast cells (Fc-epsilon receptors) to degranulate and create the inflammation that recruits worm-killers. IL-5 recruits and activates eosinophils — the parasite specialists that can reach the gut lumen and degranulate on IgE-coated worms. IL-4 + IL-13 together polarize macrophages to M2 (healing, apoptotic-cell cleanup) and drive worm expulsion (mucus + peristalsis → diarrhea; the same axis underlies allergic diarrhea). Crucially, IFN-gamma and IL-4 are mutually antagonistic — each suppresses the other, the molecular basis of the pro- vs anti-inflammatory seesaw.</p><p>Th2 (IL-4/IL-5/IL-13) → parasitic worms; IL-4→IgE→mast cells; IL-5→eosinophils; IL-4+IL-13→M2 + expulsion. (Th2 functions) CQ IFN-gamma ↔ IL-4 mutual antagonism: Th1 pro-inflammatory vs Th2 anti-inflammatory / wound-healing. (Th1–Th2 seesaw)</p><p>IL-4: drives B-cell IgE production (arming mast cells via Fc-epsilon receptors).</p><p>IL-5: recruits and activates eosinophils — the parasite specialists able to reach the gut lumen.</p><p>IL-13 (with IL-4): M2 polarization (wound healing, anti-inflammatory) and worm expulsion in the intestine.</p><p>Macrophage polarization: IFN-gamma → M1 (pro-inflammatory killing) vs IL-4/IL-13 → M2 (healing, cleanup).</p><p>TH17 — extracellular bacteria, neutrophils and barrier. Th17 makes IL-17 and IL-22 and targets extracellular bacteria (a mucosal, heavily inflammatory program). IL-17 itself does little directly — it triggers epithelial/stromal cells to release cytokines and growth factors that recruit and activate neutrophils (the anti-extracellular-bacteria effector) and pull in macrophages/DCs. IL-22 reinforces the barrier: it induces antimicrobial peptides (e.g., defensins), supports wound healing, and can loosen tight junctions to flush pathogens (watery diarrhea). The mucosal context matters — TGF-beta normally keeps the gut tolerant (favoring IgA and suppression), but when a pathogen overgrows, IL-6 rises and flips the program to ROR-gamma-T / Th17.</p><p>Th17 (IL-17/IL-22) → extracellular bacteria; IL-17 → neutrophil recruitment; IL-22 → antimicrobial peptides + barrier. (Th17 functions)</p><p>IL-17: triggers epithelial cytokines/growth factors that recruit and activate neutrophils against extracellular bacteria.</p><p>IL-22: induces antimicrobial peptides (defensins), reinforces the epithelial barrier, supports wound healing.</p><p>Major Th17 cytokines IL-17 and IL-22 — a mucosal, neutrophil-oriented, barrier-protective program.</p><p>Subset Cytokines Target Key effectors / tone</p><p>Th1 / Tc1 IFN-gamma, IL-2, TNF-alpha Intracellular pathogens M1 macrophages, ROS/RNS; pro-inflammatory</p><p>Th2 / Tc2 IL-4, IL-5, IL-13 Parasitic worms IgE/mast cells, eosinophils, M2; anti-inflammatory</p><p>Th17 / Tc17 IL-17, IL-22 Extracellular bacteria Neutrophils, barrier peptides; inflammatory</p><p>THE TESTABLE CONTRAST. Answering the three patients: the mycobacterial (intracellular) case is Th1 — IFN-gamma/IL-2/TNF-alpha, M1 macrophages and ROS, pro-inflammatory; the intestinal worm case is Th2 — IL-4/IL-5/IL-13, IgE/mast cells and eosinophils with M2 healing, largely anti-inflammatory (with a local inflammatory carve-out to bring eosinophils in); the extracellular bacterial case is Th17 — IL-17/IL-22, neutrophils and barrier peptides, inflammatory. Map each subset by its target pathogen first; the cytokines and effector cells follow from there, and the inflammatory tone (Th1/Th17 pro-, Th2 anti-) falls out of the IFN-gamma–IL-4 antagonism.</p><p><strong>Clinical pearl:</strong> The seesaw: IFN-gamma ↔ IL-4 suppress each other. Th1/Th17 are pro-inflammatory; Th2 is anti-inflammatory and healing. A Th1 response often resolves into a Th2 wound-healing phase.</p><p><strong>Confusion:</strong> Don’t cross the effector cells: eosinophils = Th2 (worms), neutrophils = Th17 (extracellular bacteria), M1 macrophages = Th1 (intracellular). Each subset, its own foot soldier.</p><p><strong>Key:</strong> Target-first: Th1 = intracellular (IFN-gamma, M1/ROS); Th2 = worms (IL-4/5/13, IgE/eosinophils/M2); Th17 = extracellular bacteria (IL-17/22, neutrophils/barrier).</p><p>ReClaude A: The mycobacterial (intracellular) case is led by Th1 — IFN-gamma/IL-2/TNF-alpha, M1 macrophages with ROS/RNS, pro-inflammatory. The worm case is Th2 — IL-4/IL-5/IL-13, IgE-armed mast cells and eosinophils with M2 healing, largely anti-inflammatory. The extracellular bacterial case is Th17 — IL-17/IL-22, neutrophil recruitment and barrier antimicrobial peptides, inflammatory. CD8 Tc1/Tc2/Tc17 share the profiles but mainly kill.</p><p><em>A CD8 T cell can kill a target two ways. One punches a hole to deliver enzymes; the other flips a death switch on the target’s surface. Name both pathways, the key molecules in each, and the one protein a tumor can use to block the second.</em></p><p>OVERVIEW. A cytotoxic T cell kills by two routes that converge on caspases and apoptosis but enter differently. The unifying idea: perforin/granzyme delivers killer enzymes through a pore (TCR/MHC-I-directed); Fas/FasL flips a death receptor that builds the DISC and activates caspase-8. Both end in clean, low-inflammation apoptosis — and the death-receptor route has a built-in off-switch (c-FLIP) that tumors and viruses exploit.</p><p>PERFORIN / GRANZYME — the pore-and-enzyme route. After the CTL engages MHC I + antigen on the target, it releases granules. Perforin polymerizes into a pore (in the membrane or an endosome), creating a conduit for granzymes to enter the cytosol. Granzymes then activate caspases, producing DNA fragmentation and apoptotic-body formation (blebbing). Because apoptotic bodies display phosphatidylserine and are cleared by macrophages, this is a quiet, low-inflammation kill — the body removes the infected cell without collateral damage. This route is TCR/MHC-I-directed: the CTL needs to see the target’s class I.</p><p>Perforin/granzyme: needs MHC I + antigen; perforin pore → granzymes enter → caspases → apoptosis (DNA fragmentation + blebbing). (perforin/granzyme route) CQ Perforin/granzyme is a quiet, low-inflammation kill (apoptotic bodies cleared by macrophages). (quiet apoptosis)</p><p><strong>Clinical pearl:</strong> CTL engages MHC I + antigen on the target, then releases perforin + granzyme to induce apoptosis.</p><p>Perforin/granzyme: perforin polymerizes into pores; granzymes diffuse into the cytosol → caspases → DNA fragmentation + blebbing.</p><p><strong>Confusion:</strong> CTL recognition of microbial antigen increases Fas-ligand expression — setting up the death-receptor route.</p><p>FAS / FAS-LIGAND — the death-receptor route. The CTL upregulates Fas ligand (FasL) on activation; it binds Fas — a stress receptor that infected or tumor cells upregulate — on the target. FasL–Fas binding assembles the DISC (death-inducing signaling complex), which activates caspase-8 (the initiator — Gregg said to remember it). Caspase-8 then cleaves effector caspases-3, -6, and -7 (mainly -3), producing the same CAD-mediated DNA fragmentation and blebbing. This route can fire independent of the TCR but works better with it. Its off-switch is c-FLIP: c-FLIP outcompetes caspase-8 at the complex (and the analogous TNF-alpha complex), blocking activation. c-FLIP is induced by NF-kB/cytokine signaling — so a tumor (or virus like HIV) that drives c-FLIP, plus drops MHC I, escapes both killing routes.</p><p><strong>Clinical pearl:</strong> Fas/FasL: FasL binds Fas → DISC assembles → caspase-8 activated → effector caspases-3/6/7 → DNA fragmentation + blebbing. c-FLIP blocks the death-receptor route by outcompeting caspase-8 at the complex — a tumor/virus escape mechanism.</p><p>Feature Perforin / granzyme Fas / Fas-ligand</p><p>Trigger TCR sees MHC I + antigen FasL binds Fas (stress receptor); can be TCR-independent</p><p>Entry / complex Perforin pore → granzymes enter DISC assembles at the receptor</p><p>Key caspase Caspases (via granzyme) Caspase-8 → caspase-3/6/7</p><p>THE TESTABLE CONTRAST. Both routes end in caspase-driven apoptosis, but: perforin/granzyme is the pore-and-enzyme, strictly MHC-I/TCR-directed route (granzymes activate caspases after entering); Fas/FasL is the death-receptor route (DISC → caspase-8 → effectors), which can be TCR-independent and is uniquely blockable by c-FLIP. The clinical payoff (answering the anchor): a tumor escapes Fas killing by upregulating c-FLIP, and escapes perforin/granzyme by downregulating MHC I — disabling both routes at once.</p><p><strong>Clinical pearl:</strong> Caspase-8 is the death-receptor initiator (remember it). c-FLIP outcompetes it to block Fas/TNF-alpha apoptosis — induced by NF-kB/cytokine, exploited by tumors and HIV.</p><p><strong>Trap:</strong> Don’t swap entry points: perforin makes the pore; granzymes are the enzymes that trigger caspases. The Fas route needs no pore — it signals through the receptor/DISC.</p><p><strong>Key:</strong> Two routes, one endpoint: perforin pore → granzymes → caspases (MHC-I/TCR-directed); FasL–Fas → DISC → caspase-8 → caspase-3/6/7. Both → apoptosis (DNA fragmentation + blebbing).</p><p>ReClaude A: Route 1 is perforin/granzyme: after the CTL sees MHC I + antigen, perforin forms a pore and granzymes enter to activate caspases → apoptosis. Route 2 is Fas/FasL: FasL on the CTL binds Fas on the target → DISC → caspase-8 → effector caspases. A tumor blocks the second route with c-FLIP (which outcompetes caspase-8), and blocks the first by downregulating MHC I.</p><p><em>When the pathogen is cleared, the effector army must shrink. Two mechanisms do it: one is a passive consequence of losing cytokine support, the other is an active suicide. Name both, their key molecules, and which cells survive.</em></p><p>OVERVIEW. After expansion (IL-2) and the CTLA-4/PD-1 plateau, the response enters contraction — most effectors die so the tissue is not inflamed forever. The unifying idea: two death routes shrink the army — passive (cytokine-withdrawal, intrinsic/mitochondrial) and active (AICD, Fas/FasL) — and memory cells are spared both.</p><p>PASSIVE CELL DEATH — cytokine withdrawal (intrinsic). Any strongly activated cell is pre-programmed to die via mitochondrial BAK/BAX pores — a cancer-prevention failsafe. While cytokine (e.g., IL-2) is present, it induces anti-apoptotic BCL-2, which blocks BAK/BAX pore formation and prevents MOMP (mitochondrial outer membrane permeabilization). As the antigen clears, cytokine falls, BCL-2 drops, BAK/BAX pores open → MOMP → cytochrome C release → apoptosome → caspase-3 → apoptosis. This is “death by neglect” for the effector — it dies because its survival signal disappeared. Tumors subvert this by overexpressing BCL-2 to stay alive despite self-driven proliferation.</p><p>Passive (cytokine-withdrawal) death: cytokine↓ → BCL-2↓ → BAK/BAX pores → MOMP → cytochrome C → caspase-3. (passive cell death) CQ Tumors overexpress BCL-2 to block MOMP and resist apoptosis despite constitutive activation. (BCL-2 in cancer)</p><p>Passive death: loss of growth/cytokine signal → BCL-2 falls → BAK/BAX pores → MOMP → cytochrome C → apoptosis.</p><p><strong>Clinical pearl:</strong> Two mechanisms of lymphocyte apoptosis during contraction: passive (mitochondrial) and activation-induced.</p><p><strong>Confusion:</strong> Activation-induced cell death: Fas/FasL on activated T cells drives T-cell-to-T-cell suicide as the response resolves.</p><p>ACTIVATION-INDUCED CELL DEATH (AICD) — Fas/FasL suicide. The active route uses the same death-receptor machinery from LO 12.3. Activated T cells (CD4 and CD8) upregulate both Fas and Fas ligand — FasL quickly, Fas more slowly. Over time, as Fas accumulates on the surface, activated T cells engage each other Fas-to-FasL and kill one another — a suicide that drives contraction. AICD is itself cytokine-driven (cytokines upregulate Fas and FasL), and it can be blocked by c-FLIP just like the killing route. The cells spared from both passive death and AICD are the memory T cells (kept alive by IL-7R signaling), which persist for the next encounter.</p><p>Feature Passive (cytokine withdrawal) Activation-induced (AICD)</p><p>Trigger Loss of cytokine/BCL-2 support Fas/FasL engagement (T cell–T cell)</p><p>Key molecules BCL-2 ↓ → BAK/BAX → MOMP → cytochrome C Fas + FasL → DISC → caspase-8</p><p>Type Intrinsic (mitochondrial) Extrinsic (death receptor)</p><p>Spared cells Memory T cells Memory T cells</p><p>THE TESTABLE CONTRAST. Answering the anchor: passive cell death is the intrinsic, mitochondrial route — cytokine withdrawal lowers BCL-2, so BAK/BAX open pores (MOMP → cytochrome C → caspase-3); AICD is the extrinsic, death-receptor route — Fas/FasL drives T-cell-to-T-cell suicide via caspase-8. Both clear effectors during contraction; memory T cells survive both. A clean split: passive = “lost my survival signal” (BCL-2/mitochondria); AICD = “told to die” (Fas/FasL/caspase-8).</p><p><strong>Clinical pearl:</strong> Mnemonic split: passive = “lost my survival signal” (mitochondrial, BCL-2); AICD = “told to die” (Fas/FasL, caspase-8). Cancer flips the first by overexpressing BCL-2.</p><p><strong>Trap:</strong> AICD is cytokine-driven (cytokines upregulate Fas/FasL) and uses the extrinsic (death-receptor) pathway — don’t confuse it with the intrinsic, cytokine-withdrawal route.</p><p><strong>Key:</strong> Two contraction routes: passive (cytokine↓ → BCL-2↓ → BAK/BAX → MOMP → cytochrome C → caspase-3, intrinsic) and AICD (Fas/FasL → caspase-8, extrinsic). Memory cells survive both.</p><p>ReClaude A: Passive cell death is intrinsic: as antigen clears, cytokine and BCL-2 fall, so BAK/BAX form mitochondrial pores (MOMP) → cytochrome C → apoptosome → caspase-3. AICD is extrinsic: activated T cells upregulate Fas and FasL and kill each other (Fas→DISC→caspase-8) — a cytokine-driven suicide. Both drive contraction; memory T cells (IL-7R-supported) survive both.</p>",
+  "why": ""
+ },
+ "99_39": {
+  "answer": "<p><em>A B cell starts out making IgM against a toxin and later makes IgG against the very same toxin with even higher affinity. Name the single enzyme behind both changes, and state what happened to the antibody’s specificity.</em></p><p>OVERVIEW. ‘Isotype switching’ is the last step of a longer story, so this LO walks the whole T-dependent germinal-center reaction and lands on the switch. The through-line to hold onto: a single enzyme, AID (activation-induced deaminase), powers both the affinity-tuning mutations and the isotype switch. Everything else is choreography that gets the right cells together so AID can act.</p><p>FINDING EACH OTHER. Help happens in the interfollicular zone, between the T-cell paracortex and the B-cell follicle. A naive pre-TFH starts CXCR5−/CCR7+ (drawn to the T zone by DC-made CCL19/CCL21); a naive B cell is CXCR5+ (drawn to the follicle by FDC-made CXCL13). When each is activated by antigen, they reverse their chemokine receptors: the activated B cell turns CCR7 up / CXCR5 down and moves toward the T zone, while the activated pre-TFH turns CCR7 down / CXCR5 up and moves toward the follicle. They meet in between — a deliberate, reciprocal migration, not chance.</p><p>Reciprocal chemokines: activated B cell CCR7↑/CXCR5↓, activated pre-TFH CCR7↓/CXCR5↑ — they meet in the interfollicular zone. (choreography)</p><p>Unique helper T cells sit in the interfollicular zone between the T-cell paracortex and the B-cell follicle.</p><p>FDCs make CXCL13 (for CXCR5); DCs make CCL19/CCL21 (for CCR7) — setting the gradients that position pre-TFH and B cells.</p><p>On activation the B cell (CCR7↑/CXCR5↓) and pre-TFH (CCR7↓/CXCR5↑) migrate toward each other in the interfollicular zone.</p><p>THE CONJUGATE PAIR. When they meet, the activated pre-TFH and activated B cell form a conjugate pair — physically engaged through MHC II–TCR, the CD40–CD40L contact, and cytokines (IL-2/IL-4/IL-5 from the Th2-like pre-TFH binding the B cell’s IL-2R/IL-4R/IL-5R). This engagement does two decisive things. First, it induces AID in the B cell — the enzyme that all the later mutation and switching depend on. Second, the B cell pushes back on the pre-TFH: it drives Bcl-6 in the pre-TFH, which stabilizes CXCR5 and CD40L and completes differentiation into a true TFH cell. (Bcl-6 matters because the antibody response takes 7–10 days — the TFH program has to be locked in to last.)</p><p>TO THE MEDULLA, THEN BACK. The conjugate pair migrates to the medulla, where both cells divide over several days under TFH cytokines. Some B cells become B lymphoblasts → short-lived plasma cells that secrete the initial IgM seen in blood. Most conjugate pairs then traffic back to the follicle, where the rapidly proliferating B lymphoblasts seed a secondary follicle — the start of a germinal center.</p><p>Conjugate pair: pre-TFH engaged to an activated B cell via CD40–CD40L, MHC II–TCR, and IL-2/4/5 — inducing AID in the B cell.</p><p>The activated B cell drives Bcl-6 in the pre-TFH, stabilizing CXCR5/CD40L and completing differentiation into a TFH cell.</p><p>The conjugate pair migrates to the medulla; some B cells become short-lived plasma cells secreting the initial IgM.</p><p>THE GERMINAL CENTER. Back in the follicle, the fast-dividing B lymphoblasts are now centroblasts; they push naive B cells out to a surrounding mantle, forming a germinal center. A key concept Gregg flagged: a germinal center represents a B-cell response to ONE antigen (which may carry several epitopes) — it is clonal and antigen-focused. TFH cytokines (IL-2/4/5) initiate centroblast proliferation; FDC factors (IL-6, IL-15, BAFF) sustain it. Centroblasts shut off surface Ig while they divide.</p><p>SOMATIC HYPERMUTATION. Continued centroblast–TFH interaction induces more AID, which now drives somatic hypermutation: a high rate of point mutation in the variable (V) region of both heavy and light chains. This generates BCRs of varying affinity. A centroblast that has finished hypermutating and re-expresses surface Ig is renamed a centrocyte. Note the division of labor that defines the exam answer: SHM edits the V region to change affinity — distinct from the switch, which will edit the constant region to change isotype.</p><p>A germinal center = response to ONE antigen. Centroblast (proliferating, sIg-off, hypermutating) → centrocyte (sIg re-expressed). (GC vocabulary) CQ SHM = AID-driven point mutation of the V region (affinity); it does not touch the constant region. (SHM target)</p><p>A centroblast that completes hypermutation and re-expresses surface Ig is renamed a centrocyte.</p><p>Centroblasts push out naive B cells to the mantle, forming a germinal center — a response to ONE antigen (multiple epitopes).</p><p>AID drives somatic hypermutation in the V region of both chains, generating BCRs of varying affinity.</p><p>AFFINITY MATURATION — SELECTION ON THE FDC. Centrocytes now compete for antigen held intact by follicular dendritic cells on complement receptors (CR1–3) and Fc receptors. A centrocyte survives only if it gets both a strong BCR signal (its hypermutated receptor binds the FDC-displayed antigen well) and TFH help. Higher-affinity clones win; centrocytes that cannot compete undergo apoptosis and are cleared by tingible-body macrophages. This is affinity maturation: the surviving repertoire drifts toward higher affinity over the reaction. Surviving GC B cells then receive TFH IL-10/IL-21 signals (Bcl-6) that drive differentiation toward plasma cells — and it is during this interaction that isotype switching occurs.</p><p>FDCs display intact antigen on complement (CR1–3) and Fc receptors for centrocytes to test their hypermutated BCRs against.</p><p>Survival requires BOTH BCR and CR signaling — high-affinity centrocytes stay attached to FDC and TFH; the rest apoptose.</p><p>Surviving GC B cells get TFH IL-10/IL-21 (Bcl-6) to become plasma cells — and undergo isotype switching during this step.</p><p>CLASS SWITCH RECOMBINATION — THE SWITCH ITSELF. Now the actual mechanism. The heavy-chain locus has the variable region, then the constant-region exons, each preceded by a switch region. Two inputs license switching: CD40 ligation induces AID, and the TFH cytokine directs AID to the correct switch region. Before switching, alternative splicing lets the cell make IgM and IgD off the same V region. The cytokine sets the target: for example, IFN-γ drives IgG switching. Mechanistically: AID deaminates cytosine → uracil in the donor (Sμ) and acceptor (e.g., Sγ1) switch regions; uracil-DNA-glycosylase (UNG) removes the uracil, leaving an abasic site; APE1 (an endonuclease) nicks that site; nicks on both strands of both switch regions create double-strand breaks that recombine, looping out the intervening constant exons as a circle. Crucially, the V region is untouched — so the switched IgG has the same antigen specificity and affinity as the parent IgM. Only the isotype changed.</p><p>CSR steps: AID (C→U) → UNG removes uracil → APE1 nicks → double-strand breaks recombine the switch regions. (CSR mechanism) CQ CD40L induces AID; the cytokine aims it (IFN-γ→IgG). V region preserved → same specificity/affinity, new isotype. (switch control)</p><p>Heavy-chain locus: variable region, constant-region exons, and the switch regions; CD40 induces AID, cytokines direct it.</p><p>AID→uracil, UNG removes it, APE1 nicks the abasic site; double-strand nicks in both switch regions enable recombination.</p><p>Intervening constant exons loop out as circular DNA; the V region realigns with Cγ1 — same specificity/affinity, new IgG1 isotype.</p><p>PLASMA CELLS AND MEMORY — THE OUTPUTS. Two fates remain. Long-lived plasma cells home to the bone marrow, sit on stromal cells, are non-migratory, and secrete antibody for years (the ‘memory plasma cell’). Memory B cells are different: they circulate, carry a BCR, and do NOT secrete antibody, waiting as a reservoir for a fast recall response. A switch in TFH cytokine (toward IL-4/IL-21 patterns) tips GC B cells toward the memory fate rather than the plasma-cell fate. Remember the timing discriminator: short-lived plasma cells give the first IgM over several days, but antigen-specific IgM within ~2 days with no maturation points to marginal-zone (T-independent) B cells, not the germinal center.</p><p><strong>Key:</strong> One enzyme, two edits. AID does SHM (V region → affinity) AND CSR (switch regions → isotype). CD40L induces it; the cytokine aims it.</p><p><strong>Clinical pearl:</strong> The 2-day rule. IgM within ~2 days, unmatured = marginal-zone (T-independent). The germinal-center (TD) IgM is slower and matures.</p><p><strong>Confusion:</strong> SHM vs CSR. SHM = point mutations in the V region (changes affinity). CSR = recombination of the constant region (changes isotype). Specificity is preserved by CSR.</p><p>ReClaude A: The enzyme is AID (activation-induced deaminase): it drove the somatic hypermutation that raised affinity and the class switch recombination that changed IgM to IgG. Specificity is unchanged — CSR swaps only the constant region, leaving the V region (and thus the antigen target) intact.</p>",
+  "why": ""
+ },
+ "99_40": {
+  "answer": "<p><em>An exam stem says ‘NK cell kills an antibody-coated tumor cell.’ Name the effector function, the Fc receptor, its CD number, and the isotype — and contrast it with how a macrophage handles the same coated cell.</em></p><p>OVERVIEW. The whole LO reduces to one rule: the constant region (isotype) plus the Fc receptor on the responding cell decides what happens to the antibody-bound target. Same antigen-binding end, different back end, different outcome. Walk the effector functions in order and attach each to its isotype and receptor.</p><p>NEUTRALIZATION (IgG, IgA). The simplest function: the antibody physically blocks a pathogen or toxin from attaching to host-cell receptors. Influenza must bind hemagglutinin on respiratory epithelium to infect; anti-H antibody blocks that contact (the object of the flu vaccine). Likewise, antibody against an exotoxin (tetanus, diphtheria) blocks the toxin from reaching its receptor — which is why toxin-mediated diseases are such good vaccine targets. IgG and IgA are the neutralizing isotypes.</p><p>OPSONIZATION (IgG, IgA). Antibody coats the microbe; phagocytes carrying the matching Fc receptor bind that coat and engulf the target. Macrophage/neutrophil FcγRI (CD64) and FcγRIIA engage IgG; FcαRI (CD89) engages IgA. The coat itself — the thing that enhances phagocytosis — is the opsonin.</p><p>Neutralization = block attachment (IgG, IgA). Opsonization = antibody coat that Fc receptors grab for phagocytosis (IgG via FcγRI/IIA; IgA via FcαRI).</p><p>Neutralization: antibody binds a viral surface protein (e.g., influenza HA) and blocks attachment to the host-cell receptor.</p><p>Neutralization of exotoxins (tetanus, diphtheria): antibody blocks toxin binding to host receptors — the basis of toxoid vaccines.</p><p>Opsonization: IgG/IgA coat the microbe; phagocyte Fc receptors bind the Fc and drive uptake and digestion.</p><p>ADCC — NK CELLS, FcγRIII (CD16), IgG. This is the highest-yield receptor fact in the lecture. NK cells express FcγRIII, whose alias is CD16; it binds the Fc of IgG (IgG1/IgG3) attached to a target cell. Ligation makes the NK cell release perforin and granzyme, which activate caspases and drive the target into apoptosis. Antibody-directed killing of a coated cell is antibody-dependent cellular cytotoxicity. Contrast the macrophage:</p><p>same IgG-coated target, but the macrophage eats it (opsonization) rather than puncturing it. Eosinophils run a parallel program against large parasites — IgE coats the worm, eosinophils bind via FcεRI, and degranulate to destroy it.</p><p>THE Fc-RECEPTOR MAP — LEARN THE ROWS. The exam tests the cell–receptor–isotype–outcome table directly. FcγRI (macrophages; induced on neutrophils): IgG → opsonization. FcγRIIA (macrophages, neutrophils): IgG → opsonization. FcγRIII / CD16 (NK cells): IgG → perforin/granzyme (ADCC). FcεRI (mast cells, basophils; induced on eosinophils): IgE → degranulation. FcαRI / CD89 (macrophages, neutrophils): IgA → opsonization; (on dendritic cells) uptake of neutralized antigen for processing.</p><p>ADCC = NK cell + FcγRIII (CD16) + IgG → perforin/granzyme → apoptosis. CD16 = FcγRIII is the alias to memorize. (ADCC triad) CQ FcR rows: FcγRI/IIA→opsonize (IgG); FcγRIII/CD16→ADCC (NK, IgG); FcεRI→degranulate (IgE); FcαRI/CD89→opsonize (IgA). (FcR map)</p><p>Against large worms, IgE coats the parasite and eosinophils bind via FcεRI, degranulating to destroy it.</p><p>Fc-receptor map: FcγRI/IIA (opsonization), FcγRIII/CD16 (NK ADCC), FcεRI (degranulation), FcαRI (IgA opsonization/uptake).</p><p>ADCC: NK-cell FcγRIII (CD16) binds IgG (IgG1/IgG3) on the target and releases perforin/granzyme, driving caspase-mediated apoptosis.</p><p>COMPLEMENT ACTIVATION (IgM, IgG1–3). IgM and IgG1–IgG3 bind antigen and recruit C1 to fire the classical pathway. The structural punchline: because IgM is a pentamer, it presents multiple Fc regions at once, so far fewer IgM molecules are needed to activate complement — a single bound IgM can do it, whereas IgG needs two molecules close together.</p><p>IMMUNE-COMPLEX REMOVAL (IgG). IgG binds soluble or surface-deposited antigen to form immune complexes; because IgG’s binding sites are higher-affinity than IgM’s, most complexes are IgG. C1 activation deposits C3b on the complex. Erythrocytes carry CR1, which binds that C3b and ferries the complexes to macrophages in the spleen and liver for removal. This clearance matters clinically: if complexes are not removed, they deposit in small vessels and renal glomeruli, where complement activation causes vasculitis and glomerulonephritis.</p><p>Complement: IgM (pentamer) and IgG1–3 recruit C1; fewer IgM needed. Erythrocyte CR1 clears C3b-tagged immune complexes to spleen/liver.</p><p>IgM, IgG1, IgG3 bind antigen and recruit C1; pentameric IgM needs far fewer molecules to activate the classical pathway.</p><p>IgG forms immune complexes; C1 activation deposits C3b, and phagocytes take up the complexes (cleared in spleen and liver).</p><p>Erythrocyte CR1 binds C3b on complexes and delivers them to splenic/hepatic macrophages; failure causes vasculitis and glomerulonephritis.</p><p>IgG SUBCLASSES AND THE PLACENTA. IgG1 is the most common serum subclass; IgG1 and IgG3 are the best at opsonization, complement activation, and ADCC, and are the subclasses that cross the placenta. Transfer is by FcRn (the neonatal Fc receptor): in the syncytiotrophoblast, circulating IgG is pinocytosed, FcRn binds it in the acidified endosome (protecting it from proteases), and the endosome releases the IgG into the fetal circulation at physiological pH. The same FcRn transcytosis moves IgG (and some IgA) from blood into tissues and mucosa, and recycles serum IgG — the basis of its long half-life in the next LO.</p><p>IgG subclasses: IgG1 most common; IgG1/IgG3 best for opsonization, complement, ADCC, and are the placental crossers.</p><p>FcRn transfers maternal IgG across the syncytiotrophoblast: acidified endosomes bind IgG and release it into fetal blood at physiological pH.</p><p>Placental IgG transfer is efficient (neonatal IgG approaches adult levels); a deficiency window follows as maternal IgG wanes.</p><p>SECRETORY IgA — pIgR AND THE SECRETORY PIECE. Mucosal plasma cells make dimeric IgA on the basolateral side of the epithelium; it must reach the lumen. The polymeric Ig receptor (pIgR) binds the IgA J chain, transcytoses it to the apical surface, and is then cleaved to leave a secretory piece attached to the IgA. That secretory piece protects the IgA from proteolysis and helps anchor it in mucus. (pIgR carries pentameric IgM the same way.) This is the molecular core of the next lecture, mucosal immunity.</p><p>IgM AND IgE — THE BOOKENDS. IgM is the first isotype synthesized, the first surface BCR on naive mature B cells, an efficient complement activator, and an agglutinator of microbes. IgE mediates immunity to parasites and type I allergy: it arms mast cells and basophils via FcεRI, and antigen/allergen cross-linking triggers degranulation (histamine and other mediators) — expulsion responses (sneeze, cough, vomit, diarrhea) against pathogens, and allergic symptoms against allergens in genetically predisposed people. The same IgE–FcεRI logic is the engine of type I hypersensitivity in Lec 18.</p><p>Secretory IgA: pIgR binds the J chain, transcytoses dimeric IgA, and is cleaved to leave the protective secretory piece. (secretory IgA) CQ IgM = first Ig + first BCR + complement + agglutination. IgE = parasites + allergy via FcεRI degranulation. (IgM/IgE bookends)</p><p>Secretory IgA: pIgR binds the J chain of dimeric IgA, transcytoses it, and is cleaved to leave the secretory piece that resists proteolysis.</p><p>IgM: first isotype synthesized, first surface BCR, complement activation, and agglutination of microbes.</p><p>IgE: allergen/antigen cross-links IgE on mast-cell FcεRI → degranulation — expulsion responses and allergic symptoms.</p><p><strong>Confusion:</strong> FcRn vs pIgR. FcRn moves IgG (placenta, tissue) and recycles it (half-life). pIgR moves dimeric IgA across mucosa and leaves the secretory piece.</p><p><strong>Key:</strong> Isotype + Fc receptor = function. Same antigen end; the constant region and the responding cell’s Fc receptor decide neutralize / opsonize / ADCC / degranulate / fix complement.</p><p><strong>Clinical pearl:</strong> CD16 = FcγRIII = NK ADCC for IgG. The single most tested alias in the lecture — NK cell binds IgG on the target and fires perforin/granzyme.</p><p>ReClaude A: It is ADCC: the NK cell uses FcγRIII (CD16) to bind IgG (IgG1/IgG3) on the coated cell and releases perforin/granzyme to drive apoptosis. A macrophage meeting the same IgG-coated cell instead phagocytoses it via FcγRI/FcγRIIA (opsonization) — same antibody, different Fc receptor, different fate.</p>",
+  "why": ""
+ },
+ "99_42": {
+  "answer": "<p><em>Two patients are protected against the same microbe — one because they were given antibodies, one because they were infected last year. Which has memory, which had immediate protection, and what are the four resulting categories?</em></p><p>OVERVIEW. Immunization — providing immunity to an infectious agent — can happen actively or passively, and either can be acquired naturally or artificially (deliberately induced, i.e. vaccines). The whole LO is a 2×2 grid: passive/active × natural/artificial. The defining contrast is who made the antibody.</p><p>PASSIVE IMMUNITY — BORROWED ANTIBODY. The recipient receives preformed antibody that someone (or something) else made. Consequences follow directly: protection is rapid (antibody is already there), but temporary (antibody has a short half-life and decays), and it produces no memory — no recipient B or T lymphocytes are involved, so the recipient’s immune system never learns anything. It does not rely on the recipient mounting a response at all.</p><p>ACTIVE IMMUNITY — YOUR OWN RESPONSE. An antigen is introduced and the recipient develops their own response. This is slower (it requires T- and B-lymphocyte activation, proliferation, and differentiation), but yields long-term protection because memory T and B cells form. The trade is the mirror image of passive: delayed but durable, with memory.</p><p>Passive = receive preformed antibody → immediate, temporary, no memory. Active = make your own response → slow, durable, memory. (the core contrast)</p><p>Passive immunity: receiving preformed antibody — immediate but temporary, with no memory because no recipient lymphocytes respond.</p><p>Active immunity: introducing antigen so the recipient develops their own response — slower, but long-lasting with memory T and B cells.</p><p>Passive immunity splits into natural (maternal antibody) and artificial (receiving serum/antibody preparations).</p><p>NATURAL vs ARTIFICIAL — THE FOUR BOXES. Passive-natural: maternal antibodies passed to the fetus (placenta) or infant (milk). Passive-artificial: receiving serum/antibody — human immune serum globulin, hyperimmune/convalescent serum, antitoxin/antivenom, or lab monoclonals. Active-natural: contact with antigen through the infectious process (even mild/subclinical disease can leave antibodies and memory). Active-artificial: intentional exposure to an antigen BEFORE infection, usually by vaccination.</p><p>Grid: passive-natural = maternal Ab; passive-artificial = serum/globulin; active-natural = infection; active-artificial = vaccine. (the 2×2 grid)</p><p>Active immunity splits into natural (response to real infection) and artificial (vaccination — deliberate exposure before infection).</p><p>Active-natural is infection-driven; active-artificial is intentional exposure to antigen before an infection occurs.</p><p>Sources of artificial passive immunity: immune serum globulin, hyperimmune/convalescent serum, antitoxin/antivenom, and monoclonal antibodies.</p><p>ReClaude A: The patient given antibodies had passive immunity — immediate protection, no memory. The patient infected last year has active immunity — it developed slowly but left memory. The four categories: passive-natural (maternal antibody), passive-artificial (serum/globulin), active-natural (infection), active-artificial (vaccination).</p><p><em>Someone steps on a rusty nail and has no tetanus immunity. Why might they get BOTH a shot of antibody and a shot that is a vaccine — what does each one do?</em></p><p>OVERVIEW. The clinical question is always a timing question: do you need protection now, or do you need it to last? Passive and active immunity answer different halves of that, and sometimes you deploy both.</p><p>PASSIVE — FOR IMMEDIATE NEED. When a non-immune patient faces an immediate threat — a wound carrying a toxin, a recent exposure, a venom — you give preformed antibody for protection that works at once. Artificial passive products are organized by source: from human serum (immune globulin / IVIG, and disease-specific immune globulins used as pre-exposure or post-exposure prophylaxis), from monoclonal antibodies (e.g. an anti-toxin mAb that binds and neutralizes a bacterial toxin), and from non-human donors (antitoxins/antivenoms raised in animals). (Per the syllabus you reason about the category and property, not which brand belongs to which class.)</p><p>ACTIVE — FOR DURABLE PROTECTION. To make protection last, you induce the patient’s own response, normally by vaccination (or by surviving the natural infection). And in high-risk post-exposure situations you combine them: immune globulin bridges the gap immediately while the vaccine builds the patient’s own durable, memory-based immunity — covering both timelines at once.</p><p>Passive = immediate need (toxin, exposure, venom); active = durable protection (vaccine). High-risk post-exposure → give both. (use-case logic)</p><p>Monoclonal-antibody passive protection: lab-made antibodies that bind and neutralize a specific pathogen or toxin.</p><p>Active protection: exposure to a pathogen (or vaccine antigen) elicits the patient’s own response, providing antibodies and memory for the future.</p><p>Artificial passive protection from human serum globulin: IVIG and disease-specific immune globulins used as pre- or post-exposure prophylaxis.</p><p>ReClaude A: They get an antibody shot (passive — immediate but temporary protection against the toxin, no memory) and a vaccine shot (active — builds their own durable, memory-based immunity). Together the globulin covers the gap now while the vaccine establishes lasting protection.</p>",
+  "why": ""
+ },
+ "99_49": {
+  "answer": "<p><em>What single feature must every SCID share, and which primary immunodeficiency is the most common overall?</em></p><p>ORGANIZING THE CATALOG. Primary immunodeficiencies are grouped by the immune compartment they damage — cellular (T/NK), humoral (B-cell/antibody), SCID (combined), phagocytic, and complement. The humoral group is by far the largest. There are ~550 recognized PIs, with the causative gene now identified for the great majority. SCID is an umbrella term, not a single disease: it describes deficiencies that always involve T cells plus at least one other arm — usually B cells (because they depend on T-cell help), sometimes NK cells. The single most common PI overall is selective IgA deficiency, which is also one of the mildest.</p><p>PIs sort by compartment (cellular/humoral/SCID/phagocytic/complement). SCID always involves T cells + another arm. Most common PI = selective IgA deficiency. (PI catalog organization)</p><p>Most common types of primary immunodeficiencies (the humoral/antibody compartment dominates). ~550 recognized PIs; gene identified for ~485.</p><p>Primary immunodeficiencies manifest in childhood and divide by compartment (humoral, cellular, complement, phagocytic). SCID always involves T cells + another arm (B or NK).</p><p>Hallmark of immunodeficiency: enhanced susceptibility — frequent/chronic illness, opportunistic or commensal organisms, infections that fail to respond normally to treatment.</p><p><strong>Confusion:</strong> SCID is not one disease. It is any combined defect that includes T cells. HIGM-1 (CD40L) and BLS are both SCIDs because the T-cell arm is hit.</p><p><strong>Key:</strong> Five compartments organize every PI on the exam: cellular (T/NK), humoral (B/Ab), SCID (combined), phagocytic, complement. Humoral is the biggest bucket.</p><p><strong>Clinical pearl:</strong> When asked for the most common PI, the answer is selective IgA deficiency — and it is also among the mildest, which is why most carriers never know.</p><p>ReClaude A: Every SCID must involve T cells (plus at least one other compartment, usually B cells). The most common primary immunodeficiency overall is selective IgA deficiency.</p><p><em>A 9-month-old has anemia, low platelets, and splenomegaly with a perforin mutation — how does a cytotoxic-killing defect end up producing macrophage-driven pathology?</em></p><p>CELLULAR PI — HEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS (HLH). HLH is the cleanest example of Davis&#x27;s recurring lesson: what you see is not always the problem. The defect is in perforin/granzyme killing by CTLs and NK cells — either perforin cannot be made, or the perforin/granzyme vesicle cannot fuse with the cell membrane to release its cargo. Because those killers cannot clear intracellular targets, they keep secreting IFN-γ, which does not just activate macrophages but hyperactivates them. The over-driven macrophages then phagocytose red blood cells (anemia → fatigue), platelets, and neutrophils, and pile up in the spleen (splenomegaly). So the defect is in the T/NK cell, but the pathology is macrophage-mediated — a severe, potentially fatal systemic inflammatory syndrome. Treatment suppresses the inflammation (methotrexate, dexamethasone, etoposide, cyclosporine A, anti-IFN-γ mAb) or replaces the stem cells (HSCT).</p><p>HLH: defect in perforin/granzyme killing (T/NK) → unchecked targets → sustained IFN-γ → macrophage hyperactivation → phagocytosis of RBCs/platelets/neutrophils (anemia, cytopenias, splenomegaly). (HLH mechanism)</p><p>HLH cause: mutations in perforin/granzyme killing by CTLs &amp; NK cells. Without killing, CTLs/NK keep secreting IFN-γ → macrophage overactivation.</p><p><strong>Clinical pearl:</strong> Hemophagocytic lymphohistiocytosis, decoded: hemo (blood) + phagocytic cells + lympho (lymphatic) + histiocytosis (excess macrophages). Primary form: birth–18 months.</p><p><strong>Confusion:</strong> HLH clinical: phagocytosis of RBCs → anemia/fatigue; low platelets/neutrophils/hemoglobin; splenomegaly; severe systemic inflammation. Defect in T/NK, pathology in macrophage.</p><p>HUMORAL PI — SELECTIVE IgA DEFICIENCY. The most common PI: a defect in B-cell differentiation into IgA-secreting plasma cells (the IgA genes are normal). The result is recurrent mucosal infections (GI, respiratory, ears) and a higher rate of allergy, asthma, RA, and diabetes. Labs show low IgA with normal IgM and IgG and normal peripheral B-cell numbers — the B cells exist, they just do not become IgA plasma cells.</p><p>Selective IgA deficiency: defect in differentiation to IgA plasma cells (genes normal) → low IgA, normal IgM/IgG, normal B-cell counts, mucosal infections. (selective IgA pattern) HUMORAL PI — AID HYPER-IgM SYNDROME (HIGM-2). The key concept is the ratio, not the absolute number. AID (activation-induced cytidine deaminase) performs class-switch recombination, and its expression is induced by CD40–CD40L help from the T cell. Without AID, B cells cannot switch isotypes, so they are stuck making IgM — the IgM-to-IgG/IgA ratio is elevated even when absolute IgM is within the normal range. Cell counts (CD4, CD8, CD19+ B cells) are all normal; only switching fails, and patients often develop hemolytic anemia. Treatment is IVIG (replacing the IgG they cannot make) plus antibiotics. (On any exam Ig-level question, Davis stated she provides normal-vs-patient value columns — so reason from the ratio, never from memorized absolute values.)</p><p>AID hyper-IgM: AID (induced by CD40–CD40L) drives class switching; its loss → stuck at IgM → elevated IgM:IgG/IgA ratio (absolute IgM may be normal). Counts normal; treat with IVIG. (AID hyper-IgM ratio)</p><p>AID hyper-IgM (HIGM-2): mutation in the AID enzyme in B cells. AID drives class-switch recombination, induced by CD40–CD40L interaction with the TH cell.</p><p><strong>Confusion:</strong> Other hyper-IgM forms: HIGM-1 (CD40L, T-cell defect → SCID), HIGM-3 (CD40, B-cell), HIGM-4 (switch-region DNA breaks, B-cell), HIGM-5 (UNG, B-cell).</p><p>Hyper-IgM lab logic: IgM may be high OR within normal range, but the ratio of IgM to IgG/IgA is higher than normal when isotype switching is impaired. SCID — BARE LYMPHOCYTE SYNDROME (BLS). Two types, distinguished by which MHC class is missing from the cell surface. BLS-I: no surface MHC class I, from a TAP1/TAP2 mutation — class I is made but cannot be loaded/displayed → failed positive selection of CD8 T cells. BLS-II (more common): no MHC class II, from a transcription-factor mutation — class II is never made → low CD4 T cells. In both, the MHC genes themselves are normal, and γδ T cells are normal because they do not undergo MHC-dependent positive selection. BLS-I gives necrotizing granulomatous skin lesions and bacterial respiratory infections (most reach adulthood with treatment); BLS-II causes broad bacterial/viral/fungal infections and GI infections → failure to thrive, and is fatal by adolescence without HSCT.</p><p>BLS-I = no surface MHC-I (TAP mutation) → low CD8; BLS-II = no MHC-II (Tx-factor mutation) → low CD4. Genes normal in both; γδ T cells spared (skip MHC positive selection). (BLS I vs II)</p><p><strong>Confusion:</strong> BLS: absent surface MHC → failed positive selection → low αβ CD4/CD8 thymocytes; γδ T cells normal (they skip MHC positive selection).</p><p>BLS: class I defect = TAP mutation (MHC-I made but not displayed); class II defect = transcription-factor mutation (MHC-II not made). Both are SCID.</p><p>BLS-II (more common in Mediterranean/N. African descent): broad bacterial/viral/fungal/opportunistic + GI infections → failure to thrive; fatal by adolescence without HSCT. PHAGOCYTIC PI — CHRONIC GRANULOMATOUS DISEASE (CGD). A defect in the oxidative (respiratory) burst — classically NADPH oxidase — so phagocytosed bacteria and fungi survive inside macrophages and neutrophils. The frustrated phagocytes fuse into granulomas. Clinically: opportunistic bacterial/fungal infections, soft-tissue infections, oral/gum disease, abscesses (brain, liver, lung, bone). Treatment is prophylactic antimicrobials.</p><p>PHAGOCYTIC PI — LEUKOCYTE ADHESION DEFICIENCY (LAD). All three LADs are extravasation/migration defects. LAD-1: a CD18 mutation (CD18 is part of the LFA-1 integrin that binds ICAM-1) → neutrophils cannot adhere and leave the vessel, so they accumulate in blood (neutrophilia) but cannot reach tissue — recurrent soft-tissue infections, no pus (pus is mostly dead neutrophils), poor wound healing, delayed umbilical-cord separation; often fatal before age 1. LAD-2: a sialyl-Lewis-X/fucose-metabolism defect → cannot bind selectins (rolling fails); adds neurologic and growth defects. LAD-3: a FERMT3/KINDLIN3 signaling defect → presents like LAD-1 but adds a bleeding disorder (platelets cannot bind fibrinogen and aggregate, despite normal platelet counts).</p><p>LAD-1 (CD18/LFA-1): no extravasation → neutrophilia + no pus + delayed cord separation. LAD-3 (KINDLIN3) adds a bleeding disorder (defective platelet aggregation, normal counts). (LAD mechanisms)</p><p>CGD: defect in the oxidative burst (e.g. NADPH oxidase) → phagocytosed pathogens survive inside macrophages/neutrophils → frustrated phagocytes fuse into granulomas.</p><p><strong>Confusion:</strong> LAD-1: CD18 (part of LFA-1) mutation → LFA-1 cannot bind ICAM-1 → loss of neutrophil migration → neutrophilia, no pus, delayed cord separation; usually fatal before age 1.</p><p>LAD-3: FERMT3/KINDLIN3 signaling defect → poor integrin upregulation (LFA-1, VLA-4) AND defective platelet aggregation (normal counts) → bleeding disorder. COMPLEMENT PI. Three patterns worth holding apart. C1, C2, or C4 deficiency → little increase in infection but immune-complex disease (RA, SLE, vasculitis), because complexes are not cleared. C5–C9 (MAC) deficiency → recurrent, invasive Neisseria infections (meningitidis, gonorrhoeae), which require MAC lysis to clear — two bouts of meningitis by 18 should prompt a complement workup. C3 deficiency is the most severe (C3 is in all pathways) → broad susceptibility to encapsulated bacteria. Among the regulatory proteins, C1-inhibitor deficiency causes hereditary angioedema: unchecked cleavage of C4 and C2 releases vasoactive C2 kinin — &quot;C4 isn&#x27;t the problem, C2 is.&quot;</p><p>Complement patterns: C1/C2/C4 → immune-complex disease; C5–C9 → Neisseria; C3 → most severe (encapsulated bacteria); C1-INH → hereditary angioedema (C2 kinin). (complement PI patterns)</p><p><strong>Confusion:</strong> C1-inhibitor deficiency: uncontrolled C4/C2 activation releases large amounts of vasoactive C2 kinin → edema → hereditary angioedema.</p><p>Complement PIs: C1/C2/C4 → immune-complex disease (RA, SLE, vasculitis); C5–C9 MAC → recurrent invasive Neisseria; C3 (most severe) → encapsulated bacteria.</p><p><strong>Clinical pearl:</strong> Immunodeficiency-associated issues: anemia, arthritis/joint pain, ~25% have an autoimmune disease, neoplasias (leukemias/lymphomas), growth retardation.</p><p><strong>Trap:</strong> &quot;Hyper-IgM&quot; does not require elevated absolute IgM. It is defined by the IgM:IgG/IgA ratio being high because switching fails — absolute IgM can sit in the normal range.</p><p><strong>Cue:</strong> Oral/gum lesions + abscesses → think CGD; neutrophilia + no pus + delayed cord → LAD-1; recurrent Neisseria → C5–C9; non-pitting edema → C1-INH/hereditary angioedema.</p><p><strong>Key:</strong> Davis&#x27;s through-line: what you see is not always the problem. HLH anemia comes from macrophages, not RBC autoantibodies; LAD-1 neutrophilia comes from cells trapped in blood, not overproduction. Trace symptom → mechanism.</p><p>ReClaude A: Failed perforin/granzyme killing leaves intracellular targets unchecked, so CTLs/NK cells keep secreting IFN-γ; that sustained IFN-γ hyperactivates macrophages, which phagocytose RBCs, platelets, and neutrophils — producing the anemia, cytopenias, and splenomegaly. The defect is in the T/NK cell; the pathology is in the macrophage.</p>",
+  "why": ""
+ },
+ "99_51": {
+  "answer": "<p><em>A young child with clonal expansion of a B-cell progenitor in the marrow, versus an older adult with punched-out skull lesions and urinary light chains — name each malignancy.</em></p><p>LEUKEMIA VS LYMPHOMA. Immune-system cancers split by architecture: leukemias proliferate as individual cells (lymphoid or myeloid), while lymphomas proliferate as a mass of cells. The four leukemias are named by acute/chronic and by lineage, and the age clue is the exam&#x27;s favorite discriminator. ALL (acute lymphoblastic) — clonal expansion of a lymphoid progenitor (usually a B cell), the most common pediatric malignancy (~⅓ of childhood cancers). CLL (chronic lymphocytic) — mature circulating B cells that cannot undergo apoptosis, in older adults (55+); fewer healthy B cells → more infections. AML (acute myeloid) — malignant immature granulocyte precursors crowd the marrow → low WBCs, then anemia and bleeding. CML (chronic myeloid) — a family named by the affected myeloid cell (granulocytes → chronic myelocytic leukemia; megakaryocytes → malignant thrombocythemia or myeloid metaplasia; RBCs → polycythemia vera), mostly in adults.</p><p>Leukemia = individual cells; lymphoma = mass. Age clue: ALL = children (most common pediatric cancer); CLL = older adults (no apoptosis); AML/CML = adults. (leukemia types + age clues)</p><p>Neoplasms of the immune system: leukemias proliferate as individual cells (lymphoid or myeloid); lymphomas proliferate as a mass of cells.</p><p>ALL: dysregulated clonal expansion of a lymphoid progenitor (usually B cell); most common pediatric malignancy (~⅓ of childhood cancers); anemia, bruising, lymphadenopathy.</p><p>AML: malignant proliferation of immature granulocyte precursors crowd the marrow → low WBCs, increased infections, then anemia and bleeding. MULTIPLE MYELOMA. Malignant plasma cells accumulate as a mass in bone, destroying it to leave diagnostic &quot;punched-out&quot; lytic lesions (skull, spine). Normal B cells are crowded out, and the malignant plasma cells overproduce free light chains (Bence-Jones proteins) that clog the kidney → renal failure. Most common in older adults.</p><p>HODGKIN VS NON-HODGKIN LYMPHOMA. Hodgkin — typically B-cell, spreads in an orderly, predictable node-to-node pattern (often beginning cervically), shows diagnostic Reed-Sternberg cells (a lymphoblastic form of a mature B cell, often EBV-linked), and is highly treatable (~90% 5-yr survival); more common in teens/young adults. Non-Hodgkin — can be B- or T-cell, is more aggressive and less predictable, spreads beyond nodes (spleen, liver, marrow), is usually diagnosed later (~74% survival), and is ~10× more common, skewing older.</p><p>Multiple myeloma = plasma cells, punched-out lytic lesions + Bence-Jones light chains → renal failure. Hodgkin = orderly node-to-node + Reed-Sternberg; non-Hodgkin = aggressive, B- or T-cell, beyond nodes. (myeloma + Hodgkin vs non-Hodgkin)</p><p>Multiple myeloma: malignant plasma cells accumulate as a mass in bone → &quot;punched-out&quot; lytic holes (spine, skull) that are diagnostic; normal B cells cannot be made.</p><p>Multiple myeloma: mostly older adults; renal failure from Bence-Jones proteins (overproduced light chains) passing through and clogging the kidney.</p><p>Hodgkin lymphoma: spreads orderly node-to-node; diagnostic Reed-Sternberg cells (a lymphoblastic form of a mature B cell); often EBV-associated, begins cervically.</p><p><strong>Clinical pearl:</strong> Two diagnostic findings to lock in: punched-out lytic lesions + Bence-Jones = multiple myeloma; Reed-Sternberg cells = Hodgkin lymphoma.</p><p><strong>Cue:</strong> Age is the discriminator: a young child → ALL; an older adult with no-apoptosis mature B cells → CLL; teens/young adults with orderly nodal spread → Hodgkin.</p><p><strong>Key:</strong> Two axes for leukemia (acute/chronic × lymphoid/myeloid) plus the age clue solve most stems. Lymphomas split Hodgkin (orderly, Reed-Sternberg, B-cell, ~90%) vs non-Hodgkin (aggressive, B-or-T, ~74%).</p><p>ReClaude A: The child with marrow clonal expansion of a B-cell progenitor has acute lymphoblastic leukemia (ALL); the older adult with punched-out skull lesions and urinary Bence-Jones light chains has multiple myeloma.</p>",
+  "why": ""
+ },
+ "99_52": {
+  "answer": "<p><em>Why does &quot;strong binding&quot; send a B cell to apoptosis but let a T cell survive positive selection — and then kill that same T cell in negative selection?</em></p><p>WHERE AND WHY. Central tolerance happens in the generative organs — B cells in the bone marrow (though ~70% of negative selection actually occurs in the spleen) and T cells in the thymus. Tolerance is purely an adaptive phenomenon: it is the education of BCRs and TCRs to ignore self and attack foreign. The single hardest thing to keep straight is that the same phrase — &quot;strong binding&quot; — produces opposite fates depending on the step, so anchor each step to its rule.</p><p>B-CELL NEGATIVE SELECTION (three outcomes + editing). An immature B cell (IgM+) meets self-Ag held by bone-marrow/splenic stromal cells. Strong binding to multivalent surface self-Ag WITH BCR cross-linking → apoptosis (cross-linking is the key — it always gives the strongest signal). Strong binding to soluble self-Ag WITHOUT cross-linking → anergy (the cell survives as an unresponsive IgM-lo IgD+ naive B cell). Weak or no binding → survival (a normal IgM+IgD+ naive B cell). In about a third of cells slated for apoptosis/anergy, persistent RAG1/2 attempt receptor editing of the light chain to escape self-reactivity.</p><p>B-cell negative selection: strong + cross-link → apoptosis; strong, no cross-link (soluble) → anergy; weak/no → survival. Cross-linking is the determinant.</p><p>Outcome 3: weak or no binding to self-Ag → SURVIVAL (normal IgM+IgD+ naive mature B cell enters periphery).</p><p>B-cell negative selection outcome 1: strong binding to multivalent surface self-Ag WITH BCR cross-linking → APOPTOSIS. ~70% of negative selection occurs in the spleen.</p><p>Outcome 2: strong binding to soluble self-Ag WITHOUT cross-linking → ANERGY (survives as unresponsive IgM-lo IgD+ naive B cell in the periphery).</p><p>T-CELL POSITIVE SELECTION (cortex) — fate determination. Double-positive (CD4+CD8+) thymocytes engage cortical thymic epithelial cells via HLA–self-Ag–TCR. Weak/no binding → apoptosis (death by neglect); moderate/strong binding → survival, and the MHC class fit sets lineage: CD8 fit with MHC I → cytotoxic, CD4 fit with MHC II → helper. Note this is the opposite rule from B-cell negative selection — here weak binding is the one that dies.</p><p>T-CELL NEGATIVE SELECTION (medulla) — signaling test. Single-positive T cells (now CD3-high, so the TCR can signal) meet medullary thymic epithelial cells and thymic DCs. Weak binding → survival; strong OR no binding → apoptosis. Gregg framed this as a signaling test: a surviving T cell must signal weakly (proving a functional TCR) but not strongly (which would mean it recognizes self). The self-antigen breadth comes from AIRE in MTECs, a master switch that transcribes essentially all tissue-restricted self-antigens; Hassall&#x27;s corpuscles make TSLP to mature the thymic DCs.</p><p>T-cell positive selection (cortex): weak/no → apoptosis, mod/strong → survival + lineage fate. T-cell negative selection (medulla): weak → survival, strong/no → apoptosis. AIRE supplies all self-Ags. (T-cell selection rules + AIRE)</p><p>T-cell positive selection (cortex): weak/no binding → apoptosis; moderate/strong → survival. CD8 fit with MHC I → cytotoxic; CD4 fit with MHC II → helper. Fate determination.</p><p>T-cell negative selection: MTECs express AIRE → produce ALL self-Ags, present on MHC I/II and release to thymic DCs; Hassall&#x27;s corpuscles make TSLP to mature the DCs.</p><p>T-cell negative selection outcomes: weak TCR–self-Ag/MHC binding → SURVIVAL; strong OR no binding → APOPTOSIS. A surviving T cell must signal weakly but not strongly.</p><p><strong>Confusion:</strong> Positive vs negative selection are opposite on weak binding: weak loses in positive (death by neglect) but wins in negative (proof of a safe, functional TCR). Lock the step first, then the rule.</p><p><strong>Cue:</strong> &quot;All self-antigens in the thymus&quot; is your AIRE flag. AIRE knockout → autoimmunity; it is the master switch in MTECs that lets the thymus display tissue-restricted self.</p><p><strong>Key:</strong> Three steps, three rules. B-cell negative: strong → die/anergy. T-cell positive: weak → die. T-cell negative: weak → live, strong/no → die. The phrase &quot;strong binding&quot; is meaningless until you name the step.</p><p>ReClaude A: &quot;Strong binding&quot; has no fixed meaning until you name the step. In B-cell negative selection it means the cell recognizes self → apoptosis/anergy. In T-cell positive selection, weak binders die (death by neglect) and moderate/strong binders survive. In T-cell negative selection, the surviving cell must signal weakly — strong binding now means self-recognition → apoptosis. So the same word maps to deletion in two steps and survival in one, because each step is testing for a different thing.</p>",
+  "why": ""
+ },
+ "99_59": {
+  "answer": "<p><em>Across the disorders Davis covered, which are systemic and which are organ-specific, and what defines each?</em></p><p>THE ROSTER. Davis grouped the lecture&#x27;s diseases into systemic (rheumatoid arthritis, autoimmune hemolytic anemia, Guillain-Barré) and organ-specific (vitiligo, Crohn disease, ulcerative colitis). Each has a defining lesion: RA = symmetric inflammatory arthritis (citrullinated-peptide and rheumatoid-factor immune complexes); AIHA = antibody-mediated RBC destruction; Guillain-Barré = acute ascending paralysis from anti-ganglioside mimicry; vitiligo = CTL-mediated melanocyte destruction (depigmentation); Crohn/UC = the two forms of inflammatory bowel disease. Roughly 3% of the population is affected, women 2:1.</p><p>Systemic: RA, AIHA, Guillain-Barré. Organ-specific: vitiligo, Crohn, UC. Each has a defining lesion — match the disease to its target tissue and effector.</p><p>Systemic vs organ-specific: systemic = RA, AIHA, Guillain-Barré; organ-specific = vitiligo, Crohn disease, ulcerative colitis.</p><p>Autoimmune disease arises from failure to develop tolerance OR dysregulation that breaks tolerance; the response is chronic because self-antigen cannot be removed.</p><p>Examples of autoimmune disorders: Sjögren, scleroderma, celiac, Behçet, T1D, atrophic gastritis, psoriasis, MS, IBD, Guillain-Barré, ALPS, pemphigus vulgaris. ~3% of the US population, 2:1 female bias.</p><p>ReClaude A: Davis grouped the diseases as systemic (rheumatoid arthritis, autoimmune hemolytic anemia, Guillain-Barré) or organ-specific (vitiligo, Crohn disease, ulcerative colitis); each is defined by its target tissue and dominant effector — e.g. RA by citrullinated-peptide/RF immune complexes in joints, vitiligo by CTL destruction of melanocytes.</p><p><em>A patient has IBD — what location, depth, and bleeding pattern tell you Crohn disease from ulcerative colitis?</em></p><p>THE CROHN vs UC DISTINCTION (Davis&#x27;s explicit focus). She taught these two side by side &quot;because it can be very confusing as to which one somebody has.&quot; Sort them on three axes: location, depth, and bleeding. Crohn disease: any GI segment, mouth to anus (often the terminal ileum/proximal colon junction), skip lesions, transmural (full bowel-wall thickness → cobblestoning, strictures, thickened wall/mesentery), and rectal bleeding is rare with more continuous pain. Ulcerative colitis: limited to the colon and rectum, spreads continuously from the rectum proximally, involves only the mucosa/submucosa, and rectal bleeding is characteristic with intermittent pain that coincides with bowel movements.</p><p>Crohn: mouth-to-anus, transmural, cobblestone, rectal bleeding RARE. UC: colon/rectum continuous-from-rectum, mucosa/submucosa, rectal bleeding CHARACTERISTIC. Location + depth + bleeding. (Crohn vs UC clinical)</p><p>Crohn disease lesions: crypt inflammation/abscesses → focal aphthoid ulcers → &quot;cobblestone&quot; appearance; transmural spread thickens the bowel wall and mesentery.</p><p>Ulcerative colitis: chronic inflammatory disorder of the colonic mucosa, usually beginning in the rectum and extending proximally in a continuous manner.</p><p>Crohn vs UC comparison: Crohn = any GI segment (mouth→anus), transmural, rectal bleeding rare, continuous pain, NOD2 link, IL-21→granzyme-B+ B cells. UC = colon/rectum, mucosa/submucosa, rectal bleeding characteristic, intermittent pain, elevated TNF-α, atypical Th2/NKT IL-4/IL-13.</p><p>OTHER DEFINING FEATURES. RA: symmetric inflammatory arthritis, typically older onset; ~40% have extra-articular disease (skin, eyes, lungs, heart, kidneys, vessels — including vasculitis with petechial hemorrhages). Vitiligo: patchy depigmentation of skin/hair (non-segmental = symmetric/bilateral, more common; segmental = one area); ~50% appear before age 20, and onset after 40 links to autoimmune thyroid disease. Guillain-Barré: acute, progressive, usually temporary ascending paralysis after an antecedent infection, with autonomic dysfunction (arrhythmia, respiratory failure) in two-thirds.</p><p>Rheumatoid arthritis: ~40% of patients have extra-articular symptoms — skin, eyes, lungs, heart, kidneys, salivary glands, blood vessels, bone marrow.</p><p>Vitiligo: melanocyte destruction → patchy depigmentation of skin and hair follicles; non-segmental (symmetric, more common) vs segmental (one area).</p><p>Guillain-Barré: acute, progressive, monophasic paralytic neuropathy after a causative infection (most often C. jejuni); autonomic dysfunction in two-thirds (ileus, arrhythmia, respiratory failure).</p><p><strong>Key:</strong> Crohn vs UC on three axes — location (Crohn anywhere mouth→anus / UC colon-rectum), depth (Crohn transmural / UC mucosa-submucosa), bleeding (Crohn rare / UC characteristic).</p><p><strong>Confusion:</strong> Rectal bleeding is the fast discriminator. Characteristic in UC, rare in Crohn. Pair it with &quot;continuous from the rectum, mucosa-only&quot; (UC) vs &quot;skip lesions, transmural, cobblestone&quot; (Crohn).</p><p><strong>Cue:</strong> Crohn = &quot;Cobblestone, full-thickness, anywhere.&quot; UC = &quot;continUous, colon-only, bleeds.&quot; NOD2 is associated with both (so it does not distinguish them).</p><p>ReClaude A: In Crohn disease the inflammation can occur anywhere from mouth to anus (often the ileocolic junction), is transmural (producing cobblestoning and strictures), and rarely causes rectal bleeding, with more continuous pain. Ulcerative colitis is confined to the colon and rectum, spreads continuously from the rectum, involves only mucosa/submucosa, and characteristically causes rectal bleeding with intermittent pain — so location, depth, and bleeding pattern separate them.</p><p><em>For AIHA, vitiligo, Crohn, and UC, which effector arm does the damage — and which detail distinguishes Crohn&#x27;s mechanism from UC&#x27;s?</em></p><p>AIHA — IgG vs IgM determines the death pathway. Autoantibodies against RBC antigens cause destruction two ways: IgG → mostly Fc-receptor-mediated opsonization by splenic macrophages (the Fc protrudes, macrophages grab it), though IgG can fix complement; IgM → mostly complement fixation → MAC lysis. Drug-induced AIHA works by haptenation (the drug — cephalosporins now most common, IV penicillin, methyldopa, insulin — binds the RBC → IgG → splenic opsonization). About half of AIHA is idiopathic; the rest is secondary (neoplasm, infection, RA/SLE, drugs).</p><p>AIHA: IgG → opsonization (splenic macrophages, FcγR); IgM → complement/MAC lysis. Drug-induced = haptenation → IgG → opsonization. RhoGAM context: anti-D IgG crosses placenta (HDN); ABO antibodies are IgM (don&#x27;t cross). (AIHA mechanism)</p><p>AIHA: antibodies against RBC membrane antigens (e.g. Rh) — autoantibodies (autoimmune) or alloantibodies received from a donor (alloimmune) — accelerate RBC removal/destruction.</p><p>AIHA: IgG autoantibodies → Fc-receptor-mediated opsonization in spleen/liver (can also fix complement); IgM autoantibodies → complement activation → MAC lysis (less common with IgG).</p><p><strong>Confusion:</strong> Drug-induced AIHA: haptenation of a drug to the RBC surface generates IgG → Fc-receptor-mediated opsonization by splenic macrophages. Common drugs: cephalosporins (most common now), IV penicillin, methyldopa, insulin.</p><p>VITILIGO — CTLs do the damage. A trigger makes melanocytes express altered self-antigens/DAMPs (heat-shock proteins) during apoptosis; APCs present these to CD4 and CD8 T cells. CD4 cells release pro-inflammatory cytokines and B cells make anti-melanocyte antibodies — but the main effector is the CD8+ CTL, permitted by downregulated regulatory T cells that normally restrain it. Guillain-Barré is anti-ganglioside molecular mimicry (post-C. jejuni), with γδ T cells prominent because the trigger is mucosal/GI.</p><p><strong>Confusion:</strong> Vitiligo: a trigger makes melanocytes express altered self-antigens and DAMPs (histones, ATP, uric acid, heat-shock proteins) during apoptosis; APCs present them to CD8 and CD4 T cells.</p><p>Vitiligo: B cells make anti-melanocyte antibodies and CD4 cells release pro-inflammatory cytokines, but CTLs are the MAIN effector damaging melanocytes (Tregs are downregulated, removing the brake).</p><p>Guillain-Barré mechanism: cross-reactive antibodies to a C. jejuni epitope (molecular mimicry) bind nerve cells; T cells, B cells, macrophages, and complement participate, with γδ T cells prominent. CROHN vs UC — the mechanistic split (the key INTEGRATE). Crohn disease: Th1/Th17-driven inflammation against luminal bacteria, with innate involvement — NOD2 mutations and MUC2 variants (less mucus) — overproduced IL-12/IL-23/IL-34/TNF-α, and a signature step: IL-21 converts B cells into granzyme-B-expressing (cytotoxic) B cells that damage the mucosa. Ulcerative colitis: an atypical Th2 response by non-classical NKT cells (recognize lipid on CD1) producing IL-4 and IL-13; IL-13 is cytotoxic to epithelium (apoptosis, disrupted tight junctions) and feeds back to amplify the NKT cells, while MadCAM-1 recruits leukocytes and TNF-α is elevated in blood/stool.</p><p>Crohn = Th1/Th17, NOD2/MUC2, IL-21→granzyme-B+ B cells. UC = atypical Th2 via non-classical NKT (IL-4/IL-13), IL-13 cytotoxic + self-amplifying, MadCAM-1, TNF-α elevated. (NOD2 is in both.) (Crohn vs UC mechanism)</p><p>Crohn disease: overproduced IL-12/IL-23/IL-34/TNF-α (IL-34 highest in active inflammation); IL-21 converts B cells into granzyme-B-expressing cytotoxic B cells that damage the intestinal mucosa.</p><p><strong>Confusion:</strong> Ulcerative colitis: reduced mucin, disrupted tight junctions; atypical Th2 response by non-classic NKT cells producing IL-4 and IL-13; IL-13 is cytotoxic to epithelium (apoptosis, altered tight junctions).</p><p>UC: pro-inflammatory cytokines upregulate adhesion molecules like MadCAM-1 on mucosal vessels, capturing leukocytes and promoting extravasation — perpetuating the inflammatory cycle.</p><p><strong>Key:</strong> One effector per disease: AIHA = IgG opsonization / IgM complement; vitiligo = CD8 CTL; GBS = anti-ganglioside antibody (γδ T cells); Crohn = Th1/Th17 + granzyme-B+ B cells; UC = atypical Th2/NKT (IL-4/IL-13).</p><p><strong>Confusion:</strong> Crohn vs UC mechanism: Th1/Th17 + NOD2 + IL-21→granzyme-B+ B cells = Crohn; atypical Th2 via non-classical NKT (IL-4/IL-13, IL-13 cytotoxic) = UC. The Th-bias flips between the two.</p><p><strong>Clinical pearl:</strong> AIHA isotype rule reuses the antibody-valence logic: IgG (2 arms) → opsonization; IgM (pentamer, complement-efficient) → MAC lysis. Same rule explains why ABO (IgM) doesn&#x27;t cross the placenta but anti-D (IgG) does.</p><p>ReClaude A: AIHA: IgG drives Fc-receptor opsonization by splenic macrophages while IgM fixes complement for MAC lysis. Vitiligo: CD8 CTLs are the main effector (Tregs downregulated), despite CD4 cytokines and anti-melanocyte antibodies. Crohn disease is Th1/Th17-driven with NOD2/MUC2 variants and IL-21-induced granzyme-B+ cytotoxic B cells; ulcerative colitis is an atypical Th2 response via non-classical NKT cells making IL-4/IL-13 (IL-13 cytotoxic to epithelium) with MadCAM-1 recruitment — so the Th-bias and signature cells distinguish the two IBDs.</p>",
+  "why": ""
+ },
+ "99_61": {
   "answer": "<p><em>A neonate has truncus arteriosus, hypocalcemic seizures, dysmorphic facies, and &lt;1% CD3 with normal B cells — what is it, and why are vaccine antibodies low?</em></p><p>THE PRESENTATION + LABS. A term neonate with low birth weight develops feeding difficulty, cyanosis, and a severe heart defect (truncus arteriosus), then seizures at 4 days. Dysmorphic facies (low-set ears, small &quot;fish mouth,&quot; undersized jaw). Labs: low calcium, very low PTH, severe T-cell lymphopenia (CD3+ &lt;1%), and normal CD19+ B cells. This is DiGeorge syndrome, a 22q11.2 deletion affecting structures from that region: the heart (truncus arteriosus), the parathyroids (low PTH → hypocalcemia → seizures, which is why the seizures are metabolic, not neurologic — a normal neuro exam and no response to anti-epileptics), and the thymus.</p><p>LOCALIZING THE DEFECT. CD3 marks all mature T cells, so CD3 &lt;1% with normal B cells localizes the problem to the thymus: thymic aplasia/hypoplasia prevents T-cell maturation, and because both CD4 and CD8 lineages mature in the thymus, both are reduced. The marrow is fine, so B cells are normal. (X-ray shows an absent or small thymic shadow.)</p><p>DiGeorge = 22q11.2 deletion → heart (truncus arteriosus) + parathyroid (low PTH → hypocalcemic seizures) + thymus (CD3 &lt;1%, both CD4 &amp; CD8 low). B cells normal. (DiGeorge diagnosis)</p><p>Case 4: dysmorphic facial features — low-set ears, small &quot;fish mouth,&quot; undersized lower jaw; very low/absent vaccine antibodies.</p><p>Case 4 labs: low calcium (6.2 mg/dL), very low PTH, severe T-cell lymphopenia (CD3 &lt;1%), normal naive CD19+ B cells.</p><p>Case 4 presentation: term neonate with low birth weight, feeding difficulty, cyanosis, severe heart defect (truncus arteriosus), and seizures at 4 days of age.</p><p>WHY LOW VACCINE ANTIBODIES (the recurring CD4-help thread). Even with normal B cells, antibody titers are low because there is no CD4+ T-cell help to drive B cells into plasma cells — the same &quot;no CD4 help → no antibody&quot; logic that explains why BLS-I (which keeps CD4) makes good vaccine antibody but DiGeorge does not. MANAGEMENT: thymic transplant is the definitive long-term fix (restoring T-cell development); supportive IVIg (compensating for absent CD4-dependent antibody), prophylactic antibiotics, and inactivated vaccines bridge until transplant.</p><p>Case 4 management: prophylactic antibiotics, IVIg, thymic transplant (the definitive solution for the T-cell defect), and inactivated vaccines.</p><p>Case 4 diagnosis: DiGeorge syndrome (22q11.2 deletion) — the deleted region governs heart and parathyroid development; low PTH → low calcium → seizures. Vaccine antibodies are low from lack of CD4 help.</p><p>Case 4 course: at 6 months still below normal weight and behind on milestones; neuro exam normal with no CNS inflammation — confirming the seizures were metabolic (hypocalcemia), not neurologic.</p><p><strong>Key:</strong> DiGeorge is the T-cell case: 22q11.2 deletion → cardiac (truncus arteriosus) + parathyroid (low PTH/Ca → seizures) + thymic aplasia (CD3 &lt;1%, both CD4 and CD8). B cells normal.</p><p><strong>Confusion:</strong> Low antibody despite normal B cells = no CD4 help. This is why DiGeorge has LOW vaccine titers but BLS-I (CD4 intact) has HIGH ones — the same rule, opposite outcomes.</p><p><strong>Cue:</strong> Metabolic seizures: hypocalcemia from low PTH, with a normal neuro exam and no response to anti-epileptics. The definitive fix is a thymic transplant; IVIg/antibiotics bridge to it.</p><p>ReClaude A: The neonate has DiGeorge syndrome: a 22q11.2 deletion produces the cardiac (truncus arteriosus), parathyroid (low PTH → hypocalcemia → seizures), and thymic (aplasia → CD3 &lt;1%, both CD4 and CD8 low; normal B cells) triad. Vaccine antibodies are low because, without CD4 help, normal B cells still cannot be driven to make antibody — the inverse of BLS-I, which keeps CD4 and makes antibody well. Thymic transplant is the definitive treatment, with IVIg and antibiotics as a bridge.</p>",
   "why": ""
  }
@@ -18694,6 +23053,4265 @@ const QUIZ = [
       ],
       3,
       "IPEX (Sibling A): FOXP3 mutation → peripheral Treg failure → triad of enteropathy + eczema + early T1DM in male infants. APECED (Sibling B): AIRE mutation → central thymic deletion failure → chronic candidiasis + polyendocrine autoimmunity (later onset). The presentation patterns are distinct enough to separate these genetic tolerance failures clinically. This is the Lec 21 → Lec 24 integration the prof emphasized. A — AIRE alone doesn't produce the IPEX triad in Sibling A. B — FOXP3 alone doesn't produce the APECED triad in Sibling B. C — Reversed — IPEX is FOXP3 (Sibling A), APECED is AIRE (Sibling B). E — FAS gives ALPS, BTK gives XLA — neither fits these presentations.",
+      "basic"
+     ]
+    ]
+   ]
+  ]
+ ],
+ [
+  99,
+  "Exam-Tested Objectives",
+  [
+   [
+    1,
+    "Lec 1 · Adaptive Immune Mechanisms",
+    [
+     [
+      "Which statement best captures why the immune system is described as having \"two branches\"?",
+      [
+       "Innate and adaptive defenses operate together, the innate fast and generic, the adaptive slower and pathogen-specific",
+       "Humoral and complement defenses split antibody work from phagocyte work",
+       "Cellular and molecular defenses divide the body into cells versus secreted proteins",
+       "Primary and secondary defenses separate the skin from the bloodstream",
+       "B-cell and T-cell defenses divide all immunity into two lymphocyte types"
+      ],
+      0,
+      "Why \"two branches\"? The two branches are innate (fast, non-specific, no memory) and adaptive (slower, antigen-specific, with memory). Every other split named is a real sub-division but is not the innate/adaptive axis the lecture builds on. (B) humoral vs complement is not the branch axis; humoral is part of adaptive. (C) cells vs molecules is a component split, not the branch dichotomy. (D) skin vs blood is anatomic, not the innate/adaptive distinction. (E) B vs T cells are both adaptive lymphocytes — not the two branches.",
+      "basic"
+     ],
+     [
+      "A response cannot begin until the immune system completes which first activity?",
+      [
+       "Clonal expansion of effector lymphocytes",
+       "Production of memory cells against the pathogen",
+       "Recognition that something is non-self",
+       "Class-switching of antibody isotypes",
+       "Opsonization of the pathogen by complement"
+      ],
+      2,
+      "First activity of any response. The response has two parts: recognize non-self FIRST, then respond. Everything else listed is a downstream step that only happens after recognition. (A) clonal expansion is a response step, downstream of recognition. (B) memory forms after a response, not before recognition. (D) class-switching is a late adaptive event. (E) opsonization is an effector mechanism, downstream of recognition.",
+      "basic"
+     ],
+     [
+      "The \"layering\" concept of immunity refers to which idea?",
+      [
+       "Innate immunity is layered on top of the skin",
+       "Within each type of immunity there are multiple means of protection and effector mechanisms",
+       "Antibodies are layered in five isotype classes",
+       "The lymph node is built in concentric anatomic layers",
+       "Adaptive immunity is acquired in successive vaccine layers"
+      ],
+      1,
+      "What \"layering\" means. Layering = redundancy in the means of protection: each type has physical barriers, enzymes, effector mechanisms, cells, and molecules. The distractors each anchor on a literal \"layer\" that is not the concept. (A) skin is one barrier, not the layering concept. (C) isotype classes are an antibody detail, not layering. (D) node anatomy is unrelated to the layering idea. (E) vaccine boosting is memory, not the layering concept.",
+      "basic"
+     ],
+     [
+      "Which single statement is TRUE of innate but FALSE of adaptive immunity?",
+      [
+       "It is mediated chiefly by B and T lymphocytes",
+       "It is antigen-specific and improves with each exposure",
+       "It is present at birth, always on at basal levels, and develops no memory",
+       "Its primary response takes 7–10 days to develop",
+       "It generates long-lived memory cells after first exposure"
+      ],
+      2,
+      "True of innate, false of adaptive. Innate is present at birth, constitutively active, and has no memory — all true of innate and false of adaptive. Every distractor is an adaptive property. (A) B/T lymphocyte mediation is adaptive. (B) antigen specificity and improvement-with-exposure are adaptive. (D) the 7–10-day primary lag is adaptive. (E) memory generation is adaptive.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    2,
+    "Lec 1 · Innate Versus Adaptive Immune Mechanisms",
+    [
+     [
+      "Innate immunity recognizes a gram-negative bacterium by detecting what?",
+      [
+       "LPS as a conserved pathogen-associated molecular pattern, not the specific species",
+       "The unique surface antigens that identify the exact species",
+       "Antibody already bound to the bacterial surface",
+       "MHC class I molecules displayed by the bacterium",
+       "A T-cell receptor matching the bacterial peptide"
+      ],
+      0,
+      "How innate sees a gram-negative. Innate PRRs see conserved PAMPs (LPS on gram-negatives) and report \"bacterium / non-self,\" never the species. Species-level recognition is adaptive. (B) species-specific recognition is the adaptive branch's job. (C) bound antibody drives adaptive/effector recognition, not innate PRR sensing. (D) bacteria don't display MHC I; that's a nucleated-host-cell molecule. (E) TCR matching is adaptive and peptide-specific.",
+      "basic"
+     ],
+     [
+      "The \"sniper versus grenade\" analogy contrasts the two branches on which axis?",
+      [
+       "Specificity — adaptive is precisely targeted; innate is generic and causes collateral damage",
+       "Speed — adaptive responds in minutes; innate takes days",
+       "Location — adaptive works in blood; innate works in tissue",
+       "Memory — innate remembers; adaptive does not",
+       "Cell size — adaptive cells are larger than innate cells"
+      ],
+      0,
+      "What sniper-vs-grenade contrasts. Sniper (adaptive) = precise/targeted; grenade (innate) = generic, hits everything nearby, hence immunopathology. The analogy is about specificity, not speed or location. (B) reversed — innate is the fast one. (C) both branches operate in blood and tissue; location isn't the analogy. (D) reversed — adaptive has memory, innate does not. (E) cell size is irrelevant to the analogy.",
+      "basic"
+     ],
+     [
+      "Why is adaptive immunity called \"acquired\"?",
+      [
+       "It is present at birth and acquired gradually with age",
+       "It is acquired only by vaccination, never by natural infection",
+       "It is inherited from the mother across the placenta",
+       "It is acquired from the innate system during each response",
+       "You are immunologically naive to a pathogen until your system encounters it and develops immunity"
+      ],
+      4,
+      "Why \"acquired.\" \"Acquired\" = you gain specific immunity only after encounter (infection or vaccine). It is not present at birth (that is innate) and is not simply inherited. (A) present-at-birth describes innate, not acquired. (B) acquired immunity also comes from natural infection, not only vaccines. (C) maternal placental antibody is passive transfer, not the meaning of \"acquired.\" (D) it is not handed over by the innate system.",
+      "basic"
+     ],
+     [
+      "Clonal expansion serves what purpose after a lymphocyte recognizes its antigen?",
+      [
+       "It removes self-reactive clones from the repertoire",
+       "It switches the cell from innate to adaptive function",
+       "It changes the antigen receptor to recognize a new pathogen",
+       "It multiplies the single specific cell into the large numbers needed to fight the pathogen",
+       "It converts the lymphocyte into a phagocyte"
+      ],
+      3,
+      "Purpose of clonal expansion. One naive cell that recognizes antigen proliferates into many clones (all the same specificity) because one cell is not enough. It does not change specificity or lineage. (A) negative selection (not clonal expansion) removes self-reactive clones. (B) lymphocytes do not switch into the innate branch. (C) the receptor specificity is fixed; clones keep the same receptor. (E) lymphocytes do not become phagocytes.",
+      "basic"
+     ],
+     [
+      "A naive lymphocyte that has recognized antigen can differentiate into which two fates?",
+      [
+       "Innate cells and adaptive cells",
+       "Effector cells that act now and memory cells that persist for later",
+       "Myeloid cells and erythroid cells",
+       "Granulocytes and agranulocytes",
+       "Self-reactive cells and tolerant cells"
+      ],
+      1,
+      "Two fates after activation. After clonal expansion, clones become effector cells (do the job now, terminally differentiated) and memory cells (persist, can re-activate). The other pairs are lineage or selection categories, not activation fates. (A) a lymphocyte does not become an innate cell. (C) myeloid/erythroid are separate hematopoietic lineages. (D) granulocyte status is set at the progenitor stage, not by activation. (E) tolerance is a selection outcome, not an effector fate.",
+      "basic"
+     ],
+     [
+      "A virus infects a host cell. Which combination correctly assigns the jobs of the two adaptive arms?",
+      [
+       "Humoral antibody neutralizes virus while it is extracellular; cell-mediated immunity kills the infected host cell once the virus is inside",
+       "Humoral immunity kills the infected cell; cell-mediated immunity neutralizes free virus",
+       "Both arms kill the virus directly inside the cell without harming the host cell",
+       "Antibodies penetrate the cell to destroy the virus in the cytoplasm",
+       "Cytotoxic T cells engulf and phagocytose the free virus particles"
+      ],
+      0,
+      "Integrate humoral vs cell-mediated roles on a virus. Antibody works on extracellular virus (the hallway); once the virus is intracellular, CTLs kill the infected host cell (not the virus directly). This integrates the room/hallway model with the humoral/cell-mediated split. (B) reversed roles. (C) CTLs kill the host cell; they do not spare it and kill virus inside. (D) antibodies cannot penetrate the cell membrane. (E) CTLs are not phagocytes.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    3,
+    "Lec 1 · Innate And Adaptive Interaction",
+    [
+     [
+      "Which is an example of the ADAPTIVE branch regulating the INNATE branch?",
+      [
+       "A pattern-recognition receptor detects LPS on a bacterium",
+       "Antibody bound to a pathogen provides \"handles\" that let phagocytes engulf it more efficiently",
+       "Mast cells in tissue release histamine after injury",
+       "The skin and mucus block pathogen entry",
+       "A fever slows pathogen replication"
+      ],
+      1,
+      "Adaptive → innate regulation example. Adaptive→innate: antibody opsonization gives innate phagocytes grab-handles, and T-cell cytokines push phagocytes to work harder. The distractors are all pure-innate events. (A) PRR sensing of LPS is pure innate recognition. (C) mast-cell histamine release is innate. (D) skin/mucus barriers are innate. (E) fever is an innate inflammatory effect.",
+      "basic"
+     ],
+     [
+      "A patient feels feverish, achy, and chilled during the flu. What is actually producing those symptoms?",
+      [
+       "Loss of adaptive memory cells",
+       "Direct viral destruction of muscle and skin",
+       "The antibiotics taken to treat the flu",
+       "The patient's own immune mediators (cytokines) — immunopathology, not the virus directly",
+       "Failure of the innate barriers"
+      ],
+      3,
+      "Source of flu malaise. Body aches, fever, and chills are the host's cytokine response — immunopathology. Davis stresses \"that's not the bug, that's your immune system.\" (A) memory loss does not produce acute symptoms. (B) the virus is not directly shredding tissue to cause the aches. (C) antibiotics do not treat a virus and are not the cause. (E) barrier failure does not explain systemic malaise.",
+      "basic"
+     ],
+     [
+      "A child gets a deep splinter: swelling appears within hours then resolves, the splinter clears, and a second splinter two years later clears noticeably faster. Which sequence explains this?",
+      [
+       "The second response is faster because the first depleted all the pathogen permanently",
+       "Adaptive memory drove the first rapid swelling, then innate immunity formed memory for next time",
+       "Both responses are purely innate; the faster second response reflects thicker skin",
+       "Innate inflammation first (hours), primary adaptive clearance over ~7–10 days, then memory speeds re-exposure",
+       "Complement alone handled both encounters with no lymphocyte involvement"
+      ],
+      3,
+      "Integrate timing + memory across two encounters. This combines innate-first timing (hours), the 7–10-day primary adaptive response, and the faster 2–3-day memory recall on re-exposure — the lecture's core architecture in one scenario. (A) clearing one splinter does not give permanent pathogen-free status; memory explains the speed. (B) reversed — innate (not adaptive memory) drives the first rapid swelling; innate has no memory. (C) a faster specific recall response is adaptive memory, not thicker skin. (E) lymphocytes/memory are required for the faster second response.",
+      "basic"
+     ],
+     [
+      "On a first-ever encounter with a pathogen, which response acts first and why?",
+      [
+       "Innate, because it carries antigen-specific memory cells",
+       "Adaptive, because it is more specific and therefore faster",
+       "Innate, because adaptive needs 7–10 days to mount a primary response",
+       "Adaptive, because complement activates B cells immediately",
+       "They begin simultaneously because the branches are independent"
+      ],
+      2,
+      "First responder on a naive encounter. On a naive encounter innate always responds first; the adaptive primary response lags 7–10 days. Innate buys time. (On re-exposure, memory can lead.) (A) innate has no memory cells. (B) specificity does not make adaptive faster on first encounter. (D) complement lowers the B-cell threshold but does not make adaptive the first responder. (E) the branches are coupled and innate leads first.",
+      "basic"
+     ],
+     [
+      "Which is an example of the INNATE branch regulating the ADAPTIVE branch?",
+      [
+       "Antibodies coat a pathogen to give phagocytes handles to grab",
+       "T-cell cytokines order macrophages to phagocytose more aggressively",
+       "Complement proteins and innate-cell cytokines lower the B-cell activation threshold and guide differentiation",
+       "Cytotoxic T cells kill virally infected host cells",
+       "Plasma cells secrete antibody into the mucosa"
+      ],
+      2,
+      "Innate → adaptive regulation example. Innate→adaptive: complement activates B cells / lowers their threshold, and innate cytokines steer which antibody and T-cell subset to make. The distractors are all adaptive→innate or pure-adaptive effector events. (A) antibody opsonization is adaptive→innate. (B) T-cell cytokines driving macrophages is adaptive→innate. (D) CTL killing is a pure adaptive effector function. (E) plasma-cell antibody secretion is a pure adaptive function.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    4,
+    "Lec 2 · Action Of Lysozyme",
+    [
+     [
+      "For the exam, what is the single defining mechanism of action of defensins?",
+      [
+       "They recruit factor I to cleave surface-bound C3b",
+       "They hydrolyze the bond between NAM and NAG in peptidoglycan",
+       "They sequester iron so bacteria cannot use it enzymatically",
+       "They opsonize microbes for phagocyte uptake via CR1",
+       "They create pores in microbial membranes, leading to osmotic lysis"
+      ],
+      4,
+      "Defensin mechanism (exam-flagged). Gregg flagged defensins explicitly: they create pores in membranes; physiologic fluid shifts then lyse the cell. The distractors are other barriers/regulators (lysozyme, lactoferrin, C3b, factor I). (A) factor-I recruitment is MCP/complement regulation, unrelated to defensins. (B) that is lysozyme, not defensins. (C) that is lactoferrin/transferrin iron sequestration. (D) opsonization is a complement (C3b/CR1) function, not a defensin action.",
+      "basic"
+     ],
+     [
+      "Lysozyme is most effective against which organisms, and why?",
+      [
+       "Fungi, because it hydrolyzes β-glucan in the fungal wall",
+       "Enveloped viruses, because it dissolves the lipid envelope",
+       "Gram-negative bacteria only, because the outer membrane concentrates the enzyme",
+       "Gram-positive bacteria, because their thick exposed peptidoglycan is cleaved at the NAM–NAG bond",
+       "Mycobacteria, because it digests mycolic acids"
+      ],
+      3,
+      "Lysozyme target + mechanism. Lysozyme hydrolyzes the β(1–4) NAM–NAG linkage of peptidoglycan; gram-positives have thick, exposed peptidoglycan and are most susceptible. It does not act on viral envelopes, fungal glucan, or mycolic acid. (A) β-glucan is fungal; lysozyme does not act on it. (B) lysozyme cleaves peptidoglycan, not lipid envelopes. (C) gram-negatives have peptidoglycan too but it is shielded by an outer membrane — less susceptible, not more. (E) mycolic acids are not a lysozyme substrate.",
+      "basic"
+     ],
+     [
+      "Several innate killing mechanisms (defensins, cathelicidins/LL-37, fatty acids, the MAC) share a common final principle. What is it?",
+      [
+       "They all enzymatically digest peptidoglycan",
+       "They disrupt or perforate the membrane, and osmotic fluid shifts complete the lysis “for free”",
+       "They all require ATP-dependent active transport to kill",
+       "They all opsonize the microbe for phagocytosis",
+       "They all act only after antibody binds the surface"
+      ],
+      1,
+      "Shared pore/membrane-disruption principle. Gregg’s recurring point: innate killing favors making a pore or distorting the membrane, then letting physiologic osmosis lyse the cell — low energy cost. Only lysozyme is enzymatic; none of these require ATP, opsonization, or antibody. (A) peptidoglycan digestion is specifically lysozyme, not the shared principle. (C) the point is that pore-formation is low-energy, not ATP-dependent. (D) opsonization is a different (complement) function. (E) these innate mechanisms act without antibody.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    5,
+    "Lec 2 · Opsonization By Complement",
+    [
+     [
+      "A patient has recurrent Neisseria meningitidis infections. Which complement defect is most likely?",
+      [
+       "A C1 inhibitor deficiency causing angioedema",
+       "A C3 deficiency abolishing all opsonization",
+       "A factor D deficiency blocking the alternative pathway",
+       "A DAF deficiency causing host-cell lysis",
+       "A terminal-component (C5–C9) defect crippling the membrane attack complex"
+      ],
+      4,
+      "Recurrent Neisseria → which defect. The MAC is the primary mechanism for killing Neisseria, so terminal-component (C5–C9) defects produce recurrent meningococcal disease. C3 loss gives broad encapsulated-bacteria problems; DAF loss causes PNH; C1-INH loss causes angioedema. (A) C1-INH deficiency causes hereditary angioedema, unrelated to Neisseria. (B) C3 deficiency gives broad encapsulated-organism susceptibility, not the Neisseria signature. (C) factor D loss impairs the alternative pathway broadly, not specifically the MAC-dependent Neisseria kill. (D) DAF deficiency causes host RBC lysis (PNH), not Neisseria infection.",
+      "basic"
+     ],
+     [
+      "C3a and C5a are termed anaphylatoxins because, when produced systemically, they:",
+      [
+       "Activate mast cells → histamine → vasodilation, increased permeability, and adhesion-molecule upregulation",
+       "Insert directly into endothelial membranes to lyse them",
+       "Cleave fibrinogen to trigger disseminated coagulation",
+       "Bind antibody Fc to form immune complexes",
+       "Suppress mast cells to prevent allergic responses"
+      ],
+      0,
+      "Why C3a/C5a are anaphylatoxins. Systemic C3a/C5a activate mast cells, releasing histamine and producing the three vascular effects of shock — the same triad TNF-α produces in septic shock. They do not lyse endothelium directly or act on coagulation/antibody. (B) they act via mast cells, not by directly lysing endothelium. (C) that is the coagulation cascade, not anaphylatoxin action. (D) Fc/immune-complex binding is an antibody function. (E) they activate, not suppress, mast cells.",
+      "basic"
+     ],
+     [
+      "A child with an encapsulated organism in the blood clears it poorly. Labs show normal neutrophil counts but the bacteria resist phagocytosis until serum is added. Which sequence best explains the rescue?",
+      [
+       "Defensins from serum form pores that kill the organism independent of phagocytes",
+       "Lysozyme in serum digests the capsule, exposing the cell for direct uptake",
+       "C3a inserts pores in the capsule, lysing the organism before uptake",
+       "Antibody alone agglutinates the organism, requiring no complement",
+       "Alternative-pathway C3b coats the capsule (opsonization); phagocyte CR1 then binds C3b and engulfs the organism"
+      ],
+      4,
+      "Capsule + serum rescue = opsonization integration. The capsule hides the surface from phagocytes; adding serum lets the alternative pathway deposit C3b, and CR1 on the normal-count neutrophils binds it for uptake. This integrates capsule evasion + opsonization + the receptor step. Distractors misassign lysozyme, C3a, antibody, or defensins. (A) serum defensins are not the rescue mechanism for capsule-masked organisms. (B) lysozyme does not digest polysaccharide capsules. (C) C3a is a chemoattractant/anaphylatoxin, not a pore-former. (D) encapsulated-organism clearance here is complement-dependent, not antibody-alone.",
+      "basic"
+     ],
+     [
+      "Which trio correctly names the three major functions of complement activation?",
+      [
+       "Neutralization, agglutination, and precipitation",
+       "Detection, signaling, and memory",
+       "Lysis, opsonization, and inflammation",
+       "Chemotaxis, phagocytosis, and antigen presentation",
+       "Coagulation, fibrinolysis, and kinin generation"
+      ],
+      2,
+      "Three complement functions. Complement does lysis (MAC), opsonization (C3b/CR1), and inflammation (C3a/C5a). The distractors are antibody functions, adaptive features, or other cascades. (A) neutralization/agglutination/precipitation are antibody functions. (B) detection/memory are not complement functions (complement does not \"detect\"). (D) a mix that includes an adaptive function (antigen presentation). (E) those are the coagulation/kinin systems, not complement’s three functions.",
+      "basic"
+     ],
+     [
+      "Two patients present in shock: one after a bee sting with wheezing and flushing, one with gram-negative bacteremia. Both have vasodilation, capillary leak, and hypotension. What unifies the mechanisms?",
+      [
+       "Both converge on the same three vascular effects — anaphylatoxins (C3a/C5a)→mast cells in one, TNF-α in the other",
+       "Both are caused directly by the membrane attack complex lysing endothelium",
+       "Both are antibody–antigen precipitation reactions in vessel walls",
+       "Both result from factor I deficiency depleting C3",
+       "Both are PNH-type GPI-anchor defects"
+      ],
+      0,
+      "Anaphylactic vs septic shock — shared physiology. Anaphylactic shock (C3a/C5a → mast-cell histamine) and septic shock (LPS → TNF-α) act through the SAME triad: vasodilation, increased permeability, adhesion-molecule upregulation. Different trigger, identical hemodynamics. The distractors invoke unrelated lesions. (B) the MAC lyses target microbes, it is not the cause of the systemic vascular collapse here. (C) this is not an immune-complex precipitation phenomenon. (D) factor I deficiency is unrelated to acute anaphylactic/septic shock. (E) PNH is RBC lysis, not the shared shock mechanism.",
+      "basic"
+     ],
+     [
+      "How does C3b-mediated opsonization actually lead to clearance of a bacterium?",
+      [
+       "C3b recruits CD59 to the bacterial surface",
+       "C3b forms a transmembrane pore that lyses the bacterium directly",
+       "C3b cleaves the bacterial peptidoglycan like lysozyme",
+       "C3b neutralizes bacterial toxins in solution",
+       "C3b on the surface is bound by phagocyte complement receptor 1 (CR1), driving uptake"
+      ],
+      4,
+      "Mechanism of opsonization. Opsonization works because phagocyte CR1 binds surface C3b, giving the cell a handle for uptake. C3b is not pore-forming (that is the MAC), not enzymatic, and CD59 is a host regulator. (A) CD59 is a host-cell regulator that blocks the MAC, not recruited by C3b on bacteria. (B) the pore/lysis function is the MAC (C5b–C9), not C3b. (C) peptidoglycan cleavage is lysozyme. (D) toxin neutralization is an antibody role.",
+      "basic"
+     ],
+     [
+      "Place the membrane attack complex steps in order after the C5 convertase acts.",
+      [
+       "C5b binds C3b, then factor B, then factor D to form the pore",
+       "C5a binds C6, then C7, then C8, then C9 cleaves the membrane enzymatically",
+       "C9 inserts first, recruiting C8, C7, C6, and finally C5b",
+       "C5b binds C6, then C7 (inserts into membrane), then C8, then C9 polymerizes into a pore",
+       "C6 and C7 form the pore, and C8–C9 regulate it"
+      ],
+      3,
+      "MAC assembly order. C5b→C6→C7 (membrane insertion)→C8→C9 (polymerizes into the lytic pore). C5a is the soluble anaphylatoxin, not a MAC component; the other options reverse the order or import convertase parts. (A) that describes convertase assembly, not the MAC. (B) C5b (not C5a) is the MAC seed, and C9 forms a pore rather than cleaving enzymatically. (C) assembly is C5b-first, not C9-first. (E) C9 is the pore-former; C6/C7 do not form the pore and C8/C9 do not \"regulate\" it.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    6,
+    "Lec 2 · Complement Deficiency",
+    [
+     [
+      "On a host cell surface, how do DAF and MCP differ in how they regulate the C3 convertase?",
+      [
+       "DAF cleaves C5; MCP cleaves C3",
+       "DAF recruits factor I to cleave C3b; MCP dissociates Bb",
+       "Both block C9 polymerization at the MAC step",
+       "DAF dissociates Bb from the convertase; MCP recruits factor I to cleave C3b",
+       "Both are bacterial proteins that mimic host regulators"
+      ],
+      3,
+      "DAF vs MCP mechanism. DAF (decay-accelerating factor) dissociates Bb, decaying the convertase; MCP (membrane cofactor protein) is a cofactor that recruits factor I to cleave C3b. The options reverse them, jump to the MAC, or misassign enzymatic roles. (A) neither cleaves C5/C3 itself; factor I is the protease. (B) reversed — DAF dissociates Bb; MCP is the factor-I cofactor. (C) C9 blockade is CD59/HRF at the MAC, not DAF/MCP at the C3 convertase. (E) DAF and MCP are host proteins, not bacterial mimics.",
+      "basic"
+     ],
+     [
+      "Why does factor H/I regulation of C3b also protect against exhausting complement?",
+      [
+       "They increase hepatic C3 synthesis to keep pace with demand",
+       "By cleaving C3b to iC3b they cap convertase amplification, spreading limited C3 across many microbes",
+       "They convert C3a back into intact C3 for reuse",
+       "They block C5 cleavage so C3 is never consumed",
+       "They sequester factor B so no convertase forms anywhere"
+      ],
+      1,
+      "Factor H/I and C3 economy. Factor H binds C3b and lets factor I cleave it to iC3b, which can no longer bind factor B — limiting how much convertase forms per cell so C3 is not depleted on a few targets. The distractors invent synthesis, recycling, or total shutdown. (A) regulation limits consumption; it does not boost synthesis. (C) C3a is not recycled into C3. (D) they act at C3b, not by blocking C5 cleavage. (E) they throttle, not abolish, convertase formation.",
+      "basic"
+     ],
+     [
+      "A patient has chronic complement-mediated lysis of red cells from absent surface DAF and CD59. What is the underlying defect?",
+      [
+       "A factor D deficiency",
+       "A point mutation in C9 preventing pore formation",
+       "A GPI-anchor synthesis defect that prevents expression of these regulators (PNH)",
+       "An anti-C3b autoantibody",
+       "A C1-esterase inhibitor deficiency"
+      ],
+      2,
+      "Absent DAF/CD59 on RBCs → cause. PNH is a GPI-anchor (PIGA) defect: without the anchor, DAF and CD59 cannot sit on the RBC surface, so complement lyses the cells. The distractors are unrelated complement lesions. (A) factor D deficiency impairs the alternative pathway, not regulator anchoring. (B) a C9 defect would impair the MAC broadly, not strip regulators off host cells. (D) an anti-C3b antibody is not the described anchor defect. (E) C1-INH deficiency causes angioedema, not RBC lysis from missing DAF/CD59.",
+      "basic"
+     ],
+     [
+      "A patient with factor I deficiency has depleted C3 AND a blunted antibody response. Why the antibody effect?",
+      [
+       "Factor I transports antigen into lymph nodes",
+       "Factor I is required for class-switch recombination in B cells",
+       "Factor I generates the C3b cleavage product C3d, which lowers the B-cell activation threshold",
+       "Factor I is the B-cell receptor signaling kinase",
+       "Factor I directly secretes immunoglobulin"
+      ],
+      2,
+      "Factor I deficiency → antibody defect. Factor I cleaves C3b toward iC3b and then C3d; C3d engages CR2 on B cells to lower their activation threshold (innate→adaptive help). Without it, B-cell/antibody responses suffer — hence encapsulated-organism susceptibility. The distractors invent unrelated B-cell roles. (A) it does not traffic antigen. (B) factor I is a complement protease, not part of class switching. (D) it is not a BCR signaling kinase. (E) plasma cells, not factor I, secrete antibody.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    7,
+    "Lec 3 · Interferon Response",
+    [
+     [
+      "Put the TLR4 signaling cascade in correct order.",
+      [
+       "NF-κB → MyD88 → IκB → IKK → cytokine transcription",
+       "MyD88 → IKK activation → IκB phosphorylation → NF-κB release → cytokine transcription",
+       "IκB → MyD88 → NF-κB → IKK → cytokine transcription",
+       "MyD88 → NF-κB phosphorylation → IKK release → IκB transcription",
+       "CD14 → NF-κB → MyD88 → IKK → IκB degradation"
+      ],
+      1,
+      "NF-κB cascade order. TLR4 ligation recruits MyD88, which activates IKK; IKK phosphorylates the inhibitor IκB, freeing NF-κB to enter the nucleus and drive cytokine genes. The distractors scramble the order. (A) NF-κB is the endpoint effector, not the first step. (C) IκB is the inhibitor that must be phosphorylated, not the initiator. (D) IκB (not NF-κB) is phosphorylated; the products are cytokines, not IκB. (E) CD14 helps present LPS but the intracellular order shown is wrong.",
+      "basic"
+     ],
+     [
+      "How do LBP, CD14, and MD2 contribute to TLR4 recognition of LPS?",
+      [
+       "They are the intracellular kinases of the MyD88 cascade",
+       "LBP delivers LPS to CD14; MD2 stabilizes LPS on the TLR4 dimer to trigger signaling",
+       "They are the three cytokines released after TLR4 signaling",
+       "They form the inflammasome that activates caspase-1",
+       "They are the components of the membrane attack complex"
+      ],
+      1,
+      "TLR4 accessory molecules. TLR4 does not bind LPS directly: LBP hands LPS to CD14, and MD2 stabilizes LPS on the TLR4 homodimer to change the TIR domain and recruit MyD88. The distractors reassign them to unrelated complexes. (A) those are accessory/recognition molecules, not the IKK cascade kinases. (C) they are not cytokines. (D) the inflammasome is NLRP3/caspase-1, unrelated to these. (E) the MAC is C5b-C9, not LBP/CD14/MD2.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    8,
+    "Lec 3 · Role Of Il-6 During Inflammation",
+    [
+     [
+      "Which cytokine drives the acute-phase response, and what is one consequence?",
+      [
+       "IL-12 → liver releases histamine",
+       "IL-8 → hepatocytes make the membrane attack complex",
+       "IL-6 → hepatocytes make pentraxins (CRP, SAA) and MBL while albumin falls",
+       "TNF-α → liver stops making all complement",
+       "IL-2 → hepatocytes secrete perforin"
+      ],
+      2,
+      "Acute-phase driver + output. IL-6 is the principal driver: hepatocytes upregulate acute-phase proteins (CRP, SAA, MBL, more complement) and reduce albumin. The distractors misassign cytokines or invent hepatic products. (A) histamine is mast-cell, not hepatic. (B) IL-8 is a neutrophil chemokine; the MAC is not a hepatic acute-phase product. (D) the acute phase increases complement production, not stops it. (E) perforin is an NK/CTL product, not hepatic.",
+      "basic"
+     ],
+     [
+      "In the lectin pathway, what convertase is generated, and how?",
+      [
+       "MBL cleaves C5 first to start the MAC",
+       "MBL binds LPS → forms C3bBb directly",
+       "MBL+MASP binds mannose → cleaves C4 (C4b attaches) and C2 → C4b2a, the classical C3 convertase",
+       "MBL binds antibody Fc → activates C1",
+       "MBL forms C3bBb3b, the alternative C5 convertase"
+      ],
+      2,
+      "Lectin-pathway convertase. MBL with MASP binds surface mannose and cleaves C4 and C2, assembling C4b2a - the same C3 convertase the classical pathway makes. The distractors confuse it with the alternative pathway or antibody-dependent C1. (A) it makes a C3 convertase first, not cleave C5. (B) C3bBb is the alternative convertase; lectin makes C4b2a. (D) antibody Fc → C1 is the antibody-triggered classical route, not MBL. (E) C3bBb3b is the alternative C5 convertase.",
+      "basic"
+     ],
+     [
+      "C-reactive protein contributes to complement activation by:",
+      [
+       "Cleaving C3 directly into C3a and C3b",
+       "Binding mannose to start the lectin pathway",
+       "Forming pores like the MAC",
+       "Dissociating the C3 convertase like DAF",
+       "Binding phosphocholine on pathogens, then recruiting C1 to start the classical pathway"
+      ],
+      4,
+      "CRP → classical pathway. CRP binds phosphocholine head groups on pathogens and recruits C1 (C1q/r/s), launching the classical pathway to C4b2a. Mannose-binding is MBL/lectin; the others are MAC/DAF functions. (A) CRP does not directly cleave C3. (B) mannose-binding is MBL (lectin), not CRP. (C) CRP does not form pores. (D) dissociating the convertase is DAF.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    9,
+    "Lec 3 · Tlr4-Mediated Signaling",
+    [
+     [
+      "Put the steps of leukocyte trafficking into tissue in order.",
+      [
+       "Selectin-mediated rolling → integrin-mediated firm arrest → chemokine signaling → diapedesis",
+       "Diapedesis → rolling → arrest → chemotaxis",
+       "Integrin arrest → selectin rolling → diapedesis → chemokine",
+       "Chemokine → diapedesis → rolling → arrest",
+       "Rolling → diapedesis → arrest → chemokine"
+      ],
+      0,
+      "Trafficking sequence. Selectins mediate rolling, integrins (after chemokine activation) mediate firm arrest, and the cell then transmigrates (diapedesis). The distractors scramble the order. (B) diapedesis is last, not first. (C) rolling (selectins) precedes arrest (integrins). (D) chemokine/diapedesis cannot precede rolling. (E) arrest precedes diapedesis, not the reverse.",
+      "basic"
+     ],
+     [
+      "Which integrin/ligand pair is the most board-relevant for firm leukocyte arrest (and is also the rhinovirus receptor)?",
+      [
+       "MD2 binding LPS",
+       "L-selectin binding GlyCAM-1",
+       "CR1 binding C3b",
+       "LFA-1 (on leukocytes) binding ICAM-1 (on endothelium)",
+       "NLRP3 binding peptidoglycan"
+      ],
+      3,
+      "LFA-1/ICAM-1 pair. LFA-1-ICAM-1 is the integrin/ligand pair for firm arrest and the one Gregg flags for boards; ICAM-1 is also the rhinovirus receptor. The distractors are a selectin pair or unrelated receptors. (A) MD2/LPS is TLR4 recognition. (B) L-selectin/GlyCAM-1 mediates rolling, not firm arrest. (C) CR1/C3b is complement opsonization, not adhesion. (E) NLRP3/peptidoglycan is inflammasome sensing.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    10,
+    "Lec 4 · Nk-Macrophage Positive Feedback",
+    [
+     [
+      "What is the immediate purpose of the respiratory burst (ROS/RNS) in the early phagosome?",
+      [
+       "To damage microbial nucleic acid and paralyze replication before digestion",
+       "To acidify the phagosome for acid hydrolases",
+       "To opsonize the microbe with C3b",
+       "To fuse the lysosome with the phagosome",
+       "To present microbial peptides on MHC class I"
+      ],
+      0,
+      "Purpose of the burst. The early ROS/RNS burst damages nucleic acid to stop replication — paralyze first so the microbe can’t out-replicate the kill — then digestion follows. The distractors are later or unrelated steps. (B) acidification is the vacuolar ATPase step, just before lysosome fusion. (C) opsonization happens before uptake (complement), not in the burst. (D) fusion is the next stage; the burst precedes it. (E) antigen presentation is a later, separate function.",
+      "basic"
+     ],
+     [
+      "Order the early respiratory-burst chemistry correctly.",
+      [
+       "NADPH oxidase → superoxide (O2−); SOD → H2O2; catalase → water, and MPO → HOCl",
+       "Catalase → superoxide; SOD → HOCl; NADPH oxidase → water",
+       "MPO → superoxide; NADPH oxidase → H2O2; SOD → HOCl",
+       "iNOS → superoxide; catalase → NO; SOD → HOCl",
+       "SOD → superoxide; MPO → H2O2; NADPH oxidase → water"
+      ],
+      0,
+      "ROS enzyme sequence. NADPH (phagocyte) oxidase makes superoxide; SOD converts it to H2O2; catalase detoxifies H2O2 to water and MPO converts H2O2 to hypochlorous acid; iNOS separately makes NO. The distractors scramble enzymes/products. (B) catalase detoxifies H2O2; it does not make superoxide. (C) NADPH oxidase makes superoxide, not MPO. (D) iNOS makes NO (RNS), not superoxide. (E) SOD acts on superoxide; it does not generate it.",
+      "basic"
+     ],
+     [
+      "What does the vacuolar ATPase do, and why is it critical?",
+      [
+       "It exports antigen to the surface for MHC display",
+       "It generates superoxide for the respiratory burst",
+       "It pumps H+ into the phagosome to acidify it, enabling the acid hydrolases that digest the microbe",
+       "It synthesizes nitric oxide from arginine",
+       "It crosslinks chromatin to form NETs"
+      ],
+      2,
+      "Vacuolar ATPase role. The vacuolar ATPase acidifies the phagosome by importing H+, which is required for the low-pH acid hydrolases to work — the step M. tuberculosis blocks. The distractors are other enzymes/processes. (A) it does not handle antigen presentation. (B) superoxide is NADPH oxidase. (D) NO synthesis is iNOS. (E) NET formation is a separate neutrophil process.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    11,
+    "Lec 4 · Neutrophil Granules",
+    [
+     [
+      "On neutrophil activation, which granule is released first, and what does it provide?",
+      [
+       "No granules are released until the cell dies",
+       "Azurophilic first — it dumps acid hydrolases into the environment",
+       "Gelatinase first — it forms NETs",
+       "Specific granules first — they release perforin",
+       "Secretory/ficolin first — it supplies selectin ligands and integrins for adhesion/extravasation"
+      ],
+      4,
+      "First granule released + function. Release reverses development: at the highest calcium (activation) the secretory/ficolin granule fuses first, placing selectin ligands and integrins on the membrane for adhesion/extravasation. Azurophilic fuse last (with the phagolysosome). The distractors misorder or misassign. (A) granules release on activation, not only at death. (B) azurophilic are released last, into the phagolysosome (not the environment) to protect host tissue. (C) NETs are chromatin-based, not a single first granule. (D) perforin is an NK product, not a neutrophil granule.",
+      "basic"
+     ],
+     [
+      "Why can band (immature) neutrophils not migrate into tissue?",
+      [
+       "They lack a nucleus and cannot signal",
+       "They lack azurophilic granules and so cannot kill",
+       "They have no chemokine receptors at any stage",
+       "They cannot perform the respiratory burst",
+       "They stop at the gelatinase stage and lack secretory/ficolin granules carrying selectin ligands and integrins"
+      ],
+      4,
+      "Band-neutrophil migration defect. Band neutrophils halt at gelatinase and never make the secretory/ficolin granule, whose membrane carries selectin ligands and integrins needed to roll and arrest — so they can’t extravasate (they can still phagocytose/kill). The distractors misattribute the defect. (A) they have a (band-shaped) nucleus. (B) they have azurophilic granules (made first) and can kill — the defect is migration. (C) chemokine receptors come with specific granules; the migration block is the missing adhesion molecules. (D) they can perform the burst; the problem is trafficking.",
+      "basic"
+     ],
+     [
+      "Place the neutrophil granules in their order of appearance during development.",
+      [
+       "Gelatinase → secretory/ficolin → azurophilic → specific",
+       "Secretory/ficolin → gelatinase → specific → azurophilic",
+       "Specific → azurophilic → secretory/ficolin → gelatinase",
+       "Azurophilic (primary) → specific (secondary) → gelatinase (tertiary) → secretory/ficolin",
+       "Azurophilic → secretory/ficolin → specific → gelatinase"
+      ],
+      3,
+      "Granule development order. Granules appear azurophilic → specific → gelatinase → secretory/ficolin during development; release on activation runs the reverse, calcium-gated. The distractors reverse or scramble. (A) scrambled order. (B) that is the release order, not the developmental order. (C) scrambled — azurophilic are first. (E) secretory/ficolin are last to appear, not second.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    12,
+    "Lec 4 · Nk Cell Immunosurveillance",
+    [
+     [
+      "Which marker profile identifies a natural killer cell?",
+      [
+       "CD56+ / CD16+ / CD3−",
+       "CD3+ / CD4+ / CD8−",
+       "CD19+ / CD20+ / surface IgM",
+       "CD14+ / MHC class II+",
+       "CD56− / CD16− / CD3+"
+      ],
+      0,
+      "NK marker profile. NK cells are CD56+, CD16+ (FcγR, enabling ADCC), and CD3− (no TCR). The distractors are T-cell, B-cell, or monocyte profiles. (B) CD3+/CD4+ is a helper T cell. (C) CD19/CD20/IgM is a B cell. (D) CD14/MHC II is a monocyte/macrophage. (E) CD3+ would be a T cell, not an NK cell.",
+      "basic"
+     ],
+     [
+      "In NK missing-self surveillance, what does MHC class I on a target cell signal?",
+      [
+       "An opsonization signal recognized by CR1",
+       "An activating signal — MHC-I directly triggers perforin release",
+       "A chemokine signal that recruits neutrophils",
+       "An inhibitory signal — the NK cell does NOT kill; losing MHC-I removes the brake and triggers killing",
+       "A signal that converts the NK cell into a T cell"
+      ],
+      3,
+      "MHC-I = inhibitory signal. MHC class I engages the NK inhibitory receptor (a “don’t kill” brake). Virus/tumor cells downregulate MHC-I to evade CD8 T cells, removing the brake so the activating signal wins — missing-self killing via perforin/granzyme. The distractors invert or invent the logic. (A) CR1/opsonization is unrelated to NK inhibition. (B) MHC-I is inhibitory, not activating. (C) it is not a chemokine signal. (E) NK cells do not convert into T cells.",
+      "basic"
+     ],
+     [
+      "A macrophage that has phagocytosed a catalase-positive Staphylococcus struggles to kill it. An NK cell then arrives. Which chain best restores killing?",
+      [
+       "The NK cell opsonizes the bacterium with C3b for the macrophage",
+       "Macrophage IL-12 activates the NK cell → NK releases IFN-γ → IFN-γ ramps macrophage ROS, overwhelming bacterial catalase/SOD",
+       "The NK cell forms a MAC directly on the Staphylococcus",
+       "IFN-γ acidifies the phagosome so acid hydrolases can act",
+       "The macrophage presents antigen so the NK cell makes antibody"
+      ],
+      1,
+      "Macrophage–NK loop vs catalase+ bug. Staph’s catalase/SOD detoxify ROS, blunting the burst. The fix is the macrophage–NK loop: macrophage IL-12 → NK IFN-γ → boosted ROS that overwhelms the bacterial enzymes. This integrates evasion + the loop. The distractors misassign opsonization, MAC, acidification, or antibody. (A) NK cells don’t opsonize with C3b. (C) the MAC is complement-mediated, not NK-mediated. (D) IFN-γ boosts ROS; acidification is the vacuolar ATPase’s job. (E) NK cells don’t make antibody.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    13,
+    "Lec 5 · Compartmentalization Of T Cells",
+    [
+     [
+      "Which function belongs to the RED pulp of the spleen?",
+      [
+       "Housing the follicular B cells that mount antibody responses",
+       "Filtering blood and removing aged red cells, plus serving as a blood reserve",
+       "Holding the periarteriolar T cells (PALS)",
+       "Generating marginal-zone B-cell IgM responses",
+       "Producing naive T-cell receptors"
+      ],
+      1,
+      "Red pulp function. Red pulp filters blood, removes ~120-day-old red cells via macrophages, and stores a blood reserve. The immune compartments (follicle, PALS, marginal zone) are all white pulp. The distractors describe white-pulp roles. (A) follicular B cells are white pulp. (C) PALS T cells are white pulp. (D) marginal-zone B cells are white pulp. (E) T-cell receptors are generated in the thymus.",
+      "basic"
+     ],
+     [
+      "In splenic white pulp, where are B cells and T cells located?",
+      [
+       "B cells in follicles; T cells in the PALS (periarteriolar lymphatic sheath)",
+       "B cells in the PALS; T cells in follicles",
+       "Both intermixed in the red pulp",
+       "B cells in the marginal zone only; T cells in the medulla",
+       "Both in the germinal-center mantle exclusively"
+      ],
+      0,
+      "White-pulp compartments. In white pulp, follicles are the B-cell zone and the PALS is the T-cell zone — the same B/T separation seen in the lymph node. The distractors swap the zones or place lymphocytes in the red pulp. (B) reversed — follicles are B, PALS is T. (C) lymphocytes are in white pulp, not red. (D) medulla is a lymph-node term, not splenic white pulp. (E) not exclusively the mantle — follicle vs PALS is the split.",
+      "basic"
+     ],
+     [
+      "A blood-borne carbohydrate antigen triggers an antibody response within a couple of hours. Which cell is responsible?",
+      [
+       "Marginal-zone B cell producing rapid IgM",
+       "Follicular B cell producing high-affinity IgG",
+       "Thymic T cell producing IgM",
+       "Red-pulp macrophage producing antibody",
+       "Plasmacytoid dendritic cell producing IgA"
+      ],
+      0,
+      "Emergency splenic responder. Marginal-zone B cells respond to blood-borne carbohydrate within hours — unheard of for a B cell (normally 7–10 days) — and make only IgM, the complement-activating emergency antibody. The distractors describe slower or non-antibody-producing cells. (B) follicular IgG responses take days, not hours. (C) T cells don't make antibody. (D) macrophages don't make antibody. (E) pDCs make interferon, not antibody.",
+      "basic"
+     ],
+     [
+      "Match the lymph-node compartments to their occupants and exit route.",
+      [
+       "Paracortex = B cells; medulla = naive T cells; exit via afferent vessels",
+       "Follicle = T cells; paracortex = B cells; exit via the cortex",
+       "Follicle = B cells; paracortex = T cells; activated cells exit via the medulla",
+       "Follicle = macrophages; medulla = B cells; exit via HEV",
+       "Cortex = plasma cells; paracortex = red cells; exit via the hilum only"
+      ],
+      2,
+      "Lymph-node architecture. In the node: follicle = B cells, paracortex = T cells, and activated cells move to the medulla and out the efferent lymphatics. The distractors swap zones or invent exit routes (afferent vessels bring antigen IN; cells leave via efferent). (A) afferent vessels bring antigen in; exit is efferent. (B) reversed — follicle is B, paracortex is T. (D) cells exit via efferent lymphatics from the medulla, not HEV. (E) invented assignments.",
+      "basic"
+     ],
+     [
+      "Which cell type predominantly carries antigen from peripheral tissue INTO a lymph node via the afferent lymphatics?",
+      [
+       "The megakaryocyte",
+       "The neutrophil",
+       "The red blood cell",
+       "The marginal-zone B cell",
+       "The dendritic cell"
+      ],
+      4,
+      "Afferent antigen courier. Very few cell types migrate from tissue into the node; the predominant courier is the dendritic cell (a few macrophages also), bringing microbial components to the paracortical T cells. The distractors are blood cells or non-migratory. (A) megakaryocytes stay in marrow. (B) neutrophils go to inflamed tissue, not into nodes as antigen couriers. (C) red cells don't present antigen. (D) marginal-zone B cells reside in the spleen.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    14,
+    "Lec 5 · Lymph Movement",
+    [
+     [
+      "Dietary fats are absorbed from the gut into the lymphatics in what form?",
+      [
+       "Converted to ketone bodies before lymphatic uptake",
+       "As free glucose transported across the brush border",
+       "Bound to albumin and carried in the portal vein",
+       "As intact triglyceride droplets diffusing into capillaries",
+       "Packaged into chylomicrons taken up by intestinal lacteals"
+      ],
+      4,
+      "Lymphatic fat absorption. Dietary lipids are packed into chylomicrons (triglyceride + cholesterol + lipids), taken up by gut lacteals, and delivered to the blood for transport to the liver. The distractors describe carbohydrate handling or the wrong vessel/route. (A) ketones aren't the absorption form of dietary fat. (B) glucose is a carbohydrate, not a dietary fat route. (C) most absorbed fat goes via lacteals, not the portal vein. (D) fat is packaged into chylomicrons, not absorbed as raw droplets.",
+      "basic"
+     ],
+     [
+      "According to the data Gregg cited, osteopathic lymphatic-pump techniques have been shown to do which of the following?",
+      [
+       "Increase thoracic-duct lymph flow and improve vaccine efficacy / reduce infection duration",
+       "Replace the need for the cardiac pump in lymph transport",
+       "Permanently regenerate damaged lymph nodes",
+       "Eliminate the requirement for one-way valves in lymph vessels",
+       "Convert myeloid progenitors into lymphocytes"
+      ],
+      0,
+      "OMM lymphatic-pump evidence. Pump techniques (thoracic, abdominal, pedal) exaggerate respiratory movement; cited data show increased thoracic-duct flow, improved vaccine efficacy, reduced infection duration, and (in Gregg's mouse work) NK mobilization. The distractors overstate the effect. (B) the pump assists flow; it doesn't replace cardiac function. (C) damaged lymph nodes do NOT regenerate. (D) valves are still required. (E) OMM doesn't change hematopoietic lineage.",
+      "basic"
+     ],
+     [
+      "Why does lymph keep moving forward despite having no central pump?",
+      [
+       "Arterial pulsation within the duct lumen propels it",
+       "The heart pressurizes the lymphatic system directly",
+       "Lymph is under high osmotic pressure that forces it forward",
+       "Skeletal-muscle and respiratory movement plus one-way valves drive and direct flow",
+       "Lymph flows passively downhill with gravity alone"
+      ],
+      3,
+      "Lymph propulsion. Lymphatics lack a heart pump; muscle contraction, breathing, and a little smooth muscle push lymph, while one-way valves prevent backflow. Sedentary patients move lymph slowly, which is why activity (and OMM) helps. The distractors invent a pressure source. (A) there's no arterial pulsation inside lymph vessels. (B) the heart does not drive the lymphatics. (C) osmotic pressure isn't the propulsive force. (E) valves exist precisely because gravity would reverse flow.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    15,
+    "Lec 5 · Microfold Cell Function",
+    [
+     [
+      "What is the sole function of microfold (M) cells in Peyer's patches?",
+      [
+       "To capture luminal antigen and transfer it across the epithelium to underlying immune cells",
+       "To produce the full panel of inflammatory cytokines",
+       "To present antigen on MHC and activate T cells directly",
+       "To secrete IgA into the gut lumen",
+       "To phagocytose and kill bacteria within the epithelium"
+      ],
+      0,
+      "M-cell job. M (microfold) cells only capture and ferry material across the epithelium; they make no cytokines and mount no response. The macrophages and dendritic cells behind them survey the transferred material. The distractors give M cells active immune roles they lack. (B) M cells don't make cytokines. (C) the dendritic cells behind them present antigen, not the M cell. (D) plasma cells make IgA, not M cells. (E) M cells transfer; they don't kill.",
+      "basic"
+     ],
+     [
+      "In the liver, which feature supports immune responses to blood-borne antigens arriving from the gut?",
+      [
+       "Red pulp cords that store a blood reserve",
+       "Germinal centers identical to those of a lymph node",
+       "A dedicated thymic cortex for T-cell maturation",
+       "Portal-triad sinusoids populated by Kupffer cells, dendritic cells, NK, and B/T cells",
+       "High endothelial venules as the only entry route"
+      ],
+      3,
+      "Liver immune architecture. Gut-derived antigen reaches the portal vein and portal-triad sinusoids, which contain Kupffer cells (liver macrophages), dendritic cells, NK cells, and B/T cells — all the players for a response, if less organized than a node. The distractors borrow other organs' structures. (A) red-pulp cords are splenic. (B) the liver lacks the organized germinal centers of a node. (C) thymic cortex is in the thymus, not the liver. (E) HEVs are a lymph-node feature.",
+      "basic"
+     ],
+     [
+      "A surgeon removes a patient's spleen after trauma. Based on splenic function, which consequence is MOST expected?",
+      [
+       "Loss of all T-cell maturation, since the spleen is the thymus equivalent",
+       "Impaired clearance of blood-borne encapsulated bacteria and loss of the rapid marginal-zone IgM response",
+       "Inability to absorb dietary fat from the gut",
+       "Complete failure of red-cell production",
+       "Loss of lymph drainage from the lower body"
+      ],
+      1,
+      "Post-splenectomy integration. The spleen filters blood, clears encapsulated organisms, and houses marginal-zone B cells (rapid IgM to blood-borne carbohydrate) — so asplenic patients are vulnerable to encapsulated bacteria and lose the fast IgM response. The distractors assign the spleen functions that belong to the thymus, gut lacteals, marrow, or thoracic duct. (A) T-cell maturation is thymic, not splenic. (C) fat absorption is via gut lacteals. (D) red-cell production is in marrow; the spleen removes old RBCs. (E) lower-body lymph drains via the thoracic duct, independent of the spleen.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    16,
+    "Lec 6 · Action Of Superantigens",
+    [
+     [
+      "A bacterial toxin activates up to 20% of all T cells by cross-linking the TCR Vβ region directly to MHC class II, outside the normal peptide groove. What is it?",
+      [
+       "An alloantigen",
+       "A hapten",
+       "A mitogen acting through TLR",
+       "A superantigen",
+       "A heterophile antigen"
+      ],
+      3,
+      "Superantigen definition. Superantigens bridge the TCR Vβ region to MHC II directly (bypassing peptide specificity), polyclonally activating a huge fraction of T cells - the toxic-shock mechanism. The distractors are other immunogen categories with different mechanisms. (A) alloantigens are same-species genetic-variant antigens. (B) a hapten is a small molecule needing a carrier, not a T-cell cross-linker. (C) mitogens act through receptors like TLR, not Vβ-MHC bridging. (E) heterophile antigens are shared across species.",
+      "basic"
+     ],
+     [
+      "Which immunogen type causes polyclonal lymphocyte proliferation by binding stimulatory molecules (e.g., TLR) and driving cell-cycle progression independent of antigen specificity?",
+      [
+       "A superantigen",
+       "A mitogen",
+       "An autoantigen",
+       "A hapten",
+       "An epitope"
+      ],
+      1,
+      "Mitogen definition. Mitogens drive polyclonal proliferation through stimulatory receptors (such as TLR), independent of antigen specificity - distinct from superantigens, which bridge Vβ to MHC II. The distractors are unrelated categories. (A) superantigens bridge TCR Vβ to MHC II, a different mechanism. (C) an autoantigen is a self-antigen, not a polyclonal stimulator. (D) a hapten needs a carrier; it doesn't drive polyclonal proliferation. (E) an epitope is a recognized region, not an immunogen type.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    17,
+    "Lec 6 · Immunogenicity Of Antigen",
+    [
+     [
+      "Which class of antigen is the MOST immunogenic and the only class that T cells can respond to?",
+      [
+       "Proteins (must be larger than ~10 kDa)",
+       "Polysaccharides",
+       "Nucleic acids",
+       "Lipids",
+       "Steroids"
+      ],
+      0,
+      "Antigen-class hierarchy. Proteins are most immunogenic and the only class T cells recognize (as processed peptides), and must exceed ~10 kDa. B cells respond to all four classes; T cells respond only to protein. The distractors are B-cell-only classes. (B) polysaccharides are B-cell only (second-strongest). (C) nucleic acids are B-cell only (e.g., lupus anti-DNA). (D) lipids are B-cell only unless protein-associated. (E) steroids are weak and not the protein class T cells need.",
+      "basic"
+     ],
+     [
+      "Anti-double-stranded-DNA antibodies in systemic lupus erythematosus demonstrate which principle?",
+      [
+       "Nucleic acids are the most immunogenic class",
+       "T cells respond directly to DNA",
+       "B cells can respond to nucleic-acid antigens (T cells cannot)",
+       "Lipids require no protein association to be immunogenic",
+       "Proteins are the only antigens B cells recognize"
+      ],
+      2,
+      "B-cell response to nucleic acids. Lupus anti-dsDNA antibodies prove B cells can answer nucleic-acid antigens, whereas T cells respond only to protein peptides. The distractors misassign T-cell ability or the class hierarchy. (A) proteins, not nucleic acids, are most immunogenic. (B) T cells don't respond to DNA - only B cells do. (D) lipids respond best WITH protein association. (E) B cells recognize all four classes, not just proteins.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    18,
+    "Lec 6 · Signaling Molecules Of T Cells",
+    [
+     [
+      "Why can a B cell respond to antigen without an antigen-presenting cell, while a T cell cannot?",
+      [
+       "Both require an APC equally",
+       "B cells secrete MHC to present antigen to themselves",
+       "T cells bind native antigen but need help degrading it",
+       "B cells require dendritic cells but T cells do not",
+       "The BCR binds native antigen directly; the TCR sees only processed peptide on MHC"
+      ],
+      4,
+      "Direct B recognition vs presented T recognition. The \"perfect-vision\" BCR binds intact native antigen directly; the \"nearsighted\" TCR can only see peptide displayed on MHC by an APC. The distractors invert which cell needs help or invent self-presentation. (A) only T cells require presentation. (B) B cells don't secrete MHC to self-present. (C) T cells can't bind native antigen at all. (D) reversed - T cells need the APC, not B cells.",
+      "basic"
+     ],
+     [
+      "Which pairing correctly separates the recognition and signaling parts of the T-cell receptor?",
+      [
+       "Recognition = MHC; signaling = αβ chains",
+       "Recognition = CD3; signaling = αβ chains",
+       "Recognition = zeta chains; signaling = heavy and light chains",
+       "Recognition = heavy/light chains; signaling = CD3",
+       "Recognition = αβ heterodimer; signaling = CD3 and zeta (ζ) chains"
+      ],
+      4,
+      "TCR component roles. The TCR's αβ heterodimer recognizes peptide-MHC; CD3 and the zeta chains provide the cytoplasmic signaling docking sites (for ZAP-70, etc.). The distractors swap the recognition and signaling parts or borrow BCR (heavy/light) terms. (A) MHC is the presenting molecule, not a TCR component. (B) reversed - αβ recognizes, CD3 signals. (C) heavy/light are BCR chains, not the TCR. (D) heavy/light belong to the BCR.",
+      "basic"
+     ],
+     [
+      "A virus-infected fibroblast (a non-professional cell) is recognized and killed by a cytotoxic T cell. How was its antigen presented?",
+      [
+       "On a B-cell receptor displayed by the fibroblast",
+       "As peptide on MHC class II, expressed by all cells",
+       "As native antigen directly to the TCR, no MHC needed",
+       "As peptide on MHC class I, which every nucleated cell expresses",
+       "Only after the fibroblast became a professional APC"
+      ],
+      3,
+      "CD8 surveillance of any nucleated cell. Every nucleated cell expresses MHC class I and can present endogenous (viral) peptide to CD8 T cells - which is why any infected cell can be killed. MHC II is restricted to professional APCs. The distractors misassign the class or the presentation route. (A) fibroblasts don't display BCRs. (B) MHC II is only on dendritic cells, B cells, and macrophages. (C) T cells need peptide on MHC, never free antigen. (E) any nucleated cell presents on MHC I without becoming a professional APC.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    19,
+    "Lec 7 · Exogenous Antigen Presentation",
+    [
+     [
+      "A virus replicates in the cytosol of an infected fibroblast. By which pathway are its peptides displayed, and to which T cell?",
+      [
+       "Exogenous pathway → MHC class II → CD4+ T cell",
+       "Endogenous pathway → MHC class I → CD8+ T cell",
+       "Endogenous pathway → MHC class II → CD4+ T cell",
+       "Exogenous pathway → MHC class I → CD8+ T cell",
+       "CD1 pathway → invariant NKT cell"
+      ],
+      1,
+      "Cytosolic virus → which pathway/T cell? Cytosolic (endogenously synthesized) protein is processed by the proteasome, loaded on class I in the ER, and shown to CD8+ T cells. The \"made inside the cell, in the cytosol\" cue forces the endogenous/class I/CD8 chain.  (A) Exogenous/class II is for extracellular or intravesicular antigen, not cytosolic.  (C) Class II never presents cytosolic peptide — the invariant chain blocks that.  (D) Class I pairs with CD8, not the exogenous pathway.  (E) CD1 presents lipid, not viral protein.",
+      "basic"
+     ],
+     [
+      "A macrophage phagocytoses an extracellular Staphylococcus. Its peptides are most likely presented on:",
+      [
+       "MHC class I, to a CD8+ cytotoxic T cell",
+       "MHC class II, to a CD4+ helper T cell",
+       "CD1, to an invariant NKT cell",
+       "Beta-2 microglobulin directly, to an NK cell",
+       "No MHC — phagocytosed antigen is not presented to T cells"
+      ],
+      1,
+      "Phagocytosed extracellular bacterium → ? Extracellular antigen taken up into the phagolysosome is the exogenous pathway → class II → CD4. The \"phagocytosed / extracellular\" cue is the exogenous trigger.  (A) Class I/CD8 handles cytosolic, not phagocytosed, antigen.  (C) CD1 is for lipid antigen, not ordinary bacterial protein.  (D) β2m is a structural chain, not a presenting platform to NK cells.  (E) Phagocytosed protein is exactly what the class II pathway presents.",
+      "basic"
+     ],
+     [
+      "Where does peptide loading occur in each pathway?",
+      [
+       "Class I in the proteasome; class II in the cytosol",
+       "Both in the ER",
+       "Both in the phagolysosome",
+       "Class I in the phagolysosome; class II in the ER",
+       "Class I in the ER; class II in the phagolysosome (acidic vesicle)"
+      ],
+      4,
+      "Loading compartment for class I vs II? Class I peptides load in the ER (after TAP transport); class II load in the acidic phagolysosome (after invariant-chain/CLIP removal by HLA-DM). Both molecules are MADE in the ER, but they LOAD in different compartments — that is the trap.  (A) Loading happens in MHC compartments, not inside the proteasome/cytosol.  (B) Class II is synthesized in the ER but loads in the vesicle, not the ER.  (C) Class I loads in the ER, not the vesicle.  (D) This reverses the two compartments.",
+      "basic"
+     ],
+     [
+      "Interferon-gamma released during intracellular infection helps presentation by:",
+      [
+       "Removing CLIP from class II molecules",
+       "Shutting down all host protein synthesis to starve the virus",
+       "Increasing MHC expression and converting the proteasome to the immunoproteasome for better class I anchor residues",
+       "Transporting peptides into the ER independent of TAP",
+       "Degrading β2-microglobulin to release peptide"
+      ],
+      2,
+      "Role of IFN-γ in presentation? IFN-γ upregulates MHC and remodels the proteasome into the immunoproteasome, which cleaves after hydrophobic/basic residues to yield better class I anchors. Type I IFN (α/β) is the one that halts translation — the common mix-up.  (A) CLIP removal is HLA-DM, not IFN-γ.  (B) That antiviral translational block is type I IFN (α/β), not IFN-γ’s presentation role.  (D) No peptide transport is TAP-independent here.  (E) IFN-γ does not degrade β2m.",
+      "basic"
+     ],
+     [
+      "What generates the peptides loaded onto MHC class I?",
+      [
+       "Complement cleavage of antigen in the blood",
+       "Cathepsins in the acidic phagolysosome",
+       "Secreted serum proteases acting extracellularly",
+       "The proteasome degrading cytosolic proteins into short peptides",
+       "RAG-mediated cleavage of the antigen gene"
+      ],
+      3,
+      "What makes class I peptides? Cytosolic proteins (self or pathogen) are ubiquitinated and chewed by the proteasome / immunoproteasome into ~8–10-mers for class I. Cathepsins do the analogous job for class II in the vesicle — the common confusion.  (A) Complement does not generate MHC peptides.  (B) Cathepsins serve the class II vesicular pathway.  (C) Class I peptides are generated intracellularly, not by serum proteases.  (E) RAG recombines receptor genes; it does not process antigen.",
+      "basic"
+     ],
+     [
+      "Mycobacterium grows inside a macrophage’s phagosome (an intravesicular pathogen). Its peptides are classified and presented as:",
+      [
+       "Exogenous → class II → CD4, because the antigen is in the vesicle, not the cytosol",
+       "Endogenous → class I → CD8, because it is inside the cell",
+       "Endogenous → class II → CD4",
+       "Exogenous → class I → CD8",
+       "Neither pathway — intravesicular pathogens are invisible to T cells"
+      ],
+      0,
+      "Intravesicular Mycobacterium → ? \"Inside the cell\" is not the same as \"in the cytosol.\" Antigen confined to the vesicle is exogenous → class II → CD4. The trap is equating intracellular location with the endogenous/class I pathway.  (B) Cytosolic location defines endogenous; the vesicle does not.  (C) Class II is correct but it is exogenous, not endogenous.  (D) Class I pairs with the endogenous pathway, not exogenous.  (E) These antigens are presented — via class II.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    20,
+    "Lec 7 · Molecules Of Antigen Presentation",
+    [
+     [
+      "Which molecule transports proteasome-generated peptides from the cytosol into the ER for class I loading?",
+      [
+       "Invariant chain (CD74)",
+       "HLA-DM",
+       "TAP1/TAP2 (transporter associated with antigen processing)",
+       "Cathepsins",
+       "Beta-2 microglobulin"
+      ],
+      2,
+      "Cytosol→ER peptide transporter for class I? TAP1/TAP2 is the ATP-dependent gateway moving cytosolic peptides into the ER where class I waits. This is the class I machinery; the distractors all belong to class II or are structural.  (A) Invariant chain blocks the class II cleft; it is not a transporter.  (B) HLA-DM removes CLIP in the class II vesicle, not a transporter.  (D) Cathepsins degrade protein in the phagolysosome (class II).  (E) β2-microglobulin stabilizes class I but does not transport peptide.",
+      "basic"
+     ],
+     [
+      "In the class II pathway, what is the role of HLA-DM?",
+      [
+       "It removes CLIP from the binding cleft and facilitates peptide loading",
+       "It transports peptides from the cytosol into the ER",
+       "It is a polymorphic MHC class II molecule that presents peptide to CD4 cells",
+       "It ubiquitinates proteins for proteasomal degradation",
+       "It pairs with the class I alpha chain to stabilize it"
+      ],
+      0,
+      "Role of HLA-DM? HLA-DM is a non-polymorphic accessory molecule (like tapasin/calnexin) that exchanges CLIP for antigenic peptide in the acidic vesicle. Davis flagged that it is NOT an MHC class II molecule despite the HLA-D name.  (B) That is TAP, in the class I pathway.  (C) HLA-DM is accessory, not a peptide-presenting class II molecule — the classic trap.  (D) Ubiquitination feeds the proteasome (class I), unrelated to DM.  (E) That describes β2-microglobulin with class I.",
+      "basic"
+     ],
+     [
+      "What are the three functions of the invariant chain (Ii) in the class II pathway?",
+      [
+       "Chaperones class II folding, blocks the cleft from endogenous peptide, and routes class II to the endosomal loading compartment",
+       "Transports peptide into the ER, removes CLIP, and binds β2-microglobulin",
+       "Degrades cytosolic protein, transports peptide, and presents to CD8",
+       "Stabilizes class I, retains it in the ER, and recruits tapasin",
+       "Cleaves antigen into peptides and exchanges CLIP for peptide"
+      ],
+      0,
+      "Three roles of invariant chain? Invariant chain folds class II, occupies the cleft so cytosolic peptide cannot load, and directs the complex to the acidic vesicle; its remnant is CLIP, later swapped out by HLA-DM. These three roles are the LO’s recall target.  (B) Those are TAP/HLA-DM/β2m functions, not Ii.  (C) Ii does not degrade protein or present to CD8.  (D) That describes calnexin with class I.  (E) Cleaving antigen is cathepsins; CLIP exchange is HLA-DM.",
+      "basic"
+     ],
+     [
+      "In the ER, what does calnexin do for a nascent class I molecule?",
+      [
+       "Transports peptide across the ER membrane",
+       "Removes CLIP from the binding cleft",
+       "Stabilizes the class I alpha chain until β2-microglobulin binds, and retains empty molecules in the ER",
+       "Cleaves the invariant chain down to CLIP",
+       "Polymorphically presents peptide to CD8 cells"
+      ],
+      2,
+      "Calnexin’s role for class I? Calnexin is a chaperone that stabilizes the free class I alpha chain until β2m associates and prevents empty class I from leaving the ER. Tapasin then brings it to TAP. Both are accessory chaperones, not presenting molecules.  (A) Peptide transport is TAP.  (B) CLIP removal is HLA-DM’s job in the class II vesicle.  (D) Invariant-chain cleavage to CLIP is a class II event.  (E) Calnexin is a chaperone, not a peptide-presenting molecule.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    21,
+    "Lec 7 · Defects In Peptide Transport",
+    [
+     [
+      "A patient cannot express any MHC class II (bare lymphocyte syndrome, class II). Which finding fits best?",
+      [
+       "Excess autoantibody from unchecked B-cell activation",
+       "Selective CD8 deficiency with intact CD4 help",
+       "Normal adaptive immunity with isolated NK deficiency",
+       "Profoundly low CD4 counts and poor antibody responses, because CD4 help cannot be primed without class II presentation",
+       "Isolated neutrophil dysfunction with normal lymphocytes"
+      ],
+      3,
+      "No class II (BLS II) → ? No class II means CD4 cells are not positively selected/primed → low CD4 and failed CD4-dependent (T-dependent) antibody responses; CD8/class I is comparatively spared. This integrates presentation with downstream humoral output.  (A) Loss of CD4 help reduces, not increases, antibody.  (B) Class II loss hits CD4, not CD8.  (C) The defect is in CD4-dependent adaptive immunity, not NK alone.  (E) Neutrophils are unrelated to MHC class II expression.",
+      "basic"
+     ],
+     [
+      "A child has a loss-of-function mutation in TAP1. Which immune outcome is most expected?",
+      [
+       "Hyper-IgE with eosinophilia from unopposed Th2 skewing",
+       "Impaired class II presentation → low CD4 help → poor antibody responses",
+       "Complete loss of all adaptive immunity, both T and B arms equally",
+       "Impaired class I presentation → low CD8 responses → recurrent viral infections, with relatively preserved antibody responses",
+       "No immune phenotype, because NK cells fully compensate for absent class I"
+      ],
+      3,
+      "TAP1 loss → which phenotype? No TAP means peptides cannot enter the ER, so class I cannot be loaded → defective CD8/CTL responses and viral susceptibility; the class II/CD4/antibody arm is spared because it loads in the vesicle independent of TAP. This is the deficiency-reasoning the LO asks for.  (A) TAP loss does not drive Th2 skewing or hyper-IgE.  (B) Class II loading is TAP-independent, so CD4/antibody is preserved, not lost.  (C) Only the class I arm is hit; B-cell/CD4 immunity persists.  (E) NK cells help but cannot fully replace antigen-specific CTL immunity; patients still get sick.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    22,
+    "Lec 8 · Allelic Exclusion And Gene Rearrangement",
+    [
+     [
+      "A blood test reports \"IgG1 kappa.\" The \"kappa\" designation refers to which exclusion concept and chain?",
+      [
+       "Class switching of the constant heavy-chain gene",
+       "Allelic exclusion - the maternal vs paternal heavy-chain allele",
+       "Isotypic exclusion of the heavy chain isotype",
+       "Allelic exclusion occurring only in the TCR",
+       "Isotypic exclusion - the light-chain isotype (kappa vs lambda), a B-cell light-chain phenomenon"
+      ],
+      4,
+      "\"IgG1 kappa\" - which exclusion/chain? Kappa vs lambda is the light-chain isotype choice - governed by isotypic exclusion, which occurs ONLY in B-cell light chains. Kappa rearranges first and suppresses lambda. Allelic exclusion (mom vs dad) is the separate concept. (A) Class switching changes the heavy-chain isotype, unrelated to the kappa light-chain label. (B) Allelic exclusion is the maternal/paternal race, not the kappa/lambda choice. (C) Isotypic exclusion here is about the LIGHT chain, not heavy isotype. (D) Allelic exclusion is not TCR-only; the kappa label is a light-chain isotype.",
+      "basic"
+     ],
+     [
+      "Which statement correctly distinguishes allelic from isotypic exclusion?",
+      [
+       "Allelic exclusion occurs only in light chains; isotypic exclusion occurs in heavy chains",
+       "Allelic exclusion occurs in BCR heavy + light chains and TCR; isotypic exclusion occurs only in BCR light chains",
+       "Both occur only in T cells",
+       "Allelic exclusion is the kappa-before-lambda choice; isotypic exclusion is the mom-vs-dad choice",
+       "Isotypic exclusion occurs in both BCR and TCR; allelic exclusion is BCR-only"
+      ],
+      1,
+      "Allelic vs isotypic exclusion scope? Allelic exclusion (maternal vs paternal allele) operates in BCR heavy and light chains AND TCR; isotypic exclusion (kappa suppresses lambda) is restricted to BCR light chains. Davis flagged these two terms explicitly. (A) This reverses the two; allelic exclusion is the broad one. (C) Allelic exclusion also occurs in B cells, not only T cells. (D) This swaps the definitions: allelic = mom vs dad; isotypic = kappa vs lambda. (E) Isotypic exclusion is BCR-light-chain only, not in TCR.",
+      "basic"
+     ],
+     [
+      "A developing B cell successfully rearranges a kappa light chain on the maternal allele. What happens to the paternal kappa allele and to both lambda loci?",
+      [
+       "Lambda rearranges first and suppresses kappa",
+       "The paternal kappa also rearranges, giving two light chains",
+       "Both lambda loci rearrange to add diversity",
+       "The cell undergoes apoptosis because kappa succeeded too early",
+       "The paternal kappa allele is silenced (allelic exclusion) and both lambda loci stay unrearranged (isotypic exclusion) - one light chain results"
+      ],
+      4,
+      "Kappa succeeds -> fate of other light-chain loci? Once a functional kappa light chain is made, allelic exclusion silences the other kappa allele and isotypic exclusion keeps lambda suppressed - the cell expresses exactly one light chain. This integrates both exclusion concepts in one cell. (A) Kappa rearranges first and suppresses lambda, not the reverse. (B) Allelic exclusion prevents a second (paternal) light chain. (C) Successful kappa suppresses lambda (isotypic exclusion). (D) Successful rearrangement is the goal; it does not trigger apoptosis.",
+      "basic"
+     ],
+     [
+      "Which chain is the documented EXCEPTION that can bypass allelic exclusion?",
+      [
+       "No chain ever bypasses allelic exclusion",
+       "The TCR beta chain",
+       "The BCR heavy chain",
+       "The BCR kappa light chain",
+       "The TCR alpha chain (rarely, a single T cell can express two alpha chains)"
+      ],
+      4,
+      "Which chain bypasses allelic exclusion? The TCR alpha chain is the lone documented exception - rarely a T cell expresses two alpha chains (one beta is still allelically excluded). Beta, heavy, and kappa all obey strict allelic exclusion. (A) There is one exception - the TCR alpha chain. (B) The beta chain obeys allelic exclusion strictly. (C) The heavy chain is strictly allelically excluded. (D) Kappa obeys allelic exclusion (and adds isotypic exclusion).",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    23,
+    "Lec 8 · Gene Arrangement In B Cell Receptors",
+    [
+     [
+      "An antibody light chain variable region is assembled from which gene segments?",
+      [
+       "Two V segments joined head-to-tail",
+       "One V, one D, and one J segment (V-D-J)",
+       "One V segment and one J segment (V-J), then joined to a constant gene",
+       "One D and one J segment only (D-J)",
+       "A single rearranged constant-region gene with no variable segments"
+      ],
+      2,
+      "Light-chain V region = which segments? Light chains (and TCR alpha/gamma) use V-J only - two segments for the variable region plus one C gene = three genes total. The D segment belongs to heavy chains and TCR beta/delta. (A) Two V segments are never joined; one V is selected. (B) V-D-J is the heavy-chain (and beta/delta) arrangement, not light chain. (D) D-J alone lacks the required V segment and D is not in light chains. (E) The variable region requires rearranged V/J segments, not constant alone.",
+      "basic"
+     ],
+     [
+      "TCR chains are named and paired how?",
+      [
+       "All four chains assemble into a single tetramer",
+       "Heavy pairs with light, exactly like an antibody",
+       "Alpha pairs with delta, beta pairs with gamma",
+       "Alpha pairs with beta, or gamma pairs with delta - they do not mix and match, and are equal in size (no heavy/light)",
+       "Alpha and beta are heavy chains; gamma and delta are light chains"
+      ],
+      3,
+      "How are TCR chains paired/named? TCRs use Greek-named chains of equal size - alpha-beta or gamma-delta, never mixed. Unlike antibodies, there is no heavy/light distinction. The alpha/gamma chains use V-J; beta/delta use V-D-J. (A) TCR is a two-chain heterodimer, not a tetramer. (B) TCR chains are equal size; there is no heavy/light pairing. (C) Pairs are alpha-beta or gamma-delta, not alpha-delta or beta-gamma. (E) There is no heavy/light designation in TCRs.",
+      "basic"
+     ],
+     [
+      "An antibody heavy chain variable region is assembled from which gene segments?",
+      [
+       "One V, one D, and one J segment (V-D-J)",
+       "One V and one J segment (V-J)",
+       "Two D segments and one J",
+       "One V and one D only",
+       "Three J segments spliced together"
+      ],
+      0,
+      "Heavy-chain V region = which segments? Heavy chains use V-D-J (the D = diversity segment sits between V and J), then join one large constant gene = four genes total. Light chains lack the D. (B) V-J is the light-chain arrangement; heavy chains add the D. (C) Only one D is used, and a V is required. (D) A J segment is required to complete the variable region. (E) J segments are not multiply spliced; one V, one D, one J.",
+      "basic"
+     ],
+     [
+      "A pre-B cell makes an out-of-frame heavy-chain rearrangement on both alleles. What is the most likely outcome?",
+      [
+       "Apoptosis - with no functional heavy chain, light-chain rearrangement never proceeds and the cell dies",
+       "The cell skips the heavy chain and expresses light chain alone",
+       "The cell switches to producing a TCR instead",
+       "Alternative splicing rescues the out-of-frame transcript",
+       "The cell becomes an NK cell"
+      ],
+      0,
+      "Both heavy-chain alleles out-of-frame -> ? Heavy chains rearrange first; an in-frame heavy chain is the checkpoint that permits light-chain rearrangement. If both alleles fail (out of frame), there is no heavy chain, light chain never proceeds, and the cell undergoes apoptosis. (B) A light chain alone cannot form a receptor without a heavy chain. (C) B cells do not convert to making a TCR. (D) Splicing cannot fix a frameshift from DNA joining. (E) Failed B cells die; they do not become NK cells.",
+      "basic"
+     ],
+     [
+      "In heavy-chain rearrangement, which joining step occurs FIRST?",
+      [
+       "Constant-gene joining before any variable rearrangement",
+       "V-to-J joining, then D is inserted",
+       "V-to-D joining, then J is added",
+       "D-to-J joining, then V-to-DJ joining",
+       "Kappa light-chain rearrangement precedes heavy chain"
+      ],
+      3,
+      "First step of heavy-chain rearrangement? Heavy chains join D-to-J first, then V-to-DJ. Heavy chains also rearrange before light chains; if the heavy chain fails to make an in-frame product, the cell undergoes apoptosis. (A) Variable rearrangement precedes the move to the constant gene. (B) You cannot skip the D; D-J forms before V joins. (C) D joins J first, not V first. (E) Heavy chains rearrange before light chains, not after kappa.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    24,
+    "Lec 9 · Rss Heptamer",
+    [
+     [
+      "Which enzyme complex recognizes the recombination signal sequences (RSS) and makes the initial double-strand cuts to begin V(D)J recombination?",
+      [
+       "Artemis acting alone",
+       "RAG1/RAG2 (the V(D)J recombinase)",
+       "Terminal deoxynucleotidyl transferase (TdT)",
+       "DNA polymerase",
+       "DNA ligase IV"
+      ],
+      1,
+      "What initiates the RSS cut? RAG1/RAG2 (recombination-activating genes, the V(D)J recombinase) recognize the RSS and introduce the initial cuts at the palindromic heptamer. Artemis opens the hairpin afterward; TdT/polymerase/ligase act later. (A) Artemis opens the hairpin AFTER RAG cuts; it does not start the process. (C) TdT adds non-templated nucleotides later in junctional diversity. (D) DNA polymerase fills overhangs after cleavage, not first. (E) Ligase joins ends at the very end of the process.",
+      "basic"
+     ],
+     [
+      "Place the junctional-diversity steps in the order Davis described them:",
+      [
+       "Somatic hypermutation → P-addition → N-addition",
+       "N-nucleotide addition → P-nucleotide addition → junctional flexibility",
+       "Junctional flexibility → N-nucleotide addition → P-nucleotide addition",
+       "P-nucleotide addition → junctional flexibility (exonuclease trimming) → N-nucleotide addition (TdT)",
+       "Class switching → junctional flexibility → ligation"
+      ],
+      3,
+      "Order of junctional-diversity steps? The sequence is: P-nucleotide addition (palindromic, after Artemis opens the hairpin and polymerase evens ends), then junctional flexibility (exonuclease chews back exposed ends), then N-nucleotide addition (TdT adds non-templated bases). Then ligation. (A) Somatic hypermutation is unrelated to junctional steps. (B) P-addition comes first, not N-addition. (C) P-addition precedes flexibility and N-addition. (E) Class switching is a separate, later B-cell process.",
+      "basic"
+     ],
+     [
+      "After RAG cleavage produces a hairpin, which enzyme opens the hairpin loop?",
+      [
+       "RAG1/RAG2 again",
+       "Artemis (an endonuclease)",
+       "Terminal deoxynucleotidyl transferase (TdT)",
+       "DNA ligase IV",
+       "Exonuclease alone"
+      ],
+      1,
+      "What opens the hairpin? Artemis, an endonuclease, nicks open the hairpin loop created after RAG cleavage, generating overhangs. TdT and polymerase then modify the ends; ligase seals them. (A) RAG makes the initial cut/hairpin; Artemis opens it. (C) TdT adds non-templated nucleotides later. (D) Ligase joins ends at the end of the process. (E) Exonuclease trims exposed ends but does not open the hairpin.",
+      "basic"
+     ],
+     [
+      "An infant has a complete loss-of-function mutation in RAG1. What is the predicted consequence for adaptive immunity?",
+      [
+       "Antibodies form but cannot class-switch",
+       "Only B cells are affected; T cells are normal",
+       "No V(D)J recombination → no functional B-cell or T-cell receptors → severe combined immunodeficiency",
+       "Diversity is reduced but receptors still form normally",
+       "Only somatic hypermutation is lost"
+      ],
+      2,
+      "Complete RAG1 loss → consequence? RAG1/2 are required to initiate V(D)J recombination for BOTH B and T cells. Without them, no functional antigen receptors form on either lineage — the result is severe combined immunodeficiency (SCID). This integrates the shared dependence of both lineages on the recombinase. (A) Without RAG, receptors never form, so class switching is moot. (B) RAG is needed by both B AND T cells, not B alone. (D) RAG loss abolishes receptor formation, not just trims diversity. (E) The entire recombination step is lost, not only hypermutation.",
+      "basic"
+     ],
+     [
+      "Which enzyme adds non-templated nucleotides (N-nucleotides) during junctional diversity?",
+      [
+       "DNA ligase IV",
+       "DNA polymerase using the opposite strand as template",
+       "Artemis",
+       "RAG1/RAG2",
+       "Terminal deoxynucleotidyl transferase (TdT)"
+      ],
+      4,
+      "Which enzyme adds N-nucleotides? TdT adds non-templated nucleotides (the \"N\" = non-templated) at the junction without a template, a key source of junctional diversity. DNA polymerase, by contrast, requires a template (P-nucleotide step). (A) Ligase seals the join. (B) DNA polymerase is templated; TdT is the non-templated adder. (C) Artemis opens the hairpin; it does not add nucleotides. (D) RAG makes the initial cuts.",
+      "basic"
+     ],
+     [
+      "During P-nucleotide addition, why must DNA polymerase fill in the strand after Artemis opens the hairpin?",
+      [
+       "Polymerase degrades the hairpin loop",
+       "Polymerase removes the RSS before joining",
+       "Polymerase adds non-templated nucleotides at random",
+       "Hairpin opening leaves uneven (overhang) ends, and polymerase copies the longer strand to even them out",
+       "Polymerase joins the two gene ends directly"
+      ],
+      3,
+      "Why does polymerase fill in after Artemis? Opening the hairpin yields overhanging, uneven ends; DNA polymerase uses the longer strand as template to fill in and even the ends (the templated P-nucleotide step). TdT (non-templated) and ligase act separately. (A) Artemis opens the loop; polymerase does not degrade it. (B) Polymerase fills strands; it does not remove the RSS. (C) Non-templated addition is TdT, not polymerase. (E) Ligase, not polymerase, joins the ends.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    25,
+    "Lec 9 · Regulatory Enzymes Of Gene Rearrangement",
+    [
+     [
+      "Each recombination signal sequence (RSS) consists of which three parts?",
+      [
+       "A promoter, an enhancer, and a silencer",
+       "A heptamer (closest to the gene), a spacer, and a nonamer (farthest from the gene)",
+       "Two heptamers flanking one nonamer",
+       "A V, a D, and a J segment",
+       "A 12-bp and a 23-bp exon separated by an intron"
+      ],
+      1,
+      "Three parts of an RSS? An RSS = heptamer (7 bp, nearest the gene) + spacer + nonamer (9 bp, farthest). The spacer is either 12 or 23 bp, which sets the 12/23 rule. These are not promoters or gene segments. (A) Those are transcriptional elements, not RSS parts. (C) An RSS has one heptamer and one nonamer with a spacer between. (D) V/D/J are the gene segments the RSS flanks, not its components. (E) The 12/23 refers to spacer length, not exons.",
+      "basic"
+     ],
+     [
+      "Why are the heptamer sequences of the RSS described as palindromic and important for recombination?",
+      [
+       "Their palindromic sequence lets the two heptamers align so RAG can nick and begin joining",
+       "They encode the antigen-binding residues directly",
+       "They determine which isotype is expressed",
+       "They prevent the nonamer from binding RAG",
+       "They are transcribed into the mature mRNA"
+      ],
+      0,
+      "Why are heptamers palindromic? The palindromic heptamers allow the two RSS heptamers to align (roughly) so the RAG complex can nick within them and start the cut-and-join. They are non-coding and do not set isotype. (B) Heptamers are non-coding signal sequences, not antigen-contact residues. (C) Isotype is determined by the constant region. (D) The nonamer is also part of RAG recognition, not blocked by the heptamer. (E) RSS sequences are spliced out / deleted, not in mature mRNA.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    26,
+    "Lec 9 · Somatic Hypermutation Diversity In Bcrs",
+    [
+     [
+      "Somatic hypermutation (affinity maturation) differs from junctional diversity in that it:",
+      [
+       "Occurs in both B and T cells in the thymus",
+       "Adds and subtracts nucleotides at the junction before antigen exposure",
+       "Introduces point mutations across the whole V region after antigen exposure, in B cells only",
+       "Changes the number of nucleotides in CDR3 only",
+       "Is an antigen-independent bone-marrow process"
+      ],
+      2,
+      "How does somatic hypermutation differ? Somatic hypermutation makes point mutations (no add/subtract) throughout the V region, AFTER antigen exposure, in B cells only — it is antigen-DEPENDENT and occurs in secondary lymphoid follicles. Junctional diversity adds/subtracts nucleotides at the junction, antigen-independently, in the marrow/thymus. (A) Hypermutation is B-cell only and occurs in follicles, not the thymus. (B) That describes junctional diversity, not hypermutation. (D) It is point mutation across the whole V region, not nucleotide-count change in CDR3. (E) Hypermutation is antigen-DEPENDENT, in secondary lymphoid organs.",
+      "basic"
+     ],
+     [
+      "Why does somatic hypermutation affect ALL three CDRs, whereas junctional diversity affects only CDR3?",
+      [
+       "Point mutations can occur anywhere in the V region (all CDRs + frameworks), but nucleotide add/subtract happens only at the segment junction (CDR3)",
+       "Somatic hypermutation only targets CDR1 and CDR2",
+       "Junctional diversity rewrites the entire variable region",
+       "CDR3 cannot be mutated by hypermutation",
+       "Hypermutation is restricted to the framework regions"
+      ],
+      0,
+      "Why does hypermutation hit all CDRs? Hypermutation scatters point mutations anywhere in the V region, so any CDR (or framework) can change. Junctional diversity acts only at the joint where segments meet — which corresponds to CDR3 — so it cannot touch CDR1/CDR2 within V. (B) Hypermutation is not limited to CDR1/CDR2. (C) Junctional diversity is confined to the junction, not the whole region. (D) CDR3 can also be mutated by hypermutation. (E) Hypermutation hits the whole V region, not only frameworks.",
+      "basic"
+     ],
+     [
+      "Which diversity mechanism occurs in B cells but NOT in T cells?",
+      [
+       "Combinatorial association (any heavy chain pairing with any light chain) and somatic hypermutation",
+       "Combinatorial diversity (random V(D)J joining)",
+       "Junctional diversity (P/N nucleotide addition)",
+       "Use of recombination signal sequences",
+       "Random pairing limited to alpha-beta only"
+      ],
+      0,
+      "Diversity mechanism in B but not T cells? B cells uniquely use combinatorial association (any H with any L) and somatic hypermutation. T cells share combinatorial diversity and junctional diversity, but NOT these two (TCRs are fixed after thymic education). (B) Combinatorial diversity occurs in both B and T cells. (C) Junctional diversity occurs in both. (D) Both use RSS. (E) TCRs pair αβ or γδ; this is not a B-only mechanism.",
+      "basic"
+     ],
+     [
+      "Which set correctly lists the diversity mechanisms used by T cells (TCRs)?",
+      [
+       "Junctional diversity and combinatorial association only",
+       "Combinatorial diversity, combinatorial association, and somatic hypermutation",
+       "Only somatic hypermutation and class switching",
+       "All four B-cell mechanisms plus class switching",
+       "Combinatorial diversity, junctional diversity, alpha-chain allelic bypass, and D-segment add/skip (β/δ) — but NOT combinatorial association or somatic hypermutation"
+      ],
+      4,
+      "Which mechanisms do TCRs use? TCRs use combinatorial diversity, junctional diversity, the alpha-chain allelic-exclusion bypass, and (in β/δ) D add/skip. They do NOT use combinatorial association or somatic hypermutation, because TCRs are fixed after thymic education to preserve MHC recognition. (A) TCRs lack combinatorial association. (B) TCRs lack combinatorial association and somatic hypermutation. (C) TCRs do not undergo somatic hypermutation or class switching. (D) TCRs do not use all B-cell mechanisms or class switching.",
+      "basic"
+     ],
+     [
+      "Combinatorial diversity (random V(D)J joining) occurs at which level, and combinatorial association at which level?",
+      [
+       "Combinatorial diversity at the RNA level; association at the DNA level",
+       "Both at the DNA level",
+       "Both at the protein level",
+       "Combinatorial diversity at the DNA/gene level; combinatorial association at the protein/chain level",
+       "Combinatorial diversity at the protein level; association at the gene level"
+      ],
+      3,
+      "Levels: combinatorial diversity vs association? Combinatorial diversity is DNA-level (cutting/joining V(D)J segments). Combinatorial association is protein-level (a finished heavy-chain protein pairing with any light-chain protein). Davis stressed this DNA-vs-protein distinction. (A) Diversity is DNA-level (joining segments), not RNA. (B) Association is protein-level, not DNA. (C) Combinatorial diversity is DNA-level, not protein. (E) This reverses both levels.",
+      "basic"
+     ],
+     [
+      "Which three B-cell diversity mechanisms are antigen-INDEPENDENT (occurring in the bone marrow)?",
+      [
+       "Only combinatorial diversity",
+       "Somatic hypermutation, class switching, and affinity maturation",
+       "Junctional diversity, somatic hypermutation, and class switching",
+       "Combinatorial association, somatic hypermutation, and affinity maturation",
+       "Combinatorial diversity, combinatorial association, and junctional diversity"
+      ],
+      4,
+      "Antigen-independent B-cell mechanisms? Three antigen-independent mechanisms operate in the marrow: combinatorial diversity, combinatorial association, and junctional diversity. Somatic hypermutation (affinity maturation) is the lone antigen-DEPENDENT mechanism, occurring later in secondary lymphoid organs. (A) There are three antigen-independent mechanisms, not one. (B) Those are antigen-dependent / later processes. (C) Somatic hypermutation and class switching are antigen-dependent. (D) Hypermutation/affinity maturation are antigen-dependent.",
+      "basic"
+     ],
+     [
+      "Junctional diversity affects which complementarity-determining region, and why?",
+      [
+       "Only the framework regions",
+       "Only CDR1, because it is encoded at the 5′ end of V",
+       "All three CDRs equally",
+       "Only CDR3, because it spans the segment junction where nucleotides are added/subtracted",
+       "CDR1 and CDR2, which lie within the V segment"
+      ],
+      3,
+      "Which CDR does junctional diversity affect? Junctional diversity (P/N addition, junctional flexibility) acts at the segment junction, so it changes only CDR3, which spans that joint. CDR1/CDR2 lie within V and are untouched. (Somatic hypermutation, by contrast, hits all CDRs.) (A) Junctional changes are at the CDR3 junction, not frameworks specifically. (B) CDR1 is within V, not at the junction. (C) Only CDR3 spans the junction; the others are within V. (E) CDR1/CDR2 lie within V and are not affected by junctional diversity.",
+      "basic"
+     ],
+     [
+      "Combinatorial association contributes to antibody diversity by allowing:",
+      [
+       "Any heavy chain to pair with any light chain (kappa or lambda) — a protein-level mechanism absent in TCRs",
+       "Any V to join any J at the DNA level",
+       "Point mutations across the variable region",
+       "The alpha chain to bypass allelic exclusion",
+       "Class switching from IgM to IgG"
+      ],
+      0,
+      "What does combinatorial association allow? Combinatorial association is the protein-level pairing of any finished heavy chain with any finished light chain (kappa or lambda), multiplying diversity. It is unique to B cells; TCRs only pair αβ or γδ and lack this mechanism. (B) Any-V-to-any-J is combinatorial diversity (DNA level), not association. (C) Point mutations are somatic hypermutation. (D) The α-chain bypass is a separate TCR mechanism. (E) Class switching changes isotype, not chain pairing.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    27,
+    "Lec 10 · Steps In T Cell Development",
+    [
+     [
+      "A double-negative (DN) thymocyte expresses neither CD4 nor CD8. In which thymic region do the DN stages and beta-chain rearrangement occur?",
+      [
+       "Hassall's corpuscles",
+       "The inner medulla",
+       "The subcapsular region only",
+       "The outer cortex",
+       "The bone marrow"
+      ],
+      3,
+      "Where do DN stages / β rearrangement occur? Almost everything — DN stages, V(D)J rearrangement, positive selection, death by neglect — happens in the outer cortex. Only the second round of negative selection on single-positive cells occurs in the medulla. (A) Hassall's corpuscles are medullary structures for Treg induction. (B) The medulla hosts only the second round of negative selection on SP cells. (C) The subcapsular region is just the entry point, not where DN stages play out. (E) V(D)J for T cells occurs in the thymus, not the bone marrow.",
+      "basic"
+     ],
+     [
+      "At checkpoint 1 (DN3), how does a thymocyte prove it has made an in-frame beta chain before it has an alpha chain?",
+      [
+       "The beta chain pairs with a surrogate pre-T-alpha chain plus CD3/zeta and goes to the surface",
+       "The beta chain is secreted to be measured",
+       "It rearranges the alpha chain first and checks both together",
+       "It expresses CD4 and CD8 to signal success",
+       "It undergoes somatic hypermutation to test affinity"
+      ],
+      0,
+      "How is the β chain checked at checkpoint 1? Before the alpha chain exists, the beta chain pairs with the invariant surrogate pre-T-alpha chain (plus CD3 and zeta) to form the pre-TCR and reach the surface — proving an in-frame beta chain was made. Failure → apoptosis. (B) TCRs are never secreted; the check is surface display. (C) The alpha chain is rearranged later (DN4), after the beta checkpoint. (D) CD4/CD8 come up at the double-positive stage, after both checkpoints. (E) T cells do not undergo somatic hypermutation.",
+      "basic"
+     ],
+     [
+      "Place the early thymocyte stages in correct order:",
+      [
+       "Double-positive → double-negative → single-positive",
+       "Double-negative → double-positive → single-positive",
+       "Single-positive → double-positive → double-negative",
+       "Double-negative → single-positive → double-positive",
+       "Double-positive → single-positive → double-negative"
+      ],
+      1,
+      "Order of thymocyte stages? Thymocytes progress double-negative (no CD4/CD8) → double-positive (both, after a successful TCR) → single-positive (one retained after positive selection). The DN stages build the TCR; DP cells get selected. (A) DN comes first, not DP. (C) This is fully reversed. (D) DP precedes SP; you express both before losing one. (E) DN is the starting stage, not the end.",
+      "basic"
+     ],
+     [
+      "What is the role of the surrogate pre-T-alpha chain at the DN3 checkpoint?",
+      [
+       "It triggers negative selection",
+       "It rearranges via V(D)J to add diversity",
+       "It replaces the beta chain if rearrangement fails",
+       "It signals loss of CD4 and CD8",
+       "It pairs with the newly made beta chain so the pre-TCR can reach the surface and confirm beta-chain success"
+      ],
+      4,
+      "Role of pre-T-alpha chain? The pre-T-alpha is an invariant surrogate (no V(D)J) that pairs with the beta chain to form the pre-TCR, letting it reach the surface to confirm an in-frame beta chain at checkpoint 1. The real alpha chain comes later. (A) Negative selection is a later, separate step. (B) Pre-T-alpha does not rearrange; it is invariant for everyone. (C) It complements the beta chain; it does not replace it. (D) CD4/CD8 changes occur later, at the DP and SP stages.",
+      "basic"
+     ],
+     [
+      "Which event marks the DN2→DN3 transition for the beta chain?",
+      [
+       "Loss of CD8 to become single positive",
+       "V-to-J joining of the alpha chain",
+       "Upregulation of CD4 and CD8",
+       "Positive selection in the cortex",
+       "D-to-J joining completes (DN2) and then V-to-DJ joining occurs (DN3), forming a complete beta chain"
+      ],
+      4,
+      "What marks DN2→DN3 for the β chain? Beta-chain rearrangement starts with D-J joining in DN2, then V-DJ joining in DN3 completes the beta chain — mirroring heavy-chain order (D-J before V). Alpha rearrangement and CD4/CD8 come later. (A) Single-positive comes after positive selection. (B) Alpha (V-J) rearranges later, in DN4. (C) CD4/CD8 upregulate at the double-positive stage. (D) Positive selection occurs after DP, not at DN2→DN3.",
+      "basic"
+     ],
+     [
+      "At checkpoint 2 (DN4), what does the thymocyte confirm?",
+      [
+       "That it recognizes self-MHC",
+       "That the beta chain was made",
+       "That an in-frame alpha chain was made, forming a complete alpha-beta TCR with CD3/zeta",
+       "That it does not recognize self-peptide",
+       "That CD4 and CD8 were both lost"
+      ],
+      2,
+      "What does checkpoint 2 confirm? At DN4 the alpha chain rearranges (V-J), and checkpoint 2 confirms a real in-frame alpha chain paired with the beta chain (plus CD3/zeta) = a complete TCR. The beta-chain check was checkpoint 1; MHC checks come at the DP stage. (A) Self-MHC recognition is tested by positive selection at the DP stage. (B) The beta chain was confirmed at checkpoint 1 (DN3). (D) Self-peptide is tested by negative selection, not checkpoint 2. (E) CD4/CD8 are upregulated after DN4, not lost there.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    28,
+    "Lec 10 · Function On Notch1",
+    [
+     [
+      "Which cells in the outer cortex express Notch ligand and IL-7 to drive commitment to the T-cell lineage?",
+      [
+       "Hassall's corpuscles",
+       "Medullary thymic epithelial cells (mTECs)",
+       "Cortical thymic epithelial cells (cTECs)",
+       "Plasma cells",
+       "Follicular dendritic cells"
+      ],
+      2,
+      "Which cortical cells drive T-lineage commitment? Cortical thymic epithelial cells (cTECs) express Notch ligand and secrete IL-7, driving the progenitor down the T-cell road and supporting early development. mTECs and Hassall's corpuscles act later in the medulla. (A) Hassall's corpuscles are medullary structures for Treg induction. (B) mTECs operate in the medulla during negative selection. (D) Plasma cells are antibody-secreting B cells, not thymic stroma. (E) Follicular dendritic cells act in lymph-node follicles, not the thymic cortex.",
+      "basic"
+     ],
+     [
+      "What is the consequence of insufficient Notch1–Notch-ligand signaling in the thymic cortex?",
+      [
+       "The beta chain rearranges twice",
+       "Thymocytes skip positive selection",
+       "All thymocytes become regulatory T cells",
+       "Aberrant B-cell development can occur in the thymus instead of T-cell commitment",
+       "CD4 and CD8 are never co-expressed"
+      ],
+      3,
+      "Insufficient Notch1 signaling → ? Notch1 (on the thymocyte) engaging Notch ligand (on cTECs) commits progenitors to the T-cell lineage and suppresses the B-cell fate. Too little signaling can permit rare B-cell development in the thymus; Notch1 overexpression in marrow can drive ectopic T-cell development. (A) Notch does not cause re-rearrangement of the beta chain. (B) Selection steps are downstream and not the direct effect of low Notch. (C) Treg induction is a separate medullary TSLP/FoxP3 process. (E) CD4/CD8 co-expression is governed at the DP stage, not by Notch loss.",
+      "basic"
+     ],
+     [
+      "Hassall's corpuscles in the medulla express thymic stromal lymphopoietin (TSLP), which triggers dendritic cells to induce which cell type?",
+      [
+       "B cells",
+       "Cytotoxic T lymphocytes",
+       "Plasma cells",
+       "NK cells",
+       "Regulatory T cells (via FoxP3)"
+      ],
+      4,
+      "Hassall's corpuscles / TSLP induce what? Hassall's corpuscles express TSLP, which prompts thymic dendritic cells to drive a small subset of thymocytes to express FoxP3 and become regulatory T cells (Tregs), important for tolerance. (A) B cells develop in the bone marrow, not via Hassall's corpuscles. (B) CTLs arise from CD8 single-positive cells, not via TSLP/Hassall's. (C) Plasma cells are B-lineage. (D) NK cells do not arise through this thymic pathway.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    29,
+    "Lec 10 · Gamma Delta T Cell Development",
+    [
+     [
+      "How does gamma-delta T-cell development differ from alpha-beta development?",
+      [
+       "Gamma-delta cells require MHC class II restriction",
+       "Gamma-delta cells undergo more rigorous selection than alpha-beta",
+       "Gamma-delta cells exit the thymus without positive or negative selection and remain largely double-negative",
+       "Gamma-delta cells make up 95% of circulating T cells",
+       "Gamma-delta cells are produced only after age 40"
+      ],
+      2,
+      "γδ vs αβ development? γδ thymocytes that succeed exit early WITHOUT positive or negative selection and remain mostly double-negative. They are <10% of T cells, enriched in mucosa/skin, more prominent before birth, and can recognize lipids on CD1. (A) γδ cells are not MHC-class-II restricted; many recognize lipids on CD1. (B) γδ cells skip the selection steps αβ cells undergo. (D) αβ cells are ~95%; γδ are the minority. (E) γδ cells are actually MORE prominent before birth.",
+      "basic"
+     ],
+     [
+      "Gamma-delta T cells are enriched in which locations and recognize what kind of antigen?",
+      [
+       "Lymph node germinal centers; they recognize peptide on MHC class II",
+       "Mucosa and skin; they can recognize lipid antigens presented on CD1",
+       "Bone marrow; they recognize free antibody",
+       "Blood exclusively; they recognize MHC class I peptides",
+       "The thymic medulla; they present antigen to B cells"
+      ],
+      1,
+      "γδ cells: location and antigen? γδ T cells are enriched in mucosa (gut, lung) and skin and can recognize lipid antigens on CD1 (e.g., mycobacterial lipids), fitting their barrier-tissue role. They are not classic MHC-peptide-restricted like αβ cells. (A) γδ cells are barrier-tissue residents, not germinal-center MHC-II responders. (C) They do not reside in marrow or recognize free antibody. (D) They are tissue-enriched, not blood-exclusive. (E) γδ cells are not antigen-presenting cells.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    30,
+    "Lec 11 · 3 Signals For T Cell Activation",
+    [
+     [
+      "Full activation of a naive T cell requires three signals. Which set correctly lists them?",
+      [
+       "Signal 1 = antigen/peptide-MHC via TCR; Signal 2 = CD28 binding B7 (co-stimulation); Signal 3 = cytokine from the APC",
+       "Signal 1 = cytokine; Signal 2 = antigen; Signal 3 = CD28-B7",
+       "Signal 1 = CD28-B7; Signal 2 = cytokine; Signal 3 = antigen",
+       "Signal 1 = antigen; Signal 2 = IL-2; Signal 3 = perforin",
+       "Signal 1 = TLR ligand; Signal 2 = antigen; Signal 3 = CD40L"
+      ],
+      0,
+      "What are the three activation signals? Signal 1 is antigen (peptide-MHC engaging the TCR), Signal 2 is co-stimulation (CD28 binding B7 = CD80/CD86), and Signal 3 is a cytokine from the APC that polarizes the cell. Signals 1+2 drive clonal expansion; signal 3 drives differentiation. (B) The order is wrong: antigen is signal 1, not signal 2. (C) Antigen is always signal 1; co-stimulation is signal 2. (D) IL-2 and perforin are downstream effects, not the canonical signals 2 and 3. (E) TLR ligands act on the APC to induce signals 2/3; they are not the T cell's signal 1.",
+      "basic"
+     ],
+     [
+      "Which professional antigen-presenting cell is the primary activator (primer) of naive T cells and traffics antigen from tissue to the lymph node?",
+      [
+       "Dendritic cell",
+       "B cell",
+       "Macrophage",
+       "Neutrophil",
+       "Natural killer cell"
+      ],
+      0,
+      "Primary primer of naive T cells? Dendritic cells are THE primary antigen-presenting cells for priming naive T cells: they capture antigen in tissue and traffic it to the lymph node. B cells present mainly to GET help; macrophages stay in tissue as phagocytic fighters. (B) B cells present antigen mainly to receive T-cell help, not to prime naive T cells. (C) Macrophages stay in tissue presenting locally; they are fighters, not primers. (D) Neutrophils are not professional APCs. (E) NK cells are innate lymphocytes, not professional APCs.",
+      "basic"
+     ],
+     [
+      "What is the functional difference between signals 1+2 and signal 3 in T-cell activation?",
+      [
+       "Signals 1+2 drive differentiation; signal 3 drives proliferation",
+       "Signals 1+2 drive clonal expansion (proliferation); signal 3 (cytokine) drives differentiation into Th1/Th2/Th17",
+       "Signal 3 alone is sufficient for full activation",
+       "Signals 1+2 cause apoptosis; signal 3 rescues the cell",
+       "Signal 3 is provided by the TCR; signals 1+2 by cytokines"
+      ],
+      1,
+      "Signals 1+2 vs signal 3 — function? Signals 1 (antigen) and 2 (co-stimulation) together drive clonal expansion — building the clone army. Signal 3 (a cytokine from the APC) \"weaponizes\" the cells, directing differentiation into Th1, Th2, or Th17. (A) This reverses the roles. (C) Signal 3 alone does not activate; all three are needed. (D) Signals 1+2 promote expansion, not apoptosis. (E) The TCR provides signal 1; cytokine is signal 3.",
+      "basic"
+     ],
+     [
+      "A patient develops fever, rash, and shock after a bacterial toxin acts as a superantigen. What is the mechanism?",
+      [
+       "It inhibits calcineurin like cyclosporine",
+       "It binds the peptide-binding groove with high specificity, activating one clone",
+       "It blocks CD28, preventing activation",
+       "It deletes T cells in the thymus",
+       "It cross-links the TCR V-beta to MHC class II outside the peptide groove, polyclonally activating many T cells → massive cytokine release (storm)"
+      ],
+      4,
+      "Superantigen mechanism? A superantigen bridges the TCR V-beta region to the beta-1 of MHC class II OUTSIDE the peptide groove, forcing signaling regardless of antigen specificity. This polyclonally activates a large T-cell fraction → huge IL-1/IL-6/TNF-alpha release = cytokine storm (toxic shock; SARS-CoV-2 spike encodes one). (A) Their mechanism is cross-linking, not calcineurin inhibition. (B) Superantigens bypass the groove and activate many clones, not one. (C) They force activation, not block CD28. (D) They act peripherally, not via thymic deletion.",
+      "basic"
+     ],
+     [
+      "What does \"T-cell priming\" mean, and why must a primed effector T cell see antigen a second time in the tissue?",
+      [
+       "Priming is the same as negative selection",
+       "Priming kills the T cell unless rescued by antigen",
+       "Priming means the T cell secretes all cytokines immediately in the lymph node",
+       "Priming activates the T cell but withholds effector release; a second antigen encounter in tissue triggers local cytokine/killing so effectors are not released systemically",
+       "A second encounter is needed to rearrange the TCR"
+      ],
+      3,
+      "Why does a primed T cell need a 2nd antigen hit? Priming activates the T cell but holds back effector function — if cytokines/killing were released systemically in the lymph node, TNF-alpha on endothelium would be lethal. The effector cell must re-encounter antigen in the tissue (e.g., on macrophages) to release effectors locally, at the target. (A) Priming is peripheral activation, not thymic negative selection. (B) Priming activates, it does not kill. (C) The point of priming is to NOT release effectors systemically. (E) The TCR is fixed after the thymus; no re-rearrangement occurs.",
+      "basic"
+     ],
+     [
+      "A small drug like penicillin couples to red-cell surface proteins and triggers an antibody response causing hemolysis. This describes a:",
+      [
+       "Hapten",
+       "Superantigen",
+       "Mitogen",
+       "Cytokine",
+       "Co-stimulatory molecule"
+      ],
+      0,
+      "Penicillin on RBCs → hemolysis = ? A hapten is a small molecule too small to be immunogenic alone; coupled to a protein (e.g., on red cells) it forms a haptenated antigen that triggers a response — here, drug-induced hemolytic anemia. Haptens also cause contact dermatitis. (B) Superantigens cross-link TCR-V-beta to MHC II; they are not small protein-coupled molecules. (C) Mitogens are polyclonal lab activators acting on downstream signaling/TLRs. (D) A cytokine is a signaling protein, not a small coupled drug. (E) Co-stimulatory molecules (e.g., B7) deliver signal 2.",
+      "basic"
+     ],
+     [
+      "Why must a dendritic cell mature before it can effectively activate a naive T cell?",
+      [
+       "Maturation removes co-stimulatory molecules",
+       "Immature DCs kill T cells on contact",
+       "Mature DCs lose all MHC expression",
+       "Maturation (e.g., via TLR signaling) upregulates B7 (CD80/CD86), turns on cytokine production, and increases MHC — supplying signals 2 and 3",
+       "Only immature DCs can present antigen"
+      ],
+      3,
+      "Why must a DC mature to prime T cells? Immature DCs capture antigen but lack co-stimulation/cytokines. Maturation (often via TLR signaling) upregulates B7 (CD80/CD86), induces cytokine production, and raises MHC — providing signals 2 and 3. Priming on an immature DC causes anergy (no clone army). (A) Maturation adds co-stimulation; it does not remove it. (B) Immature DCs cause anergy, they do not kill T cells. (C) Mature DCs increase, not lose, MHC. (E) Mature DCs are the effective presenters for priming.",
+      "basic"
+     ],
+     [
+      "B7 co-stimulatory molecules on the APC consist of which two CD molecules?",
+      [
+       "CD3 and CD28",
+       "CD4 and CD8",
+       "CD80 and CD86",
+       "CD40 and CD40L",
+       "CD25 and CD45"
+      ],
+      2,
+      "B7 = which two CD molecules? B7 comprises CD80 (B7-1) and CD86 (B7-2), which bind CD28 to deliver signal 2. They matter clinically because transplant drugs target them (and CTLA-4 outcompetes CD28 for them). (A) CD3 is TCR signaling; CD28 is the receptor for B7, not B7 itself. (B) CD4/CD8 are T-cell co-receptors. (D) CD40/CD40L are a separate help pathway. (E) CD25 is IL-2Ralpha; CD45 is a phosphatase — neither is B7.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    31,
+    "Lec 11 · Role Of Interleukin-2 In T Cells",
+    [
+     [
+      "After the TCR engages peptide-MHC, which signaling molecule is the critical docking kinase whose deficiency abolishes the T-cell response?",
+      [
+       "Calcineurin",
+       "ZAP-70",
+       "NFAT",
+       "Perforin",
+       "CD40 ligand"
+      ],
+      1,
+      "Critical docking kinase after TCR engagement? LCK phosphorylates ITAMs on CD3/zeta, creating docking sites for ZAP-70. ZAP-70 is the critical hub — if it is deficient, there is no T-cell response. It then phosphorylates LAT to branch the cascade. (A) Calcineurin acts downstream on NFAT; it is not the docking kinase. (C) NFAT is a transcription factor, not the docking kinase. (D) Perforin is a CTL effector molecule, unrelated to TCR proximal signaling. (E) CD40L is a surface ligand for B-cell help, not a proximal kinase.",
+      "basic"
+     ],
+     [
+      "Which two molecules form the signaling complex of the TCR, carrying ITAMs that get phosphorylated?",
+      [
+       "LFA-1 and ICAM-1",
+       "CD4 and CD8",
+       "CD28 and CTLA-4",
+       "B7 and CD40",
+       "CD3 and the zeta chains"
+      ],
+      4,
+      "Signaling complex of the TCR? The TCR itself has a short tail and does not signal; CD3 and the zeta chains carry the ITAMs that LCK phosphorylates, recruiting ZAP-70. CD4/CD8 are co-receptors; CD28/CTLA-4 are co-stimulatory; LFA-1/ICAM-1 are adhesion. (A) LFA-1/ICAM-1 are adhesion molecules for interaction time, not signaling ITAMs. (B) CD4/CD8 are co-receptors that stabilize MHC binding, not the ITAM signaling unit. (C) CD28/CTLA-4 deliver/oppose co-stimulation, not TCR ITAM signaling. (D) B7 and CD40 are APC-side molecules.",
+      "basic"
+     ],
+     [
+      "IL-2 is the key cytokine produced as a product of TCR signaling. What is its primary role?",
+      [
+       "Presenting antigen to B cells",
+       "Killing virus-infected cells directly",
+       "Driving clonal expansion (proliferation) of the activated T cell",
+       "Rearranging the TCR alpha chain",
+       "Blocking dendritic-cell maturation"
+      ],
+      2,
+      "Primary role of IL-2? IL-2, produced after TCR ligation (mainly by CD4 cells), drives clonal expansion — the proliferation that builds the clone army. It also induces anti-apoptotic BCL proteins and upregulates the IL-2 receptor alpha chain (CD25). (A) Antigen presentation is an APC function. (B) Killing is a CTL effector function (perforin/granzyme), not IL-2's role. (D) TCR rearrangement occurs in the thymus, not via IL-2. (E) IL-2 does not block DC maturation.",
+      "basic"
+     ],
+     [
+      "An infant has recurrent infections; testing shows T cells that cannot signal through the TCR despite normal antigen presentation, traced to a defective docking kinase. Which deficiency fits?",
+      [
+       "B7 overexpression",
+       "Calcineurin overactivity",
+       "Excess IL-2 production",
+       "CD40L excess",
+       "ZAP-70 deficiency → no productive TCR signaling → absent T-cell response"
+      ],
+      4,
+      "No TCR signaling, defective docking kinase? ZAP-70 docks on phosphorylated ITAMs (after LCK) and is the indispensable hub of TCR signaling. Without it, antigen is presented normally but the T cell cannot transmit the signal — no response — producing a combined immunodeficiency picture. (A) B7 overexpression would enhance co-stimulation, not block signaling. (B) Calcineurin overactivity would increase, not abolish, signaling. (C) Excess IL-2 does not block TCR signaling. (D) CD40L excess affects B-cell help, not proximal TCR signaling.",
+      "basic"
+     ],
+     [
+      "The IL-2 receptor alpha chain, upregulated transiently after activation, is also known as:",
+      [
+       "CD28",
+       "CD25",
+       "CD40",
+       "CD3",
+       "CD8"
+      ],
+      1,
+      "IL-2 receptor alpha chain = ? The IL-2 receptor alpha chain is CD25, turned on transiently after activation to complete the high-affinity receptor and open a window for clonal expansion. CD25 returns later as a regulatory-T-cell marker. (A) CD28 is the co-stimulatory receptor. (C) CD40 is on APCs/B cells (ligand CD40L on T cells). (D) CD3 is part of the TCR signaling complex. (E) CD8 is the cytotoxic-lineage co-receptor.",
+      "basic"
+     ],
+     [
+      "CTLA-4 and PD-1 both put the brakes on T-cell expansion. How does CTLA-4 act?",
+      [
+       "It is the same molecule as CD28",
+       "It amplifies CD28 signaling",
+       "It outcompetes CD28 for B7 and recruits a phosphatase that strips ITAM phosphates, shutting down TCR signaling",
+       "It provides signal 3",
+       "It rearranges the TCR"
+      ],
+      2,
+      "How does CTLA-4 brake T cells? CTLA-4 upregulates ~day 3–4 and outcompetes CD28 for B7 (CD80/CD86), removing co-stimulation, and recruits a phosphatase that dephosphorylates the CD3/zeta ITAMs — shutting down signaling. PD-1 similarly recruits phosphatases via its ligand. (A) CTLA-4 is distinct from CD28 (its competitor). (B) CTLA-4 opposes, not amplifies, CD28. (D) Signal 3 is a cytokine, not CTLA-4. (E) CTLA-4 does not rearrange the TCR.",
+      "basic"
+     ],
+     [
+      "Three transcription factors converge on the IL-2 gene after TCR signaling. Which trio is correct?",
+      [
+       "NF-kB, FoxP3, and AIRE",
+       "NF-kB (via PKC), NFAT (via calcium/calcineurin), and AP-1 (via the MAPK pathway)",
+       "NFAT, RAG1, and TdT",
+       "AP-1, Notch1, and STAT3",
+       "NF-kB, p53, and c-Myc"
+      ],
+      1,
+      "Which 3 transcription factors activate IL-2? TCR signaling branches into three transcription-factor arms — NF-kB (PKC → IkB kinase), NFAT (Ca2+ → calmodulin → calcineurin), and AP-1 (RAS/RAC → MAPK) — all converging on the IL-2 promoter. All three are required. (A) FoxP3/AIRE are tolerance factors, not the IL-2 trio. (C) RAG1/TdT are recombination enzymes, not transcription factors here. (D) Notch1/STAT3 are not the canonical IL-2 trio. (E) p53/c-Myc are not the TCR-driven IL-2 activators.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    32,
+    "Lec 11 · Tcr Signaling Events",
+    [
+     [
+      "Glucocorticoids and cyclosporine both dampen T-cell responses but hit different targets. Which pairing is correct?",
+      [
+       "Glucocorticoids block ZAP-70; cyclosporine blocks LCK",
+       "Glucocorticoids inhibit calcineurin; cyclosporine blocks NF-kB",
+       "Both inhibit calcineurin",
+       "Glucocorticoids block NF-kB activation; cyclosporine inhibits calcineurin (blocking NFAT)",
+       "Both block the MAPK/AP-1 pathway"
+      ],
+      3,
+      "Glucocorticoid vs cyclosporine target? Glucocorticoids block NF-kB mobilization (anti-inflammatory, dampening cytokine production); cyclosporine inhibits calcineurin, so NFAT stays phosphorylated and cannot enter the nucleus. Different arms of the same IL-2-driving cascade. (A) Neither drug acts on ZAP-70 or LCK as its mechanism here. (B) This reverses the two drug targets. (C) Only cyclosporine targets calcineurin; glucocorticoids target NF-kB. (E) AP-1/MAPK is not the target of either drug.",
+      "basic"
+     ],
+     [
+      "A transplant patient is started on cyclosporine. By blocking calcineurin, which downstream consequence prevents rejection?",
+      [
+       "Perforin is released, killing the graft",
+       "NF-kB is freed and enters the nucleus → more IL-2",
+       "ZAP-70 is hyperactivated → stronger signaling",
+       "CD28 binds B7 more avidly → more co-stimulation",
+       "NFAT stays phosphorylated and cannot enter the nucleus → reduced IL-2 transcription → impaired clonal expansion"
+      ],
+      4,
+      "Cyclosporine → which downstream effect? Calcineurin normally dephosphorylates NFAT to let it enter the nucleus. Cyclosporine inhibits calcineurin, so NFAT stays phosphorylated in the cytoplasm — IL-2 transcription falls, clonal expansion is impaired, and the anti-graft T-cell response is blunted. (A) Blocking calcineurin reduces activation; it does not trigger perforin release. (B) Cyclosporine does not free NF-kB; it blocks the NFAT arm. (C) It dampens signaling downstream, not hyperactivates ZAP-70. (D) It does not enhance CD28-B7 co-stimulation.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    33,
+    "Lec 12 · Th2 Cytokine Production · Function Of Th17 Il-17",
+    [
+     [
+      "Which subset, cytokines, and target are correctly matched?",
+      [
+       "Th1: IFN-gamma/IL-2/TNF-alpha → intracellular pathogens",
+       "Th2: IL-17/IL-22 → extracellular bacteria",
+       "Th17: IL-4/IL-5/IL-13 → parasitic worms",
+       "Th1: IL-4/IL-5/IL-13 → parasites",
+       "Th2: IFN-gamma → intracellular pathogens"
+      ],
+      0,
+      "Match subset – cytokines – target? Th1 makes IFN-gamma, IL-2, and TNF-alpha and targets intracellular pathogens (and supports macrophage killing). Th2 (IL-4/5/13) targets parasitic worms; Th17 (IL-17/22) targets extracellular bacteria. (B) Th2 makes IL-4/5/13; IL-17/22 is Th17. (C) Th17 makes IL-17/22; IL-4/5/13 is Th2. (D) Th1 makes IFN-gamma/IL-2/TNF-alpha, not the Th2 cytokines. (E) IFN-gamma is a Th1 product, not Th2.",
+      "basic"
+     ],
+     [
+      "IFN-gamma from Th1 cells acts on macrophages to do what?",
+      [
+       "Suppress all phagocytosis",
+       "Polarize them to M2 for wound healing",
+       "Polarize them to M1 and boost NADPH oxidase / iNOS (more ROS/RNS) for killing",
+       "Convert them into dendritic cells",
+       "Induce IgE production"
+      ],
+      2,
+      "IFN-gamma effect on macrophages? IFN-gamma drives M1 polarization and upregulates NADPH oxidase and iNOS, flooding the phagosome with ROS/RNS to overwhelm even catalase-positive organisms. It also raises MHC I/B7 (so the macrophage can be killed if it fails). (A) IFN-gamma enhances, not suppresses, phagocytic killing. (B) M2 polarization is driven by IL-4/IL-13 (Th2), not IFN-gamma. (D) Macrophages are not converted into DCs by IFN-gamma. (E) IgE is driven by IL-4, a Th2 cytokine.",
+      "basic"
+     ],
+     [
+      "Which cytokines polarize macrophages to the M2 (wound-healing, anti-inflammatory) phenotype?",
+      [
+       "IFN-gamma and TNF-alpha",
+       "IL-4 and IL-13",
+       "IL-12 and IL-2",
+       "IL-17 and IL-22",
+       "IL-6 and TGF-beta"
+      ],
+      1,
+      "Which cytokines drive M2? IL-4 and IL-13 (Th2) polarize macrophages to M2, which clear apoptotic cells, suppress inflammation, and promote wound healing. IFN-gamma drives the opposing M1 phenotype. (A) IFN-gamma/TNF-alpha drive M1, the opposite phenotype. (C) IL-12/IL-2 are Th1-axis, not M2 inducers. (D) IL-17/IL-22 are Th17 barrier cytokines, not M2 polarizers. (E) IL-6 + TGF-beta drive Th17 differentiation, not M2.",
+      "basic"
+     ],
+     [
+      "In a Th2 response, IL-4 drives B cells to produce which antibody isotype, which then arms mast cells?",
+      [
+       "IgG (binds Fc-gamma receptors)",
+       "IgE (binds Fc-epsilon receptors on mast cells → degranulation)",
+       "IgM (pentameric, complement-fixing)",
+       "IgA (mucosal secretory)",
+       "IgD (naive B-cell surface)"
+      ],
+      1,
+      "IL-4 drives which antibody isotype? IL-4 drives B-cell IgE production. IgE binds Fc-epsilon receptors on mast cells; when antigen cross-links it, mast cells degranulate — driving the inflammation that recruits eosinophils against parasitic worms (and underlies allergy). (A) IgG is not the IL-4/mast-cell isotype. (C) IgM is the default isotype without class switch help. (D) IgA (mucosal) is driven by TGF-beta. (E) IgD is a naive-B-cell surface isotype, not the mast-cell arming antibody.",
+      "basic"
+     ],
+     [
+      "IL-22 (from Th17) primarily protects the mucosal barrier by:",
+      [
+       "Forming membrane pores in target cells",
+       "Driving IgE production",
+       "Polarizing macrophages to M1",
+       "Recruiting eosinophils",
+       "Inducing antimicrobial peptides (e.g., defensins) and reinforcing the epithelial barrier"
+      ],
+      4,
+      "IL-22 main barrier action? IL-22 induces antimicrobial peptides such as defensins and strengthens the epithelial barrier; it has both pro- and anti-inflammatory roles but in infection chiefly reinforces mucosal defense. IL-17 handles neutrophil recruitment. (A) Pore formation is perforin, not IL-22. (B) IgE is an IL-4 effect. (C) M1 polarization is an IFN-gamma effect. (D) Eosinophil recruitment is IL-5.",
+      "basic"
+     ],
+     [
+      "In a Th2 response to parasitic worms, IL-5 primarily acts to:",
+      [
+       "Recruit and activate eosinophils",
+       "Drive IgE production by B cells",
+       "Polarize macrophages to M1",
+       "Activate cytotoxic T cells",
+       "Induce antimicrobial peptides"
+      ],
+      0,
+      "IL-5 primary action? IL-5 is the eosinophil recruitment and activation factor — eosinophils are the parasite specialists that can reach the gut lumen and degranulate on IgE-coated worms. IL-4 drives IgE; IL-4/IL-13 drive M2 and worm expulsion. (B) IgE production is driven by IL-4, not IL-5. (C) M1 polarization is an IFN-gamma (Th1) effect. (D) IL-5 does not activate CTLs. (E) Antimicrobial peptides are an IL-22 (Th17) effect.",
+      "basic"
+     ],
+     [
+      "How do CD8 \"type 1/2/17\" cells (Tc1/Tc2/Tc17) compare with their CD4 helper counterparts?",
+      [
+       "They only exist in the thymus",
+       "They cannot make any cytokines",
+       "They are the primary cytokine secretors, more than CD4 cells",
+       "They present antigen to B cells",
+       "They can adopt the same cytokine profiles but their main function is killing, so they make relatively little cytokine"
+      ],
+      4,
+      "Tc1/Tc2/Tc17 vs CD4 helpers? CD8 cells can take on the same 1/2/17 cytokine profiles (e.g., Tc1 with IL-12) but their primary job is cytotoxic killing, so they secrete comparatively little cytokine — the helper (CD4) cells are the main cytokine producers. (A) They function in the periphery, not only the thymus. (B) They can make cytokines, just less than helpers. (C) CD4 helpers are the primary cytokine secretors, not CD8. (D) Antigen presentation to B cells is a B-cell/APC role.",
+      "basic"
+     ],
+     [
+      "Which statement about the Th1–Th2 relationship is correct?",
+      [
+       "IFN-gamma and IL-4 are mutually antagonistic; Th1 is pro-inflammatory, Th2 is more anti-inflammatory / wound-healing",
+       "Th1 and Th2 cytokines amplify each other",
+       "Both are purely anti-inflammatory",
+       "Th2 drives M1 polarization and ROS",
+       "Th1 produces IgE and recruits eosinophils"
+      ],
+      0,
+      "Th1–Th2 relationship? IFN-gamma (Th1) and IL-4 (Th2) suppress each other — a lot of one dampens the other. Th1 is pro-inflammatory (M1, ROS, killing); Th2 is more anti-inflammatory and promotes wound healing (M2), with a special inflammatory carve-out for anti-worm responses. (B) They are antagonistic, not amplifying. (C) Th1 is pro-inflammatory, not anti-inflammatory. (D) M1/ROS is an IFN-gamma (Th1) effect; Th2 drives M2. (E) IgE/eosinophils are Th2 (IL-4/IL-5), not Th1.",
+      "basic"
+     ],
+     [
+      "Th17 cells primarily defend against extracellular bacteria by recruiting which cell via IL-17?",
+      [
+       "Cytotoxic T cells",
+       "Eosinophils",
+       "Natural killer cells",
+       "Plasma cells",
+       "Neutrophils"
+      ],
+      4,
+      "Th17/IL-17 recruits which cell? IL-17 triggers epithelial/stromal cytokines and growth factors that recruit and activate neutrophils — the effectors against extracellular bacteria. IL-22 reinforces the barrier with antimicrobial peptides. (A) CTLs are CD8 killers, not the IL-17-recruited effector. (B) Eosinophils are the Th2 anti-parasite effector. (C) NK cells are recruited/activated mainly in Th1/innate contexts. (D) Plasma cells are antibody factories, not the IL-17 target.",
+      "basic"
+     ],
+     [
+      "A patient cannot make functional IFN-gamma. Which infection pattern is most predicted?",
+      [
+       "Inability to make any antibody",
+       "Severe parasitic worm infections only",
+       "Susceptibility to intracellular organisms (e.g., mycobacteria) because macrophages fail to reach M1 killing capacity",
+       "Recurrent extracellular bacterial abscesses only",
+       "Complete absence of T cells"
+      ],
+      2,
+      "IFN-gamma deficiency → infection pattern? IFN-gamma drives M1 polarization and the ROS/RNS burst that kills intracellular organisms. Without it, macrophages cannot fully activate, so intracellular pathogens — classically mycobacteria — persist. (Th2/Th17 arms and antibody production remain.) (A) IFN-gamma loss does not abolish antibody production. (B) Worm defense is the Th2 arm (IL-4/5/13), not IFN-gamma. (D) Extracellular abscesses point more to Th17/neutrophil defects. (E) IFN-gamma loss impairs macrophage activation, not T-cell development.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    34,
+    "Lec 12 · T Cell Contraction",
+    [
+     [
+      "How does passive cell death differ from activation-induced cell death (AICD) during T-cell contraction?",
+      [
+       "Passive death is Fas/FasL-driven; AICD is cytokine withdrawal",
+       "Passive death follows cytokine/BCL-2 withdrawal → BAK/BAX pores → MOMP → cytochrome C; AICD is Fas/FasL-driven T-cell suicide",
+       "Both are perforin-mediated",
+       "Passive death requires antigen re-encounter; AICD does not occur in T cells",
+       "AICD is caused by loss of MHC class I"
+      ],
+      1,
+      "Passive death vs AICD? Passive (cytokine-withdrawal) death: as antigen clears, cytokine and BCL-2 fall, so BAK/BAX form mitochondrial pores (MOMP) → cytochrome C → apoptosome → caspase-3. AICD: rising Fas/FasL lets activated T cells kill each other (suicide). Both drive contraction; memory cells are spared. (A) This reverses the two mechanisms. (C) Neither contraction mechanism is perforin-mediated. (D) AICD very much occurs in T cells (it is the Fas/FasL route). (E) AICD is Fas/FasL-driven, not caused by MHC I loss.",
+      "basic"
+     ],
+     [
+      "A tumor overexpresses BCL-2. How does this help it evade the passive (mitochondrial) death pathway?",
+      [
+       "BCL-2 blocks BAK/BAX pore formation, preventing MOMP and cytochrome C release → the cell resists apoptosis despite being constitutively activated",
+       "BCL-2 activates caspase-8 directly",
+       "BCL-2 increases perforin sensitivity",
+       "BCL-2 forms the apoptosome",
+       "BCL-2 upregulates Fas on the tumor"
+      ],
+      0,
+      "Tumor BCL-2 overexpression → escape how? Any strongly activated cell defaults to apoptosis via BAK/BAX pores unless rescued. BCL-2 (normally cytokine-induced) blocks those pores, preventing MOMP/cytochrome C release. Tumors amplify BCL-2 to stay alive despite self-driven proliferation — a classic apoptosis-evasion mechanism. (B) BCL-2 inhibits the mitochondrial route; it does not activate caspase-8. (C) BCL-2 promotes survival; it does not raise perforin sensitivity. (D) BCL-2 prevents apoptosome formation by blocking cytochrome C release. (E) BCL-2 does not upregulate Fas; it blocks intrinsic apoptosis.",
+      "basic"
+     ],
+     [
+      "During the contraction phase, which T cells are protected from both passive death and AICD?",
+      [
+       "Naive T cells that never saw antigen",
+       "Short-lived effector T cells",
+       "Double-positive thymocytes",
+       "Memory T cells",
+       "Plasma cells"
+      ],
+      3,
+      "Which T cells survive contraction? Memory T cells are spared during contraction — they persist (with IL-7R survival signaling) while short-lived effectors die by cytokine-withdrawal (passive) death and Fas/FasL-driven AICD. (A) Naive cells that never activated are not the contraction survivors at issue. (B) Short-lived effectors are exactly the cells that die in contraction. (C) Double-positive thymocytes are a thymic stage, not part of peripheral contraction. (E) Plasma cells are B-lineage, not the memory T cells spared here.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    35,
+    "Lec 13 · Btk And B Cell Ontogeny",
+    [
+     [
+      "Negative selection of newly formed B cells against self-antigen occurs predominantly at which site, distinguishing it from the marrow events that precede it?",
+      [
+       "The lymph-node germinal center",
+       "The bone marrow, at the pro-B stage",
+       "The thymic medulla",
+       "The spleen, at the T1 transitional stage",
+       "The peritoneal cavity"
+      ],
+      3,
+      "Correct — T1 transitional B cells undergo negative selection in the spleen; self-reactive ones are eliminated before becoming T2. (A) Germinal centers are sites of affinity maturation (Lec 14), not this developmental negative selection. (B) Heavy/light-chain rearrangement happens at the pro-B/pre-B stages in marrow, but the self-antigen negative selection emphasized here is splenic. (C) The thymic medulla is the site for T-cell negative selection. (E) The peritoneal cavity houses B-1 cells, not the negative-selection checkpoint.",
+      "basic"
+     ],
+     [
+      "Why does failure to productively rearrange the immunoglobulin heavy chain cause a developing pro-B cell to die rather than simply pause?",
+      [
+       "No pre-BCR forms, so IL-7R survival signaling is lost and the cell undergoes apoptosis",
+       "The cell is actively deleted by negative selection against self-antigen",
+       "RAG enzymes degrade the genomic DNA irreversibly",
+       "The cell switches to the T-cell lineage and leaves the marrow",
+       "Complement lyses the cell via the classical pathway"
+      ],
+      0,
+      "Correct — a productive heavy chain (pre-BCR) is required to sustain IL-7R survival signaling; without it, mitochondrial apoptosis proceeds. (B) Negative selection against self-antigen occurs later, in the spleen, not at the heavy-chain checkpoint. (C) RAG does not indiscriminately degrade genomic DNA. (D) Failed B-cell rearrangement does not convert the cell to a T cell. (E) Complement does not mediate this developmental checkpoint death.",
+      "basic"
+     ],
+     [
+      "The order of immunoglobulin gene rearrangement during B-cell ontogeny is best described as:",
+      [
+       "Light-chain V-J first, then heavy-chain V-DJ",
+       "Heavy-chain D-J then V-DJ first, then light-chain V-J",
+       "Heavy and light chains rearrange simultaneously",
+       "Light chain only; the heavy chain is inherited germline",
+       "V-J on both chains with no D segment on either"
+      ],
+      1,
+      "Correct — the heavy chain rearranges first (D-J, then V to DJ) to form the pre-BCR; the light chain (V-J) rearranges afterward. (A) The order is reversed — heavy chain precedes light chain. (C) They are sequential, not simultaneous. (D) Both chains undergo somatic rearrangement; neither stays germline. (E) The heavy chain uses a D segment (V-D-J); only the light chain lacks D.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    36,
+    "Lec 13 · B Cell Coreceptor · B Cell Maturation",
+    [
+     [
+      "Which enzyme pair performs the V(D)J recombination that assembles the B-cell receptor heavy and light chains during ontogeny?",
+      [
+       "Syk and Lyn",
+       "AID and UNG",
+       "RAG1 and RAG2",
+       "TdT and DNA pol β",
+       "BTK and PI3K"
+      ],
+      2,
+      "Correct — RAG1/RAG2 are the recombinases that excise and rejoin the V, D, and J segments. (A) Syk and Lyn are BCR signal-1 kinases, not recombination enzymes. (B) AID/UNG act later, in somatic hypermutation and class switch (Lec 14), not in V(D)J assembly. (D) TdT adds non-templated N-nucleotides at the junctions but does not perform the recombination itself. (E) BTK and PI3K transduce the pre-BCR survival signal; they do not rearrange DNA.",
+      "basic"
+     ],
+     [
+      "At which ontogeny stage is heavy-chain rearrangement first completed and the pre-BCR expressed, driving antigen-independent proliferation?",
+      [
+       "Early pro-B cell",
+       "Large pre-B cell",
+       "Immature B cell",
+       "T1 transitional B cell",
+       "Mature naive B cell"
+      ],
+      1,
+      "Correct — a successful heavy chain forms the pre-BCR, marking the large pre-B cell that proliferates without antigen. (A) The early pro-B cell is still undergoing D-J joining; no pre-BCR yet. (C) The immature B cell already expresses full surface IgM (H+L assembled) — that is past the pre-BCR step. (D) T1 transitional is a splenic stage, well after the pre-BCR. (E) The mature naive B cell is the endpoint, far past pre-BCR expression.",
+      "basic"
+     ],
+     [
+      "An immature B cell and a mature single-positive T cell both transduce antigen-receptor signals, but through different invariant chains. Which pairing correctly matches each receptor to its signaling subunits?",
+      [
+       "Both use CD3/ζ-chain",
+       "B cell = CD3/ζ-chain; T cell = Igα/Igβ",
+       "B cell = CD19/CD81; T cell = CD3/ζ-chain",
+       "B cell = Igα/Igβ; T cell = CD19/CD81",
+       "B cell = Igα/Igβ; T cell = CD3/ζ-chain"
+      ],
+      4,
+      "Correct — the BCR signals through Igα/Igβ, whereas the TCR signals through CD3 and ζ-chain. (A) Only the TCR uses CD3/ζ; the BCR uses Igα/Igβ. (B) The assignments are swapped — Igα/Igβ is the B-cell pair, CD3/ζ the T-cell pair. (C) CD19/CD81 belong to the B-cell co-receptor, not the core BCR signaling pair. (D) CD19/CD81 is not the T-cell signaling pair (that is CD3/ζ).",
+      "basic"
+     ],
+     [
+      "A flow panel on a male infant with recurrent pyogenic infections shows absent CD19+ cells but normal CD3+ cells. Which surface-marker set defines the missing population?",
+      [
+       "CD14, CD11b",
+       "CD3, CD4, CD8",
+       "CD16, CD56",
+       "CD19, CD20, CD21",
+       "CD25, CD127"
+      ],
+      3,
+      "Correct — CD19/CD20/CD21 are the B-cell markers; their absence with intact CD3+ T cells points to a B-lineage defect. (A) CD14/CD11b mark myeloid cells. (B) CD3/CD4/CD8 mark T cells, which are present here. (C) CD16/CD56 mark NK cells, not the missing B-cell population. (E) CD25/CD127 relate to regulatory/IL-7R biology, not the B-cell marker triad.",
+      "basic"
+     ],
+     [
+      "A 10-month-old boy has had repeated bacterial infections since maternal antibody waned. Serum immunoglobulins are very low across all isotypes, CD19+ B cells are nearly absent, and CD3+ T-cell numbers and function are normal. Which single defect best unifies these findings?",
+      [
+       "A CD40-ligand defect causing hyper-IgM",
+       "A RAG1/RAG2 deficiency abolishing both T and B lymphocytes",
+       "A BTK mutation blocking the pre-BCR checkpoint",
+       "A common gamma-chain mutation causing X-linked SCID",
+       "A complement C3 deficiency"
+      ],
+      2,
+      "Correct — X-linked agammaglobulinemia: defective BTK halts development at the pre-B stage, so no mature B cells and no antibodies, while T cells are spared. (A) Hyper-IgM spares B-cell numbers and elevates IgM; this child has nearly absent B cells and low IgM. (B) RAG deficiency would also wipe out T cells; here T cells are normal. (D) X-linked SCID severely impairs T (and NK) cells; T cells are normal here. (E) C3 deficiency raises pyogenic-infection risk but does not abolish B cells or all antibody.",
+      "basic"
+     ],
+     [
+      "Which cytokine, produced by bone-marrow stromal cells, delivers the survival signal that rescues developing B cells from apoptosis at each early ontogeny step?",
+      [
+       "Stem cell factor (SCF)",
+       "IL-2",
+       "BAFF",
+       "SDF-1 (CXCL12)",
+       "IL-7"
+      ],
+      4,
+      "Correct — IL-7 from stromal cells provides the anti-apoptotic survival signal through the early stages until the pre-BCR forms. (A) SCF binds Kit to drive pro-B proliferation, not the survival rescue role IL-7 plays. (B) IL-2 drives later lymphocyte proliferation, not early B-cell survival in the marrow. (C) BAFF supports later splenic transitional-B survival, not the early marrow steps. (D) SDF-1/CXCL12 retains progenitors on stromal cells but is not the apoptosis-rescue cytokine.",
+      "basic"
+     ],
+     [
+      "Pre-BCR signaling activates which kinase to drive survival, proliferation, and maturation of the pre-B cell — the kinase mutated in X-linked agammaglobulinemia (Bruton tyrosine kinase)?",
+      [
+       "Lyn",
+       "Syk",
+       "BTK",
+       "ZAP-70",
+       "JAK3"
+      ],
+      2,
+      "Correct — the pre-BCR activates BTK; loss of BTK arrests development and causes XLA. (A) Lyn is an upstream Src-family kinase, not the XLA gene. (B) Syk docks on BCR ITAMs in mature signaling, not the defining pre-B kinase here. (D) ZAP-70 is the T-cell ITAM kinase. (E) JAK3 loss causes a form of SCID, not XLA.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    37,
+    "Lec 14 · Cytokines In Memory B Cells",
+    [
+     [
+      "Which feature most fundamentally separates a T-independent antigen from a T-dependent antigen in how it activates B cells?",
+      [
+       "TI antigens require germinal-center formation while TD antigens are cleared without follicles",
+       "TI antigens are protein-based and are processed onto MHC for T-cell recognition",
+       "TI antigens are non-protein and cannot be presented on MHC, so no T-cell help is recruited",
+       "TD antigens engage only the co-receptor while TI antigens engage only the BCR directly",
+       "TD antigens drive low-affinity IgM while TI antigens drive class-switched high-affinity IgG"
+      ],
+      2,
+      "Correct — TI antigens (polysaccharide, lipid, nucleic acid) cannot be processed to peptide for MHC display, so T cells cannot be engaged; TD protein antigens can. (A) It is reversed: TD responses build germinal centers; TI responses do not. (B) It is reversed — TD (protein) antigens are MHC-presentable; TI antigens are not. (D) Both antigen types engage the BCR as signal 1; this does not distinguish them. (E) It is reversed: TD responses class-switch to high affinity; TI responses make low-affinity IgM.",
+      "basic"
+     ],
+     [
+      "TI-1 and TI-2 antigens both bypass T-cell help but deliver their second signal differently. Which pairing is correct?",
+      [
+       "TI-1: BCR + CD40L (from TFH); TI-2: BCR + cytokine receptor (IL-21R)",
+       "TI-1: BCR + co-receptor CR2 (binding C3d); TI-2: BCR + PRR/TLR (e.g., LPS–TLR4)",
+       "TI-1: BCR + PRR/TLR (e.g., LPS–TLR4); TI-2: BCR + co-receptor CR2 binding C3d",
+       "TI-1: MHC II + TCR (peptide display); TI-2: B7 + CD28 (costimulation)",
+       "TI-1: Fc receptor (immune complex); TI-2: complement receptor CR1 only"
+      ],
+      2,
+      "Correct — TI-1 pairs BCR ligation with a PRR signal (LPS engaging TLR4); TI-2 pairs BCR ligation with complement co-receptor CR2 binding C3d. (A) CD40L is the T-dependent helper signal, not a TI second signal. (B) The second signals are swapped — TLR is the TI-1 partner, C3d/CR2 the TI-2 partner. (D) MHC II–TCR and B7–CD28 are T-cell costimulation, irrelevant to T-independent activation. (E) Neither TI type relies on Fc receptors for the second signal.",
+      "basic"
+     ],
+     [
+      "Serum from a patient shows antigen-specific IgM appearing within about two days of exposure, with no class switching and no affinity maturation over the following weeks. Which B-cell source best accounts for this pattern?",
+      [
+       "Memory B cells reactivating",
+       "A germinal-center T-dependent response",
+       "Long-lived bone-marrow plasma cells from a prior infection",
+       "Marginal-zone / T-independent B-cell response",
+       "Centrocytes undergoing affinity maturation"
+      ],
+      3,
+      "Correct — very rapid IgM (within ~2 days) with no switching or affinity maturation points to a T-independent / marginal-zone response, which is fast but does not build germinal centers. (A) Memory reactivation produces a rapid high-affinity, often switched response, not no-maturation IgM. (B) A TD germinal-center response is slower and yields switching and affinity maturation — absent here. (C) Long-lived PCs reflect prior antigen exposure and steady secretion, not a fresh 2-day IgM spike with no maturation. (E) Centrocyte affinity maturation is a GC (TD) process, contradicting the no-maturation pattern.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    38,
+    "Lec 14 · Cd40 And Somatic Hypermutation",
+    [
+     [
+      "Compared with a T-dependent response, a purely T-independent B-cell response is characterized by:",
+      [
+       "High-affinity IgG with robust long-lived memory and recall capacity",
+       "Low-affinity IgM with little or no memory and minimal class switching",
+       "Extensive somatic hypermutation with stepwise affinity maturation over weeks",
+       "Durable germinal-center reactions sustained by follicular dendritic cells",
+       "Strong cytokine-directed switching to IgE and IgA in mucosal tissues"
+      ],
+      1,
+      "Correct — TI responses yield rapid, low-affinity IgM, with little memory and limited switching because there is no germinal-center/TFH help. (A) High-affinity IgG with memory is the hallmark of the TD response. (C) SHM and affinity maturation occur in TD germinal centers, not TI responses. (D) Germinal centers are a TD feature, not a TI one. (E) Class switching to IgE/IgA is cytokine-directed in TD responses, not a TI feature.",
+      "basic"
+     ],
+     [
+      "As antigen is cleared, secreted antibody bound to antigen (immune complexes) can feed back to dampen further antibody production. Which mechanism mediates this shut-down?",
+      [
+       "Immune complexes captured on the B cell by Fc receptor activate complement that lyses the antibody-secreting B cell",
+       "Immune complexes captured on the B cell by Fc receptor recruit a phosphatase that dephosphorylates BCR signaling proteins",
+       "Immune complexes captured on the B cell by Fc receptor induce AID and drive class switching toward IgE production",
+       "Immune complexes captured on the B cell by Fc receptor deliver CD40L that further amplifies antibody output",
+       "Immune complexes captured on the B cell by Fc receptor trigger RAG re-expression and receptor re-editing"
+      ],
+      1,
+      "Correct — Fc-receptor capture of immune complexes recruits an inhibitory phosphatase (via FcγRIIB) that strips phosphates from BCR signaling proteins, shutting down further production. (A) The feedback is inhibitory signaling, not complement lysis of the B cell. (C) Immune-complex feedback dampens signaling; it does not drive IgE switching. (D) CD40L is supplied by TFH cells, not by immune complexes. (E) RAG re-expression is not the immune-complex feedback mechanism.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    39,
+    "Lec 14 · Class Switch Recombination",
+    [
+     [
+      "Which statement about a single germinal center is correct?",
+      [
+       "It is a structure that exclusively produces unswitched IgM antibody",
+       "It represents a mixed response to MANY unrelated antigens at the same time",
+       "It forms only in T-independent responses to polysaccharide antigens",
+       "It is the bone-marrow site where V(D)J recombination first occurs",
+       "It represents a B-cell response to one antigen, which may bear multiple epitopes"
+      ],
+      4,
+      "Correct — each germinal center is specific to one antigen (with possibly several epitopes); it is a clonal, antigen-focused structure. (A) GCs are where class switching occurs, so they are not IgM-only. (B) A GC is antigen-focused, not a mix of unrelated specificities. (C) GCs are a T-dependent feature, not T-independent. (D) V(D)J recombination occurs in the marrow during ontogeny, not in the GC.",
+      "basic"
+     ],
+     [
+      "Which receptor–ligand interaction between a TFH cell and a B cell is essential for inducing AID and licensing class switching?",
+      [
+       "CD28 (B cell) – B7 (TFH)",
+       "CD40 (B cell) – CD40L (TFH)",
+       "PD-1 (B cell) – PD-L1 (TFH)",
+       "CR2 (B cell) – C3d (antigen)",
+       "TLR4 (B cell) – LPS (microbe)"
+      ],
+      1,
+      "Correct — CD40 on the B cell engaging CD40L on the TFH cell is required to induce AID and enable switching. (A) B7–CD28 is a T-cell costimulation axis (CD28 is on T cells), not the CD40 switch signal. (C) PD-1–PD-L1 is inhibitory, not the AID-inducing signal. (D) CR2–C3d is the B-cell co-receptor signal 2, not the CD40 helper signal. (E) TLR4–LPS is a T-independent (TI-1) signal, not the TFH help that induces switching.",
+      "basic"
+     ],
+     [
+      "Which transcription factor, induced in the pre-TFH cell during its interaction with an activated B cell, drives full differentiation into a TFH cell and stabilizes CXCR5/CD40L expression?",
+      [
+       "FoxP3",
+       "T-bet",
+       "GATA-3",
+       "Bcl-6",
+       "ROR-γt"
+      ],
+      3,
+      "Correct — Bcl-6 is the master regulator that stabilizes the TFH program (CXCR5, CD40L) and drives pre-TFH → TFH differentiation. (A) FoxP3 defines regulatory T cells. (B) T-bet drives Th1 differentiation. (C) GATA-3 drives Th2 differentiation. (E) ROR-γt drives Th17 differentiation.",
+      "basic"
+     ],
+     [
+      "Which single enzyme is responsible for BOTH somatic hypermutation and class switch recombination in germinal-center B cells?",
+      [
+       "Terminal deoxynucleotidyl transferase (TdT)",
+       "RAG1/RAG2",
+       "Activation-induced deaminase (AID)",
+       "DNA polymerase III",
+       "Uracil-DNA-glycosylase (UNG)"
+      ],
+      2,
+      "Correct — AID drives both SHM and CSR by deaminating cytosine to uracil in the relevant DNA regions. (A) TdT adds N-nucleotides at V(D)J junctions; it does not mediate SHM/CSR. (B) RAG1/RAG2 perform V(D)J recombination during ontogeny, not SHM/CSR. (D) DNA pol III is a bacterial replicative polymerase, not the SHM/CSR enzyme. (E) UNG removes the uracil AID creates, but AID is the initiating enzyme for both processes.",
+      "basic"
+     ],
+     [
+      "The first plasma cells generated in a T-dependent response — formed during the initial TFH–B-lymphoblast interaction in the medulla — are best described as:",
+      [
+       "Marginal-zone B cells responding to blood antigen",
+       "Long-lived plasma cells residing in the bone marrow",
+       "Memory B cells circulating without secreting antibody",
+       "Centroblasts proliferating within the germinal center",
+       "Short-lived plasma cells producing the initial IgM"
+      ],
+      4,
+      "Correct — short-lived plasma cells arise first in the medulla and produce the initial IgM response, then apoptose as long-lived PCs are generated. (A) Marginal-zone B cells are a separate TI subset. (B) Long-lived bone-marrow PCs are generated later and persist for years. (C) Memory B cells do not secrete antibody; they express a BCR and wait. (D) Centroblasts are proliferating GC cells, not antibody-secreting PCs.",
+      "basic"
+     ],
+     [
+      "Somatic hypermutation and class switch recombination both depend on AID but alter different parts of the immunoglobulin gene. Which statement is correct?",
+      [
+       "SHM mutates the V region (changing affinity); CSR also mutates the V region (changing affinity)",
+       "SHM recombines the constant region (changing isotype); CSR mutates the V region (changing affinity)",
+       "SHM mutates the V region (changing affinity); CSR recombines switch regions in the constant region (changing isotype)",
+       "SHM recombines the constant region (changing isotype); CSR also recombines the constant region (changing isotype)",
+       "SHM deletes the V region (losing specificity); CSR deletes the light chain (losing assembly)"
+      ],
+      2,
+      "Correct — SHM introduces point mutations in the variable region (tuning affinity); CSR swaps constant-region exons via switch regions (changing isotype) while keeping the same V region/specificity. (A) CSR alters the constant region, not the V region. (B) The targets are swapped — SHM hits the V region, CSR the constant region. (D) SHM alters the variable region, not the constant region. (E) Neither process deletes the V region or the light chain.",
+      "basic"
+     ],
+     [
+      "In the interfollicular zone, an activated follicular B cell and an activated pre-TFH cell migrate toward each other via reciprocal chemokine-receptor changes. Which pairing is correct?",
+      [
+       "B cell: CCR7 up / CXCR5 down; pre-TFH: CCR7 down / CXCR5 up",
+       "B cell: CCR7 down / CXCR5 up; pre-TFH: CCR7 up / CXCR5 down",
+       "B cell: CCR7 up / CXCR5 up; pre-TFH: CCR7 up / CXCR5 up",
+       "B cell: CCR7 down / CXCR5 down; pre-TFH: CCR7 down / CXCR5 down",
+       "B cell: CXCR4 up / CCR7 down; pre-TFH: CXCR4 down / CCR7 up"
+      ],
+      0,
+      "Correct — the activated B cell moves toward the T zone (CCR7 up, CXCR5 down) while the pre-TFH moves toward the follicle edge (CCR7 down, CXCR5 up); they meet in between. (B) The two profiles are swapped. (C) If both upregulated CXCR5 they would both move to the follicle, not toward each other. (D) If both downregulated both receptors neither would migrate to meet the other. (E) CXCR4 is not the receptor pair driving this interfollicular meeting.",
+      "basic"
+     ],
+     [
+      "The term 'conjugate pair' in the T-dependent response refers to:",
+      [
+       "An activated pre-TFH cell physically engaged with an activated B cell",
+       "Two activated B cells fused together during rapid clonal proliferation",
+       "A secreted antibody molecule bound to its specific soluble antigen",
+       "A centroblast captured and engulfed by a tingible-body macrophage",
+       "A long-lived plasma cell anchored to a bone-marrow stromal cell"
+      ],
+      0,
+      "Correct — a conjugate pair is the activated pre-TFH cell bound to the activated B cell (via CD40L–CD40, MHC II–TCR, cytokines), which then migrates to the medulla. (B) Conjugate pairs are heterotypic (T–B), not fused B cells. (C) An antibody–antigen complex is an immune complex, not a conjugate pair. (D) Tingible-body macrophages clear apoptotic cells; that is not a conjugate pair. (E) A PC–stromal association supports long-lived PC survival, not the conjugate pair.",
+      "basic"
+     ],
+     [
+      "A rapidly dividing germinal-center B cell that has shut off surface immunoglobulin and is undergoing AID-driven hypermutation is termed a:",
+      [
+       "Tingible-body macrophage",
+       "Centrocyte",
+       "Plasmablast",
+       "Marginal-zone B cell",
+       "Centroblast"
+      ],
+      4,
+      "Correct — centroblasts are the proliferating, surface-Ig-low GC B cells undergoing somatic hypermutation. (A) Tingible-body macrophages clear apoptotic GC cells; they are not B cells. (B) Centrocytes are the post-hypermutation cells that re-express the BCR for affinity selection. (C) Plasmablasts are antibody-secreting effectors, not the hypermutating GC cell. (D) Marginal-zone B cells are a separate T-independent subset.",
+      "basic"
+     ],
+     [
+      "Which property distinguishes a memory B cell from a long-lived plasma cell?",
+      [
+       "The memory B cell resides only in the thymus",
+       "The memory B cell continuously secretes high levels of antibody",
+       "The memory B cell lacks a B-cell receptor entirely",
+       "The memory B cell expresses a BCR but does NOT secrete antibody",
+       "The memory B cell cannot respond to re-exposure"
+      ],
+      3,
+      "Correct — memory B cells carry a BCR and circulate/wait without secreting antibody, serving as a reservoir for recall responses. (A) Memory B cells circulate in blood and lymphoid organs, not the thymus. (B) Continuous antibody secretion describes the long-lived plasma cell. (C) Memory B cells express a BCR; that is central to their recall function. (E) Their whole purpose is a rapid, strong response on re-exposure.",
+      "basic"
+     ],
+     [
+      "Two centrocytes in a germinal center carry BCRs of different affinity for the displayed antigen. The higher-affinity clone survives and the lower-affinity clone dies. Which mechanism best explains this selection?",
+      [
+       "The higher-affinity clone switches isotype first, and constant-region switching itself blocks the apoptotic program in that cell",
+       "Higher-affinity BCR binding to FDC-displayed antigen plus TFH help sustains survival signals; cells failing to engage die by apoptosis",
+       "RAG enzymes are re-expressed selectively in the high-affinity clone and edit the low-affinity clone into deletion",
+       "Complement deposited on the low-affinity BCR directly lyses that clone while sparing the high-affinity one",
+       "The low-affinity clone is exported to the medulla as a plasma cell before any affinity selection can occur"
+      ],
+      1,
+      "Correct — affinity maturation: centrocytes that bind FDC-held antigen well and receive TFH signals survive; those that cannot compete for antigen/help undergo apoptosis and are cleared by tingible-body macrophages. (A) Isotype switching does not confer apoptosis resistance; survival depends on antigen/TFH engagement. (C) RAG re-expression is not the affinity-selection mechanism here. (D) Complement does not select GC clones by lysing the low-affinity one. (E) Low-affinity clones are not preferentially exported; they are selected against.",
+      "basic"
+     ],
+     [
+      "After a B cell switches from IgM to IgG1, what happens to its antigen specificity and affinity?",
+      [
+       "Both are preserved — only the constant region changes, not the V region",
+       "Specificity changes to a new antigen, but the original affinity is preserved",
+       "Affinity is randomized to a new value, but the original specificity is preserved",
+       "Both specificity and affinity are randomized as the V region is rebuilt",
+       "The switched antibody can no longer bind the original antigen at all"
+      ],
+      0,
+      "Correct — CSR swaps the constant region only; the V region (and thus specificity and affinity from prior maturation) is retained. (B) Specificity is set by the unchanged V region, so it does not change. (C) CSR itself does not alter affinity; affinity is tuned earlier by SHM. (D) CSR is targeted recombination of constant exons, not randomization of binding. (E) The switched antibody binds the same antigen with the same specificity.",
+      "basic"
+     ],
+     [
+      "During class switch recombination, the TFH-derived cytokine that directs switching toward IgG (e.g., IgG1) is:",
+      [
+       "IFN-γ",
+       "IL-4",
+       "TGF-β",
+       "IL-5",
+       "IL-10"
+      ],
+      0,
+      "Correct — IFN-γ directs AID to the switch regions that produce IgG isotypes. (B) IL-4 directs switching toward IgE/IgG (different program), not the IgG1 answer intended here. (C) TGF-β is associated with IgA switching. (D) IL-5 supports B-cell proliferation/IgA, not the IFN-γ → IgG direction. (E) IL-10 promotes differentiation but is not the isotype-directing cytokine for IgG here.",
+      "basic"
+     ],
+     [
+      "Centroblast proliferation in the germinal center is initiated by TFH cytokines and then sustained by which cell's signals?",
+      [
+       "CD8+ cytotoxic T cells (via perforin and granzyme)",
+       "Tingible-body macrophages (via apoptotic-cell clearance)",
+       "Marginal-zone B cells (via rapid IgM secretion)",
+       "Follicular dendritic cells (via IL-6, IL-15, BAFF)",
+       "Bone-marrow stromal cells (via long-lived PC support)"
+      ],
+      3,
+      "Correct — TFH cytokines (IL-2/4/5) initiate proliferation; FDC-derived IL-6, IL-15, and BAFF sustain it. (A) CD8 CTLs are not the GC proliferation-sustaining cell. (B) Tingible-body macrophages clear apoptotic cells; they do not sustain proliferation. (C) Marginal-zone B cells are a separate TI subset. (E) Bone-marrow stromal cells support long-lived PCs later, not GC centroblast proliferation.",
+      "basic"
+     ],
+     [
+      "Place the molecular steps of class switch recombination in the correct order after AID acts.",
+      [
+       "AID methylates cytosine → APE1 reads the methyl mark → UNG excises the strand → switch regions recombine",
+       "APE1 nicks the switch region first → AID deaminates cytosine to uracil → UNG removes uracil → the ends are ligated without recombination",
+       "UNG deaminates cytosine to uracil → AID removes the uracil base → APE1 seals the strand → the V region is replaced",
+       "RAG cuts both switch regions → AID fills the gap → UNG ligates the ends → the constant region recombines",
+       "AID deaminates cytosine to uracil → UNG removes uracil → APE1 nicks the abasic site → double-strand breaks in switch regions recombine"
+      ],
+      4,
+      "Correct — AID makes uracil, UNG excises it leaving an abasic site, APE1 nicks it, and nicks on both strands of both switch regions allow recombination. (A) AID deaminates (not methylates) cytosine; there is no methyl-reading step. (B) AID must act first to create the uracil before UNG/APE1 can process it. (C) AID (not UNG) deaminates cytosine; UNG removes the resulting uracil. (D) RAG is not involved in CSR; AID initiates it.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    40,
+    "Lec 15 · Antibody-Mediated Cell Cytotoxicity · Igg Cross The Placenta · Immune Complex Removal",
+    [
+     [
+      "How does dimeric IgA made by mucosal plasma cells reach the lumen and resist proteolysis once there?",
+      [
+       "The pIgR transcytoses it and leaves a secretory piece that protects against proteases",
+       "The FcRn transcytoses it and leaves a J chain that protects against proteases",
+       "The FcαRI transcytoses it and leaves a hinge region that protects against proteases",
+       "The FcγRIII transcytoses it and leaves a light chain that protects against proteases",
+       "The CR1 transcytoses it and leaves a complement fragment that protects against proteases"
+      ],
+      0,
+      "Correct — the polymeric Ig receptor (pIgR) binds the J chain, transcytoses dimeric IgA to the apical surface, and is cleaved to leave the secretory piece, which shields IgA from proteolysis. (B) FcRn transports IgG (and some IgA in tissue), but the mucosal secretory-piece mechanism is pIgR; the J chain aids transport but is not the protective secretory piece. (C) FcαRI is a phagocyte IgA receptor for opsonization, not the epithelial transcytosis receptor; the hinge is not the protective piece. (D) FcγRIII is the NK ADCC receptor for IgG, unrelated to mucosal IgA transcytosis. (E) CR1 binds complement C3b; it does not transcytose IgA, and no complement fragment forms the secretory piece.",
+      "basic"
+     ],
+     [
+      "Which IgG subclasses are the best at opsonization and are the ones that cross the placenta?",
+      [
+       "IgA1 and IgA2, the mucosal subclasses that also cross the placenta",
+       "IgG2 and IgG4, the strongest opsonizers and placental crossers",
+       "IgG4 only, the dominant serum subclass and placental crosser",
+       "IgG2 only, the carbohydrate-directed subclass and placental crosser",
+       "IgG1 and IgG3, the strongest opsonizers and placental crossers"
+      ],
+      4,
+      "Correct — IgG1 and IgG3 are the best opsonizers/complement activators and the subclasses noted to cross the placenta. (A) IgA subclasses are mucosal and do not cross the placenta. (B) IgG2 and IgG4 are comparatively weak opsonizers; they are not the lead placental/effector pair. (C) IgG1 (not IgG4) is the most common serum subclass; IgG4 is not the lead opsonizer. (D) IgG2 is directed at polysaccharides and is a weak opsonizer, not the best-opsonizing pair.",
+      "basic"
+     ],
+     [
+      "An antibody binds a viral surface protein and physically blocks the virus from attaching to its host-cell receptor. Which effector function is this, and which isotypes are the classic mediators?",
+      [
+       "Degranulation, mediated by IgE engaging mast-cell Fc receptors",
+       "Opsonization, mediated by IgG and IgA coating for phagocytosis",
+       "Complement activation, mediated by IgM and IgG via the classical path",
+       "ADCC, mediated by IgG engaging NK-cell Fc receptors for killing",
+       "Neutralization, mediated mainly by IgG and IgA blocking attachment"
+      ],
+      4,
+      "Correct — blocking attachment to host receptors is neutralization; IgG and IgA are the classic neutralizing isotypes. (A) Degranulation is the IgE/mast-cell response, unrelated to neutralizing viral attachment. (B) Opsonization is antibody coating that enhances phagocytosis, not direct blockade of attachment. (C) Complement activation lyses/tags via C1–C3b; it is not the direct receptor-blocking function described. (D) ADCC is NK-cell killing of antibody-coated targets, not blockade of viral attachment.",
+      "basic"
+     ],
+     [
+      "Which statement about IgM is correct?",
+      [
+       "It is the first isotype synthesized and the first BCR on naive mature B cells",
+       "It is the last isotype synthesized and the dominant secretory antibody",
+       "It is the only isotype able to cross the placenta to the fetus",
+       "It is the principal isotype mediating type I allergic responses",
+       "It is the main antibody transported into breast milk and mucus"
+      ],
+      0,
+      "Correct — IgM is the first antibody made by B cells and surface IgM is the first BCR on naive mature B cells; it also activates complement and agglutinates microbes. (B) IgM is the first (not last) isotype, and IgA (not IgM) dominates secretions. (C) IgG, not IgM, crosses the placenta. (D) IgE, not IgM, drives type I allergy. (E) IgA, not IgM, is the dominant antibody in milk and mucus.",
+      "basic"
+     ],
+     [
+      "Natural killer cells kill an antibody-coated target cell after engaging the antibody Fc through a specific receptor. Which receptor mediates this, and what is its CD designation?",
+      [
+       "FcγRI, also known as CD64, engaging IgG to trigger phagocytosis",
+       "FcγRIII, also known as CD16, engaging IgG to trigger perforin/granzyme",
+       "FcεRI, the high-affinity receptor engaging IgE on mast cells",
+       "FcαRI, also known as CD89, engaging IgA for mucosal uptake",
+       "CR1, also known as CD35, engaging C3b on opsonized targets"
+      ],
+      1,
+      "Correct — NK cells use FcγRIII (CD16) to bind IgG (IgG1/IgG3) on the target and release perforin/granzyme in ADCC. (A) FcγRI (CD64) is a high-affinity IgG receptor on macrophages driving phagocytosis, not NK ADCC. (C) FcεRI binds IgE on mast cells/basophils, not the NK-cell ADCC receptor. (D) FcαRI (CD89) binds IgA for opsonization/uptake, not NK ADCC. (E) CR1 (CD35) binds complement C3b, not an antibody Fc for ADCC.",
+      "basic"
+     ],
+     [
+      "Circulating IgG-containing immune complexes are cleared from the blood largely by which mechanism?",
+      [
+       "NK-cell FcγRIII binds the complexes and lyses them by perforin and granzyme",
+       "Mast-cell FcεRI binds IgE on the complexes and triggers their degranulation clearance",
+       "Erythrocyte CR1 binds C3b on the complexes and delivers them to splenic/hepatic macrophages",
+       "Epithelial pIgR binds the complexes and transcytoses them into the gut lumen",
+       "Placental FcRn binds the complexes and transfers them into the fetal circulation"
+      ],
+      2,
+      "Correct — erythrocyte CR1 binds C3b deposited on immune complexes and ferries them to macrophages in the spleen and liver for removal. (A) FcγRIII mediates NK ADCC of coated cells, not soluble immune-complex clearance. (B) FcεRI–IgE drives mast-cell degranulation, not immune-complex clearance. (D) pIgR transcytoses IgA/IgM across epithelia, not blood-borne IgG complexes into the gut. (E) FcRn transports monomeric IgG, not the clearance of immune complexes into the fetus.",
+      "basic"
+     ],
+     [
+      "Which receptor–cell–outcome triad is correctly matched?",
+      [
+       "FcγRI on eosinophils engages IgA, triggering neutralization",
+       "FcγRIII on macrophages engages IgE, triggering degranulation",
+       "FcαRI on NK cells engages IgG, triggering perforin release",
+       "FcεRI on mast cells engages IgE, triggering degranulation",
+       "FcεRI on neutrophils engages IgG, triggering opsonization"
+      ],
+      3,
+      "Correct — FcεRI on mast cells (and basophils) binds IgE; antigen cross-linking triggers degranulation. (A) FcγRI binds IgG on macrophages for opsonization, not IgA on eosinophils for neutralization. (B) FcγRIII binds IgG (on NK cells), not IgE, and macrophages opsonize rather than degranulate. (C) FcαRI binds IgA on macrophages/neutrophils; NK perforin release is FcγRIII–IgG. (E) FcεRI binds IgE for degranulation, not IgG on neutrophils for opsonization.",
+      "basic"
+     ],
+     [
+      "A patient accumulates IgG immune complexes in small vessels and renal glomeruli, producing vasculitis and glomerulonephritis. Which normal clearance step has been overwhelmed or impaired?",
+      [
+       "Erythrocyte CR1–C3b transport of complexes to splenic and hepatic macrophages",
+       "Mast-cell degranulation that normally digests circulating complexes",
+       "Neutralization by secretory IgA that normally blocks complex formation",
+       "Placental FcRn transfer that normally exports complexes to the fetus",
+       "Eosinophil FcεRI binding that normally clears complexes from tissue"
+      ],
+      0,
+      "Correct — normally erythrocyte CR1 binds C3b on complexes and delivers them to macrophages; when this is overwhelmed, complexes deposit in vessels/glomeruli, causing vasculitis and glomerulonephritis. (B) Mast cells do not digest immune complexes; that is not the clearance route. (C) Secretory IgA neutralizes mucosal pathogens; it does not clear blood-borne IgG complexes. (D) FcRn transfers monomeric IgG to the fetus; it is not a complex-clearance pathway. (E) Eosinophil FcεRI engages IgE on parasites, not IgG immune complexes.",
+      "basic"
+     ],
+     [
+      "Why is IgM a far more efficient activator of the classical complement pathway than a single IgG molecule?",
+      [
+       "Its monomeric structure binds antigen with much higher individual affinity",
+       "Its pentameric structure presents multiple Fc regions, so one IgM can recruit C1",
+       "Its secretory piece protects it from protease degradation in mucus",
+       "Its ability to cross the placenta delivers complement to the fetus",
+       "Its high serum concentration outcompetes IgG for C3b deposition"
+      ],
+      1,
+      "Correct — pentameric IgM presents several Fc regions at once, so a single bound IgM can recruit and activate C1, whereas IgG needs two nearby molecules. (A) IgM monomer affinity is comparatively low; complement efficiency comes from pentameric avidity/geometry. (C) The secretory piece is an IgA feature for mucosal protection, unrelated to IgM complement activation. (D) IgM does not cross the placenta; placental transfer is an IgG property. (E) Complement efficiency is structural (pentamer), not a matter of outcompeting IgG by concentration.",
+      "basic"
+     ],
+     [
+      "IgE-driven responses use different effector cells against allergens versus large parasites. Which pairing is correct?",
+      [
+       "Allergens: macrophages present antigen; parasites: NK cells lyse the worm",
+       "Allergens: eosinophils degranulate; parasites: mast cells degranulate to kill the worm",
+       "Allergens: NK cells release perforin; parasites: macrophages phagocytose the worm",
+       "Allergens: neutrophils opsonize; parasites: basophils transcytose the worm",
+       "Allergens: mast cells/basophils degranulate; parasites: eosinophils degranulate to kill the worm"
+      ],
+      4,
+      "Correct — allergen-bound IgE on mast cells/basophils triggers degranulation (allergic symptoms); for large worms, IgE recruits eosinophils whose degranulation releases cytotoxins onto the parasite. (A) Macrophage presentation and NK lysis are not the IgE-mediated mechanisms here. (B) The effector cells are swapped — mast cells/basophils handle allergens; eosinophils target worms. (C) NK perforin and macrophage phagocytosis are not the IgE allergen/parasite effector mechanisms. (D) Neutrophil opsonization and basophil transcytosis do not describe the IgE worm/allergen axis.",
+      "basic"
+     ],
+     [
+      "Which isotype mediates immunity to parasitic worms and drives type I allergic responses through mast-cell and eosinophil engagement?",
+      [
+       "IgM, binding C1 to drive the classical complement pathway",
+       "IgG, binding Fcγ receptors on macrophages and NK cells",
+       "IgA, binding FcαRI on macrophages and mucosal neutrophils",
+       "IgE, binding FcεRI on mast cells, basophils, and eosinophils",
+       "IgD, binding surface receptors on naive circulating B cells"
+      ],
+      3,
+      "Correct — IgE coats parasites and arms mast cells/basophils/eosinophils via FcεRI, driving anti-parasite responses and type I allergy. (A) IgM activates complement but is not the parasite/allergy isotype. (B) IgG works through Fcγ receptors for opsonization/ADCC, not the IgE allergy/parasite axis. (C) IgA acts at mucosal surfaces via FcαRI, not the mast-cell allergy response. (E) IgD is a minor surface isotype without this effector role.",
+      "basic"
+     ],
+     [
+      "A neonate is born with maternal antibody against a red-cell antigen, and the antibody both crossed the placenta and is capable of activating complement on the infant's cells. Which maternal isotype best fits both properties?",
+      [
+       "IgE, which is tissue-bound and neither crosses the placenta nor fixes complement",
+       "IgM, which fixes complement well but cannot cross the placenta",
+       "IgA, which enters milk but neither crosses the placenta nor fixes complement strongly",
+       "IgG, which crosses the placenta via FcRn and can fix complement",
+       "IgD, which is a surface receptor with no placental transfer or complement role"
+      ],
+      3,
+      "Correct — only IgG satisfies both: it is actively transported across the placenta by FcRn and IgG1/IgG3 can activate complement. (A) IgE is tissue-bound, does not cross the placenta, and does not fix complement. (B) IgM activates complement efficiently but cannot cross the placenta, so it cannot be the maternal-derived antibody on the neonate. (C) IgA enters milk but does not cross the placenta and is a weak complement activator. (E) IgD has neither placental transfer nor a complement-fixing role.",
+      "basic"
+     ],
+     [
+      "A macrophage engulfs an IgG-coated bacterium far more readily than an uncoated one. Which receptor–function pairing explains this?",
+      [
+       "FcεRI binds the IgG Fc, signaling histamine release (degranulation)",
+       "FcγRIII binds the IgG Fc, signaling perforin/granzyme release (ADCC)",
+       "FcγRI/FcγRIIA bind the IgG Fc, signaling phagocytic uptake (opsonization)",
+       "CR1 binds the IgG Fc, signaling antigen processing for presentation",
+       "FcRn binds the IgG Fc, signaling transcytosis across the epithelium"
+      ],
+      2,
+      "Correct — macrophage FcγRI and FcγRIIA engage the IgG Fc on the coated microbe and trigger phagocytic uptake; the antibody coat is opsonization. (A) FcεRI binds IgE for degranulation, not IgG for phagocytosis. (B) FcγRIII–IgG on NK cells drives ADCC killing, not macrophage phagocytic uptake. (D) CR1 binds complement C3b, not the IgG Fc, and is not the opsonic phagocytosis receptor here. (E) FcRn mediates IgG transcytosis/recycling, not macrophage phagocytic uptake.",
+      "basic"
+     ],
+     [
+      "Beyond placental transfer, FcRn also moves IgG (and some IgA) from blood into tissues and mucosal spaces. Which description of this transport is correct?",
+      [
+       "Strong FcRn–IgG binding at neutral pH, lost at low endosomal pH, traps IgG inside the cell permanently",
+       "Weak FcRn–IgG binding at neutral pH, stabilized at low endosomal pH, releases IgG on the far side by transcytosis",
+       "pIgR–IgG binding at the apical surface drives IgG secretion directly into the lumen",
+       "FcγRIII–IgG binding signals NK cells to deposit IgG into the tissue",
+       "Complement C3b binding carries IgG across the endothelium into tissue"
+      ],
+      1,
+      "Correct — FcRn binds IgG weakly at physiological pH, the interaction is stabilized when the endosome acidifies, and exposure to neutral pH on the far side releases IgG into the tissue (transcytosis). (A) The pH dependence is reversed and IgG is released, not trapped — binding is favored at low pH and lost at neutral pH. (C) pIgR transports IgA/IgM, not IgG, and this is not the FcRn tissue route. (D) FcγRIII drives NK ADCC, not IgG deposition into tissue. (E) C3b is a complement opsonin; it does not carry IgG across the endothelium.",
+      "basic"
+     ],
+     [
+      "Which receptor transports maternal IgG across the syncytiotrophoblast and also protects circulating IgG from degradation, extending its half-life?",
+      [
+       "pIgR, the receptor that transports dimeric IgA across epithelia",
+       "FcγRIII, the NK-cell receptor that binds IgG to trigger ADCC",
+       "FcRn, the neonatal Fc receptor that binds IgG at acidic pH in endosomes",
+       "FcαRI, the receptor that binds IgA for mucosal opsonization",
+       "CR1, the erythrocyte receptor that binds C3b on immune complexes"
+      ],
+      2,
+      "Correct — FcRn binds IgG in acidified endosomes, ferries it across the syncytiotrophoblast, and recycles serum IgG (protecting it from proteolysis), explaining IgG's long half-life. (A) pIgR transports dimeric IgA (and pentameric IgM) across mucosal epithelia, not IgG across the placenta. (B) FcγRIII triggers NK ADCC; it does not transport IgG across the placenta. (D) FcαRI binds IgA for opsonization; it is not the IgG placental/half-life receptor. (E) CR1 binds complement C3b on immune complexes, unrelated to IgG transport.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    41,
+    "Lec 16 · Alpha Defensins Mucosal Defenses · Secretory Antibodies In The Gut",
+    [
+     [
+      "Paneth cells secrete C-type lectins called REG III proteins. What two things do these lectins do?",
+      [
+       "Present lipid antigens to γδ T cells and trigger epithelial-cell apoptosis",
+       "Neutralize viral attachment to epithelial cells and kill Gram-negative bacteria",
+       "Transcytose dimeric pIgA to the lumen and convert it to secretory IgA",
+       "Recognize flagellin on the basolateral surface and recruit neutrophils",
+       "Block bacterial colonization of the epithelial surface and kill Gram-positive bacteria"
+      ],
+      4,
+      "Correct — REG III C-type lectins both block bacterial colonization of the mucosal epithelial surface and have bactericidal activity against Gram-positive bacteria. (A) Lipid-antigen presentation/epithelial killing is the γδ T-cell axis, not REG III. (B) REG III acts on Gram-positive bacteria and is not a viral-neutralization or anti-Gram-negative agent. (C) Transcytosis of pIgA is the pIgR's job, not a function of REG III lectins. (D) Flagellin recognition is TLR5's role, not REG III.",
+      "basic"
+     ],
+     [
+      "Which antimicrobial-peptide source is correctly matched to its location in the gut?",
+      [
+       "α-defensins from goblet cells in the small intestine; β-defensins from M cells in the large intestine",
+       "α-defensins from absorptive epithelium in the large intestine; β-defensins from Paneth cells in the small intestine",
+       "α-defensins from Paneth cells in the small intestine; β-defensins from absorptive epithelium in the large intestine",
+       "α-defensins from mast cells in the lamina propria; β-defensins from plasma cells in the crypts",
+       "α-defensins from M cells in the Peyer's patch; β-defensins from γδ T cells in the epithelium"
+      ],
+      2,
+      "Correct — α-defensins are the main small-intestinal peptides (Paneth cells); β-defensins are the main large-intestinal peptides (absorptive epithelial cells, some constitutive, some IL-1/invasion-induced). (A) Goblet cells make mucin and M cells take up antigen; neither is the defensin source described. (B) The sources/locations are swapped between α- and β-defensins. (D) Mast cells and plasma cells are not the defensin sources here. (E) M cells and γδ T cells are not defensin sources.",
+      "basic"
+     ],
+     [
+      "Which statement about the gut mucus layer is correct?",
+      [
+       "M cells make mucin that traps antigen and transcytoses it to the Peyer's patch",
+       "Paneth cells make mucin that is positively charged and permanently coats the epithelium",
+       "Goblet cells make mucin glycosylated with negatively charged sialic acid that binds defensins, turning over every 6–12 hours",
+       "Plasma cells make mucin that carries secretory IgA into the lumen",
+       "Absorptive epithelial cells make mucin only in the small intestine in response to IL-1"
+      ],
+      2,
+      "Correct — goblet-cell mucin is glycosylated with negatively charged sialic acid (binding positively charged defensins), forms a thick protective layer, and turns over every 6–12 hours, carrying bound material away. (A) M cells take up antigen; they do not make the mucus layer. (B) Paneth cells make α-defensins, not mucin; mucin is negatively charged and turns over, not permanent. (D) Plasma cells make pIgA, not mucin. (E) Mucin is a goblet-cell product throughout the intestine, not an IL-1-induced small-intestinal epithelial product.",
+      "basic"
+     ],
+     [
+      "How is dimeric pIgA converted to secretory IgA (SIgA) and delivered into the gut lumen?",
+      [
+       "Complement C3b binds the J chain, transcytoses the pIgA, and is cleaved to leave the secretory piece",
+       "The FcRn binds the J chain, transcytoses the pIgA, and is cleaved to leave the secretory piece",
+       "The FcαRI binds the J chain, transcytoses the pIgA, and is cleaved to leave the secretory piece",
+       "The pIgR binds the J chain, transcytoses the pIgA, and is cleaved to leave the secretory piece",
+       "The TLR5 receptor binds the J chain, transcytoses the pIgA, and is cleaved to leave the secretory piece"
+      ],
+      3,
+      "Correct — the polymeric Ig receptor (pIgR) on the basolateral epithelium binds the J chain of dimeric pIgA, transcytoses it to the lumen, and is cleaved to leave the secretory piece (SIgA). (A) C3b is a complement opsonin; it does not transcytose pIgA. (B) FcRn transports monomeric IgG (placenta, tissue); it is not the mucosal pIgA transcytosis receptor. (C) FcαRI is a phagocyte IgA receptor for opsonization, not the epithelial transcytosis receptor. (E) TLR5 recognizes flagellin; it does not transport antibody.",
+      "basic"
+     ],
+     [
+      "A patient has a loss-of-function mutation in pIgR. Which mucosal consequence is most expected?",
+      [
+       "Failure to transport dimeric pIgA across the epithelium, so secretory IgA in the lumen is deficient",
+       "Failure to produce dimeric pIgA in the lamina propria, so plasma cells disappear from the gut",
+       "Failure of M cells to take up luminal antigen, so Peyer's patches cannot be induced",
+       "Failure of Paneth cells to release α-defensins, so the small-intestinal crypts lose protection",
+       "Failure of γδ IELs to recognize MIC-A/MIC-B, so stressed epithelial cells are not killed"
+      ],
+      0,
+      "Correct — pIgR is the transcytosis receptor; losing it means dimeric pIgA cannot be carried to the lumen or converted to SIgA, so luminal secretory IgA is deficient even though plasma cells still make pIgA. (B) pIgR loss does not stop plasma cells from making pIgA; it blocks transport of the antibody, not its production. (C) M-cell antigen uptake does not depend on pIgR. (D) Paneth-cell defensin release is independent of pIgR. (E) γδ IEL killing via MIC-A/MIC-B is unrelated to pIgR.",
+      "basic"
+     ],
+     [
+      "Why is TLR5 (which recognizes flagellin) expressed on the BASOLATERAL surface of intestinal epithelial cells?",
+      [
+       "So it detects only invasive flagellated bacteria that breach the epithelium, not normal luminal flora",
+       "So it constantly samples luminal flagellin to maximize inflammatory tone in the gut",
+       "So it transcytoses flagellated bacteria intact into the Peyer's patch for presentation",
+       "So it binds secretory IgA on the apical surface to neutralize flagellated microbes",
+       "So it presents flagellin as a lipid antigen to γδ intraepithelial lymphocytes"
+      ],
+      0,
+      "Correct — placing TLR5 basolaterally (where normal gut flora are NOT found) means it fires only when flagellated bacteria invade across the epithelium, avoiding reactions to commensals. (B) Basolateral placement minimizes (not maximizes) reactivity to luminal flora. (C) TLR5 is a signaling receptor, not a transcytosis route for bacteria. (D) TLR5 recognizes flagellin; it does not bind SIgA on the apical surface. (E) TLR5 senses flagellin as a PAMP; it is not a lipid-antigen presentation pathway.",
+      "basic"
+     ],
+     [
+      "Which antibody is the dominant secreted antibody at gut mucosal surfaces?",
+      [
+       "Tissue-bound IgE armed on mucosal mast cells",
+       "Monomeric serum IgG transported by FcRn",
+       "Intravascular IgM recruited from the bloodstream",
+       "Secretory IgA — dimeric IgA bearing a secretory piece",
+       "Surface IgD co-expressed on mucosal B cells"
+      ],
+      3,
+      "Correct — secretory IgA (dimeric pIgA transcytosed by pIgR and bearing the secretory piece) is the dominant mucosal antibody; SIgM also occurs, and IgG matters more in the oral cavity. (A) IgE is tissue-bound for allergy/parasites, not the dominant secreted mucosal antibody. (B) IgG plays a role (notably oral cavity) but is less predominant in the GI tract than SIgA. (C) IgM is largely intravascular; secretory IgM exists mucosally but SIgA dominates. (E) IgD is a minor surface isotype, not the dominant mucosal secreted antibody.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    42,
+    "Lec 17 · Examples Of Passive Immunity",
+    [
+     [
+      "Which set of properties correctly describes PASSIVE immunity?",
+      [
+       "Delayed protection, long-lasting, and strong memory from the recipient's own response",
+       "Immediate protection, temporary, and no memory because the recipient makes no response",
+       "Immediate protection, long-lasting, and strong memory from donor lymphocytes",
+       "Delayed protection, temporary, and no memory because antigen is never encountered",
+       "Immediate protection, long-lasting, but no memory despite recipient B-cell activation"
+      ],
+      1,
+      "Correct — passive immunity transfers preformed antibody, so protection is immediate but temporary (antibodies decay) and leaves no memory, because no recipient B or T cells are activated. (A) That describes active immunity (delayed onset, durable, memory), the opposite of passive. (C) Passive immunity is temporary and memoryless; donor lymphocytes are not transferred (antibodies are). (D) Passive protection is immediate, not delayed; the description is internally inconsistent. (E) Passive immunity does not activate recipient B cells, so the premise is wrong.",
+      "basic"
+     ],
+     [
+      "Why is ACTIVE immunity slower to develop than passive immunity, and what does it provide that passive does not?",
+      [
+       "It requires rapid antigen clearance by macrophages, and it yields short-lived protection",
+       "It requires only antibody transfer from a donor, and it yields lasting memory",
+       "It requires complement activation in the recipient, and it yields immediate protection",
+       "It requires maternal transport across the placenta, and it yields no memory",
+       "It requires T- and B-cell activation, proliferation, and differentiation, and it yields lasting memory"
+      ],
+      4,
+      "Correct — active immunity must engage the recipient's own lymphocytes (activation, proliferation, differentiation), which takes time, but it generates memory T and B cells for durable protection. (A) Active immunity is long-lasting (memory), not short-lived. (B) Antibody transfer is passive immunity; active immunity makes the response itself. (C) Active immunity is not defined by complement, and it is delayed, not immediate. (D) Maternal placental transfer is natural passive immunity, not active immunity.",
+      "basic"
+     ],
+     [
+      "Maternal antibodies crossing the placenta to the fetus is an example of which category?",
+      [
+       "Adoptive cellular immunity",
+       "Artificial passive immunity",
+       "Natural active immunity",
+       "Artificial active immunity",
+       "Natural passive immunity"
+      ],
+      4,
+      "Correct — maternal antibody transfer (placenta or milk) is passively acquired and occurs naturally, so it is natural passive immunity. (A) This scenario is antibody transfer, not transfer of cells. (B) Artificial passive immunity is receiving serum/antibody preparations (e.g., immune globulin), not maternal transfer. (C) Natural active immunity is developing your own response after natural infection. (D) Artificial active immunity is vaccination.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    43,
+    "Lec 17 · R0 Definition",
+    [
+     [
+      "Disease X spreads far more easily than disease Y. Conceptually, how do their herd-immunity thresholds compare — and why?",
+      [
+       "Disease X has a higher threshold, because a higher R0 requires a larger immune fraction to break transmission",
+       "Disease X has a lower threshold, because easier spread means fewer people need to be immune",
+       "The thresholds are identical, because the threshold does not depend on transmissibility",
+       "Disease X has a lower threshold, because high transmissibility creates faster natural immunity",
+       "The thresholds cannot be compared, because threshold is unrelated to how a disease spreads"
+      ],
+      0,
+      "Correct — the herd-immunity threshold rises with R0: the more people one case infects, the larger the immune fraction needed to interrupt transmission. (You reason from the relationship, not from memorized numbers.) (B) Easier spread (higher R0) raises, not lowers, the threshold. (C) The threshold depends directly on R0/transmissibility, so identical thresholds are wrong. (D) Higher transmissibility means a higher required threshold, regardless of how fast natural immunity accrues. (E) Threshold is tightly related to transmissibility (R0), so they are comparable.",
+      "basic"
+     ],
+     [
+      "Conceptually, what does R0 (the basic reproduction number) represent?",
+      [
+       "The number of antibody molecules needed to neutralize one pathogen",
+       "The percentage of a population that must be vaccinated to stop a disease",
+       "The average time in days between successive infections in a chain",
+       "The fraction of infected individuals who develop lasting immunity",
+       "The average number of people one infected individual is likely to infect"
+      ],
+      4,
+      "Correct — R0 is a calculation of how many people, on average, one infected person is likely to infect in a susceptible population. (A) R0 is an epidemiological transmission metric, not a molecular neutralization count. (B) That describes the herd-immunity threshold, not R0 (though the threshold depends on R0). (C) R0 is a count of secondary cases per case, not a time interval. (D) R0 is not a measure of who develops immunity.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    44,
+    "Lec 18 · Type I Hypersensitivity Predisposition",
+    [
+     [
+      "Which category of antigen triggers hypersensitivity by escaping central tolerance to leave a self-reactive pool of cells?",
+      [
+       "Dietary antigens, when food proteins are absorbed intact across the gut wall",
+       "Environmental antigens, when noninfectious allergens persist continuously in the surroundings",
+       "Microbial antigens, when a chronic infection provides a continual antigen source",
+       "Self-antigens, when central tolerance fails and peripheral tolerance cannot restrain the cells",
+       "Vaccine antigens, when an adjuvant amplifies the response beyond what is intended"
+      ],
+      3,
+      "Correct — self-antigen hypersensitivity arises when immune cells escape central tolerance to form a self-reactive pool, and failures of peripheral tolerance then permit activation and tissue damage. (A) Dietary antigens are not the tolerance-escape category described here. (B) Environmental allergens are a real category, but they do not act by escaping central tolerance. (C) Microbial antigens drive hypersensitivity via persistent infection/immune complexes, not by tolerance escape. (E) Vaccine antigens are not the self-reactive tolerance-escape category.",
+      "basic"
+     ],
+     [
+      "How do persistent microbial antigens characteristically drive hypersensitivity tissue damage?",
+      [
+       "Preformed antibody is transferred from a donor and attacks recipient cells",
+       "Allergen cross-links IgE on mast cells, causing immediate degranulation and anaphylaxis",
+       "Self-reactive T cells escape the thymus and attack host tissue directly",
+       "Antibodies bind cell-surface receptors and switch their signaling on or off",
+       "Immune complexes form and deposit in tissues, and unclearable antigen can generate granulomas"
+      ],
+      4,
+      "Correct — chronic/persistent infection provides continual antigen; antigen–antibody (immune) complexes deposit in tissues causing inflammation, and antigen that cannot be cleared can drive granuloma formation. (A) Donor antibody transfer is passive immunity, unrelated to this mechanism. (B) IgE/mast-cell degranulation is the type I allergen mechanism, not the persistent-microbial-Ag complex mechanism. (C) Thymic escape of self-reactive cells is the self-antigen route, not the microbial-complex route. (D) Receptor-modulating antibodies are a type II mechanism, not the immune-complex route.",
+      "basic"
+     ],
+     [
+      "Which genetic/cellular feature predisposes a person to atopic (type I) responses?",
+      [
+       "MHC class II haplotypes favoring Th2 cytokines, plus mast-cell FcεR that bind IgE with high affinity and slow turnover",
+       "MHC class I haplotypes favoring Th1 cytokines, plus rapid FcεR turnover on mast cells",
+       "Absence of all Fc receptors, so IgE circulates freely without binding cells",
+       "A defect in complement C3, preventing opsonization of allergens",
+       "Loss of MHC class II expression, so allergens cannot be presented at all"
+      ],
+      0,
+      "Correct — atopy is favored by certain MHC class II haplotypes that bias toward Th2 cytokines (IL-4/IL-13), by mast cells whose FcεR binds IgE with increased affinity, and by reduced FcεR turnover (IgE stays bound for months vs days in serum). (B) Atopy is Th2-biased with SLOW FcεR turnover — this option reverses both. (C) Atopy depends on IgE binding mast-cell FcεR, not on an absence of Fc receptors. (D) A C3 defect does not explain atopic predisposition. (E) Allergen presentation requires MHC II; losing it would not promote atopy.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    45,
+    "Lec 18 · Hypersensitivity And Ige",
+    [
+     [
+      "What is the central effector mechanism of type I (immediate) hypersensitivity?",
+      [
+       "IgG blocks a cell-surface receptor, preventing its normal signaling",
+       "IgG binds a cell-surface antigen and activates complement to lyse the cell",
+       "Allergen cross-links IgE bound to mast-cell FcεRI, triggering degranulation within minutes",
+       "Immune complexes deposit in vessel walls and recruit neutrophils over days",
+       "Sensitized T cells release cytokines that recruit macrophages over 48–72 hours"
+      ],
+      2,
+      "Correct — type I hypersensitivity is IgE-mediated: allergen cross-links IgE on mast-cell FcεRI, triggering rapid degranulation and release of preformed mediators within minutes. (A) Receptor blockade is a type II (antagonistic-antibody) mechanism. (B) Complement-mediated lysis of antibody-coated cells is type II, not type I. (D) Immune-complex deposition with neutrophil recruitment is type III hypersensitivity. (E) Delayed T-cell/macrophage responses describe type IV hypersensitivity.",
+      "basic"
+     ],
+     [
+      "In type I hypersensitivity, what distinguishes the sensitization (first-exposure) step from the second-exposure step?",
+      [
+       "First exposure makes allergen-specific IgE that arms mast cells; second exposure cross-links it to trigger degranulation",
+       "First exposure cross-links IgE to trigger degranulation; second exposure makes the allergen-specific IgE",
+       "First exposure activates complement on mast cells; second exposure recruits neutrophils to the tissue",
+       "First exposure blocks receptors with IgG; second exposure stimulates those same receptors",
+       "First exposure forms immune complexes; second exposure clears them through erythrocyte CR1"
+      ],
+      0,
+      "Correct — in sensitization, Th2/TFH help drives plasma cells to make allergen-specific IgE that loads onto mast-cell FcεRI; on re-exposure the allergen cross-links that surface IgE, triggering degranulation. (B) The order is reversed — IgE is made first (sensitization), then cross-linked on re-exposure. (C) Type I sensitization is about IgE production, not complement activation on mast cells. (D) Receptor block/stimulation is type II, not the type I two-step. (E) Immune-complex formation/clearance is not the type I sensitization mechanism.",
+      "basic"
+     ],
+     [
+      "Which correctly distinguishes primary from secondary mediators of mast-cell degranulation?",
+      [
+       "Primary mediators are complement fragments; secondary mediators are immunoglobulins",
+       "Primary mediators are newly synthesized from arachidonic acid; secondary mediators are preformed and released immediately",
+       "Primary mediators are produced only by eosinophils; secondary mediators are produced only by neutrophils",
+       "Primary mediators act over days; secondary mediators act within seconds of allergen binding",
+       "Primary mediators such as histamine are preformed and released immediately, while secondary mediators such as leukotrienes are newly synthesized from arachidonic acid"
+      ],
+      4,
+      "Correct — primary mediators such as histamine are preformed in granules and released at once; secondary mediators such as prostaglandins and leukotrienes are synthesized after activation from arachidonic acid via COX/LOX. (A) Mediators are not complement fragments or immunoglobulins. (B) The definitions are swapped — preformed = primary, newly synthesized = secondary. (C) Both classes come from the activated mast cell, not separately from eosinophils vs neutrophils. (D) Preformed primary mediators act immediately; the timing here is reversed.",
+      "basic"
+     ],
+     [
+      "A patient stung by an insect develops hives, airway swelling, and circulatory collapse within minutes. Why is epinephrine, not an antihistamine, the first-line therapy?",
+      [
+       "Epinephrine acts within minutes — vasoconstricting, supporting the heart, and dilating airways while blocking further mediator release",
+       "Epinephrine neutralizes the IgE on mast cells, permanently preventing any further degranulation",
+       "Epinephrine replaces the antibody the patient lacks, providing immediate passive immunity",
+       "Epinephrine activates complement to clear the allergen faster than antihistamines can",
+       "Epinephrine is identical to an antihistamine but is simply given at a higher dose"
+      ],
+      0,
+      "Correct — anaphylaxis is rapid and life-threatening; epinephrine acts much faster than antihistamines (minutes vs hours), causing vasoconstriction to prevent edema/shock, increasing cardiac rate/contractility (β1), and dilating airways while blocking further mediator release (β2). (B) Epinephrine does not neutralize or remove IgE from mast cells. (C) Epinephrine is not an antibody and does not provide passive immunity. (D) Epinephrine works through adrenergic receptors, not by activating complement. (E) Epinephrine is an adrenergic agonist, mechanistically distinct from an antihistamine.",
+      "basic"
+     ],
+     [
+      "Which antibody isotypes mediate the cytotoxic (complement-fixing) arm of type II hypersensitivity?",
+      [
+       "IgA only, which is transcytosed across epithelium as secretory IgA",
+       "IgE only, which binds mast-cell receptors to trigger degranulation",
+       "IgM and IgG, which bind cell-surface antigen and activate the classical complement pathway",
+       "IgD only, which serves as a surface receptor on naive B cells",
+       "IgG4 only, which cannot fix complement under any circumstances"
+      ],
+      2,
+      "Correct — in cytotoxic type II reactions, IgM or IgG binds the cell-surface antigen, C1 binds the antibody, and the classical complement pathway is activated (generating C3a/C5a and, ultimately, the membrane attack complex). (A) Secretory IgA is a mucosal antibody, not the type II complement mediator. (B) IgE drives type I, not the complement-fixing type II arm. (D) IgD is a surface receptor, not the type II effector isotype. (E) The cytotoxic arm uses IgM/IgG broadly, not IgG4 alone.",
+      "basic"
+     ],
+     [
+      "Type II hypersensitivity has three antibody-driven outcomes. Which set correctly names them?",
+      [
+       "Granuloma formation, anaphylaxis, and atopy",
+       "IgE degranulation, immune-complex deposition, and delayed T-cell cytotoxicity",
+       "Neutralization, opsonization, and natural-killer surveillance only",
+       "Complement and cell-mediated destruction, antagonistic receptor blockade, and agonistic receptor stimulation",
+       "Passive antibody transfer, clonal deletion, and central tolerance"
+      ],
+      3,
+      "Correct — type II antibodies (IgM/IgG) to cell-surface antigen cause: (1) inflammation/cytotoxic destruction, (2) blockade of receptor signaling (antagonistic), or (3) stimulation of receptor signaling (agonistic). (A) Granuloma/anaphylaxis/atopy are not the three type II outcomes. (B) Those are mechanisms of types I, III, and IV — not the three type II outcomes. (C) These are general antibody effector functions, not the three type II disease outcomes. (E) These are tolerance concepts, not type II outcomes.",
+      "basic"
+     ],
+     [
+      "In cytotoxic (type II) tissue damage, what is 'frustrated phagocytosis'?",
+      [
+       "Phagocytes engulf antibody-coated red cells so efficiently that the spleen is overwhelmed",
+       "Neutrophils/macrophages bind antibody- and C3b-coated tissue they cannot engulf, so they expel granule contents and enzymes into the surroundings",
+       "Mast cells fail to degranulate because the allergen cannot cross-link surface IgE",
+       "T cells cannot recognize antigen because the cell has downregulated MHC molecules",
+       "Complement fails to form the membrane attack complex, leaving the target cell intact"
+      ],
+      1,
+      "Correct — when the antibody/C3b-coated target is a large tissue surface the phagocyte cannot engulf, the neutrophil or macrophage instead releases its granule enzymes, ROS, and RNS into the environment, damaging the tissue. (A) That describes effective opsonic clearance of cells (e.g., blood cells), not frustrated phagocytosis. (C) Failed mast-cell degranulation is unrelated to frustrated phagocytosis. (D) MHC downregulation/T-cell recognition is not the mechanism here. (E) Frustrated phagocytosis involves enzyme release, not MAC failure.",
+      "basic"
+     ],
+     [
+      "Receptor-modulating (antagonistic and agonistic) type II diseases differ from the cytotoxic arm in one key way. Which?",
+      [
+       "They always cause more complement-mediated lysis than the cytotoxic arm",
+       "They alter cell function through receptor signaling without causing direct cell injury or inflammation",
+       "They are mediated by IgE rather than IgG",
+       "They require immune-complex deposition in vessel walls",
+       "They depend on frustrated phagocytosis to damage the target tissue"
+      ],
+      1,
+      "Correct — antagonistic (e.g., myasthenia gravis) and agonistic (e.g., Graves') antibodies change cell functioning via the receptor, with no direct cell injury or inflammation — unlike the cytotoxic arm that destroys cells via complement and phagocytes. (A) These mechanisms specifically avoid the cytotoxic/complement destruction, not exceed it. (C) They are IgG-mediated, not IgE. (D) Immune-complex deposition is type III, not these receptor-modulating diseases. (E) Frustrated phagocytosis belongs to the cytotoxic arm, not receptor modulation.",
+      "basic"
+     ],
+     [
+      "What is the top-level distinction between type I and type II hypersensitivity?",
+      [
+       "Type I and type II are identical mechanisms differing only in speed of onset",
+       "Type I is IgM/IgG against cell-surface antigens; type II is IgE-mediated against soluble allergens",
+       "Type I is T-cell mediated and delayed; type II is antibody mediated and immediate",
+       "Type I involves immune complexes; type II involves no antibodies at all",
+       "Type I is immediate IgE-mediated hypersensitivity against soluble allergens, while type II is IgM/IgG against cell-surface antigens"
+      ],
+      4,
+      "Correct — type I is immediate hypersensitivity driven by IgE against soluble environmental/microbial allergens (mast-cell degranulation); type II is driven by IgM/IgG against cell-surface (or matrix) antigens, causing destruction or receptor modulation. (A) They are mechanistically distinct, not the same mechanism at different speeds. (B) The two are reversed — IgE/soluble = type I; IgM-IgG/cell-surface = type II. (C) Delayed T-cell mediation is type IV, not type I. (D) Immune complexes characterize type III, and type II definitely involves antibodies.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    46,
+    "Lec 18 · Myasthenia Gravis Pathogenesis",
+    [
+     [
+      "Myasthenia gravis is an example of which type II mechanism, and what is its HLA association?",
+      [
+       "Immune-complex deposition at the motor endplate, associated with HLA-DR2",
+       "Agonistic antibody that stimulates the acetylcholine receptor, associated with HLA-DR3",
+       "Complement-mediated lysis of muscle cells, associated with HLA-DRB1*1501",
+       "IgE-mediated degranulation at the neuromuscular junction, associated with a Th2 haplotype",
+       "Antagonistic antibody that blocks the acetylcholine receptor, associated with HLA-B8"
+      ],
+      4,
+      "Correct — myasthenia gravis is driven by antagonistic IgG that binds the acetylcholine receptor and blocks ACh from signaling muscle contraction (no direct injury/inflammation); it is associated with HLA-B8. (A) MG is receptor blockade, not immune-complex deposition. (B) MG antibody is antagonistic (blocking), not agonistic; agonistic/DR3 describes Graves'. (C) MG works by receptor blockade, not complement lysis of muscle cells. (D) MG is IgG receptor blockade, not IgE degranulation.",
+      "basic"
+     ],
+     [
+      "Graves' disease is an example of which type II mechanism, and what is its HLA association?",
+      [
+       "Agonistic antibody that stimulates the TSH receptor, associated with HLA-DR3",
+       "Antagonistic antibody that blocks the TSH receptor, associated with HLA-B8",
+       "Complement-mediated destruction of thyroid follicles, associated with HLA-DRB1*04",
+       "IgE-mediated mast-cell degranulation in the thyroid, associated with a Th2 haplotype",
+       "Maternal IgG against fetal thyroid antigen, associated with Rh incompatibility"
+      ],
+      0,
+      "Correct — Graves' is driven by agonistic anti-TSHR IgG that stimulates the TSH receptor (no ligand needed, no regulation), raising T3/T4 (hyperthyroidism) and lowering TSH; it is associated with HLA-DR3. (B) Graves' antibody is agonistic (stimulating), not antagonistic; blockade/B8 fits myasthenia gravis. (C) Graves' acts by receptor stimulation, not complement destruction of follicles. (D) Graves' is IgG receptor stimulation, not IgE degranulation. (E) Graves' is not a maternal-fetal Rh disease.",
+      "basic"
+     ],
+     [
+      "Both myasthenia gravis and Graves' disease are caused by antibodies to a cell-surface receptor, yet their clinical effects are opposite. Why?",
+      [
+       "The myasthenia antibody lyses the cell, while the Graves' antibody opsonizes it",
+       "The myasthenia antibody stimulates receptor signaling, while the Graves' antibody blocks it",
+       "The myasthenia antibody blocks receptor signaling, while the Graves' antibody stimulates it",
+       "The myasthenia antibody is IgE, while the Graves' antibody is IgM",
+       "The myasthenia antibody forms immune complexes, while the Graves' antibody activates complement"
+      ],
+      2,
+      "Correct — the antibodies differ in functional consequence: in myasthenia gravis the anti-AChR antibody is antagonistic (blocks signaling → weakness), while in Graves' the anti-TSHR antibody is agonistic (stimulates signaling → hyperthyroidism). (A) Neither disease is primarily cell lysis vs opsonization; both modulate receptor signaling. (B) The roles are reversed — MG blocks, Graves' stimulates. (D) Both are IgG-mediated, not IgE vs IgM. (E) Neither is defined by immune-complex/complement; both are receptor-modulating antibodies.",
+      "basic"
+     ],
+     [
+      "A patient with hyperthyroidism also has protruding eyes (ophthalmopathy). How does the same antibody explain both findings?",
+      [
+       "The eye findings come from IgE-mediated mast-cell edema that is separate from the underlying thyroid disease",
+       "Anti-TSHR IgG blocks the thyroid receptor, so low circulating hormone is responsible for both the thyroid and eye findings",
+       "The eye findings arise from circulating immune complexes that are entirely unrelated to the anti-thyroid antibody",
+       "Anti-TSHR IgG stimulates the thyroid receptor and also binds the same receptor on retro-orbital cells behind the eye",
+       "Maternal antibody crossing the placenta is responsible for both the thyroid and the retro-orbital eye findings"
+      ],
+      3,
+      "Correct — agonistic anti-TSHR IgG stimulates the thyroid (hyperthyroidism) and also binds TSHR-bearing retro-orbital pre-adipocytes/fibroblasts, causing eye-muscle hyperplasia and increased connective tissue (glycosaminoglycans) — the ophthalmopathy. (A) The eye disease is anti-TSHR–driven tissue expansion, not IgE edema. (B) Graves' antibody stimulates (not blocks) the receptor, and the disease is hyperthyroidism. (C) The ophthalmopathy is caused by the same anti-TSHR antibody acting on retro-orbital tissue, not unrelated complexes. (E) Graves' ophthalmopathy is not a maternal-fetal transfer phenomenon.",
+      "basic"
+     ],
+     [
+      "A patient with anti-GBM disease has BOTH glomerulonephritis and pulmonary hemorrhage. What best explains involvement of both organs?",
+      [
+       "An IgE response to an inhaled allergen damages the lung, and a separate process damages the kidney",
+       "Two separate antibodies happen to arise, one against kidney and one against lung",
+       "Immune complexes form in the blood and randomly lodge in kidney and lung",
+       "The IgG targets an epitope of type IV collagen shared by the glomerular and alveolar basement membranes",
+       "Maternal antibody crosses into both fetal organs during development"
+      ],
+      3,
+      "Correct — the anti-GBM IgG is directed at the NC1 domain of α3 type IV collagen, and the same epitope is present in the alveolar basement membrane, so the cross-reactive antibody injures both kidney and lung. (A) The lung injury is from the same anti-collagen IgG, not a separate IgE allergen response. (B) It is one cross-reactive antibody against a shared epitope, not two separate antibodies. (C) Anti-GBM is direct antibody binding to basement-membrane antigen, not random immune-complex lodging. (E) Anti-GBM is not a maternal-fetal transfer disease.",
+      "basic"
+     ],
+     [
+      "Why is anti-D immune globulin (given to an Rh- mother) effective at preventing hemolytic disease of the newborn?",
+      [
+       "It permanently suppresses the mother's entire antibody response to all antigens",
+       "It clears fetal D antigen from the mother's circulation before her B cells can be primed against it",
+       "It is transfused into the fetus to neutralize maternal antibodies already formed",
+       "It stimulates the fetus to make its own protective antibodies against the D antigen",
+       "It replaces the mother's Rh-negative red cells with Rh-positive ones"
+      ],
+      1,
+      "Correct — anti-D immune globulin binds and removes fetal Rh+ (D antigen) red cells from the mother's blood before they can prime her B cells, preventing her from generating anti-D IgG that would threaten this or a future Rh+ pregnancy. (A) It is antigen-specific (anti-D), not a blanket suppression of all antibody responses. (C) It is given to the mother to prevent priming, not transfused into the fetus. (D) It does not stimulate fetal antibody production. (E) It does not change the mother's red-cell Rh type.",
+      "basic"
+     ],
+     [
+      "Anti-GBM disease is most strongly associated with which target and HLA background?",
+      [
+       "IgG against the acetylcholine receptor at the neuromuscular junction, associated with HLA-B8",
+       "IgG against the NC1 domain of alpha-3 type IV collagen in the basement membrane, associated with HLA-DR2 bearing DRB1*1501 or *04",
+       "Agonistic IgG against the TSH receptor on thyroid cells, associated with HLA-DR3",
+       "IgE against an inhaled environmental allergen, associated with a Th2 MHC class II haplotype",
+       "IgG against the Rh D antigen on fetal red cells, associated with maternal Rh-negativity"
+      ],
+      1,
+      "Correct — anti-GBM disease is driven by IgG against the NC1 (non-collagenous) domain of the α3 chain of type IV collagen in the glomerular (and cross-reactive alveolar) basement membrane; ~80% carry HLA-DRB1*1501 or *04 (HLA-DR2). (A) Anti-AChR/HLA-B8 is myasthenia gravis, not anti-GBM. (C) Anti-TSHR/HLA-DR3 is Graves' disease. (D) IgE against an inhaled allergen is type I hypersensitivity, not anti-GBM. (E) Anti-Rh-D against fetal red cells is hemolytic disease of the newborn.",
+      "basic"
+     ],
+     [
+      "Hemolytic disease of the newborn (Rh) is best characterized by which mechanism?",
+      [
+       "Fetal IgE against maternal red cells triggers mast-cell degranulation in the fetus",
+       "Maternal IgM crosses the placenta and lyses fetal RBCs intravascularly via complement",
+       "Maternal anti-D IgG crosses to the fetus and opsonizes fetal RBCs for extravascular hemolysis in the spleen and liver",
+       "Agonistic antibody stimulates fetal erythropoietin receptors, causing polycythemia",
+       "Immune complexes deposit in the fetal glomeruli, causing nephritis rather than anemia"
+      ],
+      2,
+      "Correct — an Rh- mother sensitized to the D antigen makes anti-D IgG that crosses the placenta, binds fetal Rh+ RBCs, and the antibody-coated cells are phagocytosed (extravascular hemolysis) in the fetal spleen and liver — producing anemia and jaundice from bilirubin. (A) HDN is IgG-mediated RBC opsonization, not a fetal IgE/mast-cell response. (B) IgM does not cross the placenta, and the mechanism is extravascular (opsonic), not intravascular complement lysis. (D) HDN destroys RBCs (anemia); it is not an agonistic-receptor polycythemia. (E) HDN causes hemolytic anemia, not immune-complex glomerulonephritis.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    47,
+    "Lec 19 · Sle Pathogenesis · Contact Dermatitis Mechanism",
+    [
+     [
+      "Fever, urticaria, arthralgia, and proteinuria 8 days after a mouse monoclonal antibody; then pain/swelling at an intradermal re-exposure site within 6 hours. The 8-day systemic and 6-hour local reactions are, respectively:",
+      [
+       "Arthus reaction and serum sickness",
+       "Serum sickness and Arthus reaction",
+       "Both serum sickness",
+       "Both Arthus reactions",
+       "Contact hypersensitivity and serum sickness"
+      ],
+      1,
+      "Systemic 7–10 d vs local 4–10 h IC reactions = ? Serum sickness is the systemic complex disease appearing 7–10 days after exposure to foreign protein; the Arthus reaction is the localized complex vasculitis at a repeat injection site within 4–10 hours. Timing + distribution distinguish them. (A) Reverses the two — Arthus is local/hours, serum sickness is systemic/days. (C) The local 6-hour reaction is not serum sickness. (D) The systemic 8-day reaction is not an Arthus reaction. (E) Contact hypersensitivity is Type IV, not a complex-mediated reaction.",
+      "basic"
+     ],
+     [
+      "All of the following cytokines push AGAINST the Th1 macrophage-activating program that drives granulomatous and contact-HS effector inflammation EXCEPT:",
+      [
+       "IL-4",
+       "IL-10",
+       "TGF-β",
+       "IFN-γ",
+       "IL-5"
+      ],
+      3,
+      "Which cytokine drives (not opposes) the Th1 macrophage program? IFN-γ is the Th1 macrophage-activating cytokine that drives granuloma maintenance and contact-HS effector inflammation — the exception in a list of opposing/non-Th1 cytokines. When IFN-γ (or CD4 numbers) fall, the granuloma destabilizes. (A) IL-4 is a Th2 cytokine that opposes the Th1 program. (B) IL-10 is suppressive, dampening macrophage activation. (C) TGF-β is largely regulatory, not Th1-activating. (E) IL-5 drives eosinophils (Th2 axis), not macrophage activation.",
+      "basic"
+     ],
+     [
+      "Which timing feature best separates a Type IV delayed-type reaction from a Type I immediate reaction to the same skin-contacting allergen?",
+      [
+       "Type IV occurs within minutes; Type I peaks at 24–72 hours",
+       "Both peak within minutes",
+       "Both peak at 1–2 weeks",
+       "Type IV requires no prior exposure; Type I requires two weeks of sensitization",
+       "Type IV peaks at 24–72 hours; Type I occurs within minutes"
+      ],
+      4,
+      "Timing: Type IV vs Type I to a skin allergen? Type IV is delayed — symptoms appear 1–3 days (peak 24–72 h) after re-exposure because T cells must be activated. Type I is immediate (minutes) via preformed-IgE mast-cell degranulation. Timing is the board discriminator. (A) Reverses the two timings. (B) Type I is minutes; Type IV is not. (C) Neither peaks at 1–2 weeks (that is the sensitization window, not the reaction). (D) Both require prior sensitization; the distinction is reaction speed, not exposure count.",
+      "basic"
+     ],
+     [
+      "In contact hypersensitivity, a small reactive molecule binds a skin protein to become immunogenic. What is the small molecule called, and what is the skin protein's role?",
+      [
+       "Superantigen; the skin protein is the receptor",
+       "Hapten; the skin protein is the carrier",
+       "Adjuvant; the skin protein is the epitope",
+       "Mitogen; the skin protein is the ligand",
+       "Toxin; the skin protein is the chaperone"
+      ],
+      1,
+      "Small reactive contact molecule + skin protein = ? A hapten is too small to be immunogenic alone; conjugated to a skin protein carrier, the haptenated protein is processed by Langerhans/dendritic cells and presented as a neo-antigen. Poison ivy urushiol is the canonical hapten. (A) A superantigen cross-links TCR-MHC outside the peptide groove; not a hapten. (C) An adjuvant boosts responses nonspecifically; the protein is not an epitope here. (D) A mitogen drives polyclonal division; not the contact mechanism. (E) \"Toxin/chaperone\" mislabels both components.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    48,
+    "Lec 19 · Immune Complex Mediated Damage",
+    [
+     [
+      "In a type-1 granuloma fighting Mycobacterium tuberculosis, activated macrophages that resemble epithelium and fuse into giant cells are called:",
+      [
+       "Foamy cells",
+       "Plasma cells",
+       "Reed-Sternberg cells",
+       "Mott cells",
+       "Epithelioid cells"
+      ],
+      4,
+      "Epithelium-like fusing macrophages in a TB granuloma? Epithelioid cells are highly activated (high-IFN-γ) macrophages resembling epithelium that fuse into giant cells and wall off the microbe at the granuloma core. (A) Foamy cells accumulate LDL to form the outer cellular barrier; they are not the fusing epithelioid population. (B) Plasma cells secrete antibody; not a granuloma macrophage. (C) Reed-Sternberg cells are Hodgkin lymphoma cells. (D) Mott cells are immunoglobulin-stuffed plasma cells, unrelated.",
+      "basic"
+     ],
+     [
+      "A 42-year-old smoker develops symmetric small-joint arthritis. Synovial tissue shows citrullinated peptides; she carries HLA-DR4. Which mechanism best connects her smoking, HLA type, and autoantigen?",
+      [
+       "Smoking directly mutates the DR4 gene to create new epitopes",
+       "DR4 blocks citrullination so antigen accumulates",
+       "Smoking depletes regulatory T cells specific for collagen",
+       "Smoking induces PAD activity that citrullinates self-protein, and DR4 efficiently presents citrullinated peptide",
+       "DR4 cross-reacts with nicotine to form immune complexes"
+      ],
+      3,
+      "Smoking + HLA-DR4 + citrullination → RA mechanism? Smoking induces peptidylarginine deiminase (PAD), citrullinating self-protein; HLA-DR4 presents citrullinated peptide efficiently, driving the anti-citrullinated response and RA — one mechanistic chain. (A) Smoking does not mutate the DR4 gene. (B) DR4 presents — it does not block — citrullinated antigen. (C) The link is antigen generation + presentation, not Treg depletion. (E) DR4 does not cross-react with nicotine to form complexes.",
+      "basic"
+     ],
+     [
+      "Which HLA allele confers the greatest susceptibility to systemic lupus erythematosus?",
+      [
+       "HLA-DR4",
+       "HLA-B27",
+       "HLA-DQ8",
+       "HLA-DR3",
+       "HLA-A3"
+      ],
+      3,
+      "HLA allele with greatest SLE susceptibility? HLA-DR3 confers the greatest SLE susceptibility (DR2 and DR5 also contribute). Contrast with RA's DR4/DR1 — a classic paired association the exam likes to test side by side. (A) DR4 is the RA association, not SLE. (B) B27 associates with ankylosing spondylitis. (C) DQ8 associates with type 1 diabetes. (E) A3 associates with hemochromatosis, not SLE.",
+      "basic"
+     ],
+     [
+      "Which process most directly explains why SLE becomes a chronic, progressively broadening autoantibody disease over time?",
+      [
+       "Epitope spreading",
+       "Original antigenic sin",
+       "Affinity maturation ceiling",
+       "Clonal anergy",
+       "Receptor editing"
+      ],
+      0,
+      "What broadens the SLE autoantibody response over time? Epitope spreading: ongoing tissue destruction releases more self-antigens, recruiting new T- and B-cell specificities in waves that broaden the response — the chronicity engine in T-cell autoimmunity. (B) Original antigenic sin describes biased memory recall to a first antigen, not broadening to new self-antigens. (C) An \"affinity maturation ceiling\" is not a real mechanism here. (D) Clonal anergy silences cells; it would limit, not broaden, the response. (E) Receptor editing is a central-tolerance B-cell mechanism, not a chronicity driver.",
+      "basic"
+     ],
+     [
+      "Rheumatoid factor, present in ~80% of RA patients, is most accurately described as:",
+      [
+       "Antibody against citrullinated peptides",
+       "Antibody against double-stranded DNA",
+       "Antibody against the acetylcholine receptor",
+       "Antibody against type IV collagen",
+       "Antibody (often IgM) against the Fc region of IgG"
+      ],
+      4,
+      "What is rheumatoid factor? Rheumatoid factor is antibody — predominantly IgM — directed against the Fc region of IgG. High titers also appear in SLE, systemic sclerosis, and dermatomyositis, so RF is not RA-specific. (A) Anti-citrullinated peptide (ACPA) is a different, more RA-specific marker. (B) Anti-dsDNA is an SLE antibody. (C) Anti-AChR is the myasthenia gravis antibody. (D) Anti-type-IV collagen is anti-GBM (Goodpasture).",
+      "basic"
+     ],
+     [
+      "A patient with SLE has a C1q deficiency. Which mechanism BEST links this deficiency to the generation of the nuclear autoantigens that drive the disease?",
+      [
+       "Impaired clearance of apoptotic bodies, which then undergo secondary necrosis and release nuclear antigens",
+       "Direct complement-mediated lysis of healthy nucleated cells",
+       "Loss of MAC formation on circulating lymphocytes",
+       "Failure of positive selection in the thymus",
+       "Overproduction of regulatory T cells suppressing apoptosis"
+      ],
+      0,
+      "C1q deficiency in SLE → how are nuclear Ags generated? C1q opsonizes apoptotic bodies for quiet clearance. Without it they accumulate and undergo secondary necrosis, spilling nuclear antigens that mature DCs and drive autoantibodies — this clearance failure, not the antibodies, is the SLE engine. (B) C1q deficiency reduces, not increases, complement-mediated lysis. (C) The defect concerns apoptotic-body clearance, not MAC on lymphocytes. (D) Thymic positive selection is unrelated to C1q. (E) Treg overproduction would suppress, not drive, autoimmunity.",
+      "basic"
+     ],
+     [
+      "If CD4+ T-cell numbers or IFN-γ levels fall in an established tuberculous granuloma, the most likely consequence is:",
+      [
+       "Permanent sterilization of the granuloma",
+       "Conversion of the granuloma to a Type I hypersensitivity lesion",
+       "Spontaneous resolution with no sequelae",
+       "Breakdown of the fibrous wall and escape of viable bacteria with caseous spillage",
+       "Transformation of epithelioid cells into plasma cells"
+      ],
+      3,
+      "Granuloma + falling CD4/IFN-γ → consequence? The granuloma is cytokine-maintained: when IFN-γ/CD4 fall, epithelioid cells stop holding the fibrous cuff, foamy cells lose their lipid barrier, infected macrophages lyse, and the caseous center spills viable bacteria — a reactivation event. (A) Falling cytokines do the opposite of sterilizing. (B) It does not convert to a Type I (IgE) lesion. (C) Escape, not clean resolution, is the consequence. (E) Epithelioid cells do not become plasma cells.",
+      "basic"
+     ],
+     [
+      "In the effector phase of contact hypersensitivity, which cell directly produces the vesicular keratinocyte damage via perforin/granzyme and Fas ligand?",
+      [
+       "CD4+ Th1 cells",
+       "CD8+ cytotoxic T cells",
+       "Mast cells",
+       "B cells",
+       "Eosinophils"
+      ],
+      1,
+      "Which cell kills keratinocytes in contact-HS effector phase? CD8+ Tc1 cells induce keratinocyte apoptosis through perforin/granzyme and Fas–FasL, producing the vesicular lesions of poison ivy. CD4+ Th1 cells contribute IFN-γ that activates macrophages, but the direct keratinocyte killing is CD8-driven. (A) CD4+ Th1 supplies IFN-γ to activate macrophages; it is not the direct killer. (C) Mast cells contribute histamine/itch, not perforin-mediated killing. (D) B cells have no direct cytotoxic role here. (E) Eosinophils are not the effector of contact hypersensitivity.",
+      "basic"
+     ],
+     [
+      "A patient develops post-streptococcal glomerulonephritis. Why is this classified as a Type III rather than a Type II reaction even though antigen sits on the glomerular basement membrane?",
+      [
+       "Antibody directly attacks an intrinsic GBM collagen antigen",
+       "The reaction is mediated by IgE and mast cells",
+       "Soluble streptococcal antigen lodges in the GBM and antibody forms a complex there in situ",
+       "T cells directly lyse glomerular cells",
+       "There is no complement involvement"
+      ],
+      2,
+      "Post-strep GN: why Type III not Type II? A soluble streptococcal antigen plants in the GBM and antibody binds it there (complex in situ) → Type III. Anti-GBM (Goodpasture) targets an intrinsic GBM antigen → Type II. (A) That describes anti-GBM/Type II, not post-strep GN. (B) It is not IgE/mast-cell mediated. (D) It is complex/complement-driven, not direct T-cell lysis. (E) Complement is very much involved (classical pathway).",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    49,
+    "Lec 20 · Types Of Immunodeficiencies",
+    [
+     [
+      "Severe combined immunodeficiency (SCID) is best defined as an immunodeficiency that:",
+      [
+       "Involves only B cells and spares T cells",
+       "Is always acquired secondary to a viral infection",
+       "Always involves T cells plus at least one other compartment (often B or NK cells)",
+       "Affects only the complement system",
+       "Involves NK cells exclusively"
+      ],
+      2,
+      "Definition of SCID? SCID is an umbrella term for deficiencies that always involve T cells and at least one other arm — most often B cells, because T-cell help is needed to activate them, sometimes NK cells. The T-cell defect alone can cripple B-cell function. (A) SCID always involves T cells; a B-cell-only defect is not SCID. (B) SCID is genetic/primary, not acquired. (D) Complement-only defects are not SCID. (E) NK-only involvement is not the SCID definition.",
+      "basic"
+     ],
+     [
+      "Which is the single most common primary immunodeficiency overall?",
+      [
+       "Chronic granulomatous disease",
+       "Bare lymphocyte syndrome type II",
+       "Hemophagocytic lymphohistiocytosis",
+       "Selective IgA deficiency",
+       "Leukocyte adhesion deficiency type 1"
+      ],
+      3,
+      "Most common primary immunodeficiency? Selective IgA deficiency (dysgammaglobulinemia) is the most common PI and one of the mildest, more frequent in people of European descent. The defect is in B-cell differentiation into IgA-secreting plasma cells — the IgA genes themselves are normal. (A) CGD is a phagocytic PI, not the most common. (B) BLS-II is a rare SCID. (C) HLH is uncommon. (E) LAD-1 is rare.",
+      "basic"
+     ],
+     [
+      "Among the hyper-IgM syndromes, which form is the one that is a SCID because the defect lies in the T cell?",
+      [
+       "HIGM-2 (AID mutation)",
+       "HIGM-1 (CD40L mutation)",
+       "HIGM-3 (CD40 mutation)",
+       "HIGM-4 (switch-region DNA breaks)",
+       "HIGM-5 (UNG mutation)"
+      ],
+      1,
+      "Which hyper-IgM form is a SCID (T-cell defect)? HIGM-1 is X-linked and caused by a CD40L mutation on T cells — because the defect is in T cells (and impairs the B-cell help they give), it is classified as a SCID. AID, CD40, switch-region breaks, and UNG are all B-cell defects. (A) AID (HIGM-2) is a B-cell enzyme defect. (C) CD40 (HIGM-3) is on the B cell. (D) Switch-region breaks (HIGM-4) are intrinsic to the B cell. (E) UNG (HIGM-5) is a B-cell enzyme defect.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    50,
+    "Lec 20 · Clinical Features Of Hemophagocytic Lymphohistiocytosis",
+    [
+     [
+      "In bare lymphocyte syndrome, αβ T cells are deficient but γδ T cells are present in normal numbers. Why?",
+      [
+       "γδ T cells are made in the bone marrow rather than the thymus",
+       "γδ T cells express their own MHC molecules independent of the defect",
+       "γδ T cells do not undergo MHC-dependent positive selection, so absent surface MHC does not block their development",
+       "γδ T cells are actually B cells in disguise",
+       "γδ T cells require only MHC class II, which is unaffected"
+      ],
+      2,
+      "BLS: why are γδ T cells normal but αβ T cells low? αβ thymocytes need surface MHC for positive selection; with MHC class I or II missing, that step fails and αβ CD4/CD8 cells are low. γδ T cells do not undergo MHC-dependent positive selection, so they develop normally regardless of the MHC defect. (A) γδ T cells still arise via the thymus; the key is skipping MHC-based positive selection. (B) They do not rescue themselves with self-made MHC. (D) γδ cells are T cells, not B cells. (E) γδ development is not simply MHC-II-dependent; it bypasses MHC positive selection.",
+      "basic"
+     ],
+     [
+      "Chronic granulomatous disease results from a defect in which process, leading to pathogen survival inside phagocytes?",
+      [
+       "The oxidative (respiratory) burst — e.g. NADPH oxidase dysfunction",
+       "Perforin/granzyme cytotoxic killing",
+       "Class-switch recombination",
+       "Selectin-mediated rolling",
+       "MHC class I antigen presentation"
+      ],
+      0,
+      "CGD: which defective process? CGD is an oxidative-burst defect (typically NADPH oxidase), so phagocytosed bacteria/fungi survive inside cells. Frustrated phagocytes form granulomas; gum lesions and abscesses are typical. (B) Perforin/granzyme failure is HLH. (C) Class-switch failure is hyper-IgM. (D) Selectin/rolling failure is LAD-2. (E) MHC-I presentation failure is BLS-I.",
+      "basic"
+     ],
+     [
+      "A 9-month-old has anemia, low platelets, splenomegaly, and a perforin mutation. Why does a killing defect drive macrophage pathology?",
+      [
+       "Perforin deficiency directly lyses red blood cells",
+       "The mutation causes macrophages to stop producing IFN-γ",
+       "Loss of perforin blocks B-cell class switching",
+       "Excess perforin drives complement-mediated hemolysis",
+       "Failed perforin/granzyme killing keeps CTLs/NK secreting IFN-γ, which hyperactivates macrophages that phagocytose RBCs"
+      ],
+      4,
+      "Perforin mutation → macrophage-driven HLH: mechanism? Failed perforin/granzyme killing leaves targets unchecked, so CTLs/NK cells keep secreting IFN-γ, which hyperactivates macrophages that phagocytose RBCs, platelets, neutrophils. Defect in T/NK, pathology in the macrophage. (A) Perforin loss does not directly lyse RBCs; macrophage phagocytosis does. (B) The macrophages are over-driven by IFN-γ, not silenced. (C) HLH is a cytotoxic-killing defect, not a class-switch defect. (D) There is no excess perforin; the problem is its absence.",
+      "basic"
+     ],
+     [
+      "A newborn has delayed umbilical-cord separation, recurrent soft-tissue infections WITHOUT pus, and a markedly high blood neutrophil count. Which mechanism explains the combination?",
+      [
+       "A perforin defect prevents neutrophils from killing bacteria",
+       "Complement C3 deficiency prevents opsonization",
+       "A CD18/LFA-1 defect blocks neutrophil extravasation, so they pile up in blood but cannot reach tissue to form pus",
+       "An AID defect prevents antibody production",
+       "A TAP mutation prevents antigen presentation to neutrophils"
+      ],
+      2,
+      "No pus + neutrophilia + delayed cord separation → mechanism? LAD-1 is a CD18 mutation (part of LFA-1). Neutrophils cannot adhere and extravasate, so they pile up in blood (neutrophilia) but never reach tissue — no pus, poor healing, delayed cord separation. (A) Neutrophils can kill; they just cannot get to the tissue (an adhesion defect). (B) C3 deficiency impairs opsonization broadly, not this adhesion triad. (D) AID is a B-cell switching defect, unrelated to neutrophil migration. (E) TAP defects affect MHC-I display (BLS-I), not extravasation.",
+      "basic"
+     ],
+     [
+      "In hemophagocytic lymphohistiocytosis, the splenomegaly and anemia are most directly caused by:",
+      [
+       "Autoantibodies against red blood cell surface antigens",
+       "Overactivated macrophages phagocytosing red blood cells",
+       "Bone-marrow infiltration by malignant plasma cells",
+       "Complement-mediated intravascular hemolysis",
+       "Failure of erythropoietin production"
+      ],
+      1,
+      "HLH: cause of splenomegaly + anemia? The hyperactivated macrophages do not stop at pathogens — they phagocytose red blood cells (causing anemia/fatigue), platelets, and neutrophils, and the splenic macrophage burden produces splenomegaly. \"Hemophagocytic\" names exactly this. (A) HLH hemolysis is macrophage phagocytosis, not an autoantibody (that is autoimmune hemolytic anemia). (C) Plasma-cell marrow infiltration is multiple myeloma. (D) It is phagocytic, not complement-mediated lysis. (E) Erythropoietin failure is renal anemia, not HLH.",
+      "basic"
+     ],
+     [
+      "Which leukocyte adhesion deficiency adds a life-threatening BLEEDING disorder (defective platelet aggregation with normal platelet counts) to the LAD-1-like migration defect?",
+      [
+       "LAD-1 (CD18 mutation)",
+       "LAD-3 (FERMT3/KINDLIN3 mutation)",
+       "LAD-2 (sialyl-Lewis X / fucose-metabolism defect)",
+       "Selective IgA deficiency",
+       "Chronic granulomatous disease"
+      ],
+      1,
+      "Which LAD adds a bleeding disorder? LAD-3 (KINDLIN3) disrupts inside-out integrin activation on leukocytes AND platelets, so platelets cannot aggregate — bleeding despite normal platelet counts — plus LAD-1-like migration failure. (A) LAD-1 (CD18) gives the migration/no-pus picture without the platelet-aggregation bleeding defect. (C) LAD-2 adds growth/neurologic defects (fucose metabolism), not a bleeding disorder. (D) Selective IgA deficiency is humoral, unrelated. (E) CGD is an oxidative-burst defect, not an adhesion/bleeding one.",
+      "basic"
+     ],
+     [
+      "A young adult has had two episodes of Neisseria meningitidis meningitis. Which complement defect is most likely?",
+      [
+       "A C1 inhibitor deficiency",
+       "A C1, C2, or C4 deficiency",
+       "A C3 deficiency",
+       "No complement defect is implied",
+       "A terminal MAC component deficiency (C5–C9)"
+      ],
+      4,
+      "Recurrent Neisseria meningitis → which complement defect? Recurrent/invasive Neisseria infections point to a terminal MAC (C5–C9) deficiency — Neisseria requires MAC-mediated lysis to be cleared. Two bouts of meningitis by age 18 should prompt a complement workup before dorm living. (A) C1-INH deficiency causes hereditary angioedema, not Neisseria infections. (B) C1/C2/C4 deficiencies cause immune-complex disease (RA/SLE/vasculitis), not recurrent Neisseria. (C) C3 deficiency gives broad encapsulated-bacterial susceptibility, not the Neisseria-specific pattern. (D) The recurrent Neisseria pattern strongly implies a MAC defect.",
+      "basic"
+     ],
+     [
+      "A patient with selective IgA deficiency has recurrent sinopulmonary and GI infections. Which lab pattern fits?",
+      [
+       "Low IgA, low IgG, and low IgM with absent B cells",
+       "Elevated IgA with low IgG",
+       "Absent B cells with normal immunoglobulins",
+       "Low IgA with normal IgM and IgG and normal peripheral B-cell numbers",
+       "Low IgM only with normal IgA and IgG"
+      ],
+      3,
+      "Selective IgA deficiency: lab pattern? Only IgA is deficient — IgM and IgG normal; B cells are made normally (defect is in terminal differentiation), so CD19+ B-cell numbers are normal. Infections cluster at mucosa. (A) Other isotypes and B-cell numbers are normal in selective IgA deficiency. (B) IgA is low, not elevated. (C) B cells are present and normal in number. (E) It is IgA, not IgM, that is selectively low.",
+      "basic"
+     ],
+     [
+      "A patient has recurrent non-pitting edema episodes. C1-inhibitor activity is deficient. Which downstream event drives the swelling?",
+      [
+       "Excess C3a/C5a anaphylatoxin from alternative-pathway overdrive",
+       "MAC-mediated endothelial lysis",
+       "IgE-mediated mast-cell histamine release",
+       "Uncontrolled cleavage of C4 and C2 releases vasoactive C2 kinin → hereditary angioedema",
+       "Bradykinin depletion from ACE overactivity"
+      ],
+      3,
+      "C1-INH deficiency: what drives the edema? Without C1 inhibitor, C1 keeps cleaving C4 and C2; the C2 fragment yields C2 kinin, a vasoactive peptide that drives the edema of hereditary angioedema. As Davis put it, \"C4 isn't the problem, C2 is.\" (A) The mechanism is C2 kinin from unchecked C4/C2 cleavage, not alternative-pathway anaphylatoxins. (B) It is a vasoactive-peptide mechanism, not MAC lysis. (C) It is complement-driven, not IgE/mast-cell. (E) Bradykinin accumulates in ACE-inhibitor angioedema — a different mechanism.",
+      "basic"
+     ],
+     [
+      "A boy has recurrent infections; CD19+ B, CD4, CD8 all normal, but switched antibodies are absent and IgM is upper-normal. AID sequencing is abnormal. Which statement best integrates this?",
+      [
+       "Without AID, B cells cannot class-switch, so the IgM:IgG/IgA ratio is elevated even when absolute IgM is near-normal",
+       "The defect is in CD40L on T cells, making this a SCID",
+       "Absent B cells explain the failure to switch",
+       "Elevated absolute IgM is required to diagnose hyper-IgM syndrome",
+       "AID deficiency blocks positive selection in the thymus"
+      ],
+      0,
+      "Normal cell counts, no switched isotypes, AID mutation → integrate? AID drives class-switch recombination (via CD40–CD40L). Without it, B cells are stuck making IgM, so the IgM:IgG/IgA ratio is elevated (\"hyper-IgM\") even when absolute IgM is normal. Only switching fails. (B) AID is a B-cell enzyme; the CD40L (T-cell) form is HIGM-1, a different cause. (C) B-cell numbers are normal here — switching, not production, fails. (D) Hyper-IgM is defined by the RATIO; absolute IgM need not be high. (E) AID acts on switch recombination in the follicle, not thymic selection.",
+      "basic"
+     ],
+     [
+      "Bare lymphocyte syndrome type I and type II differ most fundamentally in that:",
+      [
+       "Type I lacks surface MHC-I (TAP mutation; made but not displayed) → low CD8; type II lacks MHC-II (transcription-factor mutation; not made) → low CD4",
+       "Type I lacks MHC class II and type II lacks MHC class I",
+       "Type I is caused by a transcription-factor defect and type II by a TAP defect",
+       "Both result from mutations in the MHC genes themselves",
+       "Type I lowers CD4 counts and type II lowers CD8 counts"
+      ],
+      0,
+      "BLS type I vs type II: defect and which T cell is low? BLS-I = no surface MHC-I (TAP1/2 mutation; made but not displayed) → low CD8. BLS-II (more common) = no MHC-II (transcription-factor mutation; not made) → low CD4. MHC genes themselves are normal. (B) Reverses the class associations. (C) Reverses the molecular defects (TAP=I, Tx-factor=II). (D) The MHC genes are normal in both; the defects are in transport/transcription. (E) Reverses which T-cell subset is affected.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    51,
+    "Lec 20 · Hodgkin Lymphoma",
+    [
+     [
+      "A 5-year-old has anemia, easy bruising, and lymphadenopathy; marrow shows clonal expansion of a lymphoid (B-cell) progenitor. Which malignancy is most likely?",
+      [
+       "Chronic lymphocytic leukemia (CLL)",
+       "Chronic myeloid leukemia (CML)",
+       "Multiple myeloma",
+       "Acute lymphoblastic leukemia (ALL)",
+       "Hodgkin lymphoma"
+      ],
+      3,
+      "Child + clonal lymphoid-progenitor expansion → which cancer? ALL — dysregulated proliferation of a lymphoid progenitor (usually a B cell) — is the most common pediatric malignancy (~⅓ of childhood cancers). The age clue (young child) plus a progenitor/blast cell is the giveaway. (A) CLL is mature circulating B cells in older adults (55+). (B) CML is a myeloid disorder of adults. (C) Multiple myeloma is malignant plasma cells in older adults. (E) Hodgkin lymphoma forms nodal masses (Reed-Sternberg), not a marrow lymphoid-progenitor leukemia.",
+      "basic"
+     ],
+     [
+      "An older adult has bone pain; films show \"punched-out\" lytic skull lesions and labs show light chains (Bence-Jones proteins) in urine with renal impairment. Which malignancy fits?",
+      [
+       "Acute myeloid leukemia",
+       "Multiple myeloma (malignant plasma cells)",
+       "Hodgkin lymphoma",
+       "Chronic lymphocytic leukemia",
+       "Bare lymphocyte syndrome"
+      ],
+      1,
+      "Punched-out lytic lesions + Bence-Jones proteins → which cancer? Multiple myeloma — malignant plasma cells accumulating in bone create diagnostic punched-out lytic lesions (skull, spine), and overproduced free light chains (Bence-Jones proteins) clog the kidney, causing renal failure. Most common in older adults. (A) AML is an immature-granulocyte marrow malignancy, not plasma-cell bone disease. (C) Hodgkin lymphoma gives nodal masses, not lytic bone + Bence-Jones. (D) CLL is a mature-B-cell leukemia without punched-out lesions. (E) BLS is a SCID, not a malignancy.",
+      "basic"
+     ],
+     [
+      "Which feature best distinguishes Hodgkin from non-Hodgkin lymphoma?",
+      [
+       "Hodgkin is always T-cell; non-Hodgkin is always B-cell",
+       "Hodgkin is more common and more aggressive than non-Hodgkin",
+       "Non-Hodgkin shows Reed-Sternberg cells; Hodgkin does not",
+       "Hodgkin spreads unpredictably beyond lymph nodes; non-Hodgkin stays nodal",
+       "Hodgkin spreads orderly node-to-node with Reed-Sternberg cells; non-Hodgkin is less predictable, B- or T-cell, spreads beyond nodes"
+      ],
+      4,
+      "Hodgkin vs non-Hodgkin: key distinction? Hodgkin spreads orderly node-to-node and shows diagnostic Reed-Sternberg cells (often EBV-linked); highly treatable. Non-Hodgkin can be B- or T-cell, less predictable, and spreads beyond nodes. (A) Hodgkin is typically B-cell; non-Hodgkin can be B- or T-cell. (B) Non-Hodgkin is far more common (~10×) and generally more aggressive. (C) Reed-Sternberg cells are the Hodgkin marker, not non-Hodgkin. (D) Reverses the spread patterns — Hodgkin is the predictable, nodal one.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    52,
+    "Lec 21 · B Cell Central Tolerance",
+    [
+     [
+      "Where does central tolerance occur for each lineage?",
+      [
+       "Both B and T cells in the thymus",
+       "B cells in the bone marrow (and spleen); T cells in the thymus",
+       "Both B and T cells in the bone marrow",
+       "B cells in the thymus; T cells in the bone marrow",
+       "Both B and T cells in the lymph nodes"
+      ],
+      1,
+      "Central tolerance sites for B vs T cells? Central tolerance is in the generative organs: B cells in bone marrow (~70% of negative selection in the spleen), T cells in the thymus. Peripheral tolerance is in secondary lymphoid tissue. (A) The thymus is for T cells; B cells mature in bone marrow/spleen. (C) T-cell central tolerance is thymic, not marrow. (D) Reverses the two lineages. (E) Lymph nodes are sites of peripheral, not central, tolerance.",
+      "basic"
+     ],
+     [
+      "A student is confused that \"strong binding\" leads to opposite fates in different selection steps. Which statement correctly captures the binding-strength rules?",
+      [
+       "In all three steps, strong binding leads to survival",
+       "In all three steps, strong binding leads to apoptosis",
+       "B-cell neg: strong → apoptosis/anergy; T-cell pos: weak/no → apoptosis; T-cell neg: strong or none → apoptosis, weak → survival",
+       "T-cell positive selection deletes strong binders; negative selection keeps them",
+       "B-cell negative selection keeps strong binders and deletes weak binders"
+      ],
+      2,
+      "Binding-strength rules across the three selection steps? Direction flips by step. B-cell neg selection: strong → apoptosis/anergy. T-cell pos selection: weak/no → apoptosis, moderate/strong → survive. T-cell neg selection: weak → survive, strong or none → apoptosis. (A) Strong binding does not uniformly mean survival — in negative selection it means death. (B) In positive selection, weak/no binding (not strong) is what gets deleted. (D) Reverses positive selection — positive selection keeps moderate/strong binders. (E) B-cell negative selection deletes/anergizes STRONG self-binders, keeping weak ones.",
+      "basic"
+     ],
+     [
+      "During B-cell negative selection, what determines whether a self-reactive immature B cell undergoes apoptosis versus becomes anergic?",
+      [
+       "Apoptosis follows weak binding; anergy follows strong binding",
+       "Apoptosis: strong binding to multivalent surface self-Ag WITH cross-linking; anergy: soluble self-Ag WITHOUT cross-linking",
+       "Apoptosis occurs only in the thymus; anergy only in the spleen",
+       "Cross-linking causes anergy, while soluble antigen causes apoptosis",
+       "The outcome depends on IgD rather than IgM expression"
+      ],
+      1,
+      "B-cell negative selection: apoptosis vs anergy determinant? Cross-linking is the key: multivalent surface self-Ag cross-links the BCR → strong signal → apoptosis; soluble self-Ag binds without cross-linking → anergy. (A) Both outcomes follow STRONG binding; weak binding gives survival. (C) B-cell selection is bone marrow/spleen, not thymus, and both fates occur there. (D) Reverses it — cross-linking drives apoptosis, soluble (no cross-link) drives anergy. (E) The immature B cell is IgM+; IgD comes later via alternative splicing.",
+      "basic"
+     ],
+     [
+      "During T-cell positive selection in the thymic cortex, what does the interaction between a double-positive thymocyte and a cortical thymic epithelial cell determine?",
+      [
+       "Survival (moderate/strong MHC binding) + lineage fate — CD8 + MHC I → cytotoxic, CD4 + MHC II → helper",
+       "Only whether the cell is deleted for self-reactivity",
+       "Production of all self-antigens via the AIRE gene",
+       "Re-expression of RAG to edit the TCR",
+       "Conversion of the thymocyte into a regulatory T cell"
+      ],
+      0,
+      "What does T-cell positive selection determine? Positive selection is survival + lineage fate: moderate/strong MHC binding survives, and MHC class decides lineage — CD8 + MHC I → cytotoxic, CD4 + MHC II → helper. Negative selection follows in the medulla. (B) Deletion for self-reactivity is negative selection, which follows in the medulla. (C) AIRE-driven self-antigen production occurs in negative selection (MTECs). (D) TCR editing is not a normal thymic step (editing is a B-cell phenomenon). (E) Treg commitment is a separate thymic outcome, not the positive-selection fate decision.",
+      "basic"
+     ],
+     [
+      "How do medullary thymic epithelial cells (MTECs) present the breadth of self-antigens needed to test developing T cells?",
+      [
+       "They import self-antigens from the bloodstream via FcRn",
+       "They rely entirely on circulating dendritic cells to supply antigen",
+       "They use RAG to generate antigen diversity",
+       "They express the AutoImmune REgulator (AIRE) gene, which drives transcription of essentially all tissue-restricted self-antigens",
+       "They present only blood-borne antigens that diffuse into the thymus"
+      ],
+      3,
+      "How do MTECs present the full self-antigen repertoire? MTECs express AIRE, which switches on tissue-restricted self-antigens so the thymus can display \"all\" self. They present these and hand them to thymic DCs. AIRE knockout causes autoimmunity. (A) AIRE-driven endogenous transcription, not FcRn import, generates the repertoire. (B) MTECs themselves express the self-antigens via AIRE; DCs assist but are not the source. (C) RAG rearranges receptor genes, not self-antigen expression. (E) AIRE generates tissue-restricted antigens that would otherwise never reach the thymus.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    53,
+    "Lec 21 · Peripheral Tolerance Of T Cells",
+    [
+     [
+      "An anergic self-reactive B cell that has down-regulated CXCR5 enters the lymph node. Which peripheral-tolerance mechanism is operating, and what is its usual fate?",
+      [
+       "Receptor editing — it re-rearranges its BCR and survives",
+       "Follicular exclusion — lacking CXCR5, it is trapped in the T-cell zone and undergoes apoptosis without T-cell help",
+       "Positive selection — it is promoted into the follicle",
+       "Class switching — it becomes an IgG plasma cell",
+       "Central deletion — it is removed in the bone marrow"
+      ],
+      1,
+      "CXCR5-low anergic B cell trapped in T-cell zone → which mechanism/fate? Follicular exclusion: without CXCR5 the anergic B cell cannot enter the follicle and is stuck in the T-cell zone, where it meets self-Ag without help and undergoes apoptosis. (A) Receptor editing is a central, bone-marrow B-cell process, not peripheral exclusion. (C) There is no rescue-by-promotion; exclusion keeps it out of the follicle. (D) Class switching to a plasma cell is the opposite of the tolerizing fate here. (E) This is a peripheral (lymph node) mechanism, not central marrow deletion.",
+      "basic"
+     ],
+     [
+      "Beyond follicular exclusion, how are anergic self-reactive B cells deleted in the periphery?",
+      [
+       "Activated CD4+ T cells upregulate Fas ligand, engaging Fas on anergic B cells to trigger apoptosis",
+       "NK cells lyse them via missing-self recognition",
+       "Complement MAC directly punches holes in them",
+       "They are deleted centrally by RAG-mediated editing",
+       "They switch to IgA and are exported to mucosa"
+      ],
+      0,
+      "Deletional peripheral B-cell tolerance: mechanism? Anergic B cells express moderate Fas. Activated T-cell-zone CD4+ T cells upregulate Fas ligand → Fas signaling → apoptosis of the anergic B cell. This is the deletional arm of B-cell tolerance. (B) NK missing-self killing is not the B-cell deletional mechanism here. (C) It is Fas-mediated apoptosis, not complement MAC. (D) RAG editing is central (marrow), not this peripheral deletion. (E) Isotype switching/export is unrelated to deletional tolerance.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    54,
+    "Lec 21 · Hla Association With Autoimmunity",
+    [
+     [
+      "Using type 1 diabetes as the model, which sequence correctly orders the four steps that generate autoimmune disease?",
+      [
+       "(I) destruction of target cells → (II) activation → (III) antigen release → (IV) generation of self-reactive cells",
+       "(I) peripheral-tolerance failure → (II) central-tolerance failure → (III) antigen release → (IV) destruction",
+       "(I) antigen release → (II) destruction → (III) generation of self-reactive cells → (IV) activation",
+       "(I) destruction → (II) generation of self-reactive cells → (III) antigen release → (IV) activation",
+       "(I) self-reactive lymphocytes (central failure) → (II) self-Ag release + trigger → (III) activation (peripheral failure) → (IV) target destruction"
+      ],
+      4,
+      "Order the four steps of autoimmunity (T1D model)? I self-reactive lymphocytes form (central-tolerance failure) → II self-Ag release + chronic presence (trigger, with DC maturation) → III activation (peripheral-tolerance failure) → IV target destruction. Order is fixed. (A) Reverses the entire sequence — destruction is last, not first. (B) Central-tolerance failure (generating the cells) precedes peripheral-tolerance failure. (C) You must generate the self-reactive cells before antigen release/activation matter. (D) Generation of self-reactive cells is Step I, not Step II, and destruction is last.",
+      "basic"
+     ],
+     [
+      "In type 1 diabetes, which cell is the primary effector that destroys pancreatic beta cells, and what supporting role do CD4+ T cells play?",
+      [
+       "CD8+ cytotoxic T cells are the main killers (perforin/granzyme and Fas/FasL); CD4+ Th cells drive the inflammation",
+       "CD4+ T cells directly lyse beta cells; CD8+ cells are bystanders",
+       "B cells directly phagocytose beta cells",
+       "NK cells are the sole effectors; T cells are uninvolved",
+       "Complement alone destroys beta cells without cellular help"
+      ],
+      0,
+      "T1D: main beta-cell killer + CD4 role? In T1D, CD8+ CTLs are the primary effectors, killing beta cells via perforin/granzyme and Fas/FasL. CD4+ Th drives the inflammation (Th17 → Th1). \"CD4 drives, CD8 kills.\" (B) CD4 cells drive inflammation; CD8 cells (not CD4) are the direct killers. (C) B cells make autoantibodies; they do not phagocytose beta cells. (D) NK cells contribute, but CD8 CTLs are the main effector and T cells are central. (E) Beta-cell killing is cell-mediated (CTL), not complement alone.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    55,
+    "Lec 22 · Chronic Rejection",
+    [
+     [
+      "A transplanted kidney turns mottled and fails within the first 24 hours. Which primary mediators and rejection type does this represent?",
+      [
+       "Acute rejection — newly primed CD8+ T cells",
+       "Hyperacute rejection — pre-existing circulating antibodies plus complement",
+       "Chronic rejection — immune complexes and fibrosis",
+       "Graft-versus-host disease — donor T cells",
+       "Hyperacute rejection — recipient NK cells alone"
+      ],
+      1,
+      "Graft fails <24h → mediators + type? Failure within ~24h is hyperacute rejection: pre-existing antibodies (anti-blood-group or anti-HLA) bind graft endothelium and fix complement (Type II). No priming delay, so it is essentially immediate. (A) Acute rejection takes a week or more (T cells must be primed). (C) Chronic rejection develops over months to years. (D) GVHD is donor-against-recipient, not this antibody-mediated graft loss. (E) Hyperacute is antibody + complement, not NK cells alone.",
+      "basic"
+     ],
+     [
+      "Which set correctly pairs each rejection type with its dominant primary mediator?",
+      [
+       "Hyperacute = T cells; acute = antibody; chronic = NK cells",
+       "Hyperacute = immune complexes; acute = complement only; chronic = antibody only",
+       "All three are mediated primarily by NK cells",
+       "Hyperacute = CD8 T cells; acute = pre-existing antibody; chronic = neutrophils",
+       "Hyperacute = pre-existing antibody + complement; acute = T cells (with antibody); chronic = immune complexes + T cells"
+      ],
+      4,
+      "Match each rejection type to its primary mediator? Hyperacute = pre-existing antibody + complement (≤24h). Acute = mainly T cells (week–weeks). Chronic = immune complexes + T cells, → fibrosis/arteriosclerosis (months–years). T cells dominate acute and chronic. (A) Reverses hyperacute (antibody) and acute (T cell). (B) Hyperacute is antibody/complement, not immune complexes. (C) NK cells are not the primary mediator of all three. (D) Hyperacute is antibody-driven, not CD8 T cells.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    56,
+    "Lec 22 · Hyperacute Transplantation Rejection",
+    [
+     [
+      "In acute rejection, how do the cellular and humoral arms combine to destroy the graft, and which cell is the principal effector?",
+      [
+       "Pre-existing antibody alone destroys the graft within minutes",
+       "Fibroblasts lay down ECM to occlude vessels as the primary mechanism",
+       "Donor T cells attack recipient tissue as the principal mechanism",
+       "CD8+ CTLs lyse graft endothelium (perforin/granzyme); Th1 IFN-γ activates macrophages; antibody fixes complement and enables ADCC — CTLs are principal",
+       "Eosinophils and IgE mediate the graft damage"
+      ],
+      3,
+      "Acute rejection: how arms combine + principal effector? In acute rejection the CD8+ CTL is the principal effector (perforin/granzyme on graft endothelium). Th1 adds IFN-γ and TNF-α; antibody fixes complement and enables NK ADCC. T cells dominate. (A) Antibody-alone/minutes is hyperacute, not acute. (B) ECM/fibrosis occlusion is the chronic mechanism. (C) Donor-against-recipient is GVHD, not acute rejection. (E) Eosinophils/IgE are not the acute-rejection effectors.",
+      "basic"
+     ],
+     [
+      "Chronic rejection produces graft fibrosis and arteriosclerosis. Which mechanism best explains these two findings?",
+      [
+       "Chronic Th1 IFN-γ/TNF-α drives smooth-muscle proliferation → arteriosclerosis; repeated necrosis drives fibroblast wound-healing → fibrosis",
+       "Pre-existing antibody fixes complement within 24 hours",
+       "Donor CD8 T cells directly lyse all graft cells in a single wave",
+       "IgE-mediated mast-cell degranulation scars the graft",
+       "A one-time burst of perforin/granzyme causes the scarring"
+      ],
+      0,
+      "Chronic rejection: mechanism of fibrosis + arteriosclerosis? Chronic Th1 cytokines (IFN-γ, TNF-α) drive smooth-muscle proliferation around graft arterioles → arteriosclerosis; repeated necrosis/wound-healing replaces tissue with fibrosis. Progressive ischemic failure over years. (B) Antibody + complement in 24h is hyperacute. (C) A single CD8 wave describes acute, not the slow fibrotic chronic process. (D) IgE/mast cells do not mediate chronic rejection. (E) Chronic damage is sustained cytokine-driven remodeling, not a one-time burst.",
+      "basic"
+     ],
+     [
+      "A bone-marrow transplant recipient develops a skin rash, diarrhea, and liver dysfunction ~3 weeks post-transplant. Which process is this, and what is its mechanism?",
+      [
+       "Hyperacute rejection — recipient antibody attacks the graft",
+       "Acute rejection — recipient T cells attack the graft",
+       "Graft-versus-host disease — donor T cells in the graft recognize recipient HLA as foreign and attack recipient skin, gut, and liver",
+       "Serum sickness — immune complexes from therapeutic immunoglobulin",
+       "Chronic rejection — recipient immune complexes and fibrosis"
+      ],
+      2,
+      "BMT recipient, rash + diarrhea + liver, ~3 wk → process + mechanism? Graft-versus-host disease: graft donor T cells (from HSCT or T-cell-rich tissue) recognize recipient HLA as foreign and attack recipient skin, gut, and liver, usually within ~4 weeks. (A) Hyperacute is recipient antibody vs graft, not donor T cells vs host. (B) Acute rejection is recipient-against-graft; GVHD is the reverse direction. (D) Serum sickness is an immune-complex reaction to foreign protein, not donor-T-cell attack. (E) Chronic rejection is recipient-against-graft fibrosis, not this multi-organ donor-T-cell attack.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    57,
+    "Lec 22 · Direct Coombs Test",
+    [
+     [
+      "A student confuses the direct and indirect Coombs tests. What does the Coombs reagent detect in each?",
+      [
+       "Direct (DAT): antibody/C3 ALREADY BOUND to patient RBCs in vivo; Indirect (IAT): antibody FREE in serum, found by incubating with reagent cells",
+       "Direct: free serum antibody; Indirect: antibody already bound to RBCs",
+       "Both tests detect only complement, never antibody",
+       "Direct detects IgE; indirect detects IgM only",
+       "Both detect antibody bound to RBCs, differing only in temperature"
+      ],
+      0,
+      "Direct vs indirect Coombs: what does the reagent detect? Direct Coombs (DAT) detects antibody/C3 already bound to patient RBCs in vivo (HDN, transfusion reaction). Indirect (IAT) detects antibody free in serum — for pretransfusion screening. (B) Reverses the two — direct = bound on RBC, indirect = free in serum. (C) They detect antibody (IgG, also IgM/C3), not complement only. (D) The reagent targets IgG/IgM/C3, not IgE; indirect is not IgM-only. (E) Direct reads cell-bound antibody; indirect reads serum antibody — not a temperature distinction.",
+      "basic"
+     ],
+     [
+      "Why is a Coombs test needed to detect many clinically important anti-RBC antibodies rather than just observing direct agglutination?",
+      [
+       "IgG has ten binding sites and over-agglutinates, requiring dilution",
+       "Direct agglutination only works for complement, not antibody",
+       "Coombs reagent destroys IgM so only IgG remains",
+       "Many are IgG (only 2 sites) and cannot cross-link RBCs into visible clumps; the Coombs reagent bridges the bound IgG so agglutination shows",
+       "RBCs cannot be agglutinated by any antibody without enzymes"
+      ],
+      3,
+      "Why is Coombs needed (vs direct agglutination)? IgM (10 sites) agglutinates RBCs directly, but many anti-RBC antibodies are IgG (only 2 sites) and cannot bridge cells into a visible clump. The Coombs reagent binds the cell-bound IgG and cross-links them, making it visible. (A) IgG has two sites (IgM has ten); the problem is too few, not too many. (B) Direct agglutination can reflect antibody (IgM); the issue is IgG's low valence. (C) Coombs reagent detects, it does not selectively destroy IgM. (E) IgM agglutinates RBCs without enzymes; the issue is IgG specifically.",
+      "basic"
+     ],
+     [
+      "Which test is the appropriate choice for screening an Rh-negative pregnant woman's serum for anti-D antibodies before delivery?",
+      [
+       "Direct Coombs test (DAT) — it detects antibody already on her own RBCs",
+       "Indirect Coombs test (IAT) — it detects free anti-D antibody in her serum",
+       "Microcytotoxicity test — it types her HLA alleles",
+       "Forward ABO typing — it detects RBC surface antigens",
+       "A complete blood count — it quantifies her hemoglobin"
+      ],
+      1,
+      "Screen Rh-neg mother's serum for anti-D → which test? Screening a mother serum for free anti-D is the indirect Coombs test (IAT): serum + D-positive reagent cells, then Coombs reagent shows bound anti-D. The DAT instead tests a baby RBCs for antibody already coating them. (A) DAT detects antibody already bound to cells (e.g. the newborn's RBCs), not free serum antibody. (C) Microcytotoxicity types HLA, not RBC antibodies. (D) Forward ABO typing detects RBC antigens, not serum anti-D. (E) A CBC measures hemoglobin/cell counts, not specific antibodies.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    58,
+    "Lec 23 · Autoimmunity And Loss Of Tolerance",
+    [
+     [
+      "A patient develops rheumatic heart disease decades after untreated strep throat. Which mechanism of autoimmunity does this illustrate, and why is the response directed at the heart?",
+      [
+       "Superantigen activation — the M protein bridges MHC II to many TCRs nonspecifically",
+       "Citrullination — arginine is converted to citrulline in cardiac tissue",
+       "Central tolerance failure — the thymus never deleted any cardiac-reactive T cells",
+       "Molecular mimicry — antibodies against the S. pyogenes M protein cross-react with a structurally similar cardiac myosin epitope",
+       "Direct allorecognition — recipient T cells see intact foreign MHC"
+      ],
+      3,
+      "Rheumatic heart disease after strep → which mechanism + why heart? Molecular mimicry: the S. pyogenes M protein resembles cardiac myosin, so anti-bacterial antibodies cross-react with the heart. Organ-specific because the cross-reactive self-antigen (myosin) lives in the heart. (A) Superantigen activation is nonspecific polyclonal activation, not the cross-reactive-epitope mechanism here. (B) Citrullination (arginine→citrulline) is the RA-associated modification, not the rheumatic-heart mechanism. (C) The cells exist via normal central-tolerance leak; mimicry is what triggers the cross-reactive attack. (E) Allorecognition is a transplant phenomenon, unrelated to post-strep heart disease.",
+      "basic"
+     ],
+     [
+      "Which pathogen–self-antigen pairing in molecular mimicry is correctly matched to its resulting autoimmune disease?",
+      [
+       "C. jejuni → cardiac myosin → rheumatic fever",
+       "H. pylori → epidermal keratin → psoriasis",
+       "K. pneumoniae → HLA-B27 → ankylosing spondylitis",
+       "S. pyogenes → gangliosides → Guillain-Barré syndrome",
+       "Coxsackie B virus → platelet antigen → thrombocytopenic purpura"
+      ],
+      2,
+      "Which mimicry pathogen→self-antigen→disease triple is correct? K. pneumoniae mimics HLA-B27 → ankylosing spondylitis. Other pairings: S. pyogenes → myosin (rheumatic fever); C. jejuni → gangliosides (Guillain-Barré); H. pylori → platelet antigen (ITP); Coxsackie/rota/rubella → islet (T1D). (A) C. jejuni mimics gangliosides (→ Guillain-Barré); cardiac myosin is the S. pyogenes/rheumatic-fever pairing. (B) H. pylori mimics a platelet antigen (→ ITP); epidermal keratin is the S. pyogenes/psoriasis pairing. (D) S. pyogenes targets myosin/keratin; gangliosides are the C. jejuni/Guillain-Barré pairing. (E) Coxsackie B targets islet antigens (→ T1D); platelet antigen is the H. pylori/ITP pairing.",
+      "basic"
+     ],
+     [
+      "Which grouping correctly separates systemic from organ-specific autoimmune disease?",
+      [
+       "Systemic: SLE, RA (multiple organs); organ-specific: T1D, vitiligo, Crohn (one tissue)",
+       "Systemic: vitiligo and type 1 diabetes; organ-specific: SLE",
+       "Systemic disease is always antibody-mediated; organ-specific is always T-cell-mediated",
+       "Organ-specific disease never involves antibodies",
+       "Systemic and organ-specific differ only in age of onset"
+      ],
+      0,
+      "Systemic vs organ-specific autoimmune grouping? Systemic disease hits multiple organs (SLE, RA); organ-specific targets one tissue (T1D, vitiligo, Crohn/UC). Either can be antibody- or T-cell-mediated — the split is about antigen distribution, not effector class. (B) Reverses it — vitiligo/T1D are organ-specific; SLE is systemic. (C) Both systemic and organ-specific can be antibody- or T-cell-mediated. (D) Organ-specific disease can absolutely involve antibodies (e.g. anti-melanocyte antibodies in vitiligo). (E) The distinction is target distribution, not age of onset.",
+      "basic"
+     ],
+     [
+      "Everyone carries autoreactive lymphocytes, yet only ~3% develop autoimmune disease. Which set of factors contributes to that development?",
+      [
+       "Only inherited single-gene mutations",
+       "Only acute bacterial infections",
+       "Exclusively female sex hormones with no other contributors",
+       "Complete absence of any autoreactive lymphocytes at birth",
+       "Genetics (especially HLA), anatomic alterations such as injury or citrullination, infectious agents, and toxic-chemical exposure"
+      ],
+      4,
+      "What factors drive the ~3% who develop autoimmunity? Central tolerance is leaky, so everyone has autoreactive cells but only ~3% develop disease. Contributors: genetics (HLA), anatomic alterations (injury, citrullination), infections, and toxic exposure. (A) It is multifactorial, not a single-gene mutation. (B) Many triggers beyond acute bacterial infection contribute (genetics, toxins, injury). (C) Female bias exists (2:1) but is one factor among several, not the sole cause. (D) Everyone retains some autoreactive lymphocytes; their presence is the premise, not the absence.",
+      "basic"
+     ],
+     [
+      "How does a bacterial superantigen provoke autoimmunity differently from molecular mimicry?",
+      [
+       "It presents a single self-peptide that exactly matches a microbial epitope",
+       "It bridges MHC II to the TCR outside the peptide groove, nonspecifically activating many T-cell clones, including autoreactive ones",
+       "It deletes regulatory T cells in the thymus",
+       "It citrullinates self-proteins to create neoepitopes",
+       "It crosses the placenta to sensitize the fetus"
+      ],
+      1,
+      "Superantigen vs mimicry — how does it cause autoimmunity? A superantigen clamps MHC II to the TCR outside the peptide groove, activating T cells regardless of specificity → polyclonal activation, including autoreactive clones. Mimicry, by contrast, is a targeted cross-reaction. (A) That describes molecular mimicry (specific epitope match), not a superantigen. (C) Superantigens activate broadly in the periphery; they do not delete thymic Tregs. (D) Citrullination is a separate (RA) mechanism, not how superantigens work. (E) Placental transfer is the HDN mechanism, unrelated to superantigen activation.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    59,
+    "Lec 23 · Crohn Disease",
+    [
+     [
+      "In rheumatoid arthritis, what are anti-cyclic citrullinated peptide antibodies (ACCPAs), and what does their presence indicate?",
+      [
+       "Antibodies against the Fc of IgG, found in 100% of RA patients",
+       "Antibodies that rule out RA when present",
+       "Antibodies against citrullinated self-peptides (arginine → citrulline); found in ~⅔ of RA and predicting more progressive disease",
+       "Antibodies specific to ulcerative colitis",
+       "Antibodies against double-stranded DNA"
+      ],
+      2,
+      "What are ACCPAs and what do they indicate in RA? ACCPAs arise when arginine is replaced by neutral citrulline, making modified self-peptides. Found in ~⅔ of RA and predicting more severe disease; but ⅓ are seronegative, so a negative result does not exclude RA. (A) Anti-Fc-of-IgG describes rheumatoid factor (~80% of RA), not ACCPA, and neither is 100%. (B) ACCPAs support, not exclude, RA; seronegative patients can still have RA. (D) ACCPAs are an RA marker, not a UC marker. (E) Anti-dsDNA is a lupus marker, not ACCPA.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    60,
+    "Lec 23 · Clinical Feature Of Psoriatic Arthritis",
+    [
+     [
+      "A patient develops ascending paralysis weeks after a Campylobacter jejuni diarrheal illness. Which mechanism explains it, and which T cells are unusually prominent?",
+      [
+       "Direct destruction of nerves by the bacterium itself; αβ T cells dominate",
+       "Mimicry — anti-C. jejuni antibodies cross-react with nerve gangliosides; γδ T cells prominent because the trigger was mucosal (GI)",
+       "Citrullination of myelin proteins; B-1 cells dominate",
+       "A superantigen deleting motor neurons; NK cells dominate",
+       "Permanent autoantibody production that never resolves"
+      ],
+      1,
+      "Guillain-Barré after C. jejuni — mechanism + prominent T cell? Guillain-Barré is molecular mimicry: anti-C. jejuni antibodies cross-react with nerve gangliosides → ascending paralysis. γδ T cells are prominent because the trigger is mucosal/GI. Typically temporary. (A) The nerves are attacked by cross-reactive antibody (mimicry), not the bacterium directly; γδ (not αβ) cells are prominent. (C) Citrullination is the RA mechanism; GBS is ganglioside mimicry. (D) GBS is mimicry, not superantigen-mediated neuron deletion. (E) GBS is usually self-limited/temporary, not permanent.",
+      "basic"
+     ],
+     [
+      "In vitiligo, several arms of immunity engage melanocytes, but which is the MAIN effector causing depigmentation, and what permits it?",
+      [
+       "Anti-melanocyte antibodies alone lyse the cells via complement",
+       "Neutrophil oxidative burst destroys the melanocytes",
+       "CD8+ cytotoxic T lymphocytes are the main effector; downregulated regulatory T cells fail to suppress them",
+       "IgE-mediated mast-cell degranulation",
+       "Direct viral lysis of melanocytes"
+      ],
+      2,
+      "Vitiligo: main effector + what permits it? Vitiligo involves CD4 cytokines and antibodies, but the main effector is the CD8+ CTL, which kills melanocytes → depigmentation. Permitted by suppressed regulatory T cells. Melanocyte DAMPs (heat-shock proteins) start it. (A) Anti-melanocyte antibodies contribute, but CTLs are the main effector. (B) Neutrophil burst is not the vitiligo effector mechanism. (D) IgE/mast cells are an allergy mechanism, not vitiligo. (E) Vitiligo is autoimmune CTL-mediated, not direct viral lysis.",
+      "basic"
+     ],
+     [
+      "Which mechanistic features are characteristic of Crohn disease specifically?",
+      [
+       "Atypical Th2 response with non-classical NKT cells producing IL-4/IL-13",
+       "Continuous mucosal inflammation limited to the colon",
+       "Antibodies against the Fc of IgG forming joint complexes",
+       "Cross-reactive anti-ganglioside antibodies attacking nerves",
+       "Th1/Th17 against luminal bacteria, NOD2/MUC2 variants, and IL-21 converting B cells into cytotoxic granzyme-B B cells"
+      ],
+      4,
+      "Mechanistic features specific to Crohn disease? Crohn is driven by Th1/Th17 against luminal bacterial antigens, with NOD2/MUC2 variants and a distinctive step: IL-21 converts B cells into cytotoxic granzyme-B B cells. Transmural, cobblestone. (A) Atypical Th2/NKT IL-4/IL-13 is the ulcerative-colitis mechanism. (B) Continuous colon-limited inflammation describes UC, not Crohn. (C) Anti-Fc-IgG joint complexes are rheumatoid arthritis. (D) Anti-ganglioside nerve attack is Guillain-Barré.",
+      "basic"
+     ],
+     [
+      "Which mechanism is characteristic of ulcerative colitis?",
+      [
+       "Atypical Th2 by non-classical NKT cells (IL-4/IL-13), IL-13 damaging epithelium with self-amplifying feedback, plus MadCAM-1 recruitment",
+       "Th1/Th17 response with NOD2 mutations and granzyme-B+ B cells",
+       "Transmural cobblestone inflammation from mouth to anus",
+       "IgM rheumatoid factor depositing in joints",
+       "γδ T-cell attack on peripheral nerves"
+      ],
+      0,
+      "Mechanism characteristic of ulcerative colitis? UC features an atypical Th2 response by non-classical NKT cells producing IL-4/IL-13; IL-13 is cytotoxic to epithelium and amplifies the NKT cells. MadCAM-1 recruits leukocytes; TNF-α is elevated. (B) Th1/Th17 + NOD2 + granzyme-B+ B cells is the Crohn mechanism. (C) Transmural cobblestone mouth-to-anus disease is Crohn, not UC. (D) IgM rheumatoid factor in joints is RA. (E) γδ T-cell nerve attack is Guillain-Barré.",
+      "basic"
+     ],
+     [
+      "Why does rheumatoid factor (usually IgM against the Fc of IgG) produce such large joint-depositing immune complexes?",
+      [
+       "IgG rheumatoid factor has ten binding sites and self-aggregates",
+       "Pentameric IgM (10 sites) binds many IgG, forming large complexes that deposit in joints and drive inflammation",
+       "Rheumatoid factor binds complement directly without antigen",
+       "Rheumatoid factor is a single small monomer that cannot form complexes",
+       "Rheumatoid factor targets citrullinated peptides, not IgG"
+      ],
+      1,
+      "Why does rheumatoid factor form large joint-depositing complexes? Rheumatoid factor is usually IgM against the Fc of IgG. Pentameric IgM (10 sites) crosslinks many IgG into a large immune complex that settles in joints. ~80% of RA is RF-positive; Th1/Th17 sustain it. (A) It is IgM (ten sites) that builds the large complex; IgG has two sites. (C) RF binds the Fc of IgG (its antigen), not complement directly. (D) IgM rheumatoid factor is a pentamer, not a single small monomer. (E) ACCPAs target citrullinated peptides; rheumatoid factor targets the Fc of IgG.",
+      "basic"
+     ],
+     [
+      "In autoimmune hemolytic anemia, how does the destruction mechanism differ between IgG and IgM autoantibodies?",
+      [
+       "IgG fixes complement for MAC lysis; IgM causes splenic opsonization",
+       "Both isotypes act only by direct mechanical rupture of RBCs",
+       "Neither isotype can activate complement",
+       "IgG mainly drives Fc-receptor opsonization by splenic macrophages; IgM mainly fixes complement → MAC lysis",
+       "IgG crosses the placenta but IgM destroys maternal RBCs"
+      ],
+      3,
+      "AIHA: IgG vs IgM destruction mechanism? In AIHA, IgG coats RBCs and is mostly cleared by Fc-receptor opsonization (splenic macrophages). IgM mainly fixes complement → MAC lysis (intravascular), less common with IgG. (A) Reverses the two — IgG → opsonization, IgM → complement/MAC. (B) Destruction is immune-mediated (opsonization or complement), not mechanical rupture. (C) Both can activate complement; IgM does so most efficiently. (E) Placental transfer pertains to HDN, not the IgG-vs-IgM AIHA mechanism distinction.",
+      "basic"
+     ],
+     [
+      "How do certain drugs cause drug-induced autoimmune hemolytic anemia?",
+      [
+       "By directly lysing RBCs through a pore-forming toxin",
+       "By citrullinating hemoglobin",
+       "By crossing the placenta to attack fetal RBCs",
+       "By haptenation — the drug binds the RBC surface, generating IgG that drives Fc-receptor opsonization by splenic macrophages",
+       "By converting B cells into granzyme-B-expressing B cells"
+      ],
+      3,
+      "Mechanism of drug-induced AIHA? Drugs are too small to be immunogenic alone, but haptenation (drug binding the RBC surface) creates a target, generating IgG → Fc-receptor opsonization by splenic macrophages. Can occur months after stopping the drug. (A) It is antibody/opsonization-mediated, not a direct pore-forming toxin. (B) Citrullination is the RA modification, not the haptenation mechanism. (C) Placental transfer is HDN; drug-induced AIHA is haptenation in the patient. (E) Granzyme-B+ B-cell conversion (IL-21) is a Crohn-disease mechanism.",
+      "basic"
+     ],
+     [
+      "Why do autoimmune diseases tend to be chronic and potentially fatal when a vital organ is targeted?",
+      [
+       "The target antigen is a pathogen that is rapidly eliminated",
+       "Autoimmune responses are always acute and self-limited",
+       "Regulatory T cells reliably terminate the response within days",
+       "The self target cannot be cleared, so the assault persists, and constant damage to a vital organ (e.g. kidney) can be fatal",
+       "The antigen is sequestered and never re-encountered"
+      ],
+      3,
+      "Why are autoimmune diseases chronic/potentially fatal? Unlike an infection, the self target cannot be removed, so the response is chronic — a constant insult. When the tissue is a vital organ (e.g. kidney), the damage can be fatal. Persistence ties autoimmunity to tolerance failure. (A) The antigen is self, not a clearable pathogen. (B) Autoimmune disease is characteristically chronic, not acute/self-limited. (C) In autoimmune disease, Treg control has failed; the response is not reliably terminated. (E) The self-antigen is continuously present and re-encountered, not sequestered away.",
+      "basic"
+     ]
+    ]
+   ],
+   [
+    61,
+    "Lec 24 · Causes Of Itp - Case 2 · Clinical Features Of Xla - Case 1 · Causes Of Seizures In Digeorge - Case 4",
+    [
+     [
+      "A 2-year-old boy: recurrent bacterial infections after 6 months, absent tonsils, <1% CD19+ B cells, low all-isotype Ig, depressed Btk, and an affected maternal uncle. Diagnosis?",
+      [
+       "DiGeorge syndrome",
+       "Bare lymphocyte syndrome type I",
+       "Immune thrombocytopenic purpura",
+       "X-linked agammaglobulinemia (Bruton)",
+       "Severe combined immunodeficiency from an IL-2 receptor defect"
+      ],
+      3,
+      "2yo, <1% B cells, low Btk, absent tonsils, maternal uncle → dx? XLA (Bruton): a Btk defect blocks B-cell maturation → <1% CD19+ B cells, low all-isotype Ig, absent tonsils/germinal centers. Infections begin after 6 months (maternal IgG wanes); the maternal uncle signals X-linked.  (A) DiGeorge has a T-cell defect (low CD3) with normal B cells, plus cardiac/parathyroid features.  (B) BLS-I has normal B cells and a skewed CD4:CD8 ratio, not absent B cells.  (C) ITP is a platelet disorder, not an antibody-deficiency with absent B cells.  (E) An IL-2-receptor-defect SCID affects T cells broadly; here T cells are normal and B cells are absent.",
+      "basic"
+     ],
+     [
+      "Why is the BLS-I patient's T-cell pool skewed so heavily toward CD4+ cells?",
+      [
+       "MHC class II is absent, so only CD8 cells develop",
+       "The thymus is absent, so no T cells develop",
+       "CD8 cells are destroyed by anti-CD8 autoantibodies",
+       "B cells suppress CD8 development",
+       "With little surface MHC I, few thymocytes are directed to CD8 — most survivors recognize MHC II and become CD4+"
+      ],
+      4,
+      "BLS-I: why the CD4 skew? In positive selection, a thymocyte commits to CD8 via MHC I and CD4 via MHC II. BLS-I has little surface MHC I, so few become CD8; most survivors recognized MHC II → CD4+, giving the skew.  (A) MHC II is present in BLS-I; it is MHC I that is deficient (loss of MHC II would do the opposite).  (B) The thymus is present; this is an MHC-I presentation defect, not thymic aplasia (that is DiGeorge).  (C) There are no anti-CD8 autoantibodies; the defect is in MHC-I-driven selection.  (D) B cells do not suppress CD8 development.",
+      "basic"
+     ],
+     [
+      "In X-linked agammaglobulinemia, why do infections characteristically begin after about 6 months of age rather than at birth?",
+      [
+       "The Btk gene only switches on at 6 months",
+       "The thymus involutes at 6 months",
+       "Maternal IgG that crossed the placenta wanes by ~6 months (antibody half-life), and the infant cannot replace it with its own",
+       "Maternal IgM crosses the placenta and protects for exactly 6 months",
+       "Complement proteins are absent until 6 months of age"
+      ],
+      2,
+      "XLA: why do infections start after ~6 months? Placental maternal IgG declines by ~4–6 months. A healthy infant starts making its own then, but an XLA infant cannot, so as maternal titers fall, infections emerge. It is purely about losing borrowed IgG with no replacement.  (A) Btk is defective throughout; it is not a gene that \"switches on\" at 6 months.  (B) Thymic involution is unrelated to this antibody-deficiency timing.  (D) IgM does not cross the placenta; transplacental protection is IgG.  (E) Complement is present from birth; the issue is waning maternal IgG.",
+      "basic"
+     ],
+     [
+      "What is the molecular basis of bare lymphocyte syndrome type I?",
+      [
+       "A TAP1 or TAP2 mutation: MHC class I molecules are made but, lacking peptide loading, are not expressed on the cell surface",
+       "A Btk mutation blocking B-cell maturation",
+       "A 22q11.2 deletion impairing thymic development",
+       "An MHC class II transactivator (CIITA) defect",
+       "An ADAMTS13 deficiency"
+      ],
+      0,
+      "BLS-I molecular basis? BLS-I is a TAP1/TAP2 mutation. TAP normally pumps peptides into the ER to load MHC I; without it, MHC I is made but cannot be loaded, so it is not displayed. (The MHC I genes are intact.)  (B) Btk mutation is XLA.  (C) 22q11.2 deletion is DiGeorge.  (D) A CIITA/MHC-II-transactivator defect underlies BLS-II, not BLS-I.  (E) ADAMTS13 deficiency is TTP.",
+      "basic"
+     ],
+     [
+      "What is the underlying molecular defect in X-linked agammaglobulinemia, and its immediate consequence?",
+      [
+       "A TAP1/TAP2 mutation preventing MHC class I surface expression",
+       "A defect in Bruton tyrosine kinase (Btk) that blocks B-cell maturation, so mature B cells and plasma cells fail to develop",
+       "A 22q11.2 deletion impairing thymic development",
+       "An anti-platelet antibody opsonizing platelets",
+       "A calcineurin mutation blocking NFAT"
+      ],
+      1,
+      "XLA molecular defect + consequence? XLA is a Bruton tyrosine kinase (Btk) defect, required for B-cell development. Without it, B cells cannot mature → no plasma cells, no antibody — hence absent germinal centers and low Ig.  (A) TAP1/TAP2 mutation is bare lymphocyte syndrome type I.  (C) A 22q11.2 deletion is DiGeorge syndrome.  (D) Anti-platelet antibody is the ITP mechanism.  (E) Calcineurin/NFAT is an immunosuppressant target, not the XLA defect.",
+      "basic"
+     ],
+     [
+      "Although CD8 responses are the usual antiviral arm, why does the BLS-I patient nonetheless have HIGH antibody titers to viral vaccines (measles, mumps, varicella)?",
+      [
+       "The CD8 cells in BLS-I are hyperfunctional and drive antibody production",
+       "IM/SQ vaccines are taken up by DCs/macrophages and presented on MHC II to CD4+ T cells, which help B cells — and CD4 is intact in BLS-I",
+       "MHC class I presents the vaccine to B cells directly",
+       "The vaccines bypass T cells entirely",
+       "BLS-I selectively boosts antiviral antibody"
+      ],
+      1,
+      "BLS-I: why high viral-vaccine antibody titers? Injected (IM/SQ) vaccines are taken up by DCs/macrophages and presented on MHC II to CD4+ T cells, which help B cells make antibody. BLS-I spares CD4, so titers are high. (BLS-II, lacking CD4, would be low.)  (A) CD8 cells are reduced in BLS-I and do not drive antibody production.  (C) MHC I does not present antigen to B cells to make antibody; CD4 help does.  (D) These vaccines still depend on CD4 T-cell help for antibody.  (E) It is the intact CD4/MHC-II pathway, not a selective antiviral boost.",
+      "basic"
+     ],
+     [
+      "Why does the XLA patient have absent tonsils, no palpable lymphadenopathy, and no germinal centers despite an active infection?",
+      [
+       "The infection destroyed the lymphoid tissue",
+       "T cells are also absent, collapsing all lymphoid architecture",
+       "Complement consumption shrinks the lymph nodes",
+       "With almost no B cells, there is no clonal expansion to populate follicles, so secondary lymphoid tissue stays underdeveloped",
+       "The tonsils were surgically removed in infancy"
+      ],
+      3,
+      "XLA: why absent tonsils/nodes/germinal centers during infection? Germinal centers and tonsil/node tissue form from B-cell clonal expansion. With <1% B cells, nothing populates the follicles, so the tissue never develops — absent tonsils, no germinal centers, no reactive lymphadenopathy.  (A) The tissue is underdeveloped from the start (no B cells), not destroyed by infection.  (B) T cells are normal in XLA; the defect is B-cell-specific.  (C) Complement consumption does not explain absent tonsils/germinal centers.  (E) There is no history of tonsillectomy; the tonsils never developed.",
+      "basic"
+     ],
+     [
+      "What is a key long-term management consideration for the BLS-I patient, given the pattern of infections?",
+      [
+       "Lung transplant may eventually be needed (infections are mainly respiratory); plus prophylactic antibiotics and inactivated vaccines",
+       "Thymic transplant, since the thymus is absent",
+       "IVIg replacement, since the patient makes no antibody",
+       "Rituximab to deplete B cells",
+       "Splenectomy to control infection"
+      ],
+      0,
+      "BLS-I long-term management? Because BLS-I infections are predominantly respiratory and progressively damage the lungs (e.g. bronchiectasis), a lung transplant may eventually be required, alongside prophylactic antibiotics (pre/post exposure) and inactivated vaccines.  (B) The thymus is present in BLS-I; thymic transplant is the DiGeorge solution.  (C) BLS-I patients have intact CD4/B cells and make antibody (high vaccine titers), so IVIg is not the mainstay.  (D) B-cell depletion (rituximab) is for antibody-mediated disease like ITP, not BLS-I.  (E) Splenectomy is an ITP option, not BLS-I management.",
+      "basic"
+     ],
+     [
+      "Which management plan is appropriate for the XLA patient, and which intervention must be avoided?",
+      [
+       "Live attenuated vaccines to build robust immunity",
+       "IVIg every 2–4 weeks, prophylactic/longer-course antibiotics, and inactivated vaccines — but NOT live vaccines",
+       "Thymic transplant to restore T cells",
+       "Rituximab to deplete B cells",
+       "Splenectomy to raise antibody levels"
+      ],
+      1,
+      "XLA management + what to avoid? XLA: IVIg every 2–4 weeks (replaces the antibody the patient cannot make), prophylactic antibiotics, and inactivated vaccines. Live vaccines must be avoided — severe immunodeficiency cannot handle a live organism.  (A) Live vaccines are contraindicated in severe immunodeficiency.  (C) XLA is a B-cell defect; the thymus/T cells are normal, so thymic transplant is not the treatment.  (D) Rituximab depletes B cells — the opposite of what an antibody-deficient patient needs.  (E) Splenectomy does not raise antibody levels and is not XLA therapy.",
+      "basic"
+     ],
+     [
+      "A neonate has truncus arteriosus, hypocalcemia with very low PTH, seizures, dysmorphic facies, and severe T-cell lymphopenia (<1% CD3+) with normal B cells. What is the diagnosis?",
+      [
+       "X-linked agammaglobulinemia",
+       "Bare lymphocyte syndrome type I",
+       "Immune thrombocytopenic purpura",
+       "DiGeorge syndrome (22q11.2 deletion)",
+       "Severe combined immunodeficiency from an adenosine deaminase (ADA) defect"
+      ],
+      3,
+      "Neonate: truncus arteriosus, low PTH/Ca, <1% CD3, normal B → dx? DiGeorge, a 22q11.2 deletion: heart (truncus arteriosus), parathyroids (low PTH → hypocalcemia → seizures), thymus (aplasia → <1% CD3, both CD4/CD8 low). B cells normal (marrow unaffected).  (A) XLA (Btk deficiency) has absent B cells and normal T cells — the opposite pattern, with no cardiac/parathyroid features.  (B) BLS-I has a skewed CD4:CD8 ratio, not pan-T-cell lymphopenia or cardiac/parathyroid defects.  (C) ITP is a platelet disorder, unrelated to this neonatal multi-system picture.  (E) ADA-deficiency SCID is a combined T- and B-cell defect; here B cells are normal with the DiGeorge triad.",
+      "basic"
+     ],
+     [
+      "A 72-year-old man has petechiae, a very low platelet count with giant platelets, normal PT/PTT, increased bone-marrow megakaryocytes, and anti-platelet IgG. What is the diagnosis?",
+      [
+       "Hemophilia A",
+       "Disseminated intravascular coagulation",
+       "Immune (idiopathic) thrombocytopenic purpura",
+       "X-linked agammaglobulinemia",
+       "Thrombotic thrombocytopenic purpura from an ADAMTS13 defect"
+      ],
+      2,
+      "Petechiae, low platelets + giant platelets, anti-platelet IgG → dx? ITP: anti-platelet IgG opsonizes platelets for splenic removal → low platelets, petechiae; marrow compensates with giant megakaryocytes. Normal PT/PTT = intact cascade — the problem is platelet destruction, not clotting factors.  (A) Hemophilia A is a factor VIII deficiency with abnormal PTT, not low platelets.  (B) DIC consumes clotting factors (abnormal PT/PTT), unlike this normal-coagulation picture.  (D) XLA is an antibody deficiency, not a platelet disorder.  (E) TTP (ADAMTS13 deficiency) is a distinct microangiopathy; this case is classic antibody-mediated ITP.",
+      "basic"
+     ],
+     [
+      "In DiGeorge syndrome, the CD3+ count is <1% while B cells are normal. What does this localize the defect to, and why are BOTH CD4 and CD8 cells reduced?",
+      [
+       "The bone marrow, which makes all lymphocytes",
+       "The spleen, which sequesters T cells",
+       "A B-cell maturation defect that secondarily lowers T cells",
+       "An MHC class I defect affecting only CD8 cells",
+       "The thymus — aplasia prevents T-cell maturation, and since both CD4 and CD8 mature there, both fall; marrow-derived B cells are spared"
+      ],
+      4,
+      "DiGeorge: why low CD3 (both CD4+CD8), normal B? CD3 marks all mature T cells, so near-absent CD3 with normal B cells localizes to the thymus. DiGeorge causes thymic aplasia, and since both CD4 and CD8 mature there, both fall; marrow-derived B cells are spared.  (A) The marrow is intact — B cells are normal; the thymus is the affected site.  (B) Splenic sequestration does not explain failure to make T cells.  (C) This is a primary thymic/T-cell defect; B cells are normal.  (D) An MHC-I defect (BLS-I) would lower only CD8; DiGeorge lowers both.",
+      "basic"
+     ],
+     [
+      "How does IVIg raise the platelet count in ITP, mechanistically?",
+      [
+       "It saturates Fcγ receptors on splenic macrophages (reticuloendothelial blockade), so they cannot remove the IgG-coated platelets",
+       "It supplies the patient with missing clotting factors",
+       "It directly stimulates megakaryocytes to make platelets",
+       "It depletes the anti-platelet B cells",
+       "It replaces the antibody the patient cannot produce"
+      ],
+      0,
+      "How does IVIg work in ITP? In ITP, IVIg works by reticuloendothelial blockade: pooled IgG occupies Fcγ receptors on splenic macrophages, so they can no longer grab the anti-platelet IgG — sparing platelets and prolonging survival.  (B) IVIg is antibody, not clotting factor; PT/PTT are already normal in ITP.  (C) IVIg does not directly stimulate megakaryocytes (thrombopoietin agonists do that).  (D) B-cell depletion is rituximab's mechanism, not IVIg's.  (E) Antibody replacement is IVIg's role in XLA/DiGeorge; in ITP the mechanism is Fc-receptor blockade.",
+      "basic"
+     ],
+     [
+      "Why are vaccine antibody titers low in DiGeorge, even though the patient has normal B cells?",
+      [
+       "The B cells are intrinsically defective in DiGeorge",
+       "Maternal antibody suppresses the infant's B cells",
+       "Complement deficiency prevents antibody formation",
+       "Without CD4+ helper T cells, B cells receive no help to become antibody-producing plasma cells, so antibody responses are poor",
+       "The vaccines were all live and were cleared"
+      ],
+      3,
+      "DiGeorge: why low vaccine antibodies despite normal B cells? B cells need CD4+ T-cell help for strong antibody. DiGeorge has severe T-cell lymphopenia (no CD4 help), so even with normal B cells, titers are low. Same \"no CD4 → no antibody\" logic — why BLS-I (keeps CD4) makes titers and DiGeorge does not.  (A) The B cells are intrinsically normal; they simply lack T-cell help.  (B) Maternal antibody is not the cause of poor vaccine responses here.  (C) Complement deficiency is not the mechanism of low antibody in DiGeorge.  (E) The deficit is lack of CD4 help, not the vaccine type.",
+      "basic"
+     ],
+     [
+      "The ITP patient is started on rituximab. What is its mechanism in this setting?",
+      [
+       "A thrombopoietin-receptor agonist that boosts platelet production",
+       "An anti-CD20 monoclonal antibody that depletes B cells, reducing production of the anti-platelet antibody",
+       "A calcineurin inhibitor that blocks T-cell activation",
+       "A soluble TNF-α receptor decoy",
+       "An anti-CD3 antibody that depletes T cells"
+      ],
+      1,
+      "Rituximab mechanism in ITP? Rituximab is an anti-CD20 monoclonal antibody that depletes B cells. Since ITP is antibody-mediated, removing the B cells reduces production of the anti-platelet antibody (it depletes B cells broadly, not just the anti-platelet clones).  (A) Thrombopoietin-receptor agonists (e.g. romiplostim) raise platelet production — a different drug class.  (C) Calcineurin inhibitors target T cells, not CD20 B cells.  (D) A soluble TNF-α receptor (etanercept) is an anti-cytokine biologic, not rituximab.  (E) Anti-CD3 depletes T cells; rituximab (anti-CD20) depletes B cells.",
+      "basic"
+     ],
+     [
+      "What is the long-term, definitive intervention for the T-cell deficiency in DiGeorge syndrome (alongside supportive IVIg and antibiotics)?",
+      [
+       "Thymic transplant, to restore T-cell development",
+       "Bone-marrow B-cell transplant",
+       "Splenectomy",
+       "Rituximab",
+       "A calcineurin inhibitor"
+      ],
+      0,
+      "DiGeorge definitive intervention for the T-cell defect? The defect is thymic, so the definitive fix is a thymic transplant. Supportive measures — IVIg, prophylactic antibiotics, inactivated vaccines — bridge until then. (X-ray shows an absent thymic shadow.)  (B) B cells are already normal; the missing element is T cells from a thymus.  (C) Splenectomy is an ITP option, not a fix for thymic aplasia.  (D) Rituximab depletes B cells — counterproductive here.  (E) Calcineurin inhibitors suppress T cells, the opposite of what is needed.",
+      "basic"
+     ],
+     [
+      "How does ITP differ between adults and children in onset and typical course/treatment?",
+      [
+       "Adults: acute and self-limited; children: chronic and progressive",
+       "Both groups always require splenectomy",
+       "Adults: gradual, chronic, often needing therapy (e.g. splenectomy); children: acute, post-viral, usually self-limited",
+       "Children: gradual onset over years; adults: resolves in weeks",
+       "Neither group ever has a preceding infection"
+      ],
+      2,
+      "ITP: adults vs children course/treatment? Adult ITP is gradual/chronic, often needing treatment up to splenectomy. Childhood ITP is acute, post-viral, and usually remits spontaneously — so splenectomy is avoided in children.  (A) Reverses the two — adults are chronic, children acute/self-limited.  (B) Splenectomy is more an adult option; children usually remit spontaneously.  (D) Reverses the onset/duration pattern.  (E) Childhood ITP is frequently post-viral.",
+      "basic"
+     ],
+     [
+      "IVIg is used in several of these cases but works differently depending on the disease. Which contrast is correct?",
+      [
+       "In all three diseases, IVIg works purely as antibody replacement",
+       "In all three diseases, IVIg works purely by Fc-receptor blockade",
+       "In ITP, IVIg supplies clotting factors; in XLA, it boosts platelets",
+       "IVIg depletes B cells in every case",
+       "In XLA/DiGeorge, IVIg REPLACES missing antibody; in ITP it saturates macrophage Fcγ receptors (reticuloendothelial blockade), not replacement"
+      ],
+      4,
+      "IVIg: replacement vs RE blockade across cases? IVIg has two roles: in antibody deficiency (XLA, DiGeorge) it replaces missing antibody; in ITP it works by reticuloendothelial blockade, occupying splenic-macrophage Fcγ receptors so they cannot remove coated platelets.  (A) In ITP the mechanism is Fc-receptor blockade, not replacement.  (B) In XLA/DiGeorge it is replacement, not blockade.  (C) IVIg is antibody, not clotting factor, and does not directly boost platelet production.  (D) B-cell depletion is rituximab; IVIg does not deplete B cells.",
+      "basic"
+     ],
+     [
+      "A 17-year-old with lifelong recurrent respiratory infections has 90% CD4+ and only 10% CD8+ T cells, normal B/NK/PMN counts, and high antibody titers to viral vaccines. What is the diagnosis?",
+      [
+       "X-linked agammaglobulinemia",
+       "DiGeorge syndrome",
+       "Bare lymphocyte syndrome type II (MHC class II deficiency)",
+       "Immune thrombocytopenic purpura",
+       "Bare lymphocyte syndrome type I (MHC class I deficiency)"
+      ],
+      4,
+      "Recurrent infections, 90% CD4/10% CD8, normal B cells → dx? Bare lymphocyte syndrome type I (MHC-I deficiency). Little surface MHC I → positive selection cannot drive the CD8 lineage, so CD4:CD8 is skewed toward CD4 (here 90:10 vs ~2:1). B cells, NK, and CD4 responses are intact.  (A) XLA has absent B cells and low Ig, not a skewed T-cell ratio.  (B) DiGeorge has severe pan-T-cell lymphopenia (low CD3), not a selective CD8 loss.  (C) BLS-II (MHC II deficiency) would skew toward CD8 and lose CD4-dependent antibody responses.  (D) ITP is a platelet disorder, unrelated to this T-cell phenotype.",
+      "basic"
+     ],
+     [
+      "Across these four cases, which pairing of immunodeficiency to its core cellular defect is correct?",
+      [
+       "XLA = T-cell defect; DiGeorge = B-cell defect",
+       "BLS-I = absent B cells; ITP = thymic aplasia",
+       "XLA = B-cell defect (low Ig); DiGeorge = T-cell defect (low CD3); BLS-I = MHC-I defect (skewed CD4:CD8); ITP = anti-platelet antibody",
+       "DiGeorge = MHC class I defect; BLS-I = 22q11.2 deletion",
+       "All four are primarily complement deficiencies"
+      ],
+      2,
+      "Match each case to its core defect? The four map cleanly: XLA = B-cell defect (Btk, low Ig); DiGeorge = T-cell defect (22q11.2, low CD3); BLS-I = MHC-I/TAP defect (skewed CD4:CD8); ITP = anti-platelet antibody. B-cell vs T-cell vs antibody is the core skill.  (A) Reverses XLA (B-cell) and DiGeorge (T-cell).  (B) Reverses BLS-I (normal B cells, MHC-I defect) and DiGeorge (thymic aplasia).  (D) Reverses DiGeorge (22q11.2) and BLS-I (MHC I/TAP).  (E) None of these is primarily a complement deficiency.",
       "basic"
      ]
     ]

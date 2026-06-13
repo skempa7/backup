@@ -339,6 +339,12 @@ function overallStats() {
 // =============================================================
 // RENDER: SIDEBAR
 // =============================================================
+// The synthetic "Lecture TQ" (exam-tested aggregate) carries id >= 90 — it's a study
+// section, not a real lecture, so it's excluded from lecture counts/denominators.
+function isTqSection(n){ return Number(n) >= 90; }
+function realLecCount(){ return QUIZ.filter(L => !isTqSection(L[0])).length; }
+function lecPill(n){ return isTqSection(n) ? "🎯 TQ Section" : ("Lecture " + n); }
+
 function renderSidebar() {
   const el = document.getElementById("sidebar");
   const onDash = state.viewMode === "dashboard" && !state.reviewIncorrectMode && !state.reviewFlaggedMode && !state.reviewConceptsMode;
@@ -352,6 +358,14 @@ function renderSidebar() {
     const practiceDone = s.total > 0 && s.answered === s.total;
     const status = mastered ? `<span class="lec-status master" title="Mastered">★</span>`
                  : practiceDone ? `<span class="lec-status read" title="Practice complete">✓</span>` : "";
+    if (isTqSection(n)) {
+      html += `<div class="lec-tq-divider">Cumulative review</div>
+        <div class="lec-item lec-item-tq ${active}" onclick="goToLec(${n})">
+        <span class="lec-name">🎯 ${esc(title)}</span>
+        <span class="count">${tqLecCount(n)} LOs</span>
+      </div>`;
+      return;
+    }
     const tqc = tqLecCount(n);
     const tqChip = tqc ? `<span class="tq-chip" title="${tqc} exam-tested objective${tqc>1?'s':''}">TQ ${tqc}</span>` : "";
     html += `<div class="lec-item ${active}" onclick="goToLec(${n})">
@@ -398,8 +412,8 @@ function renderRSidebar() {
   });
 
   const rk = rankFor(state.xp);
-  const readCount = Object.keys(state.read).filter(k => state.read[k]).length;
-  const masterCount = QUIZ.filter(L => lectureMastered(L[0])).length;
+  const readCount = Object.keys(state.read).filter(k => state.read[k] && !isTqSection(k)).length;
+  const masterCount = QUIZ.filter(L => !isTqSection(L[0]) && lectureMastered(L[0])).length;
   const earned = Object.keys(BADGES).filter(b => state.badges[b]);
   const badgesHtml = Object.keys(BADGES).map(b => {
     const got = !!state.badges[b];
@@ -421,8 +435,8 @@ function renderRSidebar() {
 
     <div class="stat-card">
       <div class="stat-label">Progress</div>
-      <div class="stat-row"><span class="label">📖 Lectures read</span><span class="val">${readCount}/${QUIZ.length}</span></div>
-      <div class="stat-row"><span class="label">★ Lectures mastered</span><span class="val">${masterCount}/${QUIZ.length}</span></div>
+      <div class="stat-row"><span class="label">📖 Lectures read</span><span class="val">${readCount}/${realLecCount()}</span></div>
+      <div class="stat-row"><span class="label">★ Lectures mastered</span><span class="val">${masterCount}/${realLecCount()}</span></div>
     </div>
 
     <div class="stat-card">
@@ -565,9 +579,9 @@ function markRead(n) {
     save(KEYS.read, state.read);
     addXP(20);
     awardBadge("bookworm");
-    const readCount = Object.keys(state.read).filter(k => state.read[k]).length;
-    if (readCount >= Math.ceil(QUIZ.length / 2)) awardBadge("half_read");
-    if (readCount >= QUIZ.length) awardBadge("well_read");
+    const readCount = Object.keys(state.read).filter(k => state.read[k] && !isTqSection(k)).length;
+    if (readCount >= Math.ceil(realLecCount() / 2)) awardBadge("half_read");
+    if (readCount >= realLecCount()) awardBadge("well_read");
   }
 }
 function setView(mode) {
@@ -937,7 +951,7 @@ function renderLearnView() {
 
   main.innerHTML = `
     <div class="lecture-header">
-      <span class="lec-pill">Lecture ${n}${prof}</span>
+      <span class="lec-pill">${lecPill(n)}${prof}</span>
       <h2>${esc(title)}</h2>
     </div>
     ${lectureModeBar(n)}
@@ -995,7 +1009,7 @@ function renderMasterView(){
   const flagged = items.filter(i => i.type==="q" && i.reason==="flagged").length;
   const paras = items.filter(i => i.type==="para" || i.type==="hl").length;
   let html = `
-    <div class="lecture-header"><span class="lec-pill">Lecture ${n}</span><h2>${esc(title)}</h2></div>
+    <div class="lecture-header"><span class="lec-pill">${lecPill(n)}</span><h2>${esc(title)}</h2></div>
     ${lectureModeBar(n)}
     <div class="master-intro">
       <div class="master-intro-h">🎯 Master · drill your weak spots</div>
@@ -1069,7 +1083,7 @@ function renderLecture() {
   const profTxt = cInfo && cInfo.prof ? ` · ${cInfo.prof}` : "";
   let html = `
     <div class="lecture-header">
-      <span class="lec-pill">Lecture ${n}${profTxt}</span>
+      <span class="lec-pill">${lecPill(n)}${profTxt}</span>
       <h2>${title}</h2>
       <div class="sub">${los.length} learning objective${los.length === 1 ? "" : "s"}${accuracyText}</div>
       ${lecTq ? `<button class="btn btn-small tq-toggle ${state.tqOnly?'on':''}" onclick="toggleTqOnly()">🎯 ${state.tqOnly?'Showing exam-tested only ✓':`Exam-tested · ${lecTq} LO${lecTq>1?'s':''}`}</button>` : ""}
@@ -2427,8 +2441,8 @@ function renderDashboard(){
   showTray(false); hideAnnoPopup();
   const rk=rankFor(state.xp); const o=overallStats();
   const bm=mostRecentBookmark();
-  const readCount=Object.keys(state.read).filter(k=>state.read[k]).length;
-  const masterCount=QUIZ.filter(L=>lectureMastered(L[0])).length;
+  const readCount=Object.keys(state.read).filter(k=>state.read[k] && !isTqSection(k)).length;
+  const masterCount=QUIZ.filter(L=>!isTqSection(L[0]) && lectureMastered(L[0])).length;
   const acc=o.answered?Math.round(100*o.correct/o.answered):0;
   const goal=20, todayN=dailyCount(), goalPct=Math.min(100,Math.round(100*todayN/goal));
   const last=state.currentLec;
@@ -2455,8 +2469,8 @@ function renderDashboard(){
       <div class="dash-hero-heat">${renderHeatmap()}</div>
     </div>
     <div class="dash-stats">
-      <div class="dstat"><div class="dstat-num">${readCount}<span>/${QUIZ.length}</span></div><div class="dstat-lab">📖 Read</div></div>
-      <div class="dstat"><div class="dstat-num">${masterCount}<span>/${QUIZ.length}</span></div><div class="dstat-lab">★ Mastered</div></div>
+      <div class="dstat"><div class="dstat-num">${readCount}<span>/${realLecCount()}</span></div><div class="dstat-lab">📖 Read</div></div>
+      <div class="dstat"><div class="dstat-num">${masterCount}<span>/${realLecCount()}</span></div><div class="dstat-lab">★ Mastered</div></div>
       <div class="dstat"><div class="dstat-num">${o.answered}</div><div class="dstat-lab">Answered</div></div>
       <div class="dstat"><div class="dstat-num">${o.answered?acc+"%":"—"}</div><div class="dstat-lab">Accuracy</div></div>
       <div class="dstat"><div class="dstat-num">${state.streakData.current} 🔥</div><div class="dstat-lab">Streak</div></div>

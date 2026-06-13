@@ -2477,3 +2477,10 @@ main { max-width: 1120px; padding-right: 56px; }
 .tq-toggle{margin-top:10px;border-color:#2e9d57 !important;color:#7ee2a4 !important;}
 .tq-toggle.on{background:#143d22 !important;color:#bff3d2 !important;}
 .rc-chapter-h .tq-badge{font-size:.56rem;}
+
+/* "Lecture TQ" rail section */
+.lec-tq-divider{font-size:.6rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:#6fcf90;padding:16px 14px 5px;}
+.lec-item-tq{border-left:3px solid #2e9d57;background:linear-gradient(90deg,rgba(46,157,87,.10),transparent 70%);}
+.lec-item-tq .lec-name{color:#9fe6b8;font-weight:700;}
+.lec-item-tq .count{color:#6fcf90;font-size:.72rem;}
