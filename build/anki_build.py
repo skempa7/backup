@@ -19,6 +19,8 @@ img{display:block;margin:24px auto 0;max-width:90%;max-height:48vh;height:auto;b
  padding:6px 12px;border-radius:8px;display:inline-block;text-shadow:0 0 4px rgba(0,0,0,.9);}
 .hook{color:#d8c08f;font-size:.7em;margin:12px auto 0;display:inline-block;background:rgba(0,0,0,.5);
  padding:5px 11px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
+.tq{color:#7ee2a4;font-weight:800;font-size:.72em;letter-spacing:.03em;margin:14px auto 4px;display:inline-block;
+ background:#143d22;border:1px solid #2e9d57;padding:5px 12px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
 details.more{margin:16px auto 0;max-width:84%;text-align:left;background:rgba(0,0,0,.5);
  padding:2px 14px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
 details.more summary{color:#9fb6cc;font-size:.68em;cursor:pointer;padding:7px 0;list-style:none;}
@@ -26,17 +28,18 @@ details.more summary::-webkit-details-marker{display:none;}
 details.more .body{color:#dbe6f2;font-size:.74em;line-height:1.5;padding:2px 0 10px;}
 """
 BACK_TAIL = """
+{{#TQ}}<div class="tq">\U0001F3AF {{TQ}}</div>{{/TQ}}
 {{#Image}}<hr>{{Image}}{{/Image}}
 {{#Explanation}}<div class="expl">{{Explanation}}</div>{{/Explanation}}
 {{#Hook}}<div class="hook">\U0001F4A1 {{Hook}}</div>{{/Hook}}
 {{#LearnMore}}<details class="more"><summary>Learn more</summary><div class="body">{{LearnMore}}</div></details>{{/LearnMore}}
 """
 CLOZE_MODEL = genanki.Model(det_id("claudderall-cloze-v1"),"Claudderall Cloze",
-    fields=[{"name":"Text"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"}],
+    fields=[{"name":"Text"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"},{"name":"TQ"}],
     templates=[{"name":"Cloze","qfmt":"{{cloze:Text}}","afmt":"{{cloze:Text}}"+BACK_TAIL}],
     css=CSS, model_type=genanki.Model.CLOZE)
 BASIC_MODEL = genanki.Model(det_id("claudderall-basic-v1"),"Claudderall Basic",
-    fields=[{"name":"Front"},{"name":"Back"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"}],
+    fields=[{"name":"Front"},{"name":"Back"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"},{"name":"TQ"}],
     templates=[{"name":"Card","qfmt":"{{Front}}","afmt":'{{Front}}<hr><div class="answer">{{Back}}</div>'+BACK_TAIL}],
     css=CSS)
 
@@ -46,7 +49,19 @@ def main():
     lecs=sorted(bundles); rng=f"{lecs[0]}-{lecs[-1]}"
     deck_root=f"claudderall::{abbrev} lec {rng}"
     media_dir=f"/tmp/anki_media/{course}"; shutil.rmtree(media_dir,ignore_errors=True); os.makedirs(media_dir)
-    media=set(); decks=[]; n_notes=n_cards=n_cloze=n_basic=n_img=n_two=n_free=0; per_lec={}
+    media=set(); decks=[]; n_notes=n_cards=n_cloze=n_basic=n_img=n_two=n_free=0; n_tq=0; per_lec={}
+    # exam-tested (TQ) map for this course: lec -> lo -> [(topic, exam)]
+    TQ={}
+    if os.path.exists("build/_tq_data.json"):
+        for lec,items in json.load(open("build/_tq_data.json")).get(course,{}).items():
+            for it in items:
+                for obj in it["objs"]:
+                    mm=re.match(r'\d+',obj)
+                    if mm: TQ.setdefault(int(lec),{}).setdefault(int(mm.group(0)),[]).append((it["topic"].title(),it["exam"]))
+    def tq_for(L,lo):
+        if not lo or L not in TQ or lo not in TQ[L]: return None
+        ents=TQ[L][lo]; exams=sorted(set(e for _,e in ents)); topics=sorted(set(t for t,_ in ents))
+        return ("Tested on the "+" & ".join(exams)+" — "+" · ".join(topics), exams)
     def slide_img(L,idx):
         b=bundles[L]; d=b["slideDir"]; cnt=b["slideCount"]
         if not idx or idx<1 or idx>cnt: return None
@@ -60,7 +75,7 @@ def main():
         if not os.path.exists(gen): continue
         notes=json.load(open(gen)).get("notes",[])
         deck=genanki.Deck(det_id(f"{course}-lec-{L}"), f"{deck_root}::lec {L} — {b['title']}")
-        ccount=0
+        ccount=0; built=[]   # (is_tq, note) so tested cards can be added first
         for i,nt in enumerate(notes):
             imgs=[]
             for idx in (nt.get("slides") or [])[:2]:
@@ -74,23 +89,28 @@ def main():
             lo=nt.get("lo"); sec=nt.get("section",""); tags=[f"Lec{L}"]
             if lo and sec in ("cq","reclaude"): tags.append(f"Lec{L}::LO{L}.{lo}")
             elif sec: tags.append(f"Lec{L}::{sec}")
+            tqinfo=tq_for(L,lo); tqv=""
+            if tqinfo:
+                tqv=tqinfo[0]; tags+=["TQ"]+[f"TQ::{e}" for e in tqinfo[1]]; n_tq+=1
             guid=genanki.guid_for(f"{course}-{L}-{i}")
             if nt.get("type")=="basic":
                 note=genanki.Note(model=BASIC_MODEL,guid=guid,
-                    fields=[nt.get("front",""),nt.get("back",""),img_html,expl,hook,more],tags=tags)
+                    fields=[nt.get("front",""),nt.get("back",""),img_html,expl,hook,more,tqv],tags=tags)
                 n_basic+=1; ccount+=1; n_cards+=1
             else:
                 txt=nt.get("text","")
-                note=genanki.Note(model=CLOZE_MODEL,guid=guid,fields=[txt,img_html,expl,hook,more],tags=tags)
+                note=genanki.Note(model=CLOZE_MODEL,guid=guid,fields=[txt,img_html,expl,hook,more,tqv],tags=tags)
                 ncl=len(set(re.findall(r'{{c(\d+)::',txt))) or 1
                 n_cloze+=ncl; ccount+=ncl; n_cards+=ncl
-            deck.add_note(note); n_notes+=1
+            built.append((bool(tqinfo),note)); n_notes+=1
+        for _,note in sorted(built, key=lambda x: 0 if x[0] else 1):  # tested-first
+            deck.add_note(note)
         per_lec[L]=(len(notes),ccount,len(b["cqs"]),len(b["mustKnows"])); decks.append(deck)
     out=f"/Users/sebastiankempa/remediation-quiz-app/dist/claudderall {abbrev} lec {rng}.apkg"
     os.makedirs(os.path.dirname(out),exist_ok=True)
     pkg=genanki.Package(decks); pkg.media_files=[f"{media_dir}/{m}" for m in media]; pkg.write_to_file(out)
     print(f"=== {abbrev}: {out}")
-    print(f"  lectures {len(decks)} | notes {n_notes} | cards {n_cards} (cloze {n_cloze}/basic {n_basic})")
+    print(f"  lectures {len(decks)} | notes {n_notes} | cards {n_cards} (cloze {n_cloze}/basic {n_basic}) | TQ-tagged notes {n_tq}")
     print(f"  images: {n_img} w/slide, {n_two} w/two, {n_free} image-free | media {len(media)} | {os.path.getsize(out)/1e6:.1f} MB")
     for L in lecs:
         if L in per_lec: nn,cc,cq,mk=per_lec[L]; print(f"   lec {L:2d}: {nn} notes {cc} cards (CQ {cq}, MUST {mk})")
