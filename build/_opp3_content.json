@@ -453,56 +453,6 @@
     ]
    },
    {
-    "id": "2",
-    "statement": "Identify the Proper Naming of Rib Dysfunctions.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "Naming a rib SD is a fixed four-slot template, and Barry drilled the order so the name is unambiguous. Slot one: side (left or right). Slot two: rib number (and yes, each rib in a group gets its own individual diagnosis even when they move together). Slot three: where it likes to live — inhaled or exhaled — which is the somatic dysfunction. Slot four: the predominant motion — pump, bucket, or caliper. He hammered one principle above all: name it for where it likes to live, not where it's restricted."
-     },
-     {
-      "t": "cq",
-      "x": "You name a rib SD for the position of ease (where it lives / less range of motion), never for the restricted direction. (naming principle)"
-     },
-     {
-      "t": "p",
-      "x": "Where predominance comes from palpation: you read the fourth slot off where the motion is greatest. Perceived best parasternally / at the costosternal junction → pump-handle. Perceived best at the mid-axillary line → bucket-handle. Ribs 11–12 are caliper. And rib 1 is the exception that proves the rule: it is ~50% pump and ~50% bucket, so you don't assign a predominance at all — you simply name it inhaled or exhaled. Rib 1 is the thoracic-inlet rib (rib 1 + manubrium + T1 acting as a unit via Sibson's fascia), which is why it warrants its own look."
-     },
-     {
-      "t": "cq",
-      "x": "Predominance by palpation site: parasternal → pump; mid-axillary → bucket; ribs 11–12 → caliper; rib 1 → no predominance (50/50). (reading the 4th slot)"
-     },
-     {
-      "t": "p",
-      "x": "B.I.T.E. — treatment order for a group: when several ribs share a dysfunction, the order you treat them in matters, and the mnemonic is B.I.T.E.: Bottom for Inhaled, Top for Exhaled. For a group of inhaled ribs, treat the bottom-most rib first — pushing it inferiorly draws all its neighbors toward exhalation in a caravan, with no roadblock. For a group of exhaled ribs, treat the top-most rib first. Do it backwards and, as Barry put it, you push a rib \"into all the other inhale top ribs below it, and you're just up against a brick wall.\" The prior student who built the study guide literally made BITE the section header — that's how central it is."
-     },
-     {
-      "t": "cq",
-      "x": "Inhaled group → treat the bottom rib first (caravan into exhalation); exhaled group → treat the top rib first; wrong end = mechanical brick wall. (B.I.T.E. mechanism)"
-     },
-     {
-      "t": "p",
-      "x": "The ME muscle map (rib dance): the \"rib dance\" treats exhaled pump-handle SDs with muscle energy, and the muscle you recruit is set by rib number: rib 1 = anterior/middle scalene, rib 2 = posterior scalene, ribs 3–5 = pectoralis minor, ribs 6–10 = serratus anterior, ribs 11–12 = latissimus dorsi + QL. This is the map behind the Kahoot answers (rib 1 exhalation → anterior scalene) and the lab practical, so it is worth knowing cold."
-     },
-     {
-      "t": "key",
-      "x": "Four slots, in order: side · rib# · inhaled/exhaled · predominant motion. Slot 3 is the SD; name it for ease."
-     },
-     {
-      "t": "cue",
-      "x": "Group of ribs? Run B.I.T.E.: Bottom for Inhaled, Top for Exhaled — then pick the ME muscle by rib number."
-     },
-     {
-      "t": "pearl",
-      "x": "Rib 1 gets no predominance (50/50 pump/bucket) — just inhaled or exhaled. It's the thoracic-inlet rib, worth its own look."
-     },
-     {
-      "t": "q",
-      "x": "You have a group of ribs 3–6 on the right, all inhaled. Which rib do you treat first, and what goes wrong mechanically if you start at the wrong end?"
-     }
-    ]
-   },
-   {
     "id": "3",
     "statement": "Recognize Clinical Syndromes Associated with Rib Dysfunctions.",
     "blocks": [
@@ -557,6 +507,56 @@
     ]
    },
    {
+    "id": "2",
+    "statement": "Identify the Proper Naming of Rib Dysfunctions.",
+    "blocks": [
+     {
+      "t": "p",
+      "x": "Naming a rib SD is a fixed four-slot template, and Barry drilled the order so the name is unambiguous. Slot one: side (left or right). Slot two: rib number (and yes, each rib in a group gets its own individual diagnosis even when they move together). Slot three: where it likes to live — inhaled or exhaled — which is the somatic dysfunction. Slot four: the predominant motion — pump, bucket, or caliper. He hammered one principle above all: name it for where it likes to live, not where it's restricted."
+     },
+     {
+      "t": "cq",
+      "x": "You name a rib SD for the position of ease (where it lives / less range of motion), never for the restricted direction. (naming principle)"
+     },
+     {
+      "t": "p",
+      "x": "Where predominance comes from palpation: you read the fourth slot off where the motion is greatest. Perceived best parasternally / at the costosternal junction → pump-handle. Perceived best at the mid-axillary line → bucket-handle. Ribs 11–12 are caliper. And rib 1 is the exception that proves the rule: it is ~50% pump and ~50% bucket, so you don't assign a predominance at all — you simply name it inhaled or exhaled. Rib 1 is the thoracic-inlet rib (rib 1 + manubrium + T1 acting as a unit via Sibson's fascia), which is why it warrants its own look."
+     },
+     {
+      "t": "cq",
+      "x": "Predominance by palpation site: parasternal → pump; mid-axillary → bucket; ribs 11–12 → caliper; rib 1 → no predominance (50/50). (reading the 4th slot)"
+     },
+     {
+      "t": "p",
+      "x": "B.I.T.E. — treatment order for a group: when several ribs share a dysfunction, the order you treat them in matters, and the mnemonic is B.I.T.E.: Bottom for Inhaled, Top for Exhaled. For a group of inhaled ribs, treat the bottom-most rib first — pushing it inferiorly draws all its neighbors toward exhalation in a caravan, with no roadblock. For a group of exhaled ribs, treat the top-most rib first. Do it backwards and, as Barry put it, you push a rib \"into all the other inhale top ribs below it, and you're just up against a brick wall.\" The prior student who built the study guide literally made BITE the section header — that's how central it is."
+     },
+     {
+      "t": "cq",
+      "x": "Inhaled group → treat the bottom rib first (caravan into exhalation); exhaled group → treat the top rib first; wrong end = mechanical brick wall. (B.I.T.E. mechanism)"
+     },
+     {
+      "t": "p",
+      "x": "The ME muscle map (rib dance): the \"rib dance\" treats exhaled pump-handle SDs with muscle energy, and the muscle you recruit is set by rib number: rib 1 = anterior/middle scalene, rib 2 = posterior scalene, ribs 3–5 = pectoralis minor, ribs 6–10 = serratus anterior, ribs 11–12 = latissimus dorsi + QL. This is the map behind the Kahoot answers (rib 1 exhalation → anterior scalene) and the lab practical, so it is worth knowing cold."
+     },
+     {
+      "t": "key",
+      "x": "Four slots, in order: side · rib# · inhaled/exhaled · predominant motion. Slot 3 is the SD; name it for ease."
+     },
+     {
+      "t": "cue",
+      "x": "Group of ribs? Run B.I.T.E.: Bottom for Inhaled, Top for Exhaled — then pick the ME muscle by rib number."
+     },
+     {
+      "t": "pearl",
+      "x": "Rib 1 gets no predominance (50/50 pump/bucket) — just inhaled or exhaled. It's the thoracic-inlet rib, worth its own look."
+     },
+     {
+      "t": "q",
+      "x": "You have a group of ribs 3–6 on the right, all inhaled. Which rib do you treat first, and what goes wrong mechanically if you start at the wrong end?"
+     }
+    ]
+   },
+   {
     "id": "4",
     "statement": "Identify Exercise Rehabilitation for Rib Related Issues.",
     "blocks": [
@@ -581,6 +581,28 @@
    "Treatment — throw the book, mind the OMT precaution. Multi-agent pharmacotherapy (analgesics, NSAIDs/steroids, TCAs, sodium-channel blockers, gabapentin, GABA agonists, clonidine) + PT/OT + psychotherapy + sympathetic block + ketamine (NMDA antagonist for refractory central sensitization). For OMT: use HVLA with caution (osteoporosis) — indirect techniques are better tolerated."
   ],
   "los": [
+   {
+    "id": "2",
+    "statement": "Identify the etiologies of CRPS.",
+    "blocks": [
+     {
+      "t": "p",
+      "x": "Epidemiology: the annual incidence is 5–26 per 100,000 per year — a broad range, but higher than most expect for a condition many clinicians have never heard of (Barry’s opening Kahoot point). CRPS skews strongly female, with a female-to-male ratio of about 3–4:1; the median age of onset is around 46, with a peak in women between 61–70. Split it into buckets: in adults, the upper extremity is most commonly affected and fracture is the most common precipitant; in children, CRPS is rarer, even more female-predominant (75–90%), tends to hit the lower extremity, and carries a better prognosis but a higher recurrence rate."
+     },
+     {
+      "t": "cq",
+      "x": "Incidence 5–26/100,000/yr; female 3–4:1; adults UE + fracture-driven; kids LE + better prognosis. (epidemiologic skew)"
+     },
+     {
+      "t": "p",
+      "x": "Precipitants by frequency: fracture is number one (~42%), classically the distal radius (Colles’); then blunt trauma, crush injuries, and sprains. Surgery (orthopedic, carpal tunnel, shoulder) precipitates about 12%; nerve entrapment about 7%; and roughly 5% is truly spontaneous with no identifiable trigger. Myocardial infarction, stroke, and even venipuncture round out the notable-but-uncommon list. The history of the disease runs deep — Paré after royal bloodletting, Mitchell’s Civil War “causalgia,” Sudeck’s x-ray atrophy — but Barry was explicit that he would not hold you to the historical dates, so know that the syndrome has been recognized for centuries and move on."
+     },
+     {
+      "t": "q",
+      "x": "In an adult, what is the single most common precipitating event for CRPS, and at which classic fracture site?"
+     }
+    ]
+   },
    {
     "id": "1",
     "statement": "Recognize Complex Regional Pain Syndrome (CRPS).",
@@ -624,28 +646,6 @@
      {
       "t": "q",
       "x": "A patient has burning, disproportionate pain confined to one hand after a wrist fracture, not following any dermatome. What single piece of data tells you whether this is CRPS Type I or Type II?"
-     }
-    ]
-   },
-   {
-    "id": "2",
-    "statement": "Identify the etiologies of CRPS.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "Epidemiology: the annual incidence is 5–26 per 100,000 per year — a broad range, but higher than most expect for a condition many clinicians have never heard of (Barry’s opening Kahoot point). CRPS skews strongly female, with a female-to-male ratio of about 3–4:1; the median age of onset is around 46, with a peak in women between 61–70. Split it into buckets: in adults, the upper extremity is most commonly affected and fracture is the most common precipitant; in children, CRPS is rarer, even more female-predominant (75–90%), tends to hit the lower extremity, and carries a better prognosis but a higher recurrence rate."
-     },
-     {
-      "t": "cq",
-      "x": "Incidence 5–26/100,000/yr; female 3–4:1; adults UE + fracture-driven; kids LE + better prognosis. (epidemiologic skew)"
-     },
-     {
-      "t": "p",
-      "x": "Precipitants by frequency: fracture is number one (~42%), classically the distal radius (Colles’); then blunt trauma, crush injuries, and sprains. Surgery (orthopedic, carpal tunnel, shoulder) precipitates about 12%; nerve entrapment about 7%; and roughly 5% is truly spontaneous with no identifiable trigger. Myocardial infarction, stroke, and even venipuncture round out the notable-but-uncommon list. The history of the disease runs deep — Paré after royal bloodletting, Mitchell’s Civil War “causalgia,” Sudeck’s x-ray atrophy — but Barry was explicit that he would not hold you to the historical dates, so know that the syndrome has been recognized for centuries and move on."
-     },
-     {
-      "t": "q",
-      "x": "In an adult, what is the single most common precipitating event for CRPS, and at which classic fracture site?"
      }
     ]
    },
@@ -753,6 +753,36 @@
   ],
   "los": [
    {
+    "id": "3",
+    "statement": "Test and palpate the cervical musculature.",
+    "blocks": [
+     {
+      "t": "p",
+      "x": "WHAT YOU TOUCH — the articular pillars. Cervical diagnosis is hands-on. You palpate the articular pillars — the lateral masses between the superior and inferior facets, about a fingertip in size — from the side of the neck, not the back. You do not press the transverse processes (nerves exit there and the muscular attachments are tender). Landmarking: drop straight down from the mastoid process to land on the C2 articular pillar, then step one finger-breadth per level down to C7 — by C7 you should run into the first rib or the T1 transverse process. A longer neck is easier to palpate (less tissue in the way)."
+     },
+     {
+      "t": "cq",
+      "x": "Palpate and translate the articular pillars from the side — NOT the transverse processes (tender, nerves exit). (palpation target)"
+     },
+     {
+      "t": "p",
+      "x": "FINDING THE MUSCLES. The scalenes sit just posterior to the SCM — find the SCM, line your fingers behind it, and you are on anterior → middle → posterior scalene. For the suboccipital muscles you use the OAD-compression hold: your most-midline finger sits on rectus capitis posterior minor, slightly more lateral is posterior major. The splenius (“bandage”) muscles are what you feel during the perpendicular soft-tissue stretch (holding the forehead, pulling up the opposite side of the neck); semispinalis is right lateral to the spinous processes. The deep longus colli and rectus capitis muscles are essentially not palpable — you treat them indirectly (counterstrain/FPR), not by direct palpation."
+     },
+     {
+      "t": "p",
+      "x": "CERVICOGENIC HEADACHE — the highest-yield pearl. When you find tightness in the most-midline suboccipital finger (RCP minor), that is a major cervicogenic-headache generator: a myodural bridge connects rectus capitis posterior minor to the intracranial dura (first reported in Spine Journal, 1997), and the dura carries pain-sensitive fibers — so you are pulling on something exquisitely pain-sensitive. It is also very easy to treat: put your fingers on it and wait. Check it on every headache patient during OAD compression."
+     },
+     {
+      "t": "p",
+      "x": "Slide suboccipital detail: rectus capitis posterior MAJOR (origin SP of axis/C2; extends/rotates the OA; slightly lateral in the OAD hold) and rectus capitis posterior MINOR (origin posterior tubercle of C1; the myodural-bridge muscle; most-midline finger in the OAD hold). Cervicogenic headache arises from the myodural bridge running from RCP minor to the pain-sensitive intracranial dura (Spine Journal, 1997). The articular pillars (lateral masses between the superior/inferior facets) are the palpation/translation target."
+     },
+     {
+      "t": "q",
+      "x": "You push the articular pillar from the left toward the right and meet restriction. In plain sidebending terms, what motion is restricted and where does the segment live?"
+     }
+    ]
+   },
+   {
     "id": "1",
     "statement": "Describe the muscular and ligamentous attachments of the cervical spine.",
     "blocks": [
@@ -813,36 +843,6 @@
      {
       "t": "q",
       "x": "A patient has pain only when turning the head to the left. Which muscle is the likely culprit, and what is the general rule for muscle pain with rotation?"
-     }
-    ]
-   },
-   {
-    "id": "3",
-    "statement": "Test and palpate the cervical musculature.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "WHAT YOU TOUCH — the articular pillars. Cervical diagnosis is hands-on. You palpate the articular pillars — the lateral masses between the superior and inferior facets, about a fingertip in size — from the side of the neck, not the back. You do not press the transverse processes (nerves exit there and the muscular attachments are tender). Landmarking: drop straight down from the mastoid process to land on the C2 articular pillar, then step one finger-breadth per level down to C7 — by C7 you should run into the first rib or the T1 transverse process. A longer neck is easier to palpate (less tissue in the way)."
-     },
-     {
-      "t": "cq",
-      "x": "Palpate and translate the articular pillars from the side — NOT the transverse processes (tender, nerves exit). (palpation target)"
-     },
-     {
-      "t": "p",
-      "x": "FINDING THE MUSCLES. The scalenes sit just posterior to the SCM — find the SCM, line your fingers behind it, and you are on anterior → middle → posterior scalene. For the suboccipital muscles you use the OAD-compression hold: your most-midline finger sits on rectus capitis posterior minor, slightly more lateral is posterior major. The splenius (“bandage”) muscles are what you feel during the perpendicular soft-tissue stretch (holding the forehead, pulling up the opposite side of the neck); semispinalis is right lateral to the spinous processes. The deep longus colli and rectus capitis muscles are essentially not palpable — you treat them indirectly (counterstrain/FPR), not by direct palpation."
-     },
-     {
-      "t": "p",
-      "x": "CERVICOGENIC HEADACHE — the highest-yield pearl. When you find tightness in the most-midline suboccipital finger (RCP minor), that is a major cervicogenic-headache generator: a myodural bridge connects rectus capitis posterior minor to the intracranial dura (first reported in Spine Journal, 1997), and the dura carries pain-sensitive fibers — so you are pulling on something exquisitely pain-sensitive. It is also very easy to treat: put your fingers on it and wait. Check it on every headache patient during OAD compression."
-     },
-     {
-      "t": "p",
-      "x": "Slide suboccipital detail: rectus capitis posterior MAJOR (origin SP of axis/C2; extends/rotates the OA; slightly lateral in the OAD hold) and rectus capitis posterior MINOR (origin posterior tubercle of C1; the myodural-bridge muscle; most-midline finger in the OAD hold). Cervicogenic headache arises from the myodural bridge running from RCP minor to the pain-sensitive intracranial dura (Spine Journal, 1997). The articular pillars (lateral masses between the superior/inferior facets) are the palpation/translation target."
-     },
-     {
-      "t": "q",
-      "x": "You push the articular pillar from the left toward the right and meet restriction. In plain sidebending terms, what motion is restricted and where does the segment live?"
      }
     ]
    },
@@ -916,28 +916,6 @@
   ],
   "los": [
    {
-    "id": "1",
-    "statement": "Identify selected etiologies of cervical radiculopathy.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "WHAT IS A RADICULOPATHY. Stedman’s defines radiculopathy as a disease of the spinal nerve ROOTS — and that root-level location is the whole frame for this lecture. It is not spinal-cord compression (that is myelopathy) and not a peripheral-nerve problem (that is entrapment); it is compression of the anterior and posterior nerve roots as they form the spinal nerve and exit the neural foramen. Epidemiology: mean age ~48, male-to-female ratio about 1.7:1."
-     },
-     {
-      "t": "p",
-      "x": "COMPRESSIVE ETIOLOGIES — the big bucket. The etiologies you care about most are compressive. The headline fact, which Barry stated three-plus times (the transcript literally repeats the sentence): the most common disc herniation is at C6–C7, producing symptoms at the C7 nerve root. Degenerative disease with spurring — cervical spondylosis — and spinal stenosis round out the compressive causes."
-     },
-     {
-      "t": "p",
-      "x": "NON-DEGENERATIVE ETIOLOGIES. Do not forget the non-degenerative bucket: tumor, systemic infection (and processes like herpes zoster or Lyme with nerve-root involvement), granulomatous infiltration, and demyelinating processes. A history of fever, chills, unexplained weight loss, immunosuppression, cancer, or IV drug use raises suspicion for these — the red flags that change the workup."
-     },
-     {
-      "t": "p",
-      "x": "Summary — a radiculopathy is a disease of the spinal nerve roots (root compression, not cord, not peripheral); mean age ~48, M:F ~1.7:1. Etiologies divide into compressive (disc herniation, MC at C6–C7→C7; cervical spondylosis; stenosis) versus non-degenerative (tumor, infection, systemic disease)."
-     }
-    ]
-   },
-   {
     "id": "2",
     "statement": "Identify the signs and symptoms of cervical radiculopathy.",
     "blocks": [
@@ -980,16 +958,24 @@
     ]
    },
    {
-    "id": "3",
-    "statement": "Identify the differential diagnosis of cervical radiculopathy.",
+    "id": "1",
+    "statement": "Identify selected etiologies of cervical radiculopathy.",
     "blocks": [
      {
       "t": "p",
-      "x": "THE DIFFERENTIAL. When you suspect radiculopathy, also think: cervical strain/sprain with myofascial trigger points (Janet Travell), myelopathy (cord compression), thoracic outlet syndrome, peripheral neuropathy (diabetes, thyroid, systemic disease), and entrapment neuropathies. Trigger points can create pseudo-radicular referred pain, but they do not explain objective root signs — use them to broaden the differential, not to dismiss a real radiculopathy."
+      "x": "WHAT IS A RADICULOPATHY. Stedman’s defines radiculopathy as a disease of the spinal nerve ROOTS — and that root-level location is the whole frame for this lecture. It is not spinal-cord compression (that is myelopathy) and not a peripheral-nerve problem (that is entrapment); it is compression of the anterior and posterior nerve roots as they form the spinal nerve and exit the neural foramen. Epidemiology: mean age ~48, male-to-female ratio about 1.7:1."
      },
      {
       "t": "p",
-      "x": "RADICULOPATHY vs ENTRAPMENT — the high-yield split. This is the thread back to the Entrapment Neuropathies lecture. A root lesion produces deficits along the ENTIRE dermatome — motor and sensory across the whole distribution. An entrapment is localized/distal to the compression site. Barry’s anchor case: a patient with worsening hand numbness had a cervical MRI showing a syrinx, but the nerve-root responses on EMG were normal — the lesion was actually median-nerve compression at the wrist from osteoarthritis. “It wasn’t a neurosurgeon he needed, it was a hand surgeon.” EMG localizes the lesion and settles the differential."
+      "x": "COMPRESSIVE ETIOLOGIES — the big bucket. The etiologies you care about most are compressive. The headline fact, which Barry stated three-plus times (the transcript literally repeats the sentence): the most common disc herniation is at C6–C7, producing symptoms at the C7 nerve root. Degenerative disease with spurring — cervical spondylosis — and spinal stenosis round out the compressive causes."
+     },
+     {
+      "t": "p",
+      "x": "NON-DEGENERATIVE ETIOLOGIES. Do not forget the non-degenerative bucket: tumor, systemic infection (and processes like herpes zoster or Lyme with nerve-root involvement), granulomatous infiltration, and demyelinating processes. A history of fever, chills, unexplained weight loss, immunosuppression, cancer, or IV drug use raises suspicion for these — the red flags that change the workup."
+     },
+     {
+      "t": "p",
+      "x": "Summary — a radiculopathy is a disease of the spinal nerve roots (root compression, not cord, not peripheral); mean age ~48, M:F ~1.7:1. Etiologies divide into compressive (disc herniation, MC at C6–C7→C7; cervical spondylosis; stenosis) versus non-degenerative (tumor, infection, systemic disease)."
      }
     ]
    },
@@ -1004,84 +990,6 @@
      {
       "t": "p",
       "x": "SPECIAL TESTS — Spurling, distraction, Valsalva. Spurling’s compression test (extension + sidebending toward the symptomatic side with axial load) WORSENS radicular symptoms by narrowing the neural foramen — a positive test strongly suggests foraminal compression. Cervical distraction does the opposite: it IMPROVES symptoms by opening the foramen and giving the nerve room. The Valsalva maneuver worsens symptoms when a mass-occupying lesion or herniation is present (raised intraspinal pressure)."
-     }
-    ]
-   },
-   {
-    "id": "5",
-    "statement": "Identify the diagnostic testing for suspected cervical radiculopathy.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "IMAGING — and when NOT to image. Available studies include plain cervical radiographs, MRI, CT, and myelography. But for acute radiculopathy with NO red flags, no immediate imaging is required — most cases improve with conservative care, so imaging is reserved for red flags (fever, weight loss, cancer history, progressive deficit) or failure of conservative management. When you do order an MRI, demand that the radiologist grade the neural-foraminal stenosis (mild / moderate / severe at the named root) rather than just reporting its presence."
-     },
-     {
-      "t": "cq",
-      "x": "Acute radiculopathy, no red flags → no immediate imaging; reserve MRI for red flags or failed conservative care."
-     },
-     {
-      "t": "p",
-      "x": "NEEDLE EMG = GOLD STANDARD. Barry repeated it for emphasis (“I repeat that…”): needle electromyography / nerve-conduction study is the gold-standard diagnostic test for radiculopathy — the only tool capable of assessing the physiological status / integrity of the nerve roots, and the only one that truly LOCALIZES the lesion. Imaging shows structure; EMG shows function. Its best use is to clarify an unclear diagnosis, not to test every acute case and not to replace the MRI. The study should sample paraspinal and limb muscles along the nerve’s track."
-     },
-     {
-      "t": "p",
-      "x": "WHY IT WINS — the syrinx case. Barry’s anchor: a patient’s cervical MRI showed a syrinx (alarming structure), but the EMG responses in the cervical nerve roots were normal — the abnormality appeared peripherally at the median nerve under the flexor retinaculum. EMG localized the true lesion to the wrist, redirecting care from a neurosurgeon to a hand surgeon. Structure can mislead; physiology localizes."
-     }
-    ]
-   },
-   {
-    "id": "6",
-    "statement": "Describe the treatment plan (and cervical OMT / counterstrain) for radiculopathy.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "CONSERVATIVE FIRST. For uncomplicated cervical radiculopathy, treat conservatively and give it 6–12 weeks. Acutely: short-term analgesics, a short course of oral corticosteroids, a brief period of cervical-collar immobilization (~1 week), cervical traction, and OMT/PT. Prognosis is good — about 90% of compressive cases become asymptomatic or mild, and roughly a quarter ultimately have surgery. Pharmacologic detail (NSAIDs, muscle relaxants, short-term narcotics for acute pain only) supports comfort but is not the mainstay."
-     },
-     {
-      "t": "cq",
-      "x": "Uncomplicated radiculopathy = conservative care for 6–12 weeks (analgesics, short steroids, brief collar, traction, OMT/PT) before surgical referral."
-     },
-     {
-      "t": "p",
-      "x": "OMT — gentle, no HVLA. Use gentle techniques — soft tissue, myofascial release, FPR — to reduce muscle spasm, improve motion, and alleviate pressure on the nerve roots. AVOID HVLA in the region of an active radiculopathy. The grafted lab content lives here: cervical muscle energy for the somatic-dysfunction diagnoses from Cervical Spine I, and counterstrain for tender points — locate the tender point, then position to shorten and quiet it. The Kahoot-tested example: the anterior C7 (AC7) counterstrain position is flex, sidebend TOWARD, rotate AWAY (a change from some other cervical counterstrain positions)."
-     },
-     {
-      "t": "p",
-      "x": "WHEN TO REFER — and when to skip the wait. Surgical indications: identifiable structural pathology (fracture, tumor, instability), neurologic dysfunction from cord/root compression, or failure of conservative care for 6–12 weeks with progressive/worsening symptoms. The hard rule: myelopathy, progressive motor deficit, or muscle wasting SKIPS the conservative window — get urgent MRI and a surgeon involved sooner rather than later. Barry’s framing: he’d rather a good surgeon tell the patient they don’t need surgery than miss the window (“you’re tested on the material, not my preferences” — the tested standard is the 6–12-week/progressive criterion)."
-     }
-    ]
-   },
-   {
-    "id": "7",
-    "statement": "Describe the clinical features of cervical myelopathy.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "CORD, NOT ROOT. Myelopathy is cord compression or vascular insufficiency — a fundamentally more serious diagnosis than radiculopathy. Cervical spondylotic myelopathy is the most common cause of spinal-cord dysfunction in the elderly; it affects function at and below the level of the lesion. The gait is broad-based and unsteady, and that gait disturbance may be the presenting sign. On the T2-weighted MRI you may see cord signal change — abnormal white (water/edema) inside the cord, where there should only be CSF surrounding it."
-     },
-     {
-      "t": "cq",
-      "x": "Myelopathy = cord compression; cervical spondylotic myelopathy is the MC cord dysfunction in the elderly; broad-based gait may be the presenting sign."
-     },
-     {
-      "t": "p",
-      "x": "THE MIXED REFLEX PICTURE. This is the discriminator from radiculopathy. Radiculopathy is purely lower-motor-neuron (hyporeflexia at the involved level). Myelopathy is mixed: hyporeflexia AT the level of the lesion (the LMN component) plus hyperreflexia BELOW it (the UMN component, from interrupted corticospinal tracts). Add pathologic reflexes and you have the myelopathy signature."
-     },
-     {
-      "t": "p",
-      "x": "HOFFMANN & LHERMITTE — the red flags. Hoffmann’s sign — flick the nail of the middle (or ring) finger and the index finger and thumb flex — is the upper-extremity analog of Babinski and a UMN finding Barry is “really concerned about more than anything.” Lhermitte’s phenomenon is a shock-like paresthesia with neck flexion, seen with midline disc/spondylotic cord compression and also with intramedullary pathology (e.g., an MS plaque). Both push you toward an urgent MRI and referral — and remember PT is contraindicated in myelopathy."
-     },
-     {
-      "t": "trap",
-      "x": "Hyperreflexia + hand clumsiness + gait ataxia is myelopathy, NOT radiculopathy (pure LMN) and NOT thoracic outlet syndrome (peripheral). The long-tract signs give it away."
-     },
-     {
-      "t": "key",
-      "x": "The reflex split is the whole game: hyporeflexia AT the level + hyperreflexia BELOW = mixed UMN/LMN = myelopathy. Pure hyporeflexia at one level = radiculopathy."
-     },
-     {
-      "t": "cue",
-      "x": "Hoffmann (UE Babinski) and Lhermitte (neck-flexion shock) are myelopathy red flags → urgent MRI + referral; do NOT run the 6–12-week wait, and avoid PT."
      }
     ]
    }
@@ -1156,44 +1064,6 @@
      {
       "t": "q",
       "x": "Your patient needs quick bronchodilation in an acute attack but also has thick secretions you want to thin. Which autonomic input does each goal call for, and how can the SAME goal (calming sympathetics) be right for pneumonia but wrong for an acute asthma attack?"
-     }
-    ]
-   },
-   {
-    "id": "2",
-    "statement": "Explain the effects of the lymphatic system on the respiratory system.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "The lymphatic lever does two things at once, and that dual role is why it helps even when the problem starts in the lung: lymphatics drain waste and inflammatory products away from the tissue AND deliver immune cells into the area of injury. So in pneumonia — inflammation, exudate, congestion all originating in the lung — you still want the whole-body vacuum pumping, because better drainage plus better immune delivery speeds resolution."
-     },
-     {
-      "t": "cq",
-      "x": "Most of the lungs (even part of the left lung) drain to the right lymphatic duct."
-     },
-     {
-      "t": "p",
-      "x": "Right lymphatic duct — the point of confusion. The majority of pulmonary lymph drains to the right lymphatic duct, including part of the left lung (via pretracheal/paratracheal nodes). Eldemire flagged a labeling trap: some diagrams say \"left thoracic duct,\" but that's just the thoracic duct itself — don't let the wording fool you into thinking the lungs drain mostly left. The practical consequence ties straight back to Ribs II: the thoracic inlet is the drainage outlet, which is why you open it first. The diaphragm plus the thoracic pump generate the pressure gradient for drainage."
-     },
-     {
-      "t": "p",
-      "x": "What the research shows: Eldemire anchored the lymphatic case in data — lymphatic-directed OMT has been shown to increase diaphragm function, decrease bacterial colony counts in lung tissue, shorten the duration of IV antibiotics, and increase thoracic-duct flow. The framing that matters for boards and for the wards: OMT augments medical therapy — it doesn't replace antibiotics, it makes them work in a shorter course, which especially helps the elderly (fewer IV-antibiotic adverse effects, less kidney injury, lower cost)."
-     },
-     {
-      "t": "key",
-      "x": "Lymph does double duty: drains waste + delivers immune cells — so it helps even when the inflammation originates in the lung."
-     },
-     {
-      "t": "pearl",
-      "x": "Most lung lymph → right lymphatic duct (even part of the left lung). \"Left thoracic duct\" wording is a labeling trap."
-     },
-     {
-      "t": "cue",
-      "x": "Lymphatic sequence: open the thoracic inlet first (the outlet), then dome the diaphragm / pump — but only once afebrile."
-     },
-     {
-      "t": "q",
-      "x": "A pneumonia patient's inflammation originates IN the lung. Why would moving lymph still help, and where does most of that lung lymph ultimately drain?"
      }
     ]
    },
@@ -1309,52 +1179,6 @@
   ],
   "los": [
    {
-    "id": "1",
-    "statement": "Explain the effects of the sympathetic nervous system on the cardiac system.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "The cardiac sympathetics arise from T1-T6, with preganglionic fibers running up to the cervical chain ganglia before reaching the heart. The functional effects of raising sympathetic tone are the familiar trio - increased heart rate, increased contractility, and increased cardiac output - and, when tone stays high, coronary vasospasm. The handout also separates the cardiac levels from the peripheral ones: peripheral blood vessels and the kidneys/adrenals are driven from T10-L2, which matters when you treat hypertension."
-     },
-     {
-      "t": "cq",
-      "x": "Cardiac sympathetics = T1-T6; peripheral vessels and kidneys/adrenals = T10-L2. Increased cardiac tone leads to increased rate, increased contractility, increased output."
-     },
-     {
-      "t": "p",
-      "x": "The single most testable idea in this lecture is a side-of-the-heart map that holds for both autonomic divisions: right-sided fibers reach the SA node, left-sided fibers reach the AV node. On the sympathetic side that means right hypersympathetic activity drives supraventricular tachycardias (SVTs) from the SA node, while left hypersympathetic activity drives ventricular ectopic foci and ventricular fibrillation. Keep 'right = SA = supraventricular, left = AV = ventricular' and you can reconstruct the whole table."
-     },
-     {
-      "t": "p",
-      "x": "Cardiac sympathetic innervation T1-T6: right fibers reach the SA node (right deep cardiac plexus); left fibers reach the AV node (left deep cardiac plexus). Peripheral sympathetics: vessels T1-L2, kidneys/adrenals T10-L2; increased tone produces vasoconstriction and increased rate/contractility/output."
-     },
-     {
-      "t": "p",
-      "x": "Two more sympathetic consequences round out the LO. Sustained high sympathetic tone can produce coronary vasospasm, reducing perfusion and provoking ischemia even without a fixed stenosis. And in essential hypertension, patients demonstrate vascular and cardiac hyperreactivity to autonomic stimuli; prolonged sympathetic stimulation of the kidneys creates a functional retention of water and salt that elevates blood pressure - the rationale for the renal-level (T10-L2) and adrenal-Chapman treatment you will see under hypertension."
-     },
-     {
-      "t": "cq",
-      "x": "Sustained sympathetic tone leads to coronary vasospasm; renal sympathetic stimulation leads to water/salt retention and increased BP."
-     },
-     {
-      "t": "key",
-      "x": "Right = SA node = supraventricular; Left = AV node = ventricular. Sympathetic: R drives SVTs, L drives ectopic foci / VF."
-     },
-     {
-      "t": "pearl",
-      "x": "Cardiac sympathetics T1-T6; peripheral/renal T10-L2. Do not treat the renal range expecting a direct cardiac-rate effect."
-     },
-     {
-      "t": "cue",
-      "x": "Angina without a fixed stenosis plus high sympathetic tone: think coronary vasospasm."
-     },
-     {
-      "t": "q",
-      "x": "Two cardiac patients have hypersympathetic activity - one right-sided, one left-sided. Predict the arrhythmia each is prone to, and name the spinal levels you would treat to calm cardiac sympathetics."
-     }
-    ]
-   },
-   {
     "id": "2",
     "statement": "Explain the effects of the parasympathetic nervous system on the cardiac system.",
     "blocks": [
@@ -1397,6 +1221,52 @@
      {
       "t": "q",
       "x": "A patient has right-sided vagal excess; another has left-sided vagal excess. Predict each disturbance, and name a cervical technique shown to shift the sympathovagal balance toward parasympathetic."
+     }
+    ]
+   },
+   {
+    "id": "1",
+    "statement": "Explain the effects of the sympathetic nervous system on the cardiac system.",
+    "blocks": [
+     {
+      "t": "p",
+      "x": "The cardiac sympathetics arise from T1-T6, with preganglionic fibers running up to the cervical chain ganglia before reaching the heart. The functional effects of raising sympathetic tone are the familiar trio - increased heart rate, increased contractility, and increased cardiac output - and, when tone stays high, coronary vasospasm. The handout also separates the cardiac levels from the peripheral ones: peripheral blood vessels and the kidneys/adrenals are driven from T10-L2, which matters when you treat hypertension."
+     },
+     {
+      "t": "cq",
+      "x": "Cardiac sympathetics = T1-T6; peripheral vessels and kidneys/adrenals = T10-L2. Increased cardiac tone leads to increased rate, increased contractility, increased output."
+     },
+     {
+      "t": "p",
+      "x": "The single most testable idea in this lecture is a side-of-the-heart map that holds for both autonomic divisions: right-sided fibers reach the SA node, left-sided fibers reach the AV node. On the sympathetic side that means right hypersympathetic activity drives supraventricular tachycardias (SVTs) from the SA node, while left hypersympathetic activity drives ventricular ectopic foci and ventricular fibrillation. Keep 'right = SA = supraventricular, left = AV = ventricular' and you can reconstruct the whole table."
+     },
+     {
+      "t": "p",
+      "x": "Cardiac sympathetic innervation T1-T6: right fibers reach the SA node (right deep cardiac plexus); left fibers reach the AV node (left deep cardiac plexus). Peripheral sympathetics: vessels T1-L2, kidneys/adrenals T10-L2; increased tone produces vasoconstriction and increased rate/contractility/output."
+     },
+     {
+      "t": "p",
+      "x": "Two more sympathetic consequences round out the LO. Sustained high sympathetic tone can produce coronary vasospasm, reducing perfusion and provoking ischemia even without a fixed stenosis. And in essential hypertension, patients demonstrate vascular and cardiac hyperreactivity to autonomic stimuli; prolonged sympathetic stimulation of the kidneys creates a functional retention of water and salt that elevates blood pressure - the rationale for the renal-level (T10-L2) and adrenal-Chapman treatment you will see under hypertension."
+     },
+     {
+      "t": "cq",
+      "x": "Sustained sympathetic tone leads to coronary vasospasm; renal sympathetic stimulation leads to water/salt retention and increased BP."
+     },
+     {
+      "t": "key",
+      "x": "Right = SA node = supraventricular; Left = AV node = ventricular. Sympathetic: R drives SVTs, L drives ectopic foci / VF."
+     },
+     {
+      "t": "pearl",
+      "x": "Cardiac sympathetics T1-T6; peripheral/renal T10-L2. Do not treat the renal range expecting a direct cardiac-rate effect."
+     },
+     {
+      "t": "cue",
+      "x": "Angina without a fixed stenosis plus high sympathetic tone: think coronary vasospasm."
+     },
+     {
+      "t": "q",
+      "x": "Two cardiac patients have hypersympathetic activity - one right-sided, one left-sided. Predict the arrhythmia each is prone to, and name the spinal levels you would treat to calm cardiac sympathetics."
      }
     ]
    },
@@ -1542,94 +1412,6 @@
     ]
    },
    {
-    "id": "CU.2",
-    "statement": "Diagnose innominate (pelvic) dysfunction: rotations, shears, flares + ME treatment.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "Innominate (iliosacral) diagnosis is entirely landmark-driven: you find the dysfunctional side with a motion test, then read static landmarks to name what the bone did, then treat with the muscle that reverses it. Three dysfunction families live here — rotations, shears, and flares — and each has a clean landmark signature. Keep \"the bone is a wheel\" in mind for rotations and most of this falls out."
-     },
-     {
-      "t": "p",
-      "x": "Finding the side uses two motion tests. The standing flexion test localizes an iliosacral problem: as the patient bends forward, the PSIS that moves MORE is the dysfunctional side, because that SI joint locks sooner and the ilium gets pulled farther up by the sacrum. The ASIS compression test is the reciprocal: the side with LESS spring / more resistance is the dysfunctional side. Both point to the same side; they just feel for it differently."
-     },
-     {
-      "t": "cq",
-      "x": "Standing flexion test: the PSIS that moves MORE = the dysfunctional side. (most common pelvis trap)"
-     },
-     {
-      "t": "p",
-      "x": "Rotations are the wheel. Picture the innominate rotating forward or backward around a transverse axis. An anterior innominate carries the ASIS inferior and the PSIS superior on that side; a posterior innominate is the reverse — ASIS superior, PSIS inferior. The most anterior an innominate gets is at toe-off; the most posterior is at heel-strike, which is a nice way to remember the gait coupling."
-     },
-     {
-      "t": "cq",
-      "x": "Anterior innominate = ASIS inferior + PSIS superior; posterior = the reverse. (rotation landmark signature)"
-     },
-     {
-      "t": "p",
-      "x": "A shear is a translatory slide of the whole innominate in the coronal plane: in a superior shear ALL landmarks are superior on that side; in an inferior shear, all are inferior. Because everything moves together, you won't get the reciprocal up/down split that rotations give. A flare is a medial/lateral change of the ASIS measured from the midline: inflare = ASIS closer to the midline, outflare = ASIS farther. Pregnancy classically produces bilateral outflares, and an MVA with a seatbelt is a classic flare mechanism."
-     },
-     {
-      "t": "cq",
-      "x": "Superior shear = ALL landmarks superior on that side; inflare = ASIS toward midline, outflare = away. (shear vs flare)"
-     },
-     {
-      "t": "p",
-      "x": "Treatment contracts the antagonist. For muscle energy you position toward the barrier and have the patient fire the muscle that drives the bone the corrective way. The deck circled all four as TQs: an anterior rotation is treated with hip extensors (glut max + hamstrings); a posterior rotation with hip flexors (quads + psoas); an inflare with adductors; an outflare with abductors. Match the presentation too — anterior rotation tends to give sciatic/gluteal/hamstring pain (\"SGH\"), posterior rotation gives inguinal/groin and quad/psoas tightness."
-     },
-     {
-      "t": "key",
-      "x": "Diagnose in three steps: motion test finds the SIDE, static landmarks NAME the dysfunction, the antagonist muscle TREATS it."
-     },
-     {
-      "t": "cue",
-      "x": "For any rotation ME, position toward the barrier and contract the antagonist: anterior→extensors, posterior→flexors."
-     },
-     {
-      "t": "confusion",
-      "x": "Shears move ALL landmarks one direction; rotations split them (ASIS one way, PSIS the other). That split is how you tell them apart."
-     },
-     {
-      "t": "q",
-      "x": "Right ASIS inferior, right PSIS superior — name the dysfunction and the muscles you'd use to treat it."
-     }
-    ]
-   },
-   {
-    "id": "CU.3",
-    "statement": "Describe sacral anatomy, axes, and respiratory motion of the sacrum.",
-    "blocks": [
-     {
-      "t": "p",
-      "x": "Before you can diagnose a torsion you need the scaffolding: where the landmarks are, which axes the sacrum moves around, and what \"respiratory motion\" means. The two landmarks you palpate are the sacral sulci (just medial and superior to the PSISs) at the base and the inferior lateral angles (ILAs) at the apex. Everything in diagnosis is a comparison of sulcus depth up top against ILA position down below."
-     },
-     {
-      "t": "p",
-      "x": "Three transverse axes stack down the sacrum. The superior transverse axis at S1 is the respiratory axis — it is synchronous with the cranial mechanism (sphenobasilar flexion and extension). The middle transverse axis at S2 is the postural axis for flexion/extension coupled with the lumbar spine. The inferior transverse axis handles iliosacral motion during walking. On top of those, an anteroposterior axis gives sidebending and the oblique axes give torsions. The prior student circled the axes and wrote that total sacral movement is measured in millimeters."
-     },
-     {
-      "t": "cq",
-      "x": "Superior transverse axis (S1) = respiratory axis, synchronous with the cranial mechanism. (axis identification)"
-     },
-     {
-      "t": "p",
-      "x": "Respiratory motion follows the diaphragm — and this is the piece students reverse. On inhalation the diaphragm descends and the sacral base moves POSTERIOR (counternutation), while the apex moves anterior — the prior student drew this directly on the slide: \"diaphragm goes down, pushes the sacrum out.\" On exhalation the base moves ANTERIOR (nutation) and the apex moves back in. This same base-anterior/base-posterior language is what bilateral flexion and extension borrow from, so lock it down now."
-     },
-     {
-      "t": "cq",
-      "x": "Inhalation → sacral base posterior (apex anterior); exhalation → base anterior. (respiratory motion direction)"
-     },
-     {
-      "t": "p",
-      "x": "One framing that pays off later: the sacrum moves freely in whichever respiratory phase it is held in and is restricted in the opposite phase. That is why a forward (flexed) sacrum behaves like it is stuck in exhalation — it is the same mechanical idea you will reuse the moment you start naming torsions."
-     },
-     {
-      "t": "q",
-      "x": "Which sacral axis is the respiratory axis, and which way does the base move on inhalation?"
-     }
-    ]
-   },
-   {
     "id": "CU.4",
     "statement": "Diagnose sacral torsions and unilateral flexions/extensions from the test cluster.",
     "blocks": [
@@ -1746,48 +1528,90 @@
     ]
    },
    {
-    "id": "CU.6",
-    "statement": "Recognize piriformis syndrome: anatomy, presentation, mechanism, and sacral link.",
+    "id": "CU.2",
+    "statement": "Diagnose innominate (pelvic) dysfunction: rotations, shears, flares + ME treatment.",
     "blocks": [
      {
       "t": "p",
-      "x": "Piriformis syndrome is the sciatica mimic, and the exam tests three things: the hallmark presentation, the muscle anatomy, and the mechanism that torsions the sacrum. It was the single most prior-exam-flagged topic in the source material, so treat every detail as fair game."
+      "x": "Innominate (iliosacral) diagnosis is entirely landmark-driven: you find the dysfunctional side with a motion test, then read static landmarks to name what the bone did, then treat with the muscle that reverses it. Three dysfunction families live here — rotations, shears, and flares — and each has a clean landmark signature. Keep \"the bone is a wheel\" in mind for rotations and most of this falls out."
      },
      {
       "t": "p",
-      "x": "The hallmark is buttock pain referred down the posterior thigh, usually NOT past the knee — the prior student wrote \"only to knee!!\" and circled it as the hallmark. Pain is worse after sitting longer than 15–20 minutes and with internal rotation or crossed-leg sitting. On exam you get a positive piriformis sign (the seated hip rests in external rotation) and a positive piriformis test (forcing that externally rotated hip back to neutral reproduces the buttock pain). The work-up adds prone testing of piriformis length."
+      "x": "Finding the side uses two motion tests. The standing flexion test localizes an iliosacral problem: as the patient bends forward, the PSIS that moves MORE is the dysfunctional side, because that SI joint locks sooner and the ilium gets pulled farther up by the sacrum. The ASIS compression test is the reciprocal: the side with LESS spring / more resistance is the dysfunctional side. Both point to the same side; they just feel for it differently."
      },
      {
       "t": "cq",
-      "x": "Hallmark: buttock pain to the thigh, not past the knee; worse sitting >15–20 min and with internal rotation. (pain past the knee = think radicular)"
+      "x": "Standing flexion test: the PSIS that moves MORE = the dysfunctional side. (most common pelvis trap)"
      },
      {
       "t": "p",
-      "x": "Anatomy: the piriformis arises from the anterolateral sacrum (S2–S4) and the sacrotuberous ligament, and inserts on the greater trochanter. It is primarily a hip external rotator, but with hip flexion beyond 90° it becomes an internal rotator — which is why the provocative tests use flexion and internal rotation. The sciatic nerve is L4–S3 and usually passes below the muscle (sometimes through it); the piriformis itself is innervated by S1–S2 (± L5). Primary etiology is anatomic variation (~15%); secondary is trauma — classically the trunk forcibly rotated while the foot is planted."
+      "x": "Rotations are the wheel. Picture the innominate rotating forward or backward around a transverse axis. An anterior innominate carries the ASIS inferior and the PSIS superior on that side; a posterior innominate is the reverse — ASIS superior, PSIS inferior. The most anterior an innominate gets is at toe-off; the most posterior is at heel-strike, which is a nice way to remember the gait coupling."
      },
      {
       "t": "cq",
-      "x": "Piriformis: origin anterolateral sacrum S2–S4, insertion greater trochanter, primary external rotator (internal at >90° flexion). (anatomy one-liner)"
+      "x": "Anterior innominate = ASIS inferior + PSIS superior; posterior = the reverse. (rotation landmark signature)"
      },
      {
       "t": "p",
-      "x": "The mechanism is the integration keystone. With the lower extremity fixed the piriformis works in reverse and torsions the sacrum, with the rotation going OPPOSITE the tight side. So a RIGHT hypertonic piriformis → the sacrum rotates LEFT → a left sacral torsion (L-on-L or L-on-R). Then the L5 rule from CU.4 fires: L5 rotates OPPOSITE the sacrum, so L5 rotates RIGHT. This chain (muscle → sacrum → L5) is the exact thing the vignette tests."
+      "x": "A shear is a translatory slide of the whole innominate in the coronal plane: in a superior shear ALL landmarks are superior on that side; in an inferior shear, all are inferior. Because everything moves together, you won't get the reciprocal up/down split that rotations give. A flare is a medial/lateral change of the ASIS measured from the midline: inflare = ASIS closer to the midline, outflare = ASIS farther. Pregnancy classically produces bilateral outflares, and an MVA with a seatbelt is a classic flare mechanism."
+     },
+     {
+      "t": "cq",
+      "x": "Superior shear = ALL landmarks superior on that side; inflare = ASIS toward midline, outflare = away. (shear vs flare)"
+     },
+     {
+      "t": "p",
+      "x": "Treatment contracts the antagonist. For muscle energy you position toward the barrier and have the patient fire the muscle that drives the bone the corrective way. The deck circled all four as TQs: an anterior rotation is treated with hip extensors (glut max + hamstrings); a posterior rotation with hip flexors (quads + psoas); an inflare with adductors; an outflare with abductors. Match the presentation too — anterior rotation tends to give sciatic/gluteal/hamstring pain (\"SGH\"), posterior rotation gives inguinal/groin and quad/psoas tightness."
      },
      {
       "t": "key",
-      "x": "Run the chain: tight piriformis → sacrum rotates OPPOSITE the tight side → L5 rotates opposite the sacrum (back toward the tight side)."
+      "x": "Diagnose in three steps: motion test finds the SIDE, static landmarks NAME the dysfunction, the antagonist muscle TREATS it."
      },
      {
       "t": "cue",
-      "x": "External rotator at rest, internal rotator past 90° of hip flexion — which is why the test position is flexed + internally rotated."
+      "x": "For any rotation ME, position toward the barrier and contract the antagonist: anterior→extensors, posterior→flexors."
      },
      {
-      "t": "trap",
-      "x": "Pain stopping at the knee is the point. Radiation into the foot pushes you toward a radiculopathy, not piriformis."
+      "t": "confusion",
+      "x": "Shears move ALL landmarks one direction; rotations split them (ASIS one way, PSIS the other). That split is how you tell them apart."
      },
      {
       "t": "q",
-      "x": "A right hypertonic piriformis — which way does the sacrum torsion, and which way does L5 rotate?"
+      "x": "Right ASIS inferior, right PSIS superior — name the dysfunction and the muscles you'd use to treat it."
+     }
+    ]
+   },
+   {
+    "id": "CU.3",
+    "statement": "Describe sacral anatomy, axes, and respiratory motion of the sacrum.",
+    "blocks": [
+     {
+      "t": "p",
+      "x": "Before you can diagnose a torsion you need the scaffolding: where the landmarks are, which axes the sacrum moves around, and what \"respiratory motion\" means. The two landmarks you palpate are the sacral sulci (just medial and superior to the PSISs) at the base and the inferior lateral angles (ILAs) at the apex. Everything in diagnosis is a comparison of sulcus depth up top against ILA position down below."
+     },
+     {
+      "t": "p",
+      "x": "Three transverse axes stack down the sacrum. The superior transverse axis at S1 is the respiratory axis — it is synchronous with the cranial mechanism (sphenobasilar flexion and extension). The middle transverse axis at S2 is the postural axis for flexion/extension coupled with the lumbar spine. The inferior transverse axis handles iliosacral motion during walking. On top of those, an anteroposterior axis gives sidebending and the oblique axes give torsions. The prior student circled the axes and wrote that total sacral movement is measured in millimeters."
+     },
+     {
+      "t": "cq",
+      "x": "Superior transverse axis (S1) = respiratory axis, synchronous with the cranial mechanism. (axis identification)"
+     },
+     {
+      "t": "p",
+      "x": "Respiratory motion follows the diaphragm — and this is the piece students reverse. On inhalation the diaphragm descends and the sacral base moves POSTERIOR (counternutation), while the apex moves anterior — the prior student drew this directly on the slide: \"diaphragm goes down, pushes the sacrum out.\" On exhalation the base moves ANTERIOR (nutation) and the apex moves back in. This same base-anterior/base-posterior language is what bilateral flexion and extension borrow from, so lock it down now."
+     },
+     {
+      "t": "cq",
+      "x": "Inhalation → sacral base posterior (apex anterior); exhalation → base anterior. (respiratory motion direction)"
+     },
+     {
+      "t": "p",
+      "x": "One framing that pays off later: the sacrum moves freely in whichever respiratory phase it is held in and is restricted in the opposite phase. That is why a forward (flexed) sacrum behaves like it is stuck in exhalation — it is the same mechanical idea you will reuse the moment you start naming torsions."
+     },
+     {
+      "t": "q",
+      "x": "Which sacral axis is the respiratory axis, and which way does the base move on inhalation?"
      }
     ]
    },

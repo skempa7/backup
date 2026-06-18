@@ -3,7 +3,7 @@
    Slides are cached as you view them (cache-first). App files use
    stale-while-revalidate so updates land on the next online visit.
    Bump CACHE to force a clean refresh after a deploy. */
-const CACHE = "remediation-v4";
+const CACHE = "remediation-v5";
 
 // Exact URLs (incl. cache-busting query strings the pages actually request).
 const CORE = [
@@ -13,7 +13,7 @@ const CORE = [
   "./icon-192.png",
   "./icon-512.png",
   "./icon-180.png",
-  "./shared/engine.js?v=17",
+  "./shared/engine.js?v=20",
   "./shared/styles.css?v=22",
   "./quizzes/immunology/index.html",
   "./quizzes/immunology/content.js?v=9",
@@ -22,7 +22,7 @@ const CORE = [
   "./quizzes/pharmacology/index.html",
   "./quizzes/pharmacology/content.js?v=9",
   "./quizzes/opp3/index.html",
-  "./quizzes/opp3/content.js?v=1"
+  "./quizzes/opp3/content.js?v=2"
 ];
 
 self.addEventListener("install", (e) => {

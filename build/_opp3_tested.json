@@ -490,16 +490,6 @@
     "e": "Final"
    }
   ],
-  "3": [
-   {
-    "t": "Root lesion = whole-dermatome motor + sensory deficit; entrapment = localized/distal",
-    "e": "Final"
-   },
-   {
-    "t": "EMG localizes root vs peripheral (syrinx case: real lesion was median nerve at the wrist)",
-    "e": "Final"
-   }
-  ],
   "4": [
    {
     "t": "Spurling worsens (narrows foramen); distraction improves (opens foramen)",
@@ -507,48 +497,6 @@
    },
    {
     "t": "Valsalva worsens symptoms with a herniation/mass",
-    "e": "Final"
-   }
-  ],
-  "5": [
-   {
-    "t": "Needle EMG/NCS = gold standard — only test of nerve-root physiological integrity; best use = clarify an unclear diagnosis",
-    "e": "Final"
-   },
-   {
-    "t": "Acute radiculopathy, no red flags → no immediate imaging; reserve MRI for red flags or failed conservative care",
-    "e": "Final"
-   }
-  ],
-  "6": [
-   {
-    "t": "Gentle OMT (soft tissue/MFR/FPR); AVOID HVLA in the radiculopathy region",
-    "e": "Final"
-   },
-   {
-    "t": "AC7 counterstrain = flex, sidebend toward, rotate away",
-    "e": "Final"
-   },
-   {
-    "t": "Conservative care 6–12 weeks first; progressive deficit/myelopathy skips the wait → urgent referral",
-    "e": "Final"
-   }
-  ],
-  "7": [
-   {
-    "t": "Radiculopathy = LMN (hyporeflexia); myelopathy = mixed: hyporeflexia AT the level + hyperreflexia BELOW",
-    "e": "Final"
-   },
-   {
-    "t": "Hoffmann’s sign (UE analog of Babinski) — the UMN red flag Barry is most concerned about",
-    "e": "Final"
-   },
-   {
-    "t": "Lhermitte’s phenomenon = shock-like paresthesia with neck flexion",
-    "e": "Final"
-   },
-   {
-    "t": "Cervical spondylotic myelopathy = MC cord dysfunction in the elderly; broad-based gait may be presenting sign",
     "e": "Final"
    }
   ]
@@ -577,20 +525,6 @@
    },
    {
     "t": "Same input, opposite value: SNS good acutely (bronchodilation), bad chronically (vasoconstriction)",
-    "e": "Final"
-   }
-  ],
-  "2": [
-   {
-    "t": "Most lung lymph (even part of left lung) drains to the RIGHT lymphatic duct ('left thoracic duct' is a labeling trap)",
-    "e": "Final"
-   },
-   {
-    "t": "Lymph does double duty: drains waste AND delivers immune cells",
-    "e": "Final"
-   },
-   {
-    "t": "Lymphatic OMT research: ↓ lung bacterial colony counts and ↓ IV-antibiotic duration (augments, doesn't replace antibiotics)",
     "e": "Final"
    }
   ],
@@ -817,20 +751,6 @@
    },
    {
     "t": "Name the SD for the direction of ease / freer motion, not the restriction",
-    "e": "Final"
-   }
-  ],
-  "CU.6": [
-   {
-    "t": "\"Only to knee\" hallmark + seated externally-rotated hip sign (most-flagged topic)",
-    "e": "Final"
-   },
-   {
-    "t": "Right hypertonic piriformis → left sacral torsion → L5 rotates right",
-    "e": "Final"
-   },
-   {
-    "t": "Piriformis origin anterolateral sacrum S2–S4, primary external rotator (internal at >90° flexion)",
     "e": "Final"
    }
   ],

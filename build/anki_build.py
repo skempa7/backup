@@ -7,44 +7,51 @@ import genanki
 COURSES={"immuno":("immunology","Immuno"),"path":("pathology","Path"),"pharm":("pharmacology","Pharm"),"opp3":("opp3","OPP3")}
 def det_id(s): return int(hashlib.md5(s.encode()).hexdigest()[:8],16) | 0x40000000
 
-CSS = """
-.card{font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:22px;color:#fff;
- text-align:center;text-shadow:0 0 4px rgba(0,0,0,.9);background:transparent;line-height:1.45;}
-hr{border:none;border-top:1px solid rgba(255,255,255,.18);margin:16px auto;width:66%;}
-.answer{color:#8ab4f8;font-weight:600;}
-.cloze{color:#8ab4f8;font-weight:bold;}
-img{display:block;margin:24px auto 0;max-width:90%;max-height:48vh;height:auto;border-radius:10px;
- box-shadow:0 4px 16px rgba(0,0,0,.5);}
-.expl{color:#9fb6cc;font-size:.7em;margin:18px auto 0;max-width:80%;background:rgba(0,0,0,.5);
- padding:6px 12px;border-radius:8px;display:inline-block;text-shadow:0 0 4px rgba(0,0,0,.9);}
-.hook{color:#d8c08f;font-size:.7em;margin:12px auto 0;display:inline-block;background:rgba(0,0,0,.5);
- padding:5px 11px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
-.tq{color:#7ee2a4;font-weight:800;font-size:.72em;letter-spacing:.03em;margin:14px auto 4px;display:inline-block;
- background:#143d22;border:1px solid #2e9d57;padding:5px 12px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
-details.more{margin:16px auto 0;max-width:84%;text-align:left;background:rgba(0,0,0,.5);
- padding:2px 14px;border-radius:8px;text-shadow:0 0 4px rgba(0,0,0,.9);}
-details.more summary{color:#9fb6cc;font-size:.68em;cursor:pointer;padding:7px 0;list-style:none;}
-details.more summary::-webkit-details-marker{display:none;}
-details.more .body{color:#dbe6f2;font-size:.74em;line-height:1.5;padding:2px 0 10px;}
+# Card design + tap-to-define are inherited from the shared anki SKILL engine (the same engine that
+# built the GI 31-34 deck), so these decks MATCH that design exactly. We keep the OLD model IDs +
+# field schema below so a re-import RESTYLES existing cards in place (same model id) and preserves
+# scheduling — only the look/behavior changes, not the note identity.
+_SKILL_ENGINE = "/Users/sebastiankempa/Library/CloudStorage/GoogleDrive-skempa7@gmail.com/My Drive/.claude/skills/anki/engine"
+sys.path.insert(0, _SKILL_ENGINE)
+import config as _C, engine as _E   # noqa: E402  — skill design constants + model_css() + tap-to-define JS
+
+# The skill's full card CSS (font/colors/halo/explanation/hook/Learn-more/tap-to-define) + a tiny
+# corner "TQ" badge for exam-tested cards (replaces the old full "Tested on…" line).
+_TQX_CSS = """
+.card { position: relative; }
+.tqx { position:absolute; top:5px; right:7px; font-size:0.40em; font-weight:800; letter-spacing:0.05em;
+  color:#7EE2A4; background:rgba(20,61,34,0.88); border:1px solid #2E9D57; border-radius:5px;
+  padding:1px 5px 2px; line-height:1.3; text-shadow:none; }
 """
-BACK_TAIL = """
-{{#TQ}}<div class="tq">\U0001F3AF {{TQ}}</div>{{/TQ}}
-{{#Image}}<hr>{{Image}}{{/Image}}
-{{#Explanation}}<div class="expl">{{Explanation}}</div>{{/Explanation}}
-{{#Hook}}<div class="hook">\U0001F4A1 {{Hook}}</div>{{/Hook}}
-{{#LearnMore}}<details class="more"><summary>Learn more</summary><div class="body">{{LearnMore}}</div></details>{{/LearnMore}}
-"""
-CLOZE_MODEL = genanki.Model(det_id("claudderall-cloze-v1"),"Claudderall Cloze",
-    fields=[{"name":"Text"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"},{"name":"TQ"}],
-    templates=[{"name":"Cloze","qfmt":"{{cloze:Text}}","afmt":"{{cloze:Text}}"+BACK_TAIL}],
-    css=CSS, model_type=genanki.Model.CLOZE)
-BASIC_MODEL = genanki.Model(det_id("claudderall-basic-v1"),"Claudderall Basic",
-    fields=[{"name":"Front"},{"name":"Back"},{"name":"Image"},{"name":"Explanation"},{"name":"Hook"},{"name":"LearnMore"},{"name":"TQ"}],
-    templates=[{"name":"Card","qfmt":"{{Front}}","afmt":'{{Front}}<hr><div class="answer">{{Back}}</div>'+BACK_TAIL}],
-    css=CSS)
+MODEL_CSS = _E.model_css() + "\n" + _TQX_CSS
+_TQX    = '{{#TQ}}<div class="tqx">TQ</div>{{/TQ}}'   # minimal marker; the field still holds the topics (searchable in Anki) but they are NOT shown
+_SLIDES = '{{#Image}}<div class="slides">{{Image}}</div>{{/Image}}'
+_EXPL   = '{{#Explanation}}<div class="explanation">{{Explanation}}</div>{{/Explanation}}'
+_HOOK   = '{{#Hook}}<div class="hook">\U0001F4A1 {{Hook}}</div>{{/Hook}}'
+_LEARN  = '{{#LearnMore}}<div class="learnmore"><details><summary>Learn more</summary>{{LearnMore}}</details></div>{{/LearnMore}}'
+
+def build_models(glossary=None):
+    """Build the two models with the skill design + (optional) baked-in tap-to-define glossary."""
+    gloss = _E._gloss_block(glossary)
+    cloze = genanki.Model(det_id("claudderall-cloze-v1"), "Claudderall Cloze",
+        fields=[{"name":n} for n in ("Text","Image","Explanation","Hook","LearnMore","TQ")],
+        templates=[{"name":"Cloze","qfmt":_TQX+"{{cloze:Text}}",
+                    "afmt":_TQX+"{{cloze:Text}}\n"+_SLIDES+"\n"+_EXPL+"\n"+_HOOK+"\n"+_LEARN+gloss}],
+        css=MODEL_CSS, model_type=genanki.Model.CLOZE)
+    basic = genanki.Model(det_id("claudderall-basic-v1"), "Claudderall Basic",
+        fields=[{"name":n} for n in ("Front","Back","Image","Explanation","Hook","LearnMore","TQ")],
+        templates=[{"name":"Card","qfmt":_TQX+"{{Front}}",
+                    "afmt":'{{FrontSide}}\n<hr id="answer">\n<div class="answer">{{Back}}</div>\n'+_SLIDES+"\n"+_EXPL+"\n"+_HOOK+"\n"+_LEARN+gloss}],
+        css=MODEL_CSS)
+    return cloze, basic
 
 def main():
     course=sys.argv[1]; qd,abbrev=COURSES[course]
+    # merged tap-to-define glossary (one for all remediation decks; the JS only highlights terms that
+    # actually appear on a card). Absent → decks still build, just without the tap-to-define layer.
+    GLOSS_PATH="build/_remediation_glossary.json"
+    glossary=json.load(open(GLOSS_PATH,encoding="utf-8")) if os.path.exists(GLOSS_PATH) else None
+    CLOZE_MODEL,BASIC_MODEL=build_models(glossary)
     bundles={int(re.search(r'lec_(\d+)',p).group(1)):json.load(open(p)) for p in glob.glob(f"/tmp/anki_src/{course}/lec_*.json")}
     lecs=sorted(bundles); rng=f"{lecs[0]}-{lecs[-1]}"
     deck_root=f"claudderall::{abbrev} lec {rng}"
@@ -118,7 +125,7 @@ def main():
     pkg=genanki.Package(decks); pkg.media_files=[f"{media_dir}/{m}" for m in media]; pkg.write_to_file(out)
     print(f"=== {abbrev}: {out}")
     print(f"  lectures {len(decks)} | notes {n_notes} | cards {n_cards} (cloze {n_cloze}/basic {n_basic}) | TQ-tagged notes {n_tq}")
-    print(f"  images: {n_img} w/slide, {n_two} w/two, {n_free} image-free | media {len(media)} | {os.path.getsize(out)/1e6:.1f} MB")
+    print(f"  images: {n_img} w/slide, {n_two} w/two, {n_free} image-free | media {len(media)} | tap-to-define terms: {len(glossary) if glossary else 0} | {os.path.getsize(out)/1e6:.1f} MB")
     for L in lecs:
         if L in per_lec: nn,cc,cq,mk=per_lec[L]; print(f"   lec {L:2d}: {nn} notes {cc} cards (CQ {cq}, MUST {mk})")
 if __name__=="__main__": main()

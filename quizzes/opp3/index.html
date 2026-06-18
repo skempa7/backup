@@ -15,6 +15,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../shared/styles.css?v=22">
+<style>
+/* ---- OPP III remediation: "missed on the final" red treatment (mirrors the green TQ styles) ---- */
+.miss-badge{display:inline-block;background:#3d1414;color:#ffb4b4;font-size:.62rem;font-weight:800;
+  letter-spacing:.06em;padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:middle;
+  border:1px solid #b04545;line-height:1.5;}
+.miss-mark{display:inline-block;background:#3d1414;color:#ffb4b4;font-weight:800;font-size:.64rem;
+  padding:1px 6px;border-radius:4px;border:1px solid #b04545;margin-right:6px;}
+.miss-topics{color:#f1a0a0;font-size:.82rem;margin:2px 0 10px;line-height:1.45;font-weight:600;}
+.lo-card.miss-card{border-left:3px solid #d65151;
+  background:linear-gradient(90deg,rgba(214,81,81,.10),transparent 58%);}
+.miss-chip{display:inline-block;background:#3d1414;color:#ffb4b4;font-size:.58rem;font-weight:800;
+  letter-spacing:.04em;padding:1px 5px;border-radius:4px;margin-left:6px;border:1px solid #b04545;
+  vertical-align:middle;}
+/* map tiles with a miss */
+.map-tile.map-hasmiss{border-color:#b04545;}
+.map-miss{font-size:.72rem;font-weight:800;color:#ff9d9d;background:#3d1414;border:1px solid #b04545;
+  border-radius:4px;padding:0 5px;}
+/* dashboard remediation banner */
+.dash-remediation{background:linear-gradient(180deg,rgba(214,81,81,.12),rgba(214,81,81,.04));
+  border:1px solid #b04545;border-radius:14px;padding:14px 16px;margin:4px 0 6px;}
+.dash-rem-top{font-size:.95rem;color:var(--text);margin-bottom:10px;line-height:1.4;}
+.dash-rem-top b{color:#ff8f8f;}
+.dash-rem-ic{display:inline-block;background:#3d1414;color:#ffb4b4;font-weight:900;
+  width:22px;height:22px;line-height:22px;text-align:center;border-radius:6px;border:1px solid #b04545;
+  margin-right:8px;vertical-align:middle;}
+.dash-rem-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.rem-chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface);
+  border:1px solid #b04545;color:var(--text);font-family:inherit;font-size:.78rem;font-weight:600;
+  padding:5px 10px;border-radius:999px;cursor:pointer;transition:all .14s;}
+.rem-chip:hover{background:#3d1414;color:#ffd9d9;transform:translateY(-1px);}
+.rem-chip-lec{font-size:.62rem;font-weight:800;color:#ff9d9d;background:rgba(176,69,69,.22);
+  border-radius:4px;padding:1px 5px;}
+.lec-miss-banner{background:linear-gradient(90deg,rgba(214,81,81,.14),rgba(214,81,81,.03));
+  border:1px solid #b04545;border-left:3px solid #d65151;border-radius:10px;padding:9px 13px;
+  margin:10px 0 4px;font-size:.85rem;color:#f1b3b3;line-height:1.5;}
+.lec-miss-banner b{color:#ff8f8f;}
+.rc-chapter.rc-miss{border-left:3px solid #d65151;padding-left:13px;
+  background:linear-gradient(90deg,rgba(214,81,81,.05),transparent 40%);border-radius:8px;}
+</style>
 </head>
 <body>
 
@@ -171,8 +210,8 @@
 <!-- Toast -->
 <div class="toast" id="toast"></div>
 
-<script src="content.js?v=1"></script>
-<script src="../../shared/engine.js?v=17"></script>
+<script src="content.js?v=2"></script>
+<script src="../../shared/engine.js?v=20"></script>
 
 <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("../../service-worker.js").catch(function(){});});}</script>
 </body>

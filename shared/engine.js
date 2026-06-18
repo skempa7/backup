@@ -367,9 +367,11 @@ function renderSidebar() {
       return;
     }
     const tqc = tqLecCount(n);
+    const mc = missedLecCount(n);
     const tqChip = tqc ? `<span class="tq-chip" title="${tqc} exam-tested objective${tqc>1?'s':''}">TQ ${tqc}</span>` : "";
+    const missChip = mc ? `<span class="miss-chip" title="${mc} objective${mc>1?'s':''} you missed on the final">✗ ${mc}</span>` : "";
     html += `<div class="lec-item ${active}" onclick="goToLec(${n})">
-      <span class="lec-name">${status}<strong>${n}.</strong> ${shortTitle}${tqChip}</span>
+      <span class="lec-name">${status}<strong>${n}.</strong> ${shortTitle}${tqChip}${missChip}</span>
       <span class="count">${s.answered}/${s.total}</span>
     </div>`;
   });
@@ -915,8 +917,9 @@ function renderReadingContent(n){
       sectionSlide = `<div class="rc-section-slide">${inlineSlideHTML(n, pg)}</div>`;
     }
     const chTq = (ch.los||[]).flatMap(lo => tqFor(n, lo) || []);
-    html += `<section class="rc-chapter" id="ch-${n}-${ci}">
-      <h3 class="rc-chapter-h"><span class="rc-chapter-n">${ci+1}</span>${ch.icon?`<span class="rc-chapter-ic">${ch.icon}</span>`:""}<span class="rc-chapter-t">${esc(ch.title)}</span>${tqBadge(chTq)}</h3>
+    const chMiss = (ch.los||[]).flatMap(lo => missedFor(n, lo) || []);
+    html += `<section class="rc-chapter ${chMiss.length?'rc-miss':''}" id="ch-${n}-${ci}">
+      <h3 class="rc-chapter-h"><span class="rc-chapter-n">${ci+1}</span>${ch.icon?`<span class="rc-chapter-ic">${ch.icon}</span>`:""}<span class="rc-chapter-t">${esc(ch.title)}</span>${chMiss.length?missBadge(chMiss):tqBadge(chTq)}</h3>
       ${sectionSlide}${content}</section>`;
   });
   return html;
@@ -955,6 +958,7 @@ function renderLearnView() {
       <h2>${esc(title)}</h2>
     </div>
     ${lectureModeBar(n)}
+    ${missLecBanner(n)}
     <div class="reading-prog">
       <div class="reading-prog-bar"><div class="reading-prog-fill" id="reading-prog-fill" style="width:${rs.pct}%"></div></div>
       <span class="reading-prog-txt" id="reading-prog-txt">${rs.total?`${rs.done}/${rs.total} revealed`:"Read through"}</span>
@@ -1062,6 +1066,25 @@ function tqTopicsLine(entries){
   if(!entries||!entries.length) return "";
   return `<div class="tq-topics"><span class="tq-mark">TQ</span> Tested on the <b>${tqExams(entries)}</b> — ${entries.map(e=>esc(e.t)).join(" · ")}</div>`;
 }
+// REMEDIATION — objectives answered WRONG on the real final (the `MISSED` map in content.js,
+// keyed lec -> LO -> [missed topics]). Inert when no MISSED map is present (other quizzes).
+function missedFor(n, lo){ return (typeof MISSED!=="undefined" && MISSED[String(n)] && MISSED[String(n)][String(lo)]) || null; }
+function missedLecCount(n){ const m=(typeof MISSED!=="undefined")?MISSED[String(n)]:null; return m?Object.keys(m).length:0; }
+function missBadge(topics){
+  if(!topics||!topics.length) return "";
+  return `<span class="miss-badge" title="You missed this on the final — ${topics.join(' · ').replace(/"/g,'')}">✗ MISSED</span>`;
+}
+function missTopicsLine(topics){
+  if(!topics||!topics.length) return "";
+  return `<div class="miss-topics"><span class="miss-mark">✗</span> You missed this on the final — ${topics.map(t=>esc(t)).join(" · ")}</div>`;
+}
+function missLecBanner(n){
+  const m=(typeof MISSED!=="undefined")?MISSED[String(n)]:null;
+  if(!m) return "";
+  const topics=[].concat(...Object.values(m));
+  if(!topics.length) return "";
+  return `<div class="lec-miss-banner"><span class="miss-mark">✗</span> <b>You missed ${topics.length} here on the final:</b> ${topics.map(t=>esc(t)).join(" · ")}</div>`;
+}
 function toggleTqOnly(){ state.tqOnly=!state.tqOnly; renderLecture(); }
 
 function renderLecture() {
@@ -1071,9 +1094,10 @@ function renderLecture() {
   if (!lec) { main.innerHTML = "<p>Lecture not found.</p>"; return; }
   const [n, title, los] = lec;
   const lecTq = tqLecCount(n);
+  const loWeight = lo => missedFor(n,lo)?2 : tqFor(n,lo)?1 : 0;   // missed first, then tested
   let shownLos = los;
   if (state.tqOnly) shownLos = los.filter(l => tqFor(n, l[0]));
-  else if (lecTq) shownLos = [...los].sort((a,b) => (tqFor(n,b[0])?1:0) - (tqFor(n,a[0])?1:0));
+  else if (lecTq) shownLos = [...los].sort((a,b) => loWeight(b[0]) - loWeight(a[0]));
   const stats = lectureStats(n);
   const pct = stats.total === 0 ? 0 : Math.round(100 * stats.answered / stats.total);
   const accuracyText = stats.answered === 0 ? "" :
@@ -1104,12 +1128,13 @@ function renderLecture() {
     const loKey = `${n}_${loNum}`;
     const answer = LO_ANSWERS[loKey];
     const tqE = tqFor(n, loNum);
-    html += `<div class="lo-card ${tqE?'tq-card':''}">
+    const missE = missedFor(n, loNum);
+    html += `<div class="lo-card ${missE?'miss-card':(tqE?'tq-card':'')}">
       <div class="lo-row">
-        <div class="lo-text"><span class="lo-num">LO ${loNum}</span>${loText}${tqBadge(tqE)}</div>
+        <div class="lo-text"><span class="lo-num">LO ${loNum}</span>${loText}${missE?missBadge(missE):tqBadge(tqE)}</div>
         <button class="btn-teach" id="teach-btn-${loKey}" onclick="toggleTeach('${loKey}')">Teach Me This</button>
       </div>
-      ${tqTopicsLine(tqE)}
+      ${missE?missTopicsLine(missE):tqTopicsLine(tqE)}
       <div class="lo-answer" id="teach-${loKey}">
         ${renderTeachContent(answer)}
       </div>`;
@@ -2452,11 +2477,18 @@ function renderDashboard(){
     const status=lectureMastered(n)?"master":(state.read[n]?"read":((s.answered>0||rsd.done>0)?"started":"new"));
     const pct=s.total?Math.round(100*s.answered/s.total):0;
     const icon=status==="master"?"★":(status==="read"?"✓":"");
-    tiles+=`<button class="map-tile map-${status}" onclick="goToLec(${n})">
-      <div class="map-top"><span class="map-num">${n}</span>${icon?`<span class="map-icon">${icon}</span>`:""}</div>
+    const mc=missedLecCount(n);
+    const corner=mc?`<span class="map-miss" title="${mc} missed on the final">✗${mc}</span>`:(icon?`<span class="map-icon">${icon}</span>`:"");
+    tiles+=`<button class="map-tile map-${status} ${mc?'map-hasmiss':''}" onclick="goToLec(${n})">
+      <div class="map-top"><span class="map-num">${n}</span>${corner}</div>
       <div class="map-title">${esc(title)}</div>
       <div class="map-bar"><div class="map-bar-fill" style="width:${pct}%"></div></div></button>`;
   });
+  const remHtml = (typeof REMEDIATION!=="undefined" && REMEDIATION.length) ? `
+    <div class="dash-remediation">
+      <div class="dash-rem-top"><span class="dash-rem-ic">✗</span><b>Remediation focus</b> — the ${REMEDIATION.length} objectives you missed on the OPP III final</div>
+      <div class="dash-rem-chips">${REMEDIATION.map(r=>`<button class="rem-chip" onclick="goToLec(${r.lec})" title="Lecture ${r.lec} · ${esc(r.title)}"><span class="rem-chip-lec">L${r.lec}</span> ${esc(r.topic)}</button>`).join("")}</div>
+    </div>` : "";
   main.innerHTML=`<div class="dash">
     <div class="dash-hero">
       <div class="rank-ring" style="--p:${rk.pct}"><div class="rank-ring-inner"><span class="rank-ring-icon">${rk.cur.icon}</span></div></div>
@@ -2475,6 +2507,7 @@ function renderDashboard(){
       <div class="dstat"><div class="dstat-num">${o.answered?acc+"%":"—"}</div><div class="dstat-lab">Accuracy</div></div>
       <div class="dstat"><div class="dstat-num">${state.streakData.current} 🔥</div><div class="dstat-lab">Streak</div></div>
     </div>
+    ${remHtml}
     <div class="dash-goal">
       <div class="dash-goal-top"><span>🎯 Daily goal</span><span>${todayN}/${goal} questions</span></div>
       <div class="dash-goal-bar"><div class="dash-goal-fill" style="width:${goalPct}%"></div></div>
